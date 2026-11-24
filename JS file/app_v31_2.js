@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-7';
+    const APP_VERSION = 'V31.2-20261124-8';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -1407,6 +1407,7 @@
             .replace(/\[[^\]]*?[가나다]해[^\]]*?\]/g, '')
             .replace(/\b(?:cycle|year|năm)\s*[abc]\b/gi, '')
             .replace(/[가나다]해/g, '')
+            .replace(/[甲乙丙]年/gu, '')
             .replace(/第([〇零一二三四五六七八九十百廿卅\d]+)(週|周|主日)/gu, (_, number, unit) => `第${liturgicalOrdinal(number)}${unit === '周' ? '週' : unit}`)
             .replace(/\b[ivxlcdm]{1,8}\b/gi, match => {
                 const value = romanToNumber(match);
@@ -1417,8 +1418,12 @@
     }
 
     function calendarNamesWithKnownAliases(info) {
-        const aliases = globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId(info));
-        return Object.assign({}, aliases, Object.fromEntries(Object.entries(info.names || {}).filter(([, title]) => title)));
+        const id = calendarObservanceId(info);
+        const aliases = globalThis.ordoLiturgicalObservances?.namesFor(id);
+        const names = Object.assign({}, aliases, Object.fromEntries(Object.entries(info.names || {}).filter(([, title]) => title)));
+        const japaneseTitle = globalThis.ordoJapaneseOrdoTitles?.[id];
+        if (japaneseTitle) names.JP = japaneseTitle;
+        return names;
     }
 
     function applyLocalCalendarOverrides(info, date) {
@@ -1552,6 +1557,20 @@
         easter_vigil: { key: 'easter_1', hint: '부활 감사송 1' },
         christmas_vigil: { key: 'nativity_1', hint: '주님 성탄 감사송 1' }
     };
+
+    function taiwanDailyPrefaceKeys(date, parsed = null) {
+        const source = countryMassModuleForJurisdiction('TW');
+        const records = source?.prefaceReferences?.[formatDateIso(date)];
+        const url = parsed?.sourceSelection?.sourceUrl || parsed?.sourceUrl || parsed?.serverRecord?.sourceUrl || '';
+        const id = String(url).match(/https:\/\/drive\.google\.com\/file\/d\/([\w-]+)/u)?.[1];
+        if (id && records?.[id]) return records[id];
+        if (records) return Object.values(records)[0] || [];
+        if (!parsed?.data?.preface) return [];
+        const songs = source?.ordinary?.find(entry => entry.songs)?.songs || {};
+        const section = parsed.data.preface;
+        const choices = section.options?.length ? section.options : [section];
+        return [...new Set(choices.map(choice => globalThis.ordoPrefaceMatcher.match(choice, 'zh', songs).key).filter(Boolean))];
+    }
 
     function activePrefaceLanguage() {
         return normalizeSelectableLang(state.currentLoc || getLiturgicalBaseLang() || 'KR', 'KR');
@@ -1957,6 +1976,7 @@
         const cycle = meta.sundayCycle;
         if (!cycle) return '';
         if (langCode === 'KR') return { A: '가해', B: '나해', C: '다해' }[cycle] || '';
+        if (langCode === 'ZH') return { A:'甲年', B:'乙年', C:'丙年' }[cycle] || '';
         if (langCode === 'JP') return `${cycle}年`;
         if (langCode === 'EN') return `Year ${cycle}`;
         if (langCode === 'VN') return `Năm ${cycle}`;
@@ -1973,6 +1993,11 @@
         if (!label) return title;
         if (langCode === 'KR') return `[${label}] ${title.replace(/^\[(?:가|나|다)해\]\s*/, '')}`;
         if (langCode === 'JP') return `[${label}] ${title.replace(/^\[[ABC]年\]\s*/, '')}`;
+        if (langCode === 'ZH') {
+            const withoutCycle = title.replace(/^\s*(?:[（(【]\s*)?[甲乙丙]年(?:\s*[）)】])?\s*/u, '')
+                .replace(/\s*(?:[（(【]\s*)?[甲乙丙]年(?:\s*[）)】])?\s*$/u, '');
+            return label+' '+withoutCycle;
+        }
         if (langCode === 'EN') return `${title.replace(/\s+-\s+Year\s+[ABC]\s*$/i, '')} - ${label}`;
         if (langCode === 'VN') {
             const withoutCycle = title
@@ -9444,6 +9469,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             state.liturgyInfo = cloneData(info);
             const projected = projectDailySourceToPrimaryCalendar(source.parsed, code, original.parsed, date, info);
             mergeNativeDailySourceData(target, projected, code, {...source.options, allowExternalLiturgy:false});
+            if (code === 'ZH' && projected.primaryCalendarProjection.sameCelebration) {
+                info.taiwanPrefaceKeys = taiwanDailyPrefaceKeys(date, source.parsed);
+            }
             info.nativeSourceCelebrations[code] = projected.primaryCalendarProjection;
             info.sourceCelebrations ||= {};
             info.sourceCelebrations[code] = {title:info.names?.[code] || '', seasonal:isGeneratedSeasonalNameForInfo(code,info.names?.[code],info)};
@@ -9495,6 +9523,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 isSunday: date.getDay() === 0, isSolemnity: false
             }, date);
         }
+        if (isPrimarySource && lang === 'ZH') {
+            state.liturgyInfo.taiwanPrefaceKeys = taiwanDailyPrefaceKeys(sourceDate, parsed);
+        }
         if (!parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
         const officialLocalProperSections = new Set(
             parsed.officialLocalProper && Array.isArray(parsed.officialLocalProper.sectionKeys)
@@ -9537,6 +9568,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const value = globalThis.ordoDailyContent?.normalizeSection(parsed.data[key]) ?? parsed.data[key];
             if (!sourceSectionHasContent(value)) return;
             if (key === 'preface') {
+                if (lang === 'ZH') return;
                 const prefaceHint = prefaceHintFromParsedSection(value);
                 if (prefaceHint) {
                     state.liturgyInfo.prefaceHint = prefaceHint;
@@ -21243,6 +21275,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (daily) {
             let rank = 0, unmatched = 0;
             SUPPORTED_LANGS.forEach(lang => {
+                if (lang === 'ZH') return;
                 const lower = lang.toLowerCase();
                 const options = daily[lower + '_options']?.length ? daily[lower + '_options'] : [{lines:daily[lower + '_lines'],text:daily[lower]}];
                 options.forEach(option => {
@@ -21419,21 +21452,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getEucharistSongKeys(item) {
         const songs = getEucharistSongMap(item);
-        const keys = Object.keys(songs);
-        const familyFirstIndex = new Map();
-        const rows = keys.map((key, index) => {
-            const matched = String(key).match(/^(.*)_([1-9]\d*)$/);
-            const family = matched ? matched[1] : key;
-            const variation = matched ? Number.parseInt(matched[2], 10) : Number.MAX_SAFE_INTEGER;
-            if (!familyFirstIndex.has(family)) familyFirstIndex.set(family, index);
-            return { key, index, family, variation };
+        const lang = activePrefaceLanguage();
+        const locale = { KR:'ko', VN:'vi', EN:'en', JP:'ja', LA:'la', ZH:'zh-TW', IT:'it', PT:'pt', ES:'es', DE:'de' }[lang];
+        const order = ['ordinary', 'common', 'advent', 'nativity', 'lent', 'easter'];
+        const collator = new Intl.Collator(locale, { numeric:true, sensitivity:'base' });
+        const rows = Object.entries(songs).map(([key, song]) => {
+            const family = order.findIndex(prefix => key.startsWith(prefix+'_'));
+            const number = Number(key.match(/^[a-z]+_(\d+)/u)?.[1] || 0);
+            return { key, family:family<0 ? order.length : family, number, title:localizedChoiceLabel(song, lang) || key };
         });
-        return rows.sort((left, right) => {
-            const familyOrder = familyFirstIndex.get(left.family) - familyFirstIndex.get(right.family);
-            if (familyOrder) return familyOrder;
-            if (left.family === right.family && left.variation !== right.variation) return left.variation - right.variation;
-            return left.index - right.index;
-        }).map(row => row.key);
+        return rows.sort((a, b) => a.family-b.family
+            || (a.family<order.length ? a.number-b.number : 0)
+            || collator.compare(a.title, b.title) || a.key.localeCompare(b.key)).map(row=>row.key);
     }
 
     function compactEucharistSongLabel(label) {
@@ -21536,13 +21566,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getEucharistSongHintKey(item) {
         const songs = getEucharistSongMap(item);
+        const taiwanPrimary = activePrefaceLanguage() === 'ZH';
+        const taiwanKeys = state.liturgyInfo?.taiwanPrefaceKeys ?? (taiwanPrimary ? taiwanDailyPrefaceKeys(getActiveLiturgicalSourceDate()) : []);
+        const taiwanKey = taiwanKeys.find(key => songs[key]?.content?.some(row => row.text_zh || row.rubric_zh));
+        if (taiwanPrimary && taiwanKey) return taiwanKey;
         const collected=Object.entries(songs).filter(([,entry])=>entry.__dailyServer).sort((a,b)=>(a[1].__dailySourceRank||0)-(b[1].__dailySourceRank||0))[0];
         if (collected) return collected[0];
+        if (taiwanKey) return taiwanKey;
         if ((state.currentLoc === 'IT' || state.targetLang === 'IT') && songs.cei_complete_prefaces) {
             return 'cei_complete_prefaces';
-        }
-        if ((state.currentLoc === 'PT' || state.targetLang === 'PT') && songs.cep_complete_prefaces) {
-            return 'cep_complete_prefaces';
         }
         if ((state.currentLoc === 'ES' || state.targetLang === 'ES') && songs.cem_complete_prefaces) {
             return 'cem_complete_prefaces';

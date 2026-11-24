@@ -86,7 +86,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
    check(!Object.keys(songs).some(key=>key.startsWith('daily_collected_preface')),'Same preface retained a separate collected option');
    const text=songs.common_2.content.map(line=>line.text_zh||'').join(' ');check(text.includes('祢以仁愛創造了人類')&&!/藉基督獲救恩|另有其他|感恩祭典/u.test(text),'Heading/footer leaked into the preface body');
    check(songs.common_2.content.some(line=>line.text_kr?.includes('자비로 구원')),'Canonical Korean preface was lost');
-   for(const [key,lower,title]of [['common_4','zh','通用頌謝詞（四）（讚頌天主是天主的恩賜）'],['easter_2','en','PREFACE II OF EASTER'],['dead_1','jp','死者叙唱一'],['advent_2','pt','Prefácio do Advento II']]){
+   for(const [key,lower,title]of [['easter_2','en','PREFACE II OF EASTER'],['dead_1','jp','死者叙唱一'],['advent_2','pt','Prefácio do Advento II']]){
     const item={songs:eucharist.songs,__dailyServerPreface:{[lower+'_lines']:[{text:title},{text:'Retained authorized source paragraph for '+key+'.'}]}};
     const map=getEucharistSongMap(item);check(map[key]?.__dailySourceLanguages?.[lower],key+' collected preface did not join the existing catalogue entry');
     check(!Object.keys(map).some(id=>id.startsWith('daily_collected_preface')),key+' retained a duplicate source selector');
@@ -95,7 +95,9 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
     check(getEucharistSongMap(item)===map,key+' pure catalogue cache was not reused');
    }
    const unknown={songs:eucharist.songs,__dailyServerPreface:{zh_lines:[{text:'（二）（無法核實的新標題）'},{text:'另外的正文。'}]}};
-   check(getEucharistSongMap(unknown).daily_collected_preface,'An unverified title was assigned to a known preface');
+   check(!getEucharistSongMap(unknown).daily_collected_preface,'An unverified Taiwan PDF created a preface body');
+   const sourceBody={songs:eucharist.songs,__dailyServerPreface:{zh_lines:[{text:'通用頌謝詞（四）'},{text:'未經編輯器發布的本文。'}]}};
+   check(getEucharistSongMap(sourceBody).common_4.content.some(row=>row.text_zh)&&!getEucharistSongMap(sourceBody).common_4.content.some(row=>row.text_zh==='未經編輯器發布的本文。'),'Taiwan PDF text overrode a published preface');
    for(const form of ['1','2','3','4'])for(const line of eucharist.forms[form]||[]){if(/我們的教宗|台北總教區的主教/u.test(line.text_zh||'')){const html=formatDynamicLineText(line.text_zh,'zh');check(!/方濟各|台北總教區的主教若翰/u.test(plain(html)),'Old fixed office name remains in prayer '+form);}}
    const host=document.createElement('div');host.style.cssText='position:absolute;left:-10000px;width:900px';document.body.appendChild(host);
    const heights=[];
@@ -118,7 +120,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
    for(const lower of ['zh','kr']){const rows=accl.querySelectorAll('.pair-line.line-'+lower);check(rows.length===3,lower+' November 4 acclamation has '+rows.length+' rows');check(isAlleluiaOnlyText(rows[2].textContent.replace(/^(?:答|◎)\s*/u,'')),lower+' final response is misaligned');}
    check(accl.textContent.includes('身上。')&&!accl.textContent.includes('身 上。'),'Chinese PDF wrap was retained in the verse');
    const currentEucharist=massData.find(item=>item.isEucharist),novSongs=getEucharistSongMap(currentEucharist);
-   check(state.options.eucharist_song==='pastors'&&novSongs.pastors.__dailySourceLanguages.zh,'Unnumbered November 4 preface did not join the canonical Pastors preface');
+   check(state.options.eucharist_song==='pastors'&&state.liturgyInfo.taiwanPrefaceKeys.includes('pastors'),'Unnumbered November 4 PDF did not select the published Pastors preface');
    const prefaceDom=[...document.querySelectorAll('[data-part-id="eucharist"] .text-content')].map(node=>node.textContent).join(' ');
    check(!prefaceDom.includes('天主藉牧者聖人照顧教會')&&prefaceDom.includes('祢藉聖人善行的榜樣鼓勵我們'),'Unnumbered preface title remains in the actual prayer DOM');
    check(novSongs.pastors.content.some(line=>line.text_kr)&&novSongs.pastors.content.some(line=>line.text_zh),'Pastors preface lost an official language');

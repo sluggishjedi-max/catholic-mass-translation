@@ -3380,6643 +3380,6477 @@
       "text_pt": "É nosso dever, é nossa salvação."
     }],
     "songs": {
-      "cep_complete_prefaces": {
+      "advent_1": {
         "title": {
-          "pt": "Prefácios completos do Missal Romano de Portugal"
+          "pt": "PREFÁCIO I DO ADVENTO — As duas vindas de Cristo"
         },
-        "content": [{
-          "rubric_pt": "PREFÁCIO I DO ADVENTO"
-        }, {
-          "sp_pt": "",
-          "text_pt": "As duas vindas de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "33. "
-            + "Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro,"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "nas Missas do Tempo e também nas outras Missas que não têm prefácio próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele veio a primeira vez,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na humildade da natureza humana,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "realizar o eterno desígnio do vosso amor"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e abrir-nos o caminho da salvação;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "de novo há de vir, no esplendor da sua glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para nos dar em plenitude os bens prometidos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que, entretanto, vigilantes na fé, ousamos esperar."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I-A DO ADVENTO"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, Senhor e juiz da história"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "33 a. "
-            + "Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro, nas Missas do Tempo e também nas outras Missas que não têm prefácio"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "princípio e fim de todas as coisas,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever dar-Vos graças"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e cantar-Vos um hino de bênção e de louvor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós nos escondestes o dia e a hora"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Jesus Cristo, vosso Filho, Senhor e juiz da história,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "aparecerá sobre as nuvens do céu,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "revestido de poder e majestade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nesse dia tremendo e glorioso,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "passará o mundo presente"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e aparecerão os novos céus e a nova terra."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Agora Ele vem ao nosso encontro,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em cada homem e em cada tempo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que O recebamos na fé e na caridade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e dêmos testemunho da gloriosa esperança do seu reino."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na esperança da sua vinda,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com os anjos e os santos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO II DO ADVENTO"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A dupla expetativa de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "34. "
-            + "Este prefácio diz-se desde 17 a 24 de dezembro nas Missas do Tempo e"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "também nas outras Missas que não têm prefácio próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Foi Ele que os Profetas anunciaram,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a Virgem Mãe esperou com inefável amor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "João Batista proclamou estar para vir"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e mostrou já presente no meio dos homens."
-        }, {
-          "sp_pt": "",
-          "text_pt": "É Ele que nos dá a graça de nos prepararmos com alegria"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para o mistério do seu nascimento,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a fim de nos encontrar vigilantes na oração"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e celebrando os seus louvores."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II-A DO ADVENTO"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Maria, nova Eva"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "34 a. "
-            + "Este prefácio diz-se desde 17 a 24 de dezembro, nas Missas do Tempo e"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "também nas outras Missas que não têm prefácio próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação.."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever dar-Vos graças,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nós Vos louvamos, nós Vos bendizemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nós Vos glorificamos pelo admirável mistério da Virgem Mãe:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Do antigo adversário veio a ruína,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "do seio virginal da Filha de Sião"
-        }, {
-          "sp_pt": "",
-          "text_pt": "germinou Aquele que nos alimenta com o pão dos anjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, para todo o género humano, brotou a salvação e a paz."
-        }, {
-          "sp_pt": "",
-          "text_pt": "A graça, que em Eva nos foi tirada,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "foi-nos restituída em Maria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nela, Mãe de todos os homens,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a maternidade, resgatada do pecado e da morte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "recebe o dom da vida nova:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "onde abundou a culpa, superabundou a misericórdia"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por Cristo, nosso Salvador."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na esperança da sua vinda,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO I DO NATAL DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo luz"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "35. "
-            + "Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Natal."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo mistério do Verbo Encarnado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nova luz da vossa glória brilhou sobre nós,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, contemplando a Deus visível aos nossos olhos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sejamos arrebatados no amor do que é invisível."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio, p. "
-            + "643."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nas Orações eucarísticas II e III faz-se também a comemoração própria do Natal."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nas Missas da vigília e da Noite do Natal do Senhor, diz-se: ao celebrarmos a"
-        }, {
-          "sp_pt": "",
-          "text_pt": "noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao"
-        }, {
-          "sp_pt": "",
-          "text_pt": "celebrarmos o dia santíssimo."
-        }, {
-          "rubric_pt": "PREFÁCIO II DO NATAL DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A restauração do universo na Encarnação"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "36. "
-            + "Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Natal."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "No mistério do seu nascimento,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Aquele que, por sua natureza, era invisível,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tornou-Se visível aos nossos olhos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Gerado desde toda a eternidade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "começou a existir no tempo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para renovar em Si a natureza decaída,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "restaurar o universo e reconduzir ao reino dos céus"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o homem perdido pelo pecado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. "
-            + "Nas Orações"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "eucarísticas II e III faz-se também a comemoração própria do Natal. "
-            + "Nas Missas"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "da vigília e da noite do Natal do Senhor, diz-se: ao celebrarmos a noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao celebrarmos o"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dia santíssimo."
-        }, {
-          "rubric_pt": "PREFÁCIO III DO NATAL DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A admirável permuta realizada na Encarnação do V erbo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "37. "
-            + "Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Natal."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele resplandece hoje, para os homens,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a admirável permuta da encarnação redentora:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a nossa fragilidade humana é assumida pelo Verbo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o homem mortal é elevado à dignidade imortal"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, unido a Vós em comunhão admirável,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "torna-se participante da vida eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. "
-            + "Nas Orações"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "eucarísticas II e III faz-se também a comemoração própria do Natal. "
-            + "Nas Missas"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "da vigília e da noite do Natal do Senhor, diz-se: ao celebrarmos a noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao celebrarmos o"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dia santíssimo."
-        }, {
-          "rubric_pt": "PREFÁCIO DA EPIFANIA DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, luz de todos os povos"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "38. "
-            + "Este prefácio diz-se nas Missas da solenidade da Epifania. "
-            + "Nos dias que decorrem desde a Epifania até ao sábado que precede a festa do Batismo do Senhor"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "pode dizer-se este prefácio ou um dos prefácios do Natal."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hoje, em Cristo, luz do mundo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "revelastes a todos os povos o mistério da nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, manifestando-O na nossa natureza mortal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nos renovastes com o esplendor da sua imortalidade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. "
-            + "Nas Orações"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "eucarísticas II e III faz-se também a comemoração própria."
-        }, {
-          "rubric_pt": "PREFÁCIO I DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Significado espiritual da Quaresma"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "39. "
-            + "Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "que não têm outro prefácio mais próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Todos os anos concedeis aos vossos fiéis"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a graça de se prepararem,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na alegria do coração purificado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para celebrar as festas pascais,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a fim de que, pela oração mais intensa,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pela caridade mais diligente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "participando nos mistérios da renovação cristã,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "alcancem a plenitude da filiação divina."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A penitência espiritual"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "40. "
-            + "Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "que não têm prefácio mais próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Para renovar, na santidade, os vossos filhos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "concedeis este tempo de salvação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a fim de que, libertando-se do fermento do pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "se convertam a Vós de todo o coração"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e vivam de tal modo as realidades temporais"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que procurem sempre os bens eternos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO III DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Os frutos da abstinência"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "41. "
-            + "Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "jejum."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós nos ensinais, pela abstinência quaresmal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a manifestar-Vos a nossa gratidão,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a dominar os excessos da nossa inclinação para o mal"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a dar alimento aos que têm fome,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "imitando a vossa divina bondade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO IV DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Os frutos do jejum"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "42. "
-            + "Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "jejum."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo jejum corporal"
-        }, {
-          "sp_pt": "",
-          "text_pt": "reprimis os vícios e elevais o espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "infundis a fortaleza e dais a recompensa,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, os anjos louvam a vossa majestade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as dominações Vos adoram,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as potestades Vos reverenciam;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os céus, os espíritos celestes"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e os serafins Vos aclamam,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "unidos em eterna exultação."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamando (cantando) humildemente o vosso louvor:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO V DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O caminho do êxodo no deserto quaresmal"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "42 a. "
-            + "Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "que não têm prefácio mais próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, rico de misericórdia,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nossa salvação bendizer o vosso nome,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "no nosso itinerário para a luz pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "seguindo os passos de Cristo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mestre e exemplo da humanidade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "reconciliada no vosso amor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós abris à Igreja o caminho de um novo êxodo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "através do deserto quaresmal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, aos pés da montanha santa,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "de coração contrito e humilhado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tome consciência da sua vocação como povo da aliança,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "reunido para cantar o vosso louvor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "escutar a vossa palavra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e viver a experiência admirável dos vossos prodígios."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO VI DA QUARESMA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O sacramento da reconciliação no Espírito"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "42 b. "
-            + "Este prefácio pode dizer-se na Missa da reconciliação e na Missa de caráter"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "penitencial. "
-            + "Diz-se também no Tempo da Quaresma."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus omnipotente e misericordioso,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "louvar-Vos e dar-Vos graças por todos os benefícios"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, especialmente, pela graça do perdão."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ao homem, náufrago do pecado e da morte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pelo sacramento da reconciliação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "abristes em Cristo, morto e ressuscitado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o porto da misericórdia e da paz."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo poder do vosso Espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "estabelecestes para a Igreja,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "santa e também pecadora,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "uma segunda tábua de salvação depois do Batismo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e continuamente a renovais"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para a reunir no banquete do vosso amor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO I DA PAIXÃO DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O poder da Cruz"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "43. "
-            + "Este prefácio diz-se durante a Semana V da Quaresma e nas Missas da Santa"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cruz e da Paixão do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pela paixão redentora do vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "abristes aos homens o caminho da fé,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para proclamarem a glória do vosso nome."
-        }, {
-          "sp_pt": "",
-          "text_pt": "No admirável poder da cruz"
-        }, {
-          "sp_pt": "",
-          "text_pt": "resplandece o julgamento do mundo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a vitória do Crucificado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e todos os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DA PAIXÃO DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A vitória da Paixão"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "44. "
-            + "Este prefácio diz-se na segunda, terça e quarta-feira da Semana Santa."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Aproximam-se os dias solenes"
-        }, {
-          "sp_pt": "",
-          "text_pt": "da paixão salvadora e da ressurreição gloriosa,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que é vencida a iniquidade da antiga serpente"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e se renova o mistério da nossa redenção."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, a multidão dos anjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "adora a vossa majestade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exulta eternamente na vossa presença."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO PASCAL I"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério pascal"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "45. "
-            + "Este prefácio diz-se no Tempo Pascal."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na Missa da Vigília Pascal diz-se: nesta noite;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "no dia da Páscoa e sua oitava diz-se: neste dia;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "depois da oitava diz-se: neste tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que sempre Vos louvemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas com maior solenidade (nesta noite – neste dia – neste tempo),"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Cristo, nossa Páscoa, foi imolado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele é o Cordeiro de Deus que tirou o pecado do mundo:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "morrendo destruiu a morte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e ressuscitando restaurou a vida."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "No Cânone romano diz-se o Em comunhão com toda a Igreja e Aceitai benignamente próprios. "
-            + "Nas Orações eucarísticas II e III faz-se também a comemoração"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "própria. "
-            + "Na Vigília Pascal diz-se: ao celebrarmos a noite santíssima."
-          )
-        }, {
-          "rubric_pt": "PREFÁCIO PASCAL II"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A vida nova em Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "46. "
-            + "Este prefácio diz-se no Tempo Pascal."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que sempre Vos louvemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas com maior solenidade neste tempo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Cristo, nossa Páscoa, foi imolado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele nascem os filhos da luz para a vida eterna"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e abrem-se para os fiéis as portas do reino dos céus,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "porque a nossa morte foi redimida pela sua morte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e na sua ressurreição ressurgiu a vida do género humano."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO PASCAL III"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo vivo e intercessor perpétuo em nosso favor"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "47. "
-            + "Este prefácio diz-se no Tempo Pascal."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que sempre Vos louvemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas com maior solenidade neste tempo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Cristo, nossa Páscoa, foi imolado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele Se oferece continuamente por nós"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nos defende com a sua intercessão."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Foi imolado sobre a cruz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas não morrerá jamais;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "foi morto, mas agora vive para sempre."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO PASCAL IV"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A renovação do universo pelo mistério pascal"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "48. "
-            + "Este prefácio diz-se no Tempo Pascal."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que sempre Vos louvemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas com maior solenidade neste tempo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Cristo, nossa Páscoa, foi imolado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Porque, vencendo a antiga corrupção do pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "renovou o universo decaído"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e restaurou o género humano na sua integridade original."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO PASCAL V"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, sacerdote e vítima"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "49. "
-            + "Este prefácio diz-se no Tempo Pascal."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que sempre Vos louvemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas com maior solenidade neste tempo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em que Cristo, nossa Páscoa, foi imolado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pela oblação do seu Corpo na cruz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "levou à plenitude os sacrifícios antigos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, entregando-Se a Vós pela nossa salvação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tornou-Se Ele mesmo o sacerdote, o altar e o cordeiro."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DA ASCENSÃO DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério da Ascensão"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "50. "
-            + "Este prefácio diz-se no dia de Ascensão do Senhor. "
-            + "Pode dizer-se também"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "nos dias a seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que"
-        }, {
-          "sp_pt": "",
-          "text_pt": "não têm prefácio próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Porque o Senhor Jesus Cristo, Rei da glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "vencedor da morte e do pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "subiu (hoje) ao mais alto dos céus, ante a admiração dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e foi constituído Mediador entre Deus e os homens,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Juiz do mundo e Senhor dos senhores."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele não abandonou a nossa condição humana,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas, subindo aos céus, como nossa cabeça e primogénito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "deu-nos a esperança de irmos um dia ao seu encontro,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "como membros do seu Corpo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para nos unir à sua glória imortal."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO II DA ASCENSÃO DO SENHOR"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério da Ascensão"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "51. "
-            + "Este prefácio diz-se no dia de Ascensão. "
-            + "Pode dizer-se também nos dias a"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que não têm"
-        }, {
-          "sp_pt": "",
-          "text_pt": "prefácio próprio."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "rubric_pt": "Depois da sua ressurreição,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "apareceu a todos os discípulos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, à vista deles, subiu aos céus,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para nos tornar participantes da sua divindade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, na plenitude da alegria pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exultam os homens por toda a terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamam a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "No dia da Ascensão, no Cânone romano diz-se o Em comunhão com toda a Igreja"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "próprio. "
-            + "Nas Orações eucarísticas II e III faz-se também a comemoração própria."
-          )
-        }, {
-          "rubric_pt": "PREFÁCIO I DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério pascal e o povo de Deus"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "52. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo seu mistério pascal,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele realizou a obra admirável"
-        }, {
-          "sp_pt": "",
-          "text_pt": "de nos chamar do pecado e da morte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "à glória de geração escolhida, sacerdócio real,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nação santa, povo resgatado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a fim de que, libertos do poder das trevas"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para a claridade da vossa luz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "anunciemos por toda a parte as vossas maravilhas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério da salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "53. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Compadecido dos errados caminhos dos homens,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dignou-Se nascer da Virgem Maria;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com a sua morte na cruz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "livrou-nos da morte eterna;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com a sua ressurreição,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "deu-nos a vida imortal."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO III DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A salvação do homem por um homem"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "54. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Para manifestar o esplendor da vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "viestes em auxílio da fragilidade humana,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com o poder da vossa divindade;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "da nossa condição mortal"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tirastes o remédio para vencer a morte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, da nossa ruína,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "abristes o caminho da salvação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, a multidão dos anjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "adora a vossa majestade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exulta eternamente na vossa presença."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO IV DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A história da salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "55. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Com o seu nascimento, Ele renovou a antiga condição humana;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com a sua morte destruiu os nossos pecados;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com a sua ressurreição conduziu-nos à vida eterna"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, na sua ascensão, abriu-nos as portas do céu."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO V DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A criação"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "56. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós criastes os elementos do mundo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "estabelecendo o curso dos tempos e as estações do ano;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "formastes o homem à vossa imagem e semelhança"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e lhe confiastes as maravilhas do universo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, em vosso nome, domine sobre todas as criaturas"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e Vos glorifique sem cessar, pela grandeza das vossas obras,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com todos os anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO VI DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O penhor da Páscoa eterna"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "57. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Em Vós vivemos, nos movemos e existimos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Durante a nossa vida terrena,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sentimos cada dia os efeitos da vossa bondade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e possuímos desde já o penhor da vida futura;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tendo recebido as primícias do Espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pelo qual ressuscitastes Jesus Cristo de entre os mortos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "vivemos na esperança da Páscoa eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO VII DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A salvação pela obediência de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "58. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na vossa infinita misericórdia,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "de tal modo amastes o mundo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que nos enviastes o Redentor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em tudo semelhante a nós, menos no pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para poderdes amar em nós"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o que amáveis em vosso Filho:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pela sua obediência, Ele restaurou os vossos dons,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que por desobediência tínhamos perdido."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e todos os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO VIII DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A Igreja reunida na comunhão da Trindade"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "59. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo sangue do vosso Filho e pela força do Espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "quisestes reconduzir à unidade do vosso povo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os filhos dispersos pelo pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que a Igreja,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "reunida na comunhão da Trindade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "apareça no mundo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "como corpo de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e templo do Espírito Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para louvor da vossa infinita sabedoria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A ação do Espírito na Igreja"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "59 a. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Com admirável providência"
-        }, {
-          "sp_pt": "",
-          "text_pt": "ordenais a evolução dos tempos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com o poder do Espírito Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "conduzis a vossa Igreja,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, sempre fiel ao vosso amor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nunca deixe de invocar-Vos nas suas tribulações,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nem de Vos dar graças nas suas alegrias,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O dia do Senhor"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "59 b. "
-            + "Este prefácio diz-se nos domingos do Tempo Comum."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, fonte da verdade e da vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "bendizer-Vos e dar-Vos graças,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "porque, neste dia de festa,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nos congregastes na vossa casa."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hoje, a vossa família,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "reunida para escutar a palavra da salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e participar no pão da vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "celebra o memorial do Senhor ressuscitado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na esperança do domingo que não tem ocaso,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "quando toda a humanidade entrar no vosso descanso."
-        }, {
-          "rubric_pt": "Então veremos o vosso rosto"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e louvaremos sem fim a vossa misericórdia."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nesta feliz esperança,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DA SANTÍSSIMA EUCARISTIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O sacrifício e o sacramento de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "60. "
-            + "Este prefácio diz-se na Missa da Ceia do Senhor; pode dizer-se também"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "na solenidade do Santíssimo Corpo e Sangue de Cristo e nas Missas votivas da"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santíssima Eucaristia."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Verdadeiro e eterno sacerdote,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "oferecendo-Se como vítima de salvação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "instituiu o sacrifício da nova e eterna aliança"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e mandou que o celebrássemos em sua memória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O seu Corpo, por nós imolado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é alimento que nos fortalece"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e o seu Sangue, por nós derramado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é bebida que nos purifica."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DA SANTÍSSIMA EUCARISTIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Os frutos da Santíssima Eucaristia"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "61. "
-            + "Este prefácio diz-se na solenidade do Santíssimo Corpo e Sangue de Cristo"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nas Missas votivas da Santíssima Eucaristia."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "rubric_pt": "Reunido com os apóstolos na Última Ceia,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para perpetuar a sua paixão salvadora,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "entregou-Se a Si mesmo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "como cordeiro imaculado e sacrifício perfeito."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Neste sagrado mistério, alimentais e santificais os fiéis,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que os homens do mundo inteiro"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sejam iluminados pela mesma fé"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e unidos pela mesma caridade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Assim nos reunimos à mesa deste admirável sacramento,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que a abundância da vossa graça"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nos faça participantes da vida celeste."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, todas as criaturas, no céu e na terra,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vos adoram, cantando um cântico novo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "E também nós, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A Eucaristia, viático para a Páscoa eterna"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "61 a. "
-            + "Este prefácio diz-se nas Missas rituais para o viático e pode dizer-se nas"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Missas votivas da Santíssima Eucaristia."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus de misericórdia e de paz."
-        }, {
-          "sp_pt": "",
-          "text_pt": "É verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças e bendizer o vosso nome."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós quisestes que o vosso Filho, Jesus Cristo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "obediente até à morte na cruz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nos abrisse o caminho para Vós,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "plenitude de toda a esperança humana."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na Eucaristia, testamento do seu amor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele faz-Se comida e bebida espiritual"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para a nossa viagem a caminho da Páscoa eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Com este penhor da ressurreição final,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "esperamos participar na mesa gloriosa do vosso reino"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A Maternidade da Virgem santa Maria"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "62. "
-            + "Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e louvar-Vos, bendizer-Vos e glorificar-Vos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na memória (festa – solenidade) da Virgem santa Maria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo poder do Espírito Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ela concebeu o vosso Filho unigénito"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, sem perder a glória da sua virgindade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "deu ao mundo a luz eterna, nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, os anjos louvam a vossa majestade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as dominações Vos adoram,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as potestades Vos reverenciam;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os céus, os espíritos celestes e os serafins Vos aclamam,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "unidos em eterna exultação."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamando (cantando) humildemente o vosso louvor:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "PREFÁCIO II DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A Igreja louva a Deus com as palavras de Maria"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "63. "
-            + "Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "celebrar o vosso poder admirável na perfeição dos santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exaltar a vossa bondade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na memória (festa – solenidade) da Virgem santa Maria,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "inspirando-nos no seu cântico de louvor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós fizestes maravilhas a favor de todos os povos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e manifestastes, de geração em geração, a vossa misericórdia,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "quando olhastes para a humildade da vossa serva"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, por Ela, nos destes o Salvador do mundo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "vosso Filho, nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, a multidão dos anjos adora a vossa majestade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exulta eternamente na vossa presença."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO III DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Maria, sinal de consolação e de esperança"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "63 a. "
-            + "Este prefácio diz-se nas Missas da Virgem santa Maria."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever dar-Vos graças,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é nossa salvação glorificar-Vos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Nós Vos louvamos e bendizemos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por Jesus Cristo, vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na memória (festa) da Virgem santa Maria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Humilde serva, acolheu a vossa palavra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e guardou-a no seu coração;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "admiravelmente unida ao mistério da redenção,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "perseverou com os apóstolos em oração,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "esperando a vinda do Espírito Santo;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "agora, resplandece no caminho da nossa vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "como sinal de consolação e de firme esperança."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Maria, imagem da nova humanidade"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "63 b. "
-            + "Este prefácio diz-se nas Missas da Virgem santa Maria."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, fonte de vida e de alegria,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever dar-Vos graças"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na memória (festa – solenidade) da Virgem santa Maria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós revelastes, na plenitude dos tempos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o mistério escondido desde os tempos antigos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que se renove, no mundo inteiro, a vida e a esperança."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Em Cristo, novo Adão,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, em Maria, nova Eva,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "manifestastes finalmente a vossa Igreja,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "primícias da humanidade redimida."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por este dom admirável,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "toda a criação, pelo poder do Espírito Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "volta de novo ao caminho original para a Páscoa eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo."
-        }, {
-          "rubric_pt": "OUTROS PREFÁCIOS DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Maria, imagem e mãe da Igreja: Santa Maria. "
-            + "Mãe da Igreja,"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "p. "
-            + "677."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "VI. "
-            + "A glória da Assunção de Maria: 15 de agosto, p. "
-            + "746."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "VII. "
-            + "O mistério de Maria e da Igreja: 8 de dezembro, p. "
-            + "836."
-          )
-        }, {
-          "rubric_pt": "PREFÁCIO DOS ANJOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A glória de Deus resplandece nos anjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "63 c. "
-            + "Este prefácio diz-se nas Missas dos Anjos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Proclamamos a vossa imensa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que resplandece nos anjos e nos arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, honrando estes mensageiros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "exaltamos a vossa infinita bondade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "porque a veneração que eles merecem"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é sinal da vossa incomparável grandeza"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sobre todas as criaturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com a multidão dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que celebram a vossa divina majestade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nós Vos adoramos e bendizemos com alegria,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO DE SÃO JOSÉ"
-        }, {
-          "rubric_pt": "ESPOSO DA VIRGEM SANTA MARIA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A missão de são José"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "63 c. "
-            + "Este prefácio diz-se nas Missas de são José."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exaltar, bendizer e proclamar a vossa bondade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na solenidade (festa – memória) do bem-aventurado são José."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Homem justo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "foi por Vós escolhido para Esposo da Virgem Mãe de Deus;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "servo fiel e prudente, foi constituído chefe da vossa família,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para guardar com paterna solicitude o vosso Filho unigénito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "concebido pelo poder do Espírito Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, os anjos louvam a vossa majestade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as dominações Vos adoram, as potestades Vos reverenciam;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os céus, os espíritos celestes e os serafins Vos aclamam,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "unidos em eterna exultação."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamando (cantando) humildemente o vosso louvor:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DOS APÓSTOLOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Os apóstolos, pastores do povo de Deus"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "64. "
-            + "Este prefácio diz-se nas Missas dos Apóstolos, especialmente de são Pedro"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "e são Paulo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Porque Vós, Pastor eterno,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "não abandonais o vosso rebanho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas sempre o guardais e protegeis,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por meio dos santos apóstolos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que seja conduzido, através dos tempos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pelos mesmos chefes que pusestes à sua frente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "como representantes do vosso Filho, Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DOS APÓSTOLOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O fundamento apostólico e o testemunho"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "65. "
-            + "Este prefácio diz-se nas Missas dos Apóstolos e dos Evangelistas."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós fundastes a Igreja"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sobre o alicerce dos apóstolos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que seja, na terra, através dos tempos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o sinal vivo da vossa santidade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e anuncie a todos os povos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o Evangelho do reino dos céus."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, agora e para sempre,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DOS SANTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A glória dos santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "66. "
-            + "Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "e titulares das igrejas e nas solenidades e festas dos santos que não têm prefácio"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "próprio. "
-            + "Pode dizer-se também nas memórias dos santos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós sois glorificado na assembleia dos santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, ao coroar os seus méritos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "coroais os vossos próprios dons."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na sua vida, dais-nos um exemplo;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na comunhão com eles uma família"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, na sua intercessão um auxílio,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, confirmados por tão grandes testemunhas,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "possamos vencer o bom combate da fé"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e receber, com eles, a eterna coroa de glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com os anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os arcanjos e todos os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DOS SANTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A ação dos santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "67. "
-            + "Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros e"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "titulares das igrejas, bem como nas solenidades e festas dos santos que não têm"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "prefácio próprio. "
-            + "Pode dizer-se também nas memórias dos santos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo testemunho admirável dos santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "aumentais e fortaleceis sempre a vossa Igreja"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nos dais provas evidentes do vosso amor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O exemplo dos santos nos estimula"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a sua intercessão nos ajuda"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a celebrar os mistérios da salvação."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e todos os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DOS SANTOS MÁRTIRES"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O sinal e o exemplo do martírio"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "68. "
-            + "Este prefácio diz-se nas solenidades e festas dos santos mártires. "
-            + "Pode dizer-se"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "também nas suas memórias."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "À imitação de Cristo, vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o sangue do(a) glorioso(a) mártir são (santo/a) N.,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "derramado pela confissão do vosso nome,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "manifesta as maravilhas do vosso poder."
-        }, {
-          "sp_pt": "",
-          "text_pt": "No seu martírio, Senhor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "tirais força da fraqueza"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e fazeis da fragilidade humana"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o testemunho da vossa grandeza,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos, na terra, a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DOS SANTOS MÁRTIRES"
-        }, {
-          "sp_pt": "",
-          "text_pt": "As maravilhas de Deus na vitória dos mártires"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "69. "
-            + "Este prefácio diz-se nas solenidades e festas dos santos mártires. "
-            + "Pode dizer-se"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "também nas suas memórias."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós sois glorificado no louvor dos vossos santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e tudo o que veneramos no seu glorioso martírio"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é obra do vosso poder admirável:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "de Vós procede o ardor da sua fé,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a firmeza da sua perseverança"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e o triunfo no seu combate,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, todas as criaturas, no céu e na terra,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vos adoram, cantando um cântico novo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "E também nós, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO DOS SANTOS PASTORES DA IGREJA"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A presença dos santos pastores na Igreja"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "70. "
-            + "Este prefácio diz-se nas solenidades e festas dos santos pastores da Igreja."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pode dizer-se também nas suas memórias."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ao celebrar hoje a memória ( festa) de são N.,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a vossa Igreja exulta de alegria,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "porque a fortaleceis com o exemplo da sua vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a instruís com a sua palavra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a protegeis com a sua intercessão."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO DAS SANTAS VIRGENS"
-        }, {
-          "rubric_pt": "E DOS SANTOS RELIGIOSOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O sinal da vida consagrada a Deus"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "71. "
-            + "Este prefácio diz-se nas solenidades e festas das santas virgens e dos santos"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "religiosos. "
-            + "Pode dizer-se também nas suas memórias."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ao recordar os santos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que, por amor do reino dos céus,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "se consagraram a Cristo, vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "celebramos a vossa admirável providência."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Neles restituís ao homem a santidade original"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nos fazeis saborear, na terra,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os dons que reservastes para a vida futura."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM I"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A instauração do universo em Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "72. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "N’Ele quisestes instaurar todas as coisas"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a todos destes a graça de participar da sua plenitude."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Sendo Ele de condição divina,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "aniquilou-Se a Si próprio"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, pelo sangue derramado na cruz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "deu a paz a todo o universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso foi exaltado sobre todas as criaturas"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e tornou-Se, para todos os que Lhe obedecem,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "fonte de salvação eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM II"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A salvação por Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "73. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por amor criastes o homem"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, embora justamente condenado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em vossa misericórdia, o salvastes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, os anjos louvam a vossa majestade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as dominações Vos adoram,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "as potestades Vos reverenciam;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os céus, os espíritos celestes"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e os serafins Vos aclamam,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "unidos em eterna exultação."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamando (cantando) humildemente o vosso louvor:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM III"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Louvor a Deus pela criação e renovação do homem"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "74. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Pelo vosso Filho muito amado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "criastes o género humano"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e por vossa bondade o renovastes."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, Vos servem todas as criaturas,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vos louvam todos os redimidos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e Vos aclamam os anjos e todos os santos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Com eles, também nós proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM IV"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O louvor é um dom de Deus"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "75. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós não precisais dos nossos louvores"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e poder glorificar-Vos é dom da vossa bondade;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "porque os nossos hinos de bênção,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "nada aumentando à vossa infinita grandeza,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "alcançam-nos a graça da salvação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM V"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Proclamação do mistério de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "76. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Unidos na caridade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "celebramos a sua morte;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com fé viva,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a sua ressurreição;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com ardente esperança,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "aguardamos a sua vinda gloriosa."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM VI"
-        }, {
-          "sp_pt": "",
-          "text_pt": "O mistério da salvação em Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "77. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por Jesus Cristo, vosso amado Filho."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele é a vossa palavra, por quem tudo criastes."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Enviado por Vós, como Salvador e Redentor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "fez-Se homem pelo poder do Espírito Santo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nasceu da Virgem Maria."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Para cumprir a vossa vontade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e adquirir para Vós um povo santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "estendeu os braços e morreu na cruz;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, destruindo assim a morte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "manifestou a vitória da ressurreição."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e todos os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM VII"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, hóspede e peregrino no meio de nós"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "77 a. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus da aliança e da paz,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós chamastes e fizestes sair Abraão da sua terra"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para o constituir pai de todas as nações."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Suscitastes Moisés para libertar o vosso povo"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e conduzi-lo à terra prometida."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na plenitude dos tempos, enviastes o vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "hóspede e peregrino no meio de nós,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para nos redimir do pecado e da morte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e destes ao mundo o vosso Espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para fazer de todas as nações um só povo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que caminha para o vosso reino"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na liberdade dos filhos de Deus,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "segundo o mandamento novo do amor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM VIII"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, o bom samaritano"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "77 b. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "louvar-Vos e dar-Vos graças,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "em todos os momentos da nossa vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "na saúde e na doença, no sofrimento e na alegria,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por Cristo, vosso servo e nosso Redentor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Na sua vida mortal, Ele passou fazendo o bem"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e socorrendo todos os que eram prisioneiros do mal."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ainda hoje, como bom samaritano,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "vem ao encontro de todos os homens,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "atribulados no corpo ou no espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e derrama sobre as suas feridas"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o óleo da consolação e o vinho da esperança."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por este dom da vossa graça,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "também a noite da dor se abre à luz pascal"
-        }, {
-          "sp_pt": "",
-          "text_pt": "do vosso Filho crucificado e ressuscitado."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO COMUM IX"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A glória de Deus é o homem vivo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "77 c. "
-            + "Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "o prefácio do Tempo."
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "louvar-Vos e dar-Vos graças,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós sois o único Deus vivo e verdadeiro"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e estais presente em todo o universo;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas foi sobretudo no homem,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "criado à vossa imagem,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "que imprimistes o sinal da vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Vós o chamais a colaborar,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "com o trabalho de cada dia,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "no projeto da criação,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e lhe dais o vosso Espírito,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para que, em Cristo, homem novo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "se torne construtor da justiça e da paz."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO I DOS DEFUNTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A esperança da ressurreição em Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "78. "
-            + "Este prefácio diz-se nas Missas de defuntos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "N’Ele brilhou para nós a esperança da feliz ressurreição"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, se a certeza da morte nos entristece,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "conforta-nos a promessa da imortalidade."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Para os que creem em Vós, Senhor,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a vida não acaba, apenas se transforma"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e, desfeita a morada deste exílio terrestre,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "adquirimos no céu uma habitação eterna."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os arcanjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "os tronos e as dominações"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e todos os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO II DOS DEFUNTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo morreu pela nossa vida"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "79. "
-            + "Este prefácio diz-se nas Missas de defuntos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Tomando sobre Si a nossa morte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele livrou-nos da morte eterna;"
-        }, {
-          "sp_pt": "",
-          "text_pt": "oferecendo por nós a sua vida,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "abriu-nos as portas da vida imortal."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com todos os coros dos anjos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO III DOS DEFUNTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, salvação e vida"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "80. "
-            + "Este prefácio diz-se nas Missas de defuntos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "por nosso Senhor Jesus Cristo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Ele é a salvação do mundo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "a vida dos homens"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a ressurreição dos mortos."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por Ele, a multidão dos anjos"
-        }, {
-          "sp_pt": "",
-          "text_pt": "adora a vossa majestade"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e exulta eternamente na vossa presença."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Permiti que nos associemos às suas vozes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) com alegria:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO IV DOS DEFUNTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Da vida terrena à glória celeste"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "81. "
-            + "Este prefácio diz-se nas Missas de defuntos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "A vossa vontade nos chama à vida"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e a vossa providência nos governa."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Se, por vossa ordem, devido ao pecado,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "voltamos à terra de onde fomos tirados,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "pela morte redentora do vosso Filho,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "o vosso poder nos desperta,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "para tomar parte na ressurreição gloriosa."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os anjos e os santos,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "rubric_pt": "PREFÁCIO V DOS DEFUNTOS"
-        }, {
-          "sp_pt": "",
-          "text_pt": "A nossa ressurreição pela vitória de Cristo"
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "82. "
-            + "Este prefácio diz-se nas Missas de defuntos."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "O Senhor esteja convosco. "
-            + "R. "
-            + "Ele está no meio de nós."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Corações ao alto. "
-            + "R. "
-            + "O nosso coração está em Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "V. "
-            + "Dêmos graças ao Senhor nosso Deus."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": (
-            "R. "
-            + "É nosso dever, é nossa salvação."
-          )
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "é verdadeiramente nosso dever, é nossa salvação"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dar-Vos graças, sempre e em toda a parte."
-        }, {
-          "sp_pt": "",
-          "text_pt": "A morte é a nossa herança comum,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "mas, pelo dom maravilhoso da vossa bondade,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Cristo, com a sua vitória, nos redime da morte"
-        }, {
-          "sp_pt": "",
-          "text_pt": "e nos chama a tomar parte na sua vida gloriosa."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Por isso, com os coros celestes,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "proclamamos, na terra, a vossa glória,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "dizendo (cantando) numa só voz:"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Santo, Santo, Santo,"
-        }, {
-          "sp_pt": "",
-          "text_pt": "Senhor Deus do universo."
-        }, {
-          "sp_pt": "",
-          "text_pt": "O céu e a terra proclamam a vossa glória."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Bendito O que vem em nome do Senhor."
-        }, {
-          "sp_pt": "",
-          "text_pt": "Hossana nas alturas."
-        }]
+        "content": [
+          {
+            "rubric_pt": "33. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro,"
+          },
+          {
+            "rubric_pt": "nas Missas do Tempo e também nas outras Missas que não têm prefácio próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "8:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "9:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte",
+            "__massEditorPairKeys": {
+              "text_pt": "10:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "11:text"
+            }
+          },
+          {
+            "text_pt": "Ele veio a primeira vez,",
+            "__massEditorPairKeys": {
+              "text_pt": "12:text"
+            }
+          },
+          {
+            "text_pt": "na humildade da natureza humana,",
+            "__massEditorPairKeys": {
+              "text_pt": "13:text"
+            }
+          },
+          {
+            "text_pt": "realizar o eterno desígnio do vosso amor",
+            "__massEditorPairKeys": {
+              "text_pt": "14:text"
+            }
+          },
+          {
+            "text_pt": "e abrir-nos o caminho da salvação;",
+            "__massEditorPairKeys": {
+              "text_pt": "15:text"
+            }
+          },
+          {
+            "text_pt": "de novo há de vir, no esplendor da sua glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "16:text"
+            }
+          },
+          {
+            "text_pt": "para nos dar em plenitude os bens prometidos,",
+            "__massEditorPairKeys": {
+              "text_pt": "17:text"
+            }
+          },
+          {
+            "text_pt": "que, entretanto, vigilantes na fé, ousamos esperar.",
+            "__massEditorPairKeys": {
+              "text_pt": "18:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "19:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "20:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "21:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "22:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "23:text"
+            }
+          }
+        ]
+      },
+      "advent_1a": {
+        "title": {
+          "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história"
+        },
+        "content": [
+          {
+            "rubric_pt": "33 a. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro, nas Missas do Tempo e também nas outras Missas que não têm prefácio"
+          },
+          {
+            "rubric_pt": "próprio."
+          },
+          {
+            "text_pt": "Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "38:text"
+            }
+          },
+          {
+            "text_pt": "princípio e fim de todas as coisas,",
+            "__massEditorPairKeys": {
+              "text_pt": "39:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever dar-Vos graças",
+            "__massEditorPairKeys": {
+              "text_pt": "40:text"
+            }
+          },
+          {
+            "text_pt": "e cantar-Vos um hino de bênção e de louvor.",
+            "__massEditorPairKeys": {
+              "text_pt": "41:text"
+            }
+          },
+          {
+            "text_pt": "Vós nos escondestes o dia e a hora",
+            "__massEditorPairKeys": {
+              "text_pt": "42:text"
+            }
+          },
+          {
+            "text_pt": "em que Jesus Cristo, vosso Filho, Senhor e juiz da história,",
+            "__massEditorPairKeys": {
+              "text_pt": "43:text"
+            }
+          },
+          {
+            "text_pt": "aparecerá sobre as nuvens do céu,",
+            "__massEditorPairKeys": {
+              "text_pt": "44:text"
+            }
+          },
+          {
+            "text_pt": "revestido de poder e majestade.",
+            "__massEditorPairKeys": {
+              "text_pt": "45:text"
+            }
+          },
+          {
+            "text_pt": "Nesse dia tremendo e glorioso,",
+            "__massEditorPairKeys": {
+              "text_pt": "46:text"
+            }
+          },
+          {
+            "text_pt": "passará o mundo presente",
+            "__massEditorPairKeys": {
+              "text_pt": "47:text"
+            }
+          },
+          {
+            "text_pt": "e aparecerão os novos céus e a nova terra.",
+            "__massEditorPairKeys": {
+              "text_pt": "48:text"
+            }
+          },
+          {
+            "text_pt": "Agora Ele vem ao nosso encontro,",
+            "__massEditorPairKeys": {
+              "text_pt": "49:text"
+            }
+          },
+          {
+            "text_pt": "em cada homem e em cada tempo,",
+            "__massEditorPairKeys": {
+              "text_pt": "50:text"
+            }
+          },
+          {
+            "text_pt": "para que O recebamos na fé e na caridade",
+            "__massEditorPairKeys": {
+              "text_pt": "51:text"
+            }
+          },
+          {
+            "text_pt": "e dêmos testemunho da gloriosa esperança do seu reino.",
+            "__massEditorPairKeys": {
+              "text_pt": "52:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na esperança da sua vinda,",
+            "__massEditorPairKeys": {
+              "text_pt": "53:text"
+            }
+          },
+          {
+            "text_pt": "com os anjos e os santos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "54:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "55:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "56:text"
+            }
+          }
+        ]
+      },
+      "advent_2": {
+        "title": {
+          "pt": "PREFÁCIO II DO ADVENTO — A dupla expetativa de Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "34. Este prefácio diz-se desde 17 a 24 de dezembro nas Missas do Tempo e"
+          },
+          {
+            "rubric_pt": "também nas outras Missas que não têm prefácio próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "66:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "67:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "68:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "69:text"
+            }
+          },
+          {
+            "text_pt": "Foi Ele que os Profetas anunciaram,",
+            "__massEditorPairKeys": {
+              "text_pt": "70:text"
+            }
+          },
+          {
+            "text_pt": "a Virgem Mãe esperou com inefável amor,",
+            "__massEditorPairKeys": {
+              "text_pt": "71:text"
+            }
+          },
+          {
+            "text_pt": "João Batista proclamou estar para vir",
+            "__massEditorPairKeys": {
+              "text_pt": "72:text"
+            }
+          },
+          {
+            "text_pt": "e mostrou já presente no meio dos homens.",
+            "__massEditorPairKeys": {
+              "text_pt": "73:text"
+            }
+          },
+          {
+            "text_pt": "É Ele que nos dá a graça de nos prepararmos com alegria",
+            "__massEditorPairKeys": {
+              "text_pt": "74:text"
+            }
+          },
+          {
+            "text_pt": "para o mistério do seu nascimento,",
+            "__massEditorPairKeys": {
+              "text_pt": "75:text"
+            }
+          },
+          {
+            "text_pt": "a fim de nos encontrar vigilantes na oração",
+            "__massEditorPairKeys": {
+              "text_pt": "76:text"
+            }
+          },
+          {
+            "text_pt": "e celebrando os seus louvores.",
+            "__massEditorPairKeys": {
+              "text_pt": "77:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "78:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "79:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "80:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "81:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "82:text"
+            }
+          }
+        ]
+      },
+      "advent_2a": {
+        "title": {
+          "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva"
+        },
+        "content": [
+          {
+            "rubric_pt": "34 a. Este prefácio diz-se desde 17 a 24 de dezembro, nas Missas do Tempo e"
+          },
+          {
+            "rubric_pt": "também nas outras Missas que não têm prefácio próprio."
+          },
+          {
+            "text_pt": "Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "97:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever dar-Vos graças,",
+            "__massEditorPairKeys": {
+              "text_pt": "98:text"
+            }
+          },
+          {
+            "text_pt": "sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "99:text"
+            }
+          },
+          {
+            "text_pt": "Nós Vos louvamos, nós Vos bendizemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "100:text"
+            }
+          },
+          {
+            "text_pt": "nós Vos glorificamos pelo admirável mistério da Virgem Mãe:",
+            "__massEditorPairKeys": {
+              "text_pt": "101:text"
+            }
+          },
+          {
+            "text_pt": "Do antigo adversário veio a ruína,",
+            "__massEditorPairKeys": {
+              "text_pt": "102:text"
+            }
+          },
+          {
+            "text_pt": "do seio virginal da Filha de Sião",
+            "__massEditorPairKeys": {
+              "text_pt": "103:text"
+            }
+          },
+          {
+            "text_pt": "germinou Aquele que nos alimenta com o pão dos anjos",
+            "__massEditorPairKeys": {
+              "text_pt": "104:text"
+            }
+          },
+          {
+            "text_pt": "e, para todo o género humano, brotou a salvação e a paz.",
+            "__massEditorPairKeys": {
+              "text_pt": "105:text"
+            }
+          },
+          {
+            "text_pt": "A graça, que em Eva nos foi tirada,",
+            "__massEditorPairKeys": {
+              "text_pt": "106:text"
+            }
+          },
+          {
+            "text_pt": "foi-nos restituída em Maria.",
+            "__massEditorPairKeys": {
+              "text_pt": "107:text"
+            }
+          },
+          {
+            "text_pt": "Nela, Mãe de todos os homens,",
+            "__massEditorPairKeys": {
+              "text_pt": "108:text"
+            }
+          },
+          {
+            "text_pt": "a maternidade, resgatada do pecado e da morte,",
+            "__massEditorPairKeys": {
+              "text_pt": "109:text"
+            }
+          },
+          {
+            "text_pt": "recebe o dom da vida nova:",
+            "__massEditorPairKeys": {
+              "text_pt": "110:text"
+            }
+          },
+          {
+            "text_pt": "onde abundou a culpa, superabundou a misericórdia",
+            "__massEditorPairKeys": {
+              "text_pt": "111:text"
+            }
+          },
+          {
+            "text_pt": "por Cristo, nosso Salvador.",
+            "__massEditorPairKeys": {
+              "text_pt": "112:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na esperança da sua vinda,",
+            "__massEditorPairKeys": {
+              "text_pt": "113:text"
+            }
+          },
+          {
+            "text_pt": "com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "114:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "115:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "116:text"
+            }
+          }
+        ]
+      },
+      "nativity_1": {
+        "title": {
+          "pt": "PREFÁCIO I DO NATAL DO SENHOR — Cristo luz"
+        },
+        "content": [
+          {
+            "rubric_pt": "35. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
+          },
+          {
+            "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
+          },
+          {
+            "rubric_pt": "Natal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "127:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "128:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "129:text"
+            }
+          },
+          {
+            "text_pt": "Pelo mistério do Verbo Encarnado,",
+            "__massEditorPairKeys": {
+              "text_pt": "130:text"
+            }
+          },
+          {
+            "text_pt": "nova luz da vossa glória brilhou sobre nós,",
+            "__massEditorPairKeys": {
+              "text_pt": "131:text"
+            }
+          },
+          {
+            "text_pt": "para que, contemplando a Deus visível aos nossos olhos,",
+            "__massEditorPairKeys": {
+              "text_pt": "132:text"
+            }
+          },
+          {
+            "text_pt": "sejamos arrebatados no amor do que é invisível.",
+            "__massEditorPairKeys": {
+              "text_pt": "133:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "134:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "135:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "136:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "137:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "138:text"
+            }
+          }
+        ]
+      },
+      "nativity_2": {
+        "title": {
+          "pt": "PREFÁCIO II DO NATAL DO SENHOR — A restauração do universo na Encarnação"
+        },
+        "content": [
+          {
+            "rubric_pt": "36. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
+          },
+          {
+            "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
+          },
+          {
+            "rubric_pt": "Natal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "159:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "160:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "161:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "162:text"
+            }
+          },
+          {
+            "text_pt": "No mistério do seu nascimento,",
+            "__massEditorPairKeys": {
+              "text_pt": "163:text"
+            }
+          },
+          {
+            "text_pt": "Aquele que, por sua natureza, era invisível,",
+            "__massEditorPairKeys": {
+              "text_pt": "164:text"
+            }
+          },
+          {
+            "text_pt": "tornou-Se visível aos nossos olhos.",
+            "__massEditorPairKeys": {
+              "text_pt": "165:text"
+            }
+          },
+          {
+            "text_pt": "Gerado desde toda a eternidade,",
+            "__massEditorPairKeys": {
+              "text_pt": "166:text"
+            }
+          },
+          {
+            "text_pt": "começou a existir no tempo",
+            "__massEditorPairKeys": {
+              "text_pt": "167:text"
+            }
+          },
+          {
+            "text_pt": "para renovar em Si a natureza decaída,",
+            "__massEditorPairKeys": {
+              "text_pt": "168:text"
+            }
+          },
+          {
+            "text_pt": "restaurar o universo e reconduzir ao reino dos céus",
+            "__massEditorPairKeys": {
+              "text_pt": "169:text"
+            }
+          },
+          {
+            "text_pt": "o homem perdido pelo pecado.",
+            "__massEditorPairKeys": {
+              "text_pt": "170:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "171:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "172:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "173:text"
+            }
+          }
+        ]
+      },
+      "nativity_3": {
+        "title": {
+          "pt": "PREFÁCIO III DO NATAL DO SENHOR — A admirável permuta realizada na Encarnação do V erbo"
+        },
+        "content": [
+          {
+            "rubric_pt": "37. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
+          },
+          {
+            "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
+          },
+          {
+            "rubric_pt": "Natal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "188:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "189:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "190:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "191:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele resplandece hoje, para os homens,",
+            "__massEditorPairKeys": {
+              "text_pt": "192:text"
+            }
+          },
+          {
+            "text_pt": "a admirável permuta da encarnação redentora:",
+            "__massEditorPairKeys": {
+              "text_pt": "193:text"
+            }
+          },
+          {
+            "text_pt": "a nossa fragilidade humana é assumida pelo Verbo,",
+            "__massEditorPairKeys": {
+              "text_pt": "194:text"
+            }
+          },
+          {
+            "text_pt": "o homem mortal é elevado à dignidade imortal",
+            "__massEditorPairKeys": {
+              "text_pt": "195:text"
+            }
+          },
+          {
+            "text_pt": "e, unido a Vós em comunhão admirável,",
+            "__massEditorPairKeys": {
+              "text_pt": "196:text"
+            }
+          },
+          {
+            "text_pt": "torna-se participante da vida eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "197:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "198:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "199:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "200:text"
+            }
+          }
+        ]
+      },
+      "epiphany": {
+        "title": {
+          "pt": "PREFÁCIO DA EPIFANIA DO SENHOR — Cristo, luz de todos os povos"
+        },
+        "content": [
+          {
+            "rubric_pt": "38. Este prefácio diz-se nas Missas da solenidade da Epifania. Nos dias que decorrem desde a Epifania até ao sábado que precede a festa do Batismo do Senhor"
+          },
+          {
+            "rubric_pt": "pode dizer-se este prefácio ou um dos prefácios do Natal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "219:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "220:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "221:text"
+            }
+          },
+          {
+            "text_pt": "Hoje, em Cristo, luz do mundo,",
+            "__massEditorPairKeys": {
+              "text_pt": "222:text"
+            }
+          },
+          {
+            "text_pt": "revelastes a todos os povos o mistério da nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "223:text"
+            }
+          },
+          {
+            "text_pt": "e, manifestando-O na nossa natureza mortal,",
+            "__massEditorPairKeys": {
+              "text_pt": "224:text"
+            }
+          },
+          {
+            "text_pt": "nos renovastes com o esplendor da sua imortalidade.",
+            "__massEditorPairKeys": {
+              "text_pt": "225:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "226:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "227:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "228:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "229:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "230:text"
+            }
+          }
+        ]
+      },
+      "lent_1": {
+        "title": {
+          "pt": "PREFÁCIO I DA QUARESMA — Significado espiritual da Quaresma"
+        },
+        "content": [
+          {
+            "rubric_pt": "39. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
+          },
+          {
+            "rubric_pt": "que não têm outro prefácio mais próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "247:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "248:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "249:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "250:text"
+            }
+          },
+          {
+            "text_pt": "Todos os anos concedeis aos vossos fiéis",
+            "__massEditorPairKeys": {
+              "text_pt": "251:text"
+            }
+          },
+          {
+            "text_pt": "a graça de se prepararem,",
+            "__massEditorPairKeys": {
+              "text_pt": "252:text"
+            }
+          },
+          {
+            "text_pt": "na alegria do coração purificado,",
+            "__massEditorPairKeys": {
+              "text_pt": "253:text"
+            }
+          },
+          {
+            "text_pt": "para celebrar as festas pascais,",
+            "__massEditorPairKeys": {
+              "text_pt": "254:text"
+            }
+          },
+          {
+            "text_pt": "a fim de que, pela oração mais intensa,",
+            "__massEditorPairKeys": {
+              "text_pt": "255:text"
+            }
+          },
+          {
+            "text_pt": "pela caridade mais diligente,",
+            "__massEditorPairKeys": {
+              "text_pt": "256:text"
+            }
+          },
+          {
+            "text_pt": "participando nos mistérios da renovação cristã,",
+            "__massEditorPairKeys": {
+              "text_pt": "257:text"
+            }
+          },
+          {
+            "text_pt": "alcancem a plenitude da filiação divina.",
+            "__massEditorPairKeys": {
+              "text_pt": "258:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "259:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "260:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "261:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "262:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "263:text"
+            }
+          }
+        ]
+      },
+      "lent_2": {
+        "title": {
+          "pt": "PREFÁCIO II DA QUARESMA — A penitência espiritual"
+        },
+        "content": [
+          {
+            "rubric_pt": "40. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
+          },
+          {
+            "rubric_pt": "que não têm prefácio mais próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "278:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "279:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "280:text"
+            }
+          },
+          {
+            "text_pt": "Para renovar, na santidade, os vossos filhos,",
+            "__massEditorPairKeys": {
+              "text_pt": "281:text"
+            }
+          },
+          {
+            "text_pt": "concedeis este tempo de salvação,",
+            "__massEditorPairKeys": {
+              "text_pt": "282:text"
+            }
+          },
+          {
+            "text_pt": "a fim de que, libertando-se do fermento do pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "283:text"
+            }
+          },
+          {
+            "text_pt": "se convertam a Vós de todo o coração",
+            "__massEditorPairKeys": {
+              "text_pt": "284:text"
+            }
+          },
+          {
+            "text_pt": "e vivam de tal modo as realidades temporais",
+            "__massEditorPairKeys": {
+              "text_pt": "285:text"
+            }
+          },
+          {
+            "text_pt": "que procurem sempre os bens eternos.",
+            "__massEditorPairKeys": {
+              "text_pt": "286:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "287:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "288:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "289:text"
+            }
+          }
+        ]
+      },
+      "lent_3": {
+        "title": {
+          "pt": "PREFÁCIO III DA QUARESMA — Os frutos da abstinência"
+        },
+        "content": [
+          {
+            "rubric_pt": "41. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
+          },
+          {
+            "rubric_pt": "jejum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "304:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "305:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "306:text"
+            }
+          },
+          {
+            "text_pt": "Vós nos ensinais, pela abstinência quaresmal,",
+            "__massEditorPairKeys": {
+              "text_pt": "307:text"
+            }
+          },
+          {
+            "text_pt": "a manifestar-Vos a nossa gratidão,",
+            "__massEditorPairKeys": {
+              "text_pt": "308:text"
+            }
+          },
+          {
+            "text_pt": "a dominar os excessos da nossa inclinação para o mal",
+            "__massEditorPairKeys": {
+              "text_pt": "309:text"
+            }
+          },
+          {
+            "text_pt": "e a dar alimento aos que têm fome,",
+            "__massEditorPairKeys": {
+              "text_pt": "310:text"
+            }
+          },
+          {
+            "text_pt": "imitando a vossa divina bondade.",
+            "__massEditorPairKeys": {
+              "text_pt": "311:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "312:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "313:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "314:text"
+            }
+          }
+        ]
+      },
+      "lent_4": {
+        "title": {
+          "pt": "PREFÁCIO IV DA QUARESMA — Os frutos do jejum"
+        },
+        "content": [
+          {
+            "rubric_pt": "42. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
+          },
+          {
+            "rubric_pt": "jejum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "329:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "330:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "331:text"
+            }
+          },
+          {
+            "text_pt": "Pelo jejum corporal",
+            "__massEditorPairKeys": {
+              "text_pt": "332:text"
+            }
+          },
+          {
+            "text_pt": "reprimis os vícios e elevais o espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "333:text"
+            }
+          },
+          {
+            "text_pt": "infundis a fortaleza e dais a recompensa,",
+            "__massEditorPairKeys": {
+              "text_pt": "334:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "335:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, os anjos louvam a vossa majestade,",
+            "__massEditorPairKeys": {
+              "text_pt": "336:text"
+            }
+          },
+          {
+            "text_pt": "as dominações Vos adoram,",
+            "__massEditorPairKeys": {
+              "text_pt": "337:text"
+            }
+          },
+          {
+            "text_pt": "as potestades Vos reverenciam;",
+            "__massEditorPairKeys": {
+              "text_pt": "338:text"
+            }
+          },
+          {
+            "text_pt": "os céus, os espíritos celestes",
+            "__massEditorPairKeys": {
+              "text_pt": "339:text"
+            }
+          },
+          {
+            "text_pt": "e os serafins Vos aclamam,",
+            "__massEditorPairKeys": {
+              "text_pt": "340:text"
+            }
+          },
+          {
+            "text_pt": "unidos em eterna exultação.",
+            "__massEditorPairKeys": {
+              "text_pt": "341:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "342:text"
+            }
+          },
+          {
+            "text_pt": "proclamando (cantando) humildemente o vosso louvor:",
+            "__massEditorPairKeys": {
+              "text_pt": "343:text"
+            }
+          }
+        ]
+      },
+      "lent_5": {
+        "title": {
+          "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal"
+        },
+        "content": [
+          {
+            "rubric_pt": "42 a. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
+          },
+          {
+            "rubric_pt": "que não têm prefácio mais próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, rico de misericórdia,",
+            "__massEditorPairKeys": {
+              "text_pt": "358:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nossa salvação bendizer o vosso nome,",
+            "__massEditorPairKeys": {
+              "text_pt": "359:text"
+            }
+          },
+          {
+            "text_pt": "no nosso itinerário para a luz pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "360:text"
+            }
+          },
+          {
+            "text_pt": "seguindo os passos de Cristo,",
+            "__massEditorPairKeys": {
+              "text_pt": "361:text"
+            }
+          },
+          {
+            "text_pt": "mestre e exemplo da humanidade,",
+            "__massEditorPairKeys": {
+              "text_pt": "362:text"
+            }
+          },
+          {
+            "text_pt": "reconciliada no vosso amor.",
+            "__massEditorPairKeys": {
+              "text_pt": "363:text"
+            }
+          },
+          {
+            "text_pt": "Vós abris à Igreja o caminho de um novo êxodo,",
+            "__massEditorPairKeys": {
+              "text_pt": "364:text"
+            }
+          },
+          {
+            "text_pt": "através do deserto quaresmal,",
+            "__massEditorPairKeys": {
+              "text_pt": "365:text"
+            }
+          },
+          {
+            "text_pt": "para que, aos pés da montanha santa,",
+            "__massEditorPairKeys": {
+              "text_pt": "366:text"
+            }
+          },
+          {
+            "text_pt": "de coração contrito e humilhado,",
+            "__massEditorPairKeys": {
+              "text_pt": "367:text"
+            }
+          },
+          {
+            "text_pt": "tome consciência da sua vocação como povo da aliança,",
+            "__massEditorPairKeys": {
+              "text_pt": "368:text"
+            }
+          },
+          {
+            "text_pt": "reunido para cantar o vosso louvor,",
+            "__massEditorPairKeys": {
+              "text_pt": "369:text"
+            }
+          },
+          {
+            "text_pt": "escutar a vossa palavra",
+            "__massEditorPairKeys": {
+              "text_pt": "370:text"
+            }
+          },
+          {
+            "text_pt": "e viver a experiência admirável dos vossos prodígios.",
+            "__massEditorPairKeys": {
+              "text_pt": "371:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos",
+            "__massEditorPairKeys": {
+              "text_pt": "372:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "373:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "374:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "375:text"
+            }
+          }
+        ]
+      },
+      "lent_6": {
+        "title": {
+          "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito"
+        },
+        "content": [
+          {
+            "rubric_pt": "42 b. Este prefácio pode dizer-se na Missa da reconciliação e na Missa de caráter"
+          },
+          {
+            "rubric_pt": "penitencial. Diz-se também no Tempo da Quaresma."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus omnipotente e misericordioso,",
+            "__massEditorPairKeys": {
+              "text_pt": "385:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "386:text"
+            }
+          },
+          {
+            "text_pt": "louvar-Vos e dar-Vos graças por todos os benefícios",
+            "__massEditorPairKeys": {
+              "text_pt": "387:text"
+            }
+          },
+          {
+            "text_pt": "e, especialmente, pela graça do perdão.",
+            "__massEditorPairKeys": {
+              "text_pt": "388:text"
+            }
+          },
+          {
+            "text_pt": "Ao homem, náufrago do pecado e da morte,",
+            "__massEditorPairKeys": {
+              "text_pt": "389:text"
+            }
+          },
+          {
+            "text_pt": "pelo sacramento da reconciliação,",
+            "__massEditorPairKeys": {
+              "text_pt": "390:text"
+            }
+          },
+          {
+            "text_pt": "abristes em Cristo, morto e ressuscitado,",
+            "__massEditorPairKeys": {
+              "text_pt": "391:text"
+            }
+          },
+          {
+            "text_pt": "o porto da misericórdia e da paz.",
+            "__massEditorPairKeys": {
+              "text_pt": "392:text"
+            }
+          },
+          {
+            "text_pt": "Pelo poder do vosso Espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "393:text"
+            }
+          },
+          {
+            "text_pt": "estabelecestes para a Igreja,",
+            "__massEditorPairKeys": {
+              "text_pt": "394:text"
+            }
+          },
+          {
+            "text_pt": "santa e também pecadora,",
+            "__massEditorPairKeys": {
+              "text_pt": "395:text"
+            }
+          },
+          {
+            "text_pt": "uma segunda tábua de salvação depois do Batismo",
+            "__massEditorPairKeys": {
+              "text_pt": "396:text"
+            }
+          },
+          {
+            "text_pt": "e continuamente a renovais",
+            "__massEditorPairKeys": {
+              "text_pt": "397:text"
+            }
+          },
+          {
+            "text_pt": "para a reunir no banquete do vosso amor.",
+            "__massEditorPairKeys": {
+              "text_pt": "398:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "399:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "400:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "401:text"
+            }
+          }
+        ]
+      },
+      "passion_1": {
+        "title": {
+          "pt": "PREFÁCIO I DA PAIXÃO DO SENHOR — O poder da Cruz"
+        },
+        "content": [
+          {
+            "rubric_pt": "43. Este prefácio diz-se durante a Semana V da Quaresma e nas Missas da Santa"
+          },
+          {
+            "rubric_pt": "Cruz e da Paixão do Senhor."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "411:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "412:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "413:text"
+            }
+          },
+          {
+            "text_pt": "Pela paixão redentora do vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "414:text"
+            }
+          },
+          {
+            "text_pt": "abristes aos homens o caminho da fé,",
+            "__massEditorPairKeys": {
+              "text_pt": "415:text"
+            }
+          },
+          {
+            "text_pt": "para proclamarem a glória do vosso nome.",
+            "__massEditorPairKeys": {
+              "text_pt": "416:text"
+            }
+          },
+          {
+            "text_pt": "No admirável poder da cruz",
+            "__massEditorPairKeys": {
+              "text_pt": "417:text"
+            }
+          },
+          {
+            "text_pt": "resplandece o julgamento do mundo",
+            "__massEditorPairKeys": {
+              "text_pt": "418:text"
+            }
+          },
+          {
+            "text_pt": "e a vitória do Crucificado.",
+            "__massEditorPairKeys": {
+              "text_pt": "419:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e todos os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "420:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "421:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "422:text"
+            }
+          }
+        ]
+      },
+      "passion_2": {
+        "title": {
+          "pt": "PREFÁCIO II DA PAIXÃO DO SENHOR — A vitória da Paixão"
+        },
+        "content": [
+          {
+            "rubric_pt": "44. Este prefácio diz-se na segunda, terça e quarta-feira da Semana Santa."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "436:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "437:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "438:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "439:text"
+            }
+          },
+          {
+            "text_pt": "Aproximam-se os dias solenes",
+            "__massEditorPairKeys": {
+              "text_pt": "440:text"
+            }
+          },
+          {
+            "text_pt": "da paixão salvadora e da ressurreição gloriosa,",
+            "__massEditorPairKeys": {
+              "text_pt": "441:text"
+            }
+          },
+          {
+            "text_pt": "em que é vencida a iniquidade da antiga serpente",
+            "__massEditorPairKeys": {
+              "text_pt": "442:text"
+            }
+          },
+          {
+            "text_pt": "e se renova o mistério da nossa redenção.",
+            "__massEditorPairKeys": {
+              "text_pt": "443:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, a multidão dos anjos",
+            "__massEditorPairKeys": {
+              "text_pt": "444:text"
+            }
+          },
+          {
+            "text_pt": "adora a vossa majestade",
+            "__massEditorPairKeys": {
+              "text_pt": "445:text"
+            }
+          },
+          {
+            "text_pt": "e exulta eternamente na vossa presença.",
+            "__massEditorPairKeys": {
+              "text_pt": "446:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "447:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "448:text"
+            }
+          }
+        ]
+      },
+      "easter_1": {
+        "title": {
+          "pt": "PREFÁCIO PASCAL I — O mistério pascal"
+        },
+        "content": [
+          {
+            "rubric_pt": "45. Este prefácio diz-se no Tempo Pascal."
+          },
+          {
+            "rubric_pt": "Na Missa da Vigília Pascal diz-se: nesta noite;"
+          },
+          {
+            "rubric_pt": "no dia da Páscoa e sua oitava diz-se: neste dia;"
+          },
+          {
+            "rubric_pt": "depois da oitava diz-se: neste tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "465:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "466:text"
+            }
+          },
+          {
+            "text_pt": "que sempre Vos louvemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "467:text"
+            }
+          },
+          {
+            "text_pt": "mas com maior solenidade (nesta noite – neste dia – neste tempo),",
+            "__massEditorPairKeys": {
+              "text_pt": "468:text"
+            }
+          },
+          {
+            "text_pt": "em que Cristo, nossa Páscoa, foi imolado.",
+            "__massEditorPairKeys": {
+              "text_pt": "469:text"
+            }
+          },
+          {
+            "text_pt": "Ele é o Cordeiro de Deus que tirou o pecado do mundo:",
+            "__massEditorPairKeys": {
+              "text_pt": "470:text"
+            }
+          },
+          {
+            "text_pt": "morrendo destruiu a morte",
+            "__massEditorPairKeys": {
+              "text_pt": "471:text"
+            }
+          },
+          {
+            "text_pt": "e ressuscitando restaurou a vida.",
+            "__massEditorPairKeys": {
+              "text_pt": "472:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "473:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "474:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "475:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "476:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "477:text"
+            }
+          }
+        ]
+      },
+      "easter_2": {
+        "title": {
+          "pt": "PREFÁCIO PASCAL II — A vida nova em Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "46. Este prefácio diz-se no Tempo Pascal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "493:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "494:text"
+            }
+          },
+          {
+            "text_pt": "que sempre Vos louvemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "495:text"
+            }
+          },
+          {
+            "text_pt": "mas com maior solenidade neste tempo,",
+            "__massEditorPairKeys": {
+              "text_pt": "496:text"
+            }
+          },
+          {
+            "text_pt": "em que Cristo, nossa Páscoa, foi imolado.",
+            "__massEditorPairKeys": {
+              "text_pt": "497:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele nascem os filhos da luz para a vida eterna",
+            "__massEditorPairKeys": {
+              "text_pt": "498:text"
+            }
+          },
+          {
+            "text_pt": "e abrem-se para os fiéis as portas do reino dos céus,",
+            "__massEditorPairKeys": {
+              "text_pt": "499:text"
+            }
+          },
+          {
+            "text_pt": "porque a nossa morte foi redimida pela sua morte",
+            "__massEditorPairKeys": {
+              "text_pt": "500:text"
+            }
+          },
+          {
+            "text_pt": "e na sua ressurreição ressurgiu a vida do género humano.",
+            "__massEditorPairKeys": {
+              "text_pt": "501:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "502:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "503:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "504:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "505:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "506:text"
+            }
+          }
+        ]
+      },
+      "easter_3": {
+        "title": {
+          "pt": "PREFÁCIO PASCAL III — Cristo vivo e intercessor perpétuo em nosso favor"
+        },
+        "content": [
+          {
+            "rubric_pt": "47. Este prefácio diz-se no Tempo Pascal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "520:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "521:text"
+            }
+          },
+          {
+            "text_pt": "que sempre Vos louvemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "522:text"
+            }
+          },
+          {
+            "text_pt": "mas com maior solenidade neste tempo,",
+            "__massEditorPairKeys": {
+              "text_pt": "523:text"
+            }
+          },
+          {
+            "text_pt": "em que Cristo, nossa Páscoa, foi imolado.",
+            "__massEditorPairKeys": {
+              "text_pt": "524:text"
+            }
+          },
+          {
+            "text_pt": "Ele Se oferece continuamente por nós",
+            "__massEditorPairKeys": {
+              "text_pt": "525:text"
+            }
+          },
+          {
+            "text_pt": "e nos defende com a sua intercessão.",
+            "__massEditorPairKeys": {
+              "text_pt": "526:text"
+            }
+          },
+          {
+            "text_pt": "Foi imolado sobre a cruz,",
+            "__massEditorPairKeys": {
+              "text_pt": "527:text"
+            }
+          },
+          {
+            "text_pt": "mas não morrerá jamais;",
+            "__massEditorPairKeys": {
+              "text_pt": "528:text"
+            }
+          },
+          {
+            "text_pt": "foi morto, mas agora vive para sempre.",
+            "__massEditorPairKeys": {
+              "text_pt": "529:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "530:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "531:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "532:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "533:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "534:text"
+            }
+          }
+        ]
+      },
+      "easter_4": {
+        "title": {
+          "pt": "PREFÁCIO PASCAL IV — A renovação do universo pelo mistério pascal"
+        },
+        "content": [
+          {
+            "rubric_pt": "48. Este prefácio diz-se no Tempo Pascal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "548:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "549:text"
+            }
+          },
+          {
+            "text_pt": "que sempre Vos louvemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "550:text"
+            }
+          },
+          {
+            "text_pt": "mas com maior solenidade neste tempo,",
+            "__massEditorPairKeys": {
+              "text_pt": "551:text"
+            }
+          },
+          {
+            "text_pt": "em que Cristo, nossa Páscoa, foi imolado.",
+            "__massEditorPairKeys": {
+              "text_pt": "552:text"
+            }
+          },
+          {
+            "text_pt": "Porque, vencendo a antiga corrupção do pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "553:text"
+            }
+          },
+          {
+            "text_pt": "renovou o universo decaído",
+            "__massEditorPairKeys": {
+              "text_pt": "554:text"
+            }
+          },
+          {
+            "text_pt": "e restaurou o género humano na sua integridade original.",
+            "__massEditorPairKeys": {
+              "text_pt": "555:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "556:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "557:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "558:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "559:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "560:text"
+            }
+          }
+        ]
+      },
+      "easter_5": {
+        "title": {
+          "pt": "PREFÁCIO PASCAL V — Cristo, sacerdote e vítima"
+        },
+        "content": [
+          {
+            "rubric_pt": "49. Este prefácio diz-se no Tempo Pascal."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "574:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "575:text"
+            }
+          },
+          {
+            "text_pt": "que sempre Vos louvemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "576:text"
+            }
+          },
+          {
+            "text_pt": "mas com maior solenidade neste tempo,",
+            "__massEditorPairKeys": {
+              "text_pt": "577:text"
+            }
+          },
+          {
+            "text_pt": "em que Cristo, nossa Páscoa, foi imolado.",
+            "__massEditorPairKeys": {
+              "text_pt": "578:text"
+            }
+          },
+          {
+            "text_pt": "Pela oblação do seu Corpo na cruz,",
+            "__massEditorPairKeys": {
+              "text_pt": "579:text"
+            }
+          },
+          {
+            "text_pt": "levou à plenitude os sacrifícios antigos",
+            "__massEditorPairKeys": {
+              "text_pt": "580:text"
+            }
+          },
+          {
+            "text_pt": "e, entregando-Se a Vós pela nossa salvação,",
+            "__massEditorPairKeys": {
+              "text_pt": "581:text"
+            }
+          },
+          {
+            "text_pt": "tornou-Se Ele mesmo o sacerdote, o altar e o cordeiro.",
+            "__massEditorPairKeys": {
+              "text_pt": "582:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "583:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "584:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "585:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "586:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "587:text"
+            }
+          }
+        ]
+      },
+      "ascension_1": {
+        "title": {
+          "pt": "PREFÁCIO I DA ASCENSÃO DO SENHOR — O mistério da Ascensão"
+        },
+        "content": [
+          {
+            "rubric_pt": "50. Este prefácio diz-se no dia de Ascensão do Senhor. Pode dizer-se também"
+          },
+          {
+            "rubric_pt": "nos dias a seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que"
+          },
+          {
+            "rubric_pt": "não têm prefácio próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "603:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "604:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "605:text"
+            }
+          },
+          {
+            "text_pt": "Porque o Senhor Jesus Cristo, Rei da glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "606:text"
+            }
+          },
+          {
+            "text_pt": "vencedor da morte e do pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "607:text"
+            }
+          },
+          {
+            "text_pt": "subiu (hoje) ao mais alto dos céus, ante a admiração dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "608:text"
+            }
+          },
+          {
+            "text_pt": "e foi constituído Mediador entre Deus e os homens,",
+            "__massEditorPairKeys": {
+              "text_pt": "609:text"
+            }
+          },
+          {
+            "text_pt": "Juiz do mundo e Senhor dos senhores.",
+            "__massEditorPairKeys": {
+              "text_pt": "610:text"
+            }
+          },
+          {
+            "text_pt": "Ele não abandonou a nossa condição humana,",
+            "__massEditorPairKeys": {
+              "text_pt": "611:text"
+            }
+          },
+          {
+            "text_pt": "mas, subindo aos céus, como nossa cabeça e primogénito,",
+            "__massEditorPairKeys": {
+              "text_pt": "612:text"
+            }
+          },
+          {
+            "text_pt": "deu-nos a esperança de irmos um dia ao seu encontro,",
+            "__massEditorPairKeys": {
+              "text_pt": "613:text"
+            }
+          },
+          {
+            "text_pt": "como membros do seu Corpo,",
+            "__massEditorPairKeys": {
+              "text_pt": "614:text"
+            }
+          },
+          {
+            "text_pt": "para nos unir à sua glória imortal.",
+            "__massEditorPairKeys": {
+              "text_pt": "615:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "616:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "617:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "618:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "619:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "620:text"
+            }
+          }
+        ]
+      },
+      "ascension_2": {
+        "title": {
+          "pt": "PREFÁCIO II DA ASCENSÃO DO SENHOR — O mistério da Ascensão"
+        },
+        "content": [
+          {
+            "rubric_pt": "51. Este prefácio diz-se no dia de Ascensão. Pode dizer-se também nos dias a"
+          },
+          {
+            "rubric_pt": "seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que não têm"
+          },
+          {
+            "rubric_pt": "prefácio próprio."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "631:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "632:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "633:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "634:text"
+            }
+          },
+          {
+            "rubric_pt": "Depois da sua ressurreição,",
+            "__massEditorPairKeys": {
+              "rubric_pt": "635:rubric"
+            },
+            "rubricInset_pt": true
+          },
+          {
+            "text_pt": "apareceu a todos os discípulos",
+            "__massEditorPairKeys": {
+              "text_pt": "636:text"
+            }
+          },
+          {
+            "text_pt": "e, à vista deles, subiu aos céus,",
+            "__massEditorPairKeys": {
+              "text_pt": "637:text"
+            }
+          },
+          {
+            "text_pt": "para nos tornar participantes da sua divindade.",
+            "__massEditorPairKeys": {
+              "text_pt": "638:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, na plenitude da alegria pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "639:text"
+            }
+          },
+          {
+            "text_pt": "exultam os homens por toda a terra",
+            "__massEditorPairKeys": {
+              "text_pt": "640:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "641:text"
+            }
+          },
+          {
+            "text_pt": "proclamam a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "642:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "643:text"
+            }
+          }
+        ]
+      },
+      "ordinary_1": {
+        "title": {
+          "pt": "PREFÁCIO I DOMINICAL DO TEMPO COMUM — O mistério pascal e o povo de Deus"
+        },
+        "content": [
+          {
+            "rubric_pt": "52. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "659:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "660:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "661:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "662:text"
+            }
+          },
+          {
+            "text_pt": "Pelo seu mistério pascal,",
+            "__massEditorPairKeys": {
+              "text_pt": "663:text"
+            }
+          },
+          {
+            "text_pt": "Ele realizou a obra admirável",
+            "__massEditorPairKeys": {
+              "text_pt": "664:text"
+            }
+          },
+          {
+            "text_pt": "de nos chamar do pecado e da morte",
+            "__massEditorPairKeys": {
+              "text_pt": "665:text"
+            }
+          },
+          {
+            "text_pt": "à glória de geração escolhida, sacerdócio real,",
+            "__massEditorPairKeys": {
+              "text_pt": "666:text"
+            }
+          },
+          {
+            "text_pt": "nação santa, povo resgatado,",
+            "__massEditorPairKeys": {
+              "text_pt": "667:text"
+            }
+          },
+          {
+            "text_pt": "a fim de que, libertos do poder das trevas",
+            "__massEditorPairKeys": {
+              "text_pt": "668:text"
+            }
+          },
+          {
+            "text_pt": "para a claridade da vossa luz,",
+            "__massEditorPairKeys": {
+              "text_pt": "669:text"
+            }
+          },
+          {
+            "text_pt": "anunciemos por toda a parte as vossas maravilhas.",
+            "__massEditorPairKeys": {
+              "text_pt": "670:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "671:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "672:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "673:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "674:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "675:text"
+            }
+          }
+        ]
+      },
+      "ordinary_2": {
+        "title": {
+          "pt": "PREFÁCIO II DOMINICAL DO TEMPO COMUM — O mistério da salvação"
+        },
+        "content": [
+          {
+            "rubric_pt": "53. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "689:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "690:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "691:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "692:text"
+            }
+          },
+          {
+            "text_pt": "Compadecido dos errados caminhos dos homens,",
+            "__massEditorPairKeys": {
+              "text_pt": "693:text"
+            }
+          },
+          {
+            "text_pt": "dignou-Se nascer da Virgem Maria;",
+            "__massEditorPairKeys": {
+              "text_pt": "694:text"
+            }
+          },
+          {
+            "text_pt": "com a sua morte na cruz,",
+            "__massEditorPairKeys": {
+              "text_pt": "695:text"
+            }
+          },
+          {
+            "text_pt": "livrou-nos da morte eterna;",
+            "__massEditorPairKeys": {
+              "text_pt": "696:text"
+            }
+          },
+          {
+            "text_pt": "com a sua ressurreição,",
+            "__massEditorPairKeys": {
+              "text_pt": "697:text"
+            }
+          },
+          {
+            "text_pt": "deu-nos a vida imortal.",
+            "__massEditorPairKeys": {
+              "text_pt": "698:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "699:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "700:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "701:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "702:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "703:text"
+            }
+          }
+        ]
+      },
+      "ordinary_3": {
+        "title": {
+          "pt": "PREFÁCIO III DOMINICAL DO TEMPO COMUM — A salvação do homem por um homem"
+        },
+        "content": [
+          {
+            "rubric_pt": "54. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "717:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "718:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "719:text"
+            }
+          },
+          {
+            "text_pt": "Para manifestar o esplendor da vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "720:text"
+            }
+          },
+          {
+            "text_pt": "viestes em auxílio da fragilidade humana,",
+            "__massEditorPairKeys": {
+              "text_pt": "721:text"
+            }
+          },
+          {
+            "text_pt": "com o poder da vossa divindade;",
+            "__massEditorPairKeys": {
+              "text_pt": "722:text"
+            }
+          },
+          {
+            "text_pt": "da nossa condição mortal",
+            "__massEditorPairKeys": {
+              "text_pt": "723:text"
+            }
+          },
+          {
+            "text_pt": "tirastes o remédio para vencer a morte",
+            "__massEditorPairKeys": {
+              "text_pt": "724:text"
+            }
+          },
+          {
+            "text_pt": "e, da nossa ruína,",
+            "__massEditorPairKeys": {
+              "text_pt": "725:text"
+            }
+          },
+          {
+            "text_pt": "abristes o caminho da salvação,",
+            "__massEditorPairKeys": {
+              "text_pt": "726:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "727:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, a multidão dos anjos",
+            "__massEditorPairKeys": {
+              "text_pt": "728:text"
+            }
+          },
+          {
+            "text_pt": "adora a vossa majestade",
+            "__massEditorPairKeys": {
+              "text_pt": "729:text"
+            }
+          },
+          {
+            "text_pt": "e exulta eternamente na vossa presença.",
+            "__massEditorPairKeys": {
+              "text_pt": "730:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "731:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "732:text"
+            }
+          }
+        ]
+      },
+      "ordinary_4": {
+        "title": {
+          "pt": "PREFÁCIO IV DOMINICAL DO TEMPO COMUM — A história da salvação"
+        },
+        "content": [
+          {
+            "rubric_pt": "55. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "746:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "747:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "748:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "749:text"
+            }
+          },
+          {
+            "text_pt": "Com o seu nascimento, Ele renovou a antiga condição humana;",
+            "__massEditorPairKeys": {
+              "text_pt": "750:text"
+            }
+          },
+          {
+            "text_pt": "com a sua morte destruiu os nossos pecados;",
+            "__massEditorPairKeys": {
+              "text_pt": "751:text"
+            }
+          },
+          {
+            "text_pt": "com a sua ressurreição conduziu-nos à vida eterna",
+            "__massEditorPairKeys": {
+              "text_pt": "752:text"
+            }
+          },
+          {
+            "text_pt": "e, na sua ascensão, abriu-nos as portas do céu.",
+            "__massEditorPairKeys": {
+              "text_pt": "753:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "754:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "755:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "756:text"
+            }
+          }
+        ]
+      },
+      "ordinary_5": {
+        "title": {
+          "pt": "PREFÁCIO V DOMINICAL DO TEMPO COMUM — A criação"
+        },
+        "content": [
+          {
+            "rubric_pt": "56. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "770:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "771:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "772:text"
+            }
+          },
+          {
+            "text_pt": "Vós criastes os elementos do mundo,",
+            "__massEditorPairKeys": {
+              "text_pt": "773:text"
+            }
+          },
+          {
+            "text_pt": "estabelecendo o curso dos tempos e as estações do ano;",
+            "__massEditorPairKeys": {
+              "text_pt": "774:text"
+            }
+          },
+          {
+            "text_pt": "formastes o homem à vossa imagem e semelhança",
+            "__massEditorPairKeys": {
+              "text_pt": "775:text"
+            }
+          },
+          {
+            "text_pt": "e lhe confiastes as maravilhas do universo,",
+            "__massEditorPairKeys": {
+              "text_pt": "776:text"
+            }
+          },
+          {
+            "text_pt": "para que, em vosso nome, domine sobre todas as criaturas",
+            "__massEditorPairKeys": {
+              "text_pt": "777:text"
+            }
+          },
+          {
+            "text_pt": "e Vos glorifique sem cessar, pela grandeza das vossas obras,",
+            "__massEditorPairKeys": {
+              "text_pt": "778:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "779:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com todos os anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "780:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "781:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "782:text"
+            }
+          }
+        ]
+      },
+      "ordinary_6": {
+        "title": {
+          "pt": "PREFÁCIO VI DOMINICAL DO TEMPO COMUM — O penhor da Páscoa eterna"
+        },
+        "content": [
+          {
+            "rubric_pt": "57. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "796:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "797:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "798:text"
+            }
+          },
+          {
+            "text_pt": "Em Vós vivemos, nos movemos e existimos.",
+            "__massEditorPairKeys": {
+              "text_pt": "799:text"
+            }
+          },
+          {
+            "text_pt": "Durante a nossa vida terrena,",
+            "__massEditorPairKeys": {
+              "text_pt": "800:text"
+            }
+          },
+          {
+            "text_pt": "sentimos cada dia os efeitos da vossa bondade",
+            "__massEditorPairKeys": {
+              "text_pt": "801:text"
+            }
+          },
+          {
+            "text_pt": "e possuímos desde já o penhor da vida futura;",
+            "__massEditorPairKeys": {
+              "text_pt": "802:text"
+            }
+          },
+          {
+            "text_pt": "tendo recebido as primícias do Espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "803:text"
+            }
+          },
+          {
+            "text_pt": "pelo qual ressuscitastes Jesus Cristo de entre os mortos,",
+            "__massEditorPairKeys": {
+              "text_pt": "804:text"
+            }
+          },
+          {
+            "text_pt": "vivemos na esperança da Páscoa eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "805:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "806:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "807:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "808:text"
+            }
+          }
+        ]
+      },
+      "ordinary_7": {
+        "title": {
+          "pt": "PREFÁCIO VII DOMINICAL DO TEMPO COMUM — A salvação pela obediência de Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "58. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "822:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "823:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "824:text"
+            }
+          },
+          {
+            "text_pt": "Na vossa infinita misericórdia,",
+            "__massEditorPairKeys": {
+              "text_pt": "825:text"
+            }
+          },
+          {
+            "text_pt": "de tal modo amastes o mundo",
+            "__massEditorPairKeys": {
+              "text_pt": "826:text"
+            }
+          },
+          {
+            "text_pt": "que nos enviastes o Redentor,",
+            "__massEditorPairKeys": {
+              "text_pt": "827:text"
+            }
+          },
+          {
+            "text_pt": "em tudo semelhante a nós, menos no pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "828:text"
+            }
+          },
+          {
+            "text_pt": "para poderdes amar em nós",
+            "__massEditorPairKeys": {
+              "text_pt": "829:text"
+            }
+          },
+          {
+            "text_pt": "o que amáveis em vosso Filho:",
+            "__massEditorPairKeys": {
+              "text_pt": "830:text"
+            }
+          },
+          {
+            "text_pt": "pela sua obediência, Ele restaurou os vossos dons,",
+            "__massEditorPairKeys": {
+              "text_pt": "831:text"
+            }
+          },
+          {
+            "text_pt": "que por desobediência tínhamos perdido.",
+            "__massEditorPairKeys": {
+              "text_pt": "832:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e todos os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "833:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "834:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "835:text"
+            }
+          }
+        ]
+      },
+      "ordinary_8": {
+        "title": {
+          "pt": "PREFÁCIO VIII DOMINICAL DO TEMPO COMUM — A Igreja reunida na comunhão da Trindade"
+        },
+        "content": [
+          {
+            "rubric_pt": "59. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "849:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "850:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "851:text"
+            }
+          },
+          {
+            "text_pt": "Pelo sangue do vosso Filho e pela força do Espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "852:text"
+            }
+          },
+          {
+            "text_pt": "quisestes reconduzir à unidade do vosso povo",
+            "__massEditorPairKeys": {
+              "text_pt": "853:text"
+            }
+          },
+          {
+            "text_pt": "os filhos dispersos pelo pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "854:text"
+            }
+          },
+          {
+            "text_pt": "para que a Igreja,",
+            "__massEditorPairKeys": {
+              "text_pt": "855:text"
+            }
+          },
+          {
+            "text_pt": "reunida na comunhão da Trindade,",
+            "__massEditorPairKeys": {
+              "text_pt": "856:text"
+            }
+          },
+          {
+            "text_pt": "apareça no mundo",
+            "__massEditorPairKeys": {
+              "text_pt": "857:text"
+            }
+          },
+          {
+            "text_pt": "como corpo de Cristo",
+            "__massEditorPairKeys": {
+              "text_pt": "858:text"
+            }
+          },
+          {
+            "text_pt": "e templo do Espírito Santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "859:text"
+            }
+          },
+          {
+            "text_pt": "para louvor da vossa infinita sabedoria.",
+            "__massEditorPairKeys": {
+              "text_pt": "860:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "861:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "862:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "863:text"
+            }
+          }
+        ]
+      },
+      "ordinary_9": {
+        "title": {
+          "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja"
+        },
+        "content": [
+          {
+            "rubric_pt": "59 a. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "877:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "878:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "879:text"
+            }
+          },
+          {
+            "text_pt": "Com admirável providência",
+            "__massEditorPairKeys": {
+              "text_pt": "880:text"
+            }
+          },
+          {
+            "text_pt": "ordenais a evolução dos tempos",
+            "__massEditorPairKeys": {
+              "text_pt": "881:text"
+            }
+          },
+          {
+            "text_pt": "e, com o poder do Espírito Santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "882:text"
+            }
+          },
+          {
+            "text_pt": "conduzis a vossa Igreja,",
+            "__massEditorPairKeys": {
+              "text_pt": "883:text"
+            }
+          },
+          {
+            "text_pt": "para que, sempre fiel ao vosso amor,",
+            "__massEditorPairKeys": {
+              "text_pt": "884:text"
+            }
+          },
+          {
+            "text_pt": "nunca deixe de invocar-Vos nas suas tribulações,",
+            "__massEditorPairKeys": {
+              "text_pt": "885:text"
+            }
+          },
+          {
+            "text_pt": "nem de Vos dar graças nas suas alegrias,",
+            "__massEditorPairKeys": {
+              "text_pt": "886:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "887:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "888:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "889:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "890:text"
+            }
+          }
+        ]
+      },
+      "ordinary_10": {
+        "title": {
+          "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor"
+        },
+        "content": [
+          {
+            "rubric_pt": "59 b. Este prefácio diz-se nos domingos do Tempo Comum."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, fonte da verdade e da vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "904:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "905:text"
+            }
+          },
+          {
+            "text_pt": "bendizer-Vos e dar-Vos graças,",
+            "__massEditorPairKeys": {
+              "text_pt": "906:text"
+            }
+          },
+          {
+            "text_pt": "porque, neste dia de festa,",
+            "__massEditorPairKeys": {
+              "text_pt": "907:text"
+            }
+          },
+          {
+            "text_pt": "nos congregastes na vossa casa.",
+            "__massEditorPairKeys": {
+              "text_pt": "908:text"
+            }
+          },
+          {
+            "text_pt": "Hoje, a vossa família,",
+            "__massEditorPairKeys": {
+              "text_pt": "909:text"
+            }
+          },
+          {
+            "text_pt": "reunida para escutar a palavra da salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "910:text"
+            }
+          },
+          {
+            "text_pt": "e participar no pão da vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "911:text"
+            }
+          },
+          {
+            "text_pt": "celebra o memorial do Senhor ressuscitado,",
+            "__massEditorPairKeys": {
+              "text_pt": "912:text"
+            }
+          },
+          {
+            "text_pt": "na esperança do domingo que não tem ocaso,",
+            "__massEditorPairKeys": {
+              "text_pt": "913:text"
+            }
+          },
+          {
+            "text_pt": "quando toda a humanidade entrar no vosso descanso.",
+            "__massEditorPairKeys": {
+              "text_pt": "914:text"
+            }
+          },
+          {
+            "rubric_pt": "Então veremos o vosso rosto",
+            "__massEditorPairKeys": {
+              "rubric_pt": "915:rubric"
+            },
+            "rubricInset_pt": true
+          },
+          {
+            "text_pt": "e louvaremos sem fim a vossa misericórdia.",
+            "__massEditorPairKeys": {
+              "text_pt": "916:text"
+            }
+          },
+          {
+            "text_pt": "Nesta feliz esperança,",
+            "__massEditorPairKeys": {
+              "text_pt": "917:text"
+            }
+          },
+          {
+            "text_pt": "com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "918:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "919:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "920:text"
+            }
+          }
+        ]
+      },
+      "eucharist_1": {
+        "title": {
+          "pt": "PREFÁCIO I DA SANTÍSSIMA EUCARISTIA — O sacrifício e o sacramento de Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "60. Este prefácio diz-se na Missa da Ceia do Senhor; pode dizer-se também"
+          },
+          {
+            "rubric_pt": "na solenidade do Santíssimo Corpo e Sangue de Cristo e nas Missas votivas da"
+          },
+          {
+            "rubric_pt": "Santíssima Eucaristia."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "936:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "937:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "938:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "939:text"
+            }
+          },
+          {
+            "text_pt": "Verdadeiro e eterno sacerdote,",
+            "__massEditorPairKeys": {
+              "text_pt": "940:text"
+            }
+          },
+          {
+            "text_pt": "oferecendo-Se como vítima de salvação,",
+            "__massEditorPairKeys": {
+              "text_pt": "941:text"
+            }
+          },
+          {
+            "text_pt": "instituiu o sacrifício da nova e eterna aliança",
+            "__massEditorPairKeys": {
+              "text_pt": "942:text"
+            }
+          },
+          {
+            "text_pt": "e mandou que o celebrássemos em sua memória.",
+            "__massEditorPairKeys": {
+              "text_pt": "943:text"
+            }
+          },
+          {
+            "text_pt": "O seu Corpo, por nós imolado,",
+            "__massEditorPairKeys": {
+              "text_pt": "944:text"
+            }
+          },
+          {
+            "text_pt": "é alimento que nos fortalece",
+            "__massEditorPairKeys": {
+              "text_pt": "945:text"
+            }
+          },
+          {
+            "text_pt": "e o seu Sangue, por nós derramado,",
+            "__massEditorPairKeys": {
+              "text_pt": "946:text"
+            }
+          },
+          {
+            "text_pt": "é bebida que nos purifica.",
+            "__massEditorPairKeys": {
+              "text_pt": "947:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "948:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "949:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "950:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "951:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "952:text"
+            }
+          }
+        ]
+      },
+      "eucharist_2": {
+        "title": {
+          "pt": "PREFÁCIO II DA SANTÍSSIMA EUCARISTIA — Os frutos da Santíssima Eucaristia"
+        },
+        "content": [
+          {
+            "rubric_pt": "61. Este prefácio diz-se na solenidade do Santíssimo Corpo e Sangue de Cristo"
+          },
+          {
+            "rubric_pt": "e nas Missas votivas da Santíssima Eucaristia."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "967:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "968:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "969:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "970:text"
+            }
+          },
+          {
+            "rubric_pt": "Reunido com os apóstolos na Última Ceia,",
+            "__massEditorPairKeys": {
+              "rubric_pt": "971:rubric"
+            },
+            "rubricInset_pt": true
+          },
+          {
+            "text_pt": "para perpetuar a sua paixão salvadora,",
+            "__massEditorPairKeys": {
+              "text_pt": "972:text"
+            }
+          },
+          {
+            "text_pt": "entregou-Se a Si mesmo",
+            "__massEditorPairKeys": {
+              "text_pt": "973:text"
+            }
+          },
+          {
+            "text_pt": "como cordeiro imaculado e sacrifício perfeito.",
+            "__massEditorPairKeys": {
+              "text_pt": "974:text"
+            }
+          },
+          {
+            "text_pt": "Neste sagrado mistério, alimentais e santificais os fiéis,",
+            "__massEditorPairKeys": {
+              "text_pt": "975:text"
+            }
+          },
+          {
+            "text_pt": "para que os homens do mundo inteiro",
+            "__massEditorPairKeys": {
+              "text_pt": "976:text"
+            }
+          },
+          {
+            "text_pt": "sejam iluminados pela mesma fé",
+            "__massEditorPairKeys": {
+              "text_pt": "977:text"
+            }
+          },
+          {
+            "text_pt": "e unidos pela mesma caridade.",
+            "__massEditorPairKeys": {
+              "text_pt": "978:text"
+            }
+          },
+          {
+            "text_pt": "Assim nos reunimos à mesa deste admirável sacramento,",
+            "__massEditorPairKeys": {
+              "text_pt": "979:text"
+            }
+          },
+          {
+            "text_pt": "para que a abundância da vossa graça",
+            "__massEditorPairKeys": {
+              "text_pt": "980:text"
+            }
+          },
+          {
+            "text_pt": "nos faça participantes da vida celeste.",
+            "__massEditorPairKeys": {
+              "text_pt": "981:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, todas as criaturas, no céu e na terra,",
+            "__massEditorPairKeys": {
+              "text_pt": "982:text"
+            }
+          },
+          {
+            "text_pt": "Vos adoram, cantando um cântico novo.",
+            "__massEditorPairKeys": {
+              "text_pt": "983:text"
+            }
+          },
+          {
+            "text_pt": "E também nós, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "984:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "985:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "986:text"
+            }
+          }
+        ]
+      },
+      "eucharist_3": {
+        "title": {
+          "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna"
+        },
+        "content": [
+          {
+            "rubric_pt": "61 a. Este prefácio diz-se nas Missas rituais para o viático e pode dizer-se nas"
+          },
+          {
+            "rubric_pt": "Missas votivas da Santíssima Eucaristia."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus de misericórdia e de paz.",
+            "__massEditorPairKeys": {
+              "text_pt": "996:text"
+            }
+          },
+          {
+            "text_pt": "É verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "997:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças e bendizer o vosso nome.",
+            "__massEditorPairKeys": {
+              "text_pt": "998:text"
+            }
+          },
+          {
+            "text_pt": "Vós quisestes que o vosso Filho, Jesus Cristo,",
+            "__massEditorPairKeys": {
+              "text_pt": "999:text"
+            }
+          },
+          {
+            "text_pt": "obediente até à morte na cruz,",
+            "__massEditorPairKeys": {
+              "text_pt": "1000:text"
+            }
+          },
+          {
+            "text_pt": "nos abrisse o caminho para Vós,",
+            "__massEditorPairKeys": {
+              "text_pt": "1001:text"
+            }
+          },
+          {
+            "text_pt": "plenitude de toda a esperança humana.",
+            "__massEditorPairKeys": {
+              "text_pt": "1002:text"
+            }
+          },
+          {
+            "text_pt": "Na Eucaristia, testamento do seu amor,",
+            "__massEditorPairKeys": {
+              "text_pt": "1003:text"
+            }
+          },
+          {
+            "text_pt": "Ele faz-Se comida e bebida espiritual",
+            "__massEditorPairKeys": {
+              "text_pt": "1004:text"
+            }
+          },
+          {
+            "text_pt": "para a nossa viagem a caminho da Páscoa eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "1005:text"
+            }
+          },
+          {
+            "text_pt": "Com este penhor da ressurreição final,",
+            "__massEditorPairKeys": {
+              "text_pt": "1006:text"
+            }
+          },
+          {
+            "text_pt": "esperamos participar na mesa gloriosa do vosso reino",
+            "__massEditorPairKeys": {
+              "text_pt": "1007:text"
+            }
+          },
+          {
+            "text_pt": "e, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1008:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1009:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1010:text"
+            }
+          }
+        ]
+      },
+      "mary_1": {
+        "title": {
+          "pt": "PREFÁCIO I DA VIRGEM SANTA MARIA — A Maternidade da Virgem santa Maria"
+        },
+        "content": [
+          {
+            "rubric_pt": "62. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
+          },
+          {
+            "rubric_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1025:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1026:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1027:text"
+            }
+          },
+          {
+            "text_pt": "e louvar-Vos, bendizer-Vos e glorificar-Vos",
+            "__massEditorPairKeys": {
+              "text_pt": "1028:text"
+            }
+          },
+          {
+            "text_pt": "na memória (festa – solenidade) da Virgem santa Maria.",
+            "__massEditorPairKeys": {
+              "text_pt": "1029:text"
+            }
+          },
+          {
+            "text_pt": "Pelo poder do Espírito Santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1030:text"
+            }
+          },
+          {
+            "text_pt": "Ela concebeu o vosso Filho unigénito",
+            "__massEditorPairKeys": {
+              "text_pt": "1031:text"
+            }
+          },
+          {
+            "text_pt": "e, sem perder a glória da sua virgindade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1032:text"
+            }
+          },
+          {
+            "text_pt": "deu ao mundo a luz eterna, nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1033:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, os anjos louvam a vossa majestade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1034:text"
+            }
+          },
+          {
+            "text_pt": "as dominações Vos adoram,",
+            "__massEditorPairKeys": {
+              "text_pt": "1035:text"
+            }
+          },
+          {
+            "text_pt": "as potestades Vos reverenciam;",
+            "__massEditorPairKeys": {
+              "text_pt": "1036:text"
+            }
+          },
+          {
+            "text_pt": "os céus, os espíritos celestes e os serafins Vos aclamam,",
+            "__massEditorPairKeys": {
+              "text_pt": "1037:text"
+            }
+          },
+          {
+            "text_pt": "unidos em eterna exultação.",
+            "__massEditorPairKeys": {
+              "text_pt": "1038:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1039:text"
+            }
+          },
+          {
+            "text_pt": "proclamando (cantando) humildemente o vosso louvor:",
+            "__massEditorPairKeys": {
+              "text_pt": "1040:text"
+            }
+          }
+        ]
+      },
+      "mary_2": {
+        "title": {
+          "pt": "PREFÁCIO II DA VIRGEM SANTA MARIA — A Igreja louva a Deus com as palavras de Maria"
+        },
+        "content": [
+          {
+            "rubric_pt": "63. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
+          },
+          {
+            "rubric_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1050:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1051:text"
+            }
+          },
+          {
+            "text_pt": "celebrar o vosso poder admirável na perfeição dos santos",
+            "__massEditorPairKeys": {
+              "text_pt": "1052:text"
+            }
+          },
+          {
+            "text_pt": "e exaltar a vossa bondade",
+            "__massEditorPairKeys": {
+              "text_pt": "1053:text"
+            }
+          },
+          {
+            "text_pt": "na memória (festa – solenidade) da Virgem santa Maria,",
+            "__massEditorPairKeys": {
+              "text_pt": "1054:text"
+            }
+          },
+          {
+            "text_pt": "inspirando-nos no seu cântico de louvor.",
+            "__massEditorPairKeys": {
+              "text_pt": "1055:text"
+            }
+          },
+          {
+            "text_pt": "Vós fizestes maravilhas a favor de todos os povos",
+            "__massEditorPairKeys": {
+              "text_pt": "1056:text"
+            }
+          },
+          {
+            "text_pt": "e manifestastes, de geração em geração, a vossa misericórdia,",
+            "__massEditorPairKeys": {
+              "text_pt": "1057:text"
+            }
+          },
+          {
+            "text_pt": "quando olhastes para a humildade da vossa serva",
+            "__massEditorPairKeys": {
+              "text_pt": "1058:text"
+            }
+          },
+          {
+            "text_pt": "e, por Ela, nos destes o Salvador do mundo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1059:text"
+            }
+          },
+          {
+            "text_pt": "vosso Filho, nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1060:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, a multidão dos anjos adora a vossa majestade",
+            "__massEditorPairKeys": {
+              "text_pt": "1061:text"
+            }
+          },
+          {
+            "text_pt": "e exulta eternamente na vossa presença.",
+            "__massEditorPairKeys": {
+              "text_pt": "1062:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1063:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1064:text"
+            }
+          }
+        ]
+      },
+      "mary_3": {
+        "title": {
+          "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança"
+        },
+        "content": [
+          {
+            "rubric_pt": "63 a. Este prefácio diz-se nas Missas da Virgem santa Maria."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1078:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever dar-Vos graças,",
+            "__massEditorPairKeys": {
+              "text_pt": "1079:text"
+            }
+          },
+          {
+            "text_pt": "é nossa salvação glorificar-Vos.",
+            "__massEditorPairKeys": {
+              "text_pt": "1080:text"
+            }
+          },
+          {
+            "text_pt": "Nós Vos louvamos e bendizemos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1081:text"
+            }
+          },
+          {
+            "text_pt": "por Jesus Cristo, vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1082:text"
+            }
+          },
+          {
+            "text_pt": "na memória (festa) da Virgem santa Maria.",
+            "__massEditorPairKeys": {
+              "text_pt": "1083:text"
+            }
+          },
+          {
+            "text_pt": "Humilde serva, acolheu a vossa palavra",
+            "__massEditorPairKeys": {
+              "text_pt": "1084:text"
+            }
+          },
+          {
+            "text_pt": "e guardou-a no seu coração;",
+            "__massEditorPairKeys": {
+              "text_pt": "1085:text"
+            }
+          },
+          {
+            "text_pt": "admiravelmente unida ao mistério da redenção,",
+            "__massEditorPairKeys": {
+              "text_pt": "1086:text"
+            }
+          },
+          {
+            "text_pt": "perseverou com os apóstolos em oração,",
+            "__massEditorPairKeys": {
+              "text_pt": "1087:text"
+            }
+          },
+          {
+            "text_pt": "esperando a vinda do Espírito Santo;",
+            "__massEditorPairKeys": {
+              "text_pt": "1088:text"
+            }
+          },
+          {
+            "text_pt": "agora, resplandece no caminho da nossa vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "1089:text"
+            }
+          },
+          {
+            "text_pt": "como sinal de consolação e de firme esperança.",
+            "__massEditorPairKeys": {
+              "text_pt": "1090:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1091:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1092:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1093:text"
+            }
+          }
+        ]
+      },
+      "mary_4": {
+        "title": {
+          "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade"
+        },
+        "content": [
+          {
+            "rubric_pt": "63 b. Este prefácio diz-se nas Missas da Virgem santa Maria."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, fonte de vida e de alegria,",
+            "__massEditorPairKeys": {
+              "text_pt": "1107:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever dar-Vos graças",
+            "__massEditorPairKeys": {
+              "text_pt": "1108:text"
+            }
+          },
+          {
+            "text_pt": "na memória (festa – solenidade) da Virgem santa Maria.",
+            "__massEditorPairKeys": {
+              "text_pt": "1109:text"
+            }
+          },
+          {
+            "text_pt": "Vós revelastes, na plenitude dos tempos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1110:text"
+            }
+          },
+          {
+            "text_pt": "o mistério escondido desde os tempos antigos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1111:text"
+            }
+          },
+          {
+            "text_pt": "para que se renove, no mundo inteiro, a vida e a esperança.",
+            "__massEditorPairKeys": {
+              "text_pt": "1112:text"
+            }
+          },
+          {
+            "text_pt": "Em Cristo, novo Adão,",
+            "__massEditorPairKeys": {
+              "text_pt": "1113:text"
+            }
+          },
+          {
+            "text_pt": "e, em Maria, nova Eva,",
+            "__massEditorPairKeys": {
+              "text_pt": "1114:text"
+            }
+          },
+          {
+            "text_pt": "manifestastes finalmente a vossa Igreja,",
+            "__massEditorPairKeys": {
+              "text_pt": "1115:text"
+            }
+          },
+          {
+            "text_pt": "primícias da humanidade redimida.",
+            "__massEditorPairKeys": {
+              "text_pt": "1116:text"
+            }
+          },
+          {
+            "text_pt": "Por este dom admirável,",
+            "__massEditorPairKeys": {
+              "text_pt": "1117:text"
+            }
+          },
+          {
+            "text_pt": "toda a criação, pelo poder do Espírito Santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1118:text"
+            }
+          },
+          {
+            "text_pt": "volta de novo ao caminho original para a Páscoa eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "1119:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1120:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1121:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1122:text"
+            }
+          }
+        ]
+      },
+      "angels": {
+        "title": {
+          "pt": "PREFÁCIO DOS ANJOS — A glória de Deus resplandece nos anjos"
+        },
+        "content": [
+          {
+            "rubric_pt": "63 c. Este prefácio diz-se nas Missas dos Anjos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1136:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1137:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1138:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1139:text"
+            }
+          },
+          {
+            "text_pt": "Proclamamos a vossa imensa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1140:text"
+            }
+          },
+          {
+            "text_pt": "que resplandece nos anjos e nos arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1141:text"
+            }
+          },
+          {
+            "text_pt": "e, honrando estes mensageiros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1142:text"
+            }
+          },
+          {
+            "text_pt": "exaltamos a vossa infinita bondade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1143:text"
+            }
+          },
+          {
+            "text_pt": "porque a veneração que eles merecem",
+            "__massEditorPairKeys": {
+              "text_pt": "1144:text"
+            }
+          },
+          {
+            "text_pt": "é sinal da vossa incomparável grandeza",
+            "__massEditorPairKeys": {
+              "text_pt": "1145:text"
+            }
+          },
+          {
+            "text_pt": "sobre todas as criaturas.",
+            "__massEditorPairKeys": {
+              "text_pt": "1146:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com a multidão dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1147:text"
+            }
+          },
+          {
+            "text_pt": "que celebram a vossa divina majestade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1148:text"
+            }
+          },
+          {
+            "text_pt": "nós Vos adoramos e bendizemos com alegria,",
+            "__massEditorPairKeys": {
+              "text_pt": "1149:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1150:text"
+            }
+          }
+        ]
+      },
+      "saint_joseph": {
+        "title": {
+          "pt": "PREFÁCIO DE SÃO JOSÉ ESPOSO DA VIRGEM SANTA MARIA — A missão de são José"
+        },
+        "content": [
+          {
+            "rubric_pt": "63 c. Este prefácio diz-se nas Missas de são José."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1165:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1166:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1167:text"
+            }
+          },
+          {
+            "text_pt": "e exaltar, bendizer e proclamar a vossa bondade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1168:text"
+            }
+          },
+          {
+            "text_pt": "na solenidade (festa – memória) do bem-aventurado são José.",
+            "__massEditorPairKeys": {
+              "text_pt": "1169:text"
+            }
+          },
+          {
+            "text_pt": "Homem justo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1170:text"
+            }
+          },
+          {
+            "text_pt": "foi por Vós escolhido para Esposo da Virgem Mãe de Deus;",
+            "__massEditorPairKeys": {
+              "text_pt": "1171:text"
+            }
+          },
+          {
+            "text_pt": "servo fiel e prudente, foi constituído chefe da vossa família,",
+            "__massEditorPairKeys": {
+              "text_pt": "1172:text"
+            }
+          },
+          {
+            "text_pt": "para guardar com paterna solicitude o vosso Filho unigénito,",
+            "__massEditorPairKeys": {
+              "text_pt": "1173:text"
+            }
+          },
+          {
+            "text_pt": "concebido pelo poder do Espírito Santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1174:text"
+            }
+          },
+          {
+            "text_pt": "nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1175:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, os anjos louvam a vossa majestade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1176:text"
+            }
+          },
+          {
+            "text_pt": "as dominações Vos adoram, as potestades Vos reverenciam;",
+            "__massEditorPairKeys": {
+              "text_pt": "1177:text"
+            }
+          },
+          {
+            "text_pt": "os céus, os espíritos celestes e os serafins Vos aclamam,",
+            "__massEditorPairKeys": {
+              "text_pt": "1178:text"
+            }
+          },
+          {
+            "text_pt": "unidos em eterna exultação.",
+            "__massEditorPairKeys": {
+              "text_pt": "1179:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1180:text"
+            }
+          },
+          {
+            "text_pt": "proclamando (cantando) humildemente o vosso louvor:",
+            "__massEditorPairKeys": {
+              "text_pt": "1181:text"
+            }
+          }
+        ]
+      },
+      "apostles_1": {
+        "title": {
+          "pt": "PREFÁCIO I DOS APÓSTOLOS — Os apóstolos, pastores do povo de Deus"
+        },
+        "content": [
+          {
+            "rubric_pt": "64. Este prefácio diz-se nas Missas dos Apóstolos, especialmente de são Pedro"
+          },
+          {
+            "rubric_pt": "e são Paulo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1196:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1197:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1198:text"
+            }
+          },
+          {
+            "text_pt": "Porque Vós, Pastor eterno,",
+            "__massEditorPairKeys": {
+              "text_pt": "1199:text"
+            }
+          },
+          {
+            "text_pt": "não abandonais o vosso rebanho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1200:text"
+            }
+          },
+          {
+            "text_pt": "mas sempre o guardais e protegeis,",
+            "__massEditorPairKeys": {
+              "text_pt": "1201:text"
+            }
+          },
+          {
+            "text_pt": "por meio dos santos apóstolos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1202:text"
+            }
+          },
+          {
+            "text_pt": "para que seja conduzido, através dos tempos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1203:text"
+            }
+          },
+          {
+            "text_pt": "pelos mesmos chefes que pusestes à sua frente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1204:text"
+            }
+          },
+          {
+            "text_pt": "como representantes do vosso Filho, Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1205:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1206:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "1207:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1208:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1209:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1210:text"
+            }
+          }
+        ]
+      },
+      "apostles_2": {
+        "title": {
+          "pt": "PREFÁCIO II DOS APÓSTOLOS — O fundamento apostólico e o testemunho"
+        },
+        "content": [
+          {
+            "rubric_pt": "65. Este prefácio diz-se nas Missas dos Apóstolos e dos Evangelistas."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1224:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1225:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1226:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1227:text"
+            }
+          },
+          {
+            "text_pt": "Vós fundastes a Igreja",
+            "__massEditorPairKeys": {
+              "text_pt": "1228:text"
+            }
+          },
+          {
+            "text_pt": "sobre o alicerce dos apóstolos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1229:text"
+            }
+          },
+          {
+            "text_pt": "para que seja, na terra, através dos tempos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1230:text"
+            }
+          },
+          {
+            "text_pt": "o sinal vivo da vossa santidade",
+            "__massEditorPairKeys": {
+              "text_pt": "1231:text"
+            }
+          },
+          {
+            "text_pt": "e anuncie a todos os povos",
+            "__massEditorPairKeys": {
+              "text_pt": "1232:text"
+            }
+          },
+          {
+            "text_pt": "o Evangelho do reino dos céus.",
+            "__massEditorPairKeys": {
+              "text_pt": "1233:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, agora e para sempre,",
+            "__massEditorPairKeys": {
+              "text_pt": "1234:text"
+            }
+          },
+          {
+            "text_pt": "com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1235:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1236:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1237:text"
+            }
+          }
+        ]
+      },
+      "saints_1": {
+        "title": {
+          "pt": "PREFÁCIO I DOS SANTOS — A glória dos santos"
+        },
+        "content": [
+          {
+            "rubric_pt": "66. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros"
+          },
+          {
+            "rubric_pt": "e titulares das igrejas e nas solenidades e festas dos santos que não têm prefácio"
+          },
+          {
+            "rubric_pt": "próprio. Pode dizer-se também nas memórias dos santos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1253:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1254:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1255:text"
+            }
+          },
+          {
+            "text_pt": "Vós sois glorificado na assembleia dos santos",
+            "__massEditorPairKeys": {
+              "text_pt": "1256:text"
+            }
+          },
+          {
+            "text_pt": "e, ao coroar os seus méritos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1257:text"
+            }
+          },
+          {
+            "text_pt": "coroais os vossos próprios dons.",
+            "__massEditorPairKeys": {
+              "text_pt": "1258:text"
+            }
+          },
+          {
+            "text_pt": "Na sua vida, dais-nos um exemplo;",
+            "__massEditorPairKeys": {
+              "text_pt": "1259:text"
+            }
+          },
+          {
+            "text_pt": "na comunhão com eles uma família",
+            "__massEditorPairKeys": {
+              "text_pt": "1260:text"
+            }
+          },
+          {
+            "text_pt": "e, na sua intercessão um auxílio,",
+            "__massEditorPairKeys": {
+              "text_pt": "1261:text"
+            }
+          },
+          {
+            "text_pt": "para que, confirmados por tão grandes testemunhas,",
+            "__massEditorPairKeys": {
+              "text_pt": "1262:text"
+            }
+          },
+          {
+            "text_pt": "possamos vencer o bom combate da fé",
+            "__massEditorPairKeys": {
+              "text_pt": "1263:text"
+            }
+          },
+          {
+            "text_pt": "e receber, com eles, a eterna coroa de glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1264:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1265:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com os anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1266:text"
+            }
+          },
+          {
+            "text_pt": "os arcanjos e todos os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1267:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1268:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1269:text"
+            }
+          }
+        ]
+      },
+      "saints_2": {
+        "title": {
+          "pt": "PREFÁCIO II DOS SANTOS — A ação dos santos"
+        },
+        "content": [
+          {
+            "rubric_pt": "67. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros e"
+          },
+          {
+            "rubric_pt": "titulares das igrejas, bem como nas solenidades e festas dos santos que não têm"
+          },
+          {
+            "rubric_pt": "prefácio próprio. Pode dizer-se também nas memórias dos santos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1285:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1286:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1287:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1288:text"
+            }
+          },
+          {
+            "text_pt": "Pelo testemunho admirável dos santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1289:text"
+            }
+          },
+          {
+            "text_pt": "aumentais e fortaleceis sempre a vossa Igreja",
+            "__massEditorPairKeys": {
+              "text_pt": "1290:text"
+            }
+          },
+          {
+            "text_pt": "e nos dais provas evidentes do vosso amor.",
+            "__massEditorPairKeys": {
+              "text_pt": "1291:text"
+            }
+          },
+          {
+            "text_pt": "O exemplo dos santos nos estimula",
+            "__massEditorPairKeys": {
+              "text_pt": "1292:text"
+            }
+          },
+          {
+            "text_pt": "e a sua intercessão nos ajuda",
+            "__massEditorPairKeys": {
+              "text_pt": "1293:text"
+            }
+          },
+          {
+            "text_pt": "a celebrar os mistérios da salvação.",
+            "__massEditorPairKeys": {
+              "text_pt": "1294:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e todos os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1295:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1296:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1297:text"
+            }
+          }
+        ]
+      },
+      "martyrs": {
+        "title": {
+          "pt": "PREFÁCIO I DOS SANTOS MÁRTIRES — O sinal e o exemplo do martírio"
+        },
+        "content": [
+          {
+            "rubric_pt": "68. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se"
+          },
+          {
+            "rubric_pt": "também nas suas memórias."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1312:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1313:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1314:text"
+            }
+          },
+          {
+            "text_pt": "À imitação de Cristo, vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1315:text"
+            }
+          },
+          {
+            "text_pt": "o sangue do(a) glorioso(a) mártir são (santo/a) N.,",
+            "__massEditorPairKeys": {
+              "text_pt": "1316:text"
+            }
+          },
+          {
+            "text_pt": "derramado pela confissão do vosso nome,",
+            "__massEditorPairKeys": {
+              "text_pt": "1317:text"
+            }
+          },
+          {
+            "text_pt": "manifesta as maravilhas do vosso poder.",
+            "__massEditorPairKeys": {
+              "text_pt": "1318:text"
+            }
+          },
+          {
+            "text_pt": "No seu martírio, Senhor,",
+            "__massEditorPairKeys": {
+              "text_pt": "1319:text"
+            }
+          },
+          {
+            "text_pt": "tirais força da fraqueza",
+            "__massEditorPairKeys": {
+              "text_pt": "1320:text"
+            }
+          },
+          {
+            "text_pt": "e fazeis da fragilidade humana",
+            "__massEditorPairKeys": {
+              "text_pt": "1321:text"
+            }
+          },
+          {
+            "text_pt": "o testemunho da vossa grandeza,",
+            "__massEditorPairKeys": {
+              "text_pt": "1322:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1323:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1324:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos, na terra, a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1325:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz.",
+            "__massEditorPairKeys": {
+              "text_pt": "1326:text"
+            }
+          }
+        ]
+      },
+      "martyrs_2": {
+        "title": {
+          "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires"
+        },
+        "content": [
+          {
+            "rubric_pt": "69. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se"
+          },
+          {
+            "rubric_pt": "também nas suas memórias."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1341:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1342:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1343:text"
+            }
+          },
+          {
+            "text_pt": "Vós sois glorificado no louvor dos vossos santos",
+            "__massEditorPairKeys": {
+              "text_pt": "1344:text"
+            }
+          },
+          {
+            "text_pt": "e tudo o que veneramos no seu glorioso martírio",
+            "__massEditorPairKeys": {
+              "text_pt": "1345:text"
+            }
+          },
+          {
+            "text_pt": "é obra do vosso poder admirável:",
+            "__massEditorPairKeys": {
+              "text_pt": "1346:text"
+            }
+          },
+          {
+            "text_pt": "de Vós procede o ardor da sua fé,",
+            "__massEditorPairKeys": {
+              "text_pt": "1347:text"
+            }
+          },
+          {
+            "text_pt": "a firmeza da sua perseverança",
+            "__massEditorPairKeys": {
+              "text_pt": "1348:text"
+            }
+          },
+          {
+            "text_pt": "e o triunfo no seu combate,",
+            "__massEditorPairKeys": {
+              "text_pt": "1349:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1350:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, todas as criaturas, no céu e na terra,",
+            "__massEditorPairKeys": {
+              "text_pt": "1351:text"
+            }
+          },
+          {
+            "text_pt": "Vos adoram, cantando um cântico novo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1352:text"
+            }
+          },
+          {
+            "text_pt": "E também nós, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1353:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1354:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1355:text"
+            }
+          }
+        ]
+      },
+      "pastors": {
+        "title": {
+          "pt": "PREFÁCIO DOS SANTOS PASTORES DA IGREJA — A presença dos santos pastores na Igreja"
+        },
+        "content": [
+          {
+            "rubric_pt": "70. Este prefácio diz-se nas solenidades e festas dos santos pastores da Igreja."
+          },
+          {
+            "rubric_pt": "Pode dizer-se também nas suas memórias."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1370:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1371:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1372:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1373:text"
+            }
+          },
+          {
+            "text_pt": "Ao celebrar hoje a memória ( festa) de são N.,",
+            "__massEditorPairKeys": {
+              "text_pt": "1374:text"
+            }
+          },
+          {
+            "text_pt": "a vossa Igreja exulta de alegria,",
+            "__massEditorPairKeys": {
+              "text_pt": "1375:text"
+            }
+          },
+          {
+            "text_pt": "porque a fortaleceis com o exemplo da sua vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "1376:text"
+            }
+          },
+          {
+            "text_pt": "a instruís com a sua palavra",
+            "__massEditorPairKeys": {
+              "text_pt": "1377:text"
+            }
+          },
+          {
+            "text_pt": "e a protegeis com a sua intercessão.",
+            "__massEditorPairKeys": {
+              "text_pt": "1378:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1379:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1380:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1381:text"
+            }
+          }
+        ]
+      },
+      "virgins_and_religious": {
+        "title": {
+          "pt": "PREFÁCIO DAS SANTAS VIRGENS E DOS SANTOS RELIGIOSOS — O sinal da vida consagrada a Deus"
+        },
+        "content": [
+          {
+            "rubric_pt": "71. Este prefácio diz-se nas solenidades e festas das santas virgens e dos santos"
+          },
+          {
+            "rubric_pt": "religiosos. Pode dizer-se também nas suas memórias."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1397:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1398:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1399:text"
+            }
+          },
+          {
+            "text_pt": "Ao recordar os santos",
+            "__massEditorPairKeys": {
+              "text_pt": "1400:text"
+            }
+          },
+          {
+            "text_pt": "que, por amor do reino dos céus,",
+            "__massEditorPairKeys": {
+              "text_pt": "1401:text"
+            }
+          },
+          {
+            "text_pt": "se consagraram a Cristo, vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1402:text"
+            }
+          },
+          {
+            "text_pt": "celebramos a vossa admirável providência.",
+            "__massEditorPairKeys": {
+              "text_pt": "1403:text"
+            }
+          },
+          {
+            "text_pt": "Neles restituís ao homem a santidade original",
+            "__massEditorPairKeys": {
+              "text_pt": "1404:text"
+            }
+          },
+          {
+            "text_pt": "e nos fazeis saborear, na terra,",
+            "__massEditorPairKeys": {
+              "text_pt": "1405:text"
+            }
+          },
+          {
+            "text_pt": "os dons que reservastes para a vida futura.",
+            "__massEditorPairKeys": {
+              "text_pt": "1406:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1407:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1408:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1409:text"
+            }
+          }
+        ]
+      },
+      "common_1": {
+        "title": {
+          "pt": "PREFÁCIO COMUM I — A instauração do universo em Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "72. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1424:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1425:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1426:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1427:text"
+            }
+          },
+          {
+            "text_pt": "N’Ele quisestes instaurar todas as coisas",
+            "__massEditorPairKeys": {
+              "text_pt": "1428:text"
+            }
+          },
+          {
+            "text_pt": "e a todos destes a graça de participar da sua plenitude.",
+            "__massEditorPairKeys": {
+              "text_pt": "1429:text"
+            }
+          },
+          {
+            "text_pt": "Sendo Ele de condição divina,",
+            "__massEditorPairKeys": {
+              "text_pt": "1430:text"
+            }
+          },
+          {
+            "text_pt": "aniquilou-Se a Si próprio",
+            "__massEditorPairKeys": {
+              "text_pt": "1431:text"
+            }
+          },
+          {
+            "text_pt": "e, pelo sangue derramado na cruz,",
+            "__massEditorPairKeys": {
+              "text_pt": "1432:text"
+            }
+          },
+          {
+            "text_pt": "deu a paz a todo o universo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1433:text"
+            }
+          },
+          {
+            "text_pt": "Por isso foi exaltado sobre todas as criaturas",
+            "__massEditorPairKeys": {
+              "text_pt": "1434:text"
+            }
+          },
+          {
+            "text_pt": "e tornou-Se, para todos os que Lhe obedecem,",
+            "__massEditorPairKeys": {
+              "text_pt": "1435:text"
+            }
+          },
+          {
+            "text_pt": "fonte de salvação eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "1436:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1437:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "1438:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1439:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1440:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1441:text"
+            }
+          }
+        ]
+      },
+      "common_2": {
+        "title": {
+          "pt": "PREFÁCIO COMUM II — A salvação por Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "73. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1456:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1457:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1458:text"
+            }
+          },
+          {
+            "text_pt": "Por amor criastes o homem",
+            "__massEditorPairKeys": {
+              "text_pt": "1459:text"
+            }
+          },
+          {
+            "text_pt": "e, embora justamente condenado,",
+            "__massEditorPairKeys": {
+              "text_pt": "1460:text"
+            }
+          },
+          {
+            "text_pt": "em vossa misericórdia, o salvastes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1461:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1462:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, os anjos louvam a vossa majestade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1463:text"
+            }
+          },
+          {
+            "text_pt": "as dominações Vos adoram,",
+            "__massEditorPairKeys": {
+              "text_pt": "1464:text"
+            }
+          },
+          {
+            "text_pt": "as potestades Vos reverenciam;",
+            "__massEditorPairKeys": {
+              "text_pt": "1465:text"
+            }
+          },
+          {
+            "text_pt": "os céus, os espíritos celestes",
+            "__massEditorPairKeys": {
+              "text_pt": "1466:text"
+            }
+          },
+          {
+            "text_pt": "e os serafins Vos aclamam,",
+            "__massEditorPairKeys": {
+              "text_pt": "1467:text"
+            }
+          },
+          {
+            "text_pt": "unidos em eterna exultação.",
+            "__massEditorPairKeys": {
+              "text_pt": "1468:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1469:text"
+            }
+          },
+          {
+            "text_pt": "proclamando (cantando) humildemente o vosso louvor:",
+            "__massEditorPairKeys": {
+              "text_pt": "1470:text"
+            }
+          }
+        ]
+      },
+      "common_3": {
+        "title": {
+          "pt": "PREFÁCIO COMUM III — Louvor a Deus pela criação e renovação do homem"
+        },
+        "content": [
+          {
+            "rubric_pt": "74. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1485:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1486:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1487:text"
+            }
+          },
+          {
+            "text_pt": "Pelo vosso Filho muito amado,",
+            "__massEditorPairKeys": {
+              "text_pt": "1488:text"
+            }
+          },
+          {
+            "text_pt": "criastes o género humano",
+            "__massEditorPairKeys": {
+              "text_pt": "1489:text"
+            }
+          },
+          {
+            "text_pt": "e por vossa bondade o renovastes.",
+            "__massEditorPairKeys": {
+              "text_pt": "1490:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, Vos servem todas as criaturas,",
+            "__massEditorPairKeys": {
+              "text_pt": "1491:text"
+            }
+          },
+          {
+            "text_pt": "Vos louvam todos os redimidos",
+            "__massEditorPairKeys": {
+              "text_pt": "1492:text"
+            }
+          },
+          {
+            "text_pt": "e Vos aclamam os anjos e todos os santos.",
+            "__massEditorPairKeys": {
+              "text_pt": "1493:text"
+            }
+          },
+          {
+            "text_pt": "Com eles, também nós proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1494:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1495:text"
+            }
+          }
+        ]
+      },
+      "common_4": {
+        "title": {
+          "pt": "PREFÁCIO COMUM IV — O louvor é um dom de Deus"
+        },
+        "content": [
+          {
+            "rubric_pt": "75. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1510:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1511:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1512:text"
+            }
+          },
+          {
+            "text_pt": "Vós não precisais dos nossos louvores",
+            "__massEditorPairKeys": {
+              "text_pt": "1513:text"
+            }
+          },
+          {
+            "text_pt": "e poder glorificar-Vos é dom da vossa bondade;",
+            "__massEditorPairKeys": {
+              "text_pt": "1514:text"
+            }
+          },
+          {
+            "text_pt": "porque os nossos hinos de bênção,",
+            "__massEditorPairKeys": {
+              "text_pt": "1515:text"
+            }
+          },
+          {
+            "text_pt": "nada aumentando à vossa infinita grandeza,",
+            "__massEditorPairKeys": {
+              "text_pt": "1516:text"
+            }
+          },
+          {
+            "text_pt": "alcançam-nos a graça da salvação,",
+            "__massEditorPairKeys": {
+              "text_pt": "1517:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1518:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1519:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1520:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1521:text"
+            }
+          }
+        ]
+      },
+      "common_5": {
+        "title": {
+          "pt": "PREFÁCIO COMUM V — Proclamação do mistério de Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "76. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1536:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1537:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1538:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1539:text"
+            }
+          },
+          {
+            "text_pt": "Unidos na caridade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1540:text"
+            }
+          },
+          {
+            "text_pt": "celebramos a sua morte;",
+            "__massEditorPairKeys": {
+              "text_pt": "1541:text"
+            }
+          },
+          {
+            "text_pt": "com fé viva,",
+            "__massEditorPairKeys": {
+              "text_pt": "1542:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a sua ressurreição;",
+            "__massEditorPairKeys": {
+              "text_pt": "1543:text"
+            }
+          },
+          {
+            "text_pt": "com ardente esperança,",
+            "__massEditorPairKeys": {
+              "text_pt": "1544:text"
+            }
+          },
+          {
+            "text_pt": "aguardamos a sua vinda gloriosa.",
+            "__massEditorPairKeys": {
+              "text_pt": "1545:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1546:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1547:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1548:text"
+            }
+          }
+        ]
+      },
+      "common_6": {
+        "title": {
+          "pt": "PREFÁCIO COMUM VI — O mistério da salvação em Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "77. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1563:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1564:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte",
+            "__massEditorPairKeys": {
+              "text_pt": "1565:text"
+            }
+          },
+          {
+            "text_pt": "por Jesus Cristo, vosso amado Filho.",
+            "__massEditorPairKeys": {
+              "text_pt": "1566:text"
+            }
+          },
+          {
+            "text_pt": "Ele é a vossa palavra, por quem tudo criastes.",
+            "__massEditorPairKeys": {
+              "text_pt": "1567:text"
+            }
+          },
+          {
+            "text_pt": "Enviado por Vós, como Salvador e Redentor,",
+            "__massEditorPairKeys": {
+              "text_pt": "1568:text"
+            }
+          },
+          {
+            "text_pt": "fez-Se homem pelo poder do Espírito Santo",
+            "__massEditorPairKeys": {
+              "text_pt": "1569:text"
+            }
+          },
+          {
+            "text_pt": "e nasceu da Virgem Maria.",
+            "__massEditorPairKeys": {
+              "text_pt": "1570:text"
+            }
+          },
+          {
+            "text_pt": "Para cumprir a vossa vontade",
+            "__massEditorPairKeys": {
+              "text_pt": "1571:text"
+            }
+          },
+          {
+            "text_pt": "e adquirir para Vós um povo santo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1572:text"
+            }
+          },
+          {
+            "text_pt": "estendeu os braços e morreu na cruz;",
+            "__massEditorPairKeys": {
+              "text_pt": "1573:text"
+            }
+          },
+          {
+            "text_pt": "e, destruindo assim a morte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1574:text"
+            }
+          },
+          {
+            "text_pt": "manifestou a vitória da ressurreição.",
+            "__massEditorPairKeys": {
+              "text_pt": "1575:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e todos os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1576:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1577:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1578:text"
+            }
+          }
+        ]
+      },
+      "common_7": {
+        "title": {
+          "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós"
+        },
+        "content": [
+          {
+            "rubric_pt": "77 a. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus da aliança e da paz,",
+            "__massEditorPairKeys": {
+              "text_pt": "1593:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1594:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1595:text"
+            }
+          },
+          {
+            "text_pt": "Vós chamastes e fizestes sair Abraão da sua terra",
+            "__massEditorPairKeys": {
+              "text_pt": "1596:text"
+            }
+          },
+          {
+            "text_pt": "para o constituir pai de todas as nações.",
+            "__massEditorPairKeys": {
+              "text_pt": "1597:text"
+            }
+          },
+          {
+            "text_pt": "Suscitastes Moisés para libertar o vosso povo",
+            "__massEditorPairKeys": {
+              "text_pt": "1598:text"
+            }
+          },
+          {
+            "text_pt": "e conduzi-lo à terra prometida.",
+            "__massEditorPairKeys": {
+              "text_pt": "1599:text"
+            }
+          },
+          {
+            "text_pt": "Na plenitude dos tempos, enviastes o vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1600:text"
+            }
+          },
+          {
+            "text_pt": "hóspede e peregrino no meio de nós,",
+            "__massEditorPairKeys": {
+              "text_pt": "1601:text"
+            }
+          },
+          {
+            "text_pt": "para nos redimir do pecado e da morte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1602:text"
+            }
+          },
+          {
+            "text_pt": "e destes ao mundo o vosso Espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "1603:text"
+            }
+          },
+          {
+            "text_pt": "para fazer de todas as nações um só povo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1604:text"
+            }
+          },
+          {
+            "text_pt": "que caminha para o vosso reino",
+            "__massEditorPairKeys": {
+              "text_pt": "1605:text"
+            }
+          },
+          {
+            "text_pt": "na liberdade dos filhos de Deus,",
+            "__massEditorPairKeys": {
+              "text_pt": "1606:text"
+            }
+          },
+          {
+            "text_pt": "segundo o mandamento novo do amor.",
+            "__massEditorPairKeys": {
+              "text_pt": "1607:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1608:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1609:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1610:text"
+            }
+          }
+        ]
+      },
+      "common_8": {
+        "title": {
+          "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano"
+        },
+        "content": [
+          {
+            "rubric_pt": "77 b. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1625:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1626:text"
+            }
+          },
+          {
+            "text_pt": "louvar-Vos e dar-Vos graças,",
+            "__massEditorPairKeys": {
+              "text_pt": "1627:text"
+            }
+          },
+          {
+            "text_pt": "em todos os momentos da nossa vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "1628:text"
+            }
+          },
+          {
+            "text_pt": "na saúde e na doença, no sofrimento e na alegria,",
+            "__massEditorPairKeys": {
+              "text_pt": "1629:text"
+            }
+          },
+          {
+            "text_pt": "por Cristo, vosso servo e nosso Redentor.",
+            "__massEditorPairKeys": {
+              "text_pt": "1630:text"
+            }
+          },
+          {
+            "text_pt": "Na sua vida mortal, Ele passou fazendo o bem",
+            "__massEditorPairKeys": {
+              "text_pt": "1631:text"
+            }
+          },
+          {
+            "text_pt": "e socorrendo todos os que eram prisioneiros do mal.",
+            "__massEditorPairKeys": {
+              "text_pt": "1632:text"
+            }
+          },
+          {
+            "text_pt": "Ainda hoje, como bom samaritano,",
+            "__massEditorPairKeys": {
+              "text_pt": "1633:text"
+            }
+          },
+          {
+            "text_pt": "vem ao encontro de todos os homens,",
+            "__massEditorPairKeys": {
+              "text_pt": "1634:text"
+            }
+          },
+          {
+            "text_pt": "atribulados no corpo ou no espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "1635:text"
+            }
+          },
+          {
+            "text_pt": "e derrama sobre as suas feridas",
+            "__massEditorPairKeys": {
+              "text_pt": "1636:text"
+            }
+          },
+          {
+            "text_pt": "o óleo da consolação e o vinho da esperança.",
+            "__massEditorPairKeys": {
+              "text_pt": "1637:text"
+            }
+          },
+          {
+            "text_pt": "Por este dom da vossa graça,",
+            "__massEditorPairKeys": {
+              "text_pt": "1638:text"
+            }
+          },
+          {
+            "text_pt": "também a noite da dor se abre à luz pascal",
+            "__massEditorPairKeys": {
+              "text_pt": "1639:text"
+            }
+          },
+          {
+            "text_pt": "do vosso Filho crucificado e ressuscitado.",
+            "__massEditorPairKeys": {
+              "text_pt": "1640:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1641:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1642:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1643:text"
+            }
+          }
+        ]
+      },
+      "common_9": {
+        "title": {
+          "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo"
+        },
+        "content": [
+          {
+            "rubric_pt": "77 c. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
+          },
+          {
+            "rubric_pt": "o prefácio do Tempo."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1658:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1659:text"
+            }
+          },
+          {
+            "text_pt": "louvar-Vos e dar-Vos graças,",
+            "__massEditorPairKeys": {
+              "text_pt": "1660:text"
+            }
+          },
+          {
+            "text_pt": "sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1661:text"
+            }
+          },
+          {
+            "text_pt": "Vós sois o único Deus vivo e verdadeiro",
+            "__massEditorPairKeys": {
+              "text_pt": "1662:text"
+            }
+          },
+          {
+            "text_pt": "e estais presente em todo o universo;",
+            "__massEditorPairKeys": {
+              "text_pt": "1663:text"
+            }
+          },
+          {
+            "text_pt": "mas foi sobretudo no homem,",
+            "__massEditorPairKeys": {
+              "text_pt": "1664:text"
+            }
+          },
+          {
+            "text_pt": "criado à vossa imagem,",
+            "__massEditorPairKeys": {
+              "text_pt": "1665:text"
+            }
+          },
+          {
+            "text_pt": "que imprimistes o sinal da vossa glória.",
+            "__massEditorPairKeys": {
+              "text_pt": "1666:text"
+            }
+          },
+          {
+            "text_pt": "Vós o chamais a colaborar,",
+            "__massEditorPairKeys": {
+              "text_pt": "1667:text"
+            }
+          },
+          {
+            "text_pt": "com o trabalho de cada dia,",
+            "__massEditorPairKeys": {
+              "text_pt": "1668:text"
+            }
+          },
+          {
+            "text_pt": "no projeto da criação,",
+            "__massEditorPairKeys": {
+              "text_pt": "1669:text"
+            }
+          },
+          {
+            "text_pt": "e lhe dais o vosso Espírito,",
+            "__massEditorPairKeys": {
+              "text_pt": "1670:text"
+            }
+          },
+          {
+            "text_pt": "para que, em Cristo, homem novo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1671:text"
+            }
+          },
+          {
+            "text_pt": "se torne construtor da justiça e da paz.",
+            "__massEditorPairKeys": {
+              "text_pt": "1672:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1673:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1674:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1675:text"
+            }
+          }
+        ]
+      },
+      "dead_1": {
+        "title": {
+          "pt": "PREFÁCIO I DOS DEFUNTOS — A esperança da ressurreição em Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "78. Este prefácio diz-se nas Missas de defuntos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1689:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1690:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1691:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1692:text"
+            }
+          },
+          {
+            "text_pt": "N’Ele brilhou para nós a esperança da feliz ressurreição",
+            "__massEditorPairKeys": {
+              "text_pt": "1693:text"
+            }
+          },
+          {
+            "text_pt": "e, se a certeza da morte nos entristece,",
+            "__massEditorPairKeys": {
+              "text_pt": "1694:text"
+            }
+          },
+          {
+            "text_pt": "conforta-nos a promessa da imortalidade.",
+            "__massEditorPairKeys": {
+              "text_pt": "1695:text"
+            }
+          },
+          {
+            "text_pt": "Para os que creem em Vós, Senhor,",
+            "__massEditorPairKeys": {
+              "text_pt": "1696:text"
+            }
+          },
+          {
+            "text_pt": "a vida não acaba, apenas se transforma",
+            "__massEditorPairKeys": {
+              "text_pt": "1697:text"
+            }
+          },
+          {
+            "text_pt": "e, desfeita a morada deste exílio terrestre,",
+            "__massEditorPairKeys": {
+              "text_pt": "1698:text"
+            }
+          },
+          {
+            "text_pt": "adquirimos no céu uma habitação eterna.",
+            "__massEditorPairKeys": {
+              "text_pt": "1699:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os arcanjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1700:text"
+            }
+          },
+          {
+            "text_pt": "os tronos e as dominações",
+            "__massEditorPairKeys": {
+              "text_pt": "1701:text"
+            }
+          },
+          {
+            "text_pt": "e todos os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1702:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1703:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1704:text"
+            }
+          }
+        ]
+      },
+      "dead_2": {
+        "title": {
+          "pt": "PREFÁCIO II DOS DEFUNTOS — Cristo morreu pela nossa vida"
+        },
+        "content": [
+          {
+            "rubric_pt": "79. Este prefácio diz-se nas Missas de defuntos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1718:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1719:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1720:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1721:text"
+            }
+          },
+          {
+            "text_pt": "Tomando sobre Si a nossa morte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1722:text"
+            }
+          },
+          {
+            "text_pt": "Ele livrou-nos da morte eterna;",
+            "__massEditorPairKeys": {
+              "text_pt": "1723:text"
+            }
+          },
+          {
+            "text_pt": "oferecendo por nós a sua vida,",
+            "__massEditorPairKeys": {
+              "text_pt": "1724:text"
+            }
+          },
+          {
+            "text_pt": "abriu-nos as portas da vida imortal.",
+            "__massEditorPairKeys": {
+              "text_pt": "1725:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com todos os coros dos anjos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1726:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1727:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1728:text"
+            }
+          }
+        ]
+      },
+      "dead_3": {
+        "title": {
+          "pt": "PREFÁCIO III DOS DEFUNTOS — Cristo, salvação e vida"
+        },
+        "content": [
+          {
+            "rubric_pt": "80. Este prefácio diz-se nas Missas de defuntos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1742:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1743:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte,",
+            "__massEditorPairKeys": {
+              "text_pt": "1744:text"
+            }
+          },
+          {
+            "text_pt": "por nosso Senhor Jesus Cristo.",
+            "__massEditorPairKeys": {
+              "text_pt": "1745:text"
+            }
+          },
+          {
+            "text_pt": "Ele é a salvação do mundo,",
+            "__massEditorPairKeys": {
+              "text_pt": "1746:text"
+            }
+          },
+          {
+            "text_pt": "a vida dos homens",
+            "__massEditorPairKeys": {
+              "text_pt": "1747:text"
+            }
+          },
+          {
+            "text_pt": "e a ressurreição dos mortos.",
+            "__massEditorPairKeys": {
+              "text_pt": "1748:text"
+            }
+          },
+          {
+            "text_pt": "Por Ele, a multidão dos anjos",
+            "__massEditorPairKeys": {
+              "text_pt": "1749:text"
+            }
+          },
+          {
+            "text_pt": "adora a vossa majestade",
+            "__massEditorPairKeys": {
+              "text_pt": "1750:text"
+            }
+          },
+          {
+            "text_pt": "e exulta eternamente na vossa presença.",
+            "__massEditorPairKeys": {
+              "text_pt": "1751:text"
+            }
+          },
+          {
+            "text_pt": "Permiti que nos associemos às suas vozes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1752:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) com alegria:",
+            "__massEditorPairKeys": {
+              "text_pt": "1753:text"
+            }
+          }
+        ]
+      },
+      "dead_4": {
+        "title": {
+          "pt": "PREFÁCIO IV DOS DEFUNTOS — Da vida terrena à glória celeste"
+        },
+        "content": [
+          {
+            "rubric_pt": "81. Este prefácio diz-se nas Missas de defuntos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1767:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1768:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1769:text"
+            }
+          },
+          {
+            "text_pt": "A vossa vontade nos chama à vida",
+            "__massEditorPairKeys": {
+              "text_pt": "1770:text"
+            }
+          },
+          {
+            "text_pt": "e a vossa providência nos governa.",
+            "__massEditorPairKeys": {
+              "text_pt": "1771:text"
+            }
+          },
+          {
+            "text_pt": "Se, por vossa ordem, devido ao pecado,",
+            "__massEditorPairKeys": {
+              "text_pt": "1772:text"
+            }
+          },
+          {
+            "text_pt": "voltamos à terra de onde fomos tirados,",
+            "__massEditorPairKeys": {
+              "text_pt": "1773:text"
+            }
+          },
+          {
+            "text_pt": "pela morte redentora do vosso Filho,",
+            "__massEditorPairKeys": {
+              "text_pt": "1774:text"
+            }
+          },
+          {
+            "text_pt": "o vosso poder nos desperta,",
+            "__massEditorPairKeys": {
+              "text_pt": "1775:text"
+            }
+          },
+          {
+            "text_pt": "para tomar parte na ressurreição gloriosa.",
+            "__massEditorPairKeys": {
+              "text_pt": "1776:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os anjos e os santos,",
+            "__massEditorPairKeys": {
+              "text_pt": "1777:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1778:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1779:text"
+            }
+          }
+        ]
+      },
+      "dead_5": {
+        "title": {
+          "pt": "PREFÁCIO V DOS DEFUNTOS — A nossa ressurreição pela vitória de Cristo"
+        },
+        "content": [
+          {
+            "rubric_pt": "82. Este prefácio diz-se nas Missas de defuntos."
+          },
+          {
+            "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
+            "__massEditorPairKeys": {
+              "text_pt": "1793:text"
+            }
+          },
+          {
+            "text_pt": "é verdadeiramente nosso dever, é nossa salvação",
+            "__massEditorPairKeys": {
+              "text_pt": "1794:text"
+            }
+          },
+          {
+            "text_pt": "dar-Vos graças, sempre e em toda a parte.",
+            "__massEditorPairKeys": {
+              "text_pt": "1795:text"
+            }
+          },
+          {
+            "text_pt": "A morte é a nossa herança comum,",
+            "__massEditorPairKeys": {
+              "text_pt": "1796:text"
+            }
+          },
+          {
+            "text_pt": "mas, pelo dom maravilhoso da vossa bondade,",
+            "__massEditorPairKeys": {
+              "text_pt": "1797:text"
+            }
+          },
+          {
+            "text_pt": "Cristo, com a sua vitória, nos redime da morte",
+            "__massEditorPairKeys": {
+              "text_pt": "1798:text"
+            }
+          },
+          {
+            "text_pt": "e nos chama a tomar parte na sua vida gloriosa.",
+            "__massEditorPairKeys": {
+              "text_pt": "1799:text"
+            }
+          },
+          {
+            "text_pt": "Por isso, com os coros celestes,",
+            "__massEditorPairKeys": {
+              "text_pt": "1800:text"
+            }
+          },
+          {
+            "text_pt": "proclamamos, na terra, a vossa glória,",
+            "__massEditorPairKeys": {
+              "text_pt": "1801:text"
+            }
+          },
+          {
+            "text_pt": "dizendo (cantando) numa só voz:",
+            "__massEditorPairKeys": {
+              "text_pt": "1802:text"
+            }
+          }
+        ]
       }
     },
     "sanctus": [{
@@ -26458,58 +26292,16 @@
           }
         ],
         "songs": {
-          "cep_complete_prefaces": {
+          "advent_1": {
             "title": {
-              "pt": "Prefácios completos do Missal Romano de Portugal"
+              "pt": "PREFÁCIO I DO ADVENTO — As duas vindas de Cristo"
             },
             "content": [
               {
-                "rubric_pt": "PREFÁCIO I DO ADVENTO",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "0:rubric"
-                }
+                "rubric_pt": "33. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro,"
               },
               {
-                "text_pt": "As duas vindas de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1:text"
-                }
-              },
-              {
-                "text_pt": "33. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro,",
-                "__massEditorPairKeys": {
-                  "text_pt": "2:text"
-                }
-              },
-              {
-                "text_pt": "nas Missas do Tempo e também nas outras Missas que não têm prefácio próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "3:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "4:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "5:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "6:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "7:text"
-                }
+                "rubric_pt": "nas Missas do Tempo e também nas outras Missas que não têm prefácio próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -26606,91 +26398,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "23:text"
                 }
+              }
+            ]
+          },
+          "advent_1a": {
+            "title": {
+              "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história"
+            },
+            "content": [
+              {
+                "rubric_pt": "33 a. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro, nas Missas do Tempo e também nas outras Missas que não têm prefácio"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "24:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "25:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "26:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "27:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "28:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "29:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I-A DO ADVENTO",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "30:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, Senhor e juiz da história",
-                "__massEditorPairKeys": {
-                  "text_pt": "31:text"
-                }
-              },
-              {
-                "text_pt": "33 a. Este prefácio diz-se desde o Domingo I do Advento até ao dia 16 de dezembro, nas Missas do Tempo e também nas outras Missas que não têm prefácio",
-                "__massEditorPairKeys": {
-                  "text_pt": "32:text"
-                }
-              },
-              {
-                "text_pt": "próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "33:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "34:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "35:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "36:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "37:text"
-                }
+                "rubric_pt": "próprio."
               },
               {
                 "text_pt": "Pai santo, Deus eterno e omnipotente,",
@@ -26805,61 +26525,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "56:text"
                 }
+              }
+            ]
+          },
+          "advent_2": {
+            "title": {
+              "pt": "PREFÁCIO II DO ADVENTO — A dupla expetativa de Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "34. Este prefácio diz-se desde 17 a 24 de dezembro nas Missas do Tempo e"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "57:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DO ADVENTO",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "58:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A dupla expetativa de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "59:text"
-                }
-              },
-              {
-                "text_pt": "34. Este prefácio diz-se desde 17 a 24 de dezembro nas Missas do Tempo e",
-                "__massEditorPairKeys": {
-                  "text_pt": "60:text"
-                }
-              },
-              {
-                "text_pt": "também nas outras Missas que não têm prefácio próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "61:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "62:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "63:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "64:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "65:text"
-                }
+                "rubric_pt": "também nas outras Missas que não têm prefácio próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -26962,91 +26640,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "82:text"
                 }
+              }
+            ]
+          },
+          "advent_2a": {
+            "title": {
+              "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva"
+            },
+            "content": [
+              {
+                "rubric_pt": "34 a. Este prefácio diz-se desde 17 a 24 de dezembro, nas Missas do Tempo e"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "83:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "84:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "85:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "86:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "87:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "88:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II-A DO ADVENTO",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "89:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Maria, nova Eva",
-                "__massEditorPairKeys": {
-                  "text_pt": "90:text"
-                }
-              },
-              {
-                "text_pt": "34 a. Este prefácio diz-se desde 17 a 24 de dezembro, nas Missas do Tempo e",
-                "__massEditorPairKeys": {
-                  "text_pt": "91:text"
-                }
-              },
-              {
-                "text_pt": "também nas outras Missas que não têm prefácio próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "92:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "93:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "94:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "95:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação..",
-                "__massEditorPairKeys": {
-                  "text_pt": "96:text"
-                }
+                "rubric_pt": "também nas outras Missas que não têm prefácio próprio."
               },
               {
                 "text_pt": "Pai santo, Deus eterno e omnipotente,",
@@ -27167,67 +26773,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "116:text"
                 }
+              }
+            ]
+          },
+          "nativity_1": {
+            "title": {
+              "pt": "PREFÁCIO I DO NATAL DO SENHOR — Cristo luz"
+            },
+            "content": [
+              {
+                "rubric_pt": "35. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "117:text"
-                }
+                "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
               },
               {
-                "rubric_pt": "PREFÁCIO I DO NATAL DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "118:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo luz",
-                "__massEditorPairKeys": {
-                  "text_pt": "119:text"
-                }
-              },
-              {
-                "text_pt": "35. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a",
-                "__massEditorPairKeys": {
-                  "text_pt": "120:text"
-                }
-              },
-              {
-                "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do",
-                "__massEditorPairKeys": {
-                  "text_pt": "121:text"
-                }
-              },
-              {
-                "text_pt": "Natal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "122:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "123:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "124:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "125:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "126:text"
-                }
+                "rubric_pt": "Natal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -27300,127 +26861,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "138:text"
                 }
+              }
+            ]
+          },
+          "nativity_2": {
+            "title": {
+              "pt": "PREFÁCIO II DO NATAL DO SENHOR — A restauração do universo na Encarnação"
+            },
+            "content": [
+              {
+                "rubric_pt": "36. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "139:text"
-                }
+                "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "140:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "141:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "142:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "143:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "144:text"
-                }
-              },
-              {
-                "text_pt": "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio, p. 643.",
-                "__massEditorPairKeys": {
-                  "text_pt": "145:text"
-                }
-              },
-              {
-                "text_pt": "Nas Orações eucarísticas II e III faz-se também a comemoração própria do Natal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "146:text"
-                }
-              },
-              {
-                "text_pt": "Nas Missas da vigília e da Noite do Natal do Senhor, diz-se: ao celebrarmos a",
-                "__massEditorPairKeys": {
-                  "text_pt": "147:text"
-                }
-              },
-              {
-                "text_pt": "noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao",
-                "__massEditorPairKeys": {
-                  "text_pt": "148:text"
-                }
-              },
-              {
-                "text_pt": "celebrarmos o dia santíssimo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "149:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DO NATAL DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "150:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A restauração do universo na Encarnação",
-                "__massEditorPairKeys": {
-                  "text_pt": "151:text"
-                }
-              },
-              {
-                "text_pt": "36. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a",
-                "__massEditorPairKeys": {
-                  "text_pt": "152:text"
-                }
-              },
-              {
-                "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do",
-                "__massEditorPairKeys": {
-                  "text_pt": "153:text"
-                }
-              },
-              {
-                "text_pt": "Natal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "154:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "155:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "156:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "157:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "158:text"
-                }
+                "rubric_pt": "Natal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -27511,91 +26967,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "173:text"
                 }
+              }
+            ]
+          },
+          "nativity_3": {
+            "title": {
+              "pt": "PREFÁCIO III DO NATAL DO SENHOR — A admirável permuta realizada na Encarnação do V erbo"
+            },
+            "content": [
+              {
+                "rubric_pt": "37. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "174:text"
-                }
+                "rubric_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do"
               },
               {
-                "text_pt": "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. Nas Orações",
-                "__massEditorPairKeys": {
-                  "text_pt": "175:text"
-                }
-              },
-              {
-                "text_pt": "eucarísticas II e III faz-se também a comemoração própria do Natal. Nas Missas",
-                "__massEditorPairKeys": {
-                  "text_pt": "176:text"
-                }
-              },
-              {
-                "text_pt": "da vigília e da noite do Natal do Senhor, diz-se: ao celebrarmos a noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao celebrarmos o",
-                "__massEditorPairKeys": {
-                  "text_pt": "177:text"
-                }
-              },
-              {
-                "text_pt": "dia santíssimo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "178:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DO NATAL DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "179:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A admirável permuta realizada na Encarnação do V erbo",
-                "__massEditorPairKeys": {
-                  "text_pt": "180:text"
-                }
-              },
-              {
-                "text_pt": "37. Este prefácio diz-se nas Missas do Natal e sua oitava, nas Missas durante a",
-                "__massEditorPairKeys": {
-                  "text_pt": "181:text"
-                }
-              },
-              {
-                "text_pt": "oitava, ainda que tenham prefácio próprio, exceto nas Missas com prefácio próprio dos divinos mistérios ou das Pessoas divinas, e nos dias feriais do Tempo do",
-                "__massEditorPairKeys": {
-                  "text_pt": "182:text"
-                }
-              },
-              {
-                "text_pt": "Natal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "183:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "184:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "185:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "186:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "187:text"
-                }
+                "rubric_pt": "Natal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -27674,115 +27061,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "200:text"
                 }
+              }
+            ]
+          },
+          "epiphany": {
+            "title": {
+              "pt": "PREFÁCIO DA EPIFANIA DO SENHOR — Cristo, luz de todos os povos"
+            },
+            "content": [
+              {
+                "rubric_pt": "38. Este prefácio diz-se nas Missas da solenidade da Epifania. Nos dias que decorrem desde a Epifania até ao sábado que precede a festa do Batismo do Senhor"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "201:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "202:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "203:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "204:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "205:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "206:text"
-                }
-              },
-              {
-                "text_pt": "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. Nas Orações",
-                "__massEditorPairKeys": {
-                  "text_pt": "207:text"
-                }
-              },
-              {
-                "text_pt": "eucarísticas II e III faz-se também a comemoração própria do Natal. Nas Missas",
-                "__massEditorPairKeys": {
-                  "text_pt": "208:text"
-                }
-              },
-              {
-                "text_pt": "da vigília e da noite do Natal do Senhor, diz-se: ao celebrarmos a noite santíssima; nas outras Missas, até à oitava do Natal, inclusive, diz-se: ao celebrarmos o",
-                "__massEditorPairKeys": {
-                  "text_pt": "209:text"
-                }
-              },
-              {
-                "text_pt": "dia santíssimo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "210:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO DA EPIFANIA DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "211:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, luz de todos os povos",
-                "__massEditorPairKeys": {
-                  "text_pt": "212:text"
-                }
-              },
-              {
-                "text_pt": "38. Este prefácio diz-se nas Missas da solenidade da Epifania. Nos dias que decorrem desde a Epifania até ao sábado que precede a festa do Batismo do Senhor",
-                "__massEditorPairKeys": {
-                  "text_pt": "213:text"
-                }
-              },
-              {
-                "text_pt": "pode dizer-se este prefácio ou um dos prefácios do Natal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "214:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "215:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "216:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "217:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "218:text"
-                }
+                "rubric_pt": "pode dizer-se este prefácio ou um dos prefácios do Natal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -27855,103 +27146,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "230:text"
                 }
+              }
+            ]
+          },
+          "lent_1": {
+            "title": {
+              "pt": "PREFÁCIO I DA QUARESMA — Significado espiritual da Quaresma"
+            },
+            "content": [
+              {
+                "rubric_pt": "39. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "231:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "232:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "233:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "234:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "235:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "236:text"
-                }
-              },
-              {
-                "text_pt": "No Cânone romano diz-se o Em comunhão com toda a Igreja próprio. Nas Orações",
-                "__massEditorPairKeys": {
-                  "text_pt": "237:text"
-                }
-              },
-              {
-                "text_pt": "eucarísticas II e III faz-se também a comemoração própria.",
-                "__massEditorPairKeys": {
-                  "text_pt": "238:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "239:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Significado espiritual da Quaresma",
-                "__massEditorPairKeys": {
-                  "text_pt": "240:text"
-                }
-              },
-              {
-                "text_pt": "39. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos",
-                "__massEditorPairKeys": {
-                  "text_pt": "241:text"
-                }
-              },
-              {
-                "text_pt": "que não têm outro prefácio mais próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "242:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "243:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "244:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "245:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "246:text"
-                }
+                "rubric_pt": "que não têm outro prefácio mais próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -28054,91 +27261,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "263:text"
                 }
+              }
+            ]
+          },
+          "lent_2": {
+            "title": {
+              "pt": "PREFÁCIO II DA QUARESMA — A penitência espiritual"
+            },
+            "content": [
+              {
+                "rubric_pt": "40. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "264:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "265:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "266:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "267:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "268:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "269:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "270:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A penitência espiritual",
-                "__massEditorPairKeys": {
-                  "text_pt": "271:text"
-                }
-              },
-              {
-                "text_pt": "40. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos",
-                "__massEditorPairKeys": {
-                  "text_pt": "272:text"
-                }
-              },
-              {
-                "text_pt": "que não têm prefácio mais próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "273:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "274:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "275:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "276:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "277:text"
-                }
+                "rubric_pt": "que não têm prefácio mais próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -28211,91 +27346,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "289:text"
                 }
+              }
+            ]
+          },
+          "lent_3": {
+            "title": {
+              "pt": "PREFÁCIO III DA QUARESMA — Os frutos da abstinência"
+            },
+            "content": [
+              {
+                "rubric_pt": "41. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "290:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "291:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "292:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "293:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "294:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "295:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "296:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Os frutos da abstinência",
-                "__massEditorPairKeys": {
-                  "text_pt": "297:text"
-                }
-              },
-              {
-                "text_pt": "41. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de",
-                "__massEditorPairKeys": {
-                  "text_pt": "298:text"
-                }
-              },
-              {
-                "text_pt": "jejum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "299:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "300:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "301:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "302:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "303:text"
-                }
+                "rubric_pt": "jejum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -28362,91 +27425,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "314:text"
                 }
+              }
+            ]
+          },
+          "lent_4": {
+            "title": {
+              "pt": "PREFÁCIO IV DA QUARESMA — Os frutos do jejum"
+            },
+            "content": [
+              {
+                "rubric_pt": "42. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "315:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "316:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "317:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "318:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "319:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "320:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO IV DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "321:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Os frutos do jejum",
-                "__massEditorPairKeys": {
-                  "text_pt": "322:text"
-                }
-              },
-              {
-                "text_pt": "42. Este prefácio diz-se nas Missas dos dias feriais da Quaresma e nos dias de",
-                "__massEditorPairKeys": {
-                  "text_pt": "323:text"
-                }
-              },
-              {
-                "text_pt": "jejum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "324:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "325:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "326:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "327:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "328:text"
-                }
+                "rubric_pt": "jejum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -28537,91 +27528,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "343:text"
                 }
+              }
+            ]
+          },
+          "lent_5": {
+            "title": {
+              "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal"
+            },
+            "content": [
+              {
+                "rubric_pt": "42 a. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "344:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "345:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "346:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "347:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "348:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "349:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO V DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "350:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O caminho do êxodo no deserto quaresmal",
-                "__massEditorPairKeys": {
-                  "text_pt": "351:text"
-                }
-              },
-              {
-                "text_pt": "42 a. Este prefácio diz-se no Tempo da Quaresma, especialmente nos domingos",
-                "__massEditorPairKeys": {
-                  "text_pt": "352:text"
-                }
-              },
-              {
-                "text_pt": "que não têm prefácio mais próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "353:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "354:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "355:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "356:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "357:text"
-                }
+                "rubric_pt": "que não têm prefácio mais próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, rico de misericórdia,",
@@ -28730,61 +27649,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "375:text"
                 }
+              }
+            ]
+          },
+          "lent_6": {
+            "title": {
+              "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito"
+            },
+            "content": [
+              {
+                "rubric_pt": "42 b. Este prefácio pode dizer-se na Missa da reconciliação e na Missa de caráter"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "376:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO VI DA QUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "377:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O sacramento da reconciliação no Espírito",
-                "__massEditorPairKeys": {
-                  "text_pt": "378:text"
-                }
-              },
-              {
-                "text_pt": "42 b. Este prefácio pode dizer-se na Missa da reconciliação e na Missa de caráter",
-                "__massEditorPairKeys": {
-                  "text_pt": "379:text"
-                }
-              },
-              {
-                "text_pt": "penitencial. Diz-se também no Tempo da Quaresma.",
-                "__massEditorPairKeys": {
-                  "text_pt": "380:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "381:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "382:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "383:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "384:text"
-                }
+                "rubric_pt": "penitencial. Diz-se também no Tempo da Quaresma."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus omnipotente e misericordioso,",
@@ -28887,61 +27764,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "401:text"
                 }
+              }
+            ]
+          },
+          "passion_1": {
+            "title": {
+              "pt": "PREFÁCIO I DA PAIXÃO DO SENHOR — O poder da Cruz"
+            },
+            "content": [
+              {
+                "rubric_pt": "43. Este prefácio diz-se durante a Semana V da Quaresma e nas Missas da Santa"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "402:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DA PAIXÃO DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "403:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O poder da Cruz",
-                "__massEditorPairKeys": {
-                  "text_pt": "404:text"
-                }
-              },
-              {
-                "text_pt": "43. Este prefácio diz-se durante a Semana V da Quaresma e nas Missas da Santa",
-                "__massEditorPairKeys": {
-                  "text_pt": "405:text"
-                }
-              },
-              {
-                "text_pt": "Cruz e da Paixão do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "406:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "407:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "408:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "409:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "410:text"
-                }
+                "rubric_pt": "Cruz e da Paixão do Senhor."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29014,85 +27849,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "422:text"
                 }
-              },
+              }
+            ]
+          },
+          "passion_2": {
+            "title": {
+              "pt": "PREFÁCIO II DA PAIXÃO DO SENHOR — A vitória da Paixão"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "423:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "424:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "425:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "426:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "427:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "428:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DA PAIXÃO DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "429:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A vitória da Paixão",
-                "__massEditorPairKeys": {
-                  "text_pt": "430:text"
-                }
-              },
-              {
-                "text_pt": "44. Este prefácio diz-se na segunda, terça e quarta-feira da Semana Santa.",
-                "__massEditorPairKeys": {
-                  "text_pt": "431:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "432:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "433:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "434:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "435:text"
-                }
+                "rubric_pt": "44. Este prefácio diz-se na segunda, terça e quarta-feira da Semana Santa."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29171,103 +27937,25 @@
                 "__massEditorPairKeys": {
                   "text_pt": "448:text"
                 }
+              }
+            ]
+          },
+          "easter_1": {
+            "title": {
+              "pt": "PREFÁCIO PASCAL I — O mistério pascal"
+            },
+            "content": [
+              {
+                "rubric_pt": "45. Este prefácio diz-se no Tempo Pascal."
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "449:text"
-                }
+                "rubric_pt": "Na Missa da Vigília Pascal diz-se: nesta noite;"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "450:text"
-                }
+                "rubric_pt": "no dia da Páscoa e sua oitava diz-se: neste dia;"
               },
               {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "451:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "452:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "453:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "454:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO PASCAL I",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "455:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério pascal",
-                "__massEditorPairKeys": {
-                  "text_pt": "456:text"
-                }
-              },
-              {
-                "text_pt": "45. Este prefácio diz-se no Tempo Pascal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "457:text"
-                }
-              },
-              {
-                "text_pt": "Na Missa da Vigília Pascal diz-se: nesta noite;",
-                "__massEditorPairKeys": {
-                  "text_pt": "458:text"
-                }
-              },
-              {
-                "text_pt": "no dia da Páscoa e sua oitava diz-se: neste dia;",
-                "__massEditorPairKeys": {
-                  "text_pt": "459:text"
-                }
-              },
-              {
-                "text_pt": "depois da oitava diz-se: neste tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "460:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "461:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "462:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "463:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "464:text"
-                }
+                "rubric_pt": "depois da oitava diz-se: neste tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29346,97 +28034,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "477:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_2": {
+            "title": {
+              "pt": "PREFÁCIO PASCAL II — A vida nova em Cristo"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "478:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "479:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "480:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "481:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "482:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "483:text"
-                }
-              },
-              {
-                "text_pt": "No Cânone romano diz-se o Em comunhão com toda a Igreja e Aceitai benignamente próprios. Nas Orações eucarísticas II e III faz-se também a comemoração",
-                "__massEditorPairKeys": {
-                  "text_pt": "484:text"
-                }
-              },
-              {
-                "text_pt": "própria. Na Vigília Pascal diz-se: ao celebrarmos a noite santíssima.",
-                "__massEditorPairKeys": {
-                  "text_pt": "485:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO PASCAL II",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "486:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A vida nova em Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "487:text"
-                }
-              },
-              {
-                "text_pt": "46. Este prefácio diz-se no Tempo Pascal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "488:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "489:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "490:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "491:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "492:text"
-                }
+                "rubric_pt": "46. Este prefácio diz-se no Tempo Pascal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29521,85 +28128,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "506:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_3": {
+            "title": {
+              "pt": "PREFÁCIO PASCAL III — Cristo vivo e intercessor perpétuo em nosso favor"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "507:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "508:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "509:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "510:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "511:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "512:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO PASCAL III",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "513:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo vivo e intercessor perpétuo em nosso favor",
-                "__massEditorPairKeys": {
-                  "text_pt": "514:text"
-                }
-              },
-              {
-                "text_pt": "47. Este prefácio diz-se no Tempo Pascal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "515:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "516:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "517:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "518:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "519:text"
-                }
+                "rubric_pt": "47. Este prefácio diz-se no Tempo Pascal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29690,85 +28228,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "534:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_4": {
+            "title": {
+              "pt": "PREFÁCIO PASCAL IV — A renovação do universo pelo mistério pascal"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "535:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "536:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "537:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "538:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "539:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "540:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO PASCAL IV",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "541:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A renovação do universo pelo mistério pascal",
-                "__massEditorPairKeys": {
-                  "text_pt": "542:text"
-                }
-              },
-              {
-                "text_pt": "48. Este prefácio diz-se no Tempo Pascal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "543:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "544:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "545:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "546:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "547:text"
-                }
+                "rubric_pt": "48. Este prefácio diz-se no Tempo Pascal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -29847,85 +28316,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "560:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_5": {
+            "title": {
+              "pt": "PREFÁCIO PASCAL V — Cristo, sacerdote e vítima"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "561:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "562:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "563:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "564:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "565:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "566:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO PASCAL V",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "567:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, sacerdote e vítima",
-                "__massEditorPairKeys": {
-                  "text_pt": "568:text"
-                }
-              },
-              {
-                "text_pt": "49. Este prefácio diz-se no Tempo Pascal.",
-                "__massEditorPairKeys": {
-                  "text_pt": "569:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "570:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "571:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "572:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "573:text"
-                }
+                "rubric_pt": "49. Este prefácio diz-se no Tempo Pascal."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30010,97 +28410,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "587:text"
                 }
+              }
+            ]
+          },
+          "ascension_1": {
+            "title": {
+              "pt": "PREFÁCIO I DA ASCENSÃO DO SENHOR — O mistério da Ascensão"
+            },
+            "content": [
+              {
+                "rubric_pt": "50. Este prefácio diz-se no dia de Ascensão do Senhor. Pode dizer-se também"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "588:text"
-                }
+                "rubric_pt": "nos dias a seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "589:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "590:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "591:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "592:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "593:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DA ASCENSÃO DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "594:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério da Ascensão",
-                "__massEditorPairKeys": {
-                  "text_pt": "595:text"
-                }
-              },
-              {
-                "text_pt": "50. Este prefácio diz-se no dia de Ascensão do Senhor. Pode dizer-se também",
-                "__massEditorPairKeys": {
-                  "text_pt": "596:text"
-                }
-              },
-              {
-                "text_pt": "nos dias a seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que",
-                "__massEditorPairKeys": {
-                  "text_pt": "597:text"
-                }
-              },
-              {
-                "text_pt": "não têm prefácio próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "598:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "599:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "600:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "601:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "602:text"
-                }
+                "rubric_pt": "não têm prefácio próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30209,67 +28534,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "620:text"
                 }
+              }
+            ]
+          },
+          "ascension_2": {
+            "title": {
+              "pt": "PREFÁCIO II DA ASCENSÃO DO SENHOR — O mistério da Ascensão"
+            },
+            "content": [
+              {
+                "rubric_pt": "51. Este prefácio diz-se no dia de Ascensão. Pode dizer-se também nos dias a"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "621:text"
-                }
+                "rubric_pt": "seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que não têm"
               },
               {
-                "rubric_pt": "PREFÁCIO II DA ASCENSÃO DO SENHOR",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "622:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério da Ascensão",
-                "__massEditorPairKeys": {
-                  "text_pt": "623:text"
-                }
-              },
-              {
-                "text_pt": "51. Este prefácio diz-se no dia de Ascensão. Pode dizer-se também nos dias a",
-                "__massEditorPairKeys": {
-                  "text_pt": "624:text"
-                }
-              },
-              {
-                "text_pt": "seguir à Ascensão, até ao sábado antes de Pentecostes, nas Missas que não têm",
-                "__massEditorPairKeys": {
-                  "text_pt": "625:text"
-                }
-              },
-              {
-                "text_pt": "prefácio próprio.",
-                "__massEditorPairKeys": {
-                  "text_pt": "626:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "627:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "628:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "629:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "630:text"
-                }
+                "rubric_pt": "prefácio próprio."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30349,97 +28629,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "643:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_1": {
+            "title": {
+              "pt": "PREFÁCIO I DOMINICAL DO TEMPO COMUM — O mistério pascal e o povo de Deus"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "644:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "645:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "646:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "647:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "648:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "649:text"
-                }
-              },
-              {
-                "text_pt": "No dia da Ascensão, no Cânone romano diz-se o Em comunhão com toda a Igreja",
-                "__massEditorPairKeys": {
-                  "text_pt": "650:text"
-                }
-              },
-              {
-                "text_pt": "próprio. Nas Orações eucarísticas II e III faz-se também a comemoração própria.",
-                "__massEditorPairKeys": {
-                  "text_pt": "651:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "652:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério pascal e o povo de Deus",
-                "__massEditorPairKeys": {
-                  "text_pt": "653:text"
-                }
-              },
-              {
-                "text_pt": "52. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "654:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "655:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "656:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "657:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "658:text"
-                }
+                "rubric_pt": "52. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30542,85 +28741,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "675:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_2": {
+            "title": {
+              "pt": "PREFÁCIO II DOMINICAL DO TEMPO COMUM — O mistério da salvação"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "676:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "677:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "678:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "679:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "680:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "681:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "682:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério da salvação",
-                "__massEditorPairKeys": {
-                  "text_pt": "683:text"
-                }
-              },
-              {
-                "text_pt": "53. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "684:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "685:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "686:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "687:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "688:text"
-                }
+                "rubric_pt": "53. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30711,85 +28841,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "703:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_3": {
+            "title": {
+              "pt": "PREFÁCIO III DOMINICAL DO TEMPO COMUM — A salvação do homem por um homem"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "704:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "705:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "706:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "707:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "708:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "709:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "710:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A salvação do homem por um homem",
-                "__massEditorPairKeys": {
-                  "text_pt": "711:text"
-                }
-              },
-              {
-                "text_pt": "54. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "712:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "713:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "714:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "715:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "716:text"
-                }
+                "rubric_pt": "54. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -30886,85 +28947,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "732:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_4": {
+            "title": {
+              "pt": "PREFÁCIO IV DOMINICAL DO TEMPO COMUM — A história da salvação"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "733:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "734:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "735:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "736:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "737:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "738:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO IV DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "739:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A história da salvação",
-                "__massEditorPairKeys": {
-                  "text_pt": "740:text"
-                }
-              },
-              {
-                "text_pt": "55. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "741:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "742:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "743:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "744:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "745:text"
-                }
+                "rubric_pt": "55. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31031,85 +29023,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "756:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_5": {
+            "title": {
+              "pt": "PREFÁCIO V DOMINICAL DO TEMPO COMUM — A criação"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "757:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "758:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "759:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "760:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "761:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "762:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO V DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "763:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A criação",
-                "__massEditorPairKeys": {
-                  "text_pt": "764:text"
-                }
-              },
-              {
-                "text_pt": "56. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "765:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "766:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "767:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "768:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "769:text"
-                }
+                "rubric_pt": "56. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31188,85 +29111,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "782:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_6": {
+            "title": {
+              "pt": "PREFÁCIO VI DOMINICAL DO TEMPO COMUM — O penhor da Páscoa eterna"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "783:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "784:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "785:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "786:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "787:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "788:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO VI DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "789:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O penhor da Páscoa eterna",
-                "__massEditorPairKeys": {
-                  "text_pt": "790:text"
-                }
-              },
-              {
-                "text_pt": "57. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "791:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "792:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "793:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "794:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "795:text"
-                }
+                "rubric_pt": "57. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31345,85 +29199,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "808:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_7": {
+            "title": {
+              "pt": "PREFÁCIO VII DOMINICAL DO TEMPO COMUM — A salvação pela obediência de Cristo"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "809:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "810:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "811:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "812:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "813:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "814:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO VII DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "815:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A salvação pela obediência de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "816:text"
-                }
-              },
-              {
-                "text_pt": "58. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "817:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "818:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "819:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "820:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "821:text"
-                }
+                "rubric_pt": "58. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31508,85 +29293,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "835:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_8": {
+            "title": {
+              "pt": "PREFÁCIO VIII DOMINICAL DO TEMPO COMUM — A Igreja reunida na comunhão da Trindade"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "836:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "837:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "838:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "839:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "840:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "841:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO VIII DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "842:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A Igreja reunida na comunhão da Trindade",
-                "__massEditorPairKeys": {
-                  "text_pt": "843:text"
-                }
-              },
-              {
-                "text_pt": "59. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "844:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "845:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "846:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "847:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "848:text"
-                }
+                "rubric_pt": "59. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31677,85 +29393,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "863:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_9": {
+            "title": {
+              "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "864:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "865:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "866:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "867:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "868:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "869:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "870:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A ação do Espírito na Igreja",
-                "__massEditorPairKeys": {
-                  "text_pt": "871:text"
-                }
-              },
-              {
-                "text_pt": "59 a. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "872:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "873:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "874:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "875:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "876:text"
-                }
+                "rubric_pt": "59 a. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -31840,85 +29487,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "890:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_10": {
+            "title": {
+              "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "891:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "892:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "893:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "894:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "895:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "896:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "897:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O dia do Senhor",
-                "__massEditorPairKeys": {
-                  "text_pt": "898:text"
-                }
-              },
-              {
-                "text_pt": "59 b. Este prefácio diz-se nos domingos do Tempo Comum.",
-                "__massEditorPairKeys": {
-                  "text_pt": "899:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "900:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "901:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "902:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "903:text"
-                }
+                "rubric_pt": "59 b. Este prefácio diz-se nos domingos do Tempo Comum."
               },
               {
                 "text_pt": "Senhor, Pai santo, fonte da verdade e da vida,",
@@ -32022,97 +29600,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "920:text"
                 }
+              }
+            ]
+          },
+          "eucharist_1": {
+            "title": {
+              "pt": "PREFÁCIO I DA SANTÍSSIMA EUCARISTIA — O sacrifício e o sacramento de Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "60. Este prefácio diz-se na Missa da Ceia do Senhor; pode dizer-se também"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "921:text"
-                }
+                "rubric_pt": "na solenidade do Santíssimo Corpo e Sangue de Cristo e nas Missas votivas da"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "922:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "923:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "924:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "925:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "926:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DA SANTÍSSIMA EUCARISTIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "927:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O sacrifício e o sacramento de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "928:text"
-                }
-              },
-              {
-                "text_pt": "60. Este prefácio diz-se na Missa da Ceia do Senhor; pode dizer-se também",
-                "__massEditorPairKeys": {
-                  "text_pt": "929:text"
-                }
-              },
-              {
-                "text_pt": "na solenidade do Santíssimo Corpo e Sangue de Cristo e nas Missas votivas da",
-                "__massEditorPairKeys": {
-                  "text_pt": "930:text"
-                }
-              },
-              {
-                "text_pt": "Santíssima Eucaristia.",
-                "__massEditorPairKeys": {
-                  "text_pt": "931:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "932:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "933:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "934:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "935:text"
-                }
+                "rubric_pt": "Santíssima Eucaristia."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -32215,91 +29718,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "952:text"
                 }
+              }
+            ]
+          },
+          "eucharist_2": {
+            "title": {
+              "pt": "PREFÁCIO II DA SANTÍSSIMA EUCARISTIA — Os frutos da Santíssima Eucaristia"
+            },
+            "content": [
+              {
+                "rubric_pt": "61. Este prefácio diz-se na solenidade do Santíssimo Corpo e Sangue de Cristo"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "953:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "954:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "955:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "956:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "957:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "958:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DA SANTÍSSIMA EUCARISTIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "959:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Os frutos da Santíssima Eucaristia",
-                "__massEditorPairKeys": {
-                  "text_pt": "960:text"
-                }
-              },
-              {
-                "text_pt": "61. Este prefácio diz-se na solenidade do Santíssimo Corpo e Sangue de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "961:text"
-                }
-              },
-              {
-                "text_pt": "e nas Missas votivas da Santíssima Eucaristia.",
-                "__massEditorPairKeys": {
-                  "text_pt": "962:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "963:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "964:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "965:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "966:text"
-                }
+                "rubric_pt": "e nas Missas votivas da Santíssima Eucaristia."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -32421,61 +29852,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "986:text"
                 }
+              }
+            ]
+          },
+          "eucharist_3": {
+            "title": {
+              "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna"
+            },
+            "content": [
+              {
+                "rubric_pt": "61 a. Este prefácio diz-se nas Missas rituais para o viático e pode dizer-se nas"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "987:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "988:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A Eucaristia, viático para a Páscoa eterna",
-                "__massEditorPairKeys": {
-                  "text_pt": "989:text"
-                }
-              },
-              {
-                "text_pt": "61 a. Este prefácio diz-se nas Missas rituais para o viático e pode dizer-se nas",
-                "__massEditorPairKeys": {
-                  "text_pt": "990:text"
-                }
-              },
-              {
-                "text_pt": "Missas votivas da Santíssima Eucaristia.",
-                "__massEditorPairKeys": {
-                  "text_pt": "991:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "992:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "993:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "994:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "995:text"
-                }
+                "rubric_pt": "Missas votivas da Santíssima Eucaristia."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus de misericórdia e de paz.",
@@ -32566,91 +29955,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1010:text"
                 }
+              }
+            ]
+          },
+          "mary_1": {
+            "title": {
+              "pt": "PREFÁCIO I DA VIRGEM SANTA MARIA — A Maternidade da Virgem santa Maria"
+            },
+            "content": [
+              {
+                "rubric_pt": "62. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1011:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1012:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1013:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1014:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1015:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1016:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1017:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A Maternidade da Virgem santa Maria",
-                "__massEditorPairKeys": {
-                  "text_pt": "1018:text"
-                }
-              },
-              {
-                "text_pt": "62. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no",
-                "__massEditorPairKeys": {
-                  "text_pt": "1019:text"
-                }
-              },
-              {
-                "text_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1020:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1021:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1022:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1023:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1024:text"
-                }
+                "rubric_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -32747,61 +30064,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1040:text"
                 }
+              }
+            ]
+          },
+          "mary_2": {
+            "title": {
+              "pt": "PREFÁCIO II DA VIRGEM SANTA MARIA — A Igreja louva a Deus com as palavras de Maria"
+            },
+            "content": [
+              {
+                "rubric_pt": "63. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no"
               },
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1041:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1042:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A Igreja louva a Deus com as palavras de Maria",
-                "__massEditorPairKeys": {
-                  "text_pt": "1043:text"
-                }
-              },
-              {
-                "text_pt": "63. Este prefácio diz-se nas Missas da Virgem santa Maria, especificando no",
-                "__massEditorPairKeys": {
-                  "text_pt": "1044:text"
-                }
-              },
-              {
-                "text_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1045:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1046:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1047:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1048:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1049:text"
-                }
+                "rubric_pt": "lugar próprio o nome da celebração do dia, como se indica nas respetivas Missas."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -32892,85 +30167,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1064:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_3": {
+            "title": {
+              "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1065:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1066:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1067:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1068:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1069:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1070:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1071:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Maria, sinal de consolação e de esperança",
-                "__massEditorPairKeys": {
-                  "text_pt": "1072:text"
-                }
-              },
-              {
-                "text_pt": "63 a. Este prefácio diz-se nas Missas da Virgem santa Maria.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1073:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1074:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1075:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1076:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1077:text"
-                }
+                "rubric_pt": "63 a. Este prefácio diz-se nas Missas da Virgem santa Maria."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -33067,85 +30273,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1093:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_4": {
+            "title": {
+              "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1094:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1095:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1096:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1097:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1098:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1099:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1100:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Maria, imagem da nova humanidade",
-                "__massEditorPairKeys": {
-                  "text_pt": "1101:text"
-                }
-              },
-              {
-                "text_pt": "63 b. Este prefácio diz-se nas Missas da Virgem santa Maria.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1102:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1103:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1104:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1105:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1106:text"
-                }
+                "rubric_pt": "63 b. Este prefácio diz-se nas Missas da Virgem santa Maria."
               },
               {
                 "text_pt": "Senhor, Pai santo, fonte de vida e de alegria,",
@@ -33242,86 +30379,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1122:text"
                 }
-              },
+              }
+            ]
+          },
+          "angels": {
+            "title": {
+              "pt": "PREFÁCIO DOS ANJOS — A glória de Deus resplandece nos anjos"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1123:text"
-                }
-              },
-              {
-                "rubric_pt": "OUTROS PREFÁCIOS DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1124:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "V. Maria, imagem e mãe da Igreja: Santa Maria. Mãe da Igreja,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1125:text"
-                }
-              },
-              {
-                "text_pt": "p. 677.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1126:text"
-                }
-              },
-              {
-                "text_pt": "VI. A glória da Assunção de Maria: 15 de agosto, p. 746.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1127:text"
-                }
-              },
-              {
-                "text_pt": "VII. O mistério de Maria e da Igreja: 8 de dezembro, p. 836.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1128:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO DOS ANJOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1129:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A glória de Deus resplandece nos anjos",
-                "__massEditorPairKeys": {
-                  "text_pt": "1130:text"
-                }
-              },
-              {
-                "text_pt": "63 c. Este prefácio diz-se nas Missas dos Anjos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1131:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1132:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1133:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1134:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1135:text"
-                }
+                "rubric_pt": "63 c. Este prefácio diz-se nas Missas dos Anjos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -33412,92 +30479,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1150:text"
                 }
-              },
+              }
+            ]
+          },
+          "saint_joseph": {
+            "title": {
+              "pt": "PREFÁCIO DE SÃO JOSÉ ESPOSO DA VIRGEM SANTA MARIA — A missão de são José"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1151:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1152:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1153:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1154:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1155:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1156:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO DE SÃO JOSÉ",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1157:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "rubric_pt": "ESPOSO DA VIRGEM SANTA MARIA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1158:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A missão de são José",
-                "__massEditorPairKeys": {
-                  "text_pt": "1159:text"
-                }
-              },
-              {
-                "text_pt": "63 c. Este prefácio diz-se nas Missas de são José.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1160:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1161:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1162:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1163:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1164:text"
-                }
+                "rubric_pt": "63 c. Este prefácio diz-se nas Missas de são José."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -33600,91 +30591,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1181:text"
                 }
+              }
+            ]
+          },
+          "apostles_1": {
+            "title": {
+              "pt": "PREFÁCIO I DOS APÓSTOLOS — Os apóstolos, pastores do povo de Deus"
+            },
+            "content": [
+              {
+                "rubric_pt": "64. Este prefácio diz-se nas Missas dos Apóstolos, especialmente de são Pedro"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1182:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1183:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1184:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1185:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1186:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1187:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DOS APÓSTOLOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1188:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Os apóstolos, pastores do povo de Deus",
-                "__massEditorPairKeys": {
-                  "text_pt": "1189:text"
-                }
-              },
-              {
-                "text_pt": "64. Este prefácio diz-se nas Missas dos Apóstolos, especialmente de são Pedro",
-                "__massEditorPairKeys": {
-                  "text_pt": "1190:text"
-                }
-              },
-              {
-                "text_pt": "e são Paulo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1191:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1192:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1193:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1194:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1195:text"
-                }
+                "rubric_pt": "e são Paulo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -33775,85 +30694,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1210:text"
                 }
-              },
+              }
+            ]
+          },
+          "apostles_2": {
+            "title": {
+              "pt": "PREFÁCIO II DOS APÓSTOLOS — O fundamento apostólico e o testemunho"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1211:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1212:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1213:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1214:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1215:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1216:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DOS APÓSTOLOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1217:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O fundamento apostólico e o testemunho",
-                "__massEditorPairKeys": {
-                  "text_pt": "1218:text"
-                }
-              },
-              {
-                "text_pt": "65. Este prefácio diz-se nas Missas dos Apóstolos e dos Evangelistas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1219:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1220:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1221:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1222:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1223:text"
-                }
+                "rubric_pt": "65. Este prefácio diz-se nas Missas dos Apóstolos e dos Evangelistas."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -33938,97 +30788,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1237:text"
                 }
+              }
+            ]
+          },
+          "saints_1": {
+            "title": {
+              "pt": "PREFÁCIO I DOS SANTOS — A glória dos santos"
+            },
+            "content": [
+              {
+                "rubric_pt": "66. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1238:text"
-                }
+                "rubric_pt": "e titulares das igrejas e nas solenidades e festas dos santos que não têm prefácio"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1239:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1240:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1241:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1242:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1243:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DOS SANTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1244:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A glória dos santos",
-                "__massEditorPairKeys": {
-                  "text_pt": "1245:text"
-                }
-              },
-              {
-                "text_pt": "66. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros",
-                "__massEditorPairKeys": {
-                  "text_pt": "1246:text"
-                }
-              },
-              {
-                "text_pt": "e titulares das igrejas e nas solenidades e festas dos santos que não têm prefácio",
-                "__massEditorPairKeys": {
-                  "text_pt": "1247:text"
-                }
-              },
-              {
-                "text_pt": "próprio. Pode dizer-se também nas memórias dos santos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1248:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1249:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1250:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1251:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1252:text"
-                }
+                "rubric_pt": "próprio. Pode dizer-se também nas memórias dos santos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34131,97 +30906,22 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1269:text"
                 }
+              }
+            ]
+          },
+          "saints_2": {
+            "title": {
+              "pt": "PREFÁCIO II DOS SANTOS — A ação dos santos"
+            },
+            "content": [
+              {
+                "rubric_pt": "67. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros e"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1270:text"
-                }
+                "rubric_pt": "titulares das igrejas, bem como nas solenidades e festas dos santos que não têm"
               },
               {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1271:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1272:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1273:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1274:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1275:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DOS SANTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1276:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A ação dos santos",
-                "__massEditorPairKeys": {
-                  "text_pt": "1277:text"
-                }
-              },
-              {
-                "text_pt": "67. Este prefácio diz-se nas Missas de Todos os Santos, dos santos padroeiros e",
-                "__massEditorPairKeys": {
-                  "text_pt": "1278:text"
-                }
-              },
-              {
-                "text_pt": "titulares das igrejas, bem como nas solenidades e festas dos santos que não têm",
-                "__massEditorPairKeys": {
-                  "text_pt": "1279:text"
-                }
-              },
-              {
-                "text_pt": "prefácio próprio. Pode dizer-se também nas memórias dos santos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1280:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1281:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1282:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1283:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1284:text"
-                }
+                "rubric_pt": "prefácio próprio. Pode dizer-se também nas memórias dos santos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34300,91 +31000,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1297:text"
                 }
+              }
+            ]
+          },
+          "martyrs": {
+            "title": {
+              "pt": "PREFÁCIO I DOS SANTOS MÁRTIRES — O sinal e o exemplo do martírio"
+            },
+            "content": [
+              {
+                "rubric_pt": "68. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1298:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1299:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1300:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1301:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1302:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1303:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DOS SANTOS MÁRTIRES",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1304:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O sinal e o exemplo do martírio",
-                "__massEditorPairKeys": {
-                  "text_pt": "1305:text"
-                }
-              },
-              {
-                "text_pt": "68. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se",
-                "__massEditorPairKeys": {
-                  "text_pt": "1306:text"
-                }
-              },
-              {
-                "text_pt": "também nas suas memórias.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1307:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1308:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1309:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1310:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1311:text"
-                }
+                "rubric_pt": "também nas suas memórias."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34475,91 +31103,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1326:text"
                 }
+              }
+            ]
+          },
+          "martyrs_2": {
+            "title": {
+              "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires"
+            },
+            "content": [
+              {
+                "rubric_pt": "69. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1327:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1328:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1329:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1330:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1331:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1332:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DOS SANTOS MÁRTIRES",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1333:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "As maravilhas de Deus na vitória dos mártires",
-                "__massEditorPairKeys": {
-                  "text_pt": "1334:text"
-                }
-              },
-              {
-                "text_pt": "69. Este prefácio diz-se nas solenidades e festas dos santos mártires. Pode dizer-se",
-                "__massEditorPairKeys": {
-                  "text_pt": "1335:text"
-                }
-              },
-              {
-                "text_pt": "também nas suas memórias.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1336:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1337:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1338:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1339:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1340:text"
-                }
+                "rubric_pt": "também nas suas memórias."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34650,91 +31206,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1355:text"
                 }
+              }
+            ]
+          },
+          "pastors": {
+            "title": {
+              "pt": "PREFÁCIO DOS SANTOS PASTORES DA IGREJA — A presença dos santos pastores na Igreja"
+            },
+            "content": [
+              {
+                "rubric_pt": "70. Este prefácio diz-se nas solenidades e festas dos santos pastores da Igreja."
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1356:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1357:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1358:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1359:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1360:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1361:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO DOS SANTOS PASTORES DA IGREJA",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1362:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A presença dos santos pastores na Igreja",
-                "__massEditorPairKeys": {
-                  "text_pt": "1363:text"
-                }
-              },
-              {
-                "text_pt": "70. Este prefácio diz-se nas solenidades e festas dos santos pastores da Igreja.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1364:text"
-                }
-              },
-              {
-                "text_pt": "Pode dizer-se também nas suas memórias.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1365:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1366:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1367:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1368:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1369:text"
-                }
+                "rubric_pt": "Pode dizer-se também nas suas memórias."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34807,98 +31291,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1381:text"
                 }
+              }
+            ]
+          },
+          "virgins_and_religious": {
+            "title": {
+              "pt": "PREFÁCIO DAS SANTAS VIRGENS E DOS SANTOS RELIGIOSOS — O sinal da vida consagrada a Deus"
+            },
+            "content": [
+              {
+                "rubric_pt": "71. Este prefácio diz-se nas solenidades e festas das santas virgens e dos santos"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1382:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1383:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1384:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1385:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1386:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1387:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO DAS SANTAS VIRGENS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1388:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "rubric_pt": "E DOS SANTOS RELIGIOSOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1389:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O sinal da vida consagrada a Deus",
-                "__massEditorPairKeys": {
-                  "text_pt": "1390:text"
-                }
-              },
-              {
-                "text_pt": "71. Este prefácio diz-se nas solenidades e festas das santas virgens e dos santos",
-                "__massEditorPairKeys": {
-                  "text_pt": "1391:text"
-                }
-              },
-              {
-                "text_pt": "religiosos. Pode dizer-se também nas suas memórias.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1392:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1393:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1394:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1395:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1396:text"
-                }
+                "rubric_pt": "religiosos. Pode dizer-se também nas suas memórias."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -34977,91 +31382,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1409:text"
                 }
+              }
+            ]
+          },
+          "common_1": {
+            "title": {
+              "pt": "PREFÁCIO COMUM I — A instauração do universo em Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "72. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1410:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1411:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1412:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1413:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1414:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1415:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM I",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1416:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A instauração do universo em Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1417:text"
-                }
-              },
-              {
-                "text_pt": "72. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1418:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1419:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1420:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1421:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1422:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1423:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35170,91 +31503,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1441:text"
                 }
+              }
+            ]
+          },
+          "common_2": {
+            "title": {
+              "pt": "PREFÁCIO COMUM II — A salvação por Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "73. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1442:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1443:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1444:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1445:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1446:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1447:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM II",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1448:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A salvação por Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1449:text"
-                }
-              },
-              {
-                "text_pt": "73. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1450:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1451:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1452:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1453:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1454:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1455:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35345,91 +31606,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1470:text"
                 }
+              }
+            ]
+          },
+          "common_3": {
+            "title": {
+              "pt": "PREFÁCIO COMUM III — Louvor a Deus pela criação e renovação do homem"
+            },
+            "content": [
+              {
+                "rubric_pt": "74. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1471:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1472:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1473:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1474:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1475:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1476:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM III",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1477:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Louvor a Deus pela criação e renovação do homem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1478:text"
-                }
-              },
-              {
-                "text_pt": "74. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1479:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1480:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1481:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1482:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1483:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1484:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35496,91 +31685,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1495:text"
                 }
+              }
+            ]
+          },
+          "common_4": {
+            "title": {
+              "pt": "PREFÁCIO COMUM IV — O louvor é um dom de Deus"
+            },
+            "content": [
+              {
+                "rubric_pt": "75. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1496:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1497:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1498:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1499:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1500:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1501:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM IV",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1502:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O louvor é um dom de Deus",
-                "__massEditorPairKeys": {
-                  "text_pt": "1503:text"
-                }
-              },
-              {
-                "text_pt": "75. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1504:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1505:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1506:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1507:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1508:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1509:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35653,91 +31770,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1521:text"
                 }
+              }
+            ]
+          },
+          "common_5": {
+            "title": {
+              "pt": "PREFÁCIO COMUM V — Proclamação do mistério de Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "76. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1522:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1523:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1524:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1525:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1526:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1527:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM V",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1528:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Proclamação do mistério de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1529:text"
-                }
-              },
-              {
-                "text_pt": "76. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1530:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1531:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1532:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1533:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1534:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1535:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35816,91 +31861,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1548:text"
                 }
+              }
+            ]
+          },
+          "common_6": {
+            "title": {
+              "pt": "PREFÁCIO COMUM VI — O mistério da salvação em Cristo"
+            },
+            "content": [
+              {
+                "rubric_pt": "77. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1549:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1550:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1551:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1552:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1553:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1554:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM VI",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1555:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "O mistério da salvação em Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1556:text"
-                }
-              },
-              {
-                "text_pt": "77. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1557:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1558:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1559:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1560:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1561:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1562:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -35997,91 +31970,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1578:text"
                 }
+              }
+            ]
+          },
+          "common_7": {
+            "title": {
+              "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós"
+            },
+            "content": [
+              {
+                "rubric_pt": "77 a. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1579:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1580:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1581:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1582:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1583:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1584:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM VII",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1585:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, hóspede e peregrino no meio de nós",
-                "__massEditorPairKeys": {
-                  "text_pt": "1586:text"
-                }
-              },
-              {
-                "text_pt": "77 a. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1587:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1588:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1589:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1590:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1591:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1592:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus da aliança e da paz,",
@@ -36190,91 +32091,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1610:text"
                 }
+              }
+            ]
+          },
+          "common_8": {
+            "title": {
+              "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano"
+            },
+            "content": [
+              {
+                "rubric_pt": "77 b. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1611:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1612:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1613:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1614:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1615:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1616:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM VIII",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1617:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, o bom samaritano",
-                "__massEditorPairKeys": {
-                  "text_pt": "1618:text"
-                }
-              },
-              {
-                "text_pt": "77 b. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1619:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1620:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1621:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1622:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1623:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1624:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -36389,91 +32218,19 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1643:text"
                 }
+              }
+            ]
+          },
+          "common_9": {
+            "title": {
+              "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo"
+            },
+            "content": [
+              {
+                "rubric_pt": "77 c. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem"
               },
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1644:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1645:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1646:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1647:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1648:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1649:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO COMUM IX",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1650:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A glória de Deus é o homem vivo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1651:text"
-                }
-              },
-              {
-                "text_pt": "77 c. Este prefácio diz-se nas Missas que não têm prefácio próprio, nem exigem",
-                "__massEditorPairKeys": {
-                  "text_pt": "1652:text"
-                }
-              },
-              {
-                "text_pt": "o prefácio do Tempo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1653:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1654:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1655:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1656:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1657:text"
-                }
+                "rubric_pt": "o prefácio do Tempo."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -36582,85 +32339,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1675:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_1": {
+            "title": {
+              "pt": "PREFÁCIO I DOS DEFUNTOS — A esperança da ressurreição em Cristo"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1676:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1677:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1678:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1679:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1680:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1681:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO I DOS DEFUNTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1682:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A esperança da ressurreição em Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1683:text"
-                }
-              },
-              {
-                "text_pt": "78. Este prefácio diz-se nas Missas de defuntos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1684:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1685:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1686:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1687:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1688:text"
-                }
+                "rubric_pt": "78. Este prefácio diz-se nas Missas de defuntos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -36757,85 +32445,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1704:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_2": {
+            "title": {
+              "pt": "PREFÁCIO II DOS DEFUNTOS — Cristo morreu pela nossa vida"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1705:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1706:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1707:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1708:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1709:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1710:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO II DOS DEFUNTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1711:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo morreu pela nossa vida",
-                "__massEditorPairKeys": {
-                  "text_pt": "1712:text"
-                }
-              },
-              {
-                "text_pt": "79. Este prefácio diz-se nas Missas de defuntos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1713:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1714:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1715:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1716:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1717:text"
-                }
+                "rubric_pt": "79. Este prefácio diz-se nas Missas de defuntos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -36902,85 +32521,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1728:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_3": {
+            "title": {
+              "pt": "PREFÁCIO III DOS DEFUNTOS — Cristo, salvação e vida"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1729:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1730:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1731:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1732:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1733:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1734:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO III DOS DEFUNTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1735:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Cristo, salvação e vida",
-                "__massEditorPairKeys": {
-                  "text_pt": "1736:text"
-                }
-              },
-              {
-                "text_pt": "80. Este prefácio diz-se nas Missas de defuntos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1737:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1738:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1739:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1740:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1741:text"
-                }
+                "rubric_pt": "80. Este prefácio diz-se nas Missas de defuntos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -37053,85 +32603,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1753:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_4": {
+            "title": {
+              "pt": "PREFÁCIO IV DOS DEFUNTOS — Da vida terrena à glória celeste"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1754:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1755:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1756:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1757:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1758:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1759:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO IV DOS DEFUNTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1760:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "Da vida terrena à glória celeste",
-                "__massEditorPairKeys": {
-                  "text_pt": "1761:text"
-                }
-              },
-              {
-                "text_pt": "81. Este prefácio diz-se nas Missas de defuntos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1762:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1763:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1764:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1765:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1766:text"
-                }
+                "rubric_pt": "81. Este prefácio diz-se nas Missas de defuntos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -37210,85 +32691,16 @@
                 "__massEditorPairKeys": {
                   "text_pt": "1779:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_5": {
+            "title": {
+              "pt": "PREFÁCIO V DOS DEFUNTOS — A nossa ressurreição pela vitória de Cristo"
+            },
+            "content": [
               {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1780:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1781:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1782:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1783:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1784:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1785:text"
-                }
-              },
-              {
-                "rubric_pt": "PREFÁCIO V DOS DEFUNTOS",
-                "__massEditorPairKeys": {
-                  "rubric_pt": "1786:rubric"
-                },
-                "rubricInset_pt": true
-              },
-              {
-                "text_pt": "A nossa ressurreição pela vitória de Cristo",
-                "__massEditorPairKeys": {
-                  "text_pt": "1787:text"
-                }
-              },
-              {
-                "text_pt": "82. Este prefácio diz-se nas Missas de defuntos.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1788:text"
-                }
-              },
-              {
-                "text_pt": "V. O Senhor esteja convosco. R. Ele está no meio de nós.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1789:text"
-                }
-              },
-              {
-                "text_pt": "V. Corações ao alto. R. O nosso coração está em Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1790:text"
-                }
-              },
-              {
-                "text_pt": "V. Dêmos graças ao Senhor nosso Deus.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1791:text"
-                }
-              },
-              {
-                "text_pt": "R. É nosso dever, é nossa salvação.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1792:text"
-                }
+                "rubric_pt": "82. Este prefácio diz-se nas Missas de defuntos."
               },
               {
                 "text_pt": "Senhor, Pai santo, Deus eterno e omnipotente,",
@@ -37348,42 +32760,6 @@
                 "text_pt": "dizendo (cantando) numa só voz:",
                 "__massEditorPairKeys": {
                   "text_pt": "1802:text"
-                }
-              },
-              {
-                "text_pt": "Santo, Santo, Santo,",
-                "__massEditorPairKeys": {
-                  "text_pt": "1803:text"
-                }
-              },
-              {
-                "text_pt": "Senhor Deus do universo.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1804:text"
-                }
-              },
-              {
-                "text_pt": "O céu e a terra proclamam a vossa glória.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1805:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1806:text"
-                }
-              },
-              {
-                "text_pt": "Bendito O que vem em nome do Senhor.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1807:text"
-                }
-              },
-              {
-                "text_pt": "Hossana nas alturas.",
-                "__massEditorPairKeys": {
-                  "text_pt": "1808:text"
                 }
               }
             ]

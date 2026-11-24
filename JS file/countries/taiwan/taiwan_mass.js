@@ -6077,25 +6077,313 @@
           }
         ],
         "songs": {
-          "pastors": {
+          "advent_1": {
+            "title": {
+              "zh": "將臨期頌謝詞（一）（基督的兩次來臨）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1nLa6uleH7HwppYNbFYpKXuj2KgYq6ZVl/view?usp=drive_link",
             "content": [
               {
-                "text_zh": "主、聖父、全能永生的天主！藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。",
-                "__massEditorPairKeys": {
-                  "text_zh": "editor-1793757661931-1:text"
-                }
+                "text_zh": "主、聖父、全能永生的天主！"
               },
               {
-                "text_zh": "祢恩賜祢的教會今天歡度聖 […] 的紀念日。祢藉聖人善行的榜樣鼓勵我們，祢藉他的宣講教誨我們，祢因他令祢欣喜的祈求時常保祐我們。",
-                "__massEditorPairKeys": {
-                  "text_zh": "editor-1793757664813-2:text"
-                }
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
               },
               {
-                "text_zh": "因此，我們隨同天使和諸位聖人，同聲歌頌祢、讚美祢，不停地歡呼：",
-                "__massEditorPairKeys": {
-                  "text_zh": "editor-1793757700777-3:text"
-                }
+                "text_zh": "基督第一次來臨時，屈尊就卑，降生成人，完成了祢預定的計劃，並為我們開闢了永生的途徑；祂在第二次光榮地來臨時，將使我們獲得我們日夜期待的恩許。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "advent_2": {
+            "title": {
+              "zh": "將臨期頌謝詞（二）（對基督的雙重期待）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1-BIpTqmOmn9_HZr-1mFwElOgph8rqd88/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "先知們所預言的基督，童貞聖母以無比的慈愛撫育了祂，若翰報告了祂的來臨，並指出祂已在人間。"
+              },
+              {
+                "text_zh": "基督使我們準備慶祝祂誕生的奧蹟：正是要我們清醒祈禱、歡躍讚頌，以期待祂的再度來臨。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "all_saints": {
+            "title": {
+              "zh": "諸聖節頌謝詞（天上耶路撒冷是我們的家鄉）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1vNEcY_7TVp87msXD4wA4P1BCQJ0HejXp/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "今天祢允准我們參與祢的聖城、天上的耶路撒冷、我們慈母的慶典；我們那些已獲得榮耀的兄弟姐妹們在那裡永遠讚頌祢。"
+              },
+              {
+                "text_zh": "我們在此塵世，渴望藉着他們的榜樣和代禱，克服我們的脆弱，靠着信德欣然奔赴天鄉。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使一起讚美祢，同聲歡呼："
+              }
+            ]
+          },
+          "angels": {
+            "title": {
+              "zh": "天使頌謝詞（藉天使讚美天主）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1rVgEYV7bbxWAwzukMkVyqCgNbr9heZwW/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，並在祢的諸位天使身上，不停地讚頌祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們讚頌他們的忠實，也就是光榮祢、讚頌祢──他們的創造者。"
+              },
+              {
+                "text_zh": "他們享有尊高的榮耀，顯示出祢是何等偉大，超越萬有。"
+              },
+              {
+                "text_zh": "天上的眾天使、藉着基督頌揚祢，我們同他們一起歡欣朝拜，同聲讚頌，不停地歡呼："
+              }
+            ]
+          },
+          "annunciation": {
+            "title": {
+              "zh": "預報救主降生頌謝詞（瑪利亞懷孕永生的聖言）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1FKCDXyxqZTkO8TGd8ahRql18bArEaSWY/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，藉着我們的主基督，時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "天使傳報：基督將要降生救人，居住人間。"
+              },
+              {
+                "text_zh": "童貞女以信心接受了這項喜訊，她藉聖神德能的庇蔭，以自己的淨血孕育了祢的聖子，履行了上主對以色列的許諾，實現了萬民的期待。"
+              },
+              {
+                "text_zh": "因此，天上的天使藉着基督朝拜祢、讚頌祢，在祢面前永遠歡欣不已。"
+              },
+              {
+                "text_zh": "求祢恩許我們也同他們聯合在一起，同聲歡呼："
+              }
+            ]
+          },
+          "apostles_1": {
+            "title": {
+              "zh": "宗徒頌謝詞（一）（宗徒為天主子民的牧者）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1ZViZh3VO_GvYkDHMYYB7G5QBjYMvBZs8/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢是永恆的善牧，決不離棄祢的羊群，祢藉着宗徒們不斷地守護我們，祢立了他們為祢羊群的牧者，以祢聖子的名義繼續領導我們。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使，以及天上諸聖、歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "apostles_2": {
+            "title": {
+              "zh": "宗徒頌謝詞（二）（教會以宗徒為基礎和見證）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/17YJOd4X7RrbZ5lvgmlMusSWUK2BytgoJ/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢曾將祢的教會建基於宗徒身上，使教會在地上成為祢聖潔的永恆標誌，並把天國的福音宣報給普世萬民。"
+              },
+              {
+                "text_zh": "因此，從現在到永遠，我們隨同所有天使，熱誠地向祢謳歌，不停地歡呼："
+              }
+            ]
+          },
+          "ascension_1": {
+            "title": {
+              "zh": "基督升天頌謝詞（一）（升天的奧蹟）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1a0uc0IM_lMSIpqW6fREY89JgbhSjxslC/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為主基督──光榮的君王，戰勝了罪惡和死亡，今天在天使的讚頌聲中，上升天廷，成為天人之間的中保，世人的審判者，萬物的最高主宰。"
+              },
+              {
+                "text_zh": "基督升天並非遠離世人，而是要我們追隨祂的芳踪，到達同一的居處；我們原是祂的肢體，祂是我們的首領。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，也同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "ascension_2": {
+            "title": {
+              "zh": "基督升天頌謝詞（二）（升天的奧蹟）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1I3FtovpkqciZL_A-EadIDgSyX41xmBuc/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，藉着我們的主基督，時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為基督復活以後，曾顯現給祂的全體門徒，在他們面前上升天廷，好使我們分享祂的天主性。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使和所有聖人，也同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "assumption": {
+            "title": {
+              "zh": "聖母蒙召升天節頌謝詞（聖母升天的榮耀）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1KzK6azc5VKCzTkXjLJ0qwpWyuzz5mLKy/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為童貞聖母今日蒙召升天，是祢教會要達到圓滿境界的開始和典型，也是祢子民在人生旅途中，確切希望和安慰的憑證；祢不願意她在墳墓中腐朽，因為祢的聖子──一切生命的創造者，曾由她取得肉軀而誕生。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使的樂隊，歡天喜地，高聲讚美祢："
+              }
+            ]
+          },
+          "baptism_of_the_lord": {
+            "title": {
+              "zh": "主受洗節頌謝詞"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1VbHa5sOFWNRrIFcV1ns2tF2Dji5J1W5x/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢以神奇的奧蹟在約旦河揭示了新的洗禮，使我們藉着天上發出的聲音，相信祢的聖言已居住在人間；祢的聖神藉鴿子的形狀降臨，使我們知道祂為祢的聖子基督傅了喜樂之油，並派遣祂向貧窮人宣講福音。"
+              },
+              {
+                "text_zh": "因此，我們隨同天上諸聖，不停地在地上讚頌祢，向祢齊聲歡呼："
+              }
+            ]
+          },
+          "chrism_mass": {
+            "title": {
+              "zh": "聖油彌撒頌謝詞（論基督之司祭職及司鐸的職務）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1L__kNsK8eUV1X9vbaCR-oGXShZ4FNKJG/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢藉聖神的傅油立祢的唯一子、為新而永久之盟約的大司祭；並以奧妙的措施、使祂的唯一司祭職，在教會內歷久不息。"
+              },
+              {
+                "text_zh": "因為基督把祂王者的司祭職，賜給了祂救贖的全體子民；又以兄弟般的真情選拔了某些人，透過覆手禮而分擔祂的司祭聖職。"
+              },
+              {
+                "text_zh": "他們應以基督的名義，重行祂救贖人類的祭獻，給祢的子女們擺設逾越聖筵。"
+              },
+              {
+                "text_zh": "他們應以愛心領導祢的子民，藉聖道供給他們食糧，藉聖事帶給他們力量。"
+              },
+              {
+                "text_zh": "他們應努力效法基督，為侍奉祢、並為拯救弟兄而獻出生命，藉信德與愛德勇敢為祢作證。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使，和聖人聖女讚美祢，不停地歡呼："
+              }
+            ]
+          },
+          "christ_the_king": {
+            "title": {
+              "zh": "基督普世君王節頌謝詞（基督是司祭及君王）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1ttC4FDidDFHlqLIrqlUnEBv3dQwWi08S/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢給祢的獨生子、我主基督傅了喜樂之油，立祂為永恆的司祭，普世的聖王。"
+              },
+              {
+                "text_zh": "祂在十字架上自作犧牲，成為無玷與修好的祭品，以完成救贖人類的奧蹟。"
+              },
+              {
+                "text_zh": "祂使一切受造物歸於祂的權下之後，就將永久而普遍的神國，真理與生命的神國、聖德與恩寵的神國、正義仁愛與和平的神國，呈獻於祢至尊座前。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使、以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "common_1": {
+            "title": {
+              "zh": "通用頌謝詞（一）（藉基督重整萬有）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1w-8m-he5i6UNQjk1x0qGgPbUc2Wy3Ntu/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢願意萬有歸於基督，使我們分享祂的完美。"
+              },
+              {
+                "text_zh": "基督尊為天主，却謙抑自下，以十字架上所流的聖血，給世界帶來了和平；因而被高擧在萬有之上，成為信徒永生的根由。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
               }
             ]
           },
@@ -6118,6 +6406,1588 @@
                 "__massEditorPairKeys": {
                   "text_zh": "editor-1793757922418-6:text"
                 }
+              }
+            ],
+            "title": {
+              "zh": "通用頌謝詞（二）（藉基督獲救恩）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1Xd9UMHxVLkMqAmAVT1mpcnt4mRrtSGyV/view"
+          },
+          "common_3": {
+            "title": {
+              "zh": "通用頌謝詞（三）（天主是人的創造者與再造者）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1MzdUJh4inzt5KX44CHGjDcJ0qRob_8nv/view",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！我們時時處處感謝祢，實在是理所當然的，並能使人得救。",
+                "sp_zh": "主祭",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1794991816386-29:text"
+                }
+              },
+              {
+                "text_zh": "因為祢是人類的創造者，祢藉着祢鍾愛之子，也是人類極寬仁的再造者。祢創造的萬物應當侍奉祢，祢救贖的子民共同讚美祢，祢的諸聖也全心歌頌祢。",
+                "sp_zh": "",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1794991829643-30:text"
+                }
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使稱揚祢，不停地歡呼：",
+                "sp_zh": "",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1794991836577-31:text"
+                }
+              }
+            ]
+          },
+          "common_4": {
+            "title": {
+              "zh": "通用頌謝詞（四）（讚頌天主是天主的恩賜）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1-3Z_6Q5ebfvgUb_5t4XqumBcuGwb4nuF/view",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！我們時時處處感謝祢，實在是理所當然的，並能使人得救。",
+                "sp_zh": "",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1795055731843-4:text"
+                }
+              },
+              {
+                "text_zh": "祢原不需要我們的讚頌，我們對祢知恩報愛的心願，也出自祢的啟發，因為我們的讚頌並不增加祢的內在榮耀，却藉着我們的主基督有益於我們自身的得救。",
+                "sp_zh": "",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1795055741852-5:text"
+                }
+              },
+              {
+                "text_zh": "因此，我們聯合天上所有天使一起讚頌祢，不停地歡呼：",
+                "sp_zh": "",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1795055748300-6:text"
+                }
+              }
+            ]
+          },
+          "common_5": {
+            "title": {
+              "zh": "通用頌謝詞（五）（我們宣報基督的奧蹟）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1fWPyNucOjD5hcVKH5kxdhvu_5jt9fkLm/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們以熱誠的愛德歌頌基督的死亡，以活潑的信德頌揚祂的復活，以堅強的望德期待祂光榮的來臨。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使和聖人，同聲讚美祢，不停地歡呼："
+              }
+            ]
+          },
+          "common_6": {
+            "title": {
+              "zh": "通用頌謝詞（六）（基督帶給我們救恩）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1YEjbWuxnG35UWzw_4qPvtx7ejYEdK75U/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "聖父！"
+              },
+              {
+                "text_zh": "藉着我們的主耶穌基督，我們時時處處感謝祢：實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督是祢的聖言，祢藉着祂創造了萬有，並派遣祂救贖了我們，祂因聖神降孕，由童貞女誕生。"
+              },
+              {
+                "text_zh": "祂奉行祢的旨意，為祢爭取神聖的子民，祂受難時伸開雙手，以戰勝死亡，宣示復活。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和諸位聖人歌頌祢的光榮，同聲歡呼："
+              }
+            ]
+          },
+          "dead_1": {
+            "title": {
+              "zh": "追思亡者頌謝詞（一）（復活的希望）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1kXV73eaLSdlyHk9Kk5s4BasiXpI0sfkN/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們在基督身上有了光榮復活的希望。"
+              },
+              {
+                "text_zh": "我們雖為死亡的定律而悲傷，却因永生的許諾而獲得安慰。"
+              },
+              {
+                "text_zh": "主，為信仰祢的人，生命只是改變，並非毀滅；我們結束了塵世的旅程，便獲登永遠的天鄉。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "dead_2": {
+            "title": {
+              "zh": "追思亡者頌謝詞（二）（基督死了，為使我們生活）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1BkgY-ZRgtCgk0qhnY0xKS7qnOFg-T8w4/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為基督一人接受了死刑，是要我們眾人免除永死；祂甘願獨自受死，是要我們眾人永遠為祢而生活。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使讚美祢，歡欣歌頌祢，同聲歡呼："
+              }
+            ]
+          },
+          "dead_3": {
+            "title": {
+              "zh": "追思亡者頌謝詞（三）（基督是生命與復活）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1PBtawz-3O3i0IUuAosEv9hWDa-uEYKwy/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督是世界的救援、人類的生命、亡者的復活。"
+              },
+              {
+                "text_zh": "所有天使藉着基督朝拜祢，在祢面前永遠歡欣歌唱。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們同聲歡呼："
+              }
+            ]
+          },
+          "dedication_of_a_church": {
+            "title": {
+              "zh": "聖堂奉獻頌謝詞（教會為基督的淨配和聖神的宮殿）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1fzHMtEK7tBvw4BnuBj60p7TW3gdsU0Ep/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢屈尊就卑，居住在祈禱之所，常以豐富的恩寵助祐我們；使我們成為祢聖神的宮殿，使我們的生活發出聖潔的光輝。"
+              },
+              {
+                "text_zh": "祢又藉着有形的建築物，象徵祢聖子的淨配──聖教會，並以永恆的助祐眷顧她、聖化她，使她成為無數子女的母親而感到欣慰，日後共享天上的榮福。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使和聖人一齊讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "easter_1": {
+            "title": {
+              "zh": "復活期頌謝詞（一）（真逾越節羔羊）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1bwj3wqb9mmLUqZlvLCmgO5qbvU4uF84e/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處歌頌祢，實在是理所當然的：並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，我們更當隆重地讚美祢。"
+              },
+              {
+                "text_zh": "因為基督真是消除世罪的羔羊，祂以聖死摧毀了我們的死亡，並以復活恢復了我們的生命。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_1_day": {
+            "title": {
+              "zh": "復活期頌謝詞（一）（真逾越節羔羊）（今日）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/14bTyxNwhK1NUhGYOsUx4aBoDPvzEFnS8/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處歌頌祢，實在是理所當然的：並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，今天我們更當隆重地讚美祢。"
+              },
+              {
+                "text_zh": "因為基督真是消除世罪的羔羊，祂以聖死摧毀了我們的死亡，並以復活恢復了我們的生命。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_1_night": {
+            "title": {
+              "zh": "復活期頌謝詞（一）（真逾越節羔羊）（今夜）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1fNAywX6ioHMhfJRHn1yztVyqpW80riiD/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處歌頌祢，實在是理所當然的：並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，今夜我們更當隆重地讚美祢。"
+              },
+              {
+                "text_zh": "因為基督真是消除世罪的羔羊，祂以聖死摧毀了我們的死亡，並以復活恢復了我們的生命。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_2": {
+            "title": {
+              "zh": "復活期頌謝詞（二）（在基督內的新生命）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1yqFlYYq7eMoh0qzGCVXYZaTb7LOz1mcU/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處歌頌祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，現在我們更當隆重地讚揚祢。"
+              },
+              {
+                "text_zh": "祢藉基督使我們復生，成為光明之子，分享永生，又為信眾開啟了天國之門。"
+              },
+              {
+                "text_zh": "因為祂的聖死免除了我們的死亡；祂的復活，使我們重獲生命。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰，同時天上的天使，和所有聖人，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_3": {
+            "title": {
+              "zh": "復活期頌謝詞（三）（基督永遠生活並常為我們代禱）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1b_7HWLT-xAnpOgXB-cf9nq4u0xLH511L/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處歌頌祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，現在我們更當隆重地讚揚祢。"
+              },
+              {
+                "text_zh": "基督為人捨生，永不再死亡；被人處死，却永遠生活；祂在祢面前，永遠作我們的中保，為我們罪人不斷地獻祭祈禱。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_4": {
+            "title": {
+              "zh": "復活期頌謝詞（四）（萬物藉逾越奧蹟除舊更新）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1khqKlrCjQTWrffb8uCpXpRvHFmrJ43_E/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，現在我們更當隆重地讚揚祢。"
+              },
+              {
+                "text_zh": "因為基督的復活使萬物除舊更新，使墮落的人類恢復了完整的生命。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，也同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "easter_5": {
+            "title": {
+              "zh": "復活期頌謝詞（五）（基督是司祭又是犧牲）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1ylXMCN2ib7vLs926ieXgaqgkZJ-uSJaI/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "上主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們的逾越節羔羊──基督已完成了犧牲，現在我們更當隆重地讚揚祢。"
+              },
+              {
+                "text_zh": "基督藉着祂在十字架上的自我犧牲，完成了舊約的祭祀。"
+              },
+              {
+                "text_zh": "祂為了拯救我們而把自身奉獻給祢，祂自己充當了司祭、祭臺、和羔羊。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，也同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "epiphany": {
+            "title": {
+              "zh": "主顯節頌謝詞（基督是萬民之光）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1fMz9AAxGSkxCacq221r9FWCskb8F601i/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢今天在基督內揭示了我們得救的奧蹟，使祂作萬民之光。"
+              },
+              {
+                "text_zh": "當祂藉着我們有死的人性出現時，祢又用祂不朽的新光，賜給我們嶄新的生命。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "eucharist_1": {
+            "title": {
+              "zh": "聖體頌謝詞（一）（基督的祭獻與聖事）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/159dEZuoo-KAnzoUL4pSjbAmcdomeFkPs/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督是真實永恆的司祭，制定了長存的祭禮；首先將自己奉獻於祢，作為救世的祭品，又命令我們為紀念祂而擧行同一祭獻。"
+              },
+              {
+                "text_zh": "我們領了祂為人犧牲的聖體，就獲得力量；喝了祂為人傾流的寶血，就滌除罪過。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "holy_cross": {
+            "title": {
+              "zh": "光榮十字聖架頌謝詞（十字架是勝利的標記）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1V28MHE5ZWYjEhmkPUSKl3mS1e4rDZLqU/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢藉着我們的主基督，將人類的得救建立在十字聖木上。"
+              },
+              {
+                "text_zh": "死亡因樹木而發生，生命却藉十字聖木而復甦；魔鬼因樹木而獲勝，也因聖木而失敗。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使以及天上諸聖，藉着基督讚美祢、欽崇祢、敬畏祢、歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "holy_trinity": {
+            "title": {
+              "zh": "天主聖三節頌謝詞（天主三位一體的奧蹟）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/16_X66oSk5HgkfbgvrP1F-kUzCFa_ZAi6/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢和祢的獨生子及聖神，只是一個主、一個天主：不是單獨一位，而是三位一體。"
+              },
+              {
+                "text_zh": "我們因着祢的啟示，堅信確認祢的光榮和祢聖子的光榮與聖神的光榮，毫無差別。"
+              },
+              {
+                "text_zh": "因此在承認真實永恆的天主時，我們頌揚三位分明、性體唯一、尊威均等。"
+              },
+              {
+                "text_zh": "這就是眾天使與總領天使，以及天上諸聖所讚美的，他們日夜不停、無時或息地歡呼："
+              }
+            ]
+          },
+          "immaculate_conception": {
+            "title": {
+              "zh": "聖母無染原罪頌謝詞（瑪利亞──教會的縮影）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1Kvs87vXUreTWYXHKYOtrtzBr2gYZdp05/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢曾保護了童貞瑪利亞，免受原罪的沾染，使她充滿祢的恩寵，堪做祢聖子的母親，和祂完美無瑕的淨配──聖教會的象徵。"
+              },
+              {
+                "text_zh": "她是純潔的貞女，為人類生育了祢的聖子──除免世罪的無玷羔羊；祢又使她凌駕萬民之上，成為祢子民的諸寵中保和聖德楷模。"
+              },
+              {
+                "text_zh": "因此，我們聯合天上的天使，歡欣讚美祢，同聲歡呼："
+              }
+            ]
+          },
+          "john_the_baptist": {
+            "title": {
+              "zh": "聖若翰洗者頌謝詞（聖若翰是基督的前驅）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/13ldO22I7QVbJXUHKiNbmsOdCZPz0cCxU/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們在祢聖子的前驅、聖若翰的慶辰，一同歌頌祢的偉大。"
+              },
+              {
+                "text_zh": "因為祢在所有生於婦女的人當中，以特殊的光榮提拔了他：他在出生以前，已因人類救主的駕臨而歡躍，他的誕生更帶來了莫大的喜樂，眾先知中只有他指出了除罪的羔羊。"
+              },
+              {
+                "text_zh": "為了聖化流水，他洗滌了洗禮的創始者，並甘願流血犧牲，為主作了最高的見證。"
+              },
+              {
+                "text_zh": "因此，我們隨同天上的天使和聖人，同聲宣揚祢，稱頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "lent_1": {
+            "title": {
+              "zh": "四旬期頌謝詞（一）（四旬期的精神意義）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1VdeO3OJfxmH8qQJkzFO3RZq9-tOI99N0/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢囑咐我們，每年要洗心革面，歡欣地準備逾越節的慶典，使我們能切實奉行祈禱和仁愛的工作，領受重生的聖事，而獲得祢無比的恩寵，成為祢鍾愛的子女。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "lent_1st_sunday": {
+            "title": {
+              "zh": "四旬期第一主日頌謝詞（基督守齋的榜樣）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/10EN8Wr42F36tQKBEoOCnafJaZGMu2K3D/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督四十天的嚴齋，樹立了齋戒的模範。"
+              },
+              {
+                "text_zh": "祂摧毀了古蛇的陷阱，並教導我們戰勝邪惡，使我們今世以虔誠的心情，慶祝逾越奧蹟，將來也能參加天上永恆的逾越聖筵。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，和天上諸聖，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "lent_2": {
+            "title": {
+              "zh": "四旬期頌謝詞（二）（藉齋戒革新生活）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1dFlUqKHhTnrmo6gbzKgTWZv7x1gXPGuv/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢為了淨化我們的心靈，特別制定了四旬齋期，幫助我們抑制私慾偏情，擺脫世物的困擾，追求永恆的幸福。"
+              },
+              {
+                "text_zh": "因此，我們隨同眾聖人和所有天使，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "lent_2nd_sunday": {
+            "title": {
+              "zh": "四旬期第二主日頌謝詞（基督在聖山顯容）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1_QySnvTNcy_64rM6PHIE9hD4YgCuXPiW/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督向門徒預告了自己的死亡，在聖山上給他們顯示了自己的光輝，為彰顯法律和先知所作證的真理：人必須經過苦難，才能到達復活的光榮。"
+              },
+              {
+                "text_zh": "因此，我們隨同天朝神聖，稱頌祢的偉大，不停地歡呼："
+              }
+            ]
+          },
+          "lent_3": {
+            "title": {
+              "zh": "四旬期頌謝詞（三）（自制的效益）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1idPqriu6uSicTHi5APdwzGJZmM0zQ4Jo/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢願意我們藉着克己苦身，向祢表示謝恩，壓伏我們的傲氣，並能慷慨賙濟貧窮，效法祢的溫良慈善。"
+              },
+              {
+                "text_zh": "因此，我們隨同眾位天使，同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "lent_3rd_sunday": {
+            "title": {
+              "zh": "四旬期第三主日頌謝詞（關於撒瑪黎雅婦女）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1U8n3HGLSxalOabtwUDtTEXdznbEPR_s9/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "當基督向撒瑪黎雅婦女要水喝時，祂已賜給了她信德。"
+              },
+              {
+                "text_zh": "基督渴求的信德，是要在她心內燃起熱愛天主的火焰。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使感謝祢，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "lent_4": {
+            "title": {
+              "zh": "四旬期頌謝詞（四）（齋戒的效益）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1-hSnYDUJSZL-IMj74w42MjdYUeH5quuS/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢藉着我們的主基督，教我們刻苦齋戒，清心寡欲，培德養性，而獲得賞報。"
+              },
+              {
+                "text_zh": "尊威的天主，天使以及天上諸聖，藉着基督讚美祢、欽崇祢、敬畏祢、歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "lent_4th_sunday": {
+            "title": {
+              "zh": "四旬期第四主日頌謝詞（人藉基督找到信仰之光）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1TIxZJWs2PT2PV2lH6-SYiavUMq37uV2P/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督藉祂降生的奧蹟引導人類，由黑暗進入信仰的光明；使生於舊日罪惡奴役之下的人類，藉着重生的洗禮，成為祢的子女。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、和天上諸聖、高唱新歌，讚頌祢的仁慈，感謝祢、朝拜祢，不停地歡呼："
+              }
+            ]
+          },
+          "lent_5th_sunday": {
+            "title": {
+              "zh": "四旬期第五主日頌謝詞（基督復活拉匝祿）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1jDi2mrf656uo5kBAkoMwcDVmRF6dKFCj/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督是真人，為了朋友的死亡而悲傷；祂是永生的天主，使拉匝祿從墳墓中出來：祂憐憫我們人類，藉着聖事賜予我們新生。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使，藉着基督永遠歌頌祢的偉大、感謝祢、朝拜祢，不停地歡呼："
+              }
+            ]
+          },
+          "martyrs": {
+            "title": {
+              "zh": "殉道聖人頌謝詞（殉道者顯示天主的能力）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1tjbVF2VIASd2ULhbM5R-YMWi3T_Eoy5Z/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為殉道者聖［某］為了宣揚祢的聖名，曾師法基督，傾流了熱血，顯示了祢的奇能：祢藉着我們的主基督，在脆弱的人身上發出力量，祢使弱小者成為意志堅強的證人。"
+              },
+              {
+                "text_zh": "因此，我們隨同天上的天使，一起歌頌祢、朝拜祢，不停地歡呼："
+              }
+            ]
+          },
+          "mary_1": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/12tZBJq9HGnKZQbb7gaHcUUH0SCtmEw2b/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞的敬禮日，我們讚美祢、稱頌祢、顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0101": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞──天主之母的慶辰"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1sYdeNfFz6HBd7tWSlUPHV9sMduAW7XtK/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞──天主之母的慶辰，我們讚美祢、稱頌祢、顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0509": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞──中華聖母的慶日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1unrRrDzWoX_EYjonCq_oUJnAIB5I9HAS/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞──中華聖母的慶日，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0716": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞的紀念日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1dUB3SKetkHA8eNjrgTc2MuA3tLeQ9O8B/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞的紀念日，我們讚美祢、稱頌祢、顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0822": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞聖母元后的紀念日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1ceIjD-Xvb-du-8k476gn2YifnhuR_QGu/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞聖母元后的紀念日，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0908": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞的誕辰"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1iu11OrJRdOimwK_fTlhQJ1PF4D-EZkBx/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞的誕辰，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0912": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞聖名的紀念日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1Ba65Hz5UlUyYXgMvU6D-cqqBqeUpRqtI/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞聖名的紀念日，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_0915": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞的痛苦日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1DqmMWmfyOpXj42A6oKvnPIdBxMSmLDLU/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞的痛苦日，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_1_1121": {
+            "title": {
+              "zh": "聖母頌謝詞（一）（救主之母） — 瑪利亞的奉獻日"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1w_mySaD2bGg6PdvvHBmiJATBgOzieLrz/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這終身童貞瑪利亞的奉獻日，我們讚美祢，稱頌祢，顯揚祢。"
+              },
+              {
+                "text_zh": "她藉聖神的庇蔭孕育了祢的獨生子，保持着童貞的榮耀，給世界帶來了永遠的光明──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢，欽崇祢，敬畏祢，歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "mary_2": {
+            "title": {
+              "zh": "聖母頌謝詞（二）（教會藉瑪利亞的口讚美天主）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/14oq9siX3BNkBCq5PLM2dLUZ0usM6LFsj/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "聖父、全能永生的天主，我們看到諸聖得享光榮，便承認祢的奇恩異寵，尤其為了紀念至聖童貞瑪利亞領受的鴻恩，我們要用她的讚美詩感謝祢的寬仁慈愛，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢為整個世界作了奇事，對普世萬民廣施仁慈：祢垂顧了卑微的使女，藉着她賜給人類一位救主──祢的聖子、我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "天上的天使藉着基督永遠歡聚在祢臺前，欽崇祢、頌揚祢的光榮，求祢恩准我們也和他們同聲讚頌："
+              }
+            ]
+          },
+          "mary_magdalene": {
+            "title": {
+              "zh": "聖瑪麗．德蓮頌謝詞"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1UgsfARCHQgytT0uhvK6MmSwk8ysuoCz2/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主，全能的天主聖父，祢的慈悲並不少於祢的大能；我們藉着主基督，時時處處感謝祢，實在是理所當然的，並有助於我們獲得救恩。"
+              },
+              {
+                "text_zh": "瑪麗．德蓮深愛在世時的基督，她仰瞻基督在十字架上的聖死，尋覓躺在墓穴的祂，又率先朝拜了由死者中復活的基督。"
+              },
+              {
+                "text_zh": "基督在墓園顯現給瑪麗．德蓮，使她成為向使徒報喜的光榮使徒，好使新生命的喜訊，傳至地極。"
+              },
+              {
+                "text_zh": "為此，我們隨同天使和所有聖人，歌頌祢的光榮，不停的歡呼："
+              }
+            ]
+          },
+          "mary_mother_of_church": {
+            "title": {
+              "zh": "教會之母頌謝詞（瑪利亞──教會的楷模和母親）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1wBehrgw7HBBPp0KOhw7xQZZoPzjsmGEB/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主，我們時時處處感謝祢，並在這榮福童貞瑪利亞的慶典中，以適當的讚詞頌揚祢，實在是理所當然的，並有助於我們獲得救恩。"
+              },
+              {
+                "text_zh": "聖母以無玷之心接受了祢的聖言，童貞懷孕；造物主既由她誕生，她也孕育了教會的開始。"
+              },
+              {
+                "text_zh": "她站在十字架旁，接受了救主愛的囑咐，把所有因基督的死亡而重生於天的人，收納為自己的兒女。"
+              },
+              {
+                "text_zh": "當宗徒們等候祢所預許的聖神時，聖母聯同他們，同心祈禱，成為教會祈禱的楷模。"
+              },
+              {
+                "text_zh": "她蒙召進入天上的光榮，以母愛般的關懷，繼續照顧旅途中的教會，保護她走向天鄉，直到主光榮來臨的日子。"
+              },
+              {
+                "text_zh": "為此，我們隨同所有天使、聖人齊聲讚美祢，不停地歡呼："
+              }
+            ]
+          },
+          "nativity_1": {
+            "title": {
+              "zh": "聖誕節頌謝詞（一）（基督是光）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1inBtEIWEU9eC35ToPbPpj-hJxA4xosys/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢榮耀的新光，藉着聖子降生的奧蹟，照亮了我們的心目，使我們在祂身上認識降生可見的天主，而嚮慕那不可見的美善。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使、以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "nativity_2": {
+            "title": {
+              "zh": "聖誕節頌謝詞（二）（降生的聖子重整萬有）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1mFS3hBNM5sN36vdbcJ8ZmVcXM-fzUDn-/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉著我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督藉著祂誕生奧蹟的慶典，使人看到那本性不可見的天主，祂原生於萬世之前，卻又開始了人間的生活；祢藉著祂使跌倒的，再站起來；使受損的萬物，恢復完整；使迷失的人類，重返天國之路。"
+              },
+              {
+                "text_zh": "因此，我們隨同眾天使，讚頌、感謝祢，踴躍地歡呼："
+              }
+            ]
+          },
+          "ordinary_1": {
+            "title": {
+              "zh": "常年主日頌謝詞（一）（逾越奧蹟與天主子民）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1koCqNXGYQwzVOOdcp8livZjXruowjDkB/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祂藉着逾越奧蹟完成了神妙的工程；祂使我們擺脫罪惡和死亡的枷鎖，而分享祂的光榮，得稱為特選的民族、王者的司祭、聖潔的邦國、得救的子民。"
+              },
+              {
+                "text_zh": "祢召叫我們從黑暗中進入光明，我們要到處稱揚祢的德能。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使、總領天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_2": {
+            "title": {
+              "zh": "常年主日頌謝詞（二）（救恩的奧蹟）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1PPNBW2CdHuToLIOnpPBucRxdrZbIpv7H/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督憐憫人類的罪過，甘願由童貞女降生，受十字架的苦刑，救我們脫離永死；又從死者中復活，賜給我們永生。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，以及天上諸聖，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_3": {
+            "title": {
+              "zh": "常年主日頌謝詞（三）（藉人而拯救人）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1FGd9v0AhIVZEG4vTPqU96W-JBZiDRJGW/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為我們知道，祢為了救助卑微的人類，甘願屈尊就卑；祢的聖子攝取了可朽的人性，給我們帶來了救恩；如此藉我們的主基督、使我們短暫的人生變為不朽的永生。"
+              },
+              {
+                "text_zh": "因此，天上的天使藉著基督朝拜祢，永遠在祢面前歡欣踴躍。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們同聲讚頌，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_4": {
+            "title": {
+              "zh": "常年主日頌謝詞（四）（救恩史）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/11Smnf1Jwi2MUVW8kPkimKK2HbgcofqQ0/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為基督的誕生革新了人類的腐舊，祂的苦難洗去了我們的罪惡；祂死而復活、領我們走上了永生之路；祂升了天，給我們開啟了天國之門。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和聖人，同聲讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_5": {
+            "title": {
+              "zh": "常年主日頌謝詞（五）（創造的目的）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1czrMPUvmpcdaDxJuN9EG7hiTDys7hbC6/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢創造了宇宙萬物，安排了依次變化的季節。"
+              },
+              {
+                "text_zh": "祢特別按照你的肖像造成了人，並使萬物隸屬在人的權下，使人代管祢所創造的一切，並為了祢的美妙化工，藉著我們的主基督，永遠讚頌祢。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使，同聲頌揚祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_6": {
+            "title": {
+              "zh": "常年主日頌謝詞（六）（復活的保證）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1PPLpoM_dXqMuT9212qLeCycBN2C_zkhf/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們原是在祢內生活、行動和存在；我們生活在此塵世，不但每日體驗到祢慈愛的溫暖，並且已經把握了永生的保證──聖神的恩賜。"
+              },
+              {
+                "text_zh": "祢藉聖神曾使耶穌死而復活，並帶給我們確切的希望：逾越奧蹟將來也必在我們身上完成。。"
+              },
+              {
+                "text_zh": "因此，我們虔誠感謝祢，並隨同所有天使宣揚祢的德能，同聲歡呼："
+              }
+            ]
+          },
+          "ordinary_7": {
+            "title": {
+              "zh": "常年主日頌謝詞（七）（藉基督之服從而得救）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1nIJFywtUMGNzhZ8yOV3h6sDDn9Fh9dud/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢深愛世界，竟為我們派遣了聖子作我們的救主；祢願意祂除了罪以外和我們人一樣，使祢喜愛我們，如同喜愛祢的聖子一樣。"
+              },
+              {
+                "text_zh": "由於我們的背命所喪失的恩惠，又藉祢聖子的服從而重新獲得。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使和聖人，同聲讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "ordinary_8": {
+            "title": {
+              "zh": "常年主日頌謝詞（八）（教會在聖三奧蹟中團結在一起）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1NIQii1gmEQnFPa4fYoN_2nRKdTjSFRRI/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢的子女犯罪，遠離了祢，祢卻藉祢聖子的血及聖神的德能，使他們重新與祢團聚；正如祢和聖子及聖神只是一個天主，祢召叫人類成為一個子民，基督的奧體、聖神的宮殿、祢的教會，來歌頌祢無比的智慧。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使歡躍讚美祢，不停地歡呼："
+              }
+            ]
+          },
+          "palm_sunday": {
+            "title": {
+              "zh": "基督苦難主日頌謝詞（無辜者代罪人受苦）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1Anb22hg5QRlUFlTo5LudOjKgSbzPH8Wu/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督清白無罪，却甘願為罪人受苦，代犯人受刑。"
+              },
+              {
+                "text_zh": "祂的死亡除去了我們的罪污，祂的復活恢復了我們的生命。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使讚美祢，向祢高歌讚頌，不停地歡呼："
+              }
+            ]
+          },
+          "passion_1": {
+            "title": {
+              "zh": "主受難頌謝詞（一）（十字架的大能）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1u0D8ueqoU7jbbx5qioJCG4A5BGm9n-mF/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢的聖子受苦受難，拯救了世界，促使我們讚頌祢的偉大；祢藉十字架的大能，顯示了祢對世界的審判，和被釘死者的勝利。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使，和所有聖人，歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "passion_2": {
+            "title": {
+              "zh": "主受難頌謝詞（二）（基督受難的勝利）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1eT0OBAr-BYLq9ypd0sZ9e_-Ig3kXLINR/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為基督為救世而受難、和祂光榮復活的日期已經臨近。"
+              },
+              {
+                "text_zh": "這是祂克服魔鬼傲慢的日子，是人類得救的偉大慶節。"
+              },
+              {
+                "text_zh": "尊威的天主，天上的天使永遠在祢面前歡欣讚美祢、朝拜祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲歡呼："
+              }
+            ]
+          },
+          "pastors": {
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1793757661931-1:text"
+                }
+              },
+              {
+                "text_zh": "祢恩賜祢的教會今天歡度聖 […] 的紀念日。祢藉聖人善行的榜樣鼓勵我們，祢藉他的宣講教誨我們，祢因他令祢欣喜的祈求時常保祐我們。",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1793757664813-2:text"
+                }
+              },
+              {
+                "text_zh": "因此，我們隨同天使和諸位聖人，同聲歌頌祢、讚美祢，不停地歡呼：",
+                "__massEditorPairKeys": {
+                  "text_zh": "editor-1793757700777-3:text"
+                }
+              }
+            ],
+            "title": {
+              "zh": "牧者聖人頌謝詞（天主藉牧者聖人照顧教會）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/18IUmkA9zcme2jLP4QOqAUHlWJPxrgz3i/view"
+          },
+          "pentecost": {
+            "title": {
+              "zh": "聖神降臨節頌謝詞（聖神降臨）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1i5oAPBwrlLiYP4HqDwiEkqqqElUO7IyA/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢今天完成了逾越奧蹟，並派遣了聖神降臨到那與基督合一、而蒙召做祢義子的人們身上。"
+              },
+              {
+                "text_zh": "在這教會的誕辰，聖神曾使萬民認識天主，並集合各個民族，明認同一的信仰。"
+              },
+              {
+                "text_zh": "因此，普世萬民洋溢着復活的喜樂，踴躍歡騰；同時天上的天使，和所有聖人，也同聲歌頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "peter_and_paul": {
+            "title": {
+              "zh": "聖伯多祿及聖保祿宗徒頌謝詞（兩位宗徒的不同使命）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1u4kKy9fkadn6ZVdmNP371-kNubO9gsLc/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢恩賜我們今天歡欣慶祝聖伯鐸及聖保祿兩位宗徒的節日；伯鐸首先明認了對基督的信仰，並為以色列子民建立了初期的教會；保祿澈悟了信仰的真義，並響應祢的召喚，作了萬民的導師。"
+              },
+              {
+                "text_zh": "如此，他們各以不同的訓誨，聚萬民為一家，擴展了基督的教會。"
+              },
+              {
+                "text_zh": "他們現在同受普世的尊敬，獲得了同樣的冠冕。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和所有聖人歌頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "presentation_of_the_lord": {
+            "title": {
+              "zh": "獻主節頌謝詞（基督來到自己的聖殿）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1b1qMtpqDDD49978sDJ5J-CEE03e0XIsY/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為今天祢的永生聖子獻身於聖殿；西默盎蒙聖神光照，宣稱祂是以色列的榮耀，萬邦的光明。"
+              },
+              {
+                "text_zh": "因此，我們也前去歡迎祢派遣的救主，並與天使和諸聖讚頌祢的光榮，不停地歡呼："
+              }
+            ]
+          },
+          "sacred_heart": {
+            "title": {
+              "zh": "耶穌聖心節頌謝詞（基督的無限慈愛）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1Rh1d9a3xGGP-MUvPgyFBhWLsCRVj1gM2/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "基督愛人至深，甘願被釘在十字架上，為我們作了犧牲；又從祂被刺開的肋旁傾流了血和水，使它成為教會聖事恩寵的泉源；並邀請眾人投奔祂洞開的聖心，歡欣地從救恩的泉源汲取活水。"
+              },
+              {
+                "text_zh": "因此，我們隨同諸位天使及所有聖人，一起讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "saint_joseph": {
+            "title": {
+              "zh": "聖若瑟頌謝詞（聖若瑟的使命）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1seaIm4v2rYPpq38pijlvXPefQx9kp4Gb/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，在這聖若瑟的敬禮日，我們以適當的讚詞稱揚祢、歌頌祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "聖若瑟是義人，祢揀選他為天主之母童貞瑪利亞的淨配；他是明智的忠僕，祢立他為聖家之長，代行父職，守護因聖神而降孕的獨生子──我們的主耶穌基督。"
+              },
+              {
+                "text_zh": "尊威的天主！"
+              },
+              {
+                "text_zh": "天使和天上諸聖，藉着基督讚美祢、欽崇祢、敬畏祢、歡躍慶賀祢。"
+              },
+              {
+                "text_zh": "求祢恩准我們也和他們謙恭地同聲讚頌："
+              }
+            ]
+          },
+          "saints_1": {
+            "title": {
+              "zh": "聖人通用頌謝詞（一）（聖者的榮耀）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1CROyD6FtlQlBDxI7s2-UT6JvKsQrX8ge/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢在聖徒的聚會中享受讚頌；祢表揚他們的功勳，就是表揚祢恩寵的成果。"
+              },
+              {
+                "text_zh": "祢使他們的善行，作為我們生活的榜樣；祢使我們與他們共融，而形成一家；祢因他們的轉求，而賜給我們援助。"
+              },
+              {
+                "text_zh": "他們的作證使我們信心堅強，從事人生的戰鬥，不致失敗，並能同他們一樣獲取不朽的榮冠。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和總領天使，以及所有聖人，歌唱讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "saints_2": {
+            "title": {
+              "zh": "聖人通用頌謝詞（二）（聖者的活動）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1p2jAlNHS4sYmuHoOscmblhbdzAPo_MSr/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為祢藉着諸聖令人驚奇的信仰，使祢的教會不斷革新和成長，也給我們提供了祢深愛世人的佐證。"
+              },
+              {
+                "text_zh": "祢藉他們傑出的榜樣，激勵我們追求至善，祢因他們熱誠的轉求，幫助我們作祢救恩的生活見證。"
+              },
+              {
+                "text_zh": "因此，我們隨同所有天使、聖人，歡欣頌揚祢，高聲向祢歡呼："
+              }
+            ]
+          },
+          "transfiguration": {
+            "title": {
+              "zh": "主顯容頌謝詞（主顯容是一項應許）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1i4lp-Vb5L487YmXm_wdUK5D6n14NZLlb/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "因為基督在祂遴選的證人面前，顯示了自己的榮耀，並用輝煌的光芒，照射了祂那與常人相同的身體。"
+              },
+              {
+                "text_zh": "如此準備了門徒的心靈，去接受十字架的凌辱；基督身上發出的奇異光輝，預示祂的整個教會也將充滿光明。"
+              },
+              {
+                "text_zh": "因此，我們隨同天上的天使，在人間常常歌頌祢，稱揚祢，不停地歡呼："
+              }
+            ]
+          },
+          "tw_high_priest": {
+            "title": {
+              "zh": "永恆大司祭耶穌基督頌謝詞"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1v3GL8rWtDAX80ameORleyaZbIQmiaXU5/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主，我們時時處處感謝祢，實在是理所當然的：祢使祢的唯一聖子，以聖神傅油，立祂為新約的永恆大司祭，並制訂相稱的、無以言表的制度，在教會中保存祂獨一無二的司祭職。"
+              },
+              {
+                "text_zh": "祂不僅以王者司祭職賜予得救的子民，並且以兄弟之情召選一些人，經由覆手而分享祂的聖職。"
+              },
+              {
+                "text_zh": "他們以祂的名義重行救贖人類的祭祀，為祢的子女們準備逾越節的盛宴，以愛德領導祢的神聖子民，以善言養育他們，以聖事再造他們。"
+              },
+              {
+                "text_zh": "他們為了祢，及弟兄們的得救，而努力效法基督，並堅定地以信德及仁愛為祢作證。"
+              },
+              {
+                "text_zh": "因此，上主，我們隨同天使及諸位聖人同聲讚頌祢，不停地歡呼："
+              }
+            ]
+          },
+          "tw_john_baptist_martyrdom": {
+            "title": {
+              "zh": "聖若翰洗者頌謝詞（論前驅的使命）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1zI2sgv4ZNUyCPGYr-QA99tjayhBbgju2/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主！"
+              },
+              {
+                "text_zh": "藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "我們在基督的前驅聖若翰身上，讚美祢的偉大，因為祢在婦女所生的人類中，以特殊的恩寵高擧了他。"
+              },
+              {
+                "text_zh": "他在誕生之初，就給人們帶來了莫大的喜樂；未生之前，已因人類救恩的來臨，歡欣踴躍，眾先知中，惟有他指明了贖罪的羔羊。"
+              },
+              {
+                "text_zh": "基督本是聖化洗禮的主宰，若翰却用聖化的河水給基督授洗，而且傾流鮮血，為祂作了最高的見證。"
+              },
+              {
+                "text_zh": "因此，我們隨同天上所有天使、聖人，在人間不斷地稱頌祢，永無休止地向祢歡呼："
+              }
+            ]
+          },
+          "tw_lunar_new_year": {
+            "title": {
+              "zh": "春節頌謝詞（除舊更新）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1eBbvyTy2QFTTt7bnHvdw0Z175KaG1ffE/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父，全能永生的天主，藉着我們的主基督，我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "在這新年開始（新春佳節）、擧國歡騰的日子，我們更該感謝祢，因為祢在所創造的宇宙中，以季節的變換，提示我們除舊更新，使我們藉着基督，重獲新生，在天國的道路上，時時邁進。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和天上諸聖，謙恭地讚頌祢，齊聲歡呼："
+              }
+            ]
+          },
+          "virgins_and_religious": {
+            "title": {
+              "zh": "貞女及會士頌謝詞（獻身於天主之生活的標記）"
+            },
+            "sourceUrl": "https://drive.google.com/file/d/1tjbVF2VIASd2ULhbM5R-YMWi3T_Eoy5Z/view?usp=drive_link",
+            "content": [
+              {
+                "text_zh": "主、聖父、全能永生的天主！"
+              },
+              {
+                "text_zh": "我們時時處處感謝祢，實在是理所當然的，並能使人得救。"
+              },
+              {
+                "text_zh": "祢召選了許多聖人聖女為了天國而獻身於基督，我們在他們身上頌揚祢的神智妙用：祢召叫人類恢復原始的聖潔，使我們今生就已體驗到祢來世賜予的恩惠。"
+              },
+              {
+                "text_zh": "因此，我們隨同天使和諸位聖人，同聲讚頌祢，不停地歡呼："
               }
             ]
           }
@@ -11936,6 +13806,373 @@
       url: dailyPdfUrl,
       manifest: dailyManifest,
       indexUrl: OFFICIAL.dailyIndex
+    }),
+    // CRBC daily PDFs specify the form; the prayer rows are maintained above.
+    prefaceReferences: Object.freeze({
+      "2025-11-30": {"1nLa6uleH7HwppYNbFYpKXuj2KgYq6ZVl":["advent_1"]},
+      "2025-12-01": {"1ZkAy6phNL_ABcb6kq8uOxls20qQIg1k5":["advent_1"]},
+      "2025-12-02": {"1Pis7f0SfQYfuH2sTx1t0IdbbktJ79P3X":["advent_1"]},
+      "2025-12-03": {"1LL5kb7J2uVt7NVEmMpgD4F_pDqywZFTR":["pastors"]},
+      "2025-12-04": {"1JBQ_tk7pBsqtEqdwFAMxisZWza_s_BI-":["advent_1"]},
+      "2025-12-05": {"1CQwo0APz7LmFt7OXkWwmF4FapmeYLqxu":["advent_1"]},
+      "2025-12-06": {"1Guwm4nE_GBL5XLVHj5ImELp-UqtBmpQS":["advent_1"]},
+      "2025-12-07": {"1QFLrPPz4ph0zSkK3NwkZh5JaAqeR5GzB":["advent_1"]},
+      "2025-12-08": {"1Kvs87vXUreTWYXHKYOtrtzBr2gYZdp05":["immaculate_conception"]},
+      "2025-12-09": {"1BqRv6DxhMJtLTfJ-xV79wZsj_yTCceVi":["advent_1"]},
+      "2025-12-10": {"1WPNqY5x6qUuJtNo3ISMear-piZIIqm-p":["advent_1"],"1yTy2Q3b1t04qxt6iE87u51g6n2CivQJO":["advent_1"]},
+      "2025-12-11": {"1KgYQg-mf_vMttzaQVt6DZr6LdYx6SjUz":["advent_1"]},
+      "2025-12-12": {"1Oqp8ZpQDo6_eaIh2A3bF94Cc4vJxmCiZ":["advent_1"]},
+      "2025-12-13": {"14B2nHRo9OajiKrLlVUImlVGMfvf59UI4":["advent_1"]},
+      "2025-12-14": {"1ir1rqSmsYAKDhUpd45ppBvlQ88LFuQWb":["advent_1"]},
+      "2025-12-15": {"1rcFaY2SOKjnpv55oiuYcNeVi8Zz_Pwsp":["advent_1"]},
+      "2025-12-16": {"1Elw_-nqhl1BD8Klsj7-PDWq-nhs2RHiY":["advent_1"]},
+      "2025-12-17": {"1-BIpTqmOmn9_HZr-1mFwElOgph8rqd88":["advent_2"]},
+      "2025-12-18": {"1o_LHqTTrqrQr2fCWRS-ZtNUCLQpUoAa4":["advent_2"]},
+      "2025-12-19": {"1nrL1gnt3tdvUq0BUiYNt-kfbJZ-9SUjj":["advent_2"]},
+      "2025-12-20": {"1x9TvddJLFEMICV-3GPVtkRG1512Kh4dC":["advent_2"]},
+      "2025-12-21": {"1KdYxgdGt8tvNuXYKrsgexScZ1PaBFaZJ":["advent_2"]},
+      "2025-12-22": {"1sMXetkc-U0nwV9ZhySDaMtVXq5C3kCBA":["advent_2"]},
+      "2025-12-23": {"1HLMFhegCZ6ASJddlt1iqnfkrqNPh0IvR":["advent_2"]},
+      "2025-12-24": {"1FdGy1vcGvyScg-uTU8Ku-ahJz-WnDAS9":["advent_2"],"1inBtEIWEU9eC35ToPbPpj-hJxA4xosys":["nativity_1"]},
+      "2025-12-25": {"1nr3302X2uEOcfm02BYPuLtAi-DUf5qx4":["nativity_1"],"1ewZBLN3msVd0FnOdZQkU-OWItHBMP0NF":["nativity_1"],"1Zxp1Rfkvr8gkyimDi3AJRgvMW1uZLxN4":["nativity_1"]},
+      "2025-12-26": {"1Xivvl4elw4p9vnux7RVFMQzb4GXmstWy":["nativity_1"]},
+      "2025-12-27": {"1NDWvh8vo_2o5_5faZL1R5LTZ6zVQaAOz":["nativity_1"]},
+      "2025-12-28": {"1Ov77uKPcuneFVA-POo6KLg5wAMQdjn1e":["nativity_1"]},
+      "2025-12-29": {"1NmblkxC9yMBTjBE1H-_S03DjPdHd11Lf":["nativity_1"]},
+      "2025-12-30": {"1bYhZtC57pNfvACmOalfC84fSUgEC7AOZ":["nativity_1"]},
+      "2025-12-31": {"1bG6-Qj0Vu86dW4SrWTI7GlPlQzl-7LiV":["nativity_1"]},
+      "2026-01-01": {"1sYdeNfFz6HBd7tWSlUPHV9sMduAW7XtK":["mary_1_0101"]},
+      "2026-01-02": {"1mFS3hBNM5sN36vdbcJ8ZmVcXM-fzUDn-":["nativity_2"]},
+      "2026-01-03": {"1Nvcob9jut1boC1J-fPlli_tEbxq-Ee6U":["nativity_1"],"1fMz9AAxGSkxCacq221r9FWCskb8F601i":["epiphany"]},
+      "2026-01-04": {"1DXKHftWweiMgmwqvksDMGiV77WCYQ-gF":["epiphany"]},
+      "2026-01-05": {"1GeUJ9O9wrjIqGFWtcmiKIT8O3AFbJqwn":["epiphany"]},
+      "2026-01-06": {"10iRv8PZJcZOA0A5DY5UZ-uVzZSHYl8I4":["epiphany"]},
+      "2026-01-07": {"1NGxqnwTGltd_muRONtsXPB3whdGJAYnD":["epiphany"]},
+      "2026-01-08": {"1Tvf2txunx4fbwBk5Je2zopXk6yiWrgrg":["epiphany"]},
+      "2026-01-09": {"1Ng3HREKPyCBwOF0clczWCVDAviZpZ7Yy":["epiphany"]},
+      "2026-01-10": {"1C4CACjOmrhFPs8GqZT8_oducuishC1vH":["epiphany"]},
+      "2026-01-11": {"1VbHa5sOFWNRrIFcV1ns2tF2Dji5J1W5x":["baptism_of_the_lord"]},
+      "2026-01-12": {"1w-8m-he5i6UNQjk1x0qGgPbUc2Wy3Ntu":["common_1"]},
+      "2026-01-13": {"1Xd9UMHxVLkMqAmAVT1mpcnt4mRrtSGyV":["common_2"]},
+      "2026-01-14": {"1MzdUJh4inzt5KX44CHGjDcJ0qRob_8nv":["common_3"]},
+      "2026-01-15": {"1-3Z_6Q5ebfvgUb_5t4XqumBcuGwb4nuF":["common_4"]},
+      "2026-01-16": {"1fWPyNucOjD5hcVKH5kxdhvu_5jt9fkLm":["common_5"]},
+      "2026-01-17": {"1CROyD6FtlQlBDxI7s2-UT6JvKsQrX8ge":["saints_1","virgins_and_religious"]},
+      "2026-01-18": {"1koCqNXGYQwzVOOdcp8livZjXruowjDkB":["ordinary_1"]},
+      "2026-01-19": {"1Gaizoko4T-pAEOEFAOmJTPpZ3jwdMbsB":["common_1"]},
+      "2026-01-20": {"1817hapt0WfTx8cOJDydbUpR1uV0FsDwu":["common_2"]},
+      "2026-01-21": {"1tjbVF2VIASd2ULhbM5R-YMWi3T_Eoy5Z":["martyrs","virgins_and_religious"]},
+      "2026-01-22": {"1Oz-3rrVHvuSgeUzlHMJUAF8tbGv-eKY0":["common_4"]},
+      "2026-01-23": {"1BHDsB0jkWKE4T_0ASWLJPKUZXn60sit-":["common_5"]},
+      "2026-01-24": {"18IUmkA9zcme2jLP4QOqAUHlWJPxrgz3i":["pastors"]},
+      "2026-01-25": {"1lWlxjY272I8JwWse4ckCa92lgwoy1rwA":["ordinary_8"]},
+      "2026-01-26": {"1mI4hO0G4K6wiDspPJXmWDDvwAu_WTule":["pastors"]},
+      "2026-01-27": {"1e-0aB-dI9-z7QdT-JvNxBk13OzGS0Vz0":["common_2"]},
+      "2026-01-28": {"1jXHkEYL-WVgYhuGEOFzXB5JEoPSNOjUv":["pastors","saints_1"]},
+      "2026-01-29": {"1eulWnVmDXjF2r0ne0Ffzub8soAsqHNOd":["common_4"]},
+      "2026-01-30": {"1ws44SXfmgh5sSTqGedtptPhI29fcd9VK":["pastors"]},
+      "2026-01-31": {"1rHwBbuNF_ydxiZDjNUtpEfCYRyJqyls0":["pastors"]},
+      "2026-02-01": {"1Y7j0xx67aCykflDGuXPb5-OpdfwV9Snw":["ordinary_1"]},
+      "2026-02-02": {"1b1qMtpqDDD49978sDJ5J-CEE03e0XIsY":["presentation_of_the_lord"]},
+      "2026-02-03": {"1NnPMh2wJLkrleTop-PTAtUKBDw11SHrL":["common_2"]},
+      "2026-02-04": {"1TivfDt2Kz4LsQECAJOLmmzrK1A7Iz40U":["common_3"]},
+      "2026-02-05": {"1jDhniRmklzYng1Bewji10uxDXV0OamD5":["martyrs","virgins_and_religious"]},
+      "2026-02-06": {"1Nos8DrZWDH_IPF7e1tzeo_AzP_X-nRRI":["martyrs"]},
+      "2026-02-07": {"1YEjbWuxnG35UWzw_4qPvtx7ejYEdK75U":["common_6"]},
+      "2026-02-08": {"1s1alYe4FMyji6_ATnAXs1b4aEMwcI1fP":["ordinary_1"]},
+      "2026-02-09": {"1qYR29lj4n3syiMmAaZ796nRN36Y9aWAr":["common_1"]},
+      "2026-02-10": {"1BOWipCafcbJaS-pWWnqVhNBzDy4qyZtV":["virgins_and_religious"]},
+      "2026-02-11": {"1r-no8hrr6fSnrYju2QxVh2SL04i-NF1p":["common_3"],"14oq9siX3BNkBCq5PLM2dLUZ0usM6LFsj":["mary_2"]},
+      "2026-02-12": {"1Vw_AQRn7WYg7mxt1yQPXn7oXGEq6Chwq":["common_4"]},
+      "2026-02-13": {"17y5uSoSF70076y-Q2tMetIxkq7oAdE41":["common_5"]},
+      "2026-02-14": {"1XdhT8-fYrVBzSEk7iep6fHw-cv22dB-a":["pastors","saints_1"]},
+      "2026-02-15": {"11Smnf1Jwi2MUVW8kPkimKK2HbgcofqQ0":["ordinary_4"]},
+      "2026-02-16": {"1pe89yO5LQqQnUEjzlmpYbSFGjPpt5SO-":["common_1"]},
+      "2026-02-17": {"1m4yQx4GsrEOlMCVyU6vU2ZtWhkMbtoLh":["common_2"],"1eBbvyTy2QFTTt7bnHvdw0Z175KaG1ffE":["tw_lunar_new_year"]},
+      "2026-02-18": {"1-hSnYDUJSZL-IMj74w42MjdYUeH5quuS":["lent_4"]},
+      "2026-02-19": {"1irHoXK2SE-QOkJBK6lQX1KAYit4R77zu":["lent_4"]},
+      "2026-02-20": {"1idPqriu6uSicTHi5APdwzGJZmM0zQ4Jo":["lent_3"]},
+      "2026-02-21": {"1vGqG22GsyepUKqem0VJg0AjvXoNYGR49":["lent_3"]},
+      "2026-02-22": {"10EN8Wr42F36tQKBEoOCnafJaZGMu2K3D":["lent_1st_sunday"]},
+      "2026-02-23": {"1VdeO3OJfxmH8qQJkzFO3RZq9-tOI99N0":["lent_1"]},
+      "2026-02-24": {"1dFlUqKHhTnrmo6gbzKgTWZv7x1gXPGuv":["lent_2"]},
+      "2026-02-25": {"1T01HaK_I8cIZ_6lJwQOKH_twTuoI1O_a":["lent_3"]},
+      "2026-02-26": {"1Af0Gq4rln24_czg4EM0fq45cxdXpHTGY":["lent_4"]},
+      "2026-02-27": {"1qtrl9BZ_72xnNRnycdd17StQ_yVPn7eY":["lent_1"]},
+      "2026-02-28": {"1o_zNY7xkit7-Jk3vrxStiIhTdYLkY2ta":["lent_2"]},
+      "2026-03-01": {"1_QySnvTNcy_64rM6PHIE9hD4YgCuXPiW":["lent_2nd_sunday"]},
+      "2026-03-02": {"1SzydbUfT_8QCsfSSXqJ8oRqhotOxIfWk":["lent_1"]},
+      "2026-03-03": {"1zVy8OpxukHdSnixTyzlmwNZdID2U6Cqu":["lent_2"]},
+      "2026-03-04": {"1UpOHCtEPU4mjAqK0s7s4R4aMVJWp33zH":["lent_3"]},
+      "2026-03-05": {"1grDEQiS4pDDm1OhPgmbUEIwkzxhk0Z19":["lent_4"]},
+      "2026-03-06": {"1D3Y_qxet5SdNuk0bxzEewIftA_56LykM":["lent_1"]},
+      "2026-03-07": {"1km9XHa8lBQexf05ihEFbO0LFe6PWl7eB":["lent_2"]},
+      "2026-03-08": {"1U8n3HGLSxalOabtwUDtTEXdznbEPR_s9":["lent_3rd_sunday"]},
+      "2026-03-09": {"1kZF6HsjEHiEdeH_LwwmkI3E5xs6y-79c":["lent_1"]},
+      "2026-03-10": {"147cwPDdBpN6UjQVFadWtssK5xmBbxDGL":["lent_2"]},
+      "2026-03-11": {"1Oz65WE7J1ULtL4KoXM3SyUSGBsXy_ulO":["lent_3"]},
+      "2026-03-12": {"1R8wPEQm9wsx8StDVsrJYVrL94NqXARlb":["lent_4"]},
+      "2026-03-13": {"1H4kKabANFWh1Xdnukt3GnsKjZ6h2TSGY":["lent_1"]},
+      "2026-03-14": {"1s2vBzVoEe_vQrhPfXUjELD-NcfUMvhd4":["lent_2"]},
+      "2026-03-15": {"1TIxZJWs2PT2PV2lH6-SYiavUMq37uV2P":["lent_4th_sunday"]},
+      "2026-03-16": {"1xHmPvfH-31RiW_xMZc5l-nfp13J0zFoC":["lent_1"]},
+      "2026-03-17": {"11DARdmkoK68UUIBQVVvkJ4gROgRe2qiA":["lent_2"]},
+      "2026-03-18": {"1qFZFiqrQCquJ6OZDjcY-TaWAbdpyPNOA":["lent_3"]},
+      "2026-03-19": {"1seaIm4v2rYPpq38pijlvXPefQx9kp4Gb":["saint_joseph"]},
+      "2026-03-20": {"1td-mcYP8FbdoCRYKvCoG0CmmU3MDrcNV":["lent_1"]},
+      "2026-03-21": {"1CwhSpdzTbsUTFQFKmb0w4b3gFiSao_sA":["lent_2"]},
+      "2026-03-22": {"1jDi2mrf656uo5kBAkoMwcDVmRF6dKFCj":["lent_5th_sunday"]},
+      "2026-03-23": {"1u0D8ueqoU7jbbx5qioJCG4A5BGm9n-mF":["passion_1"]},
+      "2026-03-24": {"12mrOrD1HrH7xJSEh0MTdduSDqdjceYP6":["passion_1"]},
+      "2026-03-25": {"1FKCDXyxqZTkO8TGd8ahRql18bArEaSWY":["annunciation"]},
+      "2026-03-26": {"1fM2lhZTAqa-O43KyacD4gRhJDNdeGWng":["passion_1"]},
+      "2026-03-27": {"1bYyMX2zbYxDqAoRqFaPHiFinvVV_XjcL":["passion_1"]},
+      "2026-03-28": {"1qXvyBcHgHxxxddmwH_uWdjuDc7Gw09Z_":["passion_1"]},
+      "2026-03-29": {"1Anb22hg5QRlUFlTo5LudOjKgSbzPH8Wu":["palm_sunday"]},
+      "2026-03-30": {"1eT0OBAr-BYLq9ypd0sZ9e_-Ig3kXLINR":["passion_2"]},
+      "2026-03-31": {"1GQOEAEK578oUECW7TslPUQ5Hv0JL1ukE":["passion_2"]},
+      "2026-04-01": {"14lp-80bw0cN_miSpi0O2JMQbi0VHIr9f":["passion_2"]},
+      "2026-04-02": {"1L__kNsK8eUV1X9vbaCR-oGXShZ4FNKJG":["chrism_mass"],"159dEZuoo-KAnzoUL4pSjbAmcdomeFkPs":["eucharist_1"]},
+      "2026-04-03": {"10-ZjNM7FIdWAvlpG7iEp_LmLnPk7s-YA":[]},
+      "2026-04-04": {"1fNAywX6ioHMhfJRHn1yztVyqpW80riiD":["easter_1_night"]},
+      "2026-04-05": {"14bTyxNwhK1NUhGYOsUx4aBoDPvzEFnS8":["easter_1_day"]},
+      "2026-04-06": {"1CbNOnj6f0_ZkujT3-dH_ewGXyadCNB2g":["easter_1_day"]},
+      "2026-04-07": {"1hdSiKtA9Ieh1PBv3GHbwIocbD0QEmIfG":["easter_1_day"]},
+      "2026-04-08": {"1UgRs5WZVSYWAG8ogv48UmJ7Ag187LcYW":["easter_1_day"]},
+      "2026-04-09": {"1vTEhAqyAktxGzCkd9njzWtCDiwENJPPJ":["easter_1_day"]},
+      "2026-04-10": {"1jh110MvBF9uGKeVNKqemtpI6yfD1Cgei":["easter_1_day"]},
+      "2026-04-11": {"1iPEoAulP1Vh-svek1JAXFrclDDUzwA81":["easter_1_day"]},
+      "2026-04-12": {"1LlNw-wgTIFCDc3pVq0YYX_iYuuu1KNae":["easter_1_day"]},
+      "2026-04-13": {"16vqMQcn2hK3IkTUjR3q_b2HUZ3pMDfNE":["easter_1_day"]},
+      "2026-04-14": {"1yqFlYYq7eMoh0qzGCVXYZaTb7LOz1mcU":["easter_2"]},
+      "2026-04-15": {"1b_7HWLT-xAnpOgXB-cf9nq4u0xLH511L":["easter_3"]},
+      "2026-04-16": {"1khqKlrCjQTWrffb8uCpXpRvHFmrJ43_E":["easter_4"]},
+      "2026-04-17": {"1ylXMCN2ib7vLs926ieXgaqgkZJ-uSJaI":["easter_5"]},
+      "2026-04-18": {"1TW02wQcG3gMKwWjPIimUQHBiHNP3bJ9R":["easter_1_day"]},
+      "2026-04-19": {"1oEtMRFlIoh4KPpdDatBMn8FYA75eKgsn":["easter_1_day"]},
+      "2026-04-20": {"1bwj3wqb9mmLUqZlvLCmgO5qbvU4uF84e":["easter_1"]},
+      "2026-04-21": {"1n_eV7QF8-Znaw8uFhwo46uBoKc1euLAf":["easter_2"]},
+      "2026-04-22": {"1z6a1ruzAR3JcafNEAzSWg7XolwwBNw8a":["easter_3"]},
+      "2026-04-23": {"1fPxirim3yL9D849JiiCSRAj4dob9eZfD":["easter_4"]},
+      "2026-04-24": {"1BSkcxtVwL1YaJTSu_-z6css74Wn3uYKM":["easter_5"]},
+      "2026-04-25": {"17YJOd4X7RrbZ5lvgmlMusSWUK2BytgoJ":["apostles_2"]},
+      "2026-04-26": {"14yjd0o-w8xDv0pFFxXNiORKlXIgmBx_k":["easter_1_day"]},
+      "2026-04-27": {"15aAJORVFfmtAr4V5vzFIfVSS-OpnmFT8":["easter_1"]},
+      "2026-04-28": {"1h_Soeqjw6OcI9et33loS5eD62cGrWdXR":["easter_2"]},
+      "2026-04-29": {"1VzCnn2rokJlMAla6tdxQ7PSjPqS-Raz-":["easter_3"]},
+      "2026-04-30": {"1QcIabXrZtXWOOW8H5yWeG4R5sPQ3pLgU":["easter_4"]},
+      "2026-05-01": {"1koPxyvQSOZZF5hGxcAcPs_KFOW7DUM0s":["easter_5"],"1R0l1yOJRXZFMhJTJIEx0q_X1X5BL18g0":["easter_5"]},
+      "2026-05-02": {"1Tk1ZD5zW0OwOA1EmCTyL1h2kWsWiVyc7":["easter_1"]},
+      "2026-05-03": {"1PZnPwDechdtRcJsBq8sTptc_TSxT2ZCd":["easter_1"]},
+      "2026-05-04": {"1u4g9gOKASKVIpMwgVDSNFkFxOnsr0bTK":["easter_2"]},
+      "2026-05-05": {"1Rgo1Oc9uNR6tJMw4KtSK7jKpnoCls5yg":["easter_2"]},
+      "2026-05-06": {"1cpPVU0Hfih5qi7MJR1k9lvmSNgTYvHHp":["easter_3"]},
+      "2026-05-07": {"15ONMPvDf7Nc0u8yxlbifHMMO03dYpaPi":["easter_4"]},
+      "2026-05-08": {"1wqdBV1UNjWm1tj5uxLHBDLL6mjRSm5Pa":["easter_5"]},
+      "2026-05-09": {"1unrRrDzWoX_EYjonCq_oUJnAIB5I9HAS":["mary_1_0509"]},
+      "2026-05-10": {"1X_AdcefvnbwW8t4UD3gari7NYrZe4mFN":["easter_1"]},
+      "2026-05-11": {"1Qb1ddAiqfTo1T2_eqpHbOlpSdD07UV13":["easter_1"]},
+      "2026-05-12": {"1ityTBfgqAaWssn0hbgiO4j6Gciy8ufCJ":["easter_2"]},
+      "2026-05-13": {"1Y20HBi4w7IOCwFVxGrJL2OSOqUMsOpdQ":["easter_3"],"19XX-mR74Dol0bCa_iBRA4chHbs0lFlEI":["easter_5"]},
+      "2026-05-14": {"1ZViZh3VO_GvYkDHMYYB7G5QBjYMvBZs8":["apostles_1"]},
+      "2026-05-15": {"1p4Zwr4dnDEGrRNFezt91k-YdRP7q7oBu":["easter_5"]},
+      "2026-05-16": {"1pELP-DE3SZ6vLUXvZ1S3RZ9jOJXrpUsU":["easter_1"],"1a0uc0IM_lMSIpqW6fREY89JgbhSjxslC":["ascension_1"]},
+      "2026-05-17": {"1f7t0MQTezkMVVY2QDVVSgo3jl8jrRlUg":["ascension_1"]},
+      "2026-05-18": {"1YVhcNqPMHJCWcKW7rCnmSoBJ7mpFCS0M":["ascension_1"]},
+      "2026-05-19": {"1I3FtovpkqciZL_A-EadIDgSyX41xmBuc":["ascension_2"]},
+      "2026-05-20": {"1r5tT4VConesobjqhvnsVKkd58A5oFDVa":["ascension_1"]},
+      "2026-05-21": {"11DnY62mAVHtTEvHvVnqhyLYtvHbblofh":["ascension_2"]},
+      "2026-05-22": {"1XMGXuViZAzH6f1AkoJS2e_R6MI1xlQhc":["ascension_1"]},
+      "2026-05-23": {"1s-P0hmZy5HbXGfZdABz4ETwJ9NeCn2gv":["ascension_2"],"1i5oAPBwrlLiYP4HqDwiEkqqqElUO7IyA":["pentecost"]},
+      "2026-05-24": {"1muyEfhBP35xkt-TUWxg5tnLWTUUt6ucB":["pentecost"]},
+      "2026-05-25": {"1wBehrgw7HBBPp0KOhw7xQZZoPzjsmGEB":["mary_mother_of_church"]},
+      "2026-05-26": {"1X7WSMdCzahM8aNDtEh2NEuGOZVMqrqlj":["pastors"]},
+      "2026-05-27": {"1R31f9Om9kBjAX8QP2z555oBhD83zoZUc":["common_3"]},
+      "2026-05-28": {"1v3GL8rWtDAX80ameORleyaZbIQmiaXU5":["tw_high_priest"]},
+      "2026-05-29": {"1RHrC4Tpt1Wvfokrcva9tZkRttt0i3Fjr":["common_5"]},
+      "2026-05-30": {"18UEMTgjbTDE4w7HiQyoxRY_d3VoL0-3G":["common_6"]},
+      "2026-05-31": {"16_X66oSk5HgkfbgvrP1F-kUzCFa_ZAi6":["holy_trinity"]},
+      "2026-06-01": {"1bQKJrcC6wJ8gAsgn2v_D-bUxjPAYE643":["martyrs"]},
+      "2026-06-02": {"1d2hsh1bhodTfHD0lDixDOG_XUWLjDCRb":["common_2"]},
+      "2026-06-03": {"1NAyeS8mOUwu6WCKmFc-Oilv4ZWOuH3Qv":["martyrs"]},
+      "2026-06-04": {"1isf-Sga08v30kZs9bfyjFa24EHSa52GQ":["common_4"]},
+      "2026-06-05": {"1_bvE7ODfRPDtqgzPMybdZwt01I1enaoi":["martyrs","pastors"]},
+      "2026-06-06": {"13Riqm-Shq5th5WcdpVyz44nD8KJIjzhs":["common_6"]},
+      "2026-06-07": {"182Cu7s5l4YmQ2y2gNAnX7tVyo7fkCB09":["eucharist_1"]},
+      "2026-06-08": {"1HwsaKmJnSObNI4mjHKhGc7iAe4LkZ_dG":["common_1"]},
+      "2026-06-09": {"1qZNgTW6pB3-qAR_84GY4wNjoCbBff8tQ":["common_2"]},
+      "2026-06-10": {"1WXoAVTemQXb5x0PV3YCUxKflAr2OL2vY":["common_3"]},
+      "2026-06-11": {"1fg1pOlzPfKUPemgpQS-bFT9XCy8SbpPk":["apostles_2"]},
+      "2026-06-12": {"1Rh1d9a3xGGP-MUvPgyFBhWLsCRVj1gM2":["sacred_heart"]},
+      "2026-06-13": {"12tZBJq9HGnKZQbb7gaHcUUH0SCtmEw2b":["mary_1"]},
+      "2026-06-14": {"1NIQii1gmEQnFPa4fYoN_2nRKdTjSFRRI":["ordinary_8"]},
+      "2026-06-15": {"1KDXiFje1zxgJFQ27G-KgkMyu7BlM0gap":["common_1"]},
+      "2026-06-16": {"1h3WhH5Fr_lxA6zlg29vJjvSO05SAGJvZ":["common_2"]},
+      "2026-06-17": {"1rwkXlsCheR8vv9JHhkbduAWtAd9TFAWs":["common_3"]},
+      "2026-06-18": {"1pPRaNRlzqpzBNKcjz4xKS3eMVyoJ48AY":["common_4"]},
+      "2026-06-19": {"17-cLlwvRPfjfZPV-5LFYvt07XXUpytjn":["common_5"]},
+      "2026-06-20": {"1Ht2zzlzreb5xxA_N7XPlThfXVfDjX58C":["common_6"]},
+      "2026-06-21": {"1czrMPUvmpcdaDxJuN9EG7hiTDys7hbC6":["ordinary_5"]},
+      "2026-06-22": {"1FjxM9MV0DmUjhjh9EF9XbDJTqiyZ077t":["common_1"]},
+      "2026-06-23": {"1MJyVUG8At9sh1_6nc17x2ZxU3Jl86NwP":["common_2"],"13ldO22I7QVbJXUHKiNbmsOdCZPz0cCxU":["john_the_baptist"]},
+      "2026-06-24": {"1xOFpp-i_ev8PVCJCgQC29g0J6tXC_Nsy":["john_the_baptist"]},
+      "2026-06-25": {"1hLvVhFGejMCNXQZ1YkPWXmu1mGEAH7OS":["common_4"]},
+      "2026-06-26": {"1MPfMBM4tWTyVpfV-X78t7VS4Zpqa_9jQ":["common_5"]},
+      "2026-06-27": {"1lHC1BvpGJI8HE_VDHV31sTbwXTb1mA4K":["common_6"]},
+      "2026-06-28": {"16LNcSe1gjws59e9qVK9b4wk-aY4oulKB":["ordinary_1"],"1u4kKy9fkadn6ZVdmNP371-kNubO9gsLc":["peter_and_paul"]},
+      "2026-06-29": {"1ZXK7wUoFIxiOVZ4KzV9F-WiXe9z4-mHH":["peter_and_paul"]},
+      "2026-06-30": {"1j3upOMApkvH3_fqcR_6xeaUNZ1-A1KJE":["common_2"]},
+      "2026-07-01": {"1nzfpCBOXlgRobaIj8uIYgix1JXjhrknF":["common_3"]},
+      "2026-07-02": {"1KZ6QGgYf0vAdDb6sRFCP5drRem6vDwBW":["common_4"]},
+      "2026-07-03": {"1GxyBMkFdKunSf0y1BeHQS6G2dY22Md0Y":["apostles_1"]},
+      "2026-07-04": {"1LhkxqJml1H_pjVXgetMmYT9ahSB8If4m":["common_6"]},
+      "2026-07-05": {"1d4togcoS4Mwil1FF7yLNwIQdoHZg6TSq":["ordinary_1"]},
+      "2026-07-06": {"1lsj8A2C8JUkskV6TEI5R5Os9DO01veea":["common_1"]},
+      "2026-07-07": {"1zWnk6WqJnVd8iNPDm7YI_1J5xEDrGSad":["common_2"]},
+      "2026-07-08": {"1_k-z_RYuu6ugNtkUuzxsAEbjQF_ZMDZ4":["common_3"]},
+      "2026-07-09": {"1saFfeyqa7ZUwh96GZ5q9V932K66YwbQk":["martyrs"]},
+      "2026-07-10": {"1-lzt_7U9KN6O9z8KskBER25NYEsooufL":["common_5"]},
+      "2026-07-11": {"1PC2KHOfMHflNYMYF35Fxo1m9nvBUEcnc":["virgins_and_religious"]},
+      "2026-07-12": {"1PPNBW2CdHuToLIOnpPBucRxdrZbIpv7H":["ordinary_2"]},
+      "2026-07-13": {"154n8r-CYK9QGoDjeNj0PHekXbCGURNnA":["common_1"]},
+      "2026-07-14": {"15jL0yYeWEJfImSkbpEmw7YMBSnwxOQ-S":["common_2"]},
+      "2026-07-15": {"15iYxZN6VTsUNlbbHdkEaJabpJWqL0Xls":["pastors"]},
+      "2026-07-16": {"1oH5dCuk8a1TV5KqSXpLninCevmUacY7c":["common_4"],"1dUB3SKetkHA8eNjrgTc2MuA3tLeQ9O8B":["mary_1_0716"]},
+      "2026-07-17": {"1wzJIis8cM-HD-7ecxRNIWt31fB4loS_3":["common_5"]},
+      "2026-07-18": {"1masBYCCzbhTO0pFxOuGOMBbc1AuY9PBd":["common_6"]},
+      "2026-07-19": {"1TvTK5jxDAa1wLLOlNgFe81GIPvfru7xw":["ordinary_4"]},
+      "2026-07-20": {"1RrWc81LTjbxzzFA26DctXed2YVcCRHTg":["common_1"]},
+      "2026-07-21": {"13A9VyPCwL-nycxAnZ-_7623ybCSk6stu":["common_2"]},
+      "2026-07-22": {"1UgsfARCHQgytT0uhvK6MmSwk8ysuoCz2":["mary_magdalene"]},
+      "2026-07-23": {"1Fe6mVCrEg-GqYNZLpYq0ZQiNxpV0qfu4":["common_4"]},
+      "2026-07-24": {"1Ddx0hf4jjoDyNsKXG1hyIFjlxSmFp3P-":["common_5"]},
+      "2026-07-25": {"1ruTaZnlHXfwYjt42hDWPy1ShSRxW7J0x":["apostles_1"]},
+      "2026-07-26": {"1PPLpoM_dXqMuT9212qLeCycBN2C_zkhf":["ordinary_6"]},
+      "2026-07-27": {"1WHuwgeJctY2Lh0knzcB9rbncZURgCAO5":["common_1"]},
+      "2026-07-28": {"15AJ-eQOvECwb5xIxtMNhWGrWtLm8NgzK":["common_2"]},
+      "2026-07-29": {"1p2oRiQ8d6-e8-GK4vDm7lIil9WBcC48A":["saints_1"]},
+      "2026-07-30": {"179mJaRF_mfMRbFXnYFlbZLyKVpvZFUXl":["common_4"]},
+      "2026-07-31": {"1MT-pVjzZq4j0rVX0LVuK_n6RhN6JzxPD":["pastors"]},
+      "2026-08-01": {"19Ziq8TtDvy3Zi9EwwFL6tbIs2DqUPW2C":["pastors"]},
+      "2026-08-02": {"1XHqUhmoO_eUaViMGJMif3Y9RpJDaVyIy":["ordinary_1"]},
+      "2026-08-03": {"1gLPaXoluhZcoUaaFWo-QUEc58OR8fQ9b":["common_1"]},
+      "2026-08-04": {"1RVVdm0lV0CzV5xxEIqympOLbZq-9_lUy":["pastors"]},
+      "2026-08-05": {"18yoEoZ39BL0vBrcmc_xIx-A9T3cZfvUF":["common_3"]},
+      "2026-08-06": {"1i4lp-Vb5L487YmXm_wdUK5D6n14NZLlb":["transfiguration"]},
+      "2026-08-07": {"1Dr1tr9t7ECU1ibivnpp8jIAsdYL1DGR_":["common_5"]},
+      "2026-08-08": {"1o9Bgif6Pt_uf9NOUvZ8Orc2RH_DcI7is":["pastors","virgins_and_religious"]},
+      "2026-08-09": {"1ae-KzqgRaT1SsUwJgB2HQ4yei_hGdaFe":["ordinary_2"]},
+      "2026-08-10": {"1XNjUih0voYA9yXWtUSDUVs_Q7hsd1CnA":["martyrs"]},
+      "2026-08-11": {"1Apz7uiyYNa3Um8Ii4R2cseJx_KaLo1BJ":["virgins_and_religious"]},
+      "2026-08-12": {"1Za1W7n1cfaemK-PBRPn9KplFQut2xrv-":["common_3"]},
+      "2026-08-13": {"1rBeh3-wy1L_7Fp9CGSq20c0n-FHUdIDI":["common_4"]},
+      "2026-08-14": {"17BI8TQcnuukKBiUhVQQjWmrkz0QaUNHo":["martyrs"]},
+      "2026-08-15": {"1KzK6azc5VKCzTkXjLJ0qwpWyuzz5mLKy":["assumption"],"1jPDawh3RdOnra1PDlh_HNOw72m2Qo_bW":["assumption"]},
+      "2026-08-16": {"18qIY9-QOgSJU0PVvmOGJBywGgmBUFhnp":["ordinary_5"]},
+      "2026-08-17": {"1wcCgi6preO8H8rbE5sMGCwrgFUUmUsnj":["common_1"]},
+      "2026-08-18": {"1z-34kLGYKJUU9IaZpYp81TLiLWCF_uDU":["common_2"]},
+      "2026-08-19": {"19OqUpyH2a-xy4jJal-BOPf1vCJiZgRaK":["common_3"]},
+      "2026-08-20": {"1p2jAlNHS4sYmuHoOscmblhbdzAPo_MSr":["saints_2","virgins_and_religious"]},
+      "2026-08-21": {"1j0ftn9e-_49hHGZQf2aDaz2QfwTjoai0":["pastors"]},
+      "2026-08-22": {"1ceIjD-Xvb-du-8k476gn2YifnhuR_QGu":["mary_1_0822"]},
+      "2026-08-23": {"1L30yq3OHdWb63N78pKfT99L5JZiXJFuK":["ordinary_6"]},
+      "2026-08-24": {"1EpZv3ym3UBnxO9Z9xc7LgdIi7AZSAXrK":["apostles_1"]},
+      "2026-08-25": {"1vmwKLUo3rfjKZ02WlIdWf4cFqXOcv4Rk":["common_2"]},
+      "2026-08-26": {"1AFNZnZOCdEWFZTmtR7IdItc7R1DLmuAl":["common_3"]},
+      "2026-08-27": {"1eetjGea-JKFAa1n5iA_2-6PnuN1xH-Pk":["saints_1"]},
+      "2026-08-28": {"18alF9uNLPhstzQYSdkK8-AgRMDJbdme4":["pastors"]},
+      "2026-08-29": {"1zI2sgv4ZNUyCPGYr-QA99tjayhBbgju2":["tw_john_baptist_martyrdom"]},
+      "2026-08-30": {"1IhjhEYfnCdXxBdnIgevHjV9eGQUfLeBF":["ordinary_1"]},
+      "2026-08-31": {"1GrIFrt4RHTQ4UrOP7aHFcdQy-9ESe8-d":["common_1"]},
+      "2026-09-01": {"1B0kvA05CRzzuR1qmsKeEex7DMeXB9dld":["common_2"]},
+      "2026-09-02": {"1IpaD5mbDGJrc1uItExgma55AaR7YE0Aj":["common_3"]},
+      "2026-09-03": {"1fLbK8J0MNLotoRL_DiE3LEa92g77yV9h":["pastors"]},
+      "2026-09-04": {"1on2dOwfDeQK5LgEdgZAf1wNHqSbPOWZk":["common_5"]},
+      "2026-09-05": {"1W0xwW3m7SD7IvmTIK1onX6MEekjVxVoP":["common_6"],"1lFem59M-n75KBh1AKgf62dfDaPvQMK7M":["virgins_and_religious","saints_1"]},
+      "2026-09-06": {"1oMKXjInBg-KU_2bWTCs8R8v-fh9B61AY":["ordinary_2"],"19ER6j3pZF3r9FyFeoX69A9v6CvLNgMd6":["ordinary_5"],"1ph0z0RpD-zHcU_kiT2qeleIgRlSGlQjx":[]},
+      "2026-09-07": {"19oUvY4jSqtvQ3F2Cse5mYJ8JGt9-73Vm":["common_1"]},
+      "2026-09-08": {"1iu11OrJRdOimwK_fTlhQJ1PF4D-EZkBx":["mary_1_0908"]},
+      "2026-09-09": {"1j50hwj7cjF0Sz3pPBLKryfUJtFhQI_Sf":["common_3"]},
+      "2026-09-10": {"1LA02XPL8L3bLZDfsuQlgyulJJGlHQWyN":["common_4"]},
+      "2026-09-11": {"1n2ENmOY9wXUXb2cgLVt3KPLwclZC80nV":["common_5"]},
+      "2026-09-12": {"1ph3YYGea9Ky2X_hlXQZghAxrHEl-RZq7":["common_6"],"1Ba65Hz5UlUyYXgMvU6D-cqqBqeUpRqtI":["mary_1_0912"]},
+      "2026-09-13": {"1tufpTofrl0UVnOBe9L52r8AAujrD7TOV":["ordinary_1"]},
+      "2026-09-14": {"1V28MHE5ZWYjEhmkPUSKl3mS1e4rDZLqU":["holy_cross"]},
+      "2026-09-15": {"1DqmMWmfyOpXj42A6oKvnPIdBxMSmLDLU":["mary_1_0915"]},
+      "2026-09-16": {"1OgPgvvGa6mM9D9PbuKmEQUnhgT8fkmI4":["martyrs","pastors"]},
+      "2026-09-17": {"1U52e5EB_2W_SxI4WoyKeW3b0GUvSNsrF":["common_4"]},
+      "2026-09-18": {"1SA98T9EaVIsqY1OV4ZVGkzW8eRZzvbMC":["common_5"]},
+      "2026-09-19": {"1EpRbRgCIdweT-nMiIfH1iuunzacV_l7x":["common_6"]},
+      "2026-09-20": {"1Nm0u5KwRG_T71KQhMHHGmtd3LeiVXioG":["ordinary_8"]},
+      "2026-09-21": {"1wyHTZd4tLyJXol7tXrgA9m1ovAg87hg1":["apostles_1"]},
+      "2026-09-22": {"11jW4JzrvuutRAyES5SsfDYi5l8e8qvMg":["common_2"]},
+      "2026-09-23": {"1DKCcUO8ojDyMcEWpxsNvjdTacaVVyQtX":["virgins_and_religious"]},
+      "2026-09-24": {"1okaLAG8g8kTF4KH5Go5wlEXi1GNkyoUW":["common_4"]},
+      "2026-09-25": {"1SA98T9EaVIsqY1OV4ZVGkzW8eRZzvbMC":["common_5"]},
+      "2026-09-26": {"1c_qJvB3OzGK_p8SSKZouLvm2Ggjj4Thr":["common_6"]},
+      "2026-09-27": {"1nIJFywtUMGNzhZ8yOV3h6sDDn9Fh9dud":["ordinary_7"]},
+      "2026-09-28": {"10fwSUBJ_i3XZ8QMAvTqYCczZ71nL2Jx8":["common_1"]},
+      "2026-09-29": {"1rVgEYV7bbxWAwzukMkVyqCgNbr9heZwW":["angels"]},
+      "2026-09-30": {"1cW83BpKVG5VT_vxbe5GWFk1XqM34xexY":["pastors"]},
+      "2026-10-01": {"1urALLB2kUdjdVoSqOUKol4QwFaTyqhva":["virgins_and_religious"]},
+      "2026-10-02": {"1kIHXmz0OHUF0ZdR9SmMyC5OJ8ygHKkfv":["angels"]},
+      "2026-10-03": {"1SUP_nNUJrf8eTSeys3s0SktuAY_a46zJ":["common_6"]},
+      "2026-10-04": {"16QLGPX5jOc8WeDvGHWzdx_HEQXROQdyI":["ordinary_1"]},
+      "2026-10-05": {"15QgmqWzXVFMTI44SpFkqvhPfFlw7kv-d":["common_1"]},
+      "2026-10-06": {"1K-JhNK_-NiD0AeV9_DiVt__RGaOnamnF":["common_2"]},
+      "2026-10-07": {"1Rva3_53BrxohCM6PY13DRtWkKYe0p7VI":["mary_2"]},
+      "2026-10-08": {"1aQ17YpwLJjBWY-KdyeMMV88Wyo-v8jhP":["common_4"]},
+      "2026-10-09": {"1OjWdyCztZeAGBgW68sto6ElAmuSiOIyB":["common_5"]},
+      "2026-10-10": {"12mM-TSvLcqXI_ZywXZ8Fmz5D7dmMUsZd":["common_6"]},
+      "2026-10-11": {"1ayM7LZZHQoVFcso6iSSrL9pMeMD3rS1m":["ordinary_2"]},
+      "2026-10-12": {"1GrlhQzIPK52T7iDfED07VVuDEGm6lUaJ":["common_1"]},
+      "2026-10-13": {"1-KcWJjaoZ2iAHbrpzjM7Cq8gEnXqO6Vo":["common_2"]},
+      "2026-10-14": {"1r7spsy0OTAwARhcKdbv52UJ5DlkSs7cK":["common_3"]},
+      "2026-10-15": {"1F3hVE0GBTG34C2KYR4w7InQWxWqgYLcD":["virgins_and_religious"]},
+      "2026-10-16": {"1ZiFNzpjizzG6WYxV_BXkqXUdrkNTlmxW":["common_5"]},
+      "2026-10-17": {"12hvz0sV7uk80xRziPeHN7bH_EwXQkic1":["martyrs","pastors"]},
+      "2026-10-18": {"1VxphbM7P8rvraOm-Jiv7IzgNvloHWcbw":["ordinary_8"],"1xotUDq6QJRv6odw-B7fRPmOjYcOFVefm":["ordinary_8"]},
+      "2026-10-19": {"1nCul8lDEJ0VRJR0WeNb-nUfbXoxnHoLe":["common_1"]},
+      "2026-10-20": {"1B1HtjiLNC9doEmLiZrkdzCAJUxspNpjs":["common_2"]},
+      "2026-10-21": {"1TF9NvaABa8wPJg4x3PHICeiMsQ1E4dd-":["common_3"]},
+      "2026-10-22": {"18SkJ3ba5F6K-kjDyTMHiJh-7_mZAxomX":["common_4"]},
+      "2026-10-23": {"19AoHVWN9dNRQ47k_HOL2W5hqqA1Mq_r-":["common_5"]},
+      "2026-10-24": {"1yzsqYOR7Jtsz5RQGguG_vYNuzDmWbFd5":["common_6"]},
+      "2026-10-25": {"1FGd9v0AhIVZEG4vTPqU96W-JBZiDRJGW":["ordinary_3"]},
+      "2026-10-26": {"1MPjhiwK3JTAsU8eFP2BJJcjRfR5lTtiJ":["common_1"]},
+      "2026-10-27": {"19lUYvtNqaIg4j5zG8C0_LshnRGqJLjx7":["common_2"]},
+      "2026-10-28": {"1zI65Pfx1Wiq0k7lKGInnFiA5b7mvS31R":["apostles_2"]},
+      "2026-10-29": {"1-6DJu6PD1yCw-ahA3rv4u5F4Y8DibYJJ":["common_4"]},
+      "2026-10-30": {"17aQXQFcz5AKtP6B5TtNmrp70TcNCQtT6":["common_5"]},
+      "2026-10-31": {"18Ulz0NvBanBaDiP3cZ6oSJ2Bw_pX_5dr":["common_6"]},
+      "2026-11-01": {"1vNEcY_7TVp87msXD4wA4P1BCQJ0HejXp":["all_saints"]},
+      "2026-11-02": {"1kXV73eaLSdlyHk9Kk5s4BasiXpI0sfkN":["dead_1"],"1BkgY-ZRgtCgk0qhnY0xKS7qnOFg-T8w4":["dead_2"],"1PBtawz-3O3i0IUuAosEv9hWDa-uEYKwy":["dead_3"]},
+      "2026-11-03": {"1OF_pbJRJb6mNCRybjVABE-WQFjxtmYmP":["common_2"]},
+      "2026-11-04": {"16k-9sGKh1PJYp_Xqa3IjOkt7aFEWDTla":["pastors"]},
+      "2026-11-05": {"16NUvn7gwP2y6Fa2axuh7bnG0j3AYTz0H":["common_4"]},
+      "2026-11-06": {"1NjEOBh14Y5ainNpH1gtsgUhqy0zCvC5u":["common_5"]},
+      "2026-11-07": {"19zp4W7mJXApFUYIS9sIDKqBuYcE4GIjv":["common_6"]},
+      "2026-11-08": {"1xlPMlvUVo1p3W9KWp685Bsg2GRYU84uC":["ordinary_1"]},
+      "2026-11-09": {"1fzHMtEK7tBvw4BnuBj60p7TW3gdsU0Ep":["dedication_of_a_church"]},
+      "2026-11-10": {"1zoZIzviExEQmhjPi2VKLQpL-R5UlFmrr":["pastors"]},
+      "2026-11-11": {"1ebEQ0vB8OHXjuYdEus68yZ756wsSB26F":["pastors"]},
+      "2026-11-12": {"1Aa73wNB4F80NZFrg5264VXmKegjckMIX":["martyrs","pastors"]},
+      "2026-11-13": {"1qmF2N-5jPFZYDJGgDmF0JJqX89Ass9Gb":["common_5"]},
+      "2026-11-14": {"1rkmQUdex3TxHkkE00aDGVXxSxdc4qU0I":["common_6"]},
+      "2026-11-15": {"1JhD2EkSUsvknW4hjFqUlXGbcRCK0sF2k":["ordinary_8"]},
+      "2026-11-16": {"1DdFIm2NpwU4EimEeeRgMNg5_pk1FFeug":["common_1"]},
+      "2026-11-17": {"1ekiUwRXmJ9cQTXi_iZFdlwfPGyjKgjXW":["saints_1","virgins_and_religious"]},
+      "2026-11-18": {"1gaRxUUBic1MloBNzx2zNXXuPT0oZ4hRX":["common_3"],"1iiy_NQEiyNF5mbzmdmuvMGr_sRIG6vyq":["apostles_1"]},
+      "2026-11-19": {"1p8sQWoCQX75bTfQI-nOUSfLKzwSo6AXN":["common_4"]},
+      "2026-11-20": {"1YD2U24lvN7meEFReldRRW3ZHmxMaYm3h":["common_5"]},
+      "2026-11-21": {"1w_mySaD2bGg6PdvvHBmiJATBgOzieLrz":["mary_1_1121"]},
+      "2026-11-22": {"1ttC4FDidDFHlqLIrqlUnEBv3dQwWi08S":["christ_the_king"]},
+      "2026-11-23": {"1zf6ACdUyihBWvlO_Ese_6vkpgnC-_cAq":["common_1"]},
+      "2026-11-24": {"1dqfYSVGTeQk0ZMUCellbO-mvD-0skLEJ":["martyrs"]},
+      "2026-11-25": {"1NtlVyV2Vulqc9sfAGRu2Nzvkoq6NhlWg":["common_3"]},
+      "2026-11-26": {"1Fqlp3_W0PynEqERcETLRkDSfgQWQRXrO":["common_4"]},
+      "2026-11-27": {"14GST-hn-InIzdUG5lT1gJgCH_QQ4olma":["common_5"]},
+      "2026-11-28": {"11Wtb0LKvU1eS28CS4x6L5sd1uzme_0CW":["common_6"]}
     }),
     properSources: Object.freeze({
       annualSheets: [OFFICIAL.yearC, OFFICIAL.yearA],

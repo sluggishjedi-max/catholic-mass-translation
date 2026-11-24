@@ -261,6 +261,7 @@
 
     function cleanTitle(value, lang) {
         let name = String(value || '').normalize('NFKC').replace(brackets, (text,label)=>rankLabel.test(label) ? ' ' : text).trim();
+        if (lang === 'ZH') name = name.replace(/^[（(【]?\s*[甲乙丙]年\s*[）)】]?\s*|\s*[（(【]?\s*[甲乙丙]年\s*[）)】]?$/gu, '');
         if (weekdayCycleNote[lang]) name = name.replace(weekdayCycleNote[lang], '');
         for (const wrapper of rank[lang] || []) name = name.replace(wrapper, '');
         name = name.replace(alternateRanks, (text,label)=>rankLabel.test(label.trim()) ? '' : text);

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 from pathlib import Path
 
 import requests
@@ -51,6 +52,13 @@ def part(identifier: str, title: str, lines: list[dict[str, str]], **extra: obje
     return {"id": identifier, "type": "part", "header": {"pt": title}, "lines": lines, **extra}
 
 
+def build_prefaces(reader: PdfReader) -> dict[str, object]:
+    rows = [{"text_pt": text} for text in html_corpus(reader, 28, 91).split("<br>") if text.strip()]
+    process = subprocess.run(["node", str(ROOT / "tools" / "portugal-prefaces.js")],
+                             input=json.dumps(rows), encoding="utf-8", capture_output=True, check=True)
+    return json.loads(process.stdout)
+
+
 def build_ordinary(reader: PdfReader) -> list[dict[str, object]]:
     dynamic = {
         "entrance": "(Antífona de entrada do dia)", "collect": "(Oração coleta do dia)",
@@ -76,10 +84,7 @@ def build_ordinary(reader: PdfReader) -> list[dict[str, object]]:
             line("Corações ao alto.", "V."), line("O nosso coração está em Deus.", "R."),
             line("Dêmos graças ao Senhor nosso Deus.", "V."), line("É nosso dever, é nossa salvação.", "R."),
         ],
-        "songs": {"cep_complete_prefaces": {
-            "title": {"pt": "Prefácios completos do Missal Romano de Portugal"},
-            "content": [corpus(28, 91)],
-        }},
+        "songs": build_prefaces(reader),
         "sanctus": [line("Santo, Santo, Santo,<br>Senhor Deus do universo.<br>O céu e a terra proclamam a vossa glória.<br>Hossana nas alturas.<br>Bendito O que vem em nome do Senhor.<br>Hossana nas alturas.", "Todos")],
         "forms": {"1": [corpus(92, 99)], "2": [corpus(100, 106)], "3": [corpus(107, 113)], "4": [corpus(114, 119)]},
         "amen": [line("Por Cristo, com Cristo, em Cristo, a Vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória agora e para sempre.", "C."), line("Amen.", "Todos")],

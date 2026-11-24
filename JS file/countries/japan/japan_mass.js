@@ -13489,6 +13489,56 @@
     }
     return right === undefined ? left : right;
   };
+  global.countryMassData.JP.calendar = Object.freeze({
+    "02-03": {
+      "title": "福者ユスト高山右近殉教者",
+      "names": {
+        "JP": "福者ユスト高山右近殉教者",
+        "EN": "Blessed Justus Takayama Ukon, Martyr",
+        "KR": "복자 유스토 다카야마 우콘 순교자"
+      },
+      "observanceId": "particular-02-03-justustakayamaukon",
+      "rank": "memorial",
+      "color": "red",
+      "sourceUrl": "https://www.cbcj.catholic.jp/wp-content/uploads/2026/10/ordo2027.pdf"
+    },
+    "09-10": {
+      "title": "福者セバスチャン木村司祭と204殉教者",
+      "names": {
+        "JP": "福者セバスチャン木村司祭と204殉教者",
+        "EN": "Blessed Sebastian Kimura, Priest, and 204 Martyrs",
+        "KR": "복자 세바스티안 기무라 사제와 204위 순교자"
+      },
+      "observanceId": "particular-09-10-blessedsebastiankimuraand204martyrs",
+      "rank": "memorial",
+      "color": "red",
+      "sourceUrl": "https://www.cbcj.catholic.jp/wp-content/uploads/2026/10/ordo2027.pdf"
+    },
+    "09-28": {
+      "title": "聖トマス西司祭と15殉教者",
+      "names": {
+        "JP": "聖トマス西司祭と15殉教者",
+        "EN": "Saint Thomas Nishi, Priest, and 15 Martyrs",
+        "KR": "성 토마스 니시 사제와 15위 순교자"
+      },
+      "observanceId": "particular-09-28-saintthomasnishiand15martyrs",
+      "rank": "memorial",
+      "color": "red",
+      "sourceUrl": "https://www.cbcj.catholic.jp/wp-content/uploads/2026/10/ordo2027.pdf"
+    },
+    "02-06": {
+      "title": "聖アガタおとめ殉教者",
+      "names": {
+        "JP": "聖アガタおとめ殉教者",
+        "EN": "Saint Agatha, Virgin and Martyr",
+        "KR": "성녀 아가타 동정 순교자 기념일"
+      },
+      "observanceId": "roman-02-05-stagatha",
+      "rank": "memorial",
+      "color": "red",
+      "sourceUrl": "https://www.cbcj.catholic.jp/wp-content/uploads/2026/10/ordo2027.pdf"
+    }
+  });
   const rebuild = () => {
     const order = ['KR', 'VN', 'US', 'JP', 'VA'];
     global.missaData = order.reduce((combined, key) => {
