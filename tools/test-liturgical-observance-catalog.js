@@ -18,7 +18,7 @@ for (const [id,date,calendar,names] of rows) {
     if (calendar==='roman') assert.deepEqual(Object.keys(names).sort(), [...languages].sort(),id);
     for (const [lang, spellings] of Object.entries(names)) {
         assert(languages.includes(lang),lang);
-        assert.equal(catalog.identify(spellings[0],lang),id,JSON.stringify({id,lang,title:spellings[0]}));
+        for (const title of spellings) assert.equal(catalog.identify(title,lang),id,JSON.stringify({id,lang,title}));
     }
 }
 assert(Object.values(months).every(count=>count>0));
@@ -37,6 +37,7 @@ for (const [lang,title,expected] of [
     ['VN','CN XXXIV TN','christ-king'],
     ['VN','Thánh lễ kính Đức Mẹ La Vang','our-lady-of-la-vang'],
     ['KR','[백] 설','kr-lunar-new-year'],
+    ['KR','[홍] 한국 성직자들의 수호자 성 김대건 안드레아 사제 순교자 - 신심 미사','kr-andrew-kim-clergy-votive'],
     ['VN','Thánh lễ Mồng Hai Tết','vn-tet-second-day'],
     ['VN','Lễ Giao Thừa','vn-tet-eve'],
     ['IT','S. Tommaso d’Aquino, presbitero e dottore della Chiesa','StThomasAquinas'],
@@ -72,6 +73,15 @@ try {
     assert.equal(actual[4][1],'solemnity');
     assert.equal(actual[5][1],'feast');
     assert.equal(actual[6][0],'StAndrewKimTaegon');
+    runtime.window.uploadedCountryMassMetadata.AU = {
+        jurisdiction:'AU', calendar:{'01-26':[{title:'Australia Day', names:{EN:'Australia Day'}, rank:'optional', color:'white'}]}
+    };
+    const local = runtime.run(`(() => {
+        const date = new Date(2026,0,26,12);
+        return calendarInfoForCountry(date,'AU').names;
+    })()`);
+    assert.equal(local.EN,'Australia Day');
+    assert.equal(local.ZH,undefined);
 } finally { runtime.close(); }
 
 console.log(JSON.stringify({events:rows.length,roman:roman.length,languages:languages.length,months}));

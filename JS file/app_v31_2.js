@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-3';
+    const APP_VERSION = 'V31.2-20261124-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -1382,8 +1382,11 @@
         if (base && base.meta && base.meta.localOnly && !meta.localOnlyLangs) {
             meta.localOnlyLangs = [normalizeSelectableLang(state.currentLoc || '', '')].filter(Boolean);
         }
+        const preferredId = calendarObservanceId(base);
+        const fallbackId = calendarObservanceId(extra);
+        const distinctObservance = preferredId && preferredId !== fallbackId && (fallbackId || base?.meta?.localOnly);
         return {
-            names: Object.assign({}, extra && extra.names, base && base.names),
+            names: Object.assign({}, distinctObservance ? null : extra?.names, base?.names),
             colors: Object.assign({}, extra && extra.colors, base && base.colors),
             meta
         };
@@ -1446,9 +1449,11 @@
         const calendarNames = calendarNamesWithKnownAliases(override);
         const leftName = calendarNames[leftLang];
         if (!leftName) return info;
-        const names = Object.assign({}, info.names, calendarNames);
         const isLocalSpecific = isOverrideLocalOnlyForLang(override, leftLang)
             && normalizeCalendarNameForCompare(leftName) !== normalizeCalendarNameForCompare(info.names[leftLang]);
+        const overrideId = calendarObservanceId(override);
+        const distinctLocalObservance = isLocalSpecific && overrideId && overrideId !== calendarObservanceId(info);
+        const names = distinctLocalObservance ? calendarNames : Object.assign({}, info.names, calendarNames);
         return Object.assign({}, info, {
             names,
             meta:Object.assign({}, info.meta || {}, override.meta || {}),
@@ -10533,7 +10538,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict126-annual-observances';
+    const STRICT_PARSER_CACHE_VERSION = 'strict127-annual-observances';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
