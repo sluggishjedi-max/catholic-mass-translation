@@ -6,6 +6,8 @@ import copy
 import html
 import json
 import re
+import subprocess
+from pathlib import Path
 from typing import Iterable
 
 
@@ -225,6 +227,14 @@ def structure_lines(lines: Iterable[dict], lang: str) -> list[dict]:
             output.append({**copy.deepcopy(source), speaker_key: speaker, text_key: chunk})
             pending_speaker = ""
     return output
+
+
+def split_prefaces(html: str, lang: str) -> dict:
+    rows = structure_lines([{f"text_{lang}": html}], lang)
+    parser = Path(__file__).with_name("national-prefaces.js")
+    result = subprocess.run(["node", str(parser), lang], input=json.dumps(rows, ensure_ascii=False),
+                            capture_output=True, encoding="utf-8", check=True)
+    return json.loads(result.stdout)
 
 
 def structure_item(item: dict, lang: str) -> dict:

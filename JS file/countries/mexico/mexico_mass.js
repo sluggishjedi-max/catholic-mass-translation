@@ -804,1273 +804,1694 @@
       "text_es": "Es justo y necesario."
     }],
     "songs": {
-      "cem_complete_prefaces": {
+      "advent_1": {
         "title": {
-          "es": "Prefacios completos del Misal Romano para México"
+          "es": "PREFACIO I DE ADVIENTO — LAS DOS VENIDAS DE CRISTO"
         },
-        "content": [{
-          "sp_es": "Todos",
-          "text_es": "Es justo y necesario."
-        }, {
-          "rubric_es": "El sacerdote prosigue el Prefacio con las manos extendidas."
-        }, {
-          "rubric_es": "Al final del Prefacio, junta las manos y en unión del pueblo, concluye el prefacio, cantando o diciendo en voz alta:"
-        }, {
-          "sp_es": "Todos",
-          "text_es": "Santo, Santo, Santo es el Señor, Dios del universo."
-        }, {
-          "sp_es": "",
-          "text_es": "Llenos están el cielo y la tierra de tu gloria."
-        }, {
-          "sp_es": "",
-          "text_es": "Hosanna en el cielo."
-        }, {
-          "sp_es": "",
-          "text_es": "Bendito el que viene en nombre del Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "Hosanna en el cielo."
-        }, {
-          "rubric_es": "32."
-        }, {
-          "sp_es": "",
-          "text_es": "En todas las Misas, el sacerdote puede cantar algunas partes de la Plegaria eucarística, especialmente las principales."
-        }, {
-          "sp_es": "",
-          "text_es": "En la Plegaria eucarística I, o Canon Romano, se puede omitir lo que se encuentra entre paréntesis."
-        }, {
-          "rubric_es": "PREFACIO I DE ADVIENTO LAS DOS VENIDAS DE CRISTO"
-        }, {
-          "rubric_es": "33."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el 16 de diciembre, y en las restantes misas que se celebran durante este tiempo y que no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Quien al venir por vez primera en la humildad de nuestra carne, realizó el plan de redención trazado desde antiguo y nos abrió el camino de la salvación; para que cuando venga de nuevo en la majestad de su gloria, revelando así la plenitud de su obra, podamos recibir los bienes prometidos que ahora, en vigilante espera, confiamos alcanzar."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…"
-        }, {
-          "rubric_es": "PREFACIO II DE ADVIENTO LA DOBLE ESPERA DE CRISTO"
-        }, {
-          "rubric_es": "34."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas del tiempo, desde el 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y que no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "A quien todos los profetas anunciaron, la Virgen esperó con inefable amor de Madre; Juan lo proclamó ya próximo y lo señaló después entre los hombres."
-        }, {
-          "sp_es": "",
-          "text_es": "El mismo Señor nos concede ahora prepararnos con alegría al misterio de su nacimiento, para encontrarnos así cuando llegue, velando en oración y cantando su alabanza."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…"
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO III DE ADVIENTO CRISTO, SEÑOR Y JUEZ DE LA HISTORIA Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el día 16 de diciembre, y en las restantes Misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, es nuestro deber cantar en tu honor himnos de bendición y de alabanza, Padre todopoderoso, principio y fin de todo lo creado."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú nos has ocultado el día y la hora en que Cristo, tu Hijo, Señor y Juez de la historia, aparecerá revestido de poder y de gloria, sobre las nubes del cielo."
-        }, {
-          "sp_es": "",
-          "text_es": "En aquel día terrible y glorioso pasará la figura de este mundo y nacerán los cielos nuevos y la tierra nueva."
-        }, {
-          "sp_es": "",
-          "text_es": "El mismo Señor que se nos mostrará entonces lleno de gloria viene ahora a nuestro encuentro en cada hombre y en cada acontecimiento, para que lo recibamos en la fe y por el amor demos testimonio de la esperanza dichosa de su reino."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, mientras aguardamos su última venida, unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO IV DE ADVIENTO MARÍA, NUEVA EVA Este prefacio se dice en las misas del tiempo, desde el día 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Te alabamos, te bendecimos y te glorificamos por el misterio de la Virgen Madre."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque, si del antiguo adversario nos vino la ruina, en el seno virginal de la hija de Sión ha germinado aquel que nos nutre con el pan de los ángeles, y ha brotado para todo el género humano la salvación y la paz."
-        }, {
-          "sp_es": "",
-          "text_es": "La gracia que Eva nos arrebató nos ha sido devuelta en María."
-        }, {
-          "sp_es": "",
-          "text_es": "En ella, madre de todos los hombres, la maternidad, redimida del pecado y de la muerte, se abre al don de una vida nueva."
-        }, {
-          "sp_es": "",
-          "text_es": "Así, donde había crecido el pecado, se ha desbordado tu misericordia en Cristo, nuestro Salvador."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo, unido a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE NAVIDAD CRISTO, LUZ DEL MUNDO"
-        }, {
-          "rubric_es": "35."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
-        }, {
-          "sp_es": "",
-          "text_es": "También se dice en las ferias del tiempo de Navidad."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque gracias al misterio de la Palabra hecha carne, la luz de tu gloria brilló ante nuestros ojos con nuevo resplandor para que conociendo a Dios visiblemente, él nos lleve al amor de lo invisible."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva."
-        }, {
-          "rubric_es": "PREFACIO II DE NAVIDAD LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN"
-        }, {
-          "rubric_es": "36."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
-        }, {
-          "sp_es": "",
-          "text_es": "También se dice en las ferias del tiempo de Navidad."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque en el misterio santo que hoy celebramos, Cristo, el Señor, sin dejar la gloria del Padre, se hace presente entre nosotros de un modo nuevo; el que era invisible en su naturaleza, se hice visible al adoptar la nuestra; el eterno, engendrado antes del tiempo, comparte nuestra vida temporal para asumir en sí todo lo creado, para reconstruir los que estaba caído y restaurar de esto modo el universo,"
-        }, {
-          "sp_es": "",
-          "text_es": "para llamar de nuevo al reino de los cielos al hombre sumergido el pecado."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los coros angélicos, te aclamamos, llenos de alegría: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva."
-        }, {
-          "rubric_es": "PREFACIO III DE NAVIDAD EL INTERCAMBIO EFECTUADO EN LA ENCARNACIÓN DEL VERBO"
-        }, {
-          "rubric_es": "37."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
-        }, {
-          "sp_es": "",
-          "text_es": "También se dice en las ferias del tiempo de Navidad."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, hoy resplandece ante el mundo el maravilloso intercambio que nos salva, pues al revestirse tu Hijo de nuestra frágil condición, no sólo confiere dignidad eterna a la naturaleza humana, sino que por esta unión admirable, nos hace a nosotros eternos."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva."
-        }, {
-          "rubric_es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR CRISTO, LUZ DE LOS PUEBLOS"
-        }, {
-          "rubric_es": "38."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de la solemnidad de la Epifanía."
-        }, {
-          "sp_es": "",
-          "text_es": "También puede decirse este prefacio, o bien uno de los de Navidad, en los días que van desde la solemnidad de la Epifanía hasta el sábado antes del domingo del Bautismo del Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque [hoy] has revelado en Cristo, para luz de los pueblos, el verdadero misterio de nuestra salvación; pues al manifestarse Cristo en nuestra carne mortal nos hiciste partícipes de la gloria de su inmortalidad."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "En la solemnidad de la Epifanía, si se usa el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "rubric_es": "PREFACIO I DE CUARESMA SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA"
-        }, {
-          "rubric_es": "39."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él concedes a tus hijos anhelar, años tras año, con el gozo de habernos purificado, la solemnidad de la Pascua, para que, dedicados con mayor entrega a la alabanza divina y al amor fraterno, por la celebración de los misterios que nos dieron nuestra vida, lleguemos a ser con plenitud hijos de Dios."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coro celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE CUARESMA LA PENITENCIA ESPIRITUAL"
-        }, {
-          "rubric_es": "40."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has establecido generosamente este tiempo de gracia para renovar en santidad a tus hijos, de modo que, libres de todo afecto desordenado, vivamos las realidades temporales como primicias de las realidades eternas."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO III DE CUARESMA LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS"
-        }, {
-          "rubric_es": "41."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque con nuestras privaciones voluntarias nos enseñas a reconocer y agradecer tus dones, a dominar nuestro afán de suficiencia y a repartir nuestros bienes con los necesitados, imitando así tu generosidad."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con todos los ángeles y santos, te glorificamos y te aclamamos diciendo: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO IV DE CUARESMA LOS FRUTOS DEL AYUNO"
-        }, {
-          "rubric_es": "42."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque con el ayuno corporal refrenas nuestras pasiones, elevas nuestro espíritu, nos das fuerza y recompensa, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
-        }, {
-          "sp_es": "",
-          "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO V DE CUARESMA EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL Este prefacio se dice en las misas de las ferias de Cuaresma."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo bendecir tu nombre, Padre rico en misericordia, ahora que, en nuestro itinerario hacia la luz pascual, seguimos los pasos de Cristo, maestro y modelo de la humanidad, reconciliada en el amor."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú abres a la Iglesia el comino de un nuevo éxodo a través del desierto cuaresmal, para que, llegados a la montaña santa, con el corazón contrito y humillado, reavivemos nuestra vocación de pueblo de la alianza, convocado para bendecir tu nombre, escuchar tu Palabra y experimentar con gozo tus maravillas."
-        }, {
-          "sp_es": "",
-          "text_es": "Por estos signos de salvación, unidos a los ángeles, ministros de tu gloria, proclamamos el canto de tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE LA PASIÓN DEL SEÑOR LA FUERZA DE LA CRUZ"
-        }, {
-          "rubric_es": "43."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las ferias de la quinta semana de Cuaresma y en las misas de los misterios de la cruz y de la pasión del Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque en la pasión salvadora de tu Hijo el universo aprende a proclamar tu grandeza y, por la fuerza de la cruz, el mundo es juzgado como reo y el Crucificado exaltado como juez poderoso."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE LA PASIÓN DEL SEÑOR LA VICTORIA DE LA PASIÓN"
-        }, {
-          "rubric_es": "44."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice el lunes, martes y miércoles de la Semana Santa."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque se acercan ya los días santos de su pasión salvadora y de su resurrección gloriosa; en ellos celebramos su triunfo sobre el poder de nuestro enemigo y renovamos el misterio de nuestra redención."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO PASCUAL I EL MISTERIO PASCUAL"
-        }, {
-          "rubric_es": "46."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice durante el tiempo pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa de la Vigilia pascual se dice en esta noche; el día de Pascua y durante la octava: en este día; en las restantes misas: en este tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en esta noche (este día) (este tiempo) en que Cristo, nuestra Pascua, ha sido inmolado."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él es el verdadero Cordero que quitó el pecado del mundo; muriendo destruyó nuestra muerte, y resucitando restauró la vida."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo."
-        }, {
-          "rubric_es": "Cuando se utiliza el Canon romano, se dice Reunidos en comunión y Acepta, Señor, en tu bondad, propios."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa de la Vigilia pascual se dice: para celebrar la noche santa..."
-        }, {
-          "rubric_es": "PREFACIO PASCUAL II LA NUEVA VIDA EN CRISTO"
-        }, {
-          "rubric_es": "46."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice durante el tiempo pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los hijos de la luz amanecen a la vida eterna, los creyentes atraviesan los umbrales del reino de los cielos; porque en la muerte de Cristo nuestra muerte ha sido vencida y en su resurrección hemos resucitado todos."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO PASCUAL III CRISTO VIVO E INTERCESOR PERPETUO EN FAVOR NUESTRO"
-        }, {
-          "rubric_es": "47."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice durante el tiempo pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él no cesa de ofrecerse por nosotros, de interceder por todos ante ti; inmolado, ya no vuelve a morir; sacrificado, vive para siempre."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO PASCUAL IV LA RESTAURACIÓN DEL UNIVERSO POR LE MISTERIO PASCUAL"
-        }, {
-          "rubric_es": "48."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice durante el tiempo pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque en él fue demolida nuestra antigua miseria, reconstruido cuanto estaba derrumbado y renovada en plenitud la salvación."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO PASCUAL V CRISTO, SACERDOTE Y VÍCTIMA"
-        }, {
-          "rubric_es": "49."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice durante el tiempo pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él, con la inmolación de su cuerpo en la cruz, dio pleno cumplimiento a lo que anunciaban los sacrificios de la antigua alianza, y ofreciéndose a sí mismo por nuestra salvación, quiso ser al mismo tiempo sacerdote, víctima y altar."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN"
-        }, {
-          "rubric_es": "50."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque Jesús, el Señor, el rey de la gloria, vencedor del pecado y de la muerte, ha ascendido [hoy] ante el asombro de los ángeles a lo más alto del cielo, como mediador entre Dios y los hombres, como juez de vivos y muertos."
-        }, {
-          "sp_es": "",
-          "text_es": "No se ha ido para desentenderse de este mundo, sino que ha querido precedernos como cabeza nuestra para que nosotros, miembros de su Cuerpo, vivamos con la ardiente esperanza de seguirlo en su reino."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "rubric_es": "PREFACIO II DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN"
-        }, {
-          "rubric_es": "51."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Que después de su resurrección se apareció visiblemente a todos sus discípulos y, ante sus ojos, fue elevado al cielo para hacernos compartir su divinidad."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO Este prefacio se dice en los días que siguen a la Ascensión hasta el sábado antes del domingo de Pentecostés."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, que todas las criaturas, en el cielo y en la tierra, se unan en tu alabanza, Dios todopoderoso y eterno, por Jesucristo, tu Hijo, Señor del Universo."
-        }, {
-          "sp_es": "",
-          "text_es": "El cual, habiendo entrado una vez para siempre en el santuario del cielo, ahora intercede por nosotros, como mediador que asegura la perenne efusión del Espíritu."
-        }, {
-          "sp_es": "",
-          "text_es": "Pastor y obispo de nuestras almas, nos invita a la plegaria unánime, a ejemplo de María y los Apóstoles, en la espera de un nuevo Pentecostés."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este misterio de santificación y de amor, unidos a los ángeles y a los santos, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO I PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL MISTERIO PASCUAL HA HECHO DE NOSOTROS EL PUEBLO DE DIOS"
-        }, {
-          "rubric_es": "52."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Quien, por su misterio pascual, realizó la obra maravillosa de llamarnos del pecado y de la muerte al honor de ser estirpe elegida, sacerdocio real, nación consagrada, pueblo de su propiedad, para que, trasladados de las tinieblas a tu luz admirable, proclamemos ante el mundo tus maravillas."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "rubric_es": "PREFACIO II PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL PLAN DIVINO DE LA SALVACIÓN"
-        }, {
-          "rubric_es": "53."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "El cual, compadecido del extravío de los hombres, quiso nacer de la Virgen; sufriendo la cruz, nos libró de eterna muerte, y, resucitando, nos dio vida eterna."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "rubric_es": "PREFACIO III PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL HOMBRE SALVADO POR UN HOMBRE"
-        }, {
-          "rubric_es": "54."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque reconocemos como obra de tu poder admirable no sólo haber socorrido nuestra débil naturaleza con la fuerza de tu divinidad, sino haber previsto el remedio en la misma debilidad humana, y de lo que era nuestra ruina haber hecho nuestra salvación, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles te cantan con júbilo eterno, y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO IV PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS ETAPAS DE LA HISTORIA DE LA SALVACIÓN EN CRISTO"
-        }, {
-          "rubric_es": "55."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él, con su nacimiento, restauró nuestra naturaleza caída; con su muerte, destruyó nuestro pecado; al resucitar, nos dio nueva vida; y en su ascensión, nos abrió el camino de tu reino."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "rubric_es": "PREFACIO V PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS MARAVILLAS DE LA CREACIÓN"
-        }, {
-          "rubric_es": "56."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice los domingo del tiempo ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque creaste el universo entero, estableciste el continuo retorno de las estaciones, y al hombre, formado a tu imagen y semejanza, sometiste las maravillas del mundo, para que, en nombre tuyo, dominara la creación, y, al contemplar tus grandezas, en todo momento te alabara, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "A quien cantan los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "rubric_es": "PREFACIO VI PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA PRENDA DE NUESTRA PASCUA ETERNA"
-        }, {
-          "rubric_es": "57."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del tiempo ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "En ti vivimos, nos movemos y existimos; y, todavía peregrinos en este mundo, no sólo experimentamos las pruebas cotidianas de tu amor, sino que poseemos ya en prenda la vida futura, pues esperamos gozar de la Pascua eterna, porque tenemos las primicias del Espíritu por el que resucitaste a Jesús de entre los muertos."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, Señor, te damos gracias y proclamamos tu grandeza cantando con los ángeles: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "rubric_es": "PREFACIO VII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO"
-        }, {
-          "rubric_es": "58."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque tu amor al mundo fue tan misericordioso que no sólo nos enviaste como redentor a tu propio Hijo, sino que en todo lo quisiste semejante al hombre, menos en el pecado, para poder así amar en nosotros lo que amabas en él."
-        }, {
-          "sp_es": "",
-          "text_es": "Con su obediencia has restaurado aquellos dones que por nuestra desobediencia habíamos perdido."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO VIII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA IGLESIA UNIFICADA POR VIRTUD Y A IMAGEN DE LA TRINIDAD"
-        }, {
-          "rubric_es": "59."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has querido reunir de nuevo, por la sangre de tu Hijo y la fuerza del Espíritu, a los hijos dispersos por el pecado; de este modo tu Iglesia, unificada por virtud y a imagen de la Trinidad, aparece ante el mundo como cuerpo de Cristo y templo del Espíritu, para alabanza de tu infinita sabiduría."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA Este prefacio se dice en los domingo del tiempo ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque nos concedes en cada momento lo que más conviene y diriges sabiamente la nave de tu Iglesia, asistiéndola siempre con la fuerza del Espíritu Santo, para que, a impulso de su amor confiado, no abandone la plegaria en la tribulación, ni la acción de gracias en el gozo, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "A quien alaban los cielos y la tierra, los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL DÍA DEL SEÑOR Este prefacio se dice en los domingo del tiempo ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo bendecirte y darte gracias, Padre santo, fuente de la verdad y de la vida, porque nos has convocado en tu casa en este día de fiesta."
-        }, {
-          "sp_es": "",
-          "text_es": "Hoy, tu familia, reunida en la escucha de tu Palabra y en la comunión del pan único y partido, celebra el memorial del Señor resucitado, mientras espera el domingo sin ocaso en el que la humanidad entera entrará en tu descanso."
-        }, {
-          "sp_es": "",
-          "text_es": "Entonces contemplaremos tu rostro y alabaremos por siempre tu misericordia."
-        }, {
-          "sp_es": "",
-          "text_es": "Con esta gozosa esperanza, y unidos a los ángeles y a los santos, cantamos unánimes el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO DEL BAUTISMO EL BAUTISMO, INICIO DE LA VIDA NUEVA Este prefacio se puede decir en la misa del bautismo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias y exaltar tu nombre, Padre santo y misericordioso, por Jesucristo, Señor y Redentor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Te alabamos, te bendecimos y te glorificamos por el sacramento del nuevo nacimiento."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú has querido que del corazón abierto de tu Hijo manara para nosotros el don nupcial del Bautismo, primera Pascua de los creyentes, puerta de nuestra salvación. inicio de la vida en Cristo, fuente de la humanidad nueva."
-        }, {
-          "sp_es": "",
-          "text_es": "Del agua y del Espíritu engendras en el seno de la Iglesia, virgen y madre, un pueblo de sacerdotes y reyes, congregado de entre todas las naciones en la unidad y santidad del amor."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este don de tu benevolencia tu familia te adora y, unida a los ángeles y a los santos, canta el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "En las plegarias eucarísticas se hace recuerdo de los recién bautizados."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO DE LA CONFIRMACIÓN MARCADOS CON EL SELLO DEL ESPÍRITU Este prefacio se puede decir en la misa de la confirmación."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre santo, fuente y origen de todo bien."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú, en el Bautismo das nueva vida a los creyentes y los haces partícipes del misterio pascual de tu Hijo."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú los confirmas con el sello del Espíritu, mediante la imposición de manos y la unción del crisma."
-        }, {
-          "sp_es": "",
-          "text_es": "Así, renovados a imagen de Cristo, el ungido por el Espíritu Santo y enviado para anunciar la buena nueva de la salvación, los haces tus comensales en el banquete eucarístico y testigos de la fe en la Iglesia y en el mundo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, nosotros, reunidos en esta asamblea festiva para celebrar los prodigios de un renovado Pentecostés, y unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "En las plegarias eucarísticas se hace mención de los recién confirmados."
-        }, {
-          "rubric_es": "PREFACIO I DE LA SANTÍSIMA EUCARISTÍA EL SACRIFICIO Y EL SACRAMENTO DE CRISTO"
-        }, {
-          "rubric_es": "60."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en la misa de la Cena del Señor; puede decirse también en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro, verdadero y único sacerdote."
-        }, {
-          "sp_es": "",
-          "text_es": "El cual, al instituir el sacrificio de la eterna alianza, se ofreció a sí mismo como víctima de salvación, y nos mandó perpetuar esta ofrenda en conmemoración suya."
-        }, {
-          "sp_es": "",
-          "text_es": "Su carne, inmolada por nosotros, es alimento que nos fortalece; su sangre, derramada por nosotros, es bebida que nos purifica."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "En la misa de la Cena del Señor, cuando se utiliza el Canon romano, se dice Reunidos en comunión, Acepta, Señor, en tu bondad y Él cual, la víspera de su Pasión propios."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO II DE LA SANTÍSIMA EUCARISTÍA LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA Este prefacio se dice en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "El cual, en la última cena con los apóstoles, para perpetuar su pasión salvadora, se entregó a sí mismo como Cordero inmaculado y Eucaristía perfecta."
-        }, {
-          "sp_es": "",
-          "text_es": "Con este sacramento alimentas y santificas a tus fieles, para que una misma fe ilumine y un mismo amor congregue a todos los hombres que habitan un mismo mundo."
-        }, {
-          "sp_es": "",
-          "text_es": "Así, pues, nos reunimos en torno a la mesa de este sacramento admirable, para que la abundancia de tu gracia nos lleve a poseer la vida celestial."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, Señor, todas tus criaturas, en el cielo y en la tierra, te adoran cantando un cántico nuevo; y también nosotros, con los ángeles, te aclamamos por siempre diciendo: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA Este prefacio se puede decir en la misa del viático."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario darte gracias, es bueno bendecir tu nombre, Padre santo, Dios de misericordia y de paz."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has querido que tu Hijo, obediente hasta la muerte de cruz, nos precediera en el camino de retorno a ti, término de toda esperanza humana."
-        }, {
-          "sp_es": "",
-          "text_es": "En la Eucaristía, testamento de su amor, él se hace comida y bebida espiritual, para alimentarnos en nuestro viaje hacia la Pascua eterna."
-        }, {
-          "sp_es": "",
-          "text_es": "Con esta prenda de la resurrección futura, en la esperanza participamos ya de la mesa gloriosa de tu reino y, unidos a los ángeles y a los santos, proclamamos el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO DE LA PENITENCIA EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU Este prefacio se puede decir en el tiempo de Cuaresma."
-        }, {
-          "rubric_es": "Si dice también en las misas de reconciliación y en las otras misas de carácter penitencial."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo alabarte y darte gracias, Padre santo, Dios todopoderoso, por tus beneficios, sobre todo por la gracia del perdón."
-        }, {
-          "sp_es": "",
-          "text_es": "Al hombre, náufrago a causa del pecado, con el sacramento de la reconciliación le abres el puerto de la misericordia y de la paz, en Cristo muerto y resucitado."
-        }, {
-          "sp_es": "",
-          "text_es": "Con el poder de tu Espíritu, has dispuesto para la Iglesia, santa y al mismo tiempo necesitada de penitencia, una segunda tabla de salvación después del Bautismo, y así la renuevas incesantemente, para congregarla en el banquete festivo de tu amor."
-        }, {
-          "sp_es": "",
-          "text_es": "Por ese don de tu benevolencia, unidos a los ángeles y a los santos, contamos, a una voz, el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO DE LA UNCIÓN DE ENFERMOS EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO Este prefacio se puede decir en las misas de unción de los enfermos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, Dios de misericordia, Señor todopoderoso, por Jesucristo, Señor y Redentor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has querido que tu único Hijo, autor de la vida, médico de los cuerpos y de las almas, tomase sobre sí nuestras debilidades, para socorrernos en los momentos de prueba y santificarnos en la experiencia del dolor."
-        }, {
-          "sp_es": "",
-          "text_es": "En el signo sacramental de la Unción, por la oración de la Iglesia, nos librar del pecado, nos confortas con la gracia del Espíritu Santo y nos haces partícipes de la victoria pascual."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este signo de tu benevolencia, unidos a los ángeles y a los santos, cantamos, a una voz, el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE SANTA MARÍA VIRGEN LA MATERNIDAD DE MARÍA"
-        }, {
-          "rubric_es": "62."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de la Santísima Virgen, añadiendo en su lugar (***) la mención de la celebración del día, según se indica en cada misa."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Y alabar, bendecir y proclamar tu gloria en la (***) de santa María, siempre virgen."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque ella concibió a tu único Hijo por obra del Espíritu Santo, y, sin perder la gloria de su virginidad, derramó sobre el mundo la luz eterna, Jesucristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
-        }, {
-          "sp_es": "",
-          "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE SANTA MARÍA VIRGEN LA IGLESIA ALABA A DIOS INSPIRÁNDOSE EN LAS PALABRAS DE MARÍA"
-        }, {
-          "rubric_es": "63."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las Misas de la Santísima Virgen."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Señor, y proclamar tus maravillas en la perfección de tus santos; y, al conmemorar a la bienaventurada Virgen María, exaltar especialmente tu generosidad inspirándonos en su mismo cántico de alabanza."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad hiciste obras grandes en favor de todos los pueblos, y has mantenido tu misericordia de generación en generación, cuando, al mirar la humillación de tu esclava, por ella nos diste al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles y los arcángeles te adoran eternamente, gozosos en tu presencia."
-        }, {
-          "sp_es": "",
-          "text_es": "Permítenos unirnos a sus voces cantando tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO III DE SANTA MARÍA VIRGEN MARÍA, MODELO Y MADRE DE LA IGLESIA Este prefacio se dice en las misas de la Santísima Virgen."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, y alabarte debidamente en esta celebración en honor de la Virgen María."
-        }, {
-          "sp_es": "",
-          "text_es": "Ella, al aceptar tu Palabra con limpio corazón, mereció concebirla en su seno virginal, y al dar a luz a su Hijo preparó el nacimiento de la Iglesia."
-        }, {
-          "sp_es": "",
-          "text_es": "Ella, al recibir junto a la cruz el testamento de tu amor divino, tomó como hijos a todos los hombres, nacidos a la vida sobrenatural por la muerte de Cristo."
-        }, {
-          "sp_es": "",
-          "text_es": "Ella, en la espera pentecostal del Espíritu, al unir sus oraciones a las de los discípulos, se convirtió en el modelos de la Iglesia suplicante."
-        }, {
-          "sp_es": "",
-          "text_es": "Desde su asunción a los cielos, acompaña con amor materno a la Iglesia peregrina, y protege sus pasos hacia la patria celeste, hasta la venida gloriosa del Señor."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con todos los ángeles y santos, te alabamos diciendo sin cesar: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO IV DE SANTA MARÍA VIRGEN MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA Este prefacio se dice en las misas de la Santísima Virgen."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre Santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Te alabamos y te bendecimos, por Jesucristo, tu Hijo, en esta fiesta (memoria) de la bienaventurada Virgen María."
-        }, {
-          "sp_es": "",
-          "text_es": "Ella, como humilde sierva, escuchó tu palabra y la conservó en su corazón; admirablemente unida al misterio de la redención, perseveró con los apóstoles en la plegaria, mientras esperaban al Espíritu Santo, y ahora brilla en nuestro camino como signo de consuelo y de firme esperanza."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este don de tu benevolencia, unidos a los ángeles y a los santos, te entonamos nuestro canto y proclamamos tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO V DE SANTA MARÍA VIRGEN MARÍA, IMAGEN DE LA HUMANIDAD NUEVA Este prefacio se dice en las misas de la Santísima Virgen."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, Padre Santo, fuente de la vida y de la alegría."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque en esta etapa final de la historia has querido revelarnos el misterio escondido desde siglos, para que así el mundo entero retorne a la vida y recobre la esperanza."
-        }, {
-          "sp_es": "",
-          "text_es": "En Cristo, nuevo Adán, y en María, nueva Eva, se revela el misterio de tu Iglesia, como primicia de la humanidad redimida."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este inefable don la creación entera, con la fuerza del Espíritu Santo, emprende de nuevo su camino hacia la Pascua eterna."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, nosotros, unidos a los ángeles y a los santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE LOS APÓSTOLES LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS"
-        }, {
-          "rubric_es": "64."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de los Apóstoles, principalmente en las de san Pedro y san Pablo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso, Pastor eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque no abandonas nunca a tu rebaño, sino que por medio de los santos Apóstoles lo proteges y conservas, y quieres que tenga siempre por guía la palabra de aquellos mismos pastores a quienes tu Hijo dio la misión de anunciar el Evangelio."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE LOS APÓSTOLES LOS APÓSTOLES, FUNDAMENTO DE LA IGLESIA Y TESTIMONIO PARA EL MUNDO"
-        }, {
-          "rubric_es": "65."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de los Apóstoles y de los Evangelistas."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has cimentado tu Iglesia sobre la roca de los Apóstoles, para que permanezca en el mundo como signo de santidad y señale a todos los hombres el camino que nos lleva hacia ti."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, Señor, con todos los ángeles te alabamos ahora y por siempre diciendo con humilde fe: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE LOS SANTOS LA GLORIA DE LOS SANTOS"
-        }, {
-          "rubric_es": "66."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los Santos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre Santo, porque manifiestas tu gloria en la asamblea de los santos, y, al coronar sus méritos, coronas tu propia obra."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú nos ofreces el ejemplo de su vida, la ayuda de su intercesión y la participación en su destino, para que, animados por su presencia alentadora, luchemos sin desfallecer en la carrera y alcancemos, como ellos, la corona de gloria que no se marchita, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con la multitud de los santos, cantamos sin cesar el himno de alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE LOS SANTOS EFICACIA DE LA ACCIÓN DE LOS SANTOS"
-        }, {
-          "rubric_es": "67."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los Santos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque mediante el testimonio admirable de tus santos fecundas sin cesar a tu Iglesia con vitalidad siempre nueva, dándonos así pruebas evidentes de tu amor."
-        }, {
-          "sp_es": "",
-          "text_es": "Ellos nos estimulan con su ejemplo en el camino de la vida y nos ayudan con su intercesión."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, ahora, nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
-        }, {
-          "rubric_es": "68."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los mismos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque la sangre del glorioso mártir san (santa) N., derramada, como la de Cristo, para confesar tu nombre, manifiesta las maravillas de tu poder; pues en su martirio, Señor, has sacado fuerza de lo débil, haciendo de la fragilidad tu propio testimonio; por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
-        }, {
-          "rubric_es": "69."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los mismos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque al alabar nosotros a los santos mártires, tu eres glorificado ya que todo lo que concierne a su pasión es obra admirable de tu poder."
-        }, {
-          "sp_es": "",
-          "text_es": "En efecto, tu misericordiosamente les proporcionas el ardor de la fe, tu les otorgas la firmeza de la perseverancia y les concedes la victoria en la batalla, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, tus creaturas del cielo y de la tierra te adoran cantando un cántico nuevo, y nosotros con todos los coros de los ángeles, proclamamos tu gloria diciendo: Santo, Santo, Santo…"
-        }, {
-          "rubric_es": "PREFACIO DE LOS SANTOS PASTORES LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA"
-        }, {
-          "rubric_es": "70."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Pastores."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los mismos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque nos concedes la alegría de celebrar hoy la fiesta de san N., fortaleciendo a tu Iglesia con el ejemplo de su vida, instruyéndola con su palabra y protegiéndola con su intercesión."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO DE SANTAS VÍRGENES Y RELIGIOSOS SIGNIFICADO DE LA VIDA CONSAGRADA EXCLUSIVA A DIOS"
-        }, {
-          "rubric_es": "71."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las solemnidades y fiestas de las santas Vírgenes y de los santos Religiosos."
-        }, {
-          "rubric_es": "Se puede decir también en las memorias de los mismos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, que te alaben, Señor, tus criaturas del cielo y de la tierra, y, al recordar a los santos que por el reino de los cielos se consagraron a Cristo, celebremos la grandeza de tus designios."
-        }, {
-          "sp_es": "",
-          "text_es": "En ellos recobra el hombre la santidad primera, que de ti había recibido, y gusta ya en la tierra los dones reservados para el cielo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN I EL UNIVERSO RESTAURADO EN CRISTO"
-        }, {
-          "rubric_es": "72."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "A quien hiciste fundamento de todo y de cuya plenitud quisiste que participáramos todos."
-        }, {
-          "sp_es": "",
-          "text_es": "Siendo él de condición divina se despojó de su rango, y por su sangre derramada en la cruz puso en paz todas las cosas; y así, constituido Señor del universo, es fuente de salvación eterna para cuantos creen en él."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN II LA SALVACIÓN POR CRISTO"
-        }, {
-          "rubric_es": "73."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, que por amor creaste al hombre, y, aunque condenado justamente, con tu misericordia lo redimiste, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
-        }, {
-          "sp_es": "",
-          "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN III ALABANZA A DIOS QUE NOS CREÓ Y NOS HA REDIMIDO EN CRISTO"
-        }, {
-          "rubric_es": "74."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque has querido ser, por medio de tu amado Hijo, no sólo el creador del género humano, sino también el autor generoso de la nueva creación."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con razón te sirven todas las criaturas, con justicia te alaban todos los redimidos y unánimes te bendicen tus santos."
-        }, {
-          "sp_es": "",
-          "text_es": "Con ellos, unidos a los ángeles, nosotros queremos celebrarte y te alabamos diciendo: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN IV NUESTRA MISMA ACCIÓN DE GRACIAS ES UN DON DE DIOS"
-        }, {
-          "rubric_es": "75."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Pues aunque no necesitas nuestra alabanza, ni nuestras bendiciones te enriquecen, tú inspiras y haces tuya nuestra acción de gracias, para que nos sirva de salvación, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "A quien alaban los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN V PROCLAMACIÓN DEL MISTERIO DE CRISTO"
-        }, {
-          "rubric_es": "76."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque, unidos en la caridad, celebramos la muerte de tu Hijo, con fe viva proclamamos su resurrección, y con esperanza firme anhelamos su venida gloriosa."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO COMÚN VI EL MISTERIO DE LA SALVACIÓN EN CRISTO"
-        }, {
-          "rubric_es": "77."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio, tomado de la Plegaria eucarística II, se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, que es tu palabra, hiciste todas las cosas; tú nos lo enviaste para que, hecho hombre por obra del Espíritu Santo y nacido de María la Virgen, fuera nuestro Salvador y Redentor."
-        }, {
-          "sp_es": "",
-          "text_es": "Él, en cumplimiento de tu voluntad, para destruir la muerte y manifestar la resurrección, extendió sus brazos en la cruz, y así adquirió para ti un pueblo santo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y los santos, cantamos tu gloria diciendo: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO COMÚN VII CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios de la alianza y de la paz."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque tú llamaste a Abrahán y le mandaste salir de su tierra, para constituirlo padre de todas las naciones."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú suscitaste a Moisés para librar a tu pueblo y guiarlo a la tierra de promisión."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú, en la etapa final de la historia, has enviado a tu Hijo, como huésped y peregrino en medio de nosotros, para redimirnos del pecado y de la muerte; y has derramado el Espíritu, para hacer de todas las naciones un solo pueblo nuevo, que tiene como meta, tu reino, como estado, la libertad de tus hijos, como ley, el precepto del amor."
-        }, {
-          "sp_es": "",
-          "text_es": "Por estos dones de tu benevolencia, unidos a los ángeles y a los santos, cantamos con gozo el himno de tu gloría: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO COMÚN VIII JESÚS, BUEN SAMARITANO Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "Especialmente es recomendable usarlo en el domingo XV del tiempo ordinario del año C y el lunes de la semana XXVII del tiempo ordinario."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias y deber nuestro alabarte, Padre santo, Dios todopoderoso y eterno, en todos los momentos y circunstancias de la vida, en la salud y en la enfermedad, en el sufrimiento y en el gozo, por tu siervo, Jesús, nuestro Redentor."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él, en su vida terrena, pasó haciendo el bien y curando a los oprimidos por el mal."
-        }, {
-          "sp_es": "",
-          "text_es": "También hoy, como buen samaritano, se acerca a todo hombre que sufre en su cuerpo o en su espíritu, y cura sus heridas con el aceite del consuelo y el vino de la esperanza."
-        }, {
-          "sp_es": "",
-          "text_es": "Por este don de tu gracia, incluso cuando nos vemos sumergidos en la noche del dolor, vislumbramos la luz pascual en tu Hijo, muerto y resucitado."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los ángeles y santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "sp_es": "",
-          "text_es": "PREFACIO COMÚN IX LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú eres el Dios vivo y verdadero; el universo está lleno de tu presencia, pero sobre todo has dejado la huella de tu gloria en el hombre creado a tu imagen."
-        }, {
-          "sp_es": "",
-          "text_es": "Tú lo llamas a cooperar con el trabajo cotidiano en el proyecto de la creación y le das tu Espíritu para que sea artífice de justicia y de paz, en Cristo, el hombre nuevo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los ángeles y a los santos, cantamos con alegría el himno de tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO I DE DIFUNTOS LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO"
-        }, {
-          "rubric_es": "78."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de difuntos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "En él brilla la esperanza de nuestra feliz resurrección; y así, aunque la certeza de morir nos entristece, nos consuela la promesa de la futura inmortalidad."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque la vida de los que en ti creemos, Señor, no termina, se transforma; y, al deshacerse nuestra morada terrenal, adquirimos una mansión eterna en el cielo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO II DE DIFUNTOS CRISTO HA MUERTO PARA NUESTRA VIDA"
-        }, {
-          "rubric_es": "79."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de difuntos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él aceptó la muerte, uno por todos, para librarnos del morir eterno; es más, quiso entregar su vida para que todos tuviéramos vida eterna."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO III DE DIFUNTOS CRISTO, SALVACIÓN Y VIDA"
-        }, {
-          "rubric_es": "80."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de difuntos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque él es la salvación del mundo, la vida de los hombres, la resurrección de los muertos."
-        }, {
-          "sp_es": "",
-          "text_es": "Por él, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO IV DE DIFUNTOS LA VIDA TERRENA Y LA GLORIA CELESTE"
-        }, {
-          "rubric_es": "81."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de difuntos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque tu voluntad nos da la vida, tus decretos la dirigen y un mandato tuyo, en castigo del pecado, nos devuelve a la tierra de la que habíamos sido sacados."
-        }, {
-          "sp_es": "",
-          "text_es": "Y también te damos gracias porque, al redimirnos con la muerte de tu Hijo Jesucristo, por tu voluntad salvadora nos llevas a nueva vida para que tengamos parte en su gloriosa resurrección."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo..."
-        }, {
-          "rubric_es": "PREFACIO V DE DIFUNTOS NUESTRA RESURRECCIÓN POR MEDIO DE LA VICTORIA DE CRISTO"
-        }, {
-          "rubric_es": "82."
-        }, {
-          "sp_es": "",
-          "text_es": "Este prefacio se dice en las misas de difuntos."
-        }, {
-          "sp_es": "",
-          "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre santo."
-        }, {
-          "sp_es": "",
-          "text_es": "Porque si el morir se debe al hombre, el ser llamados a la vida con Cristo es obra gratuita de tu amor, ya que, habiendo muerto por el pecado, hemos sido redimidos por la victoria de tu Hijo."
-        }, {
-          "sp_es": "",
-          "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros te proclamamos en la tierra, diciendo sin cesar: Santo, Santo, Santo..."
-        }]
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el 16 de diciembre, y en las restantes misas que se celebran durante este tiempo y que no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Quien al venir por vez primera en la humildad de nuestra carne, realizó el plan de redención trazado desde antiguo y nos abrió el camino de la salvación; para que cuando venga de nuevo en la majestad de su gloria, revelando así la plenitud de su obra, podamos recibir los bienes prometidos que ahora, en vigilante espera, confiamos alcanzar."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_2": {
+        "title": {
+          "es": "PREFACIO II DE ADVIENTO — LA DOBLE ESPERA DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y que no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "A quien todos los profetas anunciaron, la Virgen esperó con inefable amor de Madre; Juan lo proclamó ya próximo y lo señaló después entre los hombres."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El mismo Señor nos concede ahora prepararnos con alegría al misterio de su nacimiento, para encontrarnos así cuando llegue, velando en oración y cantando su alabanza."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_1a": {
+        "title": {
+          "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el día 16 de diciembre, y en las restantes Misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, es nuestro deber cantar en tu honor himnos de bendición y de alabanza, Padre todopoderoso, principio y fin de todo lo creado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú nos has ocultado el día y la hora en que Cristo, tu Hijo, Señor y Juez de la historia, aparecerá revestido de poder y de gloria, sobre las nubes del cielo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En aquel día terrible y glorioso pasará la figura de este mundo y nacerán los cielos nuevos y la tierra nueva."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El mismo Señor que se nos mostrará entonces lleno de gloria viene ahora a nuestro encuentro en cada hombre y en cada acontecimiento, para que lo recibamos en la fe y por el amor demos testimonio de la esperanza dichosa de su reino."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, mientras aguardamos su última venida, unidos a los ángeles y a los santos, cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_2a": {
+        "title": {
+          "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el día 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Te alabamos, te bendecimos y te glorificamos por el misterio de la Virgen Madre."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque, si del antiguo adversario nos vino la ruina, en el seno virginal de la hija de Sión ha germinado aquel que nos nutre con el pan de los ángeles, y ha brotado para todo el género humano la salvación y la paz."
+          },
+          {
+            "sp_es": "",
+            "text_es": "La gracia que Eva nos arrebató nos ha sido devuelta en María."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En ella, madre de todos los hombres, la maternidad, redimida del pecado y de la muerte, se abre al don de una vida nueva."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Así, donde había crecido el pecado, se ha desbordado tu misericordia en Cristo, nuestro Salvador."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo, unido a los ángeles y a los santos, cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "nativity_1": {
+        "title": {
+          "es": "PREFACIO I DE NAVIDAD — CRISTO, LUZ DEL MUNDO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
+          },
+          {
+            "rubric_es": "También se dice en las ferias del tiempo de Navidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque gracias al misterio de la Palabra hecha carne, la luz de tu gloria brilló ante nuestros ojos con nuevo resplandor para que conociendo a Dios visiblemente, él nos lleve al amor de lo invisible."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "nativity_2": {
+        "title": {
+          "es": "PREFACIO II DE NAVIDAD — LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
+          },
+          {
+            "rubric_es": "También se dice en las ferias del tiempo de Navidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque en el misterio santo que hoy celebramos, Cristo, el Señor, sin dejar la gloria del Padre, se hace presente entre nosotros de un modo nuevo; el que era invisible en su naturaleza, se hice visible al adoptar la nuestra; el eterno, engendrado antes del tiempo, comparte nuestra vida temporal para asumir en sí todo lo creado, para reconstruir los que estaba caído y restaurar de esto modo el universo,"
+          },
+          {
+            "sp_es": "",
+            "text_es": "para llamar de nuevo al reino de los cielos al hombre sumergido el pecado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los coros angélicos, te aclamamos, llenos de alegría:"
+          }
+        ]
+      },
+      "nativity_3": {
+        "title": {
+          "es": "PREFACIO III DE NAVIDAD — EL INTERCAMBIO EFECTUADO EN LA ENCARNACIÓN DEL VERBO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
+          },
+          {
+            "rubric_es": "También se dice en las ferias del tiempo de Navidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, hoy resplandece ante el mundo el maravilloso intercambio que nos salva, pues al revestirse tu Hijo de nuestra frágil condición, no sólo confiere dignidad eterna a la naturaleza humana, sino que por esta unión admirable, nos hace a nosotros eternos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:"
+          }
+        ]
+      },
+      "epiphany": {
+        "title": {
+          "es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR — CRISTO, LUZ DE LOS PUEBLOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de la solemnidad de la Epifanía."
+          },
+          {
+            "rubric_es": "También puede decirse este prefacio, o bien uno de los de Navidad, en los días que van desde la solemnidad de la Epifanía hasta el sábado antes del domingo del Bautismo del Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque [hoy] has revelado en Cristo, para luz de los pueblos, el verdadero misterio de nuestra salvación; pues al manifestarse Cristo en nuestra carne mortal nos hiciste partícipes de la gloria de su inmortalidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "lent_1": {
+        "title": {
+          "es": "PREFACIO I DE CUARESMA — SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él concedes a tus hijos anhelar, años tras año, con el gozo de habernos purificado, la solemnidad de la Pascua, para que, dedicados con mayor entrega a la alabanza divina y al amor fraterno, por la celebración de los misterios que nos dieron nuestra vida, lleguemos a ser con plenitud hijos de Dios."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coro celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "lent_2": {
+        "title": {
+          "es": "PREFACIO II DE CUARESMA — LA PENITENCIA ESPIRITUAL"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has establecido generosamente este tiempo de gracia para renovar en santidad a tus hijos, de modo que, libres de todo afecto desordenado, vivamos las realidades temporales como primicias de las realidades eternas."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:"
+          }
+        ]
+      },
+      "lent_3": {
+        "title": {
+          "es": "PREFACIO III DE CUARESMA — LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque con nuestras privaciones voluntarias nos enseñas a reconocer y agradecer tus dones, a dominar nuestro afán de suficiencia y a repartir nuestros bienes con los necesitados, imitando así tu generosidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con todos los ángeles y santos, te glorificamos y te aclamamos diciendo:"
+          }
+        ]
+      },
+      "lent_4": {
+        "title": {
+          "es": "PREFACIO IV DE CUARESMA — LOS FRUTOS DEL AYUNO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque con el ayuno corporal refrenas nuestras pasiones, elevas nuestro espíritu, nos das fuerza y recompensa, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "lent_5": {
+        "title": {
+          "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de las ferias de Cuaresma."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo bendecir tu nombre, Padre rico en misericordia, ahora que, en nuestro itinerario hacia la luz pascual, seguimos los pasos de Cristo, maestro y modelo de la humanidad, reconciliada en el amor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú abres a la Iglesia el comino de un nuevo éxodo a través del desierto cuaresmal, para que, llegados a la montaña santa, con el corazón contrito y humillado, reavivemos nuestra vocación de pueblo de la alianza, convocado para bendecir tu nombre, escuchar tu Palabra y experimentar con gozo tus maravillas."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por estos signos de salvación, unidos a los ángeles, ministros de tu gloria, proclamamos el canto de tu alabanza:"
+          }
+        ]
+      },
+      "passion_1": {
+        "title": {
+          "es": "PREFACIO I DE LA PASIÓN DEL SEÑOR — LA FUERZA DE LA CRUZ"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las ferias de la quinta semana de Cuaresma y en las misas de los misterios de la cruz y de la pasión del Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque en la pasión salvadora de tu Hijo el universo aprende a proclamar tu grandeza y, por la fuerza de la cruz, el mundo es juzgado como reo y el Crucificado exaltado como juez poderoso."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:"
+          }
+        ]
+      },
+      "passion_2": {
+        "title": {
+          "es": "PREFACIO II DE LA PASIÓN DEL SEÑOR — LA VICTORIA DE LA PASIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice el lunes, martes y miércoles de la Semana Santa."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque se acercan ya los días santos de su pasión salvadora y de su resurrección gloriosa; en ellos celebramos su triunfo sobre el poder de nuestro enemigo y renovamos el misterio de nuestra redención."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "easter_1": {
+        "title": {
+          "es": "PREFACIO PASCUAL I — EL MISTERIO PASCUAL"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice durante el tiempo pascual."
+          },
+          {
+            "rubric_es": "En la misa de la Vigilia pascual se dice en esta noche; el día de Pascua y durante la octava: en este día; en las restantes misas: en este tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en esta noche (este día) (este tiempo) en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él es el verdadero Cordero que quitó el pecado del mundo; muriendo destruyó nuestra muerte, y resucitando restauró la vida."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "easter_2": {
+        "title": {
+          "es": "PREFACIO PASCUAL II — LA NUEVA VIDA EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice durante el tiempo pascual."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los hijos de la luz amanecen a la vida eterna, los creyentes atraviesan los umbrales del reino de los cielos; porque en la muerte de Cristo nuestra muerte ha sido vencida y en su resurrección hemos resucitado todos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "easter_3": {
+        "title": {
+          "es": "PREFACIO PASCUAL III — CRISTO VIVO E INTERCESOR PERPETUO EN FAVOR NUESTRO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice durante el tiempo pascual."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él no cesa de ofrecerse por nosotros, de interceder por todos ante ti; inmolado, ya no vuelve a morir; sacrificado, vive para siempre."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "easter_4": {
+        "title": {
+          "es": "PREFACIO PASCUAL IV — LA RESTAURACIÓN DEL UNIVERSO POR LE MISTERIO PASCUAL"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice durante el tiempo pascual."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque en él fue demolida nuestra antigua miseria, reconstruido cuanto estaba derrumbado y renovada en plenitud la salvación."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "easter_5": {
+        "title": {
+          "es": "PREFACIO PASCUAL V — CRISTO, SACERDOTE Y VÍCTIMA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice durante el tiempo pascual."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él, con la inmolación de su cuerpo en la cruz, dio pleno cumplimiento a lo que anunciaban los sacrificios de la antigua alianza, y ofreciéndose a sí mismo por nuestra salvación, quiso ser al mismo tiempo sacerdote, víctima y altar."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ascension_1": {
+        "title": {
+          "es": "PREFACIO I DE LA ASCENSIÓN DEL SEÑOR — EL MISTERIO DE LA ASCENSIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque Jesús, el Señor, el rey de la gloria, vencedor del pecado y de la muerte, ha ascendido [hoy] ante el asombro de los ángeles a lo más alto del cielo, como mediador entre Dios y los hombres, como juez de vivos y muertos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "No se ha ido para desentenderse de este mundo, sino que ha querido precedernos como cabeza nuestra para que nosotros, miembros de su Cuerpo, vivamos con la ardiente esperanza de seguirlo en su reino."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ascension_2": {
+        "title": {
+          "es": "PREFACIO II DE LA ASCENSIÓN DEL SEÑOR — EL MISTERIO DE LA ASCENSIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Que después de su resurrección se apareció visiblemente a todos sus discípulos y, ante sus ojos, fue elevado al cielo para hacernos compartir su divinidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "after_ascension": {
+        "title": {
+          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los días que siguen a la Ascensión hasta el sábado antes del domingo de Pentecostés."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, que todas las criaturas, en el cielo y en la tierra, se unan en tu alabanza, Dios todopoderoso y eterno, por Jesucristo, tu Hijo, Señor del Universo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El cual, habiendo entrado una vez para siempre en el santuario del cielo, ahora intercede por nosotros, como mediador que asegura la perenne efusión del Espíritu."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Pastor y obispo de nuestras almas, nos invita a la plegaria unánime, a ejemplo de María y los Apóstoles, en la espera de un nuevo Pentecostés."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este misterio de santificación y de amor, unidos a los ángeles y a los santos, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_1": {
+        "title": {
+          "es": "PREFACIO I PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL MISTERIO PASCUAL HA HECHO DE NOSOTROS EL PUEBLO DE DIOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Quien, por su misterio pascual, realizó la obra maravillosa de llamarnos del pecado y de la muerte al honor de ser estirpe elegida, sacerdocio real, nación consagrada, pueblo de su propiedad, para que, trasladados de las tinieblas a tu luz admirable, proclamemos ante el mundo tus maravillas."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_2": {
+        "title": {
+          "es": "PREFACIO II PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL PLAN DIVINO DE LA SALVACIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El cual, compadecido del extravío de los hombres, quiso nacer de la Virgen; sufriendo la cruz, nos libró de eterna muerte, y, resucitando, nos dio vida eterna."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_3": {
+        "title": {
+          "es": "PREFACIO III PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL HOMBRE SALVADO POR UN HOMBRE"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque reconocemos como obra de tu poder admirable no sólo haber socorrido nuestra débil naturaleza con la fuerza de tu divinidad, sino haber previsto el remedio en la misma debilidad humana, y de lo que era nuestra ruina haber hecho nuestra salvación, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles te cantan con júbilo eterno, y nosotros nos unimos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "ordinary_4": {
+        "title": {
+          "es": "PREFACIO IV PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LAS ETAPAS DE LA HISTORIA DE LA SALVACIÓN EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él, con su nacimiento, restauró nuestra naturaleza caída; con su muerte, destruyó nuestro pecado; al resucitar, nos dio nueva vida; y en su ascensión, nos abrió el camino de tu reino."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar:"
+          }
+        ]
+      },
+      "ordinary_5": {
+        "title": {
+          "es": "PREFACIO V PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LAS MARAVILLAS DE LA CREACIÓN"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice los domingo del tiempo ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque creaste el universo entero, estableciste el continuo retorno de las estaciones, y al hombre, formado a tu imagen y semejanza, sometiste las maravillas del mundo, para que, en nombre tuyo, dominara la creación, y, al contemplar tus grandezas, en todo momento te alabara, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "A quien cantan los ángeles y los arcángeles, proclamando sin cesar:"
+          }
+        ]
+      },
+      "ordinary_6": {
+        "title": {
+          "es": "PREFACIO VI PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA PRENDA DE NUESTRA PASCUA ETERNA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del tiempo ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En ti vivimos, nos movemos y existimos; y, todavía peregrinos en este mundo, no sólo experimentamos las pruebas cotidianas de tu amor, sino que poseemos ya en prenda la vida futura, pues esperamos gozar de la Pascua eterna, porque tenemos las primicias del Espíritu por el que resucitaste a Jesús de entre los muertos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, Señor, te damos gracias y proclamamos tu grandeza cantando con los ángeles:"
+          }
+        ]
+      },
+      "ordinary_7": {
+        "title": {
+          "es": "PREFACIO VII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque tu amor al mundo fue tan misericordioso que no sólo nos enviaste como redentor a tu propio Hijo, sino que en todo lo quisiste semejante al hombre, menos en el pecado, para poder así amar en nosotros lo que amabas en él."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con su obediencia has restaurado aquellos dones que por nuestra desobediencia habíamos perdido."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:"
+          }
+        ]
+      },
+      "ordinary_8": {
+        "title": {
+          "es": "PREFACIO VIII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA IGLESIA UNIFICADA POR VIRTUD Y A IMAGEN DE LA TRINIDAD"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has querido reunir de nuevo, por la sangre de tu Hijo y la fuerza del Espíritu, a los hijos dispersos por el pecado; de este modo tu Iglesia, unificada por virtud y a imagen de la Trinidad, aparece ante el mundo como cuerpo de Cristo y templo del Espíritu, para alabanza de tu infinita sabiduría."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:"
+          }
+        ]
+      },
+      "ordinary_9": {
+        "title": {
+          "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingo del tiempo ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque nos concedes en cada momento lo que más conviene y diriges sabiamente la nave de tu Iglesia, asistiéndola siempre con la fuerza del Espíritu Santo, para que, a impulso de su amor confiado, no abandone la plegaria en la tribulación, ni la acción de gracias en el gozo, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "A quien alaban los cielos y la tierra, los ángeles y los arcángeles, proclamando sin cesar:"
+          }
+        ]
+      },
+      "ordinary_10": {
+        "title": {
+          "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en los domingo del tiempo ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo bendecirte y darte gracias, Padre santo, fuente de la verdad y de la vida, porque nos has convocado en tu casa en este día de fiesta."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Hoy, tu familia, reunida en la escucha de tu Palabra y en la comunión del pan único y partido, celebra el memorial del Señor resucitado, mientras espera el domingo sin ocaso en el que la humanidad entera entrará en tu descanso."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Entonces contemplaremos tu rostro y alabaremos por siempre tu misericordia."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con esta gozosa esperanza, y unidos a los ángeles y a los santos, cantamos unánimes el himno de tu gloria:"
+          }
+        ]
+      },
+      "baptism": {
+        "title": {
+          "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se puede decir en la misa del bautismo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias y exaltar tu nombre, Padre santo y misericordioso, por Jesucristo, Señor y Redentor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Te alabamos, te bendecimos y te glorificamos por el sacramento del nuevo nacimiento."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú has querido que del corazón abierto de tu Hijo manara para nosotros el don nupcial del Bautismo, primera Pascua de los creyentes, puerta de nuestra salvación. inicio de la vida en Cristo, fuente de la humanidad nueva."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Del agua y del Espíritu engendras en el seno de la Iglesia, virgen y madre, un pueblo de sacerdotes y reyes, congregado de entre todas las naciones en la unidad y santidad del amor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este don de tu benevolencia tu familia te adora y, unida a los ángeles y a los santos, canta el himno de tu gloria:"
+          }
+        ]
+      },
+      "confirmation": {
+        "title": {
+          "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se puede decir en la misa de la confirmación."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre santo, fuente y origen de todo bien."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú, en el Bautismo das nueva vida a los creyentes y los haces partícipes del misterio pascual de tu Hijo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú los confirmas con el sello del Espíritu, mediante la imposición de manos y la unción del crisma."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Así, renovados a imagen de Cristo, el ungido por el Espíritu Santo y enviado para anunciar la buena nueva de la salvación, los haces tus comensales en el banquete eucarístico y testigos de la fe en la Iglesia y en el mundo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, nosotros, reunidos en esta asamblea festiva para celebrar los prodigios de un renovado Pentecostés, y unidos a los ángeles y a los santos, cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "eucharist_1": {
+        "title": {
+          "es": "PREFACIO I DE LA SANTÍSIMA EUCARISTÍA — EL SACRIFICIO Y EL SACRAMENTO DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en la misa de la Cena del Señor; puede decirse también en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro, verdadero y único sacerdote."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El cual, al instituir el sacrificio de la eterna alianza, se ofreció a sí mismo como víctima de salvación, y nos mandó perpetuar esta ofrenda en conmemoración suya."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Su carne, inmolada por nosotros, es alimento que nos fortalece; su sangre, derramada por nosotros, es bebida que nos purifica."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "eucharist_2": {
+        "title": {
+          "es": "PREFACIO II DE LA SANTÍSIMA EUCARISTÍA — LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "El cual, en la última cena con los apóstoles, para perpetuar su pasión salvadora, se entregó a sí mismo como Cordero inmaculado y Eucaristía perfecta."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con este sacramento alimentas y santificas a tus fieles, para que una misma fe ilumine y un mismo amor congregue a todos los hombres que habitan un mismo mundo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Así, pues, nos reunimos en torno a la mesa de este sacramento admirable, para que la abundancia de tu gracia nos lleve a poseer la vida celestial."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, Señor, todas tus criaturas, en el cielo y en la tierra, te adoran cantando un cántico nuevo; y también nosotros, con los ángeles, te aclamamos por siempre diciendo:"
+          }
+        ]
+      },
+      "eucharist_3": {
+        "title": {
+          "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se puede decir en la misa del viático."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario darte gracias, es bueno bendecir tu nombre, Padre santo, Dios de misericordia y de paz."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has querido que tu Hijo, obediente hasta la muerte de cruz, nos precediera en el camino de retorno a ti, término de toda esperanza humana."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En la Eucaristía, testamento de su amor, él se hace comida y bebida espiritual, para alimentarnos en nuestro viaje hacia la Pascua eterna."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con esta prenda de la resurrección futura, en la esperanza participamos ya de la mesa gloriosa de tu reino y, unidos a los ángeles y a los santos, proclamamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "penance": {
+        "title": {
+          "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se puede decir en el tiempo de Cuaresma."
+          },
+          {
+            "rubric_es": "Si dice también en las misas de reconciliación y en las otras misas de carácter penitencial."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo alabarte y darte gracias, Padre santo, Dios todopoderoso, por tus beneficios, sobre todo por la gracia del perdón."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Al hombre, náufrago a causa del pecado, con el sacramento de la reconciliación le abres el puerto de la misericordia y de la paz, en Cristo muerto y resucitado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con el poder de tu Espíritu, has dispuesto para la Iglesia, santa y al mismo tiempo necesitada de penitencia, una segunda tabla de salvación después del Bautismo, y así la renuevas incesantemente, para congregarla en el banquete festivo de tu amor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por ese don de tu benevolencia, unidos a los ángeles y a los santos, contamos, a una voz, el himno de tu gloria:"
+          }
+        ]
+      },
+      "sick_paschal": {
+        "title": {
+          "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se puede decir en las misas de unción de los enfermos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, Dios de misericordia, Señor todopoderoso, por Jesucristo, Señor y Redentor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has querido que tu único Hijo, autor de la vida, médico de los cuerpos y de las almas, tomase sobre sí nuestras debilidades, para socorrernos en los momentos de prueba y santificarnos en la experiencia del dolor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En el signo sacramental de la Unción, por la oración de la Iglesia, nos librar del pecado, nos confortas con la gracia del Espíritu Santo y nos haces partícipes de la victoria pascual."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este signo de tu benevolencia, unidos a los ángeles y a los santos, cantamos, a una voz, el himno de tu gloria:"
+          }
+        ]
+      },
+      "mary_1": {
+        "title": {
+          "es": "PREFACIO I DE SANTA MARÍA VIRGEN — LA MATERNIDAD DE MARÍA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen, añadiendo en su lugar (***) la mención de la celebración del día, según se indica en cada misa."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Y alabar, bendecir y proclamar tu gloria en la (***) de santa María, siempre virgen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque ella concibió a tu único Hijo por obra del Espíritu Santo, y, sin perder la gloria de su virginidad, derramó sobre el mundo la luz eterna, Jesucristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "mary_2": {
+        "title": {
+          "es": "PREFACIO II DE SANTA MARÍA VIRGEN — LA IGLESIA ALABA A DIOS INSPIRÁNDOSE EN LAS PALABRAS DE MARÍA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las Misas de la Santísima Virgen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Señor, y proclamar tus maravillas en la perfección de tus santos; y, al conmemorar a la bienaventurada Virgen María, exaltar especialmente tu generosidad inspirándonos en su mismo cántico de alabanza."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad hiciste obras grandes en favor de todos los pueblos, y has mantenido tu misericordia de generación en generación, cuando, al mirar la humillación de tu esclava, por ella nos diste al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles y los arcángeles te adoran eternamente, gozosos en tu presencia."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Permítenos unirnos a sus voces cantando tu alabanza:"
+          }
+        ]
+      },
+      "mary_3": {
+        "title": {
+          "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, y alabarte debidamente en esta celebración en honor de la Virgen María."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Ella, al aceptar tu Palabra con limpio corazón, mereció concebirla en su seno virginal, y al dar a luz a su Hijo preparó el nacimiento de la Iglesia."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Ella, al recibir junto a la cruz el testamento de tu amor divino, tomó como hijos a todos los hombres, nacidos a la vida sobrenatural por la muerte de Cristo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Ella, en la espera pentecostal del Espíritu, al unir sus oraciones a las de los discípulos, se convirtió en el modelos de la Iglesia suplicante."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Desde su asunción a los cielos, acompaña con amor materno a la Iglesia peregrina, y protege sus pasos hacia la patria celeste, hasta la venida gloriosa del Señor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con todos los ángeles y santos, te alabamos diciendo sin cesar:"
+          }
+        ]
+      },
+      "mary_4": {
+        "title": {
+          "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre Santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Te alabamos y te bendecimos, por Jesucristo, tu Hijo, en esta fiesta (memoria) de la bienaventurada Virgen María."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Ella, como humilde sierva, escuchó tu palabra y la conservó en su corazón; admirablemente unida al misterio de la redención, perseveró con los apóstoles en la plegaria, mientras esperaban al Espíritu Santo, y ahora brilla en nuestro camino como signo de consuelo y de firme esperanza."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este don de tu benevolencia, unidos a los ángeles y a los santos, te entonamos nuestro canto y proclamamos tu alabanza:"
+          }
+        ]
+      },
+      "mary_5": {
+        "title": {
+          "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, Padre Santo, fuente de la vida y de la alegría."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque en esta etapa final de la historia has querido revelarnos el misterio escondido desde siglos, para que así el mundo entero retorne a la vida y recobre la esperanza."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En Cristo, nuevo Adán, y en María, nueva Eva, se revela el misterio de tu Iglesia, como primicia de la humanidad redimida."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este inefable don la creación entera, con la fuerza del Espíritu Santo, emprende de nuevo su camino hacia la Pascua eterna."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, nosotros, unidos a los ángeles y a los santos, cantamos a una voz el himno de tu gloria:"
+          }
+        ]
+      },
+      "apostles_1": {
+        "title": {
+          "es": "PREFACIO I DE LOS APÓSTOLES — LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de los Apóstoles, principalmente en las de san Pedro y san Pablo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso, Pastor eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque no abandonas nunca a tu rebaño, sino que por medio de los santos Apóstoles lo proteges y conservas, y quieres que tenga siempre por guía la palabra de aquellos mismos pastores a quienes tu Hijo dio la misión de anunciar el Evangelio."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "apostles_2": {
+        "title": {
+          "es": "PREFACIO II DE LOS APÓSTOLES — LOS APÓSTOLES, FUNDAMENTO DE LA IGLESIA Y TESTIMONIO PARA EL MUNDO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de los Apóstoles y de los Evangelistas."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has cimentado tu Iglesia sobre la roca de los Apóstoles, para que permanezca en el mundo como signo de santidad y señale a todos los hombres el camino que nos lleva hacia ti."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, Señor, con todos los ángeles te alabamos ahora y por siempre diciendo con humilde fe:"
+          }
+        ]
+      },
+      "saints_1": {
+        "title": {
+          "es": "PREFACIO I DE LOS SANTOS — LA GLORIA DE LOS SANTOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los Santos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre Santo, porque manifiestas tu gloria en la asamblea de los santos, y, al coronar sus méritos, coronas tu propia obra."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú nos ofreces el ejemplo de su vida, la ayuda de su intercesión y la participación en su destino, para que, animados por su presencia alentadora, luchemos sin desfallecer en la carrera y alcancemos, como ellos, la corona de gloria que no se marchita, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con la multitud de los santos, cantamos sin cesar el himno de alabanza:"
+          }
+        ]
+      },
+      "saints_2": {
+        "title": {
+          "es": "PREFACIO II DE LOS SANTOS — EFICACIA DE LA ACCIÓN DE LOS SANTOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los Santos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque mediante el testimonio admirable de tus santos fecundas sin cesar a tu Iglesia con vitalidad siempre nueva, dándonos así pruebas evidentes de tu amor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Ellos nos estimulan con su ejemplo en el camino de la vida y nos ayudan con su intercesión."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, ahora, nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:"
+          }
+        ]
+      },
+      "martyrs": {
+        "title": {
+          "es": "PREFACIO I DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los mismos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque la sangre del glorioso mártir san (santa) N., derramada, como la de Cristo, para confesar tu nombre, manifiesta las maravillas de tu poder; pues en su martirio, Señor, has sacado fuerza de lo débil, haciendo de la fragilidad tu propio testimonio; por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar:"
+          }
+        ]
+      },
+      "martyrs_2": {
+        "title": {
+          "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los mismos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque al alabar nosotros a los santos mártires, tu eres glorificado ya que todo lo que concierne a su pasión es obra admirable de tu poder."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En efecto, tu misericordiosamente les proporcionas el ardor de la fe, tu les otorgas la firmeza de la perseverancia y les concedes la victoria en la batalla, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, tus creaturas del cielo y de la tierra te adoran cantando un cántico nuevo, y nosotros con todos los coros de los ángeles, proclamamos tu gloria diciendo:"
+          }
+        ]
+      },
+      "pastors": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS PASTORES — LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Pastores."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los mismos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque nos concedes la alegría de celebrar hoy la fiesta de san N., fortaleciendo a tu Iglesia con el ejemplo de su vida, instruyéndola con su palabra y protegiéndola con su intercesión."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar:"
+          }
+        ]
+      },
+      "virgins_and_religious": {
+        "title": {
+          "es": "PREFACIO DE SANTAS VÍRGENES Y RELIGIOSOS — SIGNIFICADO DE LA VIDA CONSAGRADA EXCLUSIVA A DIOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de las santas Vírgenes y de los santos Religiosos."
+          },
+          {
+            "rubric_es": "Se puede decir también en las memorias de los mismos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, que te alaben, Señor, tus criaturas del cielo y de la tierra, y, al recordar a los santos que por el reino de los cielos se consagraron a Cristo, celebremos la grandeza de tus designios."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En ellos recobra el hombre la santidad primera, que de ti había recibido, y gusta ya en la tierra los dones reservados para el cielo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:"
+          }
+        ]
+      },
+      "common_1": {
+        "title": {
+          "es": "PREFACIO COMÚN I — EL UNIVERSO RESTAURADO EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "A quien hiciste fundamento de todo y de cuya plenitud quisiste que participáramos todos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Siendo él de condición divina se despojó de su rango, y por su sangre derramada en la cruz puso en paz todas las cosas; y así, constituido Señor del universo, es fuente de salvación eterna para cuantos creen en él."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "common_2": {
+        "title": {
+          "es": "PREFACIO COMÚN II — LA SALVACIÓN POR CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, que por amor creaste al hombre, y, aunque condenado justamente, con tu misericordia lo redimiste, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "common_3": {
+        "title": {
+          "es": "PREFACIO COMÚN III — ALABANZA A DIOS QUE NOS CREÓ Y NOS HA REDIMIDO EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque has querido ser, por medio de tu amado Hijo, no sólo el creador del género humano, sino también el autor generoso de la nueva creación."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con razón te sirven todas las criaturas, con justicia te alaban todos los redimidos y unánimes te bendicen tus santos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Con ellos, unidos a los ángeles, nosotros queremos celebrarte y te alabamos diciendo:"
+          }
+        ]
+      },
+      "common_4": {
+        "title": {
+          "es": "PREFACIO COMÚN IV — NUESTRA MISMA ACCIÓN DE GRACIAS ES UN DON DE DIOS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Pues aunque no necesitas nuestra alabanza, ni nuestras bendiciones te enriquecen, tú inspiras y haces tuya nuestra acción de gracias, para que nos sirva de salvación, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "A quien alaban los ángeles y los arcángeles, proclamando sin cesar:"
+          }
+        ]
+      },
+      "common_5": {
+        "title": {
+          "es": "PREFACIO COMÚN V — PROCLAMACIÓN DEL MISTERIO DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque, unidos en la caridad, celebramos la muerte de tu Hijo, con fe viva proclamamos su resurrección, y con esperanza firme anhelamos su venida gloriosa."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:"
+          }
+        ]
+      },
+      "common_6": {
+        "title": {
+          "es": "PREFACIO COMÚN VI — EL MISTERIO DE LA SALVACIÓN EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio, tomado de la Plegaria eucarística II, se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, que es tu palabra, hiciste todas las cosas; tú nos lo enviaste para que, hecho hombre por obra del Espíritu Santo y nacido de María la Virgen, fuera nuestro Salvador y Redentor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Él, en cumplimiento de tu voluntad, para destruir la muerte y manifestar la resurrección, extendió sus brazos en la cruz, y así adquirió para ti un pueblo santo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y los santos, cantamos tu gloria diciendo:"
+          }
+        ]
+      },
+      "common_7": {
+        "title": {
+          "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios de la alianza y de la paz."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque tú llamaste a Abrahán y le mandaste salir de su tierra, para constituirlo padre de todas las naciones."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú suscitaste a Moisés para librar a tu pueblo y guiarlo a la tierra de promisión."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú, en la etapa final de la historia, has enviado a tu Hijo, como huésped y peregrino en medio de nosotros, para redimirnos del pecado y de la muerte; y has derramado el Espíritu, para hacer de todas las naciones un solo pueblo nuevo, que tiene como meta, tu reino, como estado, la libertad de tus hijos, como ley, el precepto del amor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por estos dones de tu benevolencia, unidos a los ángeles y a los santos, cantamos con gozo el himno de tu gloría:"
+          }
+        ]
+      },
+      "common_8": {
+        "title": {
+          "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "rubric_es": "Especialmente es recomendable usarlo en el domingo XV del tiempo ordinario del año C y el lunes de la semana XXVII del tiempo ordinario."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias y deber nuestro alabarte, Padre santo, Dios todopoderoso y eterno, en todos los momentos y circunstancias de la vida, en la salud y en la enfermedad, en el sufrimiento y en el gozo, por tu siervo, Jesús, nuestro Redentor."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él, en su vida terrena, pasó haciendo el bien y curando a los oprimidos por el mal."
+          },
+          {
+            "sp_es": "",
+            "text_es": "También hoy, como buen samaritano, se acerca a todo hombre que sufre en su cuerpo o en su espíritu, y cura sus heridas con el aceite del consuelo y el vino de la esperanza."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por este don de tu gracia, incluso cuando nos vemos sumergidos en la noche del dolor, vislumbramos la luz pascual en tu Hijo, muerto y resucitado."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los ángeles y santos, cantamos a una voz el himno de tu gloria:"
+          }
+        ]
+      },
+      "common_9": {
+        "title": {
+          "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú eres el Dios vivo y verdadero; el universo está lleno de tu presencia, pero sobre todo has dejado la huella de tu gloria en el hombre creado a tu imagen."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Tú lo llamas a cooperar con el trabajo cotidiano en el proyecto de la creación y le das tu Espíritu para que sea artífice de justicia y de paz, en Cristo, el hombre nuevo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los ángeles y a los santos, cantamos con alegría el himno de tu alabanza:"
+          }
+        ]
+      },
+      "dead_1": {
+        "title": {
+          "es": "PREFACIO I DE DIFUNTOS — LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de difuntos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En él brilla la esperanza de nuestra feliz resurrección; y así, aunque la certeza de morir nos entristece, nos consuela la promesa de la futura inmortalidad."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque la vida de los que en ti creemos, Señor, no termina, se transforma; y, al deshacerse nuestra morada terrenal, adquirimos una mansión eterna en el cielo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "dead_2": {
+        "title": {
+          "es": "PREFACIO II DE DIFUNTOS — CRISTO HA MUERTO PARA NUESTRA VIDA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de difuntos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él aceptó la muerte, uno por todos, para librarnos del morir eterno; es más, quiso entregar su vida para que todos tuviéramos vida eterna."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:"
+          }
+        ]
+      },
+      "dead_3": {
+        "title": {
+          "es": "PREFACIO III DE DIFUNTOS — CRISTO, SALVACIÓN Y VIDA"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de difuntos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque él es la salvación del mundo, la vida de los hombres, la resurrección de los muertos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por él, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "dead_4": {
+        "title": {
+          "es": "PREFACIO IV DE DIFUNTOS — LA VIDA TERRENA Y LA GLORIA CELESTE"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de difuntos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque tu voluntad nos da la vida, tus decretos la dirigen y un mandato tuyo, en castigo del pecado, nos devuelve a la tierra de la que habíamos sido sacados."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Y también te damos gracias porque, al redimirnos con la muerte de tu Hijo Jesucristo, por tu voluntad salvadora nos llevas a nueva vida para que tengamos parte en su gloriosa resurrección."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar:"
+          }
+        ]
+      },
+      "dead_5": {
+        "title": {
+          "es": "PREFACIO V DE DIFUNTOS — NUESTRA RESURRECCIÓN POR MEDIO DE LA VICTORIA DE CRISTO"
+        },
+        "content": [
+          {
+            "rubric_es": "Este prefacio se dice en las misas de difuntos."
+          },
+          {
+            "sp_es": "",
+            "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre santo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Porque si el morir se debe al hombre, el ser llamados a la vida con Cristo es obra gratuita de tu amor, ya que, habiendo muerto por el pecado, hemos sido redimidos por la victoria de tu Hijo."
+          },
+          {
+            "sp_es": "",
+            "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros te proclamamos en la tierra, diciendo sin cesar:"
+          }
+        ]
       }
     },
     "sanctus": [{
@@ -8093,101 +8514,13 @@
           }
         ],
         "songs": {
-          "cem_complete_prefaces": {
+          "advent_1": {
             "title": {
-              "es": "Prefacios completos del Misal Romano para México"
+              "es": "PREFACIO I DE ADVIENTO — LAS DOS VENIDAS DE CRISTO"
             },
             "content": [
               {
-                "text_es": "Es justo y necesario.",
-                "__massEditorPairKeys": {
-                  "text_es": "0:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "El sacerdote prosigue el Prefacio con las manos extendidas.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "1:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "Al final del Prefacio, junta las manos y en unión del pueblo, concluye el prefacio, cantando o diciendo en voz alta:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "2:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Santo, Santo, Santo es el Señor, Dios del universo.",
-                "__massEditorPairKeys": {
-                  "text_es": "3:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "text_es": "Llenos están el cielo y la tierra de tu gloria.",
-                "__massEditorPairKeys": {
-                  "text_es": "4:text"
-                }
-              },
-              {
-                "text_es": "Hosanna en el cielo.",
-                "__massEditorPairKeys": {
-                  "text_es": "5:text"
-                }
-              },
-              {
-                "text_es": "Bendito el que viene en nombre del Señor.",
-                "__massEditorPairKeys": {
-                  "text_es": "6:text"
-                }
-              },
-              {
-                "text_es": "Hosanna en el cielo.",
-                "__massEditorPairKeys": {
-                  "text_es": "7:text"
-                }
-              },
-              {
-                "rubric_es": "32.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "8:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En todas las Misas, el sacerdote puede cantar algunas partes de la Plegaria eucarística, especialmente las principales.",
-                "__massEditorPairKeys": {
-                  "text_es": "9:text"
-                }
-              },
-              {
-                "text_es": "En la Plegaria eucarística I, o Canon Romano, se puede omitir lo que se encuentra entre paréntesis.",
-                "__massEditorPairKeys": {
-                  "text_es": "10:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO I DE ADVIENTO LAS DOS VENIDAS DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "11:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "33.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "12:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el 16 de diciembre, y en las restantes misas que se celebran durante este tiempo y que no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "13:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el 16 de diciembre, y en las restantes misas que se celebran durante este tiempo y que no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -8202,30 +8535,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "16:text"
                 }
-              },
+              }
+            ]
+          },
+          "advent_2": {
+            "title": {
+              "es": "PREFACIO II DE ADVIENTO — LA DOBLE ESPERA DE CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE ADVIENTO LA DOBLE ESPERA DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "17:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "34.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "18:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas del tiempo, desde el 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y que no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "19:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y que no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
@@ -8246,16 +8569,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…",
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "23:text"
                 }
-              },
+              }
+            ]
+          },
+          "advent_1a": {
+            "title": {
+              "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO III DE ADVIENTO CRISTO, SEÑOR Y JUEZ DE LA HISTORIA Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el día 16 de diciembre, y en las restantes Misas que se celebran durante este mismo tiempo y no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "24:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el día 16 de diciembre, y en las restantes Misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo darte gracias, es nuestro deber cantar en tu honor himnos de bendición y de alabanza, Padre todopoderoso, principio y fin de todo lo creado.",
@@ -8282,16 +8609,20 @@
                 }
               },
               {
-                "text_es": "Por eso, mientras aguardamos su última venida, unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, mientras aguardamos su última venida, unidos a los ángeles y a los santos, cantamos el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "29:text"
                 }
-              },
+              }
+            ]
+          },
+          "advent_2a": {
+            "title": {
+              "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO IV DE ADVIENTO MARÍA, NUEVA EVA Este prefacio se dice en las misas del tiempo, desde el día 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "30:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas del tiempo, desde el día 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8330,36 +8661,23 @@
                 }
               },
               {
-                "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo, unido a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo, unido a los ángeles y a los santos, cantamos el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "37:text"
                 }
+              }
+            ]
+          },
+          "nativity_1": {
+            "title": {
+              "es": "PREFACIO I DE NAVIDAD — CRISTO, LUZ DEL MUNDO"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
               },
               {
-                "rubric_es": "PREFACIO I DE NAVIDAD CRISTO, LUZ DEL MUNDO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "38:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "35.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "39:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
-                "__massEditorPairKeys": {
-                  "text_es": "40:text"
-                }
-              },
-              {
-                "text_es": "También se dice en las ferias del tiempo de Navidad.",
-                "__massEditorPairKeys": {
-                  "text_es": "41:text"
-                }
+                "rubric_es": "También se dice en las ferias del tiempo de Navidad."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8374,49 +8692,23 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "44:text"
                 }
+              }
+            ]
+          },
+          "nativity_2": {
+            "title": {
+              "es": "PREFACIO II DE NAVIDAD — LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
               },
               {
-                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "45:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
-                "__massEditorPairKeys": {
-                  "text_es": "46:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO II DE NAVIDAD LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "47:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "36.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "48:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
-                "__massEditorPairKeys": {
-                  "text_es": "49:text"
-                }
-              },
-              {
-                "text_es": "También se dice en las ferias del tiempo de Navidad.",
-                "__massEditorPairKeys": {
-                  "text_es": "50:text"
-                }
+                "rubric_es": "También se dice en las ferias del tiempo de Navidad."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
@@ -8437,49 +8729,23 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos, llenos de alegría: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos, llenos de alegría:",
                 "__massEditorPairKeys": {
                   "text_es": "54:text"
                 }
+              }
+            ]
+          },
+          "nativity_3": {
+            "title": {
+              "es": "PREFACIO III DE NAVIDAD — EL INTERCAMBIO EFECTUADO EN LA ENCARNACIÓN DEL VERBO"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios."
               },
               {
-                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "55:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
-                "__massEditorPairKeys": {
-                  "text_es": "56:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO III DE NAVIDAD EL INTERCAMBIO EFECTUADO EN LA ENCARNACIÓN DEL VERBO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "57:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "37.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "58:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
-                "__massEditorPairKeys": {
-                  "text_es": "59:text"
-                }
-              },
-              {
-                "text_es": "También se dice en las ferias del tiempo de Navidad.",
-                "__massEditorPairKeys": {
-                  "text_es": "60:text"
-                }
+                "rubric_es": "También se dice en las ferias del tiempo de Navidad."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
@@ -8494,49 +8760,23 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:",
                 "__massEditorPairKeys": {
                   "text_es": "63:text"
                 }
+              }
+            ]
+          },
+          "epiphany": {
+            "title": {
+              "es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR — CRISTO, LUZ DE LOS PUEBLOS"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de la solemnidad de la Epifanía."
               },
               {
-                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "64:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
-                "__massEditorPairKeys": {
-                  "text_es": "65:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR CRISTO, LUZ DE LOS PUEBLOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "66:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "38.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "67:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de la solemnidad de la Epifanía.",
-                "__massEditorPairKeys": {
-                  "text_es": "68:text"
-                }
-              },
-              {
-                "text_es": "También puede decirse este prefacio, o bien uno de los de Navidad, en los días que van desde la solemnidad de la Epifanía hasta el sábado antes del domingo del Bautismo del Señor.",
-                "__massEditorPairKeys": {
-                  "text_es": "69:text"
-                }
+                "rubric_es": "También puede decirse este prefacio, o bien uno de los de Navidad, en los días que van desde la solemnidad de la Epifanía hasta el sábado antes del domingo del Bautismo del Señor."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8551,36 +8791,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "72:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_1": {
+            "title": {
+              "es": "PREFACIO I DE CUARESMA — SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA"
+            },
+            "content": [
               {
-                "text_es": "En la solemnidad de la Epifanía, si se usa el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "73:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO I DE CUARESMA SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "74:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "39.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "75:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado.",
-                "__massEditorPairKeys": {
-                  "text_es": "76:text"
-                }
+                "rubric_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno por Cristo, Señor nuestro.",
@@ -8595,30 +8819,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coro celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coro celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "79:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_2": {
+            "title": {
+              "es": "PREFACIO II DE CUARESMA — LA PENITENCIA ESPIRITUAL"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE CUARESMA LA PENITENCIA ESPIRITUAL",
-                "__massEditorPairKeys": {
-                  "rubric_es": "80:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "40.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "81:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado.",
-                "__massEditorPairKeys": {
-                  "text_es": "82:text"
-                }
+                "rubric_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8633,30 +8847,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "85:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_3": {
+            "title": {
+              "es": "PREFACIO III DE CUARESMA — LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO III DE CUARESMA LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "86:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "41.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "87:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales.",
-                "__massEditorPairKeys": {
-                  "text_es": "88:text"
-                }
+                "rubric_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8671,30 +8875,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con todos los ángeles y santos, te glorificamos y te aclamamos diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, con todos los ángeles y santos, te glorificamos y te aclamamos diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "91:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_4": {
+            "title": {
+              "es": "PREFACIO IV DE CUARESMA — LOS FRUTOS DEL AYUNO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO IV DE CUARESMA LOS FRUTOS DEL AYUNO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "92:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "42.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "93:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales.",
-                "__massEditorPairKeys": {
-                  "text_es": "94:text"
-                }
+                "rubric_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8715,16 +8909,20 @@
                 }
               },
               {
-                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "98:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_5": {
+            "title": {
+              "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO V DE CUARESMA EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL Este prefacio se dice en las misas de las ferias de Cuaresma.",
-                "__massEditorPairKeys": {
-                  "text_es": "99:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de las ferias de Cuaresma."
               },
               {
                 "text_es": "En verdad es justo bendecir tu nombre, Padre rico en misericordia, ahora que, en nuestro itinerario hacia la luz pascual, seguimos los pasos de Cristo, maestro y modelo de la humanidad, reconciliada en el amor.",
@@ -8739,30 +8937,20 @@
                 }
               },
               {
-                "text_es": "Por estos signos de salvación, unidos a los ángeles, ministros de tu gloria, proclamamos el canto de tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por estos signos de salvación, unidos a los ángeles, ministros de tu gloria, proclamamos el canto de tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "102:text"
                 }
-              },
+              }
+            ]
+          },
+          "passion_1": {
+            "title": {
+              "es": "PREFACIO I DE LA PASIÓN DEL SEÑOR — LA FUERZA DE LA CRUZ"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO I DE LA PASIÓN DEL SEÑOR LA FUERZA DE LA CRUZ",
-                "__massEditorPairKeys": {
-                  "rubric_es": "103:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "43.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "104:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las ferias de la quinta semana de Cuaresma y en las misas de los misterios de la cruz y de la pasión del Señor.",
-                "__massEditorPairKeys": {
-                  "text_es": "105:text"
-                }
+                "rubric_es": "Este prefacio se dice en las ferias de la quinta semana de Cuaresma y en las misas de los misterios de la cruz y de la pasión del Señor."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -8777,30 +8965,20 @@
                 }
               },
               {
-                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "108:text"
                 }
-              },
+              }
+            ]
+          },
+          "passion_2": {
+            "title": {
+              "es": "PREFACIO II DE LA PASIÓN DEL SEÑOR — LA VICTORIA DE LA PASIÓN"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE LA PASIÓN DEL SEÑOR LA VICTORIA DE LA PASIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "109:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "44.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "110:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice el lunes, martes y miércoles de la Semana Santa.",
-                "__massEditorPairKeys": {
-                  "text_es": "111:text"
-                }
+                "rubric_es": "Este prefacio se dice el lunes, martes y miércoles de la Semana Santa."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -8815,36 +8993,23 @@
                 }
               },
               {
-                "text_es": "Por eso, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por eso, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "114:text"
                 }
+              }
+            ]
+          },
+          "easter_1": {
+            "title": {
+              "es": "PREFACIO PASCUAL I — EL MISTERIO PASCUAL"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice durante el tiempo pascual."
               },
               {
-                "rubric_es": "PREFACIO PASCUAL I EL MISTERIO PASCUAL",
-                "__massEditorPairKeys": {
-                  "rubric_es": "115:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "46.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "116:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice durante el tiempo pascual.",
-                "__massEditorPairKeys": {
-                  "text_es": "117:text"
-                }
-              },
-              {
-                "text_es": "En la misa de la Vigilia pascual se dice en esta noche; el día de Pascua y durante la octava: en este día; en las restantes misas: en este tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "118:text"
-                }
+                "rubric_es": "En la misa de la Vigilia pascual se dice en esta noche; el día de Pascua y durante la octava: en este día; en las restantes misas: en este tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en esta noche (este día) (este tiempo) en que Cristo, nuestra Pascua, ha sido inmolado.",
@@ -8859,43 +9024,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo.",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "121:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_2": {
+            "title": {
+              "es": "PREFACIO PASCUAL II — LA NUEVA VIDA EN CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "Cuando se utiliza el Canon romano, se dice Reunidos en comunión y Acepta, Señor, en tu bondad, propios.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "122:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En la misa de la Vigilia pascual se dice: para celebrar la noche santa...",
-                "__massEditorPairKeys": {
-                  "text_es": "123:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO PASCUAL II LA NUEVA VIDA EN CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "124:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "46.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "125:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice durante el tiempo pascual.",
-                "__massEditorPairKeys": {
-                  "text_es": "126:text"
-                }
+                "rubric_es": "Este prefacio se dice durante el tiempo pascual."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
@@ -8910,30 +9052,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "129:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_3": {
+            "title": {
+              "es": "PREFACIO PASCUAL III — CRISTO VIVO E INTERCESOR PERPETUO EN FAVOR NUESTRO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO PASCUAL III CRISTO VIVO E INTERCESOR PERPETUO EN FAVOR NUESTRO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "130:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "47.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "131:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice durante el tiempo pascual.",
-                "__massEditorPairKeys": {
-                  "text_es": "132:text"
-                }
+                "rubric_es": "Este prefacio se dice durante el tiempo pascual."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
@@ -8948,30 +9080,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "135:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_4": {
+            "title": {
+              "es": "PREFACIO PASCUAL IV — LA RESTAURACIÓN DEL UNIVERSO POR LE MISTERIO PASCUAL"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO PASCUAL IV LA RESTAURACIÓN DEL UNIVERSO POR LE MISTERIO PASCUAL",
-                "__massEditorPairKeys": {
-                  "rubric_es": "136:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "48.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "137:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice durante el tiempo pascual.",
-                "__massEditorPairKeys": {
-                  "text_es": "138:text"
-                }
+                "rubric_es": "Este prefacio se dice durante el tiempo pascual."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
@@ -8986,30 +9108,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "141:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_5": {
+            "title": {
+              "es": "PREFACIO PASCUAL V — CRISTO, SACERDOTE Y VÍCTIMA"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO PASCUAL V CRISTO, SACERDOTE Y VÍCTIMA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "142:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "49.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "143:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice durante el tiempo pascual.",
-                "__massEditorPairKeys": {
-                  "text_es": "144:text"
-                }
+                "rubric_es": "Este prefacio se dice durante el tiempo pascual."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
@@ -9024,30 +9136,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "147:text"
                 }
-              },
+              }
+            ]
+          },
+          "ascension_1": {
+            "title": {
+              "es": "PREFACIO I DE LA ASCENSIÓN DEL SEÑOR — EL MISTERIO DE LA ASCENSIÓN"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO I DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "148:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "50.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "149:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "150:text"
-                }
+                "rubric_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9068,36 +9170,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "154:text"
                 }
-              },
+              }
+            ]
+          },
+          "ascension_2": {
+            "title": {
+              "es": "PREFACIO II DE LA ASCENSIÓN DEL SEÑOR — EL MISTERIO DE LA ASCENSIÓN"
+            },
+            "content": [
               {
-                "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "155:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO II DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "156:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "51.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "157:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "158:text"
-                }
+                "rubric_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -9112,22 +9198,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "161:text"
                 }
-              },
+              }
+            ]
+          },
+          "after_ascension": {
+            "title": {
+              "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO"
+            },
+            "content": [
               {
-                "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "162:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO Este prefacio se dice en los días que siguen a la Ascensión hasta el sábado antes del domingo de Pentecostés.",
-                "__massEditorPairKeys": {
-                  "text_es": "163:text"
-                }
+                "rubric_es": "Este prefacio se dice en los días que siguen a la Ascensión hasta el sábado antes del domingo de Pentecostés."
               },
               {
                 "text_es": "En verdad es justo y necesario, que todas las criaturas, en el cielo y en la tierra, se unan en tu alabanza, Dios todopoderoso y eterno, por Jesucristo, tu Hijo, Señor del Universo.",
@@ -9148,29 +9232,20 @@
                 }
               },
               {
-                "text_es": "Por este misterio de santificación y de amor, unidos a los ángeles y a los santos, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo....",
+                "text_es": "Por este misterio de santificación y de amor, unidos a los ángeles y a los santos, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "167:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_1": {
+            "title": {
+              "es": "PREFACIO I PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL MISTERIO PASCUAL HA HECHO DE NOSOTROS EL PUEBLO DE DIOS"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO I PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL MISTERIO PASCUAL HA HECHO DE NOSOTROS EL PUEBLO DE DIOS",
-                "__massEditorPairKeys": {
-                  "text_es": "168:text"
-                }
-              },
-              {
-                "rubric_es": "52.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "169:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "170:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -9185,36 +9260,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "173:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_2": {
+            "title": {
+              "es": "PREFACIO II PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL PLAN DIVINO DE LA SALVACIÓN"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "174:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO II PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL PLAN DIVINO DE LA SALVACIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "175:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "53.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "176:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "177:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -9229,36 +9288,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "180:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_3": {
+            "title": {
+              "es": "PREFACIO III PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL HOMBRE SALVADO POR UN HOMBRE"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "181:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO III PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL HOMBRE SALVADO POR UN HOMBRE",
-                "__massEditorPairKeys": {
-                  "rubric_es": "182:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "54.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "183:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "184:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9273,29 +9316,20 @@
                 }
               },
               {
-                "text_es": "Por él, los ángeles te cantan con júbilo eterno, y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por él, los ángeles te cantan con júbilo eterno, y nosotros nos unimos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "187:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_4": {
+            "title": {
+              "es": "PREFACIO IV PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LAS ETAPAS DE LA HISTORIA DE LA SALVACIÓN EN CRISTO"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO IV PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS ETAPAS DE LA HISTORIA DE LA SALVACIÓN EN CRISTO",
-                "__massEditorPairKeys": {
-                  "text_es": "188:text"
-                }
-              },
-              {
-                "rubric_es": "55.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "189:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "190:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -9310,36 +9344,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "193:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_5": {
+            "title": {
+              "es": "PREFACIO V PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LAS MARAVILLAS DE LA CREACIÓN"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "194:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO V PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS MARAVILLAS DE LA CREACIÓN",
-                "__massEditorPairKeys": {
-                  "rubric_es": "195:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "56.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "196:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice los domingo del tiempo ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "197:text"
-                }
+                "rubric_es": "Este prefacio se dice los domingo del tiempo ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno.",
@@ -9354,36 +9372,20 @@
                 }
               },
               {
-                "text_es": "A quien cantan los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "A quien cantan los ángeles y los arcángeles, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "200:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_6": {
+            "title": {
+              "es": "PREFACIO VI PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA PRENDA DE NUESTRA PASCUA ETERNA"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "201:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO VI PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA PRENDA DE NUESTRA PASCUA ETERNA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "202:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "57.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "203:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del tiempo ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "204:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del tiempo ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9398,36 +9400,20 @@
                 }
               },
               {
-                "text_es": "Por eso, Señor, te damos gracias y proclamamos tu grandeza cantando con los ángeles: Santo, Santo, Santo...",
+                "text_es": "Por eso, Señor, te damos gracias y proclamamos tu grandeza cantando con los ángeles:",
                 "__massEditorPairKeys": {
                   "text_es": "207:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_7": {
+            "title": {
+              "es": "PREFACIO VII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "208:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO VII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "209:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "58.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "210:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "211:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno.",
@@ -9448,35 +9434,20 @@
                 }
               },
               {
-                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "215:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_8": {
+            "title": {
+              "es": "PREFACIO VIII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — LA IGLESIA UNIFICADA POR VIRTUD Y A IMAGEN DE LA TRINIDAD"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "216:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO VIII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA IGLESIA UNIFICADA POR VIRTUD Y A IMAGEN DE LA TRINIDAD",
-                "__massEditorPairKeys": {
-                  "text_es": "217:text"
-                }
-              },
-              {
-                "rubric_es": "59.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "218:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "219:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingos del Tiempo Ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9491,22 +9462,20 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:",
                 "__massEditorPairKeys": {
                   "text_es": "222:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_9": {
+            "title": {
+              "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "223:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA Este prefacio se dice en los domingo del tiempo ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "224:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingo del tiempo ordinario."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9521,22 +9490,20 @@
                 }
               },
               {
-                "text_es": "A quien alaban los cielos y la tierra, los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "A quien alaban los cielos y la tierra, los ángeles y los arcángeles, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "227:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_10": {
+            "title": {
+              "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "228:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL DÍA DEL SEÑOR Este prefacio se dice en los domingo del tiempo ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "229:text"
-                }
+                "rubric_es": "Este prefacio se dice en los domingo del tiempo ordinario."
               },
               {
                 "text_es": "En verdad es justo bendecirte y darte gracias, Padre santo, fuente de la verdad y de la vida, porque nos has convocado en tu casa en este día de fiesta.",
@@ -9557,22 +9524,20 @@
                 }
               },
               {
-                "text_es": "Con esta gozosa esperanza, y unidos a los ángeles y a los santos, cantamos unánimes el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Con esta gozosa esperanza, y unidos a los ángeles y a los santos, cantamos unánimes el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "233:text"
                 }
-              },
+              }
+            ]
+          },
+          "baptism": {
+            "title": {
+              "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA"
+            },
+            "content": [
               {
-                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "234:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO DEL BAUTISMO EL BAUTISMO, INICIO DE LA VIDA NUEVA Este prefacio se puede decir en la misa del bautismo.",
-                "__massEditorPairKeys": {
-                  "text_es": "235:text"
-                }
+                "rubric_es": "Este prefacio se puede decir en la misa del bautismo."
               },
               {
                 "text_es": "En verdad es justo darte gracias y exaltar tu nombre, Padre santo y misericordioso, por Jesucristo, Señor y Redentor nuestro.",
@@ -9599,22 +9564,20 @@
                 }
               },
               {
-                "text_es": "Por este don de tu benevolencia tu familia te adora y, unida a los ángeles y a los santos, canta el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por este don de tu benevolencia tu familia te adora y, unida a los ángeles y a los santos, canta el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "240:text"
                 }
-              },
+              }
+            ]
+          },
+          "confirmation": {
+            "title": {
+              "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU"
+            },
+            "content": [
               {
-                "text_es": "En las plegarias eucarísticas se hace recuerdo de los recién bautizados.",
-                "__massEditorPairKeys": {
-                  "text_es": "241:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO DE LA CONFIRMACIÓN MARCADOS CON EL SELLO DEL ESPÍRITU Este prefacio se puede decir en la misa de la confirmación.",
-                "__massEditorPairKeys": {
-                  "text_es": "242:text"
-                }
+                "rubric_es": "Este prefacio se puede decir en la misa de la confirmación."
               },
               {
                 "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre santo, fuente y origen de todo bien.",
@@ -9641,36 +9604,20 @@
                 }
               },
               {
-                "text_es": "Por eso, nosotros, reunidos en esta asamblea festiva para celebrar los prodigios de un renovado Pentecostés, y unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, nosotros, reunidos en esta asamblea festiva para celebrar los prodigios de un renovado Pentecostés, y unidos a los ángeles y a los santos, cantamos el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "247:text"
                 }
-              },
+              }
+            ]
+          },
+          "eucharist_1": {
+            "title": {
+              "es": "PREFACIO I DE LA SANTÍSIMA EUCARISTÍA — EL SACRIFICIO Y EL SACRAMENTO DE CRISTO"
+            },
+            "content": [
               {
-                "text_es": "En las plegarias eucarísticas se hace mención de los recién confirmados.",
-                "__massEditorPairKeys": {
-                  "text_es": "248:text"
-                }
-              },
-              {
-                "rubric_es": "PREFACIO I DE LA SANTÍSIMA EUCARISTÍA EL SACRIFICIO Y EL SACRAMENTO DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "249:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "60.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "250:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en la misa de la Cena del Señor; puede decirse también en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía.",
-                "__massEditorPairKeys": {
-                  "text_es": "251:text"
-                }
+                "rubric_es": "Este prefacio se dice en la misa de la Cena del Señor; puede decirse también en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro, verdadero y único sacerdote.",
@@ -9691,22 +9638,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "255:text"
                 }
-              },
+              }
+            ]
+          },
+          "eucharist_2": {
+            "title": {
+              "es": "PREFACIO II DE LA SANTÍSIMA EUCARISTÍA — LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA"
+            },
+            "content": [
               {
-                "text_es": "En la misa de la Cena del Señor, cuando se utiliza el Canon romano, se dice Reunidos en comunión, Acepta, Señor, en tu bondad y Él cual, la víspera de su Pasión propios.",
-                "__massEditorPairKeys": {
-                  "text_es": "256:text"
-                }
-              },
-              {
-                "text_es": "PREFACIO II DE LA SANTÍSIMA EUCARISTÍA LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA Este prefacio se dice en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía.",
-                "__massEditorPairKeys": {
-                  "text_es": "257:text"
-                }
+                "rubric_es": "Este prefacio se dice en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -9733,16 +9678,20 @@
                 }
               },
               {
-                "text_es": "Por eso, Señor, todas tus criaturas, en el cielo y en la tierra, te adoran cantando un cántico nuevo; y también nosotros, con los ángeles, te aclamamos por siempre diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, Señor, todas tus criaturas, en el cielo y en la tierra, te adoran cantando un cántico nuevo; y también nosotros, con los ángeles, te aclamamos por siempre diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "262:text"
                 }
-              },
+              }
+            ]
+          },
+          "eucharist_3": {
+            "title": {
+              "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA Este prefacio se puede decir en la misa del viático.",
-                "__massEditorPairKeys": {
-                  "text_es": "263:text"
-                }
+                "rubric_es": "Este prefacio se puede decir en la misa del viático."
               },
               {
                 "text_es": "En verdad es justo y necesario darte gracias, es bueno bendecir tu nombre, Padre santo, Dios de misericordia y de paz.",
@@ -9763,23 +9712,23 @@
                 }
               },
               {
-                "text_es": "Con esta prenda de la resurrección futura, en la esperanza participamos ya de la mesa gloriosa de tu reino y, unidos a los ángeles y a los santos, proclamamos el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Con esta prenda de la resurrección futura, en la esperanza participamos ya de la mesa gloriosa de tu reino y, unidos a los ángeles y a los santos, proclamamos el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "267:text"
                 }
+              }
+            ]
+          },
+          "penance": {
+            "title": {
+              "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se puede decir en el tiempo de Cuaresma."
               },
               {
-                "text_es": "PREFACIO DE LA PENITENCIA EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU Este prefacio se puede decir en el tiempo de Cuaresma.",
-                "__massEditorPairKeys": {
-                  "text_es": "268:text"
-                }
-              },
-              {
-                "rubric_es": "Si dice también en las misas de reconciliación y en las otras misas de carácter penitencial.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "269:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Si dice también en las misas de reconciliación y en las otras misas de carácter penitencial."
               },
               {
                 "text_es": "En verdad es justo alabarte y darte gracias, Padre santo, Dios todopoderoso, por tus beneficios, sobre todo por la gracia del perdón.",
@@ -9800,16 +9749,20 @@
                 }
               },
               {
-                "text_es": "Por ese don de tu benevolencia, unidos a los ángeles y a los santos, contamos, a una voz, el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por ese don de tu benevolencia, unidos a los ángeles y a los santos, contamos, a una voz, el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "273:text"
                 }
-              },
+              }
+            ]
+          },
+          "sick_paschal": {
+            "title": {
+              "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO DE LA UNCIÓN DE ENFERMOS EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO Este prefacio se puede decir en las misas de unción de los enfermos.",
-                "__massEditorPairKeys": {
-                  "text_es": "274:text"
-                }
+                "rubric_es": "Este prefacio se puede decir en las misas de unción de los enfermos."
               },
               {
                 "text_es": "En verdad es justo darte gracias, Dios de misericordia, Señor todopoderoso, por Jesucristo, Señor y Redentor nuestro.",
@@ -9830,30 +9783,20 @@
                 }
               },
               {
-                "text_es": "Por este signo de tu benevolencia, unidos a los ángeles y a los santos, cantamos, a una voz, el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por este signo de tu benevolencia, unidos a los ángeles y a los santos, cantamos, a una voz, el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "278:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_1": {
+            "title": {
+              "es": "PREFACIO I DE SANTA MARÍA VIRGEN — LA MATERNIDAD DE MARÍA"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO I DE SANTA MARÍA VIRGEN LA MATERNIDAD DE MARÍA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "279:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "62.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "280:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de la Santísima Virgen, añadiendo en su lugar (***) la mención de la celebración del día, según se indica en cada misa.",
-                "__massEditorPairKeys": {
-                  "text_es": "281:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen, añadiendo en su lugar (***) la mención de la celebración del día, según se indica en cada misa."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -9880,30 +9823,20 @@
                 }
               },
               {
-                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "286:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_2": {
+            "title": {
+              "es": "PREFACIO II DE SANTA MARÍA VIRGEN — LA IGLESIA ALABA A DIOS INSPIRÁNDOSE EN LAS PALABRAS DE MARÍA"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE SANTA MARÍA VIRGEN LA IGLESIA ALABA A DIOS INSPIRÁNDOSE EN LAS PALABRAS DE MARÍA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "287:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "63.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "288:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las Misas de la Santísima Virgen.",
-                "__massEditorPairKeys": {
-                  "text_es": "289:text"
-                }
+                "rubric_es": "Este prefacio se dice en las Misas de la Santísima Virgen."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Señor, y proclamar tus maravillas en la perfección de tus santos; y, al conmemorar a la bienaventurada Virgen María, exaltar especialmente tu generosidad inspirándonos en su mismo cántico de alabanza.",
@@ -9924,16 +9857,20 @@
                 }
               },
               {
-                "text_es": "Permítenos unirnos a sus voces cantando tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Permítenos unirnos a sus voces cantando tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "293:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_3": {
+            "title": {
+              "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO III DE SANTA MARÍA VIRGEN MARÍA, MODELO Y MADRE DE LA IGLESIA Este prefacio se dice en las misas de la Santísima Virgen.",
-                "__massEditorPairKeys": {
-                  "text_es": "294:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, y alabarte debidamente en esta celebración en honor de la Virgen María.",
@@ -9966,16 +9903,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con todos los ángeles y santos, te alabamos diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "300:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_4": {
+            "title": {
+              "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO IV DE SANTA MARÍA VIRGEN MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA Este prefacio se dice en las misas de la Santísima Virgen.",
-                "__massEditorPairKeys": {
-                  "text_es": "301:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
               },
               {
                 "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre Santo, Dios todopoderoso y eterno.",
@@ -9996,16 +9937,20 @@
                 }
               },
               {
-                "text_es": "Por este don de tu benevolencia, unidos a los ángeles y a los santos, te entonamos nuestro canto y proclamamos tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por este don de tu benevolencia, unidos a los ángeles y a los santos, te entonamos nuestro canto y proclamamos tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "305:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_5": {
+            "title": {
+              "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO V DE SANTA MARÍA VIRGEN MARÍA, IMAGEN DE LA HUMANIDAD NUEVA Este prefacio se dice en las misas de la Santísima Virgen.",
-                "__massEditorPairKeys": {
-                  "text_es": "306:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de la Santísima Virgen."
               },
               {
                 "text_es": "En verdad es justo darte gracias, Padre Santo, fuente de la vida y de la alegría.",
@@ -10032,30 +9977,20 @@
                 }
               },
               {
-                "text_es": "Por eso, nosotros, unidos a los ángeles y a los santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, nosotros, unidos a los ángeles y a los santos, cantamos a una voz el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "311:text"
                 }
-              },
+              }
+            ]
+          },
+          "apostles_1": {
+            "title": {
+              "es": "PREFACIO I DE LOS APÓSTOLES — LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO I DE LOS APÓSTOLES LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "312:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "64.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "313:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de los Apóstoles, principalmente en las de san Pedro y san Pablo.",
-                "__massEditorPairKeys": {
-                  "text_es": "314:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de los Apóstoles, principalmente en las de san Pedro y san Pablo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso, Pastor eterno.",
@@ -10070,30 +10005,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "317:text"
                 }
-              },
+              }
+            ]
+          },
+          "apostles_2": {
+            "title": {
+              "es": "PREFACIO II DE LOS APÓSTOLES — LOS APÓSTOLES, FUNDAMENTO DE LA IGLESIA Y TESTIMONIO PARA EL MUNDO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE LOS APÓSTOLES LOS APÓSTOLES, FUNDAMENTO DE LA IGLESIA Y TESTIMONIO PARA EL MUNDO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "318:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "65.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "319:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de los Apóstoles y de los Evangelistas.",
-                "__massEditorPairKeys": {
-                  "text_es": "320:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de los Apóstoles y de los Evangelistas."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10108,37 +10033,23 @@
                 }
               },
               {
-                "text_es": "Por eso, Señor, con todos los ángeles te alabamos ahora y por siempre diciendo con humilde fe: Santo, Santo, Santo...",
+                "text_es": "Por eso, Señor, con todos los ángeles te alabamos ahora y por siempre diciendo con humilde fe:",
                 "__massEditorPairKeys": {
                   "text_es": "323:text"
                 }
+              }
+            ]
+          },
+          "saints_1": {
+            "title": {
+              "es": "PREFACIO I DE LOS SANTOS — LA GLORIA DE LOS SANTOS"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
               },
               {
-                "rubric_es": "PREFACIO I DE LOS SANTOS LA GLORIA DE LOS SANTOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "324:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "66.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "325:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "326:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los Santos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "327:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los Santos."
               },
               {
                 "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre Santo, porque manifiestas tu gloria en la asamblea de los santos, y, al coronar sus méritos, coronas tu propia obra.",
@@ -10153,37 +10064,23 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con la multitud de los santos, cantamos sin cesar el himno de alabanza: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con la multitud de los santos, cantamos sin cesar el himno de alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "330:text"
                 }
+              }
+            ]
+          },
+          "saints_2": {
+            "title": {
+              "es": "PREFACIO II DE LOS SANTOS — EFICACIA DE LA ACCIÓN DE LOS SANTOS"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio."
               },
               {
-                "rubric_es": "PREFACIO II DE LOS SANTOS EFICACIA DE LA ACCIÓN DE LOS SANTOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "331:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "67.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "332:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio.",
-                "__massEditorPairKeys": {
-                  "text_es": "333:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los Santos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "334:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los Santos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10204,37 +10101,23 @@
                 }
               },
               {
-                "text_es": "Por eso, ahora, nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, ahora, nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "338:text"
                 }
+              }
+            ]
+          },
+          "martyrs": {
+            "title": {
+              "es": "PREFACIO I DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
               },
               {
-                "rubric_es": "PREFACIO I DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "339:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "68.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "340:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires.",
-                "__massEditorPairKeys": {
-                  "text_es": "341:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los mismos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "342:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los mismos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10249,37 +10132,23 @@
                 }
               },
               {
-                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "345:text"
                 }
+              }
+            ]
+          },
+          "martyrs_2": {
+            "title": {
+              "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires."
               },
               {
-                "rubric_es": "PREFACIO II DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "346:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "69.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "347:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires.",
-                "__massEditorPairKeys": {
-                  "text_es": "348:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los mismos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "349:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los mismos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10300,37 +10169,23 @@
                 }
               },
               {
-                "text_es": "Por eso, tus creaturas del cielo y de la tierra te adoran cantando un cántico nuevo, y nosotros con todos los coros de los ángeles, proclamamos tu gloria diciendo: Santo, Santo, Santo…",
+                "text_es": "Por eso, tus creaturas del cielo y de la tierra te adoran cantando un cántico nuevo, y nosotros con todos los coros de los ángeles, proclamamos tu gloria diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "353:text"
                 }
+              }
+            ]
+          },
+          "pastors": {
+            "title": {
+              "es": "PREFACIO DE LOS SANTOS PASTORES — LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Pastores."
               },
               {
-                "rubric_es": "PREFACIO DE LOS SANTOS PASTORES LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "354:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "70.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "355:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Pastores.",
-                "__massEditorPairKeys": {
-                  "text_es": "356:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los mismos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "357:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los mismos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10345,37 +10200,23 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "360:text"
                 }
+              }
+            ]
+          },
+          "virgins_and_religious": {
+            "title": {
+              "es": "PREFACIO DE SANTAS VÍRGENES Y RELIGIOSOS — SIGNIFICADO DE LA VIDA CONSAGRADA EXCLUSIVA A DIOS"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las solemnidades y fiestas de las santas Vírgenes y de los santos Religiosos."
               },
               {
-                "rubric_es": "PREFACIO DE SANTAS VÍRGENES Y RELIGIOSOS SIGNIFICADO DE LA VIDA CONSAGRADA EXCLUSIVA A DIOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "361:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "71.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "362:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las solemnidades y fiestas de las santas Vírgenes y de los santos Religiosos.",
-                "__massEditorPairKeys": {
-                  "text_es": "363:text"
-                }
-              },
-              {
-                "rubric_es": "Se puede decir también en las memorias de los mismos.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "364:rubric"
-                },
-                "rubricInset_es": true
+                "rubric_es": "Se puede decir también en las memorias de los mismos."
               },
               {
                 "text_es": "En verdad es justo y necesario, que te alaben, Señor, tus criaturas del cielo y de la tierra, y, al recordar a los santos que por el reino de los cielos se consagraron a Cristo, celebremos la grandeza de tus designios.",
@@ -10390,30 +10231,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "367:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_1": {
+            "title": {
+              "es": "PREFACIO COMÚN I — EL UNIVERSO RESTAURADO EN CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN I EL UNIVERSO RESTAURADO EN CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "368:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "72.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "369:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "370:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10434,30 +10265,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "374:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_2": {
+            "title": {
+              "es": "PREFACIO COMÚN II — LA SALVACIÓN POR CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN II LA SALVACIÓN POR CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "375:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "73.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "376:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "377:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, que por amor creaste al hombre, y, aunque condenado justamente, con tu misericordia lo redimiste, por Cristo, Señor nuestro.",
@@ -10472,30 +10293,20 @@
                 }
               },
               {
-                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "380:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_3": {
+            "title": {
+              "es": "PREFACIO COMÚN III — ALABANZA A DIOS QUE NOS CREÓ Y NOS HA REDIMIDO EN CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN III ALABANZA A DIOS QUE NOS CREÓ Y NOS HA REDIMIDO EN CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "381:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "74.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "382:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "383:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10516,30 +10327,20 @@
                 }
               },
               {
-                "text_es": "Con ellos, unidos a los ángeles, nosotros queremos celebrarte y te alabamos diciendo: Santo, Santo, Santo...",
+                "text_es": "Con ellos, unidos a los ángeles, nosotros queremos celebrarte y te alabamos diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "387:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_4": {
+            "title": {
+              "es": "PREFACIO COMÚN IV — NUESTRA MISMA ACCIÓN DE GRACIAS ES UN DON DE DIOS"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN IV NUESTRA MISMA ACCIÓN DE GRACIAS ES UN DON DE DIOS",
-                "__massEditorPairKeys": {
-                  "rubric_es": "388:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "75.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "389:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "390:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10554,30 +10355,20 @@
                 }
               },
               {
-                "text_es": "A quien alaban los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "A quien alaban los ángeles y los arcángeles, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "393:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_5": {
+            "title": {
+              "es": "PREFACIO COMÚN V — PROCLAMACIÓN DEL MISTERIO DE CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN V PROCLAMACIÓN DEL MISTERIO DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "394:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "76.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "395:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "396:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10592,30 +10383,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "399:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_6": {
+            "title": {
+              "es": "PREFACIO COMÚN VI — EL MISTERIO DE LA SALVACIÓN EN CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO COMÚN VI EL MISTERIO DE LA SALVACIÓN EN CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "400:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "77.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "401:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio, tomado de la Plegaria eucarística II, se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "402:text"
-                }
+                "rubric_es": "Este prefacio, tomado de la Plegaria eucarística II, se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado.",
@@ -10636,16 +10417,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y los santos, cantamos tu gloria diciendo: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y los santos, cantamos tu gloria diciendo:",
                 "__massEditorPairKeys": {
                   "text_es": "406:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_7": {
+            "title": {
+              "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO COMÚN VII CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "407:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios de la alianza y de la paz.",
@@ -10672,22 +10457,23 @@
                 }
               },
               {
-                "text_es": "Por estos dones de tu benevolencia, unidos a los ángeles y a los santos, cantamos con gozo el himno de tu gloría: Santo, Santo, Santo...",
+                "text_es": "Por estos dones de tu benevolencia, unidos a los ángeles y a los santos, cantamos con gozo el himno de tu gloría:",
                 "__massEditorPairKeys": {
                   "text_es": "412:text"
                 }
+              }
+            ]
+          },
+          "common_8": {
+            "title": {
+              "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO"
+            },
+            "content": [
+              {
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
-                "text_es": "PREFACIO COMÚN VIII JESÚS, BUEN SAMARITANO Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "413:text"
-                }
-              },
-              {
-                "text_es": "Especialmente es recomendable usarlo en el domingo XV del tiempo ordinario del año C y el lunes de la semana XXVII del tiempo ordinario.",
-                "__massEditorPairKeys": {
-                  "text_es": "414:text"
-                }
+                "rubric_es": "Especialmente es recomendable usarlo en el domingo XV del tiempo ordinario del año C y el lunes de la semana XXVII del tiempo ordinario."
               },
               {
                 "text_es": "En verdad es justo darte gracias y deber nuestro alabarte, Padre santo, Dios todopoderoso y eterno, en todos los momentos y circunstancias de la vida, en la salud y en la enfermedad, en el sufrimiento y en el gozo, por tu siervo, Jesús, nuestro Redentor.",
@@ -10714,16 +10500,20 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los ángeles y santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los ángeles y santos, cantamos a una voz el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "419:text"
                 }
-              },
+              }
+            ]
+          },
+          "common_9": {
+            "title": {
+              "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
+            },
+            "content": [
               {
-                "text_es": "PREFACIO COMÚN IX LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
-                "__massEditorPairKeys": {
-                  "text_es": "420:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10744,30 +10534,20 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los ángeles y a los santos, cantamos con alegría el himno de tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los ángeles y a los santos, cantamos con alegría el himno de tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "424:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_1": {
+            "title": {
+              "es": "PREFACIO I DE DIFUNTOS — LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO I DE DIFUNTOS LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "425:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "78.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "426:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de difuntos.",
-                "__massEditorPairKeys": {
-                  "text_es": "427:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de difuntos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10788,30 +10568,20 @@
                 }
               },
               {
-                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria:",
                 "__massEditorPairKeys": {
                   "text_es": "431:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_2": {
+            "title": {
+              "es": "PREFACIO II DE DIFUNTOS — CRISTO HA MUERTO PARA NUESTRA VIDA"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO II DE DIFUNTOS CRISTO HA MUERTO PARA NUESTRA VIDA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "432:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "79.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "433:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de difuntos.",
-                "__massEditorPairKeys": {
-                  "text_es": "434:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de difuntos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10826,30 +10596,20 @@
                 }
               },
               {
-                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría:",
                 "__massEditorPairKeys": {
                   "text_es": "437:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_3": {
+            "title": {
+              "es": "PREFACIO III DE DIFUNTOS — CRISTO, SALVACIÓN Y VIDA"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO III DE DIFUNTOS CRISTO, SALVACIÓN Y VIDA",
-                "__massEditorPairKeys": {
-                  "rubric_es": "438:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "80.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "439:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de difuntos.",
-                "__massEditorPairKeys": {
-                  "text_es": "440:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de difuntos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
@@ -10864,30 +10624,20 @@
                 }
               },
               {
-                "text_es": "Por él, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "text_es": "Por él, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza:",
                 "__massEditorPairKeys": {
                   "text_es": "443:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_4": {
+            "title": {
+              "es": "PREFACIO IV DE DIFUNTOS — LA VIDA TERRENA Y LA GLORIA CELESTE"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO IV DE DIFUNTOS LA VIDA TERRENA Y LA GLORIA CELESTE",
-                "__massEditorPairKeys": {
-                  "rubric_es": "444:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "81.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "445:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de difuntos.",
-                "__massEditorPairKeys": {
-                  "text_es": "446:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de difuntos."
               },
               {
                 "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
@@ -10908,30 +10658,20 @@
                 }
               },
               {
-                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "450:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_5": {
+            "title": {
+              "es": "PREFACIO V DE DIFUNTOS — NUESTRA RESURRECCIÓN POR MEDIO DE LA VICTORIA DE CRISTO"
+            },
+            "content": [
               {
-                "rubric_es": "PREFACIO V DE DIFUNTOS NUESTRA RESURRECCIÓN POR MEDIO DE LA VICTORIA DE CRISTO",
-                "__massEditorPairKeys": {
-                  "rubric_es": "451:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "82.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "452:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Este prefacio se dice en las misas de difuntos.",
-                "__massEditorPairKeys": {
-                  "text_es": "453:text"
-                }
+                "rubric_es": "Este prefacio se dice en las misas de difuntos."
               },
               {
                 "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre santo.",
@@ -10946,7 +10686,7 @@
                 }
               },
               {
-                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros te proclamamos en la tierra, diciendo sin cesar: Santo, Santo, Santo...",
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros te proclamamos en la tierra, diciendo sin cesar:",
                 "__massEditorPairKeys": {
                   "text_es": "456:text"
                 }

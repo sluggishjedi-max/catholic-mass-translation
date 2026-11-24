@@ -7,7 +7,7 @@ from pathlib import Path
 import requests
 from pypdf import PdfReader
 
-from mass_ordinary_structure import pretty_js, standardize_choices
+from mass_ordinary_structure import pretty_js, split_prefaces, standardize_choices
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,12 +95,7 @@ def build_ordinary(reader: PdfReader) -> list[dict[str, object]]:
             line("Demos gracias al Señor, nuestro Dios.", "V/."),
             line("Es justo y necesario.", "R/."),
         ],
-        "songs": {
-            "cem_complete_prefaces": {
-                "title": {"es": "Prefacios completos del Misal Romano para México"},
-                "content": [corpus(17, 84)],
-            }
-        },
+        "songs": split_prefaces(corpus(17, 84)["text_es"], "es"),
         "sanctus": [
             line(
                 "Santo, Santo, Santo es el Señor, Dios del universo.<br>"

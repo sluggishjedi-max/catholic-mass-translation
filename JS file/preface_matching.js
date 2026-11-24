@@ -71,6 +71,11 @@
       if(body.length>80&&text===body)exact.push(key);
     }
     if(exact.length===1)return{...extracted,key:exact[0]};
+    const exactTitles=Object.entries(catalog).filter(([,entry])=>{
+      const names=typeof entry.title==='object'?Object.values(entry.title):[entry.title];
+      return names.some(name=>title&&(title===normalize(name)||title===normalize(String(name||'').split(/\s+[-–—]\s+|\s*[:：]\s*/u)[0])));
+    });
+    if(exactTitles.length===1)return{...extracted,key:exactTitles[0][0]};
     const named=Object.entries(aliases).filter(([key,values])=>catalog[key]&&values.some(alias=>title.includes(normalize(alias)))).map(([key])=>key);
     for(const[key,entry]of Object.entries(catalog))for(const label of typeof entry.title==='object'?Object.values(entry.title):[entry.title]){
       const parts=String(label||'').split(/\s+[-–—]\s+|\s*[:：]\s*/u),subtitle=normalize(parts.slice(1).join(' '));

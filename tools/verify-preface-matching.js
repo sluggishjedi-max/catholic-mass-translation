@@ -31,5 +31,13 @@ for(const sentence of ['수집된 감사송의 정확한 첫 본문.','This pray
  assert.equal(matcher.extract({lines:[{text:sentence}]}).body,sentence,'A body sentence mentioning a preface was removed');
 }
 assert.equal(matcher.match({lines:[{text:'COMMON PREFACE II.'},{text:'Prayer body.'}]},'en',catalog).key,'common_2','Numbered heading punctuation must remain supported');
+catalog.advent_1a={title:{it:'Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia',es:'PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA'},content:[]};
+for(const [lower,full] of Object.entries(catalog.advent_1a.title)){
+ for(const title of [full,full.split(' — ')[0]]){
+  const result=matcher.match({lines:[{text:title},{text:'Prayer body.'}]},lower,catalog);
+  assert.equal(result.key,'advent_1a',title);
+  assert.equal(result.body,'Prayer body.');
+ }
+}
 for(const[value,number]of [['卅一',31],['三一',31],['XIV',14],['二',2],['12',12]])assert.equal(matcher.ordinal(value),number);
 console.log(JSON.stringify({chineseTitles:titles,languages:10,bodyAndTitleMatching:true,ambiguousPrefacesPreserved:true}));

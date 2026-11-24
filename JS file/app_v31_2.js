@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-9';
+    const APP_VERSION = 'V31.2-20261124-10';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -3228,7 +3228,7 @@
         return chunks;
     }
 
-    async function translateHymnTextWithMachineFallback(value, sourceLang, targetLang) {
+    async function translateTextWithMachineFallback(value, sourceLang, targetLang) {
         const sourceCode = hymnMachineTranslationLanguageCodes[sourceLang] || 'auto';
         const targetCode = hymnMachineTranslationLanguageCodes[targetLang];
         if (!targetCode) throw new Error('The fallback translation language is not supported.');
@@ -3263,8 +3263,8 @@
             const sourceLang = normalizeSelectableLang(entry && entry.country, 'VN');
             try {
                 const [title, lyrics] = await Promise.all([
-                    translateHymnTextWithMachineFallback(cleanNodeText(entry && entry.title), sourceLang, targetLang),
-                    translateHymnTextWithMachineFallback(plainTextFromHtml(entry && entry.text), sourceLang, targetLang)
+                    translateTextWithMachineFallback(cleanNodeText(entry && entry.title), sourceLang, targetLang),
+                    translateTextWithMachineFallback(plainTextFromHtml(entry && entry.text), sourceLang, targetLang)
                 ]);
                 const result = { title: normalizeHymnTranslatedTitle(entry, targetLang, title), lyrics };
                 if (!hymnTranslationUsesTargetScript(result, targetLang)) throw new Error('Fallback result did not contain the target-language script.');
@@ -5093,7 +5093,7 @@
             return await translateWithGemini(sourceText, targetLang);
         } catch (primaryError) {
             try {
-                return await translateHymnTextWithMachineFallback(sourceText, sourceLang, targetLang);
+                return await translateTextWithMachineFallback(sourceText, sourceLang, targetLang);
             } catch (fallbackError) {
                 const primaryMessage = primaryError && primaryError.message ? primaryError.message : 'AI prayer translation failed.';
                 const fallbackMessage = fallbackError && fallbackError.message ? fallbackError.message : 'Fallback translation failed.';
@@ -21458,11 +21458,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function setEucharistPrefaceSelectExpanded(select, expanded) {
         if (!select || !select.options) return;
-        Array.from(select.options).forEach(option => {
-            const fullLabel = option.dataset.fullLabel || option.textContent || '';
-            const compactLabel = option.dataset.compactLabel || compactEucharistSongLabel(fullLabel);
-            option.textContent = expanded || !option.selected ? fullLabel : compactLabel;
-        });
+        select.dataset.prefaceExpanded = expanded ? 'true' : 'false';
+        const lang = select.dataset.prefaceLang;
+        const item = prefaceSelectItems.get(lang);
+        if (!item) return;
+        const refresh = () => {
+            refreshPrefaceCaptionRows();
+            if (!select.isConnected) return;
+            for (const option of select.options) {
+                const full = getEucharistSongLabel(item, option.value, lang);
+                const compact = getEucharistSongLabel(item, option.value, lang, true);
+                option.dataset.fullLabel = full;
+                option.dataset.compactLabel = compact;
+                option.textContent = select.dataset.prefaceExpanded === 'true' || !option.selected ? full : compact;
+            }
+        };
+        refresh();
+        if (expanded) void translatePrefaceCaptions(item, Array.from(select.options, option => option.value), lang, refresh);
     }
 
     function getLocalizedObjectValue(value, langCode) {
@@ -21557,12 +21569,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const collected=Object.entries(songs).filter(([,entry])=>entry.__dailyServer).sort((a,b)=>(a[1].__dailySourceRank||0)-(b[1].__dailySourceRank||0))[0];
         if (collected) return collected[0];
         if (taiwanKey) return taiwanKey;
-        if ((state.currentLoc === 'IT' || state.targetLang === 'IT') && songs.cei_complete_prefaces) {
-            return 'cei_complete_prefaces';
-        }
-        if ((state.currentLoc === 'ES' || state.targetLang === 'ES') && songs.cem_complete_prefaces) {
-            return 'cem_complete_prefaces';
-        }
         const directKey = state.liturgyInfo && state.liturgyInfo.prefaceKey;
         if (directKey && songs[directKey]) return directKey;
         let hint = state.liturgyInfo && state.liturgyInfo.prefaceHint;
@@ -21708,26 +21714,118 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return [...new Set([state.currentLoc, state.targetLang, ...SUPPORTED_LANGS])].filter(code => code && code !== lang);
     }
 
-    function prefaceTranslationTitleSource(entry, key, lang) {
-        const title = prefaceSourceLanguages(lang).map(code => prefaceNativeTitle(entry, code)).find(Boolean) || '';
-        if (!/^(?:ordinary|common)_\d+$/u.test(key)) return title;
-        return title.match(/(?:(?:[:：]|[-–—])\s+|「)(.+?)(?:」)?$/u)?.[1] || '';
+    const prefaceCaptionTranslations = new Map();
+    const prefaceSelectItems = new Map();
+
+    function splitPrefaceCaption(value) {
+        const match = value.match(/^(.*?)\s*(?:[-–—]\s+|[:：]\s*|「)(.+?)(?:」)?$/u);
+        return match ? [match[1].trim(), match[2].trim()] : [value, ''];
+    }
+
+    function prefaceCaption(item, key, lang) {
+        const entry = getEucharistSongMap(item)[key];
+        const [nativeTitle, nativeSubtitle] = splitPrefaceCaption(prefaceNativeTitle(entry, lang));
+        const sources = prefaceSourceLanguages(lang).map(code => ({
+            code, parts: splitPrefaceCaption(prefaceNativeTitle(entry, code))
+        }));
+        const labels = prefaceLabels[lang] || prefaceLabels.EN;
+        const [, family, number] = key.match(/^(ordinary|common)_(\d+)$/u) || [];
+        const categoryTitle = number ? labels[family === 'ordinary' ? 1 : 2] + ' ' + number : '';
+        const parts = [nativeTitle || categoryTitle, nativeSubtitle].map((native, index) => {
+            if (native) return {text: native};
+            const source = sources.find(candidate => candidate.parts[index]);
+            if (!source) return {text: ''};
+            const original = source.parts[index];
+            const id = aiTranslationKey(original, lang);
+            return {text:prefaceCaptionTranslations.get(id) || '', original, id, sourceLang:source.code};
+        });
+        return {parts, labels, missingBody: !prefaceBodyRows(entry, lang).length &&
+            sources.some(({code}) => prefaceBodyRows(entry, code).length)};
     }
 
     function getEucharistSongLabel(item, key, lang, compact = false) {
-        const entry = getEucharistSongMap(item)[key];
-        const labels = prefaceLabels[lang] || prefaceLabels.EN;
-        const native = prefaceNativeTitle(entry, lang);
-        const source = native ? '' : prefaceTranslationTitleSource(entry, key, lang);
-        const translated = source && aiTranslationRecords.get(aiTranslationKey(source, lang))?.text;
-        const [, family, number] = key.match(/^(ordinary|common)_(\d+)$/u) || [];
-        const title = native || (number
-            ? labels[family === 'ordinary' ? 1 : 2] + ' ' + number + (translated ? ' — ' + translated : '')
-            : translated || source || labels[0] + ' ' + key);
-        const bodyAvailable = prefaceBodyRows(entry, lang).length > 0;
-        const hasSourceBody = !bodyAvailable && prefaceSourceLanguages(lang).some(code => prefaceBodyRows(entry, code).length);
-        const note = hasSourceBody ? ' (' + labels[3] + ')' : '';
-        return (compact ? compactEucharistSongLabel(title) : title) + note;
+        const {parts, labels, missingBody} = prefaceCaption(item, key, lang);
+        const [title, subtitle] = parts;
+        const native = prefaceNativeTitle(getEucharistSongMap(item)[key], lang);
+        const detail = subtitle.text || subtitle.original;
+        const full = native && !subtitle.id ? native : (title.text || title.original || labels[0]) + (detail ? ' — ' + detail : '');
+        return (compact && !missingBody && !subtitle.id ? compactEucharistSongLabel(full) : full)
+            + (missingBody ? ' (' + labels[3] + ')' : '');
+    }
+
+    const pendingPrefaceCaptions = new Set();
+    const failedPrefaceCaptions = new Set();
+    const triedPrefaceCaptionFallback = new Set();
+
+    async function translatePrefaceCaptions(item, keys, lang, onUpdate, fallback = false) {
+        if (startupNoticeDecision !== true) return;
+        const tasks = new Map();
+        for (const key of keys) {
+            for (const part of prefaceCaption(item, key, lang).parts) {
+                if (!part.id || part.text || pendingPrefaceCaptions.has(part.id) ||
+                    (fallback ? triedPrefaceCaptionFallback.has(part.id) : failedPrefaceCaptions.has(part.id))) continue;
+                tasks.set(part.id, part);
+            }
+        }
+        const entries = [...tasks.values()];
+        for (let offset = 0; offset < entries.length; offset += 16) {
+            const batch = entries.slice(offset, offset + 16).filter(({id}) =>
+                !prefaceCaptionTranslations.has(id) && !pendingPrefaceCaptions.has(id));
+            if (!batch.length) continue;
+            batch.forEach(({id}) => {
+                pendingPrefaceCaptions.add(id);
+                if (fallback) triedPrefaceCaptionFallback.add(id);
+            });
+            let translations = {};
+            try {
+                const target = aiLanguageNames[lang] || lang;
+                const request = Object.fromEntries(batch.map(({id, original}) => [id, original]));
+                const prompt = [
+                    'Translate every Roman Missal preface title or subtitle below into ' + target + '.',
+                    catholicTranslationStyleInstruction(lang),
+                    'Keep the number or Roman numeral in every heading. Return only a JSON object with the same keys and translated string values.',
+                    JSON.stringify(request)
+                ].filter(Boolean).join('\n');
+                const payload = await fetchGeminiViaFirebase('translate', {
+                    contents: [{parts:[{text:prompt}]}],
+                    generationConfig: {temperature:0.1, responseMimeType:'application/json'}
+                }, {label:'Preface caption translation'});
+                translations = JSON.parse(geminiTextFromPayload(payload)) || {};
+            } catch (error) {
+                console.warn('Preface caption translation failed', error);
+            }
+            let updated = false;
+            for (const {id, original, sourceLang} of batch) {
+                let translated = typeof translations[id] === 'string' ? cleanNodeText(translations[id]) : '';
+                if (!translated && fallback) {
+                    try {
+                        translated = await translateTextWithMachineFallback(original, sourceLang, lang);
+                    } catch (error) {
+                        console.warn('Preface caption fallback failed', error);
+                    }
+                }
+                pendingPrefaceCaptions.delete(id);
+                if (!translated) {
+                    failedPrefaceCaptions.add(id);
+                    continue;
+                }
+                prefaceCaptionTranslations.set(id, enforceCatholicTranslationTerminology(translated, lang));
+                updated = true;
+            }
+            if (updated || !fallback) onUpdate();
+        }
+    }
+
+
+    function refreshPrefaceCaptionRows() {
+        document.querySelectorAll('[data-preface-caption-key]').forEach(caption => {
+            const lang = caption.dataset.prefaceCaptionLang;
+            const key = caption.dataset.prefaceCaptionKey;
+            const item = prefaceSelectItems.get(lang);
+            if (!item || !getEucharistSongMap(item)[key]) return;
+            caption.textContent = getEucharistSongLabel(item, key, lang);
+            void translatePrefaceCaptions(item, [key], lang, render, true);
+        });
     }
 
     function queuePrefaceTranslation(source, lang) {
@@ -21740,18 +21838,27 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const entry = getEucharistSongMap(item)[key];
         if (!entry || !lines.length || key.endsWith('_complete_prefaces')) return lines;
         const added = {};
-        for (const lang of [left, right]) {
-            const titleSource = !prefaceNativeTitle(entry, lang) && prefaceTranslationTitleSource(entry, key, lang);
-            if (titleSource) queuePrefaceTranslation(titleSource, lang);
-            if (prefaceBodyRows(entry, lang).length) continue;
+        for (const lang of new Set([left, right])) {
+            const {parts, missingBody} = prefaceCaption(item, key, lang);
+            const needsCaption = parts.some(part => part.id);
+            if (parts.some(part => part.id && !part.text)) {
+                void translatePrefaceCaptions(item, [key], lang, render, true);
+            }
+            prefaceSelectItems.set(lang, item);
+            const lower = lang.toLowerCase();
+            const caption = '<strong class="preface-translation-title" data-preface-caption-lang="' + escapeAttr(lang)
+                + '" data-preface-caption-key="' + escapeAttr(key) + '">'
+                + escapeHtml(getEucharistSongLabel(item, key, lang)) + '</strong>';
+            if (!missingBody) {
+                if (needsCaption) added[lower] = caption;
+                continue;
+            }
             const sourceRows = prefaceSourceLanguages(lang).map(code => prefaceBodyRows(entry, code)).find(rows => rows.length);
             if (!sourceRows) continue;
             const source = sourceRows.map(text => plainTextFromHtml(text.replace(/<br\s*\/?>/giu, '\n'))).join('\n\n');
             if (!source.trim()) continue;
             queuePrefaceTranslation(source, lang);
-            const lower = lang.toLowerCase();
-            added[lower] = '<strong class="preface-translation-title">' + escapeHtml(getEucharistSongLabel(item, key, lang))
-                + '</strong><br>' + makeAIButton(source, '', lang);
+            added[lower] = caption + '<br>' + makeAIButton(source, '', lang);
         }
         return Object.keys(added).length ? [{__prefaceTranslations:added, rows:lines}] : lines;
     }
@@ -22614,7 +22721,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const songKeys = getEucharistSongKeys(orig);
                 const selectedSongKey = getSelectedEucharistSongKey(orig);
                 if (songKeys.length) {
-                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="Preface" onpointerdown="setEucharistPrefaceSelectExpanded(this, true)" onblur="setEucharistPrefaceSelectExpanded(this, false)" onchange="optChange('eucharist_song', this.value)">`;
+                    prefaceSelectItems.set(langCode, orig);
+                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="Preface" data-preface-lang="${escapeAttr(langCode)}" onfocus="setEucharistPrefaceSelectExpanded(this, true)" onpointerdown="setEucharistPrefaceSelectExpanded(this, true)" onblur="setEucharistPrefaceSelectExpanded(this, false)" onchange="optChange('eucharist_song', this.value)">`;
                     songKeys.forEach(songKey => {
                         const selected = selectedSongKey === songKey ? 'selected' : '';
                         const fullLabel = getEucharistSongLabel(orig, songKey, langCode);

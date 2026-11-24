@@ -1994,9384 +1994,6251 @@
       "text_it": "È cosa buona e giusta."
     }],
     "songs": {
-      "cei_complete_prefaces": {
+      "advent_1": {
         "title": {
-          "it": "Prefazi completi del Messale Romano CEI"
+          "it": "Prefazio dell’Avvento I — La duplice venuta di Cristo"
         },
-        "content": [{
-          "sp_it": "",
-          "text_it": "327Preghiera Eucaristica"
-        }, {
-          "rubric_it": "Il sacerdote può cantare tutta, o in parte, la Preghiera Eucaristica."
-        }, {
-          "rubric_it": (
-            "Il sacerdote inizia la Preghiera Eucaristica con il Prefazio. "
-            + "Allargando le braccia, dice:"
-          )
-        }, {
-          "sp_it": "C",
-          "text_it": "Il Signore sia con voi."
-        }, {
-          "sp_it": "Tutti",
-          "text_it": "E con il tuo spirito."
-        }, {
-          "sp_it": "",
-          "text_it": "Alzando le mani, il sacerdote prosegue:"
-        }, {
-          "sp_it": "",
-          "text_it": "In alto i nostri cuori."
-        }, {
-          "sp_it": "Tutti",
-          "text_it": "Sono rivolti al Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Con le braccia allargate, il sacerdote soggiunge:"
-        }, {
-          "sp_it": "",
-          "text_it": "Rendiamo grazie al Signore nostro Dio."
-        }, {
-          "sp_it": "Tutti",
-          "text_it": "È cosa buona e giusta."
-        }, {
-          "rubric_it": "Il sacerdote continua il prefazio con le braccia allargate."
-        }, {
-          "sp_it": "",
-          "text_it": "Alla fine congiunge le mani e conclude il prefazio cantando o proclamando ad alta voce"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme con il popolo:"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Oppure in canto:"
-        }, {
-          "sp_it": "",
-          "text_it": "Sanctus, Sanctus, Sanctus Dóminus Deus Sábaoth."
-        }, {
-          "sp_it": "",
-          "text_it": "Pleni sunt caeli et terra glória tua."
-        }, {
-          "sp_it": "",
-          "text_it": "Hosánna in excélsis."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedíctus qui venit in nómine Dómini."
-        }, {
-          "sp_it": "",
-          "text_it": "Hosánna in excélsis."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dell’Avvento I"
-        }, {
-          "sp_it": "",
-          "text_it": "La duplice venuta di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
-        }, {
-          "sp_it": "",
-          "text_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al suo primo avvento"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’umiltà della condizione umana *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli portò a compimento la promessa antica *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e ci aprì la via + dell’eterna salvezza. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Quando verrà di nuovo nello splendore della gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci chiamerà a possedere il regno promesso *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "che ora osiamo sperare + vigilanti nell’attesa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "329Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio dell’Avvento I/A"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo, Signore e giudice della storia"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
-        }, {
-          "sp_it": "",
-          "text_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie *"
-        }, {
-          "sp_it": "",
-          "text_it": "e innalzare a te l’inno di benedizione e di lode, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre onnipotente, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "principio e fine di tutte le cose. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu ci hai nascosto il giorno e l’ora"
-        }, {
-          "sp_it": "",
-          "text_it": "in cui il Cristo tuo Figlio,"
-        }, {
-          "sp_it": "",
-          "text_it": "Signore e giudice della storia, *"
-        }, {
-          "sp_it": "",
-          "text_it": "apparirà sulle nubi del cielo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "rivestito di potenza e splendore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In quel giorno tremendo e glorioso"
-        }, {
-          "sp_it": "",
-          "text_it": "passerà il mondo presente"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e sorgeranno cieli nuovi + e terra nuova. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Ora egli viene incontro a noi"
-        }, {
-          "sp_it": "",
-          "text_it": "in ogni uomo e in ogni tempo,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "perché lo accogliamo nella fede *"
-        }, {
-          "sp_it": "",
-          "text_it": "e testimoniamo nell’amore +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la beata speranza del suo regno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nell’attesa del suo ultimo avvento, *"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo unanimi +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "331Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dell’Avvento II"
-        }, {
-          "sp_it": "",
-          "text_it": "Le due attese di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e"
-        }, {
-          "sp_it": "",
-          "text_it": "nelle Messe che non hanno un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli fu annunciato da tutti i profeti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "la Vergine Madre l’attese e lo portò in grembo"
-        }, {
-          "sp_it": "",
-          "text_it": "con ineffabile amore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Giovanni proclamò la sua venuta +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e lo indicò presente nel mondo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Lo stesso Signore,"
-        }, {
-          "sp_it": "",
-          "text_it": "che ci invita a preparare con gioia il suo Natale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci trovi vigilanti nella preghiera, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "esultanti nella lode. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli,"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio dell’Avvento II/A"
-        }, {
-          "sp_it": "",
-          "text_it": "Maria nuova Eva"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e nelle"
-        }, {
-          "sp_it": "",
-          "text_it": "Messe che non hanno un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi ti lodiamo, ti benediciamo,"
-        }, {
-          "sp_it": "",
-          "text_it": "ti glorifichiamo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per il mistero della Vergine Madre. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Dall’antico avversario venne la rovina, *"
-        }, {
-          "sp_it": "",
-          "text_it": "dal grembo verginale della figlia di Sion"
-        }, {
-          "sp_it": "",
-          "text_it": "è germinato colui che ci nutre con il pane degli angeli *"
-        }, {
-          "sp_it": "",
-          "text_it": "e sono scaturite per tutto il genere umano +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la salvezza e la pace. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "La grazia che Eva ci tolse"
-        }, {
-          "sp_it": "",
-          "text_it": "ci è ridonata in Maria."
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "In lei, Madre di tutti gli uomini, *"
-        }, {
-          "sp_it": "",
-          "text_it": "la maternità, redenta dal peccato e dalla morte, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "si apre al dono della vita nuova. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Dove abbondò la colpa, *"
-        }, {
-          "sp_it": "",
-          "text_it": "sovrabbonda la tua misericordia +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "in Cristo nostro salvatore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "333Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’attesa della sua venuta, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "334 Rito della Messa con il popolo"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Natale I"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo luce"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
-        }, {
-          "sp_it": "",
-          "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
-        }, {
-          "sp_it": "",
-          "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Nel mistero del Verbo incarnato *"
-        }, {
-          "sp_it": "",
-          "text_it": "è apparsa agli occhi della nostra mente"
-        }, {
-          "sp_it": "",
-          "text_it": "la luce nuova del tuo fulgore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché conoscendo Dio visibilmente, +"
-        }, {
-          "sp_it": "",
-          "text_it": "per mezzo di lui siamo conquistati"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "all’amore delle realtà invisibili. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "335Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la"
-        }, {
-          "sp_it": "",
-          "text_it": "notte santissima ; poi, fino al termine dell’Ottava, si dice sempre: mentre celebriamo il"
-        }, {
-          "sp_it": "",
-          "text_it": "giorno santissimo."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Natale II"
-        }, {
-          "sp_it": "",
-          "text_it": "Nell’incarnazione Cristo reintegra l’universo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
-        }, {
-          "sp_it": "",
-          "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
-        }, {
-          "sp_it": "",
-          "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Nel mistero adorabile del Natale *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli, Verbo invisibile,"
-        }, {
-          "sp_it": "",
-          "text_it": "apparve visibilmente nella nostra carne, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per assumere in sé tutto il creato +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e sollevarlo dalla sua caduta. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Generato prima dei secoli,"
-        }, {
-          "sp_it": "",
-          "text_it": "cominciò a esistere nel tempo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per reintegrare l’universo nel tuo disegno, o Padre, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e ricondurre a te l’umanità dispersa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti a tutti gli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo esultanti +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la"
-        }, {
-          "sp_it": "",
-          "text_it": "notte santissima ; p o i, fin o al t e rmin e d e ll’ O tta v a, s i di c e se m p r e: mentre celebriamo il"
-        }, {
-          "sp_it": "",
-          "text_it": "giorno santissimo."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale."
-        }, {
-          "sp_it": "",
-          "text_it": "337Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Natale III"
-        }, {
-          "sp_it": "",
-          "text_it": "Il sublime scambio nell’incarnazione del Verbo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
-        }, {
-          "sp_it": "",
-          "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
-        }, {
-          "sp_it": "",
-          "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui [oggi] risplende in piena luce"
-        }, {
-          "sp_it": "",
-          "text_it": "il sublime scambio che ci ha redenti: *"
-        }, {
-          "sp_it": "",
-          "text_it": "la nostra debolezza è assunta dal Verbo,"
-        }, {
-          "sp_it": "",
-          "text_it": "la natura mortale è innalzata a dignità perenne, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e noi, uniti a te in comunione mirabile, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "condividiamo la tua vita immortale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti ai cori degli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo esultanti +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la"
-        }, {
-          "sp_it": "",
-          "text_it": "notte santissima ; poi, fino al termine dell’Ottava, si dice sempre: mentre celebriamo il"
-        }, {
-          "sp_it": "",
-          "text_it": "giorno santissimo."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dell’Epifania"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo luce delle genti"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nelle Messe della solennità dell’Epifania. "
-            + "Si può dire nei giorni dopo l’Epifania, insieme con i prefazi del Natale, fino al sabato che precede la festa del"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Battesimo del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "[Oggi] in Cristo, luce del mondo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "tu hai rivelato alle genti il mistero della salvezza *"
-        }, {
-          "sp_it": "",
-          "text_it": "e in lui, apparso nella nostra carne mortale, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci hai rinnovati con la gloria dell’immortalità divina. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "339Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Epifania."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Quaresima I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il significato spirituale della Quaresima"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
-        }, {
-          "sp_it": "",
-          "text_it": "quando non è indicato un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Ogni anno tu doni ai tuoi fedeli"
-        }, {
-          "sp_it": "",
-          "text_it": "di prepararsi con gioia, purificati nello spirito,"
-        }, {
-          "sp_it": "",
-          "text_it": "alla celebrazione della Pasqua, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché, assidui nella preghiera e nella carità operosa, *"
-        }, {
-          "sp_it": "",
-          "text_it": "attingano ai misteri della redenzione"
-        }, {
-          "sp_it": "",
-          "text_it": "la pienezza della vita nuova +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "in Cristo tuo Figlio, nostro salvatore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "341Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Quaresima II"
-        }, {
-          "sp_it": "",
-          "text_it": "La penitenza dello spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
-        }, {
-          "sp_it": "",
-          "text_it": "quando non è indicato un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai stabilito per i tuoi figli"
-        }, {
-          "sp_it": "",
-          "text_it": "un tempo di rinnovamento spirituale *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché si convertano a te con tutto il cuore *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, liberi dai fermenti del peccato, +"
-        }, {
-          "sp_it": "",
-          "text_it": "vivano le vicende di questo mondo"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "sempre rivolti ai beni eterni. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "343Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Quaresima III"
-        }, {
-          "sp_it": "",
-          "text_it": "I frutti dell’astinenza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu vuoi che ti glorifichiamo"
-        }, {
-          "sp_it": "",
-          "text_it": "con la penitenza quaresimale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché la vittoria sul nostro peccato"
-        }, {
-          "sp_it": "",
-          "text_it": "ci renda disponibili alle necessità dei poveri *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "a imitazione della tua bontà infinita. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti a tutti gli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo a una sola voce +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di Quaresima IV"
-        }, {
-          "sp_it": "",
-          "text_it": "I frutti del digiuno"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con il digiuno quaresimale"
-        }, {
-          "sp_it": "",
-          "text_it": "tu vinci le nostre passioni, elevi lo spirito, *"
-        }, {
-          "sp_it": "",
-          "text_it": "infondi la forza e doni il premio, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "le Dominazioni ti adorano,"
-        }, {
-          "sp_it": "",
-          "text_it": "le Potenze ti venerano con tremore; *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "uniti in eterna esultanza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre umili voci +"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "345Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio di Quaresima V"
-        }, {
-          "sp_it": "",
-          "text_it": "La via dell’esodo nel deserto quaresimale"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto benedire il tuo nome,"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, ricco di misericordia, *"
-        }, {
-          "sp_it": "",
-          "text_it": "nel nostro itinerario verso la luce pasquale"
-        }, {
-          "sp_it": "",
-          "text_it": "sulle orme di Cristo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "maestro e modello +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "dell’umanità riconciliata nell’amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu riapri alla Chiesa la strada dell’esodo"
-        }, {
-          "sp_it": "",
-          "text_it": "attraverso il deserto quaresimale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché ai piedi della santa montagna,"
-        }, {
-          "sp_it": "",
-          "text_it": "con il cuore contrito e umiliato,"
-        }, {
-          "sp_it": "",
-          "text_it": "prenda coscienza della sua vocazione"
-        }, {
-          "sp_it": "",
-          "text_it": "di popolo dell’alleanza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "convocato per la tua lode"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’ascolto della tua parola +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e nell’esperienza gioiosa dei tuoi prodigi. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questi segni di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli, ministri della tua gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo nel canto +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della Passione del Signore I"
-        }, {
-          "sp_it": "",
-          "text_it": "La potenza della Croce"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle ferie della quinta settimana di Quaresima e nelle Messe"
-        }, {
-          "sp_it": "",
-          "text_it": "che celebrano i misteri della Croce e della Passione del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per la passione salvifica del tuo Figlio *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’intero universo"
-        }, {
-          "sp_it": "",
-          "text_it": "ha riconosciuto il senso della tua gloria; *"
-        }, {
-          "sp_it": "",
-          "text_it": "nella potenza ineffabile della croce +"
-        }, {
-          "sp_it": "",
-          "text_it": "splende il giudizio sul mondo"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e il potere regale di Cristo crocifisso. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, o Signore,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e a tutti i santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "eleviamo a te un inno di lode +"
-        }, {
-          "sp_it": "",
-          "text_it": "ed esultanti cantiamo: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "347Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della Passione del Signore II"
-        }, {
-          "sp_it": "",
-          "text_it": "La vittoria della Passione"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice il lunedì, il martedì e il mercoledì della Settimana Santa."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Contempliamo ormai vicini i giorni"
-        }, {
-          "sp_it": "",
-          "text_it": "della sua Pasqua di morte e risurrezione *"
-        }, {
-          "sp_it": "",
-          "text_it": "nei quali è sconfitta la superbia dell’antico avversario *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e celebrato il mistero + della nostra redenzione. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo grande mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "le schiere degli angeli adorano la tua gloria *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e per l’eternità si allietano al tuo cospetto. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, +"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio Pasquale I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il mistero pasquale"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nel Tempo Pasquale. "
-            + "Nella Veglia Pasquale si dice: in questa"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "notte, nel giorno di Pasqua e per tutta l’Ottava si dice: in questo giorno , le altre volte:"
-        }, {
-          "sp_it": "",
-          "text_it": "in questo tempo."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamare sempre la tua gloria, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e soprattutto esaltarti"
-        }, {
-          "sp_it": "",
-          "text_it": "[in questa notte] in questo giorno [in questo tempo] +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nel quale Cristo, nostra Pasqua, si è immolato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È lui il vero Agnello"
-        }, {
-          "sp_it": "",
-          "text_it": "che ha tolto i peccati del mondo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "è lui che morendo ha distrutto la morte *"
-        }, {
-          "sp_it": "",
-          "text_it": "e risorgendo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ha ridato a noi la vita. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "349Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Nella Veglia Pasquale, nel giorno di Pasqua e per tutta l’Ottava, nel Canone Romano si"
-        }, {
-          "sp_it": "",
-          "text_it": "dicono il Communicántese l’Hanc ígitur propri."
-        }, {
-          "rubric_it": (
-            "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio della Pasqua e dei neobattezzati. "
-            + "Nella Veglia Pasquale si dice: notte."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio Pasquale II"
-        }, {
-          "sp_it": "",
-          "text_it": "La vita nuova in Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo Pasquale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamare sempre la tua gloria, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e soprattutto esaltarti in questo tempo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nel quale Cristo, nostra Pasqua, si è immolato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui rinascono a vita nuova"
-        }, {
-          "sp_it": "",
-          "text_it": "i figli della luce, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e si aprono ai credenti le porte del regno dei cieli. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui morto è redenta la nostra morte, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "in lui risorto tutta la vita risorge. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "351Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio Pasquale III"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo vive per sempre e intercede per noi"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo Pasquale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamare sempre la tua gloria, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e soprattutto esaltarti in questo tempo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nel quale Cristo, nostra Pasqua, si è immolato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli continua a offrirsi per noi *"
-        }, {
-          "sp_it": "",
-          "text_it": "e intercede come nostro avvocato; *"
-        }, {
-          "sp_it": "",
-          "text_it": "immolato sulla croce, più non muore, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e con i segni della passione vive immortale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio Pasquale IV"
-        }, {
-          "sp_it": "",
-          "text_it": "La restaurazione dell’universo per mezzo del mistero pasquale"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo Pasquale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamare sempre la tua gloria, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e soprattutto esaltarti in questo tempo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nel quale Cristo, nostra Pasqua, si è immolato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui, vincitore del peccato e della morte, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’universo risorge e si rinnova, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e l’uomo ritorna alle sorgenti della vita. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "353Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio Pasquale V"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo Agnello e sacerdote"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nel Tempo Pasquale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamare sempre la tua gloria, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e soprattutto esaltarti in questo tempo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nel quale Cristo, nostra Pasqua, si è immolato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Offrendo il suo corpo sulla croce, *"
-        }, {
-          "sp_it": "",
-          "text_it": "diede compimento ai sacrifici antichi *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, donandosi per la nostra redenzione, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "divenne altare, Agnello e sacerdote. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dell’Ascensione del Signore I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il mistero dell’Ascensione"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. "
-            + "Si può dire nei giorni"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
-        }, {
-          "sp_it": "",
-          "text_it": "un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Il Signore Gesù, re della gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "vincitore del peccato e della morte, *"
-        }, {
-          "sp_it": "",
-          "text_it": "[oggi] è salito al cielo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "contemplato dagli angeli. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Mediatore tra Dio e gli uomini,"
-        }, {
-          "sp_it": "",
-          "text_it": "giudice del mondo e Signore dell’universo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci ha preceduti nella dimora eterna"
-        }, {
-          "sp_it": "",
-          "text_it": "non per separarsi dalla nostra condizione umana, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma per darci la serena fiducia che dove è lui,"
-        }, {
-          "sp_it": "",
-          "text_it": "capo e primogenito, +"
-        }, {
-          "sp_it": "",
-          "text_it": "saremo anche noi, sue membra,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "uniti nella stessa gloria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "355Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel giorno dell’Ascensione, nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Ascensione."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dell’Ascensione del Signore II"
-        }, {
-          "sp_it": "",
-          "text_it": "Il mistero dell’Ascensione"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. "
-            + "Si può dire nei giorni"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
-        }, {
-          "sp_it": "",
-          "text_it": "un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Dopo la risurrezione"
-        }, {
-          "sp_it": "",
-          "text_it": "egli si mostrò visibilmente a tutti i discepoli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e sotto il loro sguardo salì al cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché noi fossimo partecipi +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "della sua vita divina. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella pienezza della gioia pasquale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’umanità esulta su tutta la terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le schiere degli angeli e dei santi +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantano senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel giorno dell’Ascensione, nel Canone Romano si dice il Communicántes proprio."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Ascensione."
-        }, {
-          "sp_it": "",
-          "text_it": "357Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio dopo l’Ascensione"
-        }, {
-          "sp_it": "",
-          "text_it": "Nell’attesa della venuta dello Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nei giorni dopo l’Ascensione fino al sabato che precede la"
-        }, {
-          "sp_it": "",
-          "text_it": "Pentecoste, nelle Messe che non hanno un prefazio proprio."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che tutte le creature in cielo e sulla terra"
-        }, {
-          "sp_it": "",
-          "text_it": "si uniscano nella tua lode, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo tuo Figlio, Signore dell’universo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Entrato una volta per sempre"
-        }, {
-          "sp_it": "",
-          "text_it": "nel santuario dei cieli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli intercede per noi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "mediatore e garante +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "della perenne effusione dello Spirito. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Pastore e custode delle nostre anime, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci chiama all’unanime preghiera, *"
-        }, {
-          "sp_it": "",
-          "text_it": "sull’esempio di Maria e degli apostoli, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nell’attesa di una rinnovata Pentecoste. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di santificazione e d’amore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il mistero pasquale e il popolo di Dio"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Mirabile è l’opera da lui compiuta nel mistero pasquale: *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli ci ha fatti passare"
-        }, {
-          "sp_it": "",
-          "text_it": "dalla schiavitù del peccato e della morte"
-        }, {
-          "sp_it": "",
-          "text_it": "alla gloria di proclamarci stirpe eletta,"
-        }, {
-          "sp_it": "",
-          "text_it": "regale sacerdozio, gente santa,"
-        }, {
-          "sp_it": "",
-          "text_it": "popolo che egli si è acquistato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per annunciare in ogni luogo i tuoi prodigi, o Padre, +"
-        }, {
-          "sp_it": "",
-          "text_it": "che dalle tenebre ci hai chiamati"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "allo splendore della tua luce. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine dei cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "359Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario II"
-        }, {
-          "sp_it": "",
-          "text_it": "Il mistero della redenzione"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella sua misericordia per noi peccatori"
-        }, {
-          "sp_it": "",
-          "text_it": "egli si è degnato di nascere dalla Vergine; *"
-        }, {
-          "sp_it": "",
-          "text_it": "morendo sulla croce,"
-        }, {
-          "sp_it": "",
-          "text_it": "ci ha liberati dalla morte eterna *"
-        }, {
-          "sp_it": "",
-          "text_it": "e con la sua risurrezione +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci ha donato la vita immortale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con gli Angeli e gli Arcangeli,"
-        }, {
-          "sp_it": "",
-          "text_it": "i Troni, le Dominazioni,"
-        }, {
-          "sp_it": "",
-          "text_it": "e con tutte le schiere celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "361Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario III"
-        }, {
-          "sp_it": "",
-          "text_it": "La salvezza dell’uomo nel Figlio fatto uomo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Abbiamo riconosciuto il segno della tua immensa gloria *"
-        }, {
-          "sp_it": "",
-          "text_it": "quando hai mandato il tuo Figlio +"
-        }, {
-          "sp_it": "",
-          "text_it": "a prendere su di sé la nostra debolezza; **"
-        }, {
-          "sp_it": "",
-          "text_it": "in lui, nuovo Adamo, hai redento l’umanità decaduta, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e con la sua morte +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci hai resi partecipi della vita immortale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui le schiere degli angeli"
-        }, {
-          "sp_it": "",
-          "text_it": "adorano la tua maestà divina *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e nell’eternità si allietano davanti al tuo volto. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, +"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario IV"
-        }, {
-          "sp_it": "",
-          "text_it": "La storia della salvezza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli, nascendo da Maria Vergine,"
-        }, {
-          "sp_it": "",
-          "text_it": "ha rinnovato l’umanità decaduta; *"
-        }, {
-          "sp_it": "",
-          "text_it": "soffrendo la passione,"
-        }, {
-          "sp_it": "",
-          "text_it": "ha distrutto i nostri peccati; *"
-        }, {
-          "sp_it": "",
-          "text_it": "risorgendo dai morti,"
-        }, {
-          "sp_it": "",
-          "text_it": "ci ha aperto il passaggio alla vita eterna; *"
-        }, {
-          "sp_it": "",
-          "text_it": "salendo a te, o Padre, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci ha dischiuso le porte del regno dei cieli. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "363Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario V"
-        }, {
-          "sp_it": "",
-          "text_it": "La creazione"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai creato il mondo nella varietà dei suoi elementi *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e hai disposto l’avvicendarsi dei tempi e delle stagioni. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "All’uomo, fatto a tua immagine,"
-        }, {
-          "sp_it": "",
-          "text_it": "hai affdato le meraviglie dell’universo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché, fedele interprete dei tuoi disegni,"
-        }, {
-          "sp_it": "",
-          "text_it": "si prenda cura di tutto il creato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e nelle tue opere glorifichi te,"
-        }, {
-          "sp_it": "",
-          "text_it": "per Cristo Signore nostro."
-        }, {
-          "rubric_it": "**"
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "con tutti gli angeli del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "innalziamo a te la nostra lode, +"
-        }, {
-          "sp_it": "",
-          "text_it": "acclamando con festosa esultanza: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario VI"
-        }, {
-          "sp_it": "",
-          "text_it": "Il pegno della Pasqua eterna"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Da te riceviamo esistenza, energia e vita: *"
-        }, {
-          "sp_it": "",
-          "text_it": "ogni giorno del nostro pellegrinaggio sulla terra"
-        }, {
-          "sp_it": "",
-          "text_it": "è un dono sempre nuovo del tuo amore per noi"
-        }, {
-          "sp_it": "",
-          "text_it": "e un pegno de lla vita immortale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "poiché possediamo fin da ora le primizie dello Spirito,"
-        }, {
-          "sp_it": "",
-          "text_it": "nel quale hai risuscitato Gesù Cristo dai morti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e viviamo nell’attesa che si compia la beata speranza +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella Pasqua eterna del tuo regno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con tutti gli angeli del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "innalziamo a te la nostra lode, +"
-        }, {
-          "sp_it": "",
-          "text_it": "acclamando con festosa esultanza: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "365Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario VII"
-        }, {
-          "sp_it": "",
-          "text_it": "La salvezza mediante l’obbedienza di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella tua misericordia hai tanto amato il mondo *"
-        }, {
-          "sp_it": "",
-          "text_it": "da mandare il tuo Unigenito come redentore *"
-        }, {
-          "sp_it": "",
-          "text_it": "a condividere in tutto, eccetto il peccato, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la nostra condizione umana. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Così hai amato in noi"
-        }, {
-          "sp_it": "",
-          "text_it": "ciò che tu amavi nel Figlio *"
-        }, {
-          "sp_it": "",
-          "text_it": "e in lui, servo obbediente, +"
-        }, {
-          "sp_it": "",
-          "text_it": "hai ricostruito l’alleanza"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "distrutta dalla disobbedienza del peccato. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo esultanti + la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario VIII"
-        }, {
-          "sp_it": "",
-          "text_it": "La Chiesa radunata nella comunione della T rinità"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con il Sangue del tuo Figlio"
-        }, {
-          "sp_it": "",
-          "text_it": "e la potenza dello Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "hai raccolto intorno a te"
-        }, {
-          "sp_it": "",
-          "text_it": "i figli dispersi a causa del peccato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché il tuo popolo,"
-        }, {
-          "sp_it": "",
-          "text_it": "radunato nella comunione della Trinità,"
-        }, {
-          "sp_it": "",
-          "text_it": "a lode della tua multiforme sapienza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "sia riconosciuto corpo di Cristo, tempio dello Spirito, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Chiesa del Dio vivente. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti ai cori degli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo esultanti +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "367Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario IX *"
-        }, {
-          "sp_it": "",
-          "text_it": "La missione dello Spirito nella Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In ogni tempo tu doni energie nuove alla tua Chiesa *"
-        }, {
-          "sp_it": "",
-          "text_it": "e lungo il suo cammino +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "mirabilmente la guidi e la proteggi. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con la potenza del tuo santo Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "le assicuri il tuo sostegno, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ed essa, nel suo amore fiducioso,"
-        }, {
-          "sp_it": "",
-          "text_it": "non si stanca mai d’invocarti nella prova, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e nella gioia sempre ti rende grazie, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui"
-        }, {
-          "sp_it": "",
-          "text_it": "cieli e terra inneggiano al tuo amore;"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "e noi, uniti agli angeli e ai santi, +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "* Q uesto prefazio ricorre anche nella Messa votiva dello Spirito Santo B."
-        }, {
-          "rubric_it": "★ Prefazio delle domeniche"
-        }, {
-          "sp_it": "",
-          "text_it": "del Tempo Ordinario X"
-        }, {
-          "sp_it": "",
-          "text_it": "Il giorno del Signore"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto benedirti e renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, sorgente della verità e della vita, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché in questo giorno di festa +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci hai convocato nella tua casa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Oggi la tua famiglia,"
-        }, {
-          "sp_it": "",
-          "text_it": "riunita nell’ascolto della P arola"
-        }, {
-          "sp_it": "",
-          "text_it": "e nella comunione dell’unico pane spezzato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "fa memoria del Signore risorto *"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’attesa della domenica senza tramonto, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "quando l’umanità intera entrerà nel tuo riposo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Allora noi vedremo il tuo volto *"
-        }, {
-          "sp_it": "",
-          "text_it": "e loderemo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la tua misericordia. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con questa gioiosa speranza,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo a una sola voce +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "369Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio del Battesimo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il Battesimo inizio della vita nuova"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nella Messa rituale del Battesimo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È giusto renderti grazie"
-        }, {
-          "sp_it": "",
-          "text_it": "ed esaltare il tuo nome, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo e misericordioso, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo nostro Signore e redentore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi ti lodiamo, ti benediciamo,"
-        }, {
-          "sp_it": "",
-          "text_it": "ti glorifichiamo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per il sacramento della nostra rinascita. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Dal cuore squarciato del tuo Figlio"
-        }, {
-          "sp_it": "",
-          "text_it": "hai fatto scaturire per noi il dono nuziale del Battesimo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "prima Pasqua dei credenti,"
-        }, {
-          "sp_it": "",
-          "text_it": "porta della nostra salvezza,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "inizio della vita in Cristo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "fonte dell’umanità nuova. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Dall’acqua e dallo Spirito,"
-        }, {
-          "sp_it": "",
-          "text_it": "nel grembo della Chiesa, vergine e madre, *"
-        }, {
-          "sp_it": "",
-          "text_it": "tu generi il popolo sacerdotale e regale, *"
-        }, {
-          "sp_it": "",
-          "text_it": "radunato da tutte le genti +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nell’unità e nella santità del tuo amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua famiglia ti adora"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "e, unita agli angeli e ai santi, +"
-        }, {
-          "sp_it": "",
-          "text_it": "canta l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-battezzati."
-        }, {
-          "rubric_it": "★ Prefazio della Confermazione"
-        }, {
-          "sp_it": "",
-          "text_it": "Confermati con il sigillo dello Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nella Messa rituale della Confermazione."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "è bello cantare la tua gloria,"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "sorgente di ogni bene, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che nel Battesimo rigeneri i credenti +"
-        }, {
-          "sp_it": "",
-          "text_it": "e li rendi partecipi"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "del mistero pasquale del tuo Figlio. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu li confermi con il sigillo dello Spirito *"
-        }, {
-          "sp_it": "",
-          "text_it": "mediante l’imposizione delle mani +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e l’unzione regale del crisma. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Così rinnovati a immagine di Cristo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "unto di Spirito Santo"
-        }, {
-          "sp_it": "",
-          "text_it": "e inviato per il lieto annuncio della salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "li fai tuoi commensali al banchetto eucaristico +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e testimoni della fede nella Chiesa e nel mondo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "riuniti in festosa assemblea"
-        }, {
-          "sp_it": "",
-          "text_it": "per celebrare i prodigi di una rinnovata Pentecoste,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli e ai santi, +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-confermati."
-        }, {
-          "sp_it": "",
-          "text_it": "371Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della Santissima Eucaristia I"
-        }, {
-          "sp_it": "",
-          "text_it": "L’Eucaristia memoriale del sacrificio di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nella Messa «Cena del Signore». "
-            + "Si può dire anche nella so -"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "lennità del Santissimo Corpo e Sangue di Cristo e nelle Messe votive della Santissima"
-        }, {
-          "sp_it": "",
-          "text_it": "Eucaristia."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Sacerdote vero ed eterno,"
-        }, {
-          "sp_it": "",
-          "text_it": "egli istituì il rito del sacrificio perenne; *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te per primo si offrì vittima di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e comandò a noi di compiere l’offerta +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "in sua memoria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Il suo Corpo per noi immolato"
-        }, {
-          "sp_it": "",
-          "text_it": "è nostro cibo e ci dà forza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "il suo Sangue per noi versato +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "è la bevanda che ci redime da ogni colpa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "P er questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "il cielo e la terra si uniscono in un cantico nuovo"
-        }, {
-          "sp_it": "",
-          "text_it": "di adorazione e di lode,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "e noi, con tutti gli angeli del cielo, +"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo senza fine la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nel Canone Romano, nella Messa «Cena del Signore» si dicono il Communicántes,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "l’Hanc ígitur e il Qui pridie propri (cf. pp. "
-            + "143-144 )."
-          )
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della Santissima Eucaristia II"
-        }, {
-          "sp_it": "",
-          "text_it": "I frutti della Santissima Eucaristia"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nella solennità del Santissimo Corpo e Sangue di Cristo e nelle"
-        }, {
-          "sp_it": "",
-          "text_it": "Messe votive della Santissima Eucaristia."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nell’ultima Cena con i suoi apostoli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli volle perpetuare nei secoli"
-        }, {
-          "sp_it": "",
-          "text_it": "il memoriale di salvezza della sua croce, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e si offrì a te, Agnello senza macchia, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "lode perfetta e sacrificio a te gradito. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In questo grande mistero"
-        }, {
-          "sp_it": "",
-          "text_it": "tu nutri e santifichi i tuoi fedeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché l’umanità, diffusa su tutta la terra, *"
-        }, {
-          "sp_it": "",
-          "text_it": "sia illuminata dall’unica fede +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e riunita dall’unico amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi ci accostiamo a questo santo convito, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché l’effusione del tuo Spirito +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci trasformi a immagine della tua gloria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "P er questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "il cielo e la terra si uniscono in un cantico nuovo"
-        }, {
-          "sp_it": "",
-          "text_it": "di adorazione e di lode; *"
-        }, {
-          "sp_it": "",
-          "text_it": "e noi, con tutte le schiere degli angeli, +"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo senza fine la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "373Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio della Santissima Eucaristia III"
-        }, {
-          "sp_it": "",
-          "text_it": "L’Eucaristia viatico verso la Pasqua eterna"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nella Messa rituale per il Viatico."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie *"
-        }, {
-          "sp_it": "",
-          "text_it": "e benedire il tuo nome, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio di misericordia e di pace. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai voluto che il tuo Figlio,"
-        }, {
-          "sp_it": "",
-          "text_it": "obbediente fino alla morte di croce, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci precedesse sulla via del ritorno a te, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "termine ultimo + di ogni umana attesa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nell’Eucaristia, testamento del suo amore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli si fa cibo e bevanda spirituale +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per il nostro viaggio verso la Pasqua eterna. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con questo pegno della risurrezione finale *"
-        }, {
-          "sp_it": "",
-          "text_it": "partecipiamo nella speranza alla mensa gloriosa del tuo regno *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, uniti agli angeli e ai santi, +"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche si fa il ricordo di colui che riceve il Viatico."
-        }, {
-          "rubric_it": "★ Prefazio dell’Ordine"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo sorgente di ogni ministero nella Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nella Messa rituale dell’ordinazione."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta"
-        }, {
-          "sp_it": "",
-          "text_it": "lodarti e renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, Dio onnipotente e misericordioso, +"
-        }, {
-          "sp_it": "",
-          "text_it": "da cui proviene ogni paternità,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella comunione di un solo Spirito. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In Cristo tuo Figlio, eterno sacerdote,"
-        }, {
-          "sp_it": "",
-          "text_it": "servo obbediente,"
-        }, {
-          "sp_it": "",
-          "text_it": "pastore dei pastori, *"
-        }, {
-          "sp_it": "",
-          "text_it": "hai posto la sorgente di ogni ministero *"
-        }, {
-          "sp_it": "",
-          "text_it": "nella vivente tradizione apostolica +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "del tuo popolo pellegrinante nel tempo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con la varietà dei doni e dei carismi"
-        }, {
-          "sp_it": "",
-          "text_it": "tu scegli e costituisci i dispensatori dei santi misteri,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "perché in ogni parte della terra"
-        }, {
-          "sp_it": "",
-          "text_it": "sia offerto il sacrificio perfetto *"
-        }, {
-          "sp_it": "",
-          "text_it": "e con la P arola e i Sacramenti"
-        }, {
-          "sp_it": "",
-          "text_it": "si edifichi la Chiesa, +"
-        }, {
-          "sp_it": "",
-          "text_it": "comunità della nuova alleanza,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "tempio della tua lode. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con gioia +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-ordinati."
-        }, {
-          "sp_it": "",
-          "text_it": "375Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio del Matrimonio"
-        }, {
-          "sp_it": "",
-          "text_it": "La dignità dell’alleanza nuziale"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nella Messa rituale del Matrimonio. "
-            + "Per gli altri prefazi del"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Matrimonio vedi pp. 815 e 818."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai dato alla comunità coniugale la dolce legge dell’amore"
-        }, {
-          "sp_it": "",
-          "text_it": "e il vincolo indissolubile della pace, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché l’unione casta e feconda degli sposi +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "accresca il numero dei tuoi figli. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Con disegno mirabile hai disposto"
-        }, {
-          "sp_it": "",
-          "text_it": "che la nascita di nuove creature allieti l’umana famiglia, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e la loro rinascita edifichi la tua Chiesa, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "in Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e a tutti i santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Nelle Preghiere Eucaristiche si fa il ricordo dei nuovi sposi."
-        }, {
-          "rubric_it": "★ Prefazio della Penitenza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il sacramento della Riconciliazione nello Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si può dire nel Tempo di Quaresima. "
-            + "Si dice nella Messa della"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Riconciliazione e nelle Messe di carattere penitenziale."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto lodarti e renderti grazie,"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, Dio onnipotente, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per i tuoi benefici +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e soprattutto per la grazia del perdono. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "All’uomo, naufrago a causa del peccato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con il sacramento della Riconciliazione *"
-        }, {
-          "sp_it": "",
-          "text_it": "hai aperto in Cristo crocifisso e risorto +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "il porto della misericordia e della pace. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella potenza del tuo Spirito *"
-        }, {
-          "sp_it": "",
-          "text_it": "hai stabilito per la Chiesa,"
-        }, {
-          "sp_it": "",
-          "text_it": "santa e insieme bisognosa di penitenza,"
-        }, {
-          "sp_it": "",
-          "text_it": "una seconda tavola di salvezza dopo il Battesimo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e incessantemente la rinnovi +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per radunarla al banchetto gioioso del tuo amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo unanimi +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "377Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio dell’Unzione degli infermi"
-        }, {
-          "sp_it": "",
-          "text_it": "La sofferenza, partecipazione alla Pasqua di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si può dire nella Messa rituale dell’Unzione degli infermi."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, Dio onnipotente e misericordioso, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo, nostro redentore e Signore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai voluto che il tuo unico Figlio,"
-        }, {
-          "sp_it": "",
-          "text_it": "autore della vita,"
-        }, {
-          "sp_it": "",
-          "text_it": "medico dei corpi e delle anime, *"
-        }, {
-          "sp_it": "",
-          "text_it": "prendesse su di sé le nostre infermità *"
-        }, {
-          "sp_it": "",
-          "text_it": "per soccorrerci nell’ora della prova +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e santificarci nell’esperienza del dolore. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Nel segno sacramentale dell’Unzione,"
-        }, {
-          "sp_it": "",
-          "text_it": "mediante la preghiera della Chiesa, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci purifichi e ci sollevi"
-        }, {
-          "sp_it": "",
-          "text_it": "con la grazia dello Spirito *"
-        }, {
-          "sp_it": "",
-          "text_it": "e ci rendi intimamente partecipi +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "della vittoria pasquale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo segno della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo a una sola voce +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo di coloro che hanno ricevuto l’Unzione degli"
-        }, {
-          "sp_it": "",
-          "text_it": "infermi."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della beata Vergine Maria I"
-        }, {
-          "sp_it": "",
-          "text_it": "La maternità della beata Vergine Maria"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria, menzionando la celebrazione del giorno, secondo quanto è indicato nelle singole Messe."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi ti lodiamo, ti benediciamo,"
-        }, {
-          "sp_it": "",
-          "text_it": "ti glorifichiamo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella … della beata sempre V ergine Maria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per opera dello Spirito Santo"
-        }, {
-          "sp_it": "",
-          "text_it": "ha concepito il tuo unico Figlio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e sempre intatta nella sua gloria verginale,"
-        }, {
-          "sp_it": "",
-          "text_it": "ha irradiato sul mondo la luce eterna, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Gesù Cristo, Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui gli Angeli lodano la tua grandezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "le Dominazioni ti adorano,"
-        }, {
-          "sp_it": "",
-          "text_it": "le Potenze ti venerano con tremore; *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "uniti in eterna esultanza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre umili voci +"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "379Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della beata Vergine Maria II"
-        }, {
-          "sp_it": "",
-          "text_it": "La Chiesa con Maria magnifica il Signore"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "renderti grazie, o Padre,"
-        }, {
-          "sp_it": "",
-          "text_it": "per le meraviglie che hai operato nei tuoi santi; *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma è ancor più dolce e doveroso,"
-        }, {
-          "sp_it": "",
-          "text_it": "in questa memoria della beata V ergine Maria, +"
-        }, {
-          "sp_it": "",
-          "text_it": "magnificare il tuo amore per noi"
-        }, {
-          "sp_it": "",
-          "text_it": "con il suo stesso cantico di lode."
-        }, {
-          "rubric_it": "**"
-        }, {
-          "sp_it": "",
-          "text_it": "Grandi cose hai fatto, o Signore,"
-        }, {
-          "sp_it": "",
-          "text_it": "per tutti i popoli della terra *"
-        }, {
-          "sp_it": "",
-          "text_it": "e hai prolungato nei secoli"
-        }, {
-          "sp_it": "",
-          "text_it": "l’opera della tua misericordia *"
-        }, {
-          "sp_it": "",
-          "text_it": "quando hai guardato l’umiltà della tua serva +"
-        }, {
-          "sp_it": "",
-          "text_it": "e per mezzo di lei ci hai donato il Salvatore del mondo,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "il tuo Figlio Gesù Cristo, Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui le schiere degli angeli,"
-        }, {
-          "sp_it": "",
-          "text_it": "unite in eterna esultanza, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "adorano la tua immensa grandezza. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, +"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio della beata Vergine Maria III"
-        }, {
-          "sp_it": "",
-          "text_it": "Maria modello e Madre della Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e magnificare te, degno di ogni lode, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella festa [memoria] della beata V ergine Maria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "A ll ’annuncio dell ’angelo"
-        }, {
-          "sp_it": "",
-          "text_it": "accolse nel cuore immacolato il tuo Verbo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e lo concepì nel grembo verginale. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Divenendo Madre del suo Creatore, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "segnò gli inizi della Chiesa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Ai piedi della croce, per il testamento d’amore del tuo Figlio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "accolse come figli tutti gli uomini, *"
-        }, {
-          "sp_it": "",
-          "text_it": "generati dalla morte di Cristo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per una vita che non avrà mai fine. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Immagine e modello della Chiesa orante,"
-        }, {
-          "sp_it": "",
-          "text_it": "si unì alla preghiera degli apostoli"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nell’attesa dello Spirito Santo. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Assunta alla gloria del cielo,"
-        }, {
-          "sp_it": "",
-          "text_it": "accompagna con materno amore la Chiesa *"
-        }, {
-          "sp_it": "",
-          "text_it": "e la protegge nel cammino verso la patria, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "fino al giorno glorioso del Signore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con gioia + l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "381Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio della beata Vergine Maria IV"
-        }, {
-          "sp_it": "",
-          "text_it": "Maria segno di consolazione e di speranza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "è bello cantare la tua gloria, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi ti lodiamo e ti benediciamo,"
-        }, {
-          "sp_it": "",
-          "text_it": "per Cristo tuo Figlio *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella festa [memoria] della beata V ergine Maria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Umile ancella, accolse la tua parola"
-        }, {
-          "sp_it": "",
-          "text_it": "e la custodì nel suo cuore; *"
-        }, {
-          "sp_it": "",
-          "text_it": "mirabilmente unita al mistero della redenzione,"
-        }, {
-          "sp_it": "",
-          "text_it": "perseverò con gli apostoli in preghiera"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’attesa dello Spirito Santo;"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "ora risplende sul nostro cammino +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "segno di consolazione e di sicura speranza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "innalziamo a te il nostro canto +"
-        }, {
-          "sp_it": "",
-          "text_it": "e proclamiamo la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio della beata Vergine Maria V"
-        }, {
-          "sp_it": "",
-          "text_it": "Maria immagine dell’umanità nuova"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto rendere grazie"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "fonte della vita e della gioia. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai rivelato nella pienezza dei tempi"
-        }, {
-          "sp_it": "",
-          "text_it": "il mistero nascosto nei secoli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché il mondo intero +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "tornasse a vivere e a sperare. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Nel Cristo, nuovo Adamo,"
-        }, {
-          "sp_it": "",
-          "text_it": "e in Maria, nuova Eva, *"
-        }, {
-          "sp_it": "",
-          "text_it": "è apparsa finalmente la tua Chiesa, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "primizia dell’umanità redenta. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono,"
-        }, {
-          "sp_it": "",
-          "text_it": "tutta la creazione,"
-        }, {
-          "sp_it": "",
-          "text_it": "con la potenza dello Spirito Santo,"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "riprende dal principio +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "il suo cammino verso la Pasqua eterna. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "383Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio degli angeli"
-        }, {
-          "sp_it": "",
-          "text_it": "La gloria di Dio risplende negli angeli"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei santi angeli."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi proclamiamo la tua gloria"
-        }, {
-          "sp_it": "",
-          "text_it": "che risplende negli angeli e negli arcangeli; *"
-        }, {
-          "sp_it": "",
-          "text_it": "onorando questi tuoi messaggeri,"
-        }, {
-          "sp_it": "",
-          "text_it": "esaltiamo la tua bontà infinita: *"
-        }, {
-          "sp_it": "",
-          "text_it": "negli spiriti beati"
-        }, {
-          "sp_it": "",
-          "text_it": "tu ci riveli quanto sei grande e amabile"
-        }, {
-          "sp_it": "",
-          "text_it": "al di sopra di ogni creatura, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui"
-        }, {
-          "sp_it": "",
-          "text_it": "le moltitudini degli angeli celebrano la tua grandezza *"
-        }, {
-          "sp_it": "",
-          "text_it": "e le nostre voci si uniscono in adorazione +"
-        }, {
-          "sp_it": "",
-          "text_it": "al loro inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio di san Giuseppe"
-        }, {
-          "sp_it": "",
-          "text_it": "sposo della beata Vergine Maria"
-        }, {
-          "sp_it": "",
-          "text_it": "La missione di san Giuseppe"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe di san Giuseppe."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Noi ti lodiamo, ti benediciamo, ti glorifichiamo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella solennità [memoria] di san Giuseppe. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli, uomo giusto, da te fu prescelto"
-        }, {
-          "sp_it": "",
-          "text_it": "come sposo di Maria, Vergine e Madre di Dio; *"
-        }, {
-          "sp_it": "",
-          "text_it": "servo saggio e fedele,"
-        }, {
-          "sp_it": "",
-          "text_it": "fu posto a capo della santa Famiglia"
-        }, {
-          "sp_it": "",
-          "text_it": "per custodire, come padre, il tuo unico Figlio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "concepito per opera dello Spirito Santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Gesù Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "le Dominazioni ti adorano,"
-        }, {
-          "sp_it": "",
-          "text_it": "le Potenze ti venerano con tremore; *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "uniti in eterna esultanza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre umili voci +"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "385Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio degli apostoli I"
-        }, {
-          "sp_it": "",
-          "text_it": "Gli apostoli, pastori del popolo di Dio"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe degli apostoli, specialmente nelle Messe votive"
-        }, {
-          "sp_it": "",
-          "text_it": "dei santi Pietro e Paolo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Pastore eterno,"
-        }, {
-          "sp_it": "",
-          "text_it": "tu non abbandoni il tuo gregge, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma lo custodisci e proteggi sempre"
-        }, {
-          "sp_it": "",
-          "text_it": "per mezzo dei santi apostoli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e lo conduci attraverso i tempi"
-        }, {
-          "sp_it": "",
-          "text_it": "sotto la guida di coloro"
-        }, {
-          "sp_it": "",
-          "text_it": "che tu stesso hai eletto vicari del tuo Figlio *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e hai costituito pastori. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli,"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine delle schiere celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio degli apostoli II"
-        }, {
-          "sp_it": "",
-          "text_it": "La Chiesa fondata sugli apostoli e sulla loro testimonianza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe degli apostoli e degli evangelisti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai stabilito la tua Chiesa sul fondamento degli apostoli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché sulla terra sia segno visibile"
-        }, {
-          "sp_it": "",
-          "text_it": "della tua santità nei secoli *"
-        }, {
-          "sp_it": "",
-          "text_it": "e trasmetta a tutti gli uomini +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "gli insegnamenti che sono via al cielo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti a tutte le schiere degli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ora e sempre, con cuore riconoscente, +"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo nel canto la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "387Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei santi I"
-        }, {
-          "sp_it": "",
-          "text_it": "La gloria dei santi"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. "
-            + "Si può"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "dire anche nelle memorie dei santi."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella festosa assemblea dei santi"
-        }, {
-          "sp_it": "",
-          "text_it": "risplende la tua gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e il loro trionfo + celebra i doni della tua misericordia. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella vita di san N. [dei santi N. e N.]"
-        }, {
-          "sp_it": "",
-          "text_it": "ci offri un esempio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "nella comunione con lui [con loro]"
-        }, {
-          "sp_it": "",
-          "text_it": "un vincolo di amore fraterno, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella sua [loro] intercessione + aiuto e sostegno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Confortati da così grande testimonianza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "affrontiamo il buon combattimento della fede, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per condividere al di là della morte"
-        }, {
-          "sp_it": "",
-          "text_it": "la stessa corona di gloria, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, uniti agli angeli e agli arcangeli"
-        }, {
-          "sp_it": "",
-          "text_it": "e a tutti i santi del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei santi II"
-        }, {
-          "sp_it": "",
-          "text_it": "L’esempio e l’intercessione dei santi"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. "
-            + "Si può"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "dire anche nelle memorie dei santi."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella mirabile testimonianza dei tuoi santi *"
-        }, {
-          "sp_it": "",
-          "text_it": "tu rendi sempre feconda la tua Chiesa *"
-        }, {
-          "sp_it": "",
-          "text_it": "e doni a noi"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "un segno sicuro del tuo amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Il loro grande esempio"
-        }, {
-          "sp_it": "",
-          "text_it": "e la loro fraterna intercessione *"
-        }, {
-          "sp_it": "",
-          "text_it": "ci sostengono nel cammino della vita, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "perché si compia in noi il tuo mistero di salvezza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e a tutti i santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con gioia +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "389Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei santi martiri I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il segno e l’esempio del martirio"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. "
-            + "Si può dire anche"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Il sangue versato dal santo martire N.,"
-        }, {
-          "sp_it": "",
-          "text_it": "a imitazione di Cristo e per la gloria del tuo nome, *"
-        }, {
-          "sp_it": "",
-          "text_it": "manifesta i tuoi prodigi, o Padre,"
-        }, {
-          "sp_it": "",
-          "text_it": "che riveli nei deboli la tua potenza"
-        }, {
-          "sp_it": "",
-          "text_it": "e doni agli inermi la forza del martirio, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "con tutti gli angeli del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te innalziamo sulla terra il nostro canto *"
-        }, {
-          "sp_it": "",
-          "text_it": "e proclamiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei santi martiri II"
-        }, {
-          "sp_it": "",
-          "text_it": "Le meraviglie di Dio nella vittoria dei martiri"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. "
-            + "Si può dire anche"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e magnificarti nella lode dei tuoi santi. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "La loro passione fa risplendere"
-        }, {
-          "sp_it": "",
-          "text_it": "le opere mirabili della tua potenza: *"
-        }, {
-          "sp_it": "",
-          "text_it": "sei tu che infondi l’ardore della fede,"
-        }, {
-          "sp_it": "",
-          "text_it": "concedi la fermezza della perseveranza"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "e doni nel combattimento la vittoria, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza *"
-        }, {
-          "sp_it": "",
-          "text_it": "i cieli e la terra innalzano a te"
-        }, {
-          "sp_it": "",
-          "text_it": "un cantico nuovo di adorazione."
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, con tutti gli angeli del cielo, +"
-        }, {
-          "sp_it": "",
-          "text_it": "proclamiamo senza fine la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "391Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei santi pastori I"
-        }, {
-          "sp_it": "",
-          "text_it": "La presenza dei santi pastori nella Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. "
-            + "Si può dire anche"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu doni alla tua Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": "la gioia di celebrare la festa [memoria] di san N.: *"
-        }, {
-          "sp_it": "",
-          "text_it": "con i suoi esempi la rafforzi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con i suoi insegnamenti l’ammaestri, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "con la sua intercessione la proteggi. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con la moltitudine degli angeli e dei santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio dei santi pastori II"
-        }, {
-          "sp_it": "",
-          "text_it": "I pastori della Chiesa, immagine di Cristo, buon pastore"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. "
-            + "Si può dire anche"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "lodarti e ringraziarti sempre, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È lui il pastore buono"
-        }, {
-          "sp_it": "",
-          "text_it": "che ha dato la vita per le sue pecore *"
-        }, {
-          "sp_it": "",
-          "text_it": "e continua a pascere il suo gregge +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "donando alla Chiesa pastori secondo il suo cuore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella vita di san N."
-        }, {
-          "sp_it": "",
-          "text_it": "riconosciamo i segni del tuo amore per noi: *"
-        }, {
-          "sp_it": "",
-          "text_it": "nella sua voce, la tua parola, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nei suoi gesti, la tua potenza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono del tuo amore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "393Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio dei santi pastori III"
-        }, {
-          "sp_it": "",
-          "text_it": "L’annuncio del Vangelo alle genti"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori, in particolare dei"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "vescovi o dei presbiteri missionari. "
-            + "Si può dire anche nelle loro memorie."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta"
-        }, {
-          "sp_it": "",
-          "text_it": "renderti grazie *"
-        }, {
-          "sp_it": "",
-          "text_it": "e innalzare a te l’inno di benedizione e di lode, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Sospinto dal soffo dello Spirito, *"
-        }, {
-          "sp_it": "",
-          "text_it": "il santo pastore N."
-        }, {
-          "sp_it": "",
-          "text_it": "ha portato alle genti l’annuncio del Vangelo *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e i Sacramenti della salvezza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo segno della tua bontà,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio dei santi dottori della Chiesa I"
-        }, {
-          "sp_it": "",
-          "text_it": "I dottori della Chiesa riflesso della Sapienza"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
-        }, {
-          "rubric_it": "Si può dire anche nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo Signore nostro volle la sua Chiesa"
-        }, {
-          "sp_it": "",
-          "text_it": "sale della terra, luce del mondo, città posta sul monte, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché tutti possano arrivare alla conoscenza della verità *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ed essere salvati. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per realizzare questa missione tra le genti *"
-        }, {
-          "sp_it": "",
-          "text_it": "hai suscitato nel tuo popolo san N. [santa N.]"
-        }, {
-          "sp_it": "",
-          "text_it": "e gli [le] hai donato una profonda conoscenza dei divini misteri, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché con la sapienza, da te ispirata, +"
-        }, {
-          "sp_it": "",
-          "text_it": "fosse lampada di vivo fulgore"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "a gloria del tuo nome. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Illuminati dalla sua dottrina e dalla sua testimonianza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con animo grato e gioioso"
-        }, {
-          "sp_it": "",
-          "text_it": "ci uniamo ai cori celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per cantare senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "395Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio dei santi dottori della Chiesa II"
-        }, {
-          "sp_it": "",
-          "text_it": "I dottori della Chiesa profeti della sublime bellezza di Dio"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
-        }, {
-          "rubric_it": "Si può dire anche nelle loro memorie."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "lodarti e ringraziarti sempre, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Il tuo Figlio è l’unico maestro: *"
-        }, {
-          "sp_it": "",
-          "text_it": "la sua parola, lampada ai nostri passi, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la sua croce, + la sola nostra sapienza. "
-            + "**"
-          )
-        }, {
-          "rubric_it": "Nel tuo disegno di amore"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "hai illuminato san N. [santa N.] "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "e con i suoi insegnamenti"
-        }, {
-          "sp_it": "",
-          "text_it": "allieti la Chiesa +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "nella sublime bellezza della tua conoscenza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo segno della tua bontà,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio delle sante vergini"
-        }, {
-          "sp_it": "",
-          "text_it": "e dei santi religiosi"
-        }, {
-          "sp_it": "",
-          "text_it": "Il segno della vita consacrata a Dio"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste delle sante vergini e dei santi"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "religiosi. "
-            + "Si può dire anche nelle loro memorie."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nei tuoi santi, che per il regno dei cieli"
-        }, {
-          "sp_it": "",
-          "text_it": "hanno consacrato la vita a Cristo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "noi celebriamo"
-        }, {
-          "sp_it": "",
-          "text_it": "la mirabile opera della tua provvidenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che richiama l’uomo"
-        }, {
-          "sp_it": "",
-          "text_it": "alla santità dell’origine +"
-        }, {
-          "sp_it": "",
-          "text_it": "e gli fa pregustare i doni"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per lui preparati nel mondo nuovo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "397Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune I"
-        }, {
-          "sp_it": "",
-          "text_it": "Il rinnovamento universale in Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui hai voluto rinnovare l’universo,"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "perché noi tutti fossimo partecipi della sua pienezza. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Pur essendo nella condizione di Dio,"
-        }, {
-          "sp_it": "",
-          "text_it": "egli svuotò se stesso, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e con il sangue versato sulla croce +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "pacificò il cielo e la terra. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo fu esaltato sopra ogni creatura *"
-        }, {
-          "sp_it": "",
-          "text_it": "e divenne causa di salvezza eterna +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per tutti coloro che gli obbediscono. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine delle schiere celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune II"
-        }, {
-          "sp_it": "",
-          "text_it": "La salvezza per mezzo di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella tua bontà hai creato l’uomo *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, quando meritò la giusta condanna, *"
-        }, {
-          "sp_it": "",
-          "text_it": "lo hai redento nella tua misericordia, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
-        }, {
-          "sp_it": "",
-          "text_it": "le Dominazioni ti adorano,"
-        }, {
-          "sp_it": "",
-          "text_it": "le Potenze ti venerano con tremore; *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "uniti in eterna esultanza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre umili voci +"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "399Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune III"
-        }, {
-          "sp_it": "",
-          "text_it": "Lode a Dio per la creazione e la redenzione dell’uomo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di Cristo, tuo amatissimo Figlio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "hai creato l’uomo a tua immagine *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e lo hai rigenerato a vita nuova. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza"
-        }, {
-          "sp_it": "",
-          "text_it": "ti servono tutte le creature, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ti lodano tutti i redenti"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e ti benedicono unanimi gli angeli e i santi. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, uniti con gioia a questo immenso coro, +"
-        }, {
-          "sp_it": "",
-          "text_it": "ti celebriamo, cantando senza fine la tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune IV"
-        }, {
-          "sp_it": "",
-          "text_it": "La lode, dono di Dio"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu non hai bisogno della nostra lode,"
-        }, {
-          "sp_it": "",
-          "text_it": "ma per un dono del tuo amore"
-        }, {
-          "sp_it": "",
-          "text_it": "ci chiami a renderti grazie; *"
-        }, {
-          "sp_it": "",
-          "text_it": "i nostri inni di benedizione"
-        }, {
-          "sp_it": "",
-          "text_it": "non accrescono la tua grandezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma ci ottengono la grazia che ci salva, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "con tutti gli angeli del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "innalziamo a te il nostro canto *"
-        }, {
-          "sp_it": "",
-          "text_it": "e proclamiamo con gioia +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "401Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune V"
-        }, {
-          "sp_it": "",
-          "text_it": "Proclamazione del mistero di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Uniti nell’amore, celebriamo la morte del tuo Figlio, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con fede viva proclamiamo la sua risurrezione, *"
-        }, {
-          "sp_it": "",
-          "text_it": "attendiamo con ferma speranza +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la sua venuta nella gloria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "insieme agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio comune VI"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo salvatore e redentore"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Gesù Cristo, tuo amatissimo Figlio. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli è la tua parola vivente: *"
-        }, {
-          "sp_it": "",
-          "text_it": "per mezzo di lui hai creato tutte le cose,"
-        }, {
-          "sp_it": "",
-          "text_it": "lo hai mandato a noi salvatore e redentore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "fatto uomo per opera dello Spirito Santo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e nato dalla V ergine Maria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per compiere la tua volontà"
-        }, {
-          "sp_it": "",
-          "text_it": "e acquistarti un popolo santo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli, nell’ora della passione,"
-        }, {
-          "sp_it": "",
-          "text_it": "stese le braccia sulla croce, *"
-        }, {
-          "sp_it": "",
-          "text_it": "morendo distrusse la morte +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e proclamò la risurrezione. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo a una sola voce +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "403Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio comune VII"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo ospite e pellegrino in mezzo a noi"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto renderti grazie, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio dell’alleanza e della pace. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu hai chiamato e fatto uscire Abramo dalla sua terra"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per costituirlo padre di tutte le genti. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Hai suscitato Mosè per liberare il tuo popolo +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e guidarlo alla terra promessa. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella pienezza dei tempi"
-        }, {
-          "sp_it": "",
-          "text_it": "hai mandato il tuo Figlio,"
-        }, {
-          "sp_it": "",
-          "text_it": "ospite e pellegrino in mezzo a noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "per redimerci dal peccato e dalla morte *"
-        }, {
-          "sp_it": "",
-          "text_it": "e hai donato il tuo Spirito"
-        }, {
-          "sp_it": "",
-          "text_it": "per fare di tutte le nazioni un solo popolo nuovo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "che ha come fine il tuo regno,"
-        }, {
-          "sp_it": "",
-          "text_it": "come condizione la libertà dei tuoi figli, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "come statuto il precetto dell’amore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questi doni della tua benevolenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con gioia +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "rubric_it": "★ Prefazio comune VIII"
-        }, {
-          "sp_it": "",
-          "text_it": "Gesù buon samaritano"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente giusto lodarti e ringraziarti,"
-        }, {
-          "sp_it": "",
-          "text_it": "Padre santo, Dio onnipotente ed eterno, *"
-        }, {
-          "sp_it": "",
-          "text_it": "in ogni momento della nostra vita,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella salute e nella malattia,"
-        }, {
-          "sp_it": "",
-          "text_it": "nella sofferenza e nella gioia, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo tuo servo e nostro redentore. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Nella sua vita mortale *"
-        }, {
-          "sp_it": "",
-          "text_it": "egli passò beneficando e sanando +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "tutti coloro che erano prigionieri del male. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Ancora oggi, come buon samaritano, *"
-        }, {
-          "sp_it": "",
-          "text_it": "si fa prossimo a ogni uomo,"
-        }, {
-          "sp_it": "",
-          "text_it": "piagato nel corpo e nello spirito, *"
-        }, {
-          "sp_it": "",
-          "text_it": "e versa sulle sue ferite +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’olio della consolazione"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e il vino della speranza. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo dono della tua grazia, *"
-        }, {
-          "sp_it": "",
-          "text_it": "anche la notte del dolore"
-        }, {
-          "sp_it": "",
-          "text_it": "si apre alla luce pasquale"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "del tuo Figlio crocifisso e risorto. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi, insieme agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce unanime +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "405Preghiera Eucaristica"
-        }, {
-          "rubric_it": "★ Prefazio comune IX"
-        }, {
-          "sp_it": "",
-          "text_it": "La gloria di Dio è l’uomo vivente"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
-        }, {
-          "sp_it": "",
-          "text_it": "non è richiesto il prefazio del Tempo."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "lodarti e renderti grazie sempre e in ogni luogo, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu sei l’unico Dio vivo e vero: *"
-        }, {
-          "sp_it": "",
-          "text_it": "l’universo è pieno della tua presenza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma soprattutto nell’uomo, creato a tua immagine, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "hai impresso il sigillo della tua gloria. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Tu lo chiami a cooperare con il lavoro quotidiano"
-        }, {
-          "sp_it": "",
-          "text_it": "al progetto della creazione *"
-        }, {
-          "sp_it": "",
-          "text_it": "e gli doni il tuo Spirito, *"
-        }, {
-          "sp_it": "",
-          "text_it": "perché in Cristo, uomo nuovo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "diventi artefice di giustizia e di pace. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli angeli e ai santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con gioia +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei defunti I"
-        }, {
-          "sp_it": "",
-          "text_it": "La speranza della risurrezione in Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei defunti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "In lui rifulge a noi"
-        }, {
-          "sp_it": "",
-          "text_it": "la speranza della beata risurrezione *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, se ci rattrista la certezza di dover morire, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci consola la promessa dell’immortalità futura. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Ai tuoi fedeli, o Signore,"
-        }, {
-          "sp_it": "",
-          "text_it": "la vita non è tolta, ma trasformata;"
-        }, {
-          "rubric_it": "*"
-        }, {
-          "sp_it": "",
-          "text_it": "e mentre si distrugge la dimora"
-        }, {
-          "sp_it": "",
-          "text_it": "di questo esilio terreno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "viene preparata un’abitazione eterna nel cielo. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti agli Angeli e agli Arcangeli,"
-        }, {
-          "sp_it": "",
-          "text_it": "ai Troni e alle Dominazioni"
-        }, {
-          "sp_it": "",
-          "text_it": "e alla moltitudine delle schiere celesti, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo con voce incessante +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "407Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei defunti II"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo è morto per la nostra vita"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei defunti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli, prendendo su di sé la nostra morte,"
-        }, {
-          "sp_it": "",
-          "text_it": "ci ha liberati dalla morte *"
-        }, {
-          "sp_it": "",
-          "text_it": "e, sacrificando la sua vita, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "ci ha aperto il passaggio alla vita immortale. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "uniti ai cori degli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei defunti III"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo, salvezza e vita"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei defunti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo,"
-        }, {
-          "sp_it": "",
-          "text_it": "Dio onnipotente ed eterno, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "per Cristo Signore nostro. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Egli è la salvezza del mondo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "la vita degli uomini, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la risurrezione dei morti. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per mezzo di lui si allietano gli angeli, *"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e nell’eternità adorano la gloria del tuo volto. "
-            + "*"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Al loro canto concedi, o Signore, +"
-        }, {
-          "sp_it": "",
-          "text_it": "che si uniscano le nostre umili voci"
-        }, {
-          "sp_it": "",
-          "text_it": "nell’inno di lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "409Preghiera Eucaristica"
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei defunti IV"
-        }, {
-          "sp_it": "",
-          "text_it": "Dalla vita terrena alla gloria eterna"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei defunti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Sei tu, Signore, che ci dai la vita"
-        }, {
-          "sp_it": "",
-          "text_it": "e ci sostieni con la tua provvidenza; *"
-        }, {
-          "sp_it": "",
-          "text_it": "e se a causa del peccato"
-        }, {
-          "sp_it": "",
-          "text_it": "il nostro corpo ritorna alla terra,"
-        }, {
-          "sp_it": "",
-          "text_it": "dalla quale lo hai formato, *"
-        }, {
-          "sp_it": "",
-          "text_it": "per la morte redentrice del tuo Figlio +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "la tua potenza ci risveglia alla gloria della risurrezione. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "Per questo mistero di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "con la moltitudine degli angeli e dei santi, *"
-        }, {
-          "sp_it": "",
-          "text_it": "cantiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "l’inno della tua lode: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Prefazio dei defunti V"
-        }, {
-          "sp_it": "",
-          "text_it": "La nostra risurrezione grazie alla vittoria di Cristo"
-        }, {
-          "sp_it": "",
-          "text_it": "Il seguente prefazio si dice nelle Messe dei defunti."
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "Il Signore sia con voi."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "E con il tuo spirito."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "I n alto i nostri cuori."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "S ono rivolti al Signore."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "V/ . "
-            + "R endiamo grazie al Signore nostro Dio."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "R/ . "
-            + "È c osa buona e giusta."
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "È veramente cosa buona e giusta,"
-        }, {
-          "sp_it": "",
-          "text_it": "nostro dovere e fonte di salvezza, *"
-        }, {
-          "sp_it": "",
-          "text_it": "rendere grazie sempre e in ogni luogo *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te, Signore, Padre santo, +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "Dio onnipotente ed eterno. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "La morte è comune eredità di tutti gli uomini, *"
-        }, {
-          "sp_it": "",
-          "text_it": "ma, per un dono misterioso del tuo amore, *"
-        }, {
-          "sp_it": "",
-          "text_it": "Cristo con la sua vittoria ci redime dalla morte +"
-        }, {
-          "sp_it": "",
-          "text_it": (
-            "e ci richiama con sé a vita nuova. "
-            + "**"
-          )
-        }, {
-          "sp_it": "",
-          "text_it": "E noi,"
-        }, {
-          "sp_it": "",
-          "text_it": "con tutti gli angeli del cielo, *"
-        }, {
-          "sp_it": "",
-          "text_it": "a te innalziamo sulla terra il nostro canto *"
-        }, {
-          "sp_it": "",
-          "text_it": "e proclamiamo senza fine +"
-        }, {
-          "sp_it": "",
-          "text_it": "la tua gloria: **"
-        }, {
-          "sp_it": "",
-          "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
-        }, {
-          "sp_it": "",
-          "text_it": "I cieli e la terra sono pieni della tua gloria."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }, {
-          "sp_it": "",
-          "text_it": "Benedetto colui che viene nel nome del Signore."
-        }, {
-          "sp_it": "",
-          "text_it": "Osanna nell’alto dei cieli."
-        }]
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
+          },
+          {
+            "rubric_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al suo primo avvento"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’umiltà della condizione umana *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli portò a compimento la promessa antica *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci aprì la via + dell’eterna salvezza. **"
+          },
+          {
+            "text_it": "Quando verrà di nuovo nello splendore della gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci chiamerà a possedere il regno promesso *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ora osiamo sperare + vigilanti nell’attesa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "advent_1a": {
+        "title": {
+          "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
+          },
+          {
+            "rubric_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e innalzare a te l’inno di benedizione e di lode, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre onnipotente, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "principio e fine di tutte le cose. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu ci hai nascosto il giorno e l’ora"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in cui il Cristo tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Signore e giudice della storia, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "apparirà sulle nubi del cielo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rivestito di potenza e splendore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In quel giorno tremendo e glorioso"
+          },
+          {
+            "sp_it": "",
+            "text_it": "passerà il mondo presente"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e sorgeranno cieli nuovi + e terra nuova. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ora egli viene incontro a noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in ogni uomo e in ogni tempo,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché lo accogliamo nella fede *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e testimoniamo nell’amore +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la beata speranza del suo regno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nell’attesa del suo ultimo avvento, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo unanimi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "advent_2": {
+        "title": {
+          "it": "Prefazio dell’Avvento II — Le due attese di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e"
+          },
+          {
+            "rubric_it": "nelle Messe che non hanno un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli fu annunciato da tutti i profeti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la Vergine Madre l’attese e lo portò in grembo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con ineffabile amore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Giovanni proclamò la sua venuta +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e lo indicò presente nel mondo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Lo stesso Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ci invita a preparare con gioia il suo Natale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci trovi vigilanti nella preghiera, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "esultanti nella lode. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "advent_2a": {
+        "title": {
+          "it": "Prefazio dell’Avvento II/A — Maria nuova Eva"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e nelle"
+          },
+          {
+            "rubric_it": "Messe che non hanno un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi ti lodiamo, ti benediciamo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti glorifichiamo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per il mistero della Vergine Madre. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dall’antico avversario venne la rovina, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dal grembo verginale della figlia di Sion"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è germinato colui che ci nutre con il pane degli angeli *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e sono scaturite per tutto il genere umano +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la salvezza e la pace. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "La grazia che Eva ci tolse"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci è ridonata in Maria."
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lei, Madre di tutti gli uomini, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la maternità, redenta dal peccato e dalla morte, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si apre al dono della vita nuova. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dove abbondò la colpa, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sovrabbonda la tua misericordia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo nostro salvatore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della sua venuta, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "nativity_1": {
+        "title": {
+          "it": "Prefazio di Natale I — Cristo luce"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
+          },
+          {
+            "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
+          },
+          {
+            "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "text_it": "Nel mistero del Verbo incarnato *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è apparsa agli occhi della nostra mente"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la luce nuova del tuo fulgore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché conoscendo Dio visibilmente, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo di lui siamo conquistati"
+          },
+          {
+            "sp_it": "",
+            "text_it": "all’amore delle realtà invisibili. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "nativity_2": {
+        "title": {
+          "it": "Prefazio di Natale II — Nell’incarnazione Cristo reintegra l’universo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
+          },
+          {
+            "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
+          },
+          {
+            "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "text_it": "Nel mistero adorabile del Natale *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli, Verbo invisibile,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "apparve visibilmente nella nostra carne, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per assumere in sé tutto il creato +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e sollevarlo dalla sua caduta. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Generato prima dei secoli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cominciò a esistere nel tempo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per reintegrare l’universo nel tuo disegno, o Padre, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ricondurre a te l’umanità dispersa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti a tutti gli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo esultanti +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua lode: **"
+          }
+        ]
+      },
+      "nativity_3": {
+        "title": {
+          "it": "Prefazio di Natale III — Il sublime scambio nell’incarnazione del Verbo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
+          },
+          {
+            "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
+          },
+          {
+            "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui [oggi] risplende in piena luce"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il sublime scambio che ci ha redenti: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la nostra debolezza è assunta dal Verbo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la natura mortale è innalzata a dignità perenne, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e noi, uniti a te in comunione mirabile, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "condividiamo la tua vita immortale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti ai cori degli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo esultanti +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua lode: **"
+          }
+        ]
+      },
+      "epiphany": {
+        "title": {
+          "it": "Prefazio dell’Epifania — Cristo luce delle genti"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della solennità dell’Epifania. Si può dire nei giorni dopo l’Epifania, insieme con i prefazi del Natale, fino al sabato che precede la festa del"
+          },
+          {
+            "rubric_it": "Battesimo del Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[Oggi] in Cristo, luce del mondo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu hai rivelato alle genti il mistero della salvezza *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e in lui, apparso nella nostra carne mortale, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci hai rinnovati con la gloria dell’immortalità divina. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "lent_1": {
+        "title": {
+          "it": "Prefazio di Quaresima I — Il significato spirituale della Quaresima"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
+          },
+          {
+            "rubric_it": "quando non è indicato un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ogni anno tu doni ai tuoi fedeli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di prepararsi con gioia, purificati nello spirito,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "alla celebrazione della Pasqua, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché, assidui nella preghiera e nella carità operosa, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "attingano ai misteri della redenzione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la pienezza della vita nuova +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo tuo Figlio, nostro salvatore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "lent_2": {
+        "title": {
+          "it": "Prefazio di Quaresima II — La penitenza dello spirito"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
+          },
+          {
+            "rubric_it": "quando non è indicato un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai stabilito per i tuoi figli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un tempo di rinnovamento spirituale *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché si convertano a te con tutto il cuore *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, liberi dai fermenti del peccato, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "vivano le vicende di questo mondo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sempre rivolti ai beni eterni. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "lent_3": {
+        "title": {
+          "it": "Prefazio di Quaresima III — I frutti dell’astinenza"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu vuoi che ti glorifichiamo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la penitenza quaresimale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché la vittoria sul nostro peccato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci renda disponibili alle necessità dei poveri *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a imitazione della tua bontà infinita. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti a tutti gli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo a una sola voce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "lent_4": {
+        "title": {
+          "it": "Prefazio di Quaresima IV — I frutti del digiuno"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con il digiuno quaresimale"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu vinci le nostre passioni, elevi lo spirito, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "infondi la forza e doni il premio, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Dominazioni ti adorano,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Potenze ti venerano con tremore; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti in eterna esultanza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre umili voci +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’inno di lode: **"
+          }
+        ]
+      },
+      "lent_5": {
+        "title": {
+          "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto benedire il tuo nome,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, ricco di misericordia, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel nostro itinerario verso la luce pasquale"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sulle orme di Cristo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "maestro e modello +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dell’umanità riconciliata nell’amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu riapri alla Chiesa la strada dell’esodo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "attraverso il deserto quaresimale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché ai piedi della santa montagna,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con il cuore contrito e umiliato,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prenda coscienza della sua vocazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di popolo dell’alleanza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "convocato per la tua lode"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’ascolto della tua parola +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nell’esperienza gioiosa dei tuoi prodigi. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questi segni di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli, ministri della tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo nel canto +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua lode: **"
+          }
+        ]
+      },
+      "passion_1": {
+        "title": {
+          "it": "Prefazio della Passione del Signore I — La potenza della Croce"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle ferie della quinta settimana di Quaresima e nelle Messe"
+          },
+          {
+            "rubric_it": "che celebrano i misteri della Croce e della Passione del Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per la passione salvifica del tuo Figlio *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’intero universo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha riconosciuto il senso della tua gloria; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella potenza ineffabile della croce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "splende il giudizio sul mondo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e il potere regale di Cristo crocifisso. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, o Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e a tutti i santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "eleviamo a te un inno di lode +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed esultanti cantiamo: **"
+          }
+        ]
+      },
+      "passion_2": {
+        "title": {
+          "it": "Prefazio della Passione del Signore II — La vittoria della Passione"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice il lunedì, il martedì e il mercoledì della Settimana Santa."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Contempliamo ormai vicini i giorni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della sua Pasqua di morte e risurrezione *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nei quali è sconfitta la superbia dell’antico avversario *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e celebrato il mistero + della nostra redenzione. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo grande mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le schiere degli angeli adorano la tua gloria *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e per l’eternità si allietano al tuo cospetto. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
+          }
+        ]
+      },
+      "easter_1": {
+        "title": {
+          "it": "Prefazio Pasquale I — Il mistero pasquale"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale. Nella Veglia Pasquale si dice: in questa"
+          },
+          {
+            "rubric_it": "notte, nel giorno di Pasqua e per tutta l’Ottava si dice: in questo giorno , le altre volte:"
+          },
+          {
+            "rubric_it": "in questo tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamare sempre la tua gloria, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto esaltarti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[in questa notte] in questo giorno [in questo tempo] +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Cristo, nostra Pasqua, si è immolato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "È lui il vero Agnello"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ha tolto i peccati del mondo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è lui che morendo ha distrutto la morte *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e risorgendo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha ridato a noi la vita. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "easter_2": {
+        "title": {
+          "it": "Prefazio Pasquale II — La vita nuova in Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamare sempre la tua gloria, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto esaltarti in questo tempo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Cristo, nostra Pasqua, si è immolato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui rinascono a vita nuova"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i figli della luce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e si aprono ai credenti le porte del regno dei cieli. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui morto è redenta la nostra morte, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in lui risorto tutta la vita risorge. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "easter_3": {
+        "title": {
+          "it": "Prefazio Pasquale III — Cristo vive per sempre e intercede per noi"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamare sempre la tua gloria, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto esaltarti in questo tempo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Cristo, nostra Pasqua, si è immolato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli continua a offrirsi per noi *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e intercede come nostro avvocato; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "immolato sulla croce, più non muore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con i segni della passione vive immortale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "easter_4": {
+        "title": {
+          "it": "Prefazio Pasquale IV — La restaurazione dell’universo per mezzo del mistero pasquale"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamare sempre la tua gloria, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto esaltarti in questo tempo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Cristo, nostra Pasqua, si è immolato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui, vincitore del peccato e della morte, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’universo risorge e si rinnova, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e l’uomo ritorna alle sorgenti della vita. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "easter_5": {
+        "title": {
+          "it": "Prefazio Pasquale V — Cristo Agnello e sacerdote"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamare sempre la tua gloria, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto esaltarti in questo tempo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Cristo, nostra Pasqua, si è immolato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Offrendo il suo corpo sulla croce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "diede compimento ai sacrifici antichi *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, donandosi per la nostra redenzione, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "divenne altare, Agnello e sacerdote. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "ascension_1": {
+        "title": {
+          "it": "Prefazio dell’Ascensione del Signore I — Il mistero dell’Ascensione"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni"
+          },
+          {
+            "rubric_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
+          },
+          {
+            "rubric_it": "un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Il Signore Gesù, re della gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "vincitore del peccato e della morte, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[oggi] è salito al cielo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "contemplato dagli angeli. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mediatore tra Dio e gli uomini,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "giudice del mondo e Signore dell’universo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha preceduti nella dimora eterna"
+          },
+          {
+            "sp_it": "",
+            "text_it": "non per separarsi dalla nostra condizione umana, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma per darci la serena fiducia che dove è lui,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "capo e primogenito, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "saremo anche noi, sue membra,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti nella stessa gloria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "ascension_2": {
+        "title": {
+          "it": "Prefazio dell’Ascensione del Signore II — Il mistero dell’Ascensione"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni"
+          },
+          {
+            "rubric_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
+          },
+          {
+            "rubric_it": "un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "text_it": "Dopo la risurrezione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli si mostrò visibilmente a tutti i discepoli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e sotto il loro sguardo salì al cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché noi fossimo partecipi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della sua vita divina. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella pienezza della gioia pasquale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’umanità esulta su tutta la terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le schiere degli angeli e dei santi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantano senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "after_ascension": {
+        "title": {
+          "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nei giorni dopo l’Ascensione fino al sabato che precede la"
+          },
+          {
+            "rubric_it": "Pentecoste, nelle Messe che non hanno un prefazio proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che tutte le creature in cielo e sulla terra"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si uniscano nella tua lode, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo tuo Figlio, Signore dell’universo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Entrato una volta per sempre"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel santuario dei cieli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli intercede per noi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "mediatore e garante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della perenne effusione dello Spirito. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Pastore e custode delle nostre anime, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci chiama all’unanime preghiera, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sull’esempio di Maria e degli apostoli, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa di una rinnovata Pentecoste. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di santificazione e d’amore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "ordinary_1": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario I — Il mistero pasquale e il popolo di Dio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mirabile è l’opera da lui compiuta nel mistero pasquale: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli ci ha fatti passare"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dalla schiavitù del peccato e della morte"
+          },
+          {
+            "sp_it": "",
+            "text_it": "alla gloria di proclamarci stirpe eletta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "regale sacerdozio, gente santa,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "popolo che egli si è acquistato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per annunciare in ogni luogo i tuoi prodigi, o Padre, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che dalle tenebre ci hai chiamati"
+          },
+          {
+            "sp_it": "",
+            "text_it": "allo splendore della tua luce. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine dei cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "ordinary_2": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario II — Il mistero della redenzione"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella sua misericordia per noi peccatori"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli si è degnato di nascere dalla Vergine; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "morendo sulla croce,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha liberati dalla morte eterna *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con la sua risurrezione +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha donato la vita immortale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con gli Angeli e gli Arcangeli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i Troni, le Dominazioni,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con tutte le schiere celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "ordinary_3": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario III — La salvezza dell’uomo nel Figlio fatto uomo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Abbiamo riconosciuto il segno della tua immensa gloria *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "quando hai mandato il tuo Figlio +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a prendere su di sé la nostra debolezza; **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in lui, nuovo Adamo, hai redento l’umanità decaduta, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con la sua morte +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci hai resi partecipi della vita immortale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui le schiere degli angeli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "adorano la tua maestà divina *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nell’eternità si allietano davanti al tuo volto. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
+          }
+        ]
+      },
+      "ordinary_4": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario IV — La storia della salvezza"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli, nascendo da Maria Vergine,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha rinnovato l’umanità decaduta; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "soffrendo la passione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha distrutto i nostri peccati; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "risorgendo dai morti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha aperto il passaggio alla vita eterna; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "salendo a te, o Padre, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha dischiuso le porte del regno dei cieli. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "ordinary_5": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario V — La creazione"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai creato il mondo nella varietà dei suoi elementi *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e hai disposto l’avvicendarsi dei tempi e delle stagioni. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "All’uomo, fatto a tua immagine,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai affdato le meraviglie dell’universo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché, fedele interprete dei tuoi disegni,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si prenda cura di tutto il creato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nelle tue opere glorifichi te,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro."
+          },
+          {
+            "text_it": "**"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con tutti gli angeli del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "innalziamo a te la nostra lode, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "acclamando con festosa esultanza: **"
+          }
+        ]
+      },
+      "ordinary_6": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario VI — Il pegno della Pasqua eterna"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Da te riceviamo esistenza, energia e vita: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ogni giorno del nostro pellegrinaggio sulla terra"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è un dono sempre nuovo del tuo amore per noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e un pegno de lla vita immortale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "poiché possediamo fin da ora le primizie dello Spirito,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale hai risuscitato Gesù Cristo dai morti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e viviamo nell’attesa che si compia la beata speranza +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella Pasqua eterna del tuo regno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con tutti gli angeli del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "innalziamo a te la nostra lode, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "acclamando con festosa esultanza: **"
+          }
+        ]
+      },
+      "ordinary_7": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario VII — La salvezza mediante l’obbedienza di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella tua misericordia hai tanto amato il mondo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "da mandare il tuo Unigenito come redentore *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a condividere in tutto, eccetto il peccato, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la nostra condizione umana. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Così hai amato in noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ciò che tu amavi nel Figlio *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e in lui, servo obbediente, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai ricostruito l’alleanza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "distrutta dalla disobbedienza del peccato. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo esultanti + la tua lode: **"
+          }
+        ]
+      },
+      "ordinary_8": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario VIII — La Chiesa radunata nella comunione della T rinità"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con il Sangue del tuo Figlio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la potenza dello Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai raccolto intorno a te"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i figli dispersi a causa del peccato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché il tuo popolo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "radunato nella comunione della Trinità,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a lode della tua multiforme sapienza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sia riconosciuto corpo di Cristo, tempio dello Spirito, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Chiesa del Dio vivente. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti ai cori degli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo esultanti +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua lode: **"
+          }
+        ]
+      },
+      "ordinary_9": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In ogni tempo tu doni energie nuove alla tua Chiesa *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e lungo il suo cammino +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "mirabilmente la guidi e la proteggi. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con la potenza del tuo santo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le assicuri il tuo sostegno, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed essa, nel suo amore fiducioso,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "non si stanca mai d’invocarti nella prova, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nella gioia sempre ti rende grazie, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cieli e terra inneggiano al tuo amore;"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e noi, uniti agli angeli e ai santi, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine la tua gloria: **"
+          }
+        ]
+      },
+      "ordinary_10": {
+        "title": {
+          "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto benedirti e renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, sorgente della verità e della vita, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché in questo giorno di festa +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci hai convocato nella tua casa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Oggi la tua famiglia,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "riunita nell’ascolto della P arola"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nella comunione dell’unico pane spezzato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fa memoria del Signore risorto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della domenica senza tramonto, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "quando l’umanità intera entrerà nel tuo riposo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Allora noi vedremo il tuo volto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e loderemo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua misericordia. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con questa gioiosa speranza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo a una sola voce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "baptism": {
+        "title": {
+          "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nella Messa rituale del Battesimo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È giusto renderti grazie"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed esaltare il tuo nome, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo e misericordioso, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo nostro Signore e redentore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi ti lodiamo, ti benediciamo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti glorifichiamo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per il sacramento della nostra rinascita. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dal cuore squarciato del tuo Figlio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai fatto scaturire per noi il dono nuziale del Battesimo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prima Pasqua dei credenti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "porta della nostra salvezza,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "inizio della vita in Cristo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fonte dell’umanità nuova. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dall’acqua e dallo Spirito,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel grembo della Chiesa, vergine e madre, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu generi il popolo sacerdotale e regale, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "radunato da tutte le genti +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’unità e nella santità del tuo amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua famiglia ti adora"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, unita agli angeli e ai santi, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "canta l’inno della tua lode: **"
+          }
+        ]
+      },
+      "confirmation": {
+        "title": {
+          "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nella Messa rituale della Confermazione."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è bello cantare la tua gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sorgente di ogni bene, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che nel Battesimo rigeneri i credenti +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e li rendi partecipi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del mistero pasquale del tuo Figlio. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu li confermi con il sigillo dello Spirito *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "mediante l’imposizione delle mani +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e l’unzione regale del crisma. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Così rinnovati a immagine di Cristo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "unto di Spirito Santo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e inviato per il lieto annuncio della salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "li fai tuoi commensali al banchetto eucaristico +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e testimoni della fede nella Chiesa e nel mondo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "riuniti in festosa assemblea"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per celebrare i prodigi di una rinnovata Pentecoste,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli e ai santi, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "eucharist_1": {
+        "title": {
+          "it": "Prefazio della Santissima Eucaristia I — L’Eucaristia memoriale del sacrificio di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nella Messa «Cena del Signore». Si può dire anche nella so -"
+          },
+          {
+            "rubric_it": "lennità del Santissimo Corpo e Sangue di Cristo e nelle Messe votive della Santissima"
+          },
+          {
+            "rubric_it": "Eucaristia."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Sacerdote vero ed eterno,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli istituì il rito del sacrificio perenne; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te per primo si offrì vittima di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e comandò a noi di compiere l’offerta +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in sua memoria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Il suo Corpo per noi immolato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è nostro cibo e ci dà forza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il suo Sangue per noi versato +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è la bevanda che ci redime da ogni colpa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "P er questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il cielo e la terra si uniscono in un cantico nuovo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di adorazione e di lode,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e noi, con tutti gli angeli del cielo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo senza fine la tua gloria: **"
+          }
+        ]
+      },
+      "eucharist_2": {
+        "title": {
+          "it": "Prefazio della Santissima Eucaristia II — I frutti della Santissima Eucaristia"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nella solennità del Santissimo Corpo e Sangue di Cristo e nelle"
+          },
+          {
+            "rubric_it": "Messe votive della Santissima Eucaristia."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nell’ultima Cena con i suoi apostoli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli volle perpetuare nei secoli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il memoriale di salvezza della sua croce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e si offrì a te, Agnello senza macchia, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lode perfetta e sacrificio a te gradito. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In questo grande mistero"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu nutri e santifichi i tuoi fedeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché l’umanità, diffusa su tutta la terra, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sia illuminata dall’unica fede +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e riunita dall’unico amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi ci accostiamo a questo santo convito, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché l’effusione del tuo Spirito +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci trasformi a immagine della tua gloria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "P er questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il cielo e la terra si uniscono in un cantico nuovo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di adorazione e di lode; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e noi, con tutte le schiere degli angeli, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo senza fine la tua gloria: **"
+          }
+        ]
+      },
+      "eucharist_3": {
+        "title": {
+          "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nella Messa rituale per il Viatico."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e benedire il tuo nome, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio di misericordia e di pace. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai voluto che il tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "obbediente fino alla morte di croce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci precedesse sulla via del ritorno a te, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "termine ultimo + di ogni umana attesa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nell’Eucaristia, testamento del suo amore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli si fa cibo e bevanda spirituale +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per il nostro viaggio verso la Pasqua eterna. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con questo pegno della risurrezione finale *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "partecipiamo nella speranza alla mensa gloriosa del tuo regno *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, uniti agli angeli e ai santi, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "holy_orders_ministries": {
+        "title": {
+          "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nella Messa rituale dell’ordinazione."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lodarti e renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, Dio onnipotente e misericordioso, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "da cui proviene ogni paternità,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella comunione di un solo Spirito. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In Cristo tuo Figlio, eterno sacerdote,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "servo obbediente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "pastore dei pastori, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai posto la sorgente di ogni ministero *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella vivente tradizione apostolica +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del tuo popolo pellegrinante nel tempo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con la varietà dei doni e dei carismi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu scegli e costituisci i dispensatori dei santi misteri,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché in ogni parte della terra"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sia offerto il sacrificio perfetto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con la P arola e i Sacramenti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si edifichi la Chiesa, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "comunità della nuova alleanza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tempio della tua lode. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con gioia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "marriage_1": {
+        "title": {
+          "it": "Prefazio del Matrimonio — La dignità dell’alleanza nuziale"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nella Messa rituale del Matrimonio. Per gli altri prefazi del"
+          },
+          {
+            "rubric_it": "Matrimonio vedi pp. 815 e 818."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai dato alla comunità coniugale la dolce legge dell’amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e il vincolo indissolubile della pace, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché l’unione casta e feconda degli sposi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "accresca il numero dei tuoi figli. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Con disegno mirabile hai disposto"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che la nascita di nuove creature allieti l’umana famiglia, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la loro rinascita edifichi la tua Chiesa, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e a tutti i santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "penance": {
+        "title": {
+          "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nel Tempo di Quaresima. Si dice nella Messa della"
+          },
+          {
+            "rubric_it": "Riconciliazione e nelle Messe di carattere penitenziale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto lodarti e renderti grazie,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, Dio onnipotente, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per i tuoi benefici +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e soprattutto per la grazia del perdono. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "All’uomo, naufrago a causa del peccato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con il sacramento della Riconciliazione *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai aperto in Cristo crocifisso e risorto +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il porto della misericordia e della pace. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella potenza del tuo Spirito *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai stabilito per la Chiesa,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "santa e insieme bisognosa di penitenza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "una seconda tavola di salvezza dopo il Battesimo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e incessantemente la rinnovi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per radunarla al banchetto gioioso del tuo amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo unanimi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "sick_paschal": {
+        "title": {
+          "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si può dire nella Messa rituale dell’Unzione degli infermi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, Dio onnipotente e misericordioso, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo, nostro redentore e Signore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai voluto che il tuo unico Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "autore della vita,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "medico dei corpi e delle anime, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prendesse su di sé le nostre infermità *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per soccorrerci nell’ora della prova +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e santificarci nell’esperienza del dolore. **"
+          },
+          {
+            "text_it": "Nel segno sacramentale dell’Unzione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "mediante la preghiera della Chiesa, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci purifichi e ci sollevi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la grazia dello Spirito *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci rendi intimamente partecipi +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della vittoria pasquale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo segno della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo a una sola voce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "mary_1": {
+        "title": {
+          "it": "Prefazio della beata Vergine Maria I — La maternità della beata Vergine Maria"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria, menzionando la celebrazione del giorno, secondo quanto è indicato nelle singole Messe."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi ti lodiamo, ti benediciamo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti glorifichiamo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella … della beata sempre V ergine Maria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per opera dello Spirito Santo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha concepito il tuo unico Figlio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e sempre intatta nella sua gloria verginale,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha irradiato sul mondo la luce eterna, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Gesù Cristo, Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui gli Angeli lodano la tua grandezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Dominazioni ti adorano,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Potenze ti venerano con tremore; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti in eterna esultanza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre umili voci +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’inno di lode: **"
+          }
+        ]
+      },
+      "mary_2": {
+        "title": {
+          "it": "Prefazio della beata Vergine Maria II — La Chiesa con Maria magnifica il Signore"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "renderti grazie, o Padre,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per le meraviglie che hai operato nei tuoi santi; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma è ancor più dolce e doveroso,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in questa memoria della beata V ergine Maria, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "magnificare il tuo amore per noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con il suo stesso cantico di lode."
+          },
+          {
+            "text_it": "**"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Grandi cose hai fatto, o Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per tutti i popoli della terra *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e hai prolungato nei secoli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’opera della tua misericordia *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "quando hai guardato l’umiltà della tua serva +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e per mezzo di lei ci hai donato il Salvatore del mondo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il tuo Figlio Gesù Cristo, Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui le schiere degli angeli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "unite in eterna esultanza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "adorano la tua immensa grandezza. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre voci nell’inno di lode: **"
+          }
+        ]
+      },
+      "mary_3": {
+        "title": {
+          "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, Dio onnipotente ed eterno, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e magnificare te, degno di ogni lode, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella festa [memoria] della beata V ergine Maria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "A ll ’annuncio dell ’angelo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "accolse nel cuore immacolato il tuo Verbo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e lo concepì nel grembo verginale. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Divenendo Madre del suo Creatore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "segnò gli inizi della Chiesa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ai piedi della croce, per il testamento d’amore del tuo Figlio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "accolse come figli tutti gli uomini, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "generati dalla morte di Cristo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per una vita che non avrà mai fine. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Immagine e modello della Chiesa orante,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si unì alla preghiera degli apostoli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa dello Spirito Santo. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Assunta alla gloria del cielo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "accompagna con materno amore la Chiesa *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la protegge nel cammino verso la patria, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fino al giorno glorioso del Signore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con gioia + l’inno della tua lode: **"
+          }
+        ]
+      },
+      "mary_4": {
+        "title": {
+          "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è bello cantare la tua gloria, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi ti lodiamo e ti benediciamo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo tuo Figlio *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella festa [memoria] della beata V ergine Maria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Umile ancella, accolse la tua parola"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la custodì nel suo cuore; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "mirabilmente unita al mistero della redenzione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perseverò con gli apostoli in preghiera"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa dello Spirito Santo;"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ora risplende sul nostro cammino +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "segno di consolazione e di sicura speranza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "innalziamo a te il nostro canto +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamiamo la tua lode: **"
+          }
+        ]
+      },
+      "mary_5": {
+        "title": {
+          "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto rendere grazie"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fonte della vita e della gioia. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai rivelato nella pienezza dei tempi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il mistero nascosto nei secoli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché il mondo intero +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tornasse a vivere e a sperare. **"
+          },
+          {
+            "text_it": "Nel Cristo, nuovo Adamo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e in Maria, nuova Eva, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è apparsa finalmente la tua Chiesa, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "primizia dell’umanità redenta. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tutta la creazione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la potenza dello Spirito Santo,"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "riprende dal principio +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il suo cammino verso la Pasqua eterna. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "angels": {
+        "title": {
+          "it": "Prefazio degli angeli — La gloria di Dio risplende negli angeli"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi angeli."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi proclamiamo la tua gloria"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che risplende negli angeli e negli arcangeli; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "onorando questi tuoi messaggeri,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "esaltiamo la tua bontà infinita: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "negli spiriti beati"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu ci riveli quanto sei grande e amabile"
+          },
+          {
+            "sp_it": "",
+            "text_it": "al di sopra di ogni creatura, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le moltitudini degli angeli celebrano la tua grandezza *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e le nostre voci si uniscono in adorazione +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "al loro inno di lode: **"
+          }
+        ]
+      },
+      "saint_joseph": {
+        "title": {
+          "it": "Prefazio di san Giuseppe sposo della beata Vergine Maria — La missione di san Giuseppe"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe di san Giuseppe."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi ti lodiamo, ti benediciamo, ti glorifichiamo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella solennità [memoria] di san Giuseppe. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli, uomo giusto, da te fu prescelto"
+          },
+          {
+            "sp_it": "",
+            "text_it": "come sposo di Maria, Vergine e Madre di Dio; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "servo saggio e fedele,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fu posto a capo della santa Famiglia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per custodire, come padre, il tuo unico Figlio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concepito per opera dello Spirito Santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Gesù Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Dominazioni ti adorano,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Potenze ti venerano con tremore; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti in eterna esultanza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre umili voci +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’inno di lode: **"
+          }
+        ]
+      },
+      "apostles_1": {
+        "title": {
+          "it": "Prefazio degli apostoli I — Gli apostoli, pastori del popolo di Dio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe degli apostoli, specialmente nelle Messe votive"
+          },
+          {
+            "rubric_it": "dei santi Pietro e Paolo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Pastore eterno,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu non abbandoni il tuo gregge, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma lo custodisci e proteggi sempre"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo dei santi apostoli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e lo conduci attraverso i tempi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sotto la guida di coloro"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che tu stesso hai eletto vicari del tuo Figlio *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e hai costituito pastori. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine delle schiere celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "apostles_2": {
+        "title": {
+          "it": "Prefazio degli apostoli II — La Chiesa fondata sugli apostoli e sulla loro testimonianza"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe degli apostoli e degli evangelisti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai stabilito la tua Chiesa sul fondamento degli apostoli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché sulla terra sia segno visibile"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della tua santità nei secoli *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e trasmetta a tutti gli uomini +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "gli insegnamenti che sono via al cielo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti a tutte le schiere degli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ora e sempre, con cuore riconoscente, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo nel canto la tua lode: **"
+          }
+        ]
+      },
+      "saints_1": {
+        "title": {
+          "it": "Prefazio dei santi I — La gloria dei santi"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
+          },
+          {
+            "rubric_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può"
+          },
+          {
+            "rubric_it": "dire anche nelle memorie dei santi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella festosa assemblea dei santi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "risplende la tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e il loro trionfo + celebra i doni della tua misericordia. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella vita di san N. [dei santi N. e N.]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci offri un esempio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella comunione con lui [con loro]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un vincolo di amore fraterno, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella sua [loro] intercessione + aiuto e sostegno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Confortati da così grande testimonianza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "affrontiamo il buon combattimento della fede, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per condividere al di là della morte"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la stessa corona di gloria, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, uniti agli angeli e agli arcangeli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e a tutti i santi del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "saints_2": {
+        "title": {
+          "it": "Prefazio dei santi II — L’esempio e l’intercessione dei santi"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
+          },
+          {
+            "rubric_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può"
+          },
+          {
+            "rubric_it": "dire anche nelle memorie dei santi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella mirabile testimonianza dei tuoi santi *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu rendi sempre feconda la tua Chiesa *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e doni a noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un segno sicuro del tuo amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Il loro grande esempio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la loro fraterna intercessione *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci sostengono nel cammino della vita, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché si compia in noi il tuo mistero di salvezza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e a tutti i santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con gioia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "martyrs": {
+        "title": {
+          "it": "Prefazio dei santi martiri I — Il segno e l’esempio del martirio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche"
+          },
+          {
+            "rubric_it": "nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Il sangue versato dal santo martire N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a imitazione di Cristo e per la gloria del tuo nome, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "manifesta i tuoi prodigi, o Padre,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che riveli nei deboli la tua potenza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e doni agli inermi la forza del martirio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con tutti gli angeli del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te innalziamo sulla terra il nostro canto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          }
+        ]
+      },
+      "martyrs_2": {
+        "title": {
+          "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche"
+          },
+          {
+            "rubric_it": "nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e magnificarti nella lode dei tuoi santi. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "La loro passione fa risplendere"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le opere mirabili della tua potenza: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sei tu che infondi l’ardore della fede,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi la fermezza della perseveranza"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e doni nel combattimento la vittoria, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i cieli e la terra innalzano a te"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un cantico nuovo di adorazione."
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, con tutti gli angeli del cielo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo senza fine la tua lode: **"
+          }
+        ]
+      },
+      "pastors": {
+        "title": {
+          "it": "Prefazio dei santi pastori I — La presenza dei santi pastori nella Chiesa"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche"
+          },
+          {
+            "rubric_it": "nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu doni alla tua Chiesa"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la gioia di celebrare la festa [memoria] di san N.: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con i suoi esempi la rafforzi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con i suoi insegnamenti l’ammaestri, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la sua intercessione la proteggi. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la moltitudine degli angeli e dei santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "pastors_2": {
+        "title": {
+          "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche"
+          },
+          {
+            "rubric_it": "nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lodarti e ringraziarti sempre, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "È lui il pastore buono"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ha dato la vita per le sue pecore *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e continua a pascere il suo gregge +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "donando alla Chiesa pastori secondo il suo cuore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella vita di san N."
+          },
+          {
+            "sp_it": "",
+            "text_it": "riconosciamo i segni del tuo amore per noi: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella sua voce, la tua parola, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nei suoi gesti, la tua potenza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono del tuo amore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "pastors_3": {
+        "title": {
+          "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori, in particolare dei"
+          },
+          {
+            "rubric_it": "vescovi o dei presbiteri missionari. Si può dire anche nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta"
+          },
+          {
+            "sp_it": "",
+            "text_it": "renderti grazie *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e innalzare a te l’inno di benedizione e di lode, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Sospinto dal soffo dello Spirito, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il santo pastore N."
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha portato alle genti l’annuncio del Vangelo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e i Sacramenti della salvezza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo segno della tua bontà,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "doctors_1": {
+        "title": {
+          "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
+          },
+          {
+            "rubric_it": "Si può dire anche nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Cristo Signore nostro volle la sua Chiesa"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sale della terra, luce del mondo, città posta sul monte, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché tutti possano arrivare alla conoscenza della verità *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed essere salvati. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per realizzare questa missione tra le genti *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai suscitato nel tuo popolo san N. [santa N.]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e gli [le] hai donato una profonda conoscenza dei divini misteri, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché con la sapienza, da te ispirata, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fosse lampada di vivo fulgore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a gloria del tuo nome. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Illuminati dalla sua dottrina e dalla sua testimonianza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con animo grato e gioioso"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci uniamo ai cori celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per cantare senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "doctors_2": {
+        "title": {
+          "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
+          },
+          {
+            "rubric_it": "Si può dire anche nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lodarti e ringraziarti sempre, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Il tuo Figlio è l’unico maestro: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la sua parola, lampada ai nostri passi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la sua croce, + la sola nostra sapienza. **"
+          },
+          {
+            "text_it": "Nel tuo disegno di amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai illuminato san N. [santa N.] *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con i suoi insegnamenti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "allieti la Chiesa +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella sublime bellezza della tua conoscenza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo segno della tua bontà,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "virgins_and_religious": {
+        "title": {
+          "it": "Prefazio delle sante vergini e dei santi religiosi — Il segno della vita consacrata a Dio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste delle sante vergini e dei santi"
+          },
+          {
+            "rubric_it": "religiosi. Si può dire anche nelle loro memorie."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nei tuoi santi, che per il regno dei cieli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hanno consacrato la vita a Cristo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "noi celebriamo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la mirabile opera della tua provvidenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che richiama l’uomo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "alla santità dell’origine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e gli fa pregustare i doni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per lui preparati nel mondo nuovo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "common_1": {
+        "title": {
+          "it": "Prefazio comune I — Il rinnovamento universale in Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui hai voluto rinnovare l’universo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché noi tutti fossimo partecipi della sua pienezza. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Pur essendo nella condizione di Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli svuotò se stesso, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con il sangue versato sulla croce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "pacificò il cielo e la terra. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo fu esaltato sopra ogni creatura *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e divenne causa di salvezza eterna +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per tutti coloro che gli obbediscono. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine delle schiere celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "common_2": {
+        "title": {
+          "it": "Prefazio comune II — La salvezza per mezzo di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella tua bontà hai creato l’uomo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, quando meritò la giusta condanna, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo hai redento nella tua misericordia, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui gli Angeli lodano la tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Dominazioni ti adorano,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "le Potenze ti venerano con tremore; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te inneggiano i cieli dei cieli e i Serafini, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti in eterna esultanza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre umili voci +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’inno di lode: **"
+          }
+        ]
+      },
+      "common_3": {
+        "title": {
+          "it": "Prefazio comune III — Lode a Dio per la creazione e la redenzione dell’uomo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di Cristo, tuo amatissimo Figlio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai creato l’uomo a tua immagine *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e lo hai rigenerato a vita nuova. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti servono tutte le creature, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti lodano tutti i redenti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ti benedicono unanimi gli angeli e i santi. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, uniti con gioia a questo immenso coro, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti celebriamo, cantando senza fine la tua lode: **"
+          }
+        ]
+      },
+      "common_4": {
+        "title": {
+          "it": "Prefazio comune IV — La lode, dono di Dio"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu non hai bisogno della nostra lode,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma per un dono del tuo amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci chiami a renderti grazie; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i nostri inni di benedizione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "non accrescono la tua grandezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma ci ottengono la grazia che ci salva, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con tutti gli angeli del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "innalziamo a te il nostro canto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamiamo con gioia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          }
+        ]
+      },
+      "common_5": {
+        "title": {
+          "it": "Prefazio comune V — Proclamazione del mistero di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Uniti nell’amore, celebriamo la morte del tuo Figlio, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con fede viva proclamiamo la sua risurrezione, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "attendiamo con ferma speranza +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la sua venuta nella gloria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo l’inno della tua lode: **"
+          }
+        ]
+      },
+      "common_6": {
+        "title": {
+          "it": "Prefazio comune VI — Cristo salvatore e redentore"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Gesù Cristo, tuo amatissimo Figlio. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli è la tua parola vivente: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo di lui hai creato tutte le cose,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo hai mandato a noi salvatore e redentore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fatto uomo per opera dello Spirito Santo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nato dalla V ergine Maria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per compiere la tua volontà"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e acquistarti un popolo santo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli, nell’ora della passione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "stese le braccia sulla croce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "morendo distrusse la morte +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamò la risurrezione. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo a una sola voce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          }
+        ]
+      },
+      "common_7": {
+        "title": {
+          "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio dell’alleanza e della pace. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu hai chiamato e fatto uscire Abramo dalla sua terra"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per costituirlo padre di tutte le genti. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Hai suscitato Mosè per liberare il tuo popolo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e guidarlo alla terra promessa. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella pienezza dei tempi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai mandato il tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ospite e pellegrino in mezzo a noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per redimerci dal peccato e dalla morte *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e hai donato il tuo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per fare di tutte le nazioni un solo popolo nuovo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ha come fine il tuo regno,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "come condizione la libertà dei tuoi figli, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "come statuto il precetto dell’amore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questi doni della tua benevolenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con gioia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "common_8": {
+        "title": {
+          "it": "Prefazio comune VIII — Gesù buon samaritano"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto lodarti e ringraziarti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, Dio onnipotente ed eterno, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in ogni momento della nostra vita,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella salute e nella malattia,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella sofferenza e nella gioia, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo tuo servo e nostro redentore. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Nella sua vita mortale *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli passò beneficando e sanando +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tutti coloro che erano prigionieri del male. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ancora oggi, come buon samaritano, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si fa prossimo a ogni uomo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "piagato nel corpo e nello spirito, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e versa sulle sue ferite +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’olio della consolazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e il vino della speranza. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo dono della tua grazia, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "anche la notte del dolore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si apre alla luce pasquale"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del tuo Figlio crocifisso e risorto. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi, insieme agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce unanime +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "common_9": {
+        "title": {
+          "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
+          },
+          {
+            "rubric_it": "non è richiesto il prefazio del Tempo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lodarti e renderti grazie sempre e in ogni luogo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu sei l’unico Dio vivo e vero: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’universo è pieno della tua presenza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma soprattutto nell’uomo, creato a tua immagine, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai impresso il sigillo della tua gloria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu lo chiami a cooperare con il lavoro quotidiano"
+          },
+          {
+            "sp_it": "",
+            "text_it": "al progetto della creazione *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e gli doni il tuo Spirito, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché in Cristo, uomo nuovo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "diventi artefice di giustizia e di pace. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con gioia +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "dead_1": {
+        "title": {
+          "it": "Prefazio dei defunti I — La speranza della risurrezione in Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In lui rifulge a noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la speranza della beata risurrezione *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, se ci rattrista la certezza di dover morire, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci consola la promessa dell’immortalità futura. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ai tuoi fedeli, o Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la vita non è tolta, ma trasformata;"
+          },
+          {
+            "text_it": "*"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e mentre si distrugge la dimora"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di questo esilio terreno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "viene preparata un’abitazione eterna nel cielo. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli Angeli e agli Arcangeli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ai Troni e alle Dominazioni"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alla moltitudine delle schiere celesti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo con voce incessante +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua gloria: **"
+          }
+        ]
+      },
+      "dead_2": {
+        "title": {
+          "it": "Prefazio dei defunti II — Cristo è morto per la nostra vita"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli, prendendo su di sé la nostra morte,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha liberati dalla morte *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, sacrificando la sua vita, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ci ha aperto il passaggio alla vita immortale. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti ai cori degli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          }
+        ]
+      },
+      "dead_3": {
+        "title": {
+          "it": "Prefazio dei defunti III — Cristo, salvezza e vita"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Cristo Signore nostro. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli è la salvezza del mondo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la vita degli uomini, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la risurrezione dei morti. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo di lui si allietano gli angeli, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nell’eternità adorano la gloria del tuo volto. *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Al loro canto concedi, o Signore, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si uniscano le nostre umili voci"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’inno di lode: **"
+          }
+        ]
+      },
+      "dead_4": {
+        "title": {
+          "it": "Prefazio dei defunti IV — Dalla vita terrena alla gloria eterna"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Sei tu, Signore, che ci dai la vita"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci sostieni con la tua provvidenza; *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e se a causa del peccato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il nostro corpo ritorna alla terra,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dalla quale lo hai formato, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la morte redentrice del tuo Figlio +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua potenza ci risveglia alla gloria della risurrezione. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la moltitudine degli angeli e dei santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’inno della tua lode: **"
+          }
+        ]
+      },
+      "dead_5": {
+        "title": {
+          "it": "Prefazio dei defunti V — La nostra risurrezione grazie alla vittoria di Cristo"
+        },
+        "content": [
+          {
+            "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Signore, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dio onnipotente ed eterno. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "La morte è comune eredità di tutti gli uomini, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma, per un dono misterioso del tuo amore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Cristo con la sua vittoria ci redime dalla morte +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci richiama con sé a vita nuova. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "E noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con tutti gli angeli del cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te innalziamo sulla terra il nostro canto *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamiamo senza fine +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          }
+        ]
       }
     },
     "sanctus": [{
@@ -26327,191 +23194,16 @@
           }
         ],
         "songs": {
-          "cei_complete_prefaces": {
+          "advent_1": {
             "title": {
-              "it": "Prefazi completi del Messale Romano CEI"
+              "it": "Prefazio dell’Avvento I — La duplice venuta di Cristo"
             },
             "content": [
               {
-                "text_it": "327Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "0:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
               },
               {
-                "rubric_it": "Il sacerdote può cantare tutta, o in parte, la Preghiera Eucaristica.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "Il sacerdote inizia la Preghiera Eucaristica con il Prefazio. Allargando le braccia, dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "3:text"
-                },
-                "sp_it": "C"
-              },
-              {
-                "text_it": "E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "4:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "text_it": "Alzando le mani, il sacerdote prosegue:",
-                "__massEditorPairKeys": {
-                  "text_it": "5:text"
-                }
-              },
-              {
-                "text_it": "In alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "6:text"
-                }
-              },
-              {
-                "text_it": "Sono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "7:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "text_it": "Con le braccia allargate, il sacerdote soggiunge:",
-                "__massEditorPairKeys": {
-                  "text_it": "8:text"
-                }
-              },
-              {
-                "text_it": "Rendiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "9:text"
-                }
-              },
-              {
-                "text_it": "È cosa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "10:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "rubric_it": "Il sacerdote continua il prefazio con le braccia allargate.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "11:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Alla fine congiunge le mani e conclude il prefazio cantando o proclamando ad alta voce",
-                "__massEditorPairKeys": {
-                  "text_it": "12:text"
-                }
-              },
-              {
-                "text_it": "insieme con il popolo:",
-                "__massEditorPairKeys": {
-                  "text_it": "13:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "14:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "15:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "16:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "17:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "18:text"
-                }
-              },
-              {
-                "text_it": "Oppure in canto:",
-                "__massEditorPairKeys": {
-                  "text_it": "19:text"
-                }
-              },
-              {
-                "text_it": "Sanctus, Sanctus, Sanctus Dóminus Deus Sábaoth.",
-                "__massEditorPairKeys": {
-                  "text_it": "20:text"
-                }
-              },
-              {
-                "text_it": "Pleni sunt caeli et terra glória tua.",
-                "__massEditorPairKeys": {
-                  "text_it": "21:text"
-                }
-              },
-              {
-                "text_it": "Hosánna in excélsis.",
-                "__massEditorPairKeys": {
-                  "text_it": "22:text"
-                }
-              },
-              {
-                "text_it": "Benedíctus qui venit in nómine Dómini.",
-                "__massEditorPairKeys": {
-                  "text_it": "23:text"
-                }
-              },
-              {
-                "text_it": "Hosánna in excélsis.",
-                "__massEditorPairKeys": {
-                  "text_it": "24:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dell’Avvento I",
-                "__massEditorPairKeys": {
-                  "text_it": "25:text"
-                }
-              },
-              {
-                "text_it": "La duplice venuta di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "26:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al",
-                "__massEditorPairKeys": {
-                  "text_it": "27:text"
-                }
-              },
-              {
-                "text_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "28:text"
-                }
+                "rubric_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -26574,11 +23266,7 @@
                 }
               },
               {
-                "rubric_it": "Quando verrà di nuovo nello splendore della gloria, *",
-                "__massEditorPairKeys": {
-                  "rubric_it": "39:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Quando verrà di nuovo nello splendore della gloria, *"
               },
               {
                 "text_it": "ci chiamerà a possedere il regno promesso *",
@@ -26627,103 +23315,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "47:text"
                 }
+              }
+            ]
+          },
+          "advent_1a": {
+            "title": {
+              "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al"
               },
               {
-                "text_it": "329Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "48:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "49:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "50:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "51:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "52:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "53:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dell’Avvento I/A",
-                "__massEditorPairKeys": {
-                  "rubric_it": "54:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Cristo, Signore e giudice della storia",
-                "__massEditorPairKeys": {
-                  "text_it": "55:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dalla prima domenica al",
-                "__massEditorPairKeys": {
-                  "text_it": "56:text"
-                }
-              },
-              {
-                "text_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "57:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "58:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "59:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "60:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "61:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "62:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "63:text"
-                }
+                "rubric_it": "16 dicembre, e nelle Messe che non hanno un prefazio proprio."
               },
               {
                 "text_it": "È veramente giusto renderti grazie *",
@@ -26792,11 +23396,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "75:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e sorgeranno cieli nuovi + e terra nuova. **",
@@ -26817,11 +23417,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "79:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "perché lo accogliamo nella fede *",
@@ -26864,102 +23460,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "86:text"
                 }
+              }
+            ]
+          },
+          "advent_2": {
+            "title": {
+              "it": "Prefazio dell’Avvento II — Le due attese di Cristo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "87:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "88:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "89:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "90:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "91:text"
-                }
-              },
-              {
-                "text_it": "331Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "92:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dell’Avvento II",
-                "__massEditorPairKeys": {
-                  "text_it": "93:text"
-                }
-              },
-              {
-                "text_it": "Le due attese di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "94:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e",
-                "__massEditorPairKeys": {
-                  "text_it": "95:text"
-                }
-              },
-              {
-                "text_it": "nelle Messe che non hanno un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "96:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "97:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "98:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "99:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "100:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "101:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "102:text"
-                }
+                "rubric_it": "nelle Messe che non hanno un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -27086,97 +23599,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "123:text"
                 }
+              }
+            ]
+          },
+          "advent_2a": {
+            "title": {
+              "it": "Prefazio dell’Avvento II/A — Maria nuova Eva"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e nelle"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "124:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "125:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "126:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "127:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "128:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dell’Avvento II/A",
-                "__massEditorPairKeys": {
-                  "rubric_it": "129:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Maria nuova Eva",
-                "__massEditorPairKeys": {
-                  "text_it": "130:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe del Tempo di Avvento, dal 17 al 24 dicembre, e nelle",
-                "__massEditorPairKeys": {
-                  "text_it": "131:text"
-                }
-              },
-              {
-                "text_it": "Messe che non hanno un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "132:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "133:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "134:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "135:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "136:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "137:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "138:text"
-                }
+                "rubric_it": "Messe che non hanno un prefazio proprio."
               },
               {
                 "text_it": "È veramente giusto",
@@ -27263,11 +23698,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "153:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "In lei, Madre di tutti gli uomini, *",
@@ -27306,12 +23737,6 @@
                 }
               },
               {
-                "text_it": "333Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "160:text"
-                }
-              },
-              {
                 "text_it": "E noi,",
                 "__massEditorPairKeys": {
                   "text_it": "161:text"
@@ -27334,72 +23759,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "164:text"
                 }
+              }
+            ]
+          },
+          "nativity_1": {
+            "title": {
+              "it": "Prefazio di Natale I — Cristo luce"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "165:text"
-                }
+                "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "166:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "167:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "168:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "169:text"
-                }
-              },
-              {
-                "text_it": "334 Rito della Messa con il popolo",
-                "__massEditorPairKeys": {
-                  "text_it": "170:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di Natale I",
-                "__massEditorPairKeys": {
-                  "text_it": "171:text"
-                }
-              },
-              {
-                "text_it": "Cristo luce",
-                "__massEditorPairKeys": {
-                  "text_it": "172:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che",
-                "__massEditorPairKeys": {
-                  "text_it": "173:text"
-                }
-              },
-              {
-                "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei",
-                "__massEditorPairKeys": {
-                  "text_it": "174:text"
-                }
-              },
-              {
-                "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale.",
-                "__massEditorPairKeys": {
-                  "text_it": "175:text"
-                }
+                "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -27432,11 +23807,7 @@
                 }
               },
               {
-                "rubric_it": "Nel mistero del Verbo incarnato *",
-                "__massEditorPairKeys": {
-                  "rubric_it": "181:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Nel mistero del Verbo incarnato *"
               },
               {
                 "text_it": "è apparsa agli occhi della nostra mente",
@@ -27503,140 +23874,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "192:text"
                 }
+              }
+            ]
+          },
+          "nativity_2": {
+            "title": {
+              "it": "Prefazio di Natale II — Nell’incarnazione Cristo reintegra l’universo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
               },
               {
-                "text_it": "335Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "193:text"
-                }
+                "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "194:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "195:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "196:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "197:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "198:text"
-                }
-              },
-              {
-                "rubric_it": "Nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "199:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la",
-                "__massEditorPairKeys": {
-                  "text_it": "200:text"
-                }
-              },
-              {
-                "text_it": "notte santissima ; poi, fino al termine dell’Ottava, si dice sempre: mentre celebriamo il",
-                "__massEditorPairKeys": {
-                  "text_it": "201:text"
-                }
-              },
-              {
-                "text_it": "giorno santissimo.",
-                "__massEditorPairKeys": {
-                  "text_it": "202:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "203:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio di Natale II",
-                "__massEditorPairKeys": {
-                  "text_it": "204:text"
-                }
-              },
-              {
-                "text_it": "Nell’incarnazione Cristo reintegra l’universo",
-                "__massEditorPairKeys": {
-                  "text_it": "205:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che",
-                "__massEditorPairKeys": {
-                  "text_it": "206:text"
-                }
-              },
-              {
-                "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei",
-                "__massEditorPairKeys": {
-                  "text_it": "207:text"
-                }
-              },
-              {
-                "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale.",
-                "__massEditorPairKeys": {
-                  "text_it": "208:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "209:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "210:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "211:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "212:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "213:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "214:text"
-                }
+                "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -27669,11 +23922,7 @@
                 }
               },
               {
-                "rubric_it": "Nel mistero adorabile del Natale *",
-                "__massEditorPairKeys": {
-                  "rubric_it": "220:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Nel mistero adorabile del Natale *"
               },
               {
                 "text_it": "egli, Verbo invisibile,",
@@ -27746,140 +23995,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "232:text"
                 }
+              }
+            ]
+          },
+          "nativity_3": {
+            "title": {
+              "it": "Prefazio di Natale III — Il sublime scambio nell’incarnazione del Verbo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "233:text"
-                }
+                "rubric_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "234:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "235:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "236:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "237:text"
-                }
-              },
-              {
-                "rubric_it": "Nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "238:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la",
-                "__massEditorPairKeys": {
-                  "text_it": "239:text"
-                }
-              },
-              {
-                "text_it": "notte santissima ; p o i, fin o al t e rmin e d e ll’ O tta v a, s i di c e se m p r e: mentre celebriamo il",
-                "__massEditorPairKeys": {
-                  "text_it": "240:text"
-                }
-              },
-              {
-                "text_it": "giorno santissimo.",
-                "__massEditorPairKeys": {
-                  "text_it": "241:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "242:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "337Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "243:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di Natale III",
-                "__massEditorPairKeys": {
-                  "text_it": "244:text"
-                }
-              },
-              {
-                "text_it": "Il sublime scambio nell’incarnazione del Verbo",
-                "__massEditorPairKeys": {
-                  "text_it": "245:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe di Natale e della sua Ottava, anche in quelle che",
-                "__massEditorPairKeys": {
-                  "text_it": "246:text"
-                }
-              },
-              {
-                "text_it": "hanno un prefazio proprio, fatta eccezione per le Messe che hanno un prefazio proprio dei",
-                "__massEditorPairKeys": {
-                  "text_it": "247:text"
-                }
-              },
-              {
-                "text_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale.",
-                "__massEditorPairKeys": {
-                  "text_it": "248:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "249:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "250:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "251:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "252:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "253:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "254:text"
-                }
+                "rubric_it": "divini misteri o delle Persone divine; si dice inoltre nei giorni feriali del Tempo di Natale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -27970,92 +24101,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "269:text"
                 }
+              }
+            ]
+          },
+          "epiphany": {
+            "title": {
+              "it": "Prefazio dell’Epifania — Cristo luce delle genti"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della solennità dell’Epifania. Si può dire nei giorni dopo l’Epifania, insieme con i prefazi del Natale, fino al sabato che precede la festa del"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "270:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "271:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "272:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "273:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "274:text"
-                }
-              },
-              {
-                "rubric_it": "Nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "275:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Nella Messa vespertina della vigilia e in quella della notte si dice: mentre celebriamo la",
-                "__massEditorPairKeys": {
-                  "text_it": "276:text"
-                }
-              },
-              {
-                "text_it": "notte santissima ; poi, fino al termine dell’Ottava, si dice sempre: mentre celebriamo il",
-                "__massEditorPairKeys": {
-                  "text_it": "277:text"
-                }
-              },
-              {
-                "text_it": "giorno santissimo.",
-                "__massEditorPairKeys": {
-                  "text_it": "278:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio del Natale.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "279:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio dell’Epifania",
-                "__massEditorPairKeys": {
-                  "text_it": "280:text"
-                }
-              },
-              {
-                "text_it": "Cristo luce delle genti",
-                "__massEditorPairKeys": {
-                  "text_it": "281:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della solennità dell’Epifania. Si può dire nei giorni dopo l’Epifania, insieme con i prefazi del Natale, fino al sabato che precede la festa del",
-                "__massEditorPairKeys": {
-                  "text_it": "282:text"
-                }
-              },
-              {
-                "text_it": "Battesimo del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "283:text"
-                }
+                "rubric_it": "Battesimo del Signore."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -28146,80 +24204,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "298:text"
                 }
+              }
+            ]
+          },
+          "lent_1": {
+            "title": {
+              "it": "Prefazio di Quaresima I — Il significato spirituale della Quaresima"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
               },
               {
-                "text_it": "339Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "299:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "300:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "301:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "302:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "303:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "304:text"
-                }
-              },
-              {
-                "rubric_it": "Nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "305:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Epifania.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "306:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio di Quaresima I",
-                "__massEditorPairKeys": {
-                  "text_it": "307:text"
-                }
-              },
-              {
-                "text_it": "Il significato spirituale della Quaresima",
-                "__massEditorPairKeys": {
-                  "text_it": "308:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,",
-                "__massEditorPairKeys": {
-                  "text_it": "309:text"
-                }
-              },
-              {
-                "text_it": "quando non è indicato un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "310:text"
-                }
+                "rubric_it": "quando non è indicato un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -28322,102 +24319,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "327:text"
                 }
+              }
+            ]
+          },
+          "lent_2": {
+            "title": {
+              "it": "Prefazio di Quaresima II — La penitenza dello spirito"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,"
               },
               {
-                "text_it": "341Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "328:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "329:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "330:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "331:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "332:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "333:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di Quaresima II",
-                "__massEditorPairKeys": {
-                  "text_it": "334:text"
-                }
-              },
-              {
-                "text_it": "La penitenza dello spirito",
-                "__massEditorPairKeys": {
-                  "text_it": "335:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo di Quaresima, specialmente nelle domeniche,",
-                "__massEditorPairKeys": {
-                  "text_it": "336:text"
-                }
-              },
-              {
-                "text_it": "quando non è indicato un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "337:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "338:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "339:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "340:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "341:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "342:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "343:text"
-                }
+                "rubric_it": "quando non è indicato un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -28508,96 +24422,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "358:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_3": {
+            "title": {
+              "it": "Prefazio di Quaresima III — I frutti dell’astinenza"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "359:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "360:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "361:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "362:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "363:text"
-                }
-              },
-              {
-                "text_it": "343Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "364:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di Quaresima III",
-                "__massEditorPairKeys": {
-                  "text_it": "365:text"
-                }
-              },
-              {
-                "text_it": "I frutti dell’astinenza",
-                "__massEditorPairKeys": {
-                  "text_it": "366:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno.",
-                "__massEditorPairKeys": {
-                  "text_it": "367:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "368:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "369:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "370:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "371:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "372:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "373:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -28682,90 +24516,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "387:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_4": {
+            "title": {
+              "it": "Prefazio di Quaresima IV — I frutti del digiuno"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "388:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "389:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "390:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "391:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "392:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di Quaresima IV",
-                "__massEditorPairKeys": {
-                  "text_it": "393:text"
-                }
-              },
-              {
-                "text_it": "I frutti del digiuno",
-                "__massEditorPairKeys": {
-                  "text_it": "394:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno.",
-                "__massEditorPairKeys": {
-                  "text_it": "395:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "396:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "397:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "398:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "399:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "400:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "401:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima e nei giorni di digiuno."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -28868,97 +24628,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "418:text"
                 }
-              },
+              }
+            ]
+          },
+          "lent_5": {
+            "title": {
+              "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "419:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "420:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "421:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "422:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "423:text"
-                }
-              },
-              {
-                "text_it": "345Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "424:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio di Quaresima V",
-                "__massEditorPairKeys": {
-                  "rubric_it": "425:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "La via dell’esodo nel deserto quaresimale",
-                "__massEditorPairKeys": {
-                  "text_it": "426:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima.",
-                "__massEditorPairKeys": {
-                  "text_it": "427:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "428:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "429:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "430:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "431:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "432:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "433:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe delle ferie di Quaresima."
               },
               {
                 "text_it": "È veramente giusto benedire il tuo nome,",
@@ -29073,96 +24752,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "452:text"
                 }
+              }
+            ]
+          },
+          "passion_1": {
+            "title": {
+              "it": "Prefazio della Passione del Signore I — La potenza della Croce"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle ferie della quinta settimana di Quaresima e nelle Messe"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "453:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "454:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "455:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "456:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "457:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della Passione del Signore I",
-                "__massEditorPairKeys": {
-                  "text_it": "458:text"
-                }
-              },
-              {
-                "text_it": "La potenza della Croce",
-                "__massEditorPairKeys": {
-                  "text_it": "459:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle ferie della quinta settimana di Quaresima e nelle Messe",
-                "__massEditorPairKeys": {
-                  "text_it": "460:text"
-                }
-              },
-              {
-                "text_it": "che celebrano i misteri della Croce e della Passione del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "461:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "462:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "463:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "464:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "465:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "466:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "467:text"
-                }
+                "rubric_it": "che celebrano i misteri della Croce e della Passione del Signore."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -29253,96 +24855,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "482:text"
                 }
-              },
+              }
+            ]
+          },
+          "passion_2": {
+            "title": {
+              "it": "Prefazio della Passione del Signore II — La vittoria della Passione"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "483:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "484:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "485:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "486:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "487:text"
-                }
-              },
-              {
-                "text_it": "347Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "488:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della Passione del Signore II",
-                "__massEditorPairKeys": {
-                  "text_it": "489:text"
-                }
-              },
-              {
-                "text_it": "La vittoria della Passione",
-                "__massEditorPairKeys": {
-                  "text_it": "490:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice il lunedì, il martedì e il mercoledì della Settimana Santa.",
-                "__massEditorPairKeys": {
-                  "text_it": "491:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "492:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "493:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "494:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "495:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "496:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "497:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice il lunedì, il martedì e il mercoledì della Settimana Santa."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -29433,66 +24955,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "512:text"
                 }
+              }
+            ]
+          },
+          "easter_1": {
+            "title": {
+              "it": "Prefazio Pasquale I — Il mistero pasquale"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale. Nella Veglia Pasquale si dice: in questa"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "513:text"
-                }
+                "rubric_it": "notte, nel giorno di Pasqua e per tutta l’Ottava si dice: in questo giorno , le altre volte:"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "514:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "515:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "516:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "517:text"
-                }
-              },
-              {
-                "text_it": "Prefazio Pasquale I",
-                "__massEditorPairKeys": {
-                  "text_it": "518:text"
-                }
-              },
-              {
-                "text_it": "Il mistero pasquale",
-                "__massEditorPairKeys": {
-                  "text_it": "519:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo Pasquale. Nella Veglia Pasquale si dice: in questa",
-                "__massEditorPairKeys": {
-                  "text_it": "520:text"
-                }
-              },
-              {
-                "text_it": "notte, nel giorno di Pasqua e per tutta l’Ottava si dice: in questo giorno , le altre volte:",
-                "__massEditorPairKeys": {
-                  "text_it": "521:text"
-                }
-              },
-              {
-                "text_it": "in questo tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "522:text"
-                }
+                "rubric_it": "in questo tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -29589,115 +25067,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "538:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_2": {
+            "title": {
+              "it": "Prefazio Pasquale II — La vita nuova in Cristo"
+            },
+            "content": [
               {
-                "text_it": "349Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "539:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "540:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "541:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "542:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "543:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "544:text"
-                }
-              },
-              {
-                "text_it": "Nella Veglia Pasquale, nel giorno di Pasqua e per tutta l’Ottava, nel Canone Romano si",
-                "__massEditorPairKeys": {
-                  "text_it": "545:text"
-                }
-              },
-              {
-                "text_it": "dicono il Communicántese l’Hanc ígitur propri.",
-                "__massEditorPairKeys": {
-                  "text_it": "546:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio della Pasqua e dei neobattezzati. Nella Veglia Pasquale si dice: notte.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "547:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio Pasquale II",
-                "__massEditorPairKeys": {
-                  "text_it": "548:text"
-                }
-              },
-              {
-                "text_it": "La vita nuova in Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "549:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo Pasquale.",
-                "__massEditorPairKeys": {
-                  "text_it": "550:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "551:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "552:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "553:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "554:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "555:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "556:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -29788,96 +25167,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "571:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_3": {
+            "title": {
+              "it": "Prefazio Pasquale III — Cristo vive per sempre e intercede per noi"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "572:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "573:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "574:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "575:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "576:text"
-                }
-              },
-              {
-                "text_it": "351Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "577:text"
-                }
-              },
-              {
-                "text_it": "Prefazio Pasquale III",
-                "__massEditorPairKeys": {
-                  "text_it": "578:text"
-                }
-              },
-              {
-                "text_it": "Cristo vive per sempre e intercede per noi",
-                "__massEditorPairKeys": {
-                  "text_it": "579:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo Pasquale.",
-                "__massEditorPairKeys": {
-                  "text_it": "580:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "581:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "582:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "583:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "584:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "585:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "586:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -29962,90 +25261,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "600:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_4": {
+            "title": {
+              "it": "Prefazio Pasquale IV — La restaurazione dell’universo per mezzo del mistero pasquale"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "601:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "602:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "603:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "604:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "605:text"
-                }
-              },
-              {
-                "text_it": "Prefazio Pasquale IV",
-                "__massEditorPairKeys": {
-                  "text_it": "606:text"
-                }
-              },
-              {
-                "text_it": "La restaurazione dell’universo per mezzo del mistero pasquale",
-                "__massEditorPairKeys": {
-                  "text_it": "607:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo Pasquale.",
-                "__massEditorPairKeys": {
-                  "text_it": "608:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "609:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "610:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "611:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "612:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "613:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "614:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -30124,96 +25349,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "627:text"
                 }
-              },
+              }
+            ]
+          },
+          "easter_5": {
+            "title": {
+              "it": "Prefazio Pasquale V — Cristo Agnello e sacerdote"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "628:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "629:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "630:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "631:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "632:text"
-                }
-              },
-              {
-                "text_it": "353Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "633:text"
-                }
-              },
-              {
-                "text_it": "Prefazio Pasquale V",
-                "__massEditorPairKeys": {
-                  "text_it": "634:text"
-                }
-              },
-              {
-                "text_it": "Cristo Agnello e sacerdote",
-                "__massEditorPairKeys": {
-                  "text_it": "635:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel Tempo Pasquale.",
-                "__massEditorPairKeys": {
-                  "text_it": "636:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "637:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "638:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "639:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "640:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "641:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "642:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nel Tempo Pasquale."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -30298,66 +25443,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "656:text"
                 }
+              }
+            ]
+          },
+          "ascension_1": {
+            "title": {
+              "it": "Prefazio dell’Ascensione del Signore I — Il mistero dell’Ascensione"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "657:text"
-                }
+                "rubric_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "658:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "659:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "660:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "661:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dell’Ascensione del Signore I",
-                "__massEditorPairKeys": {
-                  "text_it": "662:text"
-                }
-              },
-              {
-                "text_it": "Il mistero dell’Ascensione",
-                "__massEditorPairKeys": {
-                  "text_it": "663:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni",
-                "__massEditorPairKeys": {
-                  "text_it": "664:text"
-                }
-              },
-              {
-                "text_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno",
-                "__massEditorPairKeys": {
-                  "text_it": "665:text"
-                }
-              },
-              {
-                "text_it": "un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "666:text"
-                }
+                "rubric_it": "un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -30490,122 +25591,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "688:text"
                 }
+              }
+            ]
+          },
+          "ascension_2": {
+            "title": {
+              "it": "Prefazio dell’Ascensione del Signore II — Il mistero dell’Ascensione"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni"
               },
               {
-                "text_it": "355Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "689:text"
-                }
+                "rubric_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "690:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "691:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "692:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "693:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "694:text"
-                }
-              },
-              {
-                "rubric_it": "Nel giorno dell’Ascensione, nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "695:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Ascensione.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "696:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio dell’Ascensione del Signore II",
-                "__massEditorPairKeys": {
-                  "text_it": "697:text"
-                }
-              },
-              {
-                "text_it": "Il mistero dell’Ascensione",
-                "__massEditorPairKeys": {
-                  "text_it": "698:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nel giorno dell’Ascensione del Signore. Si può dire nei giorni",
-                "__massEditorPairKeys": {
-                  "text_it": "699:text"
-                }
-              },
-              {
-                "text_it": "dopo l’Ascensione fino al sabato che precede la Pentecoste, nelle Messe che non hanno",
-                "__massEditorPairKeys": {
-                  "text_it": "700:text"
-                }
-              },
-              {
-                "text_it": "un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "701:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "702:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "703:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "704:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "705:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "706:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "707:text"
-                }
+                "rubric_it": "un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -30644,11 +25645,7 @@
                 }
               },
               {
-                "rubric_it": "Dopo la risurrezione",
-                "__massEditorPairKeys": {
-                  "rubric_it": "714:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Dopo la risurrezione"
               },
               {
                 "text_it": "egli si mostrò visibilmente a tutti i discepoli, *",
@@ -30703,117 +25700,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "723:text"
                 }
+              }
+            ]
+          },
+          "after_ascension": {
+            "title": {
+              "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si può dire nei giorni dopo l’Ascensione fino al sabato che precede la"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "724:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "725:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "726:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "727:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "728:text"
-                }
-              },
-              {
-                "rubric_it": "Nel giorno dell’Ascensione, nel Canone Romano si dice il Communicántes proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "729:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio dell’Ascensione.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "730:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "357Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "731:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dopo l’Ascensione",
-                "__massEditorPairKeys": {
-                  "rubric_it": "732:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Nell’attesa della venuta dello Spirito",
-                "__massEditorPairKeys": {
-                  "text_it": "733:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nei giorni dopo l’Ascensione fino al sabato che precede la",
-                "__massEditorPairKeys": {
-                  "text_it": "734:text"
-                }
-              },
-              {
-                "text_it": "Pentecoste, nelle Messe che non hanno un prefazio proprio.",
-                "__massEditorPairKeys": {
-                  "text_it": "735:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "736:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "737:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "738:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "739:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "740:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "741:text"
-                }
+                "rubric_it": "Pentecoste, nelle Messe che non hanno un prefazio proprio."
               },
               {
                 "text_it": "È veramente cosa buona e giusta, *",
@@ -30922,60 +25821,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "759:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_1": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario I — Il mistero pasquale e il popolo di Dio"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "760:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "761:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "762:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "763:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "764:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "765:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario I",
-                "__massEditorPairKeys": {
-                  "text_it": "766:text"
-                }
-              },
-              {
-                "text_it": "Il mistero pasquale e il popolo di Dio",
-                "__massEditorPairKeys": {
-                  "text_it": "767:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "768:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -31090,102 +25945,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "787:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_2": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario II — Il mistero della redenzione"
+            },
+            "content": [
               {
-                "text_it": "359Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "788:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "789:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "790:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "791:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "792:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "793:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "794:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario II",
-                "__massEditorPairKeys": {
-                  "text_it": "795:text"
-                }
-              },
-              {
-                "text_it": "Il mistero della redenzione",
-                "__massEditorPairKeys": {
-                  "text_it": "796:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "797:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "798:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "799:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "800:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "801:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "802:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "803:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -31288,102 +26057,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "820:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_3": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario III — La salvezza dell’uomo nel Figlio fatto uomo"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "821:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "822:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "823:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "824:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "825:text"
-                }
-              },
-              {
-                "text_it": "361Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "826:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "827:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario III",
-                "__massEditorPairKeys": {
-                  "text_it": "828:text"
-                }
-              },
-              {
-                "text_it": "La salvezza dell’uomo nel Figlio fatto uomo",
-                "__massEditorPairKeys": {
-                  "text_it": "829:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "830:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "831:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "832:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "833:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "834:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "835:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "836:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -31480,96 +26163,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "852:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_4": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario IV — La storia della salvezza"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "853:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "854:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "855:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "856:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "857:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "858:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario IV",
-                "__massEditorPairKeys": {
-                  "text_it": "859:text"
-                }
-              },
-              {
-                "text_it": "La storia della salvezza",
-                "__massEditorPairKeys": {
-                  "text_it": "860:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "861:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "862:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "863:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "864:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "865:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "866:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "867:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -31678,102 +26281,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "885:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_5": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario V — La creazione"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "886:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "887:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "888:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "889:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "890:text"
-                }
-              },
-              {
-                "text_it": "363Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "891:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "892:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario V",
-                "__massEditorPairKeys": {
-                  "text_it": "893:text"
-                }
-              },
-              {
-                "text_it": "La creazione",
-                "__massEditorPairKeys": {
-                  "text_it": "894:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "895:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "896:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "897:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "898:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "899:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "900:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "901:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -31854,11 +26371,7 @@
                 }
               },
               {
-                "rubric_it": "**",
-                "__massEditorPairKeys": {
-                  "rubric_it": "915:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "**"
               },
               {
                 "text_it": "E noi,",
@@ -31883,96 +26396,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "919:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_6": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario VI — Il pegno della Pasqua eterna"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "920:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "921:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "922:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "923:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "924:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "925:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario VI",
-                "__massEditorPairKeys": {
-                  "text_it": "926:text"
-                }
-              },
-              {
-                "text_it": "Il pegno della Pasqua eterna",
-                "__massEditorPairKeys": {
-                  "text_it": "927:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "928:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "929:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "930:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "931:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "932:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "933:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "934:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -32075,102 +26508,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "951:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_7": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario VII — La salvezza mediante l’obbedienza di Cristo"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "952:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "953:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "954:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "955:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "956:text"
-                }
-              },
-              {
-                "text_it": "365Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "957:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "958:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario VII",
-                "__massEditorPairKeys": {
-                  "text_it": "959:text"
-                }
-              },
-              {
-                "text_it": "La salvezza mediante l’obbedienza di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "960:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "961:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "962:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "963:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "964:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "965:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "966:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "967:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -32273,96 +26620,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "984:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_8": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario VIII — La Chiesa radunata nella comunione della T rinità"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "985:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "986:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "987:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "988:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "989:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "990:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario VIII",
-                "__massEditorPairKeys": {
-                  "text_it": "991:text"
-                }
-              },
-              {
-                "text_it": "La Chiesa radunata nella comunione della T rinità",
-                "__massEditorPairKeys": {
-                  "text_it": "992:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "993:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "994:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "995:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "996:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "997:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "998:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "999:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -32471,102 +26738,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1017:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_9": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1018:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1019:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1020:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1021:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1022:text"
-                }
-              },
-              {
-                "text_it": "367Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1023:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "text_it": "1024:text"
-                }
-              },
-              {
-                "text_it": "del Tempo Ordinario IX *",
-                "__massEditorPairKeys": {
-                  "text_it": "1025:text"
-                }
-              },
-              {
-                "text_it": "La missione dello Spirito nella Chiesa",
-                "__massEditorPairKeys": {
-                  "text_it": "1026:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "1027:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1028:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1029:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1030:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1031:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1032:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1033:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -32665,11 +26846,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1050:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e noi, uniti agli angeli e ai santi, +",
@@ -32682,104 +26859,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1052:text"
                 }
-              },
+              }
+            ]
+          },
+          "ordinary_10": {
+            "title": {
+              "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1053:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1054:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1055:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1056:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1057:text"
-                }
-              },
-              {
-                "rubric_it": "* Q uesto prefazio ricorre anche nella Messa votiva dello Spirito Santo B.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1058:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Prefazio delle domeniche",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1059:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "del Tempo Ordinario X",
-                "__massEditorPairKeys": {
-                  "text_it": "1060:text"
-                }
-              },
-              {
-                "text_it": "Il giorno del Signore",
-                "__massEditorPairKeys": {
-                  "text_it": "1061:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario.",
-                "__massEditorPairKeys": {
-                  "text_it": "1062:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1063:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1064:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1065:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1066:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1067:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1068:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle domeniche del Tempo Ordinario."
               },
               {
                 "text_it": "È veramente giusto benedirti e renderti grazie, *",
@@ -32882,97 +26971,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1085:text"
                 }
-              },
+              }
+            ]
+          },
+          "baptism": {
+            "title": {
+              "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1086:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1087:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1088:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1089:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1090:text"
-                }
-              },
-              {
-                "text_it": "369Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1091:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio del Battesimo",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1092:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il Battesimo inizio della vita nuova",
-                "__massEditorPairKeys": {
-                  "text_it": "1093:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nella Messa rituale del Battesimo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1094:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1095:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1096:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1097:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1098:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1099:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1100:text"
-                }
+                "rubric_it": "Il seguente prefazio si può dire nella Messa rituale del Battesimo."
               },
               {
                 "text_it": "È giusto renderti grazie",
@@ -33041,11 +27049,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1112:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "inizio della vita in Cristo, +",
@@ -33102,11 +27106,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1122:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e, unita agli angeli e ai santi, +",
@@ -33119,98 +27119,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1124:text"
                 }
-              },
+              }
+            ]
+          },
+          "confirmation": {
+            "title": {
+              "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1125:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1126:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1127:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1128:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1129:text"
-                }
-              },
-              {
-                "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-battezzati.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1130:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Prefazio della Confermazione",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1131:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Confermati con il sigillo dello Spirito",
-                "__massEditorPairKeys": {
-                  "text_it": "1132:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nella Messa rituale della Confermazione.",
-                "__massEditorPairKeys": {
-                  "text_it": "1133:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1134:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1135:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1136:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1137:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1138:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1139:text"
-                }
+                "rubric_it": "Il seguente prefazio si può dire nella Messa rituale della Confermazione."
               },
               {
                 "text_it": "È veramente giusto renderti grazie, *",
@@ -33321,11 +27239,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1158:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "insieme agli angeli e ai santi, +",
@@ -33338,115 +27252,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "1160:text"
                 }
+              }
+            ]
+          },
+          "eucharist_1": {
+            "title": {
+              "it": "Prefazio della Santissima Eucaristia I — L’Eucaristia memoriale del sacrificio di Cristo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nella Messa «Cena del Signore». Si può dire anche nella so -"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1161:text"
-                }
+                "rubric_it": "lennità del Santissimo Corpo e Sangue di Cristo e nelle Messe votive della Santissima"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1162:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1163:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1164:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1165:text"
-                }
-              },
-              {
-                "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-confermati.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1166:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "371Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1167:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della Santissima Eucaristia I",
-                "__massEditorPairKeys": {
-                  "text_it": "1168:text"
-                }
-              },
-              {
-                "text_it": "L’Eucaristia memoriale del sacrificio di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "1169:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nella Messa «Cena del Signore». Si può dire anche nella so -",
-                "__massEditorPairKeys": {
-                  "text_it": "1170:text"
-                }
-              },
-              {
-                "text_it": "lennità del Santissimo Corpo e Sangue di Cristo e nelle Messe votive della Santissima",
-                "__massEditorPairKeys": {
-                  "text_it": "1171:text"
-                }
-              },
-              {
-                "text_it": "Eucaristia.",
-                "__massEditorPairKeys": {
-                  "text_it": "1172:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1173:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1174:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1175:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1176:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1177:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1178:text"
-                }
+                "rubric_it": "Eucaristia."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -33551,11 +27372,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1196:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e noi, con tutti gli angeli del cielo, +",
@@ -33568,116 +27385,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1198:text"
                 }
+              }
+            ]
+          },
+          "eucharist_2": {
+            "title": {
+              "it": "Prefazio della Santissima Eucaristia II — I frutti della Santissima Eucaristia"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nella solennità del Santissimo Corpo e Sangue di Cristo e nelle"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1199:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1200:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1201:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1202:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1203:text"
-                }
-              },
-              {
-                "rubric_it": "Nel Canone Romano, nella Messa «Cena del Signore» si dicono il Communicántes,",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1204:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "l’Hanc ígitur e il Qui pridie propri (cf. pp. 143-144 ).",
-                "__massEditorPairKeys": {
-                  "text_it": "1205:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche II e III si fa il ricordo proprio.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1206:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Prefazio della Santissima Eucaristia II",
-                "__massEditorPairKeys": {
-                  "text_it": "1207:text"
-                }
-              },
-              {
-                "text_it": "I frutti della Santissima Eucaristia",
-                "__massEditorPairKeys": {
-                  "text_it": "1208:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nella solennità del Santissimo Corpo e Sangue di Cristo e nelle",
-                "__massEditorPairKeys": {
-                  "text_it": "1209:text"
-                }
-              },
-              {
-                "text_it": "Messe votive della Santissima Eucaristia.",
-                "__massEditorPairKeys": {
-                  "text_it": "1210:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1211:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1212:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1213:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1214:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1215:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1216:text"
-                }
+                "rubric_it": "Messe votive della Santissima Eucaristia."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -33816,97 +27536,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1239:text"
                 }
-              },
+              }
+            ]
+          },
+          "eucharist_3": {
+            "title": {
+              "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1240:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1241:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1242:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1243:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1244:text"
-                }
-              },
-              {
-                "text_it": "373Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1245:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio della Santissima Eucaristia III",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1246:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "L’Eucaristia viatico verso la Pasqua eterna",
-                "__massEditorPairKeys": {
-                  "text_it": "1247:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nella Messa rituale per il Viatico.",
-                "__massEditorPairKeys": {
-                  "text_it": "1248:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1249:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1250:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1251:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1252:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1253:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1254:text"
-                }
+                "rubric_it": "Il seguente prefazio si può dire nella Messa rituale per il Viatico."
               },
               {
                 "text_it": "È veramente giusto renderti grazie *",
@@ -33991,98 +27630,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1268:text"
                 }
-              },
+              }
+            ]
+          },
+          "holy_orders_ministries": {
+            "title": {
+              "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1269:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1270:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1271:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1272:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1273:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche si fa il ricordo di colui che riceve il Viatico.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1274:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Prefazio dell’Ordine",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1275:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Cristo sorgente di ogni ministero nella Chiesa",
-                "__massEditorPairKeys": {
-                  "text_it": "1276:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nella Messa rituale dell’ordinazione.",
-                "__massEditorPairKeys": {
-                  "text_it": "1277:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1278:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1279:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1280:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1281:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1282:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1283:text"
-                }
+                "rubric_it": "Il seguente prefazio si può dire nella Messa rituale dell’ordinazione."
               },
               {
                 "text_it": "È veramente cosa buona e giusta",
@@ -34163,11 +27720,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1297:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "perché in ogni parte della terra",
@@ -34228,109 +27781,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1307:text"
                 }
+              }
+            ]
+          },
+          "marriage_1": {
+            "title": {
+              "it": "Prefazio del Matrimonio — La dignità dell’alleanza nuziale"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nella Messa rituale del Matrimonio. Per gli altri prefazi del"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1308:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1309:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1310:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1311:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1312:text"
-                }
-              },
-              {
-                "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo dei neo-ordinati.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1313:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "375Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1314:text"
-                }
-              },
-              {
-                "text_it": "Prefazio del Matrimonio",
-                "__massEditorPairKeys": {
-                  "text_it": "1315:text"
-                }
-              },
-              {
-                "text_it": "La dignità dell’alleanza nuziale",
-                "__massEditorPairKeys": {
-                  "text_it": "1316:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nella Messa rituale del Matrimonio. Per gli altri prefazi del",
-                "__massEditorPairKeys": {
-                  "text_it": "1317:text"
-                }
-              },
-              {
-                "text_it": "Matrimonio vedi pp. 815 e 818.",
-                "__massEditorPairKeys": {
-                  "text_it": "1318:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1319:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1320:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1321:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1322:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1323:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1324:text"
-                }
+                "rubric_it": "Matrimonio vedi pp. 815 e 818."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -34433,104 +27896,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1341:text"
                 }
+              }
+            ]
+          },
+          "penance": {
+            "title": {
+              "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si può dire nel Tempo di Quaresima. Si dice nella Messa della"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1342:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1343:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1344:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1345:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1346:text"
-                }
-              },
-              {
-                "rubric_it": "★ Nelle Preghiere Eucaristiche si fa il ricordo dei nuovi sposi.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1347:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "rubric_it": "★ Prefazio della Penitenza",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1348:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il sacramento della Riconciliazione nello Spirito",
-                "__massEditorPairKeys": {
-                  "text_it": "1349:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nel Tempo di Quaresima. Si dice nella Messa della",
-                "__massEditorPairKeys": {
-                  "text_it": "1350:text"
-                }
-              },
-              {
-                "text_it": "Riconciliazione e nelle Messe di carattere penitenziale.",
-                "__massEditorPairKeys": {
-                  "text_it": "1351:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1352:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1353:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1354:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1355:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1356:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1357:text"
-                }
+                "rubric_it": "Riconciliazione e nelle Messe di carattere penitenziale."
               },
               {
                 "text_it": "È veramente giusto lodarti e renderti grazie,",
@@ -34639,97 +28017,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1375:text"
                 }
-              },
+              }
+            ]
+          },
+          "sick_paschal": {
+            "title": {
+              "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1376:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1377:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1378:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1379:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1380:text"
-                }
-              },
-              {
-                "text_it": "377Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1381:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dell’Unzione degli infermi",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1382:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "La sofferenza, partecipazione alla Pasqua di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "1383:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si può dire nella Messa rituale dell’Unzione degli infermi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1384:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1385:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1386:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1387:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1388:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1389:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1390:text"
-                }
+                "rubric_it": "Il seguente prefazio si può dire nella Messa rituale dell’Unzione degli infermi."
               },
               {
                 "text_it": "È veramente giusto renderti grazie, *",
@@ -34786,11 +28083,7 @@
                 }
               },
               {
-                "rubric_it": "Nel segno sacramentale dell’Unzione,",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1400:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Nel segno sacramentale dell’Unzione,"
               },
               {
                 "text_it": "mediante la preghiera della Chiesa, *",
@@ -34845,103 +28138,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1409:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_1": {
+            "title": {
+              "it": "Prefazio della beata Vergine Maria I — La maternità della beata Vergine Maria"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1410:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1411:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1412:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1413:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1414:text"
-                }
-              },
-              {
-                "rubric_it": "Nelle Preghiere Eucaristiche si fa il ricordo di coloro che hanno ricevuto l’Unzione degli",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1415:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "infermi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1416:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della beata Vergine Maria I",
-                "__massEditorPairKeys": {
-                  "text_it": "1417:text"
-                }
-              },
-              {
-                "text_it": "La maternità della beata Vergine Maria",
-                "__massEditorPairKeys": {
-                  "text_it": "1418:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria, menzionando la celebrazione del giorno, secondo quanto è indicato nelle singole Messe.",
-                "__massEditorPairKeys": {
-                  "text_it": "1419:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1420:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1421:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1422:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1423:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1424:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1425:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria, menzionando la celebrazione del giorno, secondo quanto è indicato nelle singole Messe."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -35068,96 +28274,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1446:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_2": {
+            "title": {
+              "it": "Prefazio della beata Vergine Maria II — La Chiesa con Maria magnifica il Signore"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1447:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1448:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1449:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1450:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1451:text"
-                }
-              },
-              {
-                "text_it": "379Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1452:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della beata Vergine Maria II",
-                "__massEditorPairKeys": {
-                  "text_it": "1453:text"
-                }
-              },
-              {
-                "text_it": "La Chiesa con Maria magnifica il Signore",
-                "__massEditorPairKeys": {
-                  "text_it": "1454:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1455:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1456:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1457:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1458:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1459:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1460:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1461:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -35208,11 +28334,7 @@
                 }
               },
               {
-                "rubric_it": "**",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1470:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "**"
               },
               {
                 "text_it": "Grandi cose hai fatto, o Signore,",
@@ -35285,90 +28407,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1482:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_3": {
+            "title": {
+              "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1483:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1484:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1485:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1486:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1487:text"
-                }
-              },
-              {
-                "text_it": "Prefazio della beata Vergine Maria III",
-                "__massEditorPairKeys": {
-                  "text_it": "1488:text"
-                }
-              },
-              {
-                "text_it": "Maria modello e Madre della Chiesa",
-                "__massEditorPairKeys": {
-                  "text_it": "1489:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1490:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1491:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1492:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1493:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1494:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1495:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1496:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -35513,97 +28561,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1520:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_4": {
+            "title": {
+              "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1521:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1522:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1523:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1524:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1525:text"
-                }
-              },
-              {
-                "text_it": "381Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1526:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio della beata Vergine Maria IV",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1527:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Maria segno di consolazione e di speranza",
-                "__massEditorPairKeys": {
-                  "text_it": "1528:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1529:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1530:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1531:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1532:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1533:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1534:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1535:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
               },
               {
                 "text_it": "È veramente giusto renderti grazie, *",
@@ -35672,11 +28639,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1547:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "ora risplende sul nostro cammino +",
@@ -35713,91 +28676,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1553:text"
                 }
-              },
+              }
+            ]
+          },
+          "mary_5": {
+            "title": {
+              "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1554:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1555:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1556:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1557:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1558:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio della beata Vergine Maria V",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1559:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Maria immagine dell’umanità nuova",
-                "__massEditorPairKeys": {
-                  "text_it": "1560:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1561:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1562:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1563:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1564:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1565:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1566:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1567:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe della beata Vergine Maria."
               },
               {
                 "text_it": "È veramente giusto rendere grazie",
@@ -35842,11 +28730,7 @@
                 }
               },
               {
-                "rubric_it": "Nel Cristo, nuovo Adamo,",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1575:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Nel Cristo, nuovo Adamo,"
               },
               {
                 "text_it": "e in Maria, nuova Eva, *",
@@ -35885,11 +28769,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1582:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "riprende dal principio +",
@@ -35926,96 +28806,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1588:text"
                 }
-              },
+              }
+            ]
+          },
+          "angels": {
+            "title": {
+              "it": "Prefazio degli angeli — La gloria di Dio risplende negli angeli"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1589:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1590:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1591:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1592:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1593:text"
-                }
-              },
-              {
-                "text_it": "383Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1594:text"
-                }
-              },
-              {
-                "text_it": "Prefazio degli angeli",
-                "__massEditorPairKeys": {
-                  "text_it": "1595:text"
-                }
-              },
-              {
-                "text_it": "La gloria di Dio risplende negli angeli",
-                "__massEditorPairKeys": {
-                  "text_it": "1596:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei santi angeli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1597:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1598:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1599:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1600:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1601:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1602:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1603:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi angeli."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -36118,96 +28918,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1620:text"
                 }
-              },
+              }
+            ]
+          },
+          "saint_joseph": {
+            "title": {
+              "it": "Prefazio di san Giuseppe sposo della beata Vergine Maria — La missione di san Giuseppe"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1621:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1622:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1623:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1624:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1625:text"
-                }
-              },
-              {
-                "text_it": "Prefazio di san Giuseppe",
-                "__massEditorPairKeys": {
-                  "text_it": "1626:text"
-                }
-              },
-              {
-                "text_it": "sposo della beata Vergine Maria",
-                "__massEditorPairKeys": {
-                  "text_it": "1627:text"
-                }
-              },
-              {
-                "text_it": "La missione di san Giuseppe",
-                "__massEditorPairKeys": {
-                  "text_it": "1628:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe di san Giuseppe.",
-                "__massEditorPairKeys": {
-                  "text_it": "1629:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1630:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1631:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1632:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1633:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1634:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1635:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe di san Giuseppe."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -36340,102 +29060,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1657:text"
                 }
+              }
+            ]
+          },
+          "apostles_1": {
+            "title": {
+              "it": "Prefazio degli apostoli I — Gli apostoli, pastori del popolo di Dio"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe degli apostoli, specialmente nelle Messe votive"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1658:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1659:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1660:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1661:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1662:text"
-                }
-              },
-              {
-                "text_it": "385Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1663:text"
-                }
-              },
-              {
-                "text_it": "Prefazio degli apostoli I",
-                "__massEditorPairKeys": {
-                  "text_it": "1664:text"
-                }
-              },
-              {
-                "text_it": "Gli apostoli, pastori del popolo di Dio",
-                "__massEditorPairKeys": {
-                  "text_it": "1665:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe degli apostoli, specialmente nelle Messe votive",
-                "__massEditorPairKeys": {
-                  "text_it": "1666:text"
-                }
-              },
-              {
-                "text_it": "dei santi Pietro e Paolo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1667:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1668:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1669:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1670:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1671:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1672:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1673:text"
-                }
+                "rubric_it": "dei santi Pietro e Paolo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -36556,90 +29193,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "1693:text"
                 }
-              },
+              }
+            ]
+          },
+          "apostles_2": {
+            "title": {
+              "it": "Prefazio degli apostoli II — La Chiesa fondata sugli apostoli e sulla loro testimonianza"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1694:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1695:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1696:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1697:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1698:text"
-                }
-              },
-              {
-                "text_it": "Prefazio degli apostoli II",
-                "__massEditorPairKeys": {
-                  "text_it": "1699:text"
-                }
-              },
-              {
-                "text_it": "La Chiesa fondata sugli apostoli e sulla loro testimonianza",
-                "__massEditorPairKeys": {
-                  "text_it": "1700:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe degli apostoli e degli evangelisti.",
-                "__massEditorPairKeys": {
-                  "text_it": "1701:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1702:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1703:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1704:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1705:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1706:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1707:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe degli apostoli e degli evangelisti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -36730,108 +29293,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "1722:text"
                 }
+              }
+            ]
+          },
+          "saints_1": {
+            "title": {
+              "it": "Prefazio dei santi I — La gloria dei santi"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1723:text"
-                }
+                "rubric_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1724:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1725:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1726:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1727:text"
-                }
-              },
-              {
-                "text_it": "387Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1728:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei santi I",
-                "__massEditorPairKeys": {
-                  "text_it": "1729:text"
-                }
-              },
-              {
-                "text_it": "La gloria dei santi",
-                "__massEditorPairKeys": {
-                  "text_it": "1730:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della",
-                "__massEditorPairKeys": {
-                  "text_it": "1731:text"
-                }
-              },
-              {
-                "text_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può",
-                "__massEditorPairKeys": {
-                  "text_it": "1732:text"
-                }
-              },
-              {
-                "text_it": "dire anche nelle memorie dei santi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1733:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1734:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1735:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1736:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1737:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1738:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1739:text"
-                }
+                "rubric_it": "dire anche nelle memorie dei santi."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -36964,102 +29441,22 @@
                 "__massEditorPairKeys": {
                   "text_it": "1761:text"
                 }
+              }
+            ]
+          },
+          "saints_2": {
+            "title": {
+              "it": "Prefazio dei santi II — L’esempio e l’intercessione dei santi"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1762:text"
-                }
+                "rubric_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può"
               },
               {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1763:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1764:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1765:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1766:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei santi II",
-                "__massEditorPairKeys": {
-                  "text_it": "1767:text"
-                }
-              },
-              {
-                "text_it": "L’esempio e l’intercessione dei santi",
-                "__massEditorPairKeys": {
-                  "text_it": "1768:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei santi, dei santi patroni e dei titolari della",
-                "__massEditorPairKeys": {
-                  "text_it": "1769:text"
-                }
-              },
-              {
-                "text_it": "chiesa, nelle solennità e nelle feste dei santi, se non è indicato un prefazio proprio. Si può",
-                "__massEditorPairKeys": {
-                  "text_it": "1770:text"
-                }
-              },
-              {
-                "text_it": "dire anche nelle memorie dei santi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1771:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1772:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1773:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1774:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1775:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1776:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1777:text"
-                }
+                "rubric_it": "dire anche nelle memorie dei santi."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -37168,102 +29565,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1795:text"
                 }
+              }
+            ]
+          },
+          "martyrs": {
+            "title": {
+              "it": "Prefazio dei santi martiri I — Il segno e l’esempio del martirio"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1796:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1797:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1798:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1799:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1800:text"
-                }
-              },
-              {
-                "text_it": "389Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1801:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei santi martiri I",
-                "__massEditorPairKeys": {
-                  "text_it": "1802:text"
-                }
-              },
-              {
-                "text_it": "Il segno e l’esempio del martirio",
-                "__massEditorPairKeys": {
-                  "text_it": "1803:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche",
-                "__massEditorPairKeys": {
-                  "text_it": "1804:text"
-                }
-              },
-              {
-                "text_it": "nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "1805:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1806:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1807:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1808:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1809:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1810:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1811:text"
-                }
+                "rubric_it": "nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -37360,96 +29674,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1827:text"
                 }
+              }
+            ]
+          },
+          "martyrs_2": {
+            "title": {
+              "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1828:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1829:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1830:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1831:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1832:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei santi martiri II",
-                "__massEditorPairKeys": {
-                  "text_it": "1833:text"
-                }
-              },
-              {
-                "text_it": "Le meraviglie di Dio nella vittoria dei martiri",
-                "__massEditorPairKeys": {
-                  "text_it": "1834:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi martiri. Si può dire anche",
-                "__massEditorPairKeys": {
-                  "text_it": "1835:text"
-                }
-              },
-              {
-                "text_it": "nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "1836:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1837:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1838:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1839:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1840:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1841:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1842:text"
-                }
+                "rubric_it": "nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -37512,11 +29749,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1853:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e doni nel combattimento la vittoria, +",
@@ -37549,11 +29782,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1859:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "E noi, con tutti gli angeli del cielo, +",
@@ -37566,102 +29795,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1861:text"
                 }
+              }
+            ]
+          },
+          "pastors": {
+            "title": {
+              "it": "Prefazio dei santi pastori I — La presenza dei santi pastori nella Chiesa"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1862:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1863:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1864:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1865:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1866:text"
-                }
-              },
-              {
-                "text_it": "391Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1867:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei santi pastori I",
-                "__massEditorPairKeys": {
-                  "text_it": "1868:text"
-                }
-              },
-              {
-                "text_it": "La presenza dei santi pastori nella Chiesa",
-                "__massEditorPairKeys": {
-                  "text_it": "1869:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche",
-                "__massEditorPairKeys": {
-                  "text_it": "1870:text"
-                }
-              },
-              {
-                "text_it": "nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "1871:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1872:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1873:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1874:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1875:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1876:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1877:text"
-                }
+                "rubric_it": "nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -37752,97 +29898,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1892:text"
                 }
+              }
+            ]
+          },
+          "pastors_2": {
+            "title": {
+              "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1893:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1894:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1895:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1896:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1897:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dei santi pastori II",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1898:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "I pastori della Chiesa, immagine di Cristo, buon pastore",
-                "__massEditorPairKeys": {
-                  "text_it": "1899:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori. Si può dire anche",
-                "__massEditorPairKeys": {
-                  "text_it": "1900:text"
-                }
-              },
-              {
-                "text_it": "nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "1901:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1902:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1903:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1904:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1905:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1906:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1907:text"
-                }
+                "rubric_it": "nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -37945,103 +30013,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1924:text"
                 }
+              }
+            ]
+          },
+          "pastors_3": {
+            "title": {
+              "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori, in particolare dei"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1925:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1926:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1927:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1928:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1929:text"
-                }
-              },
-              {
-                "text_it": "393Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1930:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dei santi pastori III",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1931:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "L’annuncio del Vangelo alle genti",
-                "__massEditorPairKeys": {
-                  "text_it": "1932:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi pastori, in particolare dei",
-                "__massEditorPairKeys": {
-                  "text_it": "1933:text"
-                }
-              },
-              {
-                "text_it": "vescovi o dei presbiteri missionari. Si può dire anche nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "1934:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1935:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1936:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1937:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1938:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1939:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1940:text"
-                }
+                "rubric_it": "vescovi o dei presbiteri missionari. Si può dire anche nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta",
@@ -38114,98 +30098,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1952:text"
                 }
+              }
+            ]
+          },
+          "doctors_1": {
+            "title": {
+              "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1953:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1954:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1955:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1956:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1957:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dei santi dottori della Chiesa I",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1958:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "I dottori della Chiesa riflesso della Sapienza",
-                "__massEditorPairKeys": {
-                  "text_it": "1959:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa.",
-                "__massEditorPairKeys": {
-                  "text_it": "1960:text"
-                }
-              },
-              {
-                "rubric_it": "Si può dire anche nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1961:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1962:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1963:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "1964:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1965:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "1966:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "1967:text"
-                }
+                "rubric_it": "Si può dire anche nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta",
@@ -38326,104 +30231,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "1987:text"
                 }
+              }
+            ]
+          },
+          "doctors_2": {
+            "title": {
+              "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa."
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1988:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "1989:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1990:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1991:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "1992:text"
-                }
-              },
-              {
-                "text_it": "395Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "1993:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio dei santi dottori della Chiesa II",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1994:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "I dottori della Chiesa profeti della sublime bellezza di Dio",
-                "__massEditorPairKeys": {
-                  "text_it": "1995:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste dei santi dottori della Chiesa.",
-                "__massEditorPairKeys": {
-                  "text_it": "1996:text"
-                }
-              },
-              {
-                "rubric_it": "Si può dire anche nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1997:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "1998:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "1999:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2000:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2001:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2002:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2003:text"
-                }
+                "rubric_it": "Si può dire anche nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -38474,11 +30294,7 @@
                 }
               },
               {
-                "rubric_it": "Nel tuo disegno di amore",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2012:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "Nel tuo disegno di amore"
               },
               {
                 "text_it": "hai illuminato san N. [santa N.] *",
@@ -38527,102 +30343,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2020:text"
                 }
+              }
+            ]
+          },
+          "virgins_and_religious": {
+            "title": {
+              "it": "Prefazio delle sante vergini e dei santi religiosi — Il segno della vita consacrata a Dio"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle solennità e nelle feste delle sante vergini e dei santi"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2021:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2022:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2023:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2024:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2025:text"
-                }
-              },
-              {
-                "text_it": "Prefazio delle sante vergini",
-                "__massEditorPairKeys": {
-                  "text_it": "2026:text"
-                }
-              },
-              {
-                "text_it": "e dei santi religiosi",
-                "__massEditorPairKeys": {
-                  "text_it": "2027:text"
-                }
-              },
-              {
-                "text_it": "Il segno della vita consacrata a Dio",
-                "__massEditorPairKeys": {
-                  "text_it": "2028:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle solennità e nelle feste delle sante vergini e dei santi",
-                "__massEditorPairKeys": {
-                  "text_it": "2029:text"
-                }
-              },
-              {
-                "text_it": "religiosi. Si può dire anche nelle loro memorie.",
-                "__massEditorPairKeys": {
-                  "text_it": "2030:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2031:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2032:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2033:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2034:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2035:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2036:text"
-                }
+                "rubric_it": "religiosi. Si può dire anche nelle loro memorie."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -38725,102 +30458,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2053:text"
                 }
+              }
+            ]
+          },
+          "common_1": {
+            "title": {
+              "it": "Prefazio comune I — Il rinnovamento universale in Cristo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2054:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2055:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2056:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2057:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2058:text"
-                }
-              },
-              {
-                "text_it": "397Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2059:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune I",
-                "__massEditorPairKeys": {
-                  "text_it": "2060:text"
-                }
-              },
-              {
-                "text_it": "Il rinnovamento universale in Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "2061:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2062:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2063:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2064:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2065:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2066:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2067:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2068:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2069:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -38947,96 +30597,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2090:text"
                 }
+              }
+            ]
+          },
+          "common_2": {
+            "title": {
+              "it": "Prefazio comune II — La salvezza per mezzo di Cristo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2091:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2092:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2093:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2094:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2095:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune II",
-                "__massEditorPairKeys": {
-                  "text_it": "2096:text"
-                }
-              },
-              {
-                "text_it": "La salvezza per mezzo di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "2097:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2098:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2099:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2100:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2101:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2102:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2103:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2104:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2105:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -39139,102 +30712,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2122:text"
                 }
+              }
+            ]
+          },
+          "common_3": {
+            "title": {
+              "it": "Prefazio comune III — Lode a Dio per la creazione e la redenzione dell’uomo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2123:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2124:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2125:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2126:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2127:text"
-                }
-              },
-              {
-                "text_it": "399Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2128:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune III",
-                "__massEditorPairKeys": {
-                  "text_it": "2129:text"
-                }
-              },
-              {
-                "text_it": "Lode a Dio per la creazione e la redenzione dell’uomo",
-                "__massEditorPairKeys": {
-                  "text_it": "2130:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2131:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2132:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2133:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2134:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2135:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2136:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2137:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2138:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -39319,96 +30809,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2152:text"
                 }
+              }
+            ]
+          },
+          "common_4": {
+            "title": {
+              "it": "Prefazio comune IV — La lode, dono di Dio"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2153:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2154:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2155:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2156:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2157:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune IV",
-                "__massEditorPairKeys": {
-                  "text_it": "2158:text"
-                }
-              },
-              {
-                "text_it": "La lode, dono di Dio",
-                "__massEditorPairKeys": {
-                  "text_it": "2159:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2160:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2161:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2162:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2163:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2164:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2165:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2166:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2167:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -39511,102 +30924,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2184:text"
                 }
+              }
+            ]
+          },
+          "common_5": {
+            "title": {
+              "it": "Prefazio comune V — Proclamazione del mistero di Cristo"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2185:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2186:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2187:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2188:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2189:text"
-                }
-              },
-              {
-                "text_it": "401Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2190:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune V",
-                "__massEditorPairKeys": {
-                  "text_it": "2191:text"
-                }
-              },
-              {
-                "text_it": "Proclamazione del mistero di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "2192:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2193:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2194:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2195:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2196:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2197:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2198:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2199:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2200:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -39691,96 +31021,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2214:text"
                 }
+              }
+            ]
+          },
+          "common_6": {
+            "title": {
+              "it": "Prefazio comune VI — Cristo salvatore e redentore"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2215:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2216:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2217:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2218:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2219:text"
-                }
-              },
-              {
-                "text_it": "Prefazio comune VI",
-                "__massEditorPairKeys": {
-                  "text_it": "2220:text"
-                }
-              },
-              {
-                "text_it": "Cristo salvatore e redentore",
-                "__massEditorPairKeys": {
-                  "text_it": "2221:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2222:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2223:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2224:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2225:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2226:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2227:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2228:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2229:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -39901,103 +31154,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2249:text"
                 }
+              }
+            ]
+          },
+          "common_7": {
+            "title": {
+              "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2250:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2251:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2252:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2253:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2254:text"
-                }
-              },
-              {
-                "text_it": "403Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2255:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio comune VII",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2256:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Cristo ospite e pellegrino in mezzo a noi",
-                "__massEditorPairKeys": {
-                  "text_it": "2257:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2258:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2259:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2260:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2261:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2262:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2263:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2264:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2265:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente giusto renderti grazie, *",
@@ -40118,97 +31287,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2285:text"
                 }
+              }
+            ]
+          },
+          "common_8": {
+            "title": {
+              "it": "Prefazio comune VIII — Gesù buon samaritano"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2286:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2287:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2288:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2289:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2290:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio comune VIII",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2291:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Gesù buon samaritano",
-                "__massEditorPairKeys": {
-                  "text_it": "2292:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2293:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2294:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2295:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2296:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2297:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2298:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2299:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2300:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente giusto lodarti e ringraziarti,",
@@ -40319,11 +31410,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2319:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "del tuo Figlio crocifisso e risorto. **",
@@ -40348,103 +31435,19 @@
                 "__massEditorPairKeys": {
                   "text_it": "2323:text"
                 }
+              }
+            ]
+          },
+          "common_9": {
+            "title": {
+              "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente"
+            },
+            "content": [
+              {
+                "rubric_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando"
               },
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2324:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2325:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2326:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2327:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2328:text"
-                }
-              },
-              {
-                "text_it": "405Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2329:text"
-                }
-              },
-              {
-                "rubric_it": "★ Prefazio comune IX",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2330:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "La gloria di Dio è l’uomo vivente",
-                "__massEditorPairKeys": {
-                  "text_it": "2331:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe che non hanno un prefazio proprio e quando",
-                "__massEditorPairKeys": {
-                  "text_it": "2332:text"
-                }
-              },
-              {
-                "text_it": "non è richiesto il prefazio del Tempo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2333:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2334:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2335:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2336:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2337:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2338:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2339:text"
-                }
+                "rubric_it": "non è richiesto il prefazio del Tempo."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -40547,90 +31550,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "2356:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_1": {
+            "title": {
+              "it": "Prefazio dei defunti I — La speranza della risurrezione in Cristo"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2357:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2358:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2359:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2360:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2361:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei defunti I",
-                "__massEditorPairKeys": {
-                  "text_it": "2362:text"
-                }
-              },
-              {
-                "text_it": "La speranza della risurrezione in Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "2363:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei defunti.",
-                "__massEditorPairKeys": {
-                  "text_it": "2364:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2365:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2366:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2367:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2368:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2369:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2370:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -40705,11 +31634,7 @@
                 }
               },
               {
-                "rubric_it": "*",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2383:rubric"
-                },
-                "rubricInset_it": true
+                "text_it": "*"
               },
               {
                 "text_it": "e mentre si distrugge la dimora",
@@ -40764,96 +31689,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "2392:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_2": {
+            "title": {
+              "it": "Prefazio dei defunti II — Cristo è morto per la nostra vita"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2393:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2394:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2395:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2396:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2397:text"
-                }
-              },
-              {
-                "text_it": "407Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2398:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei defunti II",
-                "__massEditorPairKeys": {
-                  "text_it": "2399:text"
-                }
-              },
-              {
-                "text_it": "Cristo è morto per la nostra vita",
-                "__massEditorPairKeys": {
-                  "text_it": "2400:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei defunti.",
-                "__massEditorPairKeys": {
-                  "text_it": "2401:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2402:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2403:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2404:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2405:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2406:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2407:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -40938,90 +31783,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "2421:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_3": {
+            "title": {
+              "it": "Prefazio dei defunti III — Cristo, salvezza e vita"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2422:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2423:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2424:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2425:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2426:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei defunti III",
-                "__massEditorPairKeys": {
-                  "text_it": "2427:text"
-                }
-              },
-              {
-                "text_it": "Cristo, salvezza e vita",
-                "__massEditorPairKeys": {
-                  "text_it": "2428:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei defunti.",
-                "__massEditorPairKeys": {
-                  "text_it": "2429:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2430:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2431:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2432:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2433:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2434:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2435:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -41106,96 +31877,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "2449:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_4": {
+            "title": {
+              "it": "Prefazio dei defunti IV — Dalla vita terrena alla gloria eterna"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2450:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2451:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2452:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2453:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2454:text"
-                }
-              },
-              {
-                "text_it": "409Preghiera Eucaristica",
-                "__massEditorPairKeys": {
-                  "text_it": "2455:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei defunti IV",
-                "__massEditorPairKeys": {
-                  "text_it": "2456:text"
-                }
-              },
-              {
-                "text_it": "Dalla vita terrena alla gloria eterna",
-                "__massEditorPairKeys": {
-                  "text_it": "2457:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei defunti.",
-                "__massEditorPairKeys": {
-                  "text_it": "2458:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2459:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2460:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2461:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2462:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2463:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2464:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -41292,90 +31983,16 @@
                 "__massEditorPairKeys": {
                   "text_it": "2480:text"
                 }
-              },
+              }
+            ]
+          },
+          "dead_5": {
+            "title": {
+              "it": "Prefazio dei defunti V — La nostra risurrezione grazie alla vittoria di Cristo"
+            },
+            "content": [
               {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2481:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2482:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2483:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2484:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2485:text"
-                }
-              },
-              {
-                "text_it": "Prefazio dei defunti V",
-                "__massEditorPairKeys": {
-                  "text_it": "2486:text"
-                }
-              },
-              {
-                "text_it": "La nostra risurrezione grazie alla vittoria di Cristo",
-                "__massEditorPairKeys": {
-                  "text_it": "2487:text"
-                }
-              },
-              {
-                "text_it": "Il seguente prefazio si dice nelle Messe dei defunti.",
-                "__massEditorPairKeys": {
-                  "text_it": "2488:text"
-                }
-              },
-              {
-                "text_it": "V/ . Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2489:text"
-                }
-              },
-              {
-                "text_it": "R/ . E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "2490:text"
-                }
-              },
-              {
-                "text_it": "V/ . I n alto i nostri cuori.",
-                "__massEditorPairKeys": {
-                  "text_it": "2491:text"
-                }
-              },
-              {
-                "text_it": "R/ . S ono rivolti al Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2492:text"
-                }
-              },
-              {
-                "text_it": "V/ . R endiamo grazie al Signore nostro Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "2493:text"
-                }
-              },
-              {
-                "text_it": "R/ . È c osa buona e giusta.",
-                "__massEditorPairKeys": {
-                  "text_it": "2494:text"
-                }
+                "rubric_it": "Il seguente prefazio si dice nelle Messe dei defunti."
               },
               {
                 "text_it": "È veramente cosa buona e giusta,",
@@ -41459,36 +32076,6 @@
                 "text_it": "la tua gloria: **",
                 "__massEditorPairKeys": {
                   "text_it": "2508:text"
-                }
-              },
-              {
-                "text_it": "Santo, Santo, Santo il Signore Dio dell’universo.",
-                "__massEditorPairKeys": {
-                  "text_it": "2509:text"
-                }
-              },
-              {
-                "text_it": "I cieli e la terra sono pieni della tua gloria.",
-                "__massEditorPairKeys": {
-                  "text_it": "2510:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2511:text"
-                }
-              },
-              {
-                "text_it": "Benedetto colui che viene nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "2512:text"
-                }
-              },
-              {
-                "text_it": "Osanna nell’alto dei cieli.",
-                "__massEditorPairKeys": {
-                  "text_it": "2513:text"
                 }
               }
             ]
