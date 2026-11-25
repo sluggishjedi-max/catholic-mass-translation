@@ -1,0 +1,23602 @@
+// Misal Romano, tercera edición típica en castellano del Cono Sur.
+(function registerConoSurMass(global) {
+  'use strict';
+  global.countryMassData ||= {};
+  const ordinary = Object.freeze([
+  {
+    "id": "1. THE INTRODUCTORY RITES",
+    "type": "section",
+    "es": "Ritos iniciales"
+  },
+  {
+    "id": "1.1 entrance",
+    "type": "part",
+    "header": {
+      "es": "Antífona de entrada"
+    },
+    "lines": [
+      {
+        "text_es": "(Antífona de entrada del día)"
+      }
+    ]
+  },
+  {
+    "id": "1.2 greeting",
+    "type": "part",
+    "header": {
+      "es": "Saludo"
+    },
+    "lines": [
+      {
+        "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada."
+      },
+      {
+        "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede."
+      },
+      {
+        "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:"
+      },
+      {
+        "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo."
+      },
+      {
+        "rubric_es": "El pueblo responde:"
+      },
+      {
+        "text_es": "Amén."
+      },
+      {
+        "rubric_es": "Después el sacerdote, extendiendo las manos, saluda al pueblo, diciendo:"
+      },
+      {
+        "text_es": "La gracia de nuestro Señor Jesucristo,"
+      },
+      {
+        "text_es": "el amor de Dios Padre"
+      },
+      {
+        "text_es": "y la comunión del Espíritu Santo"
+      },
+      {
+        "text_es": "estén con todos ustedes"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "La gracia y la paz de parte de Dios, nuestro Padre,"
+      },
+      {
+        "text_es": "y Jesucristo el Señor,"
+      },
+      {
+        "text_es": "estén con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "El Señor esté con ustedes."
+      },
+      {
+        "rubric_es": "El obispo, en vez de las anteriores fórmulas, en este primer saludo dice:"
+      },
+      {
+        "text_es": "La paz esté con ustedes."
+      },
+      {
+        "rubric_es": "El pueblo responde:"
+      },
+      {
+        "text_es": "Y con tu espíritu."
+      },
+      {
+        "rubric_es": "También pueden usarse otras fórmulas de saludos propias de cada tiempo."
+      },
+      {
+        "rubric_es": "TIEMPO DE ADVIENTO"
+      },
+      {
+        "text_es": "El Señor, que viene a salvarnos,"
+      },
+      {
+        "text_es": "esté con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Que la salvación que está cerca de nosotros porque llega Cristo,"
+      },
+      {
+        "text_es": "los haga crecer en la esperanza que no defrauda"
+      },
+      {
+        "text_es": "y esté ahora y siempre con ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "El Señor todopoderoso,"
+      },
+      {
+        "text_es": "el que era, el que es y el que vendrá,"
+      },
+      {
+        "text_es": "acreciente en vosotros el deseo de su Venida"
+      },
+      {
+        "text_es": "y esté siempre con ustedes."
+      },
+      {
+        "rubric_es": "TIEMPO DE NAVIDAD"
+      },
+      {
+        "text_es": "La paz y el amor de Dios, nuestro Padre,"
+      },
+      {
+        "text_es": "que se han manifestado en Cristo, nacido para nuestra salvación,"
+      },
+      {
+        "text_es": "estén con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Que la gracia del Señor Jesús,"
+      },
+      {
+        "text_es": "el Verbo hecho carne en María siempre virgen,"
+      },
+      {
+        "text_es": "permanezca siempre con ustedes."
+      },
+      {
+        "rubric_es": "O bien (Sagrada Familia):"
+      },
+      {
+        "text_es": "Bendigamos a Dios"
+      },
+      {
+        "text_es": "que nos reúne en la Familia de Jesús,"
+      },
+      {
+        "text_es": "y que su amor de Padre"
+      },
+      {
+        "text_es": "esté constantemente con ustedes."
+      },
+      {
+        "rubric_es": "O bien (Octava de Navidad):"
+      },
+      {
+        "text_es": "Que la gracia y la paz de Cristo, el Señor,"
+      },
+      {
+        "text_es": "Hijo de Dios e hijo de María,"
+      },
+      {
+        "text_es": "estén con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien (Epifanía):"
+      },
+      {
+        "text_es": "Que el Dios invisible,"
+      },
+      {
+        "text_es": "hecho visible en Jesucristo, su Hijo hecho hombre,"
+      },
+      {
+        "text_es": "se les manifieste plenamente,"
+      },
+      {
+        "text_es": "y que el resplandor de su luz"
+      },
+      {
+        "text_es": "permanezca ahora y siempre con ustedes."
+      },
+      {
+        "rubric_es": "TIEMPO DE CUARESMA"
+      },
+      {
+        "text_es": "La gracia y el amor de Jesucristo,"
+      },
+      {
+        "text_es": "que nos llama a la conversión,"
+      },
+      {
+        "text_es": "esté con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Que el Espíritu de Dios"
+      },
+      {
+        "text_es": "nos ayude a responder dócilmente a su llamado penitencial,"
+      },
+      {
+        "text_es": "y que su gracia salvadora"
+      },
+      {
+        "text_es": "permanezca con cada uno de ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Que el Señor Jesús los encamine hacia el amor de Dios Padre"
+      },
+      {
+        "text_es": "y les dé la perseverancia"
+      },
+      {
+        "text_es": "para renovar su compromiso bautismal,"
+      },
+      {
+        "text_es": "y que su amor misericordioso"
+      },
+      {
+        "text_es": "descienda y esté con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "De parte de Dios Padre y de Jesucristo,"
+      },
+      {
+        "text_es": "que nos amó y nos purificó de nuestros pecados con su sangre,"
+      },
+      {
+        "text_es": "gracia y paz a todos ustedes."
+      },
+      {
+        "rubric_es": "O bien (Domingo de Ramos):"
+      },
+      {
+        "text_es": "Sean bienvenidos a esta celebración,"
+      },
+      {
+        "text_es": "y que Cristo muerto y resucitado"
+      },
+      {
+        "text_es": "por nuestra salvación y la del mundo entero"
+      },
+      {
+        "text_es": "permanezca ahora y siempre con ustedes."
+      },
+      {
+        "rubric_es": "TIEMPO PASCUAL"
+      },
+      {
+        "text_es": "El Dios de la Vida,"
+      },
+      {
+        "text_es": "que ha resucitado a Jesucristo"
+      },
+      {
+        "text_es": "rompiendo las ataduras de la muerte,"
+      },
+      {
+        "text_es": "esté con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Bendito sea Dios,"
+      },
+      {
+        "text_es": "que en su gran misericordia"
+      },
+      {
+        "text_es": "nos hizo renacer por la Resurrección de Jesucristo;"
+      },
+      {
+        "text_es": "que su gracia salvadora esté siempre con ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Hemos resucitado con Jesús:"
+      },
+      {
+        "text_es": "que la esperanza de ser glorificados con él"
+      },
+      {
+        "text_es": "acreciente nuestra alegría"
+      },
+      {
+        "text_es": "y permanezca constantemente con ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Que el gozo y la paz"
+      },
+      {
+        "text_es": "de nuestro Buen Pastor resucitado"
+      },
+      {
+        "text_es": "nos acompañe en esta celebración,"
+      },
+      {
+        "text_es": "y estén con cada uno de ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Jesús resucitado vive entre nosotros."
+      },
+      {
+        "text_es": "Que su presencia salvadora"
+      },
+      {
+        "text_es": "nos anime en este tiempo pascual"
+      },
+      {
+        "text_es": "y permanezca con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien (Ascención del Señor):"
+      },
+      {
+        "text_es": "Que Jesús resucitado y glorificado a la derecha del Padre"
+      },
+      {
+        "text_es": "interceda por nosotros"
+      },
+      {
+        "text_es": "y permanezca con cada uno de ustedes."
+      },
+      {
+        "rubric_es": "O bien (Domingo de Pentecostés):"
+      },
+      {
+        "text_es": "Que el Espíritu de Jesús resucitado"
+      },
+      {
+        "text_es": "descienda abundantemente"
+      },
+      {
+        "text_es": "sobre nosotros y sobre todo el mundo,"
+      },
+      {
+        "text_es": "y que sus dones nos renueven y estén siempre con ustedes."
+      },
+      {
+        "rubric_es": "TIEMPO «DURANTE EL AÑO»"
+      },
+      {
+        "text_es": "El Señor, que dirige nuestros corazones"
+      },
+      {
+        "text_es": "para que amemos a Dios,"
+      },
+      {
+        "text_es": "esté con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "La paz, la caridad y la fe, de parte de Dios Padre,"
+      },
+      {
+        "text_es": "y de Jesucristo, el Señor, estén con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "El Dios de la esperanza,"
+      },
+      {
+        "text_es": "que por la acción del Espíritu Santo"
+      },
+      {
+        "text_es": "nos llena con su alegría y con su paz,"
+      },
+      {
+        "text_es": "permanezca siempre con todos ustedes."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Queridos hermanos:"
+      },
+      {
+        "text_es": "«Que Dios los llene de alegría y de paz en la fe»"
+      },
+      {
+        "text_es": "y que su Espíritu Santo esté constantemente con ustedes."
+      },
+      {
+        "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+      }
+    ]
+  },
+  {
+    "id": "1.3 penitential",
+    "type": "selectable",
+    "header": {
+      "es": "Acto penitencial"
+    },
+    "variants": {
+      "A": {
+        "label": {
+          "es": "Confesión general"
+        },
+        "lines": [
+          {
+            "rubric_es": "A continuación se hace el acto penitencial, al que el sacerdote invita a los fieles, diciendo:"
+          },
+          {
+            "rubric_es": "I"
+          },
+          {
+            "text_es": "Hermanos:"
+          },
+          {
+            "text_es": "Para celebrar dignamente estos sagrados misterios,"
+          },
+          {
+            "text_es": "reconozcamos nuestros pecados."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "El Señor Jesús,"
+          },
+          {
+            "text_es": "que nos invita a la mesa de la Palabra y de la Eucaristía,"
+          },
+          {
+            "text_es": "nos llama ahora a la conversión."
+          },
+          {
+            "text_es": "Reconozcamos, pues, que somos pecadores"
+          },
+          {
+            "text_es": "e invoquemos con esperanza la misericordia de Dios."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Humildes y penitentes, como el publicano en el templo,"
+          },
+          {
+            "text_es": "acerquémonos al Dios justo,"
+          },
+          {
+            "text_es": "y pidámosle que tenga piedad de nosotros,"
+          },
+          {
+            "text_es": "que también nos reconocemos pecadores."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Jesucristo, el justo, intercede por nosotros"
+          },
+          {
+            "text_es": "y nos reconcilia con el Padre."
+          },
+          {
+            "text_es": "Abramos, pues, nuestro espíritu al arrepentimiento,"
+          },
+          {
+            "text_es": "para acercarnos a la mesa del Señor."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Pidamos perdón a Dios de todo corazón."
+          },
+          {
+            "rubric_es": "O bien, pero sólo en los domingos, y durante la octava de Pascua:"
+          },
+          {
+            "text_es": "En el día en que celebramos la victoria de Cristo"
+          },
+          {
+            "text_es": "sobre el pecado y sobre la muerte,"
+          },
+          {
+            "text_es": "confesemos nuestra necesidad de la misericordia del Padre"
+          },
+          {
+            "text_es": "para morir al pecado y resucitar a la vida nueva."
+          },
+          {
+            "rubric_es": "Se hace una breve pausa en silencio. Después, todos hacen en común la fórmula de la confesión general:"
+          },
+          {
+            "text_es": "Yo confieso ante Dios todopoderoso"
+          },
+          {
+            "text_es": "y ante ustedes, hermanos,"
+          },
+          {
+            "text_es": "que he pecado mucho"
+          },
+          {
+            "text_es": "de pensamiento, palabra, obra y omisión;"
+          },
+          {
+            "rubric_es": "Y, golpeándose el pecho, dicen:"
+          },
+          {
+            "text_es": "por mi culpa, por mi culpa, por mi gran culpa."
+          },
+          {
+            "rubric_es": "Luego, prosiguen:"
+          },
+          {
+            "text_es": "Por eso ruego a santa María, siempre Virgen,"
+          },
+          {
+            "text_es": "a los ángeles, a los santos"
+          },
+          {
+            "text_es": "y a ustedes, hermanos,"
+          },
+          {
+            "text_es": "que intercedan por mí ante Dios, nuestro Señor."
+          },
+          {
+            "rubric_es": "Sigue la absolución del sacerdote."
+          },
+          {
+            "text_es": "Dios todopoderoso"
+          },
+          {
+            "text_es": "tenga misericordia de nosotros,"
+          },
+          {
+            "text_es": "perdone nuestros pecados"
+          },
+          {
+            "text_es": "y nos lleve a la vida eterna."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Amén."
+          },
+          {
+            "rubric_es": "2"
+          }
+        ]
+      },
+      "B": {
+        "label": {
+          "es": "Señor, ten misericordia"
+        },
+        "lines": [
+          {
+            "rubric_es": "El sacerdote invita a los fieles al acto penitencial con una de las invitaciones anteriores u otras breves palabras."
+          },
+          {
+            "rubric_es": "Se hace una breve pausa de silencio. Después el sacerdote dice:"
+          },
+          {
+            "text_es": "Señor, ten misericordia de nosotros."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Porque hemos pecado contra ti."
+          },
+          {
+            "rubric_es": "El sacerdote prosigue:"
+          },
+          {
+            "text_es": "Muéstranos, Señor, tu misericordia."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y danos tu salvación"
+          },
+          {
+            "rubric_es": "Sigue la absolución del sacerdote:"
+          },
+          {
+            "text_es": "Dios todopoderoso"
+          },
+          {
+            "text_es": "tenga misericordia de nosotros,"
+          },
+          {
+            "text_es": "perdone nuestros pecados"
+          },
+          {
+            "text_es": "y nos lleve a la Vida eterna."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Amén."
+          },
+          {
+            "rubric_es": "3"
+          }
+        ]
+      },
+      "C": {
+        "label": {
+          "es": "Invocaciones"
+        },
+        "lines": [
+          {
+            "rubric_es": "El sacerdote invita a los fieles al acto penitencial con una de las invitaciones anteriores u otras breves palabras."
+          },
+          {
+            "rubric_es": "Se hace una breve pausa en silencio."
+          },
+          {
+            "rubric_es": "Después el sacerdote o el diácono, u otro ministro, empleando éstas u otras invocaciones, con el"
+          },
+          {
+            "text_es": "Señor, ten piedad"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "Kyrie eléison"
+          },
+          {
+            "rubric_es": "), dice:"
+          },
+          {
+            "text_es": "Tú que has sido enviado para sanar a los contritos de corazón:"
+          },
+          {
+            "text_es": "Señor, ten piedad."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Señor, ten piedad."
+          },
+          {
+            "rubric_es": "El sacerdote:"
+          },
+          {
+            "text_es": "Tú que has venido a llamar a los pecadores:"
+          },
+          {
+            "text_es": "Cristo, ten piedad."
+          },
+          {
+            "rubric_es": "El pueblo:"
+          },
+          {
+            "text_es": "Cristo, ten piedad."
+          },
+          {
+            "rubric_es": "El sacerdote:"
+          },
+          {
+            "text_es": "Tú que estás sentado a la derecha del Padre"
+          },
+          {
+            "text_es": "para interceder por nosotros:"
+          },
+          {
+            "text_es": "Señor, ten piedad."
+          },
+          {
+            "rubric_es": "El pueblo:"
+          },
+          {
+            "text_es": "Señor, ten piedad."
+          },
+          {
+            "rubric_es": "Sigue la absolución del sacerdote:"
+          },
+          {
+            "text_es": "Dios todopoderoso"
+          },
+          {
+            "text_es": "tenga misericordia de nosotros,"
+          },
+          {
+            "text_es": "perdone nuestros pecados"
+          },
+          {
+            "text_es": "y nos lleve a la vida eterna."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Amén."
+          },
+          {
+            "rubric_es": "También pueden usarse las invocaciones siguientes u otras semejantes."
+          },
+          {
+            "rubric_es": "TIEMPO DE ADVIENTO"
+          },
+          {
+            "text_es": "Tú que viniste al mundo para salvarnos: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos visitas continuamente con la gracia de tu Espíritu: Cristo, ten piedad"
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que vendrás un día a juzgar nuestras obras: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que vienes a visitar a tu pueblo con la paz: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que vienes a salvar lo que está perdido: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que vienes a crear un mundo nuevo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que eres el Salvador prometido: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que eres el Salvador anunciado: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que eres el Salvador esperado: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Luz del mundo, que vienes a iluminar a los que viven en las tinieblas del pecado: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Buen pastor, que vienes a guiar a tu rebaño por las sendas de la verdad y de la justicia: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Hijo de Dios, que volverás un día para dar cumplimiento a las promesas del Padre: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "TIEMPO DE NAVIDAD"
+          },
+          {
+            "text_es": "Hijo de Dios, que, nacido de María te hiciste nuestro hermano: Señor ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Hijo del hombre, que conoces y comprendes nuestra debilidad: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Hijo primogénito del Padre, que haces de nosotros una sola familia: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Rey de la paz y Santo de Dios: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Luz que brillas en las tinieblas: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Imagen del hombre nuevo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que siendo rico te hiciste pobre: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que siendo fuerte te hiciste débil: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que siendo grande te hiciste pequeño: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "EPIFANÍA"
+          },
+          {
+            "text_es": "Tú que te has manifestado a los pueblos: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que te has desposado con tu Iglesia: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que en el Jordán te manifestaste como el Hijo muy amado:"
+          },
+          {
+            "text_es": "Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "TIEMPO DE CUARESMA"
+          },
+          {
+            "text_es": "Tú que fuiste tentado por el Espíritu del mal: Señor, ten piedad"
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que venciste la tentación con la Palabra de Dios: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos llamas a compartir tu victoria: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que perdonas nuestros pecados: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos llamas a hacer penitencia: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que confiaste a la Iglesia el signo de tu perdón: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que borras nuestras culpas: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que creas en nosotros un corazón puro: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos devuelves la alegría de la salvación: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que conoces nuestros pensamientos: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que iluminas las tinieblas de nuestro corazón: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos exhortas a una sincera conversión: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que nos hiciste renacer por el agua y el Espíritu Santo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos convertiste en nuevas creaturas: Cristo, ten piedad"
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos invitas a renovar nuestro bautismo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que llevaste a la cruz nuestros pecados: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que resucitaste para nuestra justificación: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que no quieres la muerte del pecador, sino que se convierta y viva: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "TIEMPO PASCUAL"
+          },
+          {
+            "text_es": "Tú que has destruido el pecado y la muerte con tu resurrección: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que has renovado la creación entera con tu resurrección: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que das la alegría a los vivos y la vida a los muertos con tu resurrección: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú, el Primogénito de entre los muertos: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú, el vencedor del pecado y de la muerte: Cristo, ten piedad"
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú, la resurrección y la vida: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que resucitaste lleno de gloria: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos haces pasar de la muerte a la Vida: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos llamas a vivir como resucitados: Señor, ten piedad"
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que eres nuestro Buen Pastor resucitado: Señor, ten piedad"
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos das la Vida en abundancia: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos congregas en un solo rebaño: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que al resucitar renuevas todas las cosas: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos llamas a transformar el mundo: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que harás participar a todo el universo de la gloria de tu resurrección: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "ASCENSIÓN DEL SEÑOR"
+          },
+          {
+            "text_es": "Tú que eres el sumo sacerdote de la nueva Alianza: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos edificas como piedras vivas en el templo santo de Dios: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que has ascendido a la derecha del Padre para enviarnos el don del Espíritu: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que volviste junto al Padre: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que fuiste glorificado para siempre: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos haces ascender al Cielo contigo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "DOMINGO DE PENTECOSTÉS"
+          },
+          {
+            "text_es": "Tú que resucitaste por obra del Espíritu Santo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos enviaste el Espíritu vivificador: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que nos devolverás la vida gracias al Espíritu: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "TIEMPO «DURANTE EL AÑO»"
+          },
+          {
+            "text_es": "Tú que eres el camino que conduce al Padre: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que eres la verdad que ilumina a los pueblos: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que eres la vida que renueva el mundo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que eres la plenitud de la verdad y de la gracia: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que te has hecho pobre para enriquecernos: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que has venido para hacer de nosotros tu pueblo santo: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que no has venido a condenar, sino a perdonar: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que has dicho que hay gran fiesta en el cielo por un pecador que se arrepiente: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que perdonas mucho a quien mucho ama: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que has venido a buscar al que estaba perdido: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que has querido dar la vida en rescate por todos: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que reúnes a tus hijos dispersos: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Tú que ofreciste el perdón a Pedro arrepentido: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que prometiste el paraíso al buen ladrón: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Tú que perdonas a todo hombre que confía en tu misericordia: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Defensor de los pobres: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Refugio de los débiles: Cristo, ten piedad."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "sp_es": "R."
+          },
+          {
+            "text_es": "Esperanza de los pecadores: Señor, ten piedad."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "sp_es": "R."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "1.4 kyrie",
+    "type": "part",
+    "header": {
+      "es": "Señor, ten piedad"
+    },
+    "lines": [
+      {
+        "rubric_es": "Siguen las invocaciones:"
+      },
+      {
+        "text_es": "Señor, ten piedad"
+      },
+      {
+        "rubric_es": "("
+      },
+      {
+        "text_es": "Kýrie eléison"
+      },
+      {
+        "rubric_es": "), si no se han dicho ya en alguna de las fórmulas del acto penitencial."
+      },
+      {
+        "text_es": "Señor, ten piedad.",
+        "sp_es": "V."
+      },
+      {
+        "text_es": "Señor, ten piedad.",
+        "sp_es": "R."
+      },
+      {
+        "text_es": "Cristo, ten piedad.",
+        "sp_es": "V."
+      },
+      {
+        "text_es": "Cristo, ten piedad.",
+        "sp_es": "R."
+      },
+      {
+        "text_es": "Señor, ten piedad.",
+        "sp_es": "V."
+      },
+      {
+        "text_es": "Señor, ten piedad.",
+        "sp_es": "R."
+      },
+      {
+        "rubric_es": "Se pueden tomar las melodías del Gradual Romano."
+      }
+    ]
+  },
+  {
+    "id": "1.5 gloria",
+    "type": "part",
+    "header": {
+      "es": "Gloria"
+    },
+    "lines": [
+      {
+        "rubric_es": "A continuación, cuando está prescrito, se canta o se dice el himno:"
+      },
+      {
+        "text_es": "Gloria a Dios en el Cielo,"
+      },
+      {
+        "text_es": "y en la tierra paz a los hombres que ama el Señor."
+      },
+      {
+        "text_es": "Por tu inmensa gloria te alabamos,"
+      },
+      {
+        "text_es": "te bendecimos,"
+      },
+      {
+        "text_es": "te adoramos,"
+      },
+      {
+        "text_es": "te glorificamos,"
+      },
+      {
+        "text_es": "te damos gracias."
+      },
+      {
+        "text_es": "Señor Dios, Rey celestial,"
+      },
+      {
+        "text_es": "Dios Padre todopoderoso."
+      },
+      {
+        "text_es": "Señor Hijo único, Jesucristo,"
+      },
+      {
+        "text_es": "Señor Dios, Cordero de Dios, Hijo del Padre:"
+      },
+      {
+        "text_es": "Tú que quitas el pecado del mundo, ten piedad de nosotros;"
+      },
+      {
+        "text_es": "tú que quitas el pecado del mundo, atiende nuestra súplica;"
+      },
+      {
+        "text_es": "tú que estás sentado a la derecha del Padre, ten piedad de nosotros:"
+      },
+      {
+        "text_es": "porque sólo tú eres Santo, sólo tú Señor, sólo tú Altísimo, Jesucristo,"
+      },
+      {
+        "text_es": "con el Espíritu Santo en la gloria de Dios Padre."
+      },
+      {
+        "text_es": "Amén."
+      }
+    ],
+    "if": "sunday"
+  },
+  {
+    "id": "1.6 collect",
+    "type": "part",
+    "header": {
+      "es": "Oración colecta"
+    },
+    "lines": [
+      {
+        "rubric_es": "Acabado el himno, el sacerdote, con las manos juntas, dice:"
+      },
+      {
+        "text_es": "Oremos"
+      },
+      {
+        "rubric_es": "Y todos, junto con el sacerdote, oran en silencio durante un breve espacio de tiempo."
+      },
+      {
+        "rubric_es": "Entonces, el sacerdote, con las manos extendidas, dice la oración colecta, al final de la cual, el pueblo aclama:"
+      },
+      {
+        "text_es": "(Oración colecta del día)"
+      },
+      {
+        "text_es": "Amén.",
+        "sp_es": "R."
+      }
+    ]
+  },
+  {
+    "id": "2. THE LITURGY OF THE WORD",
+    "type": "section",
+    "es": "Liturgia de la Palabra"
+  },
+  {
+    "id": "2.1 reading1",
+    "type": "part",
+    "header": {
+      "es": "Primera lectura"
+    },
+    "lines": [
+      {
+        "text_es": "(Primera lectura del día)"
+      }
+    ]
+  },
+  {
+    "id": "2.2 psalm",
+    "type": "part",
+    "header": {
+      "es": "Salmo responsorial"
+    },
+    "lines": [
+      {
+        "text_es": "(Salmo responsorial del día)"
+      }
+    ]
+  },
+  {
+    "id": "2.3 reading2",
+    "type": "part",
+    "header": {
+      "es": "Segunda lectura"
+    },
+    "lines": [
+      {
+        "text_es": "(Segunda lectura del día)"
+      }
+    ],
+    "if": "sunday"
+  },
+  {
+    "id": "2.4 Sequence",
+    "type": "part",
+    "header": {
+      "es": "Secuencia"
+    },
+    "lines": [
+      {
+        "text_es": "(Secuencia del día)"
+      }
+    ],
+    "if": "easter_or_pentecost"
+  },
+  {
+    "id": "2.5 gospel_accl",
+    "type": "part",
+    "header": {
+      "es": "Aclamación antes del Evangelio"
+    },
+    "lines": [
+      {
+        "text_es": "(Aclamación antes del Evangelio)"
+      }
+    ]
+  },
+  {
+    "id": "2.6 gospel",
+    "type": "part",
+    "header": {
+      "es": "Evangelio"
+    },
+    "lines": [
+      {
+        "text_es": "(Evangelio del día)"
+      }
+    ]
+  },
+  {
+    "id": "2.7 homily",
+    "type": "part",
+    "header": {
+      "es": "Homilía"
+    },
+    "lines": [
+      {
+        "rubric_es": "Luego se hace la homilía, que corresponde al sacerdote o al diácono, y que debe hacerse obligatoriamente todos los domingos y fiestas de precepto; se recomienda en los otros días."
+      }
+    ]
+  },
+  {
+    "id": "2.8 creed",
+    "type": "selectable",
+    "header": {
+      "es": "Profesión de fe"
+    },
+    "variants": {
+      "1": {
+        "label": {
+          "es": "Credo niceno-constantinopolitano"
+        },
+        "lines": [
+          {
+            "rubric_es": "Acabada la homilía, cuando está prescrito, se canta o se dice el Símbolo o Profesión de fe:"
+          },
+          {
+            "text_es": "Creo en un solo Dios,"
+          },
+          {
+            "text_es": "Padre todopoderoso,"
+          },
+          {
+            "text_es": "creador del cielo y de la tierra,"
+          },
+          {
+            "text_es": "de todo lo visible y lo invisible."
+          },
+          {
+            "text_es": "Creo en un solo Señor, Jesucristo,"
+          },
+          {
+            "text_es": "Hijo único de Dios,"
+          },
+          {
+            "text_es": "nacido del Padre antes de todos los siglos."
+          },
+          {
+            "text_es": "Dios de Dios, luz de luz, Dios verdadero de Dios verdadero,"
+          },
+          {
+            "text_es": "engendrado, no creado, de la misma naturaleza del Padre;"
+          },
+          {
+            "text_es": "por quien todo fue hecho;"
+          },
+          {
+            "text_es": "que por nosotros los hombres y por nuestra salvación, bajó del cielo,"
+          },
+          {
+            "rubric_es": "En estas palabras que siguen, hasta"
+          },
+          {
+            "text_es": "se hizo hombre"
+          },
+          {
+            "rubric_es": ", todos se inclinan."
+          },
+          {
+            "text_es": "y por obra del Espíritu Santo se encarnó de María, la Virgen, y se hizo hombre;"
+          },
+          {
+            "text_es": "y por nosotros fue crucificado bajo el poder de Poncio Pilato, padeció y fue sepultado,"
+          },
+          {
+            "text_es": "y resucitó al tercer día según las Escrituras,"
+          },
+          {
+            "text_es": "y subió al cielo, y está sentado a la derecha del Padre;"
+          },
+          {
+            "text_es": "y de nuevo vendrá con gloria para juzgar a vivos y muertos"
+          },
+          {
+            "text_es": "y su reino no tendrá fin."
+          },
+          {
+            "text_es": "Creo en el Espíritu Santo, Señor y dador de Vida,"
+          },
+          {
+            "text_es": "que procede del Padre y del Hijo,"
+          },
+          {
+            "text_es": "que con el Padre y el Hijo recibe una misma adoración y gloria,"
+          },
+          {
+            "text_es": "y que habló por los profetas."
+          },
+          {
+            "text_es": "Creo en la Iglesia, que es una, santa, católica y apostólica."
+          },
+          {
+            "text_es": "Profeso un solo bautismo para el perdón de los pecados."
+          },
+          {
+            "text_es": "Espero la resurrección de los muertos"
+          },
+          {
+            "text_es": "y la vida del mundo futuro. Amén."
+          }
+        ]
+      },
+      "2": {
+        "label": {
+          "es": "Símbolo de los Apóstoles"
+        },
+        "lines": [
+          {
+            "rubric_es": "En lugar del Símbolo Niceno-Constantinopolitano, sobre todo en el tiempo de Cuaresma y en el tiempo de Pascua, se puede emplear el Símbolo bautismal de la Iglesia de Roma, también llamado «de los Apóstoles»."
+          },
+          {
+            "text_es": "Creo en Dios, Padre todopoderoso,"
+          },
+          {
+            "text_es": "creador del cielo y de la tierra."
+          },
+          {
+            "text_es": "Creo en Jesucristo, su único Hijo,"
+          },
+          {
+            "text_es": "nuestro Señor,"
+          },
+          {
+            "rubric_es": "En las palabras que siguen, hasta"
+          },
+          {
+            "text_es": "María Virgen"
+          },
+          {
+            "rubric_es": ", todos se inclinan."
+          },
+          {
+            "text_es": "que fue concebido por obra y gracia del Espíritu Santo,"
+          },
+          {
+            "text_es": "nació de santa María Virgen."
+          },
+          {
+            "text_es": "Padeció bajo el poder de Poncio Pilato."
+          },
+          {
+            "text_es": "Fue crucificado, muerto y sepultado."
+          },
+          {
+            "text_es": "Descendió a los infiernos,"
+          },
+          {
+            "text_es": "al tercer día resucitó de entre los muertos,"
+          },
+          {
+            "text_es": "subió a los cielos"
+          },
+          {
+            "text_es": "y está sentado a la derecha de Dios, Padre todopoderoso."
+          },
+          {
+            "text_es": "Desde allí ha de venir a juzgar a los vivos y a los muertos."
+          },
+          {
+            "text_es": "Creo en el Espíritu Santo,"
+          },
+          {
+            "text_es": "la santa Iglesia católica,"
+          },
+          {
+            "text_es": "la comunión de los Santos,"
+          },
+          {
+            "text_es": "el perdón de los pecados,"
+          },
+          {
+            "text_es": "la resurrección de la carne"
+          },
+          {
+            "text_es": "y la vida eterna. Amén."
+          }
+        ]
+      }
+    },
+    "if": "sunday"
+  },
+  {
+    "id": "2.9 universal",
+    "type": "part",
+    "header": {
+      "es": "Oración universal"
+    },
+    "lines": [
+      {
+        "rubric_es": "Después se hace la oración universal u oración de los fieles."
+      },
+      {
+        "rubric_es": "La oración universal u oración de los fieles se desarrolla de la siguiente manera:"
+      },
+      {
+        "text_es": "Invitatorio"
+      },
+      {
+        "rubric_es": "El sacerdote invita a los fieles a orar, por medio de una breve monición."
+      },
+      {
+        "text_es": "Intenciones"
+      },
+      {
+        "rubric_es": "Las intenciones son propuestas por un diácono o, si no lo hay, por un lector o por otra persona idónea."
+      },
+      {
+        "rubric_es": "El pueblo manifiesta su participación con una invocación u orando en silencio."
+      },
+      {
+        "rubric_es": "La sucesión de intenciones ordinariamente debe ser la siguiente:"
+      },
+      {
+        "text_es": "a) Por las necesidades de la Iglesia."
+      },
+      {
+        "text_es": "b) Por los gobernantes y por la salvación del mundo entero."
+      },
+      {
+        "text_es": "c) Por aquellos que se encuentran en necesidades particulares."
+      },
+      {
+        "text_es": "d) Por la comunidad local."
+      },
+      {
+        "text_es": "Conclusión."
+      },
+      {
+        "rubric_es": "El sacerdote termina la plegaria común con una oración conclusiva."
+      }
+    ],
+    "if": "sunday"
+  },
+  {
+    "id": "3. THE LITURGY OF THE EUCHARIST",
+    "type": "section",
+    "es": "Liturgia eucarística"
+  },
+  {
+    "id": "3.1 offertory",
+    "type": "part",
+    "header": {
+      "es": "Preparación de los dones"
+    },
+    "lines": [
+      {
+        "rubric_es": "Terminado lo anterior, comienza el canto para el ofertorio. Mientras tanto, los ministros colocan sobre el altar el corporal, el purificador, el cáliz y el misal."
+      },
+      {
+        "rubric_es": "Conviene que los fieles expresen su participación en la ofrenda, bien sea llevando el pan y el vino para la celebración de la Eucaristía, bien presentando otros dones para las necesidades de la Iglesia o de los pobres."
+      },
+      {
+        "rubric_es": "El sacerdote, de pie junto al altar, toma la patena con el pan y, teniéndola con ambas manos un poco elevada sobre el altar, dice en voz baja:"
+      },
+      {
+        "text_es": "Bendito seas, Señor, Dios del Universo,"
+      },
+      {
+        "text_es": "por este pan,"
+      },
+      {
+        "text_es": "fruto de la tierra y del trabajo del hombre,"
+      },
+      {
+        "text_es": "que recibimos de tu generosidad y ahora te presentamos;"
+      },
+      {
+        "text_es": "él será para nosotros pan de vida."
+      },
+      {
+        "rubric_es": "Después, deja sobre el corporal la patena con el pan."
+      },
+      {
+        "rubric_es": "Si no se hace el canto para el ofertorio, el sacerdote puede decir estas palabras en voz alta; al final, el pueblo puede aclamar:"
+      },
+      {
+        "text_es": "Bendito seas por siempre, Señor."
+      },
+      {
+        "rubric_es": "El diácono, o el sacerdote, echa vino y un poco de agua en el cáliz, diciendo en secreto:"
+      },
+      {
+        "text_es": "Por el misterio de esta agua y este vino,"
+      },
+      {
+        "text_es": "haz que compartamos la divinidad"
+      },
+      {
+        "text_es": "de quien se ha dignado participar de nuestra humanidad."
+      },
+      {
+        "rubric_es": "Después, el sacerdote toma el cáliz y, teniéndolo con ambas manos un poco elevado sobre el altar, dice en voz baja:"
+      },
+      {
+        "text_es": "Bendito seas, Señor, Dios del universo,"
+      },
+      {
+        "text_es": "por este vino"
+      },
+      {
+        "text_es": "fruto de la vid y del trabajo del hombre,"
+      },
+      {
+        "text_es": "que recibimos de tu generosidad y ahora te presentamos;"
+      },
+      {
+        "text_es": "él será para nosotros bebida de salvación."
+      },
+      {
+        "rubric_es": "Después deja sobre el corporal el cáliz."
+      },
+      {
+        "rubric_es": "Si no se hace el canto para el ofertorio, el sacerdote puede decir estas palabras en voz alta; al final, el pueblo puede aclamar:"
+      },
+      {
+        "text_es": "Bendito seas por siempre, Señor."
+      },
+      {
+        "rubric_es": "Luego, el sacerdote, inclinado profundamente, dice en secreto:"
+      },
+      {
+        "text_es": "Acepta, Señor, nuestro corazón contrito"
+      },
+      {
+        "text_es": "y nuestro espíritu humilde;"
+      },
+      {
+        "text_es": "que éste sea hoy nuestro sacrificio"
+      },
+      {
+        "text_es": "y que sea agradable en tu presencia, Señor, Dios nuestro."
+      },
+      {
+        "rubric_es": "Y, si es oportuno, inciensa las ofrendas, la cruz y el altar. Después el diácono, u otro ministro, inciensa al sacerdote y al pueblo."
+      },
+      {
+        "rubric_es": "Luego el sacerdote, de pie a un lado del altar, se lava las manos, diciendo en secreto:"
+      },
+      {
+        "text_es": "Lava del todo mi delito, Señor,"
+      },
+      {
+        "text_es": "y limpia mi pecado."
+      },
+      {
+        "rubric_es": "Después, de pie en el centro del altar, de cara al pueblo, extendiendo y juntando las manos, dice:"
+      },
+      {
+        "text_es": "Oremos, hermanos,"
+      },
+      {
+        "text_es": "para que este sacrificio, mío y de ustedes,"
+      },
+      {
+        "text_es": "sea agradable a Dios, Padre todopoderoso."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "En el momento de ofrecer el sacrificio de toda la Iglesia,"
+      },
+      {
+        "text_es": "oremos a Dios, Padre todopoderoso."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Oremos, hermanos, para que, llevando al altar"
+      },
+      {
+        "text_es": "los gozos y las fatigas de cada día,"
+      },
+      {
+        "text_es": "nos dispongamos a ofrecer el sacrificio"
+      },
+      {
+        "text_es": "agradable a Dios, Padre todopoderoso."
+      },
+      {
+        "rubric_es": "El pueblo se pone de pie y responde:"
+      },
+      {
+        "text_es": "El Señor reciba de tus manos este sacrificio,"
+      },
+      {
+        "text_es": "para alabanza y gloria de su nombre,"
+      },
+      {
+        "text_es": "para nuestro bien"
+      },
+      {
+        "text_es": "y el de toda su santa Iglesia."
+      }
+    ]
+  },
+  {
+    "id": "3.2 prayer_offerings",
+    "type": "part",
+    "header": {
+      "es": "Oración sobre las ofrendas"
+    },
+    "lines": [
+      {
+        "text_es": "(Oración sobre las ofrendas del día)"
+      },
+      {
+        "text_es": "Amén.",
+        "sp_es": "R."
+      }
+    ]
+  },
+  {
+    "id": "3.3 eucharist",
+    "type": "selectable",
+    "isEucharist": true,
+    "ordinarySourceLayoutVersion": 1,
+    "header": {
+      "es": "Plegaria eucarística"
+    },
+    "variants": {
+      "1": {
+        "label": {
+          "es": "Plegaria eucarística i"
+        }
+      },
+      "2": {
+        "label": {
+          "es": "Plegaria eucarística ii"
+        }
+      },
+      "3": {
+        "label": {
+          "es": "Plegaria eucarística iii"
+        }
+      },
+      "4": {
+        "label": {
+          "es": "Plegaria eucarística iv"
+        }
+      }
+    },
+    "songs": {
+      "common_1": {
+        "title": {
+          "es": "PREFACIO COMÚN I"
+        },
+        "subtitle": {
+          "es": "EL UNIVERSO RESTAURADO POR CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "En él has querido restaurar todas las cosas,"
+          },
+          {
+            "text_es": "y hacernos participar a todos de su plenitud."
+          },
+          {
+            "text_es": "Él, que era de condición divina, se anonadó a sí mismo,"
+          },
+          {
+            "text_es": "y por su Sangre derramada en la cruz pacificó todas las cosas;"
+          },
+          {
+            "text_es": "y así, constituido Señor del universo,"
+          },
+          {
+            "text_es": "es fuente de salvación eterna"
+          },
+          {
+            "text_es": "para cuantos creen en él."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles,"
+          },
+          {
+            "text_es": "cantamos el himno a tu gloria,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "common_2": {
+        "title": {
+          "es": "PREFACIO COMÚN II"
+        },
+        "subtitle": {
+          "es": "LA SALVACIÓN POR CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú creaste al hombre por amor,"
+          },
+          {
+            "text_es": "y aunque condenado justamente,"
+          },
+          {
+            "text_es": "con tu misericordia lo redimiste,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por él, los ángeles celebran tu gloria,"
+          },
+          {
+            "text_es": "te adoran las dominaciones, se estremecen las potestades."
+          },
+          {
+            "text_es": "En el cielo te aclaman con alegría las virtudes celestiales"
+          },
+          {
+            "text_es": "y los santos serafines."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "common_3": {
+        "title": {
+          "es": "PREFACIO COMÚN III"
+        },
+        "subtitle": {
+          "es": "ALABANZA A DIOS POR LA CREACIÓN Y LA REDENCIÓN DEL HOMBRE"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque has querido ser,"
+          },
+          {
+            "text_es": "por medio de tu amado Hijo,"
+          },
+          {
+            "text_es": "no solamente el creador del género humano,"
+          },
+          {
+            "text_es": "sino también el autor generoso de la nueva creación."
+          },
+          {
+            "text_es": "Por eso,"
+          },
+          {
+            "text_es": "con razón te sirven todas las criaturas,"
+          },
+          {
+            "text_es": "con justicia te alaban todos los redimidos"
+          },
+          {
+            "text_es": "y tus santos unánimemente te bendicen."
+          },
+          {
+            "text_es": "Con ellos, también nosotros,"
+          },
+          {
+            "text_es": "en unión con los ángeles del cielo,"
+          },
+          {
+            "text_es": "te alabamos, diciendo sin cesar:"
+          }
+        ]
+      },
+      "common_4": {
+        "title": {
+          "es": "PREFACIO COMÚN IV"
+        },
+        "subtitle": {
+          "es": "LA ALABANZA ES DON DE DIOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Aunque no necesitas nuestra alabanza,"
+          },
+          {
+            "text_es": "tú inspiras en nosotros que te demos gracias."
+          },
+          {
+            "text_es": "para que las bendiciones que te ofrecemos"
+          },
+          {
+            "text_es": "nos ayuden en el camino de la salvación"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles"
+          },
+          {
+            "text_es": "ye alabamos, proclamando sin cesar:"
+          }
+        ]
+      },
+      "common_5": {
+        "title": {
+          "es": "PREFACIO COMÚN V"
+        },
+        "subtitle": {
+          "es": "LA PROCLAMACIÓN DEL MISTERIO DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Con amor celebramos su Muerte,"
+          },
+          {
+            "text_es": "con fe viva proclamamos su Resurrección,"
+          },
+          {
+            "text_es": "y con firme esperanza aguardamos su gloriosa Venida."
+          },
+          {
+            "text_es": "Por eso, con todos los ángeles y santos,"
+          },
+          {
+            "text_es": "te alabamos, diciendo sin cesar:"
+          }
+        ]
+      },
+      "common_6": {
+        "title": {
+          "es": "PREFACIO COMÚN VI"
+        },
+        "subtitle": {
+          "es": "EL MISTERIO DE LA SALVACIÓN EN CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias, Padre santo,"
+          },
+          {
+            "text_es": "siempre y en todo lugar,"
+          },
+          {
+            "text_es": "por Jesucristo, tu Hijo amado,"
+          },
+          {
+            "text_es": "tu Palabra por quien hiciste todas las cosas;"
+          },
+          {
+            "text_es": "tú nos lo enviaste para que,"
+          },
+          {
+            "text_es": "hecho hombre por obra del Espíritu Santo"
+          },
+          {
+            "text_es": "y nacido de María, la Virgen,"
+          },
+          {
+            "text_es": "fuera nuestro Salvador y Redentor."
+          },
+          {
+            "text_es": "Él, en cumplimiento de tu voluntad,"
+          },
+          {
+            "text_es": "para destruir la muerte y manifestar la resurrección,"
+          },
+          {
+            "text_es": "extendió sus brazos en la cruz,"
+          },
+          {
+            "text_es": "y así adquirió para ti un pueblo santo."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los Santos,"
+          },
+          {
+            "text_es": "proclamamos tu gloria, diciendo:"
+          }
+        ]
+      },
+      "common_7": {
+        "title": {
+          "es": "PREFACIO COMÚN VII"
+        },
+        "subtitle": {
+          "es": "CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios de la alianza y de la paz."
+          },
+          {
+            "text_es": "Tú llamaste a Abraham"
+          },
+          {
+            "text_es": "y le mandaste salir de su tierra,"
+          },
+          {
+            "text_es": "para constituirlo padre de todas las naciones."
+          },
+          {
+            "text_es": "Tú suscitaste a Moisés para librar a tu pueblo"
+          },
+          {
+            "text_es": "y guiarlos a la tierra de promisión."
+          },
+          {
+            "text_es": "En la etapa final de la historia,"
+          },
+          {
+            "text_es": "enviaste a tu propio Hijo,"
+          },
+          {
+            "text_es": "como huésped y peregrino en medio nuestro,"
+          },
+          {
+            "text_es": "para redimirnos del pecado y de la muerte,"
+          },
+          {
+            "text_es": "y derramaste el Espíritu,"
+          },
+          {
+            "text_es": "para hacer de todas las naciones un solo pueblo nuevo,"
+          },
+          {
+            "text_es": "que tiene como meta, tu reino,"
+          },
+          {
+            "text_es": "como estado, la libertad de tus hijos,"
+          },
+          {
+            "text_es": "como ley, el precepto del amor."
+          },
+          {
+            "text_es": "Por estos dones de tu benevolencia,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos con gozo el himno de tu gloria:"
+          }
+        ]
+      },
+      "common_8": {
+        "title": {
+          "es": "PREFACIO COMÚN VIII"
+        },
+        "subtitle": {
+          "es": "JESÚS, BUEN SAMARITANO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "y es deber nuestro alabarte,"
+          },
+          {
+            "text_es": "Padre santo, Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "en todos los momentos y circunstancias de la vida,"
+          },
+          {
+            "text_es": "en la salud y en la enfermedad,"
+          },
+          {
+            "text_es": "en el sufrimiento y en el gozo,"
+          },
+          {
+            "text_es": "por tu servidor, Jesús, nuestro Redentor."
+          },
+          {
+            "text_es": "Porque él, en su vida terrena, pasó haciendo el bien"
+          },
+          {
+            "text_es": "y curando a los oprimidos por el mal."
+          },
+          {
+            "text_es": "También hoy, como buen samaritano,"
+          },
+          {
+            "text_es": "se acerca a todo hombre"
+          },
+          {
+            "text_es": "que sufre en su cuerpo o en su espíritu,"
+          },
+          {
+            "text_es": "y cura sus heridas con el aceite del consuelo"
+          },
+          {
+            "text_es": "y el vino de la esperanza."
+          },
+          {
+            "text_es": "Por este don de tu gracia,"
+          },
+          {
+            "text_es": "incluso cuando nos vemos sumergidos en la noche del dolor,"
+          },
+          {
+            "text_es": "vislumbramos la luz pascual"
+          },
+          {
+            "text_es": "en tu Hijo, muerto y resucitado."
+          },
+          {
+            "text_es": "Por eso, unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos a una voz el himno de tu gloria:"
+          }
+        ]
+      },
+      "common_9": {
+        "title": {
+          "es": "PREFACIO COMÚN IX"
+        },
+        "subtitle": {
+          "es": "LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosComunes3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias"
+          },
+          {
+            "text_es": "siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú eres el Dios vivo y verdadero,"
+          },
+          {
+            "text_es": "el universo está lleno de tu presencia,"
+          },
+          {
+            "text_es": "pero sobre todo"
+          },
+          {
+            "text_es": "has dejado la huella de tu gloria"
+          },
+          {
+            "text_es": "en el hombre, creado a tu imagen."
+          },
+          {
+            "text_es": "Tú lo llamas a cooperar con el trabajo cotidiano"
+          },
+          {
+            "text_es": "en el proyecto de la creación"
+          },
+          {
+            "text_es": "y le das tu Espíritu"
+          },
+          {
+            "text_es": "para que sea artífice de justicia y de paz,"
+          },
+          {
+            "text_es": "en Cristo, el hombre nuevo."
+          },
+          {
+            "text_es": "Por eso, unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos con alegría el himno de tu alabanza:"
+          }
+        ]
+      },
+      "ordinary_1": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO I"
+        },
+        "subtitle": {
+          "es": "EL MISTERIO PASCUAL NOS HACE PUEBLO DE DIOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "Realmente es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él mismo, por su misterio pascual,"
+          },
+          {
+            "text_es": "realizó la obra maravillosa"
+          },
+          {
+            "text_es": "de llamarnos del pecado y de la muerte"
+          },
+          {
+            "text_es": "a la gloria de construir"
+          },
+          {
+            "text_es": "una raza elegida, un reino sacerdotal,"
+          },
+          {
+            "text_es": "una nación santa, un pueblo de su propiedad,"
+          },
+          {
+            "text_es": "para que, llevados de las tinieblas a la luz admirable,"
+          },
+          {
+            "text_es": "proclamemos ante el mundo tus maravillas."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_2": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO II"
+        },
+        "subtitle": {
+          "es": "EL PLAN DIVINO DE LA SALVACIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él mismo se compadeció del pecado de los hombres"
+          },
+          {
+            "text_es": "y quiso nacer de la Virgen;"
+          },
+          {
+            "text_es": "murió en la cruz para librarnos de la muerte"
+          },
+          {
+            "text_es": "y resucitó del sepulcro para darnos la Vida eterna."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_3": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO III"
+        },
+        "subtitle": {
+          "es": "EL HOMBRE SALVADO POR EL HOMBRE"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque reconocemos como obra de tu poder admirable"
+          },
+          {
+            "text_es": "haber socorrido nuestra débil naturaleza"
+          },
+          {
+            "text_es": "con la fuerza de tu divinidad,"
+          },
+          {
+            "text_es": "y haber provisto el remedio"
+          },
+          {
+            "text_es": "en la misma debilidad humana;"
+          },
+          {
+            "text_es": "así donde estuvo nuestra ruina"
+          },
+          {
+            "text_es": "obraste nuestra salvación,"
+          },
+          {
+            "text_es": "por Jesucristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por él, adoran tu grandeza"
+          },
+          {
+            "text_es": "los ángeles que se alegran eternamente en tu presencia."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "cantando alegremente:"
+          }
+        ]
+      },
+      "ordinary_4": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO IV"
+        },
+        "subtitle": {
+          "es": "LA HISTORIA DE LA SALVACIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Con su nacimiento restauró nuestra naturaleza,"
+          },
+          {
+            "text_es": "con su muerte destruyó nuestros pecados,"
+          },
+          {
+            "text_es": "al resucitar nos dio nueva vida"
+          },
+          {
+            "text_es": "y nos abrió las puertas del cielo cuando volvió junto a ti, Padre."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles y los santos,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_5": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO V"
+        },
+        "subtitle": {
+          "es": "LA CREACIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú creaste cuanto existe en el mundo"
+          },
+          {
+            "text_es": "y estableciste el curso y la variedad de los tiempos;"
+          },
+          {
+            "text_es": "formaste al hombre a tu imagen"
+          },
+          {
+            "text_es": "y sometiste a su poder las maravillas del universo,"
+          },
+          {
+            "text_es": "para que en nombre tuyo dominara la creación"
+          },
+          {
+            "text_es": "y te alabara constantemente por tu obras,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso te alabamos con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "proclamando sin cesar con alegría:"
+          }
+        ]
+      },
+      "ordinary_6": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO VI"
+        },
+        "subtitle": {
+          "es": "EL ANTICIPO DE LA PASCUA ETERNA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "En ti vivimos, nos movemos y existimos,"
+          },
+          {
+            "text_es": "y mientras peregrinamos en este mundo,"
+          },
+          {
+            "text_es": "no sólo experimentamos cada día las pruebas de tu amor,"
+          },
+          {
+            "text_es": "sino que poseemos desde ahora el anticipo de la eternidad."
+          },
+          {
+            "text_es": "Así, habiendo recibido las primicias del Espíritu"
+          },
+          {
+            "text_es": "por quien resucitaste a Jesús de entre los muertos,"
+          },
+          {
+            "text_es": "esperamos gozar eternamente de la Pascua."
+          },
+          {
+            "text_es": "Por eso, te alabamos con todos los ángeles"
+          },
+          {
+            "text_es": "y proclamamos tu gloria con alegría. diciendo sin cesar:"
+          }
+        ]
+      },
+      "ordinary_7": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO VII"
+        },
+        "subtitle": {
+          "es": "LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tu amor por el mundo fue tan misericordioso"
+          },
+          {
+            "text_es": "que nos enviaste como Redentor a tu propio Hijo,"
+          },
+          {
+            "text_es": "y quisiste que él fuera en todo semejante al hombre,"
+          },
+          {
+            "text_es": "menos en el pecado,"
+          },
+          {
+            "text_es": "para amar en nosotros lo mismo que amabas en él;"
+          },
+          {
+            "text_es": "con su obediencia filial recuperamos tu dones"
+          },
+          {
+            "text_es": "que la desobediencia del pecado nos hizo perder."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles y los santos"
+          },
+          {
+            "text_es": "Cantamos un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "ordinary_8": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO VIII"
+        },
+        "subtitle": {
+          "es": "LA IGLESIA CONGREGADA A IMAGEN DE LA TRINIDAD"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú has querido reunir de nuevo,"
+          },
+          {
+            "text_es": "por la Sangre de tu Hijo"
+          },
+          {
+            "text_es": "y la fuerza del Espíritu,"
+          },
+          {
+            "text_es": "a los hijos dispersos por el pecado;"
+          },
+          {
+            "text_es": "de este modo tu Iglesia, congregada por virtud"
+          },
+          {
+            "text_es": "y a imagen de la Trinidad,"
+          },
+          {
+            "text_es": "se muestra ante el mundo como Cuerpo de Cristo"
+          },
+          {
+            "text_es": "y Templo del Espíritu,"
+          },
+          {
+            "text_es": "para alabanza de tu infinita sabiduría."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles,"
+          },
+          {
+            "text_es": "te alabamos llenos de alegría:"
+          }
+        ]
+      },
+      "ordinary_9": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO IX"
+        },
+        "subtitle": {
+          "es": "EL DIA DEL SEÑOR"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo bendecirte y darte gracias,"
+          },
+          {
+            "text_es": "Padre santo, fuente de la verdad y de la vida,"
+          },
+          {
+            "text_es": "porque nos has convocado en tu casa en este día de fiesta."
+          },
+          {
+            "text_es": "Hoy, tu familia, reunida en la escucha de tu Palabra,"
+          },
+          {
+            "text_es": "y en la comunión del pan único y partido,"
+          },
+          {
+            "text_es": "celebra el memorial del Señor resucitado,"
+          },
+          {
+            "text_es": "mientras espera el domingo sin ocaso"
+          },
+          {
+            "text_es": "en el que la humanidad entrará en tu descanso."
+          },
+          {
+            "text_es": "Entonces podremos contemplar tu rostro"
+          },
+          {
+            "text_es": "y alabar por siempre tu misericordia."
+          },
+          {
+            "text_es": "Con esta gozosa esperanza,"
+          },
+          {
+            "text_es": "y unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos unánimes el himno de tu gloria:"
+          }
+        ]
+      },
+      "ordinary_10": {
+        "title": {
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO X"
+        },
+        "subtitle": {
+          "es": "LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDda3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú nos concedes lo que más conviene en cada momento"
+          },
+          {
+            "text_es": "y diriges sabiamente a tu Iglesia"
+          },
+          {
+            "text_es": "asistiéndola siempre con la fuerza del Espíritu Santo;"
+          },
+          {
+            "text_es": "para que, con un corazón siempre dócil a tu voluntad,"
+          },
+          {
+            "text_es": "no abandone la plegaria en las dificultades"
+          },
+          {
+            "text_es": "ni la acción de gracias en las alegrías,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, unidos a los ángeles"
+          },
+          {
+            "text_es": "te alabamos, cantando con alegría:"
+          }
+        ]
+      },
+      "advent_1": {
+        "title": {
+          "es": "PREFACIO DE ADVIENTO I"
+        },
+        "subtitle": {
+          "es": "LAS DOS VENIDAS DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosAdviento3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre Santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo Señor nuestro."
+          },
+          {
+            "text_es": "Él vino por primera vez en la humildad de nuestra carne,"
+          },
+          {
+            "text_es": "para realizar el plan de redención trazado desde antiguo,"
+          },
+          {
+            "text_es": "y nos abrió el camino de la salvación;"
+          },
+          {
+            "text_es": "para que, cuando venga por segunda vez"
+          },
+          {
+            "text_es": "en el esplendor de su grandeza,"
+          },
+          {
+            "text_es": "podamos recibir los bienes prometidos"
+          },
+          {
+            "text_es": "que ahora aguardamos en vigilante espera."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_2": {
+        "title": {
+          "es": "PREFACIO DE ADVIENTO II"
+        },
+        "subtitle": {
+          "es": "CRISTO, SEÑOR Y JUEZ DE LA HISTORIA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosAdviento3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "es nuestro deber cantar en tu honor"
+          },
+          {
+            "text_es": "himnos de bendición y de alabanza,"
+          },
+          {
+            "text_es": "Padre todopoderoso,"
+          },
+          {
+            "text_es": "principio y fin de todo lo creado."
+          },
+          {
+            "text_es": "Tú has querido ocultarnos el día y la hora en que Cristo, tu Hijo,"
+          },
+          {
+            "text_es": "Señor y Juez de la Historia,"
+          },
+          {
+            "text_es": "aparecerá sobre las nubes del cielo revestido de poder y de gloria."
+          },
+          {
+            "text_es": "En aquel día, tremendo y glorioso al mismo tiempo,"
+          },
+          {
+            "text_es": "pasará la figura de este mundo"
+          },
+          {
+            "text_es": "y nacerán los cielos nuevos y la tierra nueva."
+          },
+          {
+            "text_es": "El Señor se manifestará entonces lleno de gloria,"
+          },
+          {
+            "text_es": "el mismo que viene ahora a nuestro encuentro"
+          },
+          {
+            "text_es": "en cada hombre y en cada acontecimiento,"
+          },
+          {
+            "text_es": "para que lo recibamos en la fe"
+          },
+          {
+            "text_es": "y para que demos testimonio por el amor,"
+          },
+          {
+            "text_es": "de la espera dichosa de su reino."
+          },
+          {
+            "text_es": "Por eso, mientras aguardamos su última venida,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_3": {
+        "title": {
+          "es": "PREFACIO DE ADVIENTO III"
+        },
+        "subtitle": {
+          "es": "LA DOBLE ESPERA DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosAdviento3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre Santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo Señor nuestro."
+          },
+          {
+            "text_es": "A Él que había sido anunciado por los profetas,"
+          },
+          {
+            "text_es": "la Virgen Madre lo llevó en su seno con amor inefable;"
+          },
+          {
+            "text_es": "Juan Bautista proclamó la inminencia de su venida"
+          },
+          {
+            "text_es": "y reveló su presencia entre los hombres."
+          },
+          {
+            "text_es": "El mismo Señor nos concede ahora"
+          },
+          {
+            "text_es": "preparar con alegría el misterio de su nacimiento,"
+          },
+          {
+            "text_es": "para que su llegada nos encuentre"
+          },
+          {
+            "text_es": "perseverantes en la oración"
+          },
+          {
+            "text_es": "y proclamando gozosamente su alabanza."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_4": {
+        "title": {
+          "es": "PREFACIO DE ADVIENTO IV"
+        },
+        "subtitle": {
+          "es": "MARÍA, NUEVA EVA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosAdviento3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "alabarte, bendecirte y glorificarte"
+          },
+          {
+            "text_es": "Señor, Padre Santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por el misterio de la Virgen Madre."
+          },
+          {
+            "text_es": "Del antiguo adversario nos vino la ruina,"
+          },
+          {
+            "text_es": "pero en el seno virginal de la hija de Sión recibió la vida"
+          },
+          {
+            "text_es": "aquél que nos nutre con el pan de los ángeles,"
+          },
+          {
+            "text_es": "y surgieron para todo el género humano"
+          },
+          {
+            "text_es": "la salvación y la paz."
+          },
+          {
+            "text_es": "La gracia que perdimos por Eva nos fue devuelta en María;"
+          },
+          {
+            "text_es": "su maternidad redimida del pecado y de la muerte,"
+          },
+          {
+            "text_es": "se abre al don de una vida nueva."
+          },
+          {
+            "text_es": "para que, donde abundó el pecado sobreabundara tu misericordia"
+          },
+          {
+            "text_es": "por Cristo, nuestro Salvador."
+          },
+          {
+            "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "advent_5": {
+        "title": {
+          "es": "PREFACIO DE ADVIENTO V"
+        },
+        "subtitle": {
+          "es": "LA PROMESA DEL SALVADOR"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosAdviento3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre Santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo Señor nuestro."
+          },
+          {
+            "text_es": "Porque Él es el Salvador"
+          },
+          {
+            "text_es": "que en tu misericordia y fidelidad"
+          },
+          {
+            "text_es": "prometiste al hombre extraviado,"
+          },
+          {
+            "text_es": "para que su verdad instruyera a los ignorantes,"
+          },
+          {
+            "text_es": "su santidad justificara a los pecadores"
+          },
+          {
+            "text_es": "y su fuerza sostuviera a los débiles."
+          },
+          {
+            "text_es": "Al acercarse el tiempo en que ha de llegar tu Enviado"
+          },
+          {
+            "text_es": "y amanece el día de nuestra salvación,"
+          },
+          {
+            "text_es": "llenos de confianza en tus promesas,"
+          },
+          {
+            "text_es": "cantamos, Padre, con filial alegría,"
+          },
+          {
+            "text_es": "el himno de tu gloria:"
+          }
+        ]
+      },
+      "christmas_1": {
+        "title": {
+          "es": "PREFACIO DE NAVIDAD I"
+        },
+        "subtitle": {
+          "es": "CRISTO, LA LUZ DEL MUNDO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosNavidad3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno:"
+          },
+          {
+            "text_es": "Porque gracias al misterio de la Palabra hecha carne,"
+          },
+          {
+            "text_es": "la luz de tu gloria brilló ante nuestros ojos con nuevo resplandor,"
+          },
+          {
+            "text_es": "para que, conociendo a Dios visiblemente"
+          },
+          {
+            "text_es": "lleguemos al amor de lo invisible."
+          },
+          {
+            "text_es": "Por eso con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "christmas_2": {
+        "title": {
+          "es": "PREFACIO DE NAVIDAD II"
+        },
+        "subtitle": {
+          "es": "LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosNavidad3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por el misterio santo que hoy celebramos,"
+          },
+          {
+            "text_es": "el que era de naturaleza invisible"
+          },
+          {
+            "text_es": "se hizo visible en nuestra naturaleza,"
+          },
+          {
+            "text_es": "y el que es engendrado desde toda la eternidad"
+          },
+          {
+            "text_es": "comenzó a existir en el tiempo"
+          },
+          {
+            "text_es": "para asumir en sí mismo todo lo creado,"
+          },
+          {
+            "text_es": "reconstruir lo que estaba caído"
+          },
+          {
+            "text_es": "y encaminar al hombre descarriado hacia el Reino celestial."
+          },
+          {
+            "text_es": "Por eso, unidos a todos los ángeles,"
+          },
+          {
+            "text_es": "te aclamamos llenos de alegría, diciendo:"
+          }
+        ]
+      },
+      "christmas_3": {
+        "title": {
+          "es": "PREFACIO DE NAVIDAD III"
+        },
+        "subtitle": {
+          "es": "EL INTERCAMBIO EN LA ENCARNACIÓN DEL VERBO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosNavidad3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por él hoy resplandece ante el mundo"
+          },
+          {
+            "text_es": "el maravilloso intercambio de nuestra salvación;"
+          },
+          {
+            "text_es": "pues al revestirse tu Hijo de nuestra frágil condición"
+          },
+          {
+            "text_es": "no solamente dignificó nuestra naturaleza para siempre,"
+          },
+          {
+            "text_es": "sino que por esta unión admirable"
+          },
+          {
+            "text_es": "nos hizo partícipes de su eternidad."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles,"
+          },
+          {
+            "text_es": "te alabamos llenos de alegría:"
+          }
+        ]
+      },
+      "de_la_epifania_del_senor": {
+        "title": {
+          "es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR"
+        },
+        "subtitle": {
+          "es": "CRISTO, LUZ DE LOS PUEBLOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosNavidad3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "hoy"
+          },
+          {
+            "rubric_es": ")"
+          },
+          {
+            "text_es": "iluminaste a todos los pueblos"
+          },
+          {
+            "text_es": "revelándoles el misterio de nuestra salvación en Cristo,"
+          },
+          {
+            "text_es": "y al manifestarse Él en nuestra naturaleza mortal"
+          },
+          {
+            "text_es": "nos restauraste con la nueva gloria de su inmortalidad."
+          },
+          {
+            "text_es": "Por eso con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "lent_1": {
+        "title": {
+          "es": "PREFACIO DE CUARESMA I"
+        },
+        "subtitle": {
+          "es": "LA SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro:"
+          },
+          {
+            "text_es": "Porque concedes generosamente a tus fieles"
+          },
+          {
+            "text_es": "disponerse a la celebración de la Pascua"
+          },
+          {
+            "text_es": "con un corazón purificado,"
+          },
+          {
+            "text_es": "para que, dedicados con mayor entrega"
+          },
+          {
+            "text_es": "a la oración y a las obras de caridad,"
+          },
+          {
+            "text_es": "y participando en los misterios que nos dieron nueva Vida,"
+          },
+          {
+            "text_es": "lleguemos a ser plenamente hijos tuyos."
+          },
+          {
+            "text_es": "Por eso con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "lent_2": {
+        "title": {
+          "es": "PREFACIO DE CUARESMA II"
+        },
+        "subtitle": {
+          "es": "LA CONVERSIÓN INTERIOR"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque has establecido generosamente"
+          },
+          {
+            "text_es": "un tiempo especial de gracia"
+          },
+          {
+            "text_es": "para purificar el corazón de tus hijos,"
+          },
+          {
+            "text_es": "de modo que, libres de todo afecto desordenado,"
+          },
+          {
+            "text_es": "vivamos las realidades temporales"
+          },
+          {
+            "text_es": "pero adhiriéndonos a las eternas."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y santos"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "lent_3": {
+        "title": {
+          "es": "PREFACIO DE CUARESMA III"
+        },
+        "subtitle": {
+          "es": "LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque con nuestras privaciones voluntarias"
+          },
+          {
+            "text_es": "nos enseñas a reconocer y agradecer tus dones,"
+          },
+          {
+            "text_es": "a dominar nuestro orgullo,"
+          },
+          {
+            "text_es": "e imitar así tu generosidad"
+          },
+          {
+            "text_es": "compartiendo nuestros bienes con los necesitados."
+          },
+          {
+            "text_es": "Por eso, con la multitud de los ángeles,"
+          },
+          {
+            "text_es": "te alabamos diciendo a una sola voz:"
+          }
+        ]
+      },
+      "lent_4": {
+        "title": {
+          "es": "PREFACIO DE CUARESMA IV"
+        },
+        "subtitle": {
+          "es": "LOS FRUTOS DEL AYUNO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque con el ayuno corporal,"
+          },
+          {
+            "text_es": "refrenas nuestras pasiones,"
+          },
+          {
+            "text_es": "elevas nuestro espíritu"
+          },
+          {
+            "text_es": "y nos das fuerza y recompensa,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por él, los ángeles y los coros celestiales"
+          },
+          {
+            "text_es": "celebran tu gloria,"
+          },
+          {
+            "text_es": "unidos en común alegría."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "lent_5": {
+        "title": {
+          "es": "PREFACIO DE CUARESMA V"
+        },
+        "subtitle": {
+          "es": "EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo bendecir tu nombre,"
+          },
+          {
+            "text_es": "Padre rico en misericordia,"
+          },
+          {
+            "text_es": "ahora que, en nuestro itinerario hacia la luz pascual,"
+          },
+          {
+            "text_es": "seguimos los pasos de Cristo,"
+          },
+          {
+            "text_es": "maestro y modelo de la humanidad"
+          },
+          {
+            "text_es": "reconciliada en el amor."
+          },
+          {
+            "text_es": "Tú abres a la Iglesia el camino de un nuevo éxodo"
+          },
+          {
+            "text_es": "a través del desierto cuaresmal,"
+          },
+          {
+            "text_es": "para que, llegados a la montaña santa,"
+          },
+          {
+            "text_es": "con el corazón contrito y humillado,"
+          },
+          {
+            "text_es": "reavivemos nuestra vocación de pueblo de la alianza,"
+          },
+          {
+            "text_es": "convocado para bendecir tu nombre,"
+          },
+          {
+            "text_es": "escuchar tu Palabra,"
+          },
+          {
+            "text_es": "y experimentar con gozo tus maravillas."
+          },
+          {
+            "text_es": "Por estos signos de salvación,"
+          },
+          {
+            "text_es": "unidos a los ángeles, ministros de tu gloria,"
+          },
+          {
+            "text_es": "proclamamos el canto de tu alabanza:"
+          }
+        ]
+      },
+      "passion_1": {
+        "title": {
+          "es": "PREFACIO DE LA PASIÓN DEL SEÑOR I"
+        },
+        "subtitle": {
+          "es": "LA FUERZA DE LA CRUZ"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Por la Pasión salvadora de tu Hijo"
+          },
+          {
+            "text_es": "la humanidad entera fue capaz de glorificarte,"
+          },
+          {
+            "text_es": "porque en la fuerza inefable de la cruz"
+          },
+          {
+            "text_es": "se manifestó el juicio del mundo"
+          },
+          {
+            "text_es": "y el poder de Cristo crucificado."
+          },
+          {
+            "text_es": "Por eso, con todos los ángeles y santos,"
+          },
+          {
+            "text_es": "cantamos sin cesar tus alabanzas:"
+          }
+        ]
+      },
+      "passion_2": {
+        "title": {
+          "es": "PREFACIO DE LA PASIÓN DEL SEÑOR II"
+        },
+        "subtitle": {
+          "es": "LA VICTORIA DE LA PASIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosCuaresma3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro:"
+          },
+          {
+            "text_es": "Porque se acercan ya los días santos"
+          },
+          {
+            "text_es": "de su Pasión salvadora y de su gloriosa Resurrección,"
+          },
+          {
+            "text_es": "en los cuales celebramos el triunfo sobre el mal"
+          },
+          {
+            "text_es": "y se renueva el misterio de nuestra redención."
+          },
+          {
+            "text_es": "Por eso, los ángeles te adoran eternamente"
+          },
+          {
+            "text_es": "y se alegran en tu presencia,"
+          },
+          {
+            "text_es": "y nosotros nos unimos a sus voces, diciendo sin cesar:"
+          }
+        ]
+      },
+      "easter_1": {
+        "title": {
+          "es": "PREFACIO DE PASCUA I"
+        },
+        "subtitle": {
+          "es": "EL MISTERIO PASCUAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "glorificarte siempre, Señor;"
+          },
+          {
+            "text_es": "pero más que nunca en"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "esta noche"
+          },
+          {
+            "rubric_es": ") ("
+          },
+          {
+            "text_es": "este día"
+          },
+          {
+            "rubric_es": ") ("
+          },
+          {
+            "text_es": "este tiempo"
+          },
+          {
+            "rubric_es": ")"
+          },
+          {
+            "text_es": "en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "text_es": "Porque Él es el verdadero Cordero"
+          },
+          {
+            "text_es": "que quitó el pecado del mundo:"
+          },
+          {
+            "text_es": "muriendo destruyó nuestra muerte,"
+          },
+          {
+            "text_es": "y resucitando restauró nuestra vida."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "easter_2": {
+        "title": {
+          "es": "PREFACIO DE PASCUA II"
+        },
+        "subtitle": {
+          "es": "LA NUEVA VIDA EN CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "glorificarte siempre, Señor;"
+          },
+          {
+            "text_es": "pero más que nunca en este tiempo"
+          },
+          {
+            "text_es": "en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "text_es": "Por Él, los hijos de la luz nacen a la Vida eterna,"
+          },
+          {
+            "text_es": "y se abren para los creyentes las puertas del reino de los cielos,"
+          },
+          {
+            "text_es": "porque en la muerte de Cristo"
+          },
+          {
+            "text_es": "nuestra muerte ha sido vencida,"
+          },
+          {
+            "text_es": "y en su Resurrección"
+          },
+          {
+            "text_es": "todos hemos resucitado a la Vida."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "easter_3": {
+        "title": {
+          "es": "PREFACIO DE PASCUA III"
+        },
+        "subtitle": {
+          "es": "CRISTO VIVE PARA INTERCEDER SIEMPRE POR NOSOTROS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "glorificarte siempre, Señor;"
+          },
+          {
+            "text_es": "pero más que nunca en este tiempo"
+          },
+          {
+            "text_es": "en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "text_es": "Él sigue ofreciéndose por nosotros"
+          },
+          {
+            "text_es": "e intercede constantemente en nuestro favor;"
+          },
+          {
+            "text_es": "inmolado ya no muere más,"
+          },
+          {
+            "text_es": "muerto vive para siempre."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "easter_4": {
+        "title": {
+          "es": "PREFACIO DE PASCUA IV"
+        },
+        "subtitle": {
+          "es": "LA RESTAURACIÓN DEL UNIVERSO POR EL MISTERIO PASCUAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "glorificarte siempre, Señor;"
+          },
+          {
+            "text_es": "pero más que nunca en este tiempo"
+          },
+          {
+            "text_es": "en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "text_es": "Porque con la destrucción del pecado"
+          },
+          {
+            "text_es": "son renovadas todas las cosas,"
+          },
+          {
+            "text_es": "y queda restaurada en Cristo"
+          },
+          {
+            "text_es": "la plenitud de nuestra vida."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "easter_5": {
+        "title": {
+          "es": "PREFACIO DE PASCUA V"
+        },
+        "subtitle": {
+          "es": "CRISTO, SACERDOTE Y VÍCTIMA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "glorificarte siempre, Señor;"
+          },
+          {
+            "text_es": "pero más que nunca en este tiempo"
+          },
+          {
+            "text_es": "en que Cristo, nuestra Pascua, ha sido inmolado."
+          },
+          {
+            "text_es": "Por la ofrenda de su Cuerpo realizada en la cruz,"
+          },
+          {
+            "text_es": "él llevó a su plenitud"
+          },
+          {
+            "text_es": "los sacrificios de la antigua alianza"
+          },
+          {
+            "text_es": "y al entregarse a ti, Padre, para salvarnos,"
+          },
+          {
+            "text_es": "se hizo por nosotros sacerdote, altar y víctima."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "de_la_ascension_del_senor_i": {
+        "title": {
+          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR I"
+        },
+        "subtitle": {
+          "es": "EL MISTERIO DE LA ASCENSIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno:"
+          },
+          {
+            "text_es": "Porque el Señor Jesús, Rey de la gloria,"
+          },
+          {
+            "text_es": "triunfador del pecado y de la muerte,"
+          },
+          {
+            "text_es": "ante la admiración de los ángeles"
+          },
+          {
+            "text_es": "ascendió"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "hoy"
+          },
+          {
+            "rubric_es": ")"
+          },
+          {
+            "text_es": "a lo más alto de los cielos,"
+          },
+          {
+            "text_es": "como Mediador entre Dios y los hombres,"
+          },
+          {
+            "text_es": "Juez del mundo y Señor de los espíritus celestiales."
+          },
+          {
+            "text_es": "No lo hizo para apartarse"
+          },
+          {
+            "text_es": "de la pequeñez de nuestra condición humana"
+          },
+          {
+            "text_es": "sino para que lo segamos confiadamente como miembros suyos,"
+          },
+          {
+            "text_es": "al lugar donde nos precedió él,"
+          },
+          {
+            "text_es": "cabeza y principio de todos nosotros."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "de_la_ascension_del_senor_ii": {
+        "title": {
+          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR II"
+        },
+        "subtitle": {
+          "es": "EL MISTERIO DE LA ASCENSIÓN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "Realmente es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él mismo después de su resurrección,"
+          },
+          {
+            "text_es": "se apareció visiblemente a todos sus discípulos,"
+          },
+          {
+            "text_es": "y ante sus ojos, fue elevado al cielo,"
+          },
+          {
+            "text_es": "para hacernos compartir su divinidad."
+          },
+          {
+            "text_es": "Por eso, con esta efusión del gozo pascual,"
+          },
+          {
+            "text_es": "el mundo entero está llamado a la alegría"
+          },
+          {
+            "text_es": "junto con los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "que cantan un himno a tu gloria, diciendo sin cesar:"
+          }
+        ]
+      },
+      "para_despues_de_la_ascension": {
+        "title": {
+          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN"
+        },
+        "subtitle": {
+          "es": "LA ESPERA DEL ESPÍRITU SANTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosPascua3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario"
+          },
+          {
+            "text_es": "que todas las criaturas, en el cielo y en la tierra,"
+          },
+          {
+            "text_es": "se unan en tu alabanza,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Jesucristo, tu Hijo, Señor del universo."
+          },
+          {
+            "text_es": "Él mismo,"
+          },
+          {
+            "text_es": "habiendo entrado en el santuario del cielo una vez para siempre,"
+          },
+          {
+            "text_es": "intercede ahora por nosotros"
+          },
+          {
+            "text_es": "como mediador que asegura la perpetua efusión del Espíritu."
+          },
+          {
+            "text_es": "Pastor y obispo de nuestras almas,"
+          },
+          {
+            "text_es": "nos invita a la plegaria unánime,"
+          },
+          {
+            "text_es": "a ejemplo de María y los Apóstoles,"
+          },
+          {
+            "text_es": "en la espera de un nuevo Pentecostés."
+          },
+          {
+            "text_es": "Por este misterio de santificación y de amor,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "del_bautismo": {
+        "title": {
+          "es": "PREFACIO DEL BAUTISMO"
+        },
+        "subtitle": {
+          "es": "EL BAUTISMO, INICIO DE LA VIDA NUEVA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "y exaltar tu nombre,"
+          },
+          {
+            "text_es": "Padre santo y misericordioso,"
+          },
+          {
+            "text_es": "por Jesucristo, Señor y Redentor nuestro."
+          },
+          {
+            "text_es": "Te alabamos,"
+          },
+          {
+            "text_es": "te bendecimos y te glorificamos"
+          },
+          {
+            "text_es": "por el sacramento del nuevo nacimiento."
+          },
+          {
+            "text_es": "Tú has querido que del corazón abierto de tu Hijo"
+          },
+          {
+            "text_es": "manara para nosotros el don nupcial del Bautismo,"
+          },
+          {
+            "text_es": "primera Pascua de los creyentes,"
+          },
+          {
+            "text_es": "puerta de nuestra salvación,"
+          },
+          {
+            "text_es": "inicio de la vida en Cristo,"
+          },
+          {
+            "text_es": "fuente de la humanidad nueva."
+          },
+          {
+            "text_es": "Del agua y del Espíritu"
+          },
+          {
+            "text_es": "engendras en el seno de la Iglesia, virgen y madre,"
+          },
+          {
+            "text_es": "un pueblo de sacerdotes y reyes,"
+          },
+          {
+            "text_es": "congregado de entre todas las naciones"
+          },
+          {
+            "text_es": "en la unidad y santidad de tu amor."
+          },
+          {
+            "text_es": "Por este don de tu benevolencia"
+          },
+          {
+            "text_es": "tu familia te adora"
+          },
+          {
+            "text_es": "y, unida a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "canta el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_la_confirmacion_i": {
+        "title": {
+          "es": "PREFACIO DE LA CONFIRMACIÓN I"
+        },
+        "subtitle": {
+          "es": "MARCADOS CON EL SELLO DEL ESPÍRITU"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "es bueno cantar tu gloria,"
+          },
+          {
+            "text_es": "Padre santo, fuente y origen de todo bien."
+          },
+          {
+            "text_es": "Tú, en el Bautismo,"
+          },
+          {
+            "text_es": "das nueva vida a los creyentes"
+          },
+          {
+            "text_es": "y los haces partícipes"
+          },
+          {
+            "text_es": "del misterio pascual de tu Hijo."
+          },
+          {
+            "text_es": "Tú los confirmas con el sello de tu Espíritu Santo"
+          },
+          {
+            "text_es": "mediante la imposición de manos"
+          },
+          {
+            "text_es": "y la unción real del crisma."
+          },
+          {
+            "text_es": "Tú invitas a la mesa del banquete eucarístico"
+          },
+          {
+            "text_es": "a quienes han sido renovados a imagen de Cristo,"
+          },
+          {
+            "text_es": "el ungido por el Espíritu Santo"
+          },
+          {
+            "text_es": "y enviado para anunciar la salvación,"
+          },
+          {
+            "text_es": "y los haces testigos de la fe"
+          },
+          {
+            "text_es": "en la Iglesia y en el mundo."
+          },
+          {
+            "text_es": "Por eso nosotros,"
+          },
+          {
+            "text_es": "reunidos en esta asamblea festiva"
+          },
+          {
+            "text_es": "para celebrar los prodigios de un renovado Pentecostés,"
+          },
+          {
+            "text_es": "y unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_la_confirmacion_ii": {
+        "title": {
+          "es": "PREFACIO DE LA CONFIRMACIÓN II"
+        },
+        "subtitle": {
+          "es": "LA CONFIRMACIÓN, NUEVO PENTECOSTÉS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Porque en este nuevo Pentecostés,"
+          },
+          {
+            "text_es": "los que han renacido por el bautismo"
+          },
+          {
+            "text_es": "reciben la plenitud del don del Espíritu Santo,"
+          },
+          {
+            "text_es": "para ser en la Iglesia y en el mundo"
+          },
+          {
+            "text_es": "testigos de Cristo, con la palabra y con las obras."
+          },
+          {
+            "text_es": "En cumplimiento de la promesa,"
+          },
+          {
+            "text_es": "el Espíritu del amor se derrama hoy en estos hijos tuyos,"
+          },
+          {
+            "text_es": "para introducirlos en toda la verdad"
+          },
+          {
+            "text_es": "y perfeccionar en ellos la imagen de tu Hijo único."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los santos,"
+          },
+          {
+            "text_es": "movidos por el Espíritu de unidad"
+          },
+          {
+            "text_es": "te cantamos un himno de alabanza,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "de_la_santisima_eucaristia_i": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA I"
+        },
+        "subtitle": {
+          "es": "El SACRIFICIO Y EL SACRAMENTO DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él mismo, verdadero y único Sacerdote,"
+          },
+          {
+            "text_es": "al instituir el sacrificio de la eterna alianza"
+          },
+          {
+            "text_es": "se entregó primero a sí mismo como víctima de la salvación,"
+          },
+          {
+            "text_es": "y nos mandó ofrecerlo en su memoria."
+          },
+          {
+            "text_es": "Cuando comemos su Carne, inmolada por nosotros,"
+          },
+          {
+            "text_es": "somos fortalecidos;"
+          },
+          {
+            "text_es": "cuando bebemos su Sangre, derramada por nosotros,"
+          },
+          {
+            "text_es": "somos purificados."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_la_santisima_eucaristia_ii": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA II"
+        },
+        "subtitle": {
+          "es": "LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él mismo, mientras comía con los apóstoles en la última cena,"
+          },
+          {
+            "text_es": "para perpetuar el memorial salvífico de la cruz,"
+          },
+          {
+            "text_es": "se entregó a sí mismo como Cordero inmaculado"
+          },
+          {
+            "text_es": "y sacrificio perfecto de reconciliación."
+          },
+          {
+            "text_es": "Con este venerable sacramento alimentas y santificas a tus fieles,"
+          },
+          {
+            "text_es": "para que todos los que habitamos en el mundo,"
+          },
+          {
+            "text_es": "seamos iluminados por una misma fe"
+          },
+          {
+            "text_es": "y congregados en una misma caridad."
+          },
+          {
+            "text_es": "Nos acercamos así a la mesa de este sacramento admirable"
+          },
+          {
+            "text_es": "para que la abundancia de tu gracia nos conduzca a la vida eterna."
+          },
+          {
+            "text_es": "Por eso, todas las criaturas del cielo y de la tierra"
+          },
+          {
+            "text_es": "te adoran entonando un cántico nuevo,"
+          },
+          {
+            "text_es": "y también nosotros, con los ángeles,"
+          },
+          {
+            "text_es": "te alabamos cantando sin cesar:"
+          }
+        ]
+      },
+      "de_la_santisima_eucaristia_iii": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA III"
+        },
+        "subtitle": {
+          "es": "LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "es bueno bendecir tu nombre,"
+          },
+          {
+            "text_es": "Padre santo, Dios de misericordia y de paz."
+          },
+          {
+            "text_es": "Porque has querido que tu Hijo"
+          },
+          {
+            "text_es": "obediente hasta la muerte de cruz,"
+          },
+          {
+            "text_es": "nos precediera en el camino del retorno a ti,"
+          },
+          {
+            "text_es": "término de toda esperanza humana."
+          },
+          {
+            "text_es": "En la Eucaristía, testamento de su amor,"
+          },
+          {
+            "text_es": "él se hace comida y bebida espiritual,"
+          },
+          {
+            "text_es": "para alimentarnos en nuestro viaje"
+          },
+          {
+            "text_es": "hacia la Pascua eterna."
+          },
+          {
+            "text_es": "Con este anticipo de la resurrección futura,"
+          },
+          {
+            "text_es": "en la esperanza, participamos ya"
+          },
+          {
+            "text_es": "de la mesa gloriosa de tu reino"
+          },
+          {
+            "text_es": "y, unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "proclamamos el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_la_penitencia": {
+        "title": {
+          "es": "PREFACIO DE LA PENITENCIA"
+        },
+        "subtitle": {
+          "es": "EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo alabarte y darte gracias,"
+          },
+          {
+            "text_es": "Padre santo, Dios todopoderoso,"
+          },
+          {
+            "text_es": "por tus beneficios,"
+          },
+          {
+            "text_es": "y sobre todo por la gracia del perdón."
+          },
+          {
+            "text_es": "Al hombre, náufrago a causa del pecado,"
+          },
+          {
+            "text_es": "con el sacramento de la reconciliación"
+          },
+          {
+            "text_es": "le abres el puerto de la misericordia y de la paz,"
+          },
+          {
+            "text_es": "en Cristo muerto y resucitado."
+          },
+          {
+            "text_es": "Con el poder de tu Espíritu,"
+          },
+          {
+            "text_es": "has dispuesto a favor de la Iglesia,"
+          },
+          {
+            "text_es": "santa y al mismo tiempo necesitada de penitencia,"
+          },
+          {
+            "text_es": "una segunda tabla de salvación después del Bautismo,"
+          },
+          {
+            "text_es": "para renovarla incesantemente"
+          },
+          {
+            "text_es": "y congregarla en el banquete festivo de tu amor."
+          },
+          {
+            "text_es": "Por este don de tu benevolencia"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos, a una voz, el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_los_enfermos": {
+        "title": {
+          "es": "PREFACIO DE LOS ENFERMOS"
+        },
+        "subtitle": {
+          "es": "61d."
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "Dios de misericordia,"
+          },
+          {
+            "text_es": "Señor todopoderoso,"
+          },
+          {
+            "text_es": "por Jesucristo, Señor y Redentor nuestro."
+          },
+          {
+            "text_es": "Porque has querido que tu único Hijo,"
+          },
+          {
+            "text_es": "autor de la vida,"
+          },
+          {
+            "text_es": "médico de los cuerpos y de las almas,"
+          },
+          {
+            "text_es": "tomase sobre sí nuestras debilidades,"
+          },
+          {
+            "text_es": "para socorrernos en los momentos de prueba"
+          },
+          {
+            "text_es": "y santificarnos en la experiencia del dolor."
+          },
+          {
+            "text_es": "En el signo sacramental de la Unción,"
+          },
+          {
+            "text_es": "por la oración de la Iglesia,"
+          },
+          {
+            "text_es": "nos libras del pecado,"
+          },
+          {
+            "text_es": "nos confortas con la gracia del Espíritu Santo"
+          },
+          {
+            "text_es": "y no haces partícipes de la victoria pascual."
+          },
+          {
+            "text_es": "Por este signo de tu benevolencia,"
+          },
+          {
+            "text_es": "unidos a los ángeles ya a los santos,"
+          },
+          {
+            "text_es": "cantamos, a una voz, el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_las_ordenaciones_i": {
+        "title": {
+          "es": "PREFACIO DE LAS ORDENACIONES I"
+        },
+        "subtitle": {
+          "es": "EL SACERDOCIO DE CRISTO Y EL MINISTERIO DE LOS SACERDOTES"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú constituiste a tu único Hijo Pontífice de la Alianza nueva y eterna"
+          },
+          {
+            "text_es": "por la unción del Espíritu Santo,"
+          },
+          {
+            "text_es": "y determinaste, en tu designio salvífico,"
+          },
+          {
+            "text_es": "que su único sacerdocio se perpetuara en la Iglesia."
+          },
+          {
+            "text_es": "Él no sólo enriquece con el sacerdocio real"
+          },
+          {
+            "text_es": "al pueblo de los bautizados,"
+          },
+          {
+            "text_es": "sino también, con amor fraterno, elige a algunos hombres"
+          },
+          {
+            "text_es": "para hacerlos participar de su ministerio"
+          },
+          {
+            "text_es": "mediante la imposición de las manos."
+          },
+          {
+            "text_es": "Tus sacerdotes, Padre, renuevan en nombre de Cristo"
+          },
+          {
+            "text_es": "el sacerdocio de la redención humana,"
+          },
+          {
+            "text_es": "preparan a tus hijos el banquete pascual,"
+          },
+          {
+            "text_es": "guían en la caridad a tu pueblo santo,"
+          },
+          {
+            "text_es": "lo alimentan con tu palabra y lo fortalecen con tus sacramentos."
+          },
+          {
+            "text_es": "Ellos, al entregar su vida por ti, Padre,"
+          },
+          {
+            "text_es": "y por la salvación de los hermanos,"
+          },
+          {
+            "text_es": "deben configurarse a Cristo"
+          },
+          {
+            "text_es": "y dar testimonio constante de fidelidad y de amor."
+          },
+          {
+            "text_es": "Por eso, Padre,"
+          },
+          {
+            "text_es": "con todos los ángeles y santos"
+          },
+          {
+            "text_es": "te alabamos, cantando con alegría:"
+          }
+        ]
+      },
+      "de_las_ordenaciones_ii": {
+        "title": {
+          "es": "PREFACIO DE LAS ORDENACIONES II"
+        },
+        "subtitle": {
+          "es": "CRISTO, ORIGEN DE TODO MINISTERIO ECLESIAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "alabarte y darte gracias,"
+          },
+          {
+            "text_es": "Padre santo, Dios omnipotente y misericordioso,"
+          },
+          {
+            "text_es": "de quien proviene toda paternidad"
+          },
+          {
+            "text_es": "en la comunión del Espíritu."
+          },
+          {
+            "text_es": "En tu Hijo Jesucristo, sacerdote eterno,"
+          },
+          {
+            "text_es": "siervo obediente,"
+          },
+          {
+            "text_es": "pastor de los pastores,"
+          },
+          {
+            "text_es": "has puesto el origen y la fuente de todo ministerio,"
+          },
+          {
+            "text_es": "según la viva tradición apostólica"
+          },
+          {
+            "text_es": "conservada en tu pueblo que peregrina en la historia."
+          },
+          {
+            "text_es": "Tú eliges dispensadores de los santos misterios"
+          },
+          {
+            "text_es": "con variedad de dones y carismas,"
+          },
+          {
+            "text_es": "para que en todas las naciones de la tierra"
+          },
+          {
+            "text_es": "se ofrezca el sacrificio perfecto"
+          },
+          {
+            "text_es": "y, con la Palabra y los sacramentos"
+          },
+          {
+            "text_es": "se edifique la Iglesia,"
+          },
+          {
+            "text_es": "comunidad de la nueva alianza,"
+          },
+          {
+            "text_es": "templo de tu gloria."
+          },
+          {
+            "text_es": "Por este misterios de salvación,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos con gozo el himno de tu alabanza:"
+          }
+        ]
+      },
+      "del_matrimonio_i": {
+        "title": {
+          "es": "PREFACIO DEL MATRIMONIO I"
+        },
+        "subtitle": {
+          "es": "LA DIGNIDAD DE LA ALIANZA NUPCIAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú has sellado la alianza matrimonial"
+          },
+          {
+            "text_es": "con el vínculo indisoluble de la concordia y de la paz,"
+          },
+          {
+            "text_es": "para que creciera el número de los hijos de Dios"
+          },
+          {
+            "text_es": "por la honesta fecundidad de los esposos."
+          },
+          {
+            "text_es": "Y así, por medio de tu providencia y de tu gracia,"
+          },
+          {
+            "text_es": "que se manifiestan de manera tan inefable,"
+          },
+          {
+            "text_es": "los hijos nacidos para poblar la tierra"
+          },
+          {
+            "text_es": "renacen espiritualmente para el crecimiento de la Iglesia,"
+          },
+          {
+            "text_es": "por Jesucristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y todos los santos,"
+          },
+          {
+            "text_es": "te cantamos el himno de alabanza, diciendo sin cesar:"
+          }
+        ]
+      },
+      "del_matrimonio_ii": {
+        "title": {
+          "es": "PREFACIO DEL MATRIMONIO II"
+        },
+        "subtitle": {
+          "es": "EL GRAN SACRAMENTO DEL MATRIMONIO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Tú has establecido una nueva alianza con tu pueblo,"
+          },
+          {
+            "text_es": "para hacer partícipes de la naturaleza divina"
+          },
+          {
+            "text_es": "y coherederos de tu gloria"
+          },
+          {
+            "text_es": "a quienes redimiste por la muerte y la resurrección de Jesucristo."
+          },
+          {
+            "text_es": "Tú has querido que la abundancia de tu gracia"
+          },
+          {
+            "text_es": "se manifestara en la unión del varón y la mujer,"
+          },
+          {
+            "text_es": "de manera que la celebración de este sacramento"
+          },
+          {
+            "text_es": "nos recuerde el designio inefable de tu amor."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y todos los santos,"
+          },
+          {
+            "text_es": "te alabamos diciendo sin cesar:"
+          }
+        ]
+      },
+      "del_matrimonio_iii": {
+        "title": {
+          "es": "PREFACIO DEL MATRIMONIO III"
+        },
+        "subtitle": {
+          "es": "EL MATRIMONIO, SIGNO DEL AMOR DIVINO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Por tu bondad creaste al hombre"
+          },
+          {
+            "text_es": "y le diste una dignidad tan grande"
+          },
+          {
+            "text_es": "que en la unión del varón y la mujer"
+          },
+          {
+            "text_es": "has dejado la imagen verdadera de tu amor;"
+          },
+          {
+            "text_es": "y, al que por amor has creado,"
+          },
+          {
+            "text_es": "no dejas de llamarlo a vivir en la caridad"
+          },
+          {
+            "text_es": "para hacerlo partícipe de tu amor eterno."
+          },
+          {
+            "text_es": "Así, el sacramento santo del matrimonio,"
+          },
+          {
+            "text_es": "convertido en signo de tu caridad,"
+          },
+          {
+            "text_es": "consagra el amor humano por medio de Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "A quien alaban los ángeles y todos los santos,"
+          },
+          {
+            "text_es": "cantando sin cesar un himno de alabanza:"
+          }
+        ]
+      },
+      "de_la_santisima_virgen_maria_i": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA I"
+        },
+        "subtitle": {
+          "es": "LA MATERNIDAD DE SANTA MARÍA VIRGEN"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Y alabar, bendecir y proclamar tu gloria"
+          },
+          {
+            "text_es": "en la"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "***"
+          },
+          {
+            "rubric_es": ")"
+          },
+          {
+            "text_es": "de santa María, siempre virgen."
+          },
+          {
+            "text_es": "Porque ella concibió a tu único Hijo"
+          },
+          {
+            "text_es": "por obra del Espíritu Santo,"
+          },
+          {
+            "text_es": "y, sin perder la gloria de su virginidad,"
+          },
+          {
+            "text_es": "derramó sobre el mundo la luz eterna,"
+          },
+          {
+            "text_es": "Jesucristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, los ángeles y los arcángeles"
+          },
+          {
+            "text_es": "y todos los coros celestiales"
+          },
+          {
+            "text_es": "celebran tu gloria unidos en común alegría."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "cantando humildemente tu alabanza:"
+          }
+        ]
+      },
+      "de_la_santisima_virgen_maria_ii": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA II"
+        },
+        "subtitle": {
+          "es": "LA IGLESIA ALABA A DIOS CON LAS PALABRAS DE MARÍA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "reconocer tu grandeza en la perfección de los santos,"
+          },
+          {
+            "text_es": "y proclamar especialmente tu inmensa bondad"
+          },
+          {
+            "text_es": "al conmemorar a la santísima virgen María."
+          },
+          {
+            "text_es": "porque tú realizaste grandes cosas en el mundo"
+          },
+          {
+            "text_es": "y diste pruebas de tu infinita misericordia"
+          },
+          {
+            "text_es": "cuando miraste la pequeñez de tu servidora,"
+          },
+          {
+            "text_es": "y por medio de ella,"
+          },
+          {
+            "text_es": "nos diste al autor de nuestra salvación,"
+          },
+          {
+            "text_es": "Jesucristo, tu Hijo y nuestro Señor."
+          },
+          {
+            "text_es": "Por él, adoran tu grandeza"
+          },
+          {
+            "text_es": "todos los ángeles que se alegran en tu presencia."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "cantando alegremente:"
+          }
+        ]
+      },
+      "de_la_santisima_virgen_maria_iii": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA III"
+        },
+        "subtitle": {
+          "es": "MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "es bueno cantar tu gloria, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Te alabamos y te bendecimos"
+          },
+          {
+            "text_es": "por Jesucristo, tu Hijo,"
+          },
+          {
+            "text_es": "en esta fiesta"
+          },
+          {
+            "rubric_es": "("
+          },
+          {
+            "text_es": "memoria"
+          },
+          {
+            "rubric_es": ")"
+          },
+          {
+            "text_es": "de la bienaventurada Virgen María."
+          },
+          {
+            "text_es": "Ella, como humilde servidora, escuchó tu palabra"
+          },
+          {
+            "text_es": "y la conservó en su corazón;"
+          },
+          {
+            "text_es": "admirablemente unida al misterio de la redención,"
+          },
+          {
+            "text_es": "perseveró con los apóstoles en la plegaria,"
+          },
+          {
+            "text_es": "mientras esperaban al Espíritu Santo,"
+          },
+          {
+            "text_es": "y ahora brilla en nuestro camino"
+          },
+          {
+            "text_es": "como signo de consuelo y de firme esperanza."
+          },
+          {
+            "text_es": "Por este don de tu benevolencia,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "te entonamos nuestro canto"
+          },
+          {
+            "text_es": "y proclamamos tu alabanza:"
+          }
+        ]
+      },
+      "de_la_santisima_virgen_maria_iv": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA IV"
+        },
+        "subtitle": {
+          "es": "MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo darte gracias,"
+          },
+          {
+            "text_es": "Padre santo,"
+          },
+          {
+            "text_es": "fuente de la vida y de la alegría."
+          },
+          {
+            "text_es": "Porque en esta etapa final de la historia"
+          },
+          {
+            "text_es": "has querido revelarnos"
+          },
+          {
+            "text_es": "el misterio escondido desde antiguo,"
+          },
+          {
+            "text_es": "para que así el mundo entero"
+          },
+          {
+            "text_es": "retorne a la vida y recobre la esperanza."
+          },
+          {
+            "text_es": "En Cristo, nuevo Adán,"
+          },
+          {
+            "text_es": "y en María, nueva Eva,"
+          },
+          {
+            "text_es": "se revela el misterio de tu Iglesia,"
+          },
+          {
+            "text_es": "como primicia de la humanidad redimida."
+          },
+          {
+            "text_es": "Por este inefable don"
+          },
+          {
+            "text_es": "la creación entera,"
+          },
+          {
+            "text_es": "con la fuerza del Espíritu Santo,"
+          },
+          {
+            "text_es": "emprende de nuevo su camino hacia la Pascua eterna."
+          },
+          {
+            "text_es": "Por eso nosotros,"
+          },
+          {
+            "text_es": "unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "cantamos a una voz"
+          },
+          {
+            "text_es": "el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_la_santisima_virgen_maria_v": {
+        "title": {
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA V"
+        },
+        "subtitle": {
+          "es": "MARÍA, MODELO Y MADRE DE LA IGLESIA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "y glorificarte como es debido en esta celebración de la Virgen María."
+          },
+          {
+            "text_es": "Ella, al aceptar tu Palabra con su corazón inmaculado,"
+          },
+          {
+            "text_es": "mereció concebirla en su seno virginal"
+          },
+          {
+            "text_es": "y dar a luz a su propio Creador preparó en nacimiento de la Iglesia."
+          },
+          {
+            "text_es": "Ella, aceptando junto a la cruz el testamento de su amor divino,"
+          },
+          {
+            "text_es": "adoptó como hijos a todos los hombres"
+          },
+          {
+            "text_es": "nacidos a la vida sobrenatural por la muerte de Cristo."
+          },
+          {
+            "text_es": "Ella, unida a los Apóstoles en espera del Espíritu Santo prometido,"
+          },
+          {
+            "text_es": "asoció su oración a la de los discípulos"
+          },
+          {
+            "text_es": "y se convirtió en modelo de la Iglesia orante."
+          },
+          {
+            "text_es": "Elevada a la gloria de los cielos,"
+          },
+          {
+            "text_es": "acompaña a la Iglesia con amor maternal,"
+          },
+          {
+            "text_es": "y con bondad protege sus pasos hacia la partida del cielo,"
+          },
+          {
+            "text_es": "hasta que llegue el día glorioso del Señor."
+          },
+          {
+            "text_es": "Por eso, con todos los ángeles y santos"
+          },
+          {
+            "text_es": "te alabamos, cantando sin cesar:"
+          }
+        ]
+      },
+      "apostles_1": {
+        "title": {
+          "es": "PREFACIO DE LOS APÓSTOLES I"
+        },
+        "subtitle": {
+          "es": "LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú nunca abandonas a tu rebaño, Pastor eterno,"
+          },
+          {
+            "text_es": "sino que lo proteges y conservas siempre"
+          },
+          {
+            "text_es": "por medio de los santos Apóstoles,"
+          },
+          {
+            "text_es": "y quieres que sea conducido por aquellos mismos pastores"
+          },
+          {
+            "text_es": "a quienes tu Hijo confió la misión de continuar su obra."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "apostles_2": {
+        "title": {
+          "es": "PREFACIO DE LOS APÓSTOLES II"
+        },
+        "subtitle": {
+          "es": "EL FUNDAMENTO Y EL TESTIMONIO APOSTÓLICO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Porque quisiste edificar tu Iglesia"
+          },
+          {
+            "text_es": "sobre el fundamento de los Apóstoles,"
+          },
+          {
+            "text_es": "para que ella permaneciera siempre en la tierra"
+          },
+          {
+            "text_es": "como el signo de tu santidad"
+          },
+          {
+            "text_es": "y anunciara a todos los hombres"
+          },
+          {
+            "text_es": "el camino que nos lleva al cielo."
+          },
+          {
+            "text_es": "Por eso, con los ángeles,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_los_santos_i": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS I"
+        },
+        "subtitle": {
+          "es": "LA GLORIA DE LOS SANTOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú eres celebrado en la asamblea de los santos"
+          },
+          {
+            "text_es": "y al coronar sus méritos coronas tus propios dones;"
+          },
+          {
+            "text_es": "nos das el ejemplo de su vida,"
+          },
+          {
+            "text_es": "la comunión en la unidad y la ayuda de su intercesión"
+          },
+          {
+            "text_es": "para que, animados por su presencia,"
+          },
+          {
+            "text_es": "lleguemos victoriosos a la eternidad deseada,"
+          },
+          {
+            "text_es": "y recibamos con ellos la corona incorruptible de la gloria,"
+          },
+          {
+            "text_es": "por Jesucristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y arcángeles,"
+          },
+          {
+            "text_es": "y unidos con todos los santos"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "de_los_santos_ii": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS II"
+        },
+        "subtitle": {
+          "es": "LA ACCIÓN DE LOS SANTOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Con el testimonio admirable de tus santos,"
+          },
+          {
+            "text_es": "fecundas a tu Iglesia con nueva vitalidad"
+          },
+          {
+            "text_es": "y nos das pruebas evidentes de tu amor."
+          },
+          {
+            "text_es": "El ejemplo de los santos nos anima"
+          },
+          {
+            "text_es": "y su intercesión nos acompaña siempre"
+          },
+          {
+            "text_es": "para alcanzar el misterio de la salvación."
+          },
+          {
+            "text_es": "Por eso, nosotros, llenos de alegría,"
+          },
+          {
+            "text_es": "te aclamamos con los ángeles y los santos:"
+          }
+        ]
+      },
+      "martyrs_1": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS MÁRTIRES I"
+        },
+        "subtitle": {
+          "es": "EL MARTIRIO COMO SIGNO Y EJEMPLO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque la sangre del mártir san"
+          },
+          {
+            "rubric_es": "N."
+          },
+          {
+            "text_es": "derramada, como la de Cristo,"
+          },
+          {
+            "text_es": "para confesar tu nombre,"
+          },
+          {
+            "text_es": "manifiesta la acción admirable"
+          },
+          {
+            "text_es": "con que tú robusteces nuestra debilidad"
+          },
+          {
+            "text_es": "y demuestras que a partir de nuestra fragilidad"
+          },
+          {
+            "text_es": "podemos llegar a ser testigos de Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles,"
+          },
+          {
+            "text_es": "te aclamamos en la tierra,"
+          },
+          {
+            "text_es": "cantando sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "martyrs_2": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS MÁRTIRES II"
+        },
+        "subtitle": {
+          "es": "LAS MARAVILLAS DE DIOS EN LA VICTORIA DE LOS MÁRTIRES"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo, Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú eres glorificado por la alabanza de tus santos"
+          },
+          {
+            "text_es": "y en su martirio se manifiestan las maravillas de tu poder,"
+          },
+          {
+            "text_es": "porque en tu bondad concedes ardor a la fe,"
+          },
+          {
+            "text_es": "inspiras firmeza en la perseverancia"
+          },
+          {
+            "text_es": "y das la victoria en el combate,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles que te adoran,"
+          },
+          {
+            "text_es": "cantamos un cántico nuevo"
+          },
+          {
+            "text_es": "y te alabamos, proclamando sin cesar:"
+          }
+        ]
+      },
+      "de_los_santos_pastores": {
+        "title": {
+          "es": "PREFACIO DE LOS SANTOS PASTORES"
+        },
+        "subtitle": {
+          "es": "LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Porque nos concedes la alegría de celebrar hoy la fiesta de san"
+          },
+          {
+            "rubric_es": "N."
+          },
+          {
+            "text_es": ","
+          },
+          {
+            "text_es": "fortaleciendo a tu Iglesia con el ejemplo de su vida,"
+          },
+          {
+            "text_es": "la enseñanza de su doctrina"
+          },
+          {
+            "text_es": "y la ayuda de su intercesión."
+          },
+          {
+            "text_es": "Por eso, unidos a los ángeles y a los santos,"
+          },
+          {
+            "text_es": "te alabamos llenos de alegría:"
+          }
+        ]
+      },
+      "de_santas_virgenes_y_santos_religiosos": {
+        "title": {
+          "es": "PREFACIO DE SANTAS VÍRGENES Y SANTOS RELIGIOSOS"
+        },
+        "subtitle": {
+          "es": "EL SIGNO DE LA VIDA CONSAGRADA A DIOS"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosVarios3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Al recordar a los santos que se consagraron a Cristo"
+          },
+          {
+            "text_es": "por el Reino de los cielos,"
+          },
+          {
+            "text_es": "celebramos tu admirable providencia."
+          },
+          {
+            "text_es": "Por ella la humanidad recobra la santidad primera"
+          },
+          {
+            "text_es": "y experimenta anticipadamente"
+          },
+          {
+            "text_es": "los bienes que espera recibir en el cielo."
+          },
+          {
+            "text_es": "Por eso, con todos los ángeles y santos"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "dead_1": {
+        "title": {
+          "es": "PREFACIO DE DIFUNTOS I"
+        },
+        "subtitle": {
+          "es": "LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDifuntos3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "En él brilla la esperanza de nuestra feliz resurrección;"
+          },
+          {
+            "text_es": "y así, a quienes la certeza de morir nos entristece,"
+          },
+          {
+            "text_es": "nos consuela la promesa de la futura inmortalidad."
+          },
+          {
+            "text_es": "Porque para los que creemos en ti,"
+          },
+          {
+            "text_es": "la vida no termina, sino que se transforma,"
+          },
+          {
+            "text_es": "y al deshacerse esta morada terrenal,"
+          },
+          {
+            "text_es": "adquirimos una mansión eterna en el cielo."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y arcángeles,"
+          },
+          {
+            "text_es": "y con todos los coros celestiales"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "dead_2": {
+        "title": {
+          "es": "PREFACIO DE DIFUNTOS II"
+        },
+        "subtitle": {
+          "es": "CRISTO HA MUERTO PARA DARNOS LA VIDA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDifuntos3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Porque él quiso morir por nosotros"
+          },
+          {
+            "text_es": "para librarnos de la muerte eterna;"
+          },
+          {
+            "text_es": "más aún, solo él entregó su vida por todos,"
+          },
+          {
+            "text_es": "para que viviéramos eternamente para ti."
+          },
+          {
+            "text_es": "Por eso, unidos a los ángeles,"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "dead_3": {
+        "title": {
+          "es": "PREFACIO DE DIFUNTOS III"
+        },
+        "subtitle": {
+          "es": "CRISTO, SALVACIÓN Y VIDA"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDifuntos3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "por Cristo, Señor nuestro."
+          },
+          {
+            "text_es": "Él es la salvación del mundo,"
+          },
+          {
+            "text_es": "la Vida de los hombres"
+          },
+          {
+            "text_es": "y la Resurrección de los muertos."
+          },
+          {
+            "text_es": "Por eso, los coros de los ángeles adoran tu grandeza"
+          },
+          {
+            "text_es": "y te aclaman eternamente."
+          },
+          {
+            "text_es": "Permítenos asociarnos a sus voces,"
+          },
+          {
+            "text_es": "y cantar tus alabanzas diciendo:"
+          }
+        ]
+      },
+      "dead_4": {
+        "title": {
+          "es": "PREFACIO DE DIFUNTOS IV"
+        },
+        "subtitle": {
+          "es": "LA VIDA TERRENA Y LA GLORIA CELESTIAL"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDifuntos3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Por tu poder fuimos creados,"
+          },
+          {
+            "text_es": "tu providencia nos gobierna"
+          },
+          {
+            "text_es": "y a causa del pecado volvemos a la tierra de donde salimos;"
+          },
+          {
+            "text_es": "pero en tu bondad, los redimidos por la muerte de tu Hijo"
+          },
+          {
+            "text_es": "tenemos parte en su resurrección gloriosa."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los santos,"
+          },
+          {
+            "text_es": "cantamos sin cesar el himno de tu gloria:"
+          }
+        ]
+      },
+      "dead_5": {
+        "title": {
+          "es": "PREFACIO DE DIFUNTOS V"
+        },
+        "subtitle": {
+          "es": "NUESTRA RESURRECCIÓN ES FRUTO DE LA VICTORIA DE CRISTO"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Prefacios3/PrefaciosDifuntos3.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno."
+          },
+          {
+            "text_es": "Tú llamas a la vida eterna con Cristo"
+          },
+          {
+            "text_es": "a los que fueron redimidos por él,"
+          },
+          {
+            "text_es": "y otorgaste el don de tu gracia"
+          },
+          {
+            "text_es": "a los que había muerto a causa del pecado."
+          },
+          {
+            "text_es": "Por eso, unidos a los coros de los ángeles,"
+          },
+          {
+            "text_es": "cantamos un himno a tu gloria,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "particular_ar_lujan": {
+        "title": {
+          "es": "Prefacio de Nuestra Señora de Luján"
+        },
+        "subtitle": {
+          "es": "Santa María de Luján, Madre del pueblo argentino"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "Dios todopoderoso y eterno,"
+          },
+          {
+            "text_es": "cantar siempre en tu honor himnos de alabanza"
+          },
+          {
+            "text_es": "por el amor sin límites"
+          },
+          {
+            "text_es": "que nos manifiestas en María, Virgen y Madre."
+          },
+          {
+            "text_es": "Una humilde imagen de su limpia y pura Concepción"
+          },
+          {
+            "text_es": "se quedó milagrosamente junto al río Luján,"
+          },
+          {
+            "text_es": "como signo de maternal protección"
+          },
+          {
+            "text_es": "sobre tu pueblo que peregrina en Argentina,"
+          },
+          {
+            "text_es": "para que, llevados de su mano,"
+          },
+          {
+            "text_es": "podamos encontrarnos junto al Cordero inocente"
+          },
+          {
+            "text_es": "que quita el pecado del mundo,"
+          },
+          {
+            "text_es": "Jesucristo, tu Hijo, nuestro único Salvador."
+          },
+          {
+            "text_es": "A él lo alaban el cielo y la tierra,"
+          },
+          {
+            "text_es": "los ángeles y los santos, diciendo sin cesar:"
+          }
+        ]
+      },
+      "particular_uy_treinta_y_tres_1": {
+        "title": {
+          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres I"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
+        },
+        "content": [
+          {
+            "text_es": "Realmente es justo y necesario,"
+          },
+          {
+            "text_es": "alabarte y bendecirte siempre,"
+          },
+          {
+            "text_es": "Padre todopoderoso y eterno."
+          },
+          {
+            "text_es": "Porque en la historia de tu providencia"
+          },
+          {
+            "text_es": "quisiste que María,"
+          },
+          {
+            "text_es": "Virgen de los Treinta y Tres,"
+          },
+          {
+            "text_es": "fuera invocada por los orientales para liberar a la Patria;"
+          },
+          {
+            "text_es": "ya que Ella, por los méritos de Cristo,"
+          },
+          {
+            "text_es": "fue asociada íntimamente a la obra redentora"
+          },
+          {
+            "text_es": "y es nuestro modelo de justicia y santidad."
+          },
+          {
+            "text_es": "Por eso,"
+          },
+          {
+            "text_es": "con todo el pueblo cristiano de nuestra Patria,"
+          },
+          {
+            "text_es": "unidos a María, nuestra Madre,"
+          },
+          {
+            "text_es": "cantamos con alegría."
+          }
+        ]
+      },
+      "particular_uy_treinta_y_tres_2": {
+        "title": {
+          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres II"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,"
+          },
+          {
+            "text_es": "es nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias, siempre y en todo lugar,"
+          },
+          {
+            "text_es": "Señor, Padre santo,"
+          },
+          {
+            "text_es": "Dios todopoderosos y eterno,"
+          },
+          {
+            "text_es": "por todas las grandes maravillas de amor y de gracia"
+          },
+          {
+            "text_es": "que has realizado misericordiosamente"
+          },
+          {
+            "text_es": "en la Virgen, Madre de tu Hijo."
+          },
+          {
+            "text_es": "Ella, concebida sin pecado,"
+          },
+          {
+            "text_es": "no fue contaminada por la corrupción del sepulcro;"
+          },
+          {
+            "text_es": "pues, siendo intacta en su virginidad,"
+          },
+          {
+            "text_es": "fue constituida tálamo precioso"
+          },
+          {
+            "text_es": "del cual salió Cristo,"
+          },
+          {
+            "text_es": "luz de las naciones y esposo de la Iglesia:"
+          },
+          {
+            "text_es": "a Ella los fieles la ensalzan"
+          },
+          {
+            "text_es": "como estrella del alba,"
+          },
+          {
+            "text_es": "y la proclaman Capitana y Guía"
+          },
+          {
+            "text_es": "por las sendas de la paz y del amor."
+          },
+          {
+            "text_es": "Por eso,"
+          },
+          {
+            "text_es": "como los ángeles te cantan en el cielo,"
+          },
+          {
+            "text_es": "así nosotros en la tierra te aclamamos,"
+          },
+          {
+            "text_es": "diciendo sin cesar:"
+          }
+        ]
+      },
+      "eucharistic_2": {
+        "title": {
+          "es": "Prefacio de la plegaria eucarística II"
+        },
+        "source": {
+          "url": "https://curas.com.ar/Misal3/Plegarias3/Plegaria2.htm"
+        },
+        "content": [
+          {
+            "text_es": "En verdad es justo y necesario,",
+            "sp_es": "CP"
+          },
+          {
+            "text_es": "en nuestro deber y salvación"
+          },
+          {
+            "text_es": "darte gracias, Padre santo,"
+          },
+          {
+            "text_es": "siempre y en todo lugar,"
+          },
+          {
+            "text_es": "por Jesucristo, tu Hijo amado."
+          },
+          {
+            "text_es": "Por él, que es tu Palabra, hiciste todas las cosas;"
+          },
+          {
+            "text_es": "tú nos lo enviaste"
+          },
+          {
+            "text_es": "para que, hecho hombre por obra del Espíritu Santo"
+          },
+          {
+            "text_es": "y nacido de María, la Virgen,"
+          },
+          {
+            "text_es": "fuera nuestro Salvador y Redentor."
+          },
+          {
+            "text_es": "Él, en cumplimiento de tu voluntad,"
+          },
+          {
+            "text_es": "para destruir la muerte y manifestar la resurrección,"
+          },
+          {
+            "text_es": "extendió sus brazos en la cruz,"
+          },
+          {
+            "text_es": "y así adquirió para ti un pueblo santo."
+          },
+          {
+            "text_es": "Por eso, con los ángeles y los santos,"
+          },
+          {
+            "text_es": "proclamamos tu gloria, diciendo:"
+          }
+        ]
+      }
+    },
+    "forms": {
+      "1": [
+        {
+          "rubric_es": "El sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Padre misericordioso,",
+          "sp_es": "CP"
+        },
+        {
+          "text_es": "te pedimos humildemente"
+        },
+        {
+          "text_es": "por Jesucristo, tu Hijo, nuestro Señor,"
+        },
+        {
+          "rubric_es": "Junta las manos y dice:"
+        },
+        {
+          "text_es": "que aceptes"
+        },
+        {
+          "rubric_es": "Traza el signo de la cruz sobre el pan y el vino conjuntamente, diciendo:"
+        },
+        {
+          "text_es": "y bendigas ✠"
+        },
+        {
+          "text_es": "estos dones,"
+        },
+        {
+          "text_es": "este sacrificio santo y puro que te ofrecemos,"
+        },
+        {
+          "rubric_es": "Con las manos extendidas, prosigue:"
+        },
+        {
+          "text_es": "ante todo, por tu Iglesia santa y católica,"
+        },
+        {
+          "text_es": "para que le concedas la paz, la protejas,"
+        },
+        {
+          "text_es": "la congregues en la unidad"
+        },
+        {
+          "text_es": "y la gobiernes en el mundo entero,"
+        },
+        {
+          "text_es": "con tu servidor el Papa"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "con nuestro Obispo"
+        },
+        {
+          "rubric_es": "N., (Aquí se puede hacer mención del Obispo Coadjutor o Auxiliar, de acuerdo con la Ordenación general del Misal Romano, n. 149)."
+        },
+        {
+          "text_es": "y todos los demás Obispos que, fieles a la verdad,"
+        },
+        {
+          "text_es": "promueven la fe católica y apostólica."
+        },
+        {
+          "rubric_es": "El Obispo, cuando celebra en su diócesis, dice:"
+        },
+        {
+          "text_es": "conmigo, indigno siervo tuyo,"
+        },
+        {
+          "rubric_es": "Cuando celebra un Obispo que no es el ordinario diocesano, dice:"
+        },
+        {
+          "text_es": "con mi hermano"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", Obispo de esta iglesia de"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "conmigo, indigno siervo tuyo,"
+        },
+        {
+          "rubric_es": "Conmemoración de los vivos."
+        },
+        {
+          "rubric_es": "Cl"
+        },
+        {
+          "text_es": "Acuérdate, Señor,"
+        },
+        {
+          "text_es": "de tus hijos"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "rubric_es": "Junta las manos y ora unos momentos por quienes tiene la intención de orar."
+        },
+        {
+          "rubric_es": "Después, con las manos extendidas prosigue:"
+        },
+        {
+          "text_es": "y de todos los aquí reunidos,"
+        },
+        {
+          "text_es": "cuya fe y entrega bien conoces;"
+        },
+        {
+          "text_es": "por ellos y todos los suyos,"
+        },
+        {
+          "text_es": "por el perdón de sus pecados"
+        },
+        {
+          "text_es": "y la salvación que esperan,"
+        },
+        {
+          "text_es": "te ofrecemos, y ellos mismos te ofrecen,"
+        },
+        {
+          "text_es": "este sacrificio de alabanza,"
+        },
+        {
+          "text_es": "a ti, eterno Dios, vivo y verdadero."
+        },
+        {
+          "rubric_es": "Conmemoración de los santos."
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia,",
+          "sp_es": "C2"
+        },
+        {
+          "text_es": "veneramos la memoria,"
+        },
+        {
+          "text_es": "ante todo, de la gloriosa siempre Virgen María,"
+        },
+        {
+          "text_es": "Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "text_es": "la de su esposo, San José;"
+        },
+        {
+          "text_es": "la de los santos apóstoles y mártires"
+        },
+        {
+          "text_es": "Pedro y Pablo, Andrés,"
+        },
+        {
+          "rubric_es": "["
+        },
+        {
+          "text_es": "Santiago y Juan,"
+        },
+        {
+          "text_es": "Tomás, Santiago, Felipe,"
+        },
+        {
+          "text_es": "Bartolomé, Mateo,"
+        },
+        {
+          "text_es": "Simón y Tadeo;"
+        },
+        {
+          "text_es": "Lino, Cleto, Clemente, Sixto,"
+        },
+        {
+          "text_es": "Cornelio, Cipriano,"
+        },
+        {
+          "text_es": "Lorenzo, Crisógono,"
+        },
+        {
+          "text_es": "Juan y Pablo,"
+        },
+        {
+          "text_es": "Cosme y Damián,"
+        },
+        {
+          "rubric_es": "]"
+        },
+        {
+          "text_es": "y la de todos los santos;"
+        },
+        {
+          "text_es": "por sus méritos y oraciones"
+        },
+        {
+          "text_es": "concédenos en todo tu protección."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén."
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "rubric_es": "En los domingos, cuando no hay otro"
+        },
+        {
+          "text_es": "«Reunidos en comunión»"
+        },
+        {
+          "rubric_es": "propio, puede añadirse:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor,"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "text_es": "« Reunidos en comunión »"
+        },
+        {
+          "rubric_es": "propios de algunas solemnidades"
+        },
+        {
+          "rubric_es": "En la Natividad del Señor y durante su octava:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "la noche santa"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "el día santo en que la Virgen María, conservando intacta su virginidad, dio a luz al Salvador del mundo, veneramos la memoria, ante esta gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "En la Epifanía del Señor:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, eterno como tú en la gloria, se manifestó en la verdad de nuestra carne, hecho hombre como nosotros, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "En la Misa vespertina del Jueves santo:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que nuestro Señor Jesucristo fue entregado por nosotros, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "Desde la misa de la Vigilia pascual hasta el segundo domingo de Pascua:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "la noche santa"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "el día santo de la resurrección de nuestro Señor Jesucristo según la carne, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "En la Ascensión del Señor:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, nuestro Señor Jesucristo, habiendo tomado nuestra débil condición humana, la exaltó a la derecha de tu gloria, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "En el domingo de Pentecostés:"
+        },
+        {
+          "text_es": "Reunidos en comunión con toda la Iglesia para celebrar el día de Pentecostés, en que el Espíritu Santo se manifestó a los apóstoles en lenguas de fuego, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "rubric_es": "*"
+        },
+        {
+          "text_es": "la de su esposo, San José;"
+        },
+        {
+          "text_es": "la de los santos apóstoles y mártires"
+        },
+        {
+          "text_es": "Pedro y Pablo, Andrés,"
+        },
+        {
+          "rubric_es": "["
+        },
+        {
+          "text_es": "Santiago y Juan,"
+        },
+        {
+          "text_es": "Tomás, Santiago, Felipe,"
+        },
+        {
+          "text_es": "Bartolomé, Mateo,"
+        },
+        {
+          "text_es": "Simón y Tadeo;"
+        },
+        {
+          "text_es": "Lino, Cleto, Clemente, Sixto,"
+        },
+        {
+          "text_es": "Cornelio, Cipriano,"
+        },
+        {
+          "text_es": "Lorenzo, Crisógono,"
+        },
+        {
+          "text_es": "Juan y Pablo,"
+        },
+        {
+          "text_es": "Cosme y Damián,"
+        },
+        {
+          "rubric_es": "]"
+        },
+        {
+          "text_es": "y la de todos los santos;"
+        },
+        {
+          "text_es": "por sus méritos y oraciones"
+        },
+        {
+          "text_es": "concédenos en todo tu protección."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén."
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "rubric_es": "Con las manos extendidas, prosigue:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad,",
+          "sp_es": "CP"
+        },
+        {
+          "text_es": "esta ofrenda de tus servidores"
+        },
+        {
+          "text_es": "y de toda tu familia santa;"
+        },
+        {
+          "text_es": "ordena en tu paz nuestros días,"
+        },
+        {
+          "text_es": "líbranos de la condenación eterna"
+        },
+        {
+          "text_es": "y cuéntanos entre tus elegidos."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa vespertina del Jueves Santo:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "Desde la Misa de la Vigilia pascual hasta el segundo domingo de Pascua:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que hoy te ofrecemos especialmente por"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.("
+        },
+        {
+          "text_es": "aquellos"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "que has hecho renacer del agua y del Espíritu Santo, perdonándoles todos sus pecados; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa del Bautismo:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que hoy te ofrecemos especialmente por"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.("
+        },
+        {
+          "text_es": "aquellos"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "que has hecho renacer del agua y del Espíritu Santo, perdonándoles todos sus pecados, para incorporarlos a Cristo Jesús, Señor nuestro, e inscribe sus nombres en el libro de la vida."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa de la Confirmación:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad esta ofrenda de tus siervos y de toda tu familia santa, que hoy te ofrecemos especialmente por"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.("
+        },
+        {
+          "text_es": "aquellos"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "que, renacidos en el bautismo, han sido confirmados hoy por el don del Espíritu Santo; recíbela en tu bondad y conserva en tus hijos el don que les has dado."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa de Primera Comunión:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que hoy te ofrecemos especialmente por"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N. ("
+        },
+        {
+          "text_es": "aquellos"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "que por vez primera invitas en este día a participar del pan de vida y del cáliz de salvación, en la mesa de tu familia: concédeles crecer siempre en tu amistad y en la comunión con tu Iglesia."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa del Matrimonio:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus servidores, de los nuevos esposos"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y de toda tu familia santa, que hoy intercede por ellos; y ya que les has concedido llegar al día de los desposorios, otórgales también"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "el gozo de una ansiada descendencia y de"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "una larga vida."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "En la Misa Exequial:"
+        },
+        {
+          "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus servidores, que hoy te ofrecemos especialmente por el descanso eterno de nuestro hermano"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", pidiéndote que le concedas que, libre de la corrupción de la carne, tenga su parte entre tus santos."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "Extendiendo las manos sobre las ofrendas, dice:"
+        },
+        {
+          "text_es": "Bendice y santifica esta ofrenda, Padre,",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "haciéndola perfecta, espiritual y digna de ti,"
+        },
+        {
+          "text_es": "de manera que se convierta para nosotros en el Cuerpo y la Sangre"
+        },
+        {
+          "text_es": "de tu Hijo amado,"
+        },
+        {
+          "text_es": "Jesucristo, nuestro Señor."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse claramente y con precisión, como lo requiere la naturaleza de las mismas palabras."
+        },
+        {
+          "text_es": "Él mismo, la víspera de su Pasión,"
+        },
+        {
+          "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "rubric_es": "En la Misa vespertina del Jueves Santo:"
+        },
+        {
+          "text_es": "Él mismo, hoy, la víspera de padecer por nuestra salvación y la de todos los hombres,"
+        },
+        {
+          "text_es": "tomó pan en sus santas y venerables manos,"
+        },
+        {
+          "rubric_es": "Eleva los ojos,"
+        },
+        {
+          "text_es": "y, elevando los ojos al cielo,"
+        },
+        {
+          "text_es": "hacia ti, Dios, Padre suyo todopoderoso,"
+        },
+        {
+          "text_es": "dando gracias te bendijo,"
+        },
+        {
+          "text_es": "lo partió,"
+        },
+        {
+          "text_es": "y lo dio a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y COMAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ESTO ES MI CUERPO,"
+        },
+        {
+          "text_es": "QUE SERÁ ENTREGADO POR USTEDES."
+        },
+        {
+          "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Después prosigue:"
+        },
+        {
+          "text_es": "Del mismo modo, acabada la cena,"
+        },
+        {
+          "rubric_es": "Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó este cáliz glorioso"
+        },
+        {
+          "text_es": "en sus santas y venerables manos,"
+        },
+        {
+          "text_es": "dando gracias te bendijo,"
+        },
+        {
+          "text_es": "y lo dio a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y BEBAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE,"
+        },
+        {
+          "text_es": "SANGRE DE LA ALIANZA NUEVA Y ETERNA,"
+        },
+        {
+          "text_es": "QUE SERÁ DERRAMADA"
+        },
+        {
+          "text_es": "POR USTEDES Y POR MUCHOS"
+        },
+        {
+          "text_es": "PARA EL PERDÓN DE LOS PECADOS."
+        },
+        {
+          "text_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
+        },
+        {
+          "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Luego dice una de las siguientes fórmulas:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Sacramento de nuestra fe."
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Anunciamos tu muerte,"
+        },
+        {
+          "text_es": "proclamamos tu resurrección."
+        },
+        {
+          "text_es": "¡Ven, Señor Jesús!"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de nuestra fe, Cristo nos redimió.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Cada vez que comemos de este pan"
+        },
+        {
+          "text_es": "y bebemos de este cáliz,"
+        },
+        {
+          "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas."
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo se entregó por nosotros.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Salvador del mundo, sálvanos,"
+        },
+        {
+          "text_es": "que nos has liberado por tu cruz y resurrección."
+        },
+        {
+          "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Por eso, Padre,",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "nosotros, tus servidores,"
+        },
+        {
+          "text_es": "y todo tu pueblo santo,"
+        },
+        {
+          "text_es": "al celebrar este memorial"
+        },
+        {
+          "text_es": "de la muerte gloriosa de Jesucristo,"
+        },
+        {
+          "text_es": "tu Hijo, nuestro Señor;"
+        },
+        {
+          "text_es": "de su santa resurrección del lugar de los muertos"
+        },
+        {
+          "text_es": "y de su admirable ascensión a los cielos,"
+        },
+        {
+          "text_es": "te ofrecemos, Dios de gloria y majestad,"
+        },
+        {
+          "text_es": "de los mismos bienes que nos has dado,"
+        },
+        {
+          "text_es": "el sacrificio puro, inmaculado y santo:"
+        },
+        {
+          "text_es": "pan de vida eterna"
+        },
+        {
+          "text_es": "y cáliz de eterna salvación."
+        },
+        {
+          "text_es": "Mira con ojos de bondad esta ofrenda"
+        },
+        {
+          "text_es": "y acéptala,"
+        },
+        {
+          "text_es": "como aceptaste los dones del justo Abel,"
+        },
+        {
+          "text_es": "el sacrificio de Abrahán, nuestro padre en la fe,"
+        },
+        {
+          "text_es": "y la oblación pura"
+        },
+        {
+          "text_es": "de tu sumo sacerdote Melquisedec."
+        },
+        {
+          "rubric_es": "Inclinado, con las manos juntas, prosigue:"
+        },
+        {
+          "text_es": "Te pedimos humildemente, Dios todopoderoso,"
+        },
+        {
+          "text_es": "que esta ofrenda sea llevada a tu presencia,"
+        },
+        {
+          "text_es": "hasta el altar del cielo,"
+        },
+        {
+          "text_es": "por manos de tu ángel,"
+        },
+        {
+          "text_es": "para que cuantos recibimos el Cuerpo y la Sangre de tu Hijo,"
+        },
+        {
+          "text_es": "al participar aquí de este altar,"
+        },
+        {
+          "rubric_es": "Se endereza y se signa, diciendo:"
+        },
+        {
+          "text_es": "seamos colmados de gracia y bendición."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "Conmemoración de los difuntos."
+        },
+        {
+          "rubric_es": "Con las manos extendidas dice:"
+        },
+        {
+          "text_es": "Acuérdate también, Señor,",
+          "sp_es": "C3"
+        },
+        {
+          "text_es": "de tus hijos"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que nos han precedido con el signo de la fe"
+        },
+        {
+          "text_es": "y duermen ya el sueño de la paz."
+        },
+        {
+          "rubric_es": "Junta las manos y ora unos momentos por los difuntos por quienes tiene intención de orar."
+        },
+        {
+          "rubric_es": "Después, con las manos extendidas, prosigue:"
+        },
+        {
+          "text_es": "A ellos, Señor, y a cuantos descansan en Cristo,"
+        },
+        {
+          "text_es": "concédeles el lugar del consuelo,"
+        },
+        {
+          "text_es": "de la luz y de la paz."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "Por Cristo, nuestro Señor. Amén"
+        },
+        {
+          "rubric_es": ".)"
+        },
+        {
+          "rubric_es": "Con la mano derecha se golpea el pecho, diciendo:"
+        },
+        {
+          "text_es": "Y a nosotros, pecadores, siervos tuyos,",
+          "sp_es": "C4"
+        },
+        {
+          "rubric_es": "Con las manos extendidas prosigue:"
+        },
+        {
+          "text_es": "que confiamos en tu infinita misericordia,"
+        },
+        {
+          "text_es": "admítenos en la asamblea"
+        },
+        {
+          "text_es": "de los santos apóstoles y mártires,"
+        },
+        {
+          "text_es": "Juan el Bautista, Esteban,"
+        },
+        {
+          "text_es": "Matías y Bernabé,"
+        },
+        {
+          "rubric_es": "["
+        },
+        {
+          "text_es": "Ignacio, Alejandro,"
+        },
+        {
+          "text_es": "Marcelino y Pedro,"
+        },
+        {
+          "text_es": "Felicidad y Perpetua,"
+        },
+        {
+          "text_es": "Águeda, Lucía,"
+        },
+        {
+          "text_es": "Inés, Cecilia, Anastasia,"
+        },
+        {
+          "rubric_es": "]"
+        },
+        {
+          "text_es": "y de todos los santos;"
+        },
+        {
+          "text_es": "y acéptanos en su compañía,"
+        },
+        {
+          "text_es": "no por nuestros méritos,"
+        },
+        {
+          "text_es": "sino conforme a tu bondad."
+        },
+        {
+          "rubric_es": "Junta las manos:"
+        },
+        {
+          "text_es": "Por Cristo, Señor nuestro.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y continúa:"
+        },
+        {
+          "text_es": "Por quien sigues creando todos los bienes,"
+        },
+        {
+          "text_es": "los santificas, los llenas de vida, los bendices"
+        },
+        {
+          "text_es": "y los repartes entre nosotros."
+        }
+      ],
+      "2": [
+        {
+          "rubric_es": "El sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Santo eres en verdad, Señor, fuente de toda santidad;",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice:"
+        },
+        {
+          "text_es": "por eso te pedimos que santifiques estos dones",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "con la efusión de tu Espíritu,"
+        },
+        {
+          "rubric_es": "Junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo:"
+        },
+        {
+          "text_es": "de manera que se conviertan para nosotros"
+        },
+        {
+          "text_es": "en el Cuerpo y ✠"
+        },
+        {
+          "text_es": "la Sangre"
+        },
+        {
+          "text_es": "de Jesucristo, nuestro Señor."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse claramente y con precisión, como lo requiere la naturaleza de las mismas palabras."
+        },
+        {
+          "text_es": "Él mismo,"
+        },
+        {
+          "rubric_es": "En la Misa vespertina del Jueves santo:"
+        },
+        {
+          "text_es": "en esta misma noche,"
+        },
+        {
+          "text_es": "cuando iba a ser entregado a su pasión,"
+        },
+        {
+          "text_es": "voluntariamente aceptada,"
+        },
+        {
+          "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó pan, dándote gracias, lo partió"
+        },
+        {
+          "text_es": "y lo dio a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y COMAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ESTO ES MI CUERPO,"
+        },
+        {
+          "text_es": "QUE SERÁ ENTREGADO POR USTEDES."
+        },
+        {
+          "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Después prosigue:"
+        },
+        {
+          "text_es": "Del mismo modo, acabada la cena,"
+        },
+        {
+          "rubric_es": "Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó el cáliz,"
+        },
+        {
+          "text_es": "y, dándote gracias de nuevo,"
+        },
+        {
+          "text_es": "lo pasó a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y BEBAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE,"
+        },
+        {
+          "text_es": "SANGRE DE LA ALIANZA NUEVA Y ETERNA,"
+        },
+        {
+          "text_es": "QUE SERÁ DERRAMADA"
+        },
+        {
+          "text_es": "POR USTEDES Y POR MUCHOS"
+        },
+        {
+          "text_es": "PARA EL PERDÓN DE LOS PECADOS."
+        },
+        {
+          "text_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
+        },
+        {
+          "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Luego dice una de las siguientes fórmulas:"
+        },
+        {
+          "text_es": "Éste es el Misterio de nuestra fe.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Sacramento de nuestra fe."
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Anunciamos tu muerte,"
+        },
+        {
+          "text_es": "proclamamos tu resurrección."
+        },
+        {
+          "text_es": "¡Ven, Señor Jesús!"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo nos redimió.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Cada vez que comemos de este pan"
+        },
+        {
+          "text_es": "y bebemos de este cáliz,"
+        },
+        {
+          "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas."
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo se entregó por nosotros.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Salvador del mundo, sálvanos,"
+        },
+        {
+          "text_es": "que nos has liberado por tu cruz y resurrección."
+        },
+        {
+          "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Así, Padre,",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "al celebrar ahora"
+        },
+        {
+          "text_es": "el memorial de la muerte y resurrección de tu Hijo,"
+        },
+        {
+          "text_es": "te ofrecemos el Pan de Vida y el Cáliz de Salvación,"
+        },
+        {
+          "text_es": "y te damos gracias"
+        },
+        {
+          "text_es": "porque nos haces dignos de servirte en tu presencia."
+        },
+        {
+          "text_es": "Te pedimos humildemente"
+        },
+        {
+          "text_es": "que el Espíritu Santo congregue en la unidad"
+        },
+        {
+          "text_es": "a cuantos participamos del Cuerpo y Sangre de Cristo."
+        },
+        {
+          "text_es": "Acuérdate, Señor,",
+          "sp_es": "C1"
+        },
+        {
+          "text_es": "de tu Iglesia extendida por toda la tierra;"
+        },
+        {
+          "rubric_es": "Los domingos, cuando no hay otro"
+        },
+        {
+          "text_es": "«Acuérdate, Señor»"
+        },
+        {
+          "rubric_es": "propio, puede decirse:"
+        },
+        {
+          "text_es": "Acuérdate, Señor de tu Iglesia, extendida por toda la tierra,"
+        },
+        {
+          "text_es": "y reunida aquí en el domingo,"
+        },
+        {
+          "text_es": "día en que Cristo ha vencido a la muerte"
+        },
+        {
+          "text_es": "y nos ha hecho partícipes de su vida inmortal;"
+        },
+        {
+          "text_es": "«Acuérdate, Señor»"
+        },
+        {
+          "rubric_es": "propios de algunas solemnidades"
+        },
+        {
+          "rubric_es": "En la Natividad del Señor y durante su octava:"
+        },
+        {
+          "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra"
+        },
+        {
+          "text_es": "y reunida aquí"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "en la noche santa"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "en el día santo"
+        },
+        {
+          "text_es": "en que la Virgen María dio a luz al Salvador del mundo;"
+        },
+        {
+          "rubric_es": "En la Epifanía del Señor:"
+        },
+        {
+          "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra"
+        },
+        {
+          "text_es": "y reunida aquí en el día santo en que tu único Hijo,"
+        },
+        {
+          "text_es": "eterno como tú en la gloria,"
+        },
+        {
+          "text_es": "se manifestó en la realidad de nuestra propia carne;"
+        },
+        {
+          "rubric_es": "Desde la Misa de la Vigilia pascual hasta el segundo domingo de Pascua:"
+        },
+        {
+          "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra"
+        },
+        {
+          "text_es": "y reunida aquí"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "en la noche santísima"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "en el día santísimo"
+        },
+        {
+          "text_es": "de la resurrección de nuestro Señor Jesucristo;"
+        },
+        {
+          "rubric_es": "En la Ascensión del Señor:"
+        },
+        {
+          "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra"
+        },
+        {
+          "text_es": "y reunida aquí en el día glorioso"
+        },
+        {
+          "text_es": "en que Cristo ha sido constituido Señor del cielo y de la tierra;"
+        },
+        {
+          "rubric_es": "En el domingo de Pentecostés:"
+        },
+        {
+          "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra"
+        },
+        {
+          "text_es": "y reunida aquí en el día en que la efusión de tu Espíritu"
+        },
+        {
+          "text_es": "ha hecho de ella sacramento de unidad para todos los pueblos;"
+        },
+        {
+          "text_es": "y con el Papa"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "con nuestro Obispo"
+        },
+        {
+          "rubric_es": "N. (Aquí se puede hacer mención del Obispo Coadjutor o Auxiliar, de acuerdo con la Ordenación general del Misal Romano, n. 149)."
+        },
+        {
+          "rubric_es": "El Obispo, cuando celebra en su diócesis, dice:"
+        },
+        {
+          "text_es": "conmigo, indigno servidor tuyo,"
+        },
+        {
+          "rubric_es": "Cuando celebra un Obispo que no es el Ordinario diocesano, dice:"
+        },
+        {
+          "text_es": "con mí hermano"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", Obispo de esta Iglesia de"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", conmigo, indigno siervo tuyo,"
+        },
+        {
+          "text_es": "y todos los pastores que cuidan de tu pueblo,"
+        },
+        {
+          "text_es": "llévala a su perfección por la caridad."
+        },
+        {
+          "rubric_es": "INTERCESIONES PARTICULARES"
+        },
+        {
+          "rubric_es": "En las Misas de Pascua, de su Octava y en la del bautismo de adultos:"
+        },
+        {
+          "text_es": "Acuérdate también de nuestros hermanos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que hoy, por medio del bautismo"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "y de la confirmación"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "han entrado a formar parte de tu familia;"
+        },
+        {
+          "text_es": "ayúdales a seguir a Cristo, tu Hijo,"
+        },
+        {
+          "text_es": "con ánimo generoso y ferviente."
+        },
+        {
+          "rubric_es": "En la Misa del Bautismo de niños:"
+        },
+        {
+          "text_es": "Acuérdate también de nuestros hermanos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "de aquellos hermanos nuestros"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "que hoy has hecho renacer del agua y del Espíritu Santo,"
+        },
+        {
+          "text_es": "librándolos del pecado;"
+        },
+        {
+          "text_es": "tú que los has incorporado,"
+        },
+        {
+          "text_es": "como miembros vivos, al cuerpo de Cristo,"
+        },
+        {
+          "text_es": "inscribe también sus nombres en el libro de la vida."
+        },
+        {
+          "rubric_es": "En la Misa de la Confirmación:"
+        },
+        {
+          "text_es": "Acuérdate también de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que, regenerados en el bautismo,"
+        },
+        {
+          "text_es": "hoy has confirmado,"
+        },
+        {
+          "text_es": "marcándolos con el sello del Espíritu Santo;"
+        },
+        {
+          "text_es": "custodia en ellos el don de tu amor."
+        },
+        {
+          "rubric_es": "En la Misa de Primera Comunión:"
+        },
+        {
+          "text_es": "Acuérdate de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que por vez primera invitas en este día"
+        },
+        {
+          "text_es": "a participar del pan de vida y del cáliz de salvación,"
+        },
+        {
+          "text_es": "en la mesa de tu familia;"
+        },
+        {
+          "text_es": "concédeles crecer siempre en tu amistad"
+        },
+        {
+          "text_es": "y en la comunión con tu Iglesia."
+        },
+        {
+          "rubric_es": "En la Misa del Matrimonio:"
+        },
+        {
+          "text_es": "Acuérdate de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que en Cristo, hoy han fundado una nueva familia,"
+        },
+        {
+          "text_es": "iglesia doméstica y sacramento de tu amor,"
+        },
+        {
+          "text_es": "y concédeles que la gracia de este día"
+        },
+        {
+          "text_es": "se prolongue a lo largo de toda su vida."
+        },
+        {
+          "rubric_es": "En la Misa por los difuntos se puede añadir:"
+        },
+        {
+          "text_es": "Recuerda a tu hijo"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "hija"
+        },
+        {
+          "rubric_es": ") N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "a quien llamaste"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "hoy"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "de este mundo a tu presencia;"
+        },
+        {
+          "text_es": "concédele que,"
+        },
+        {
+          "text_es": "así como ha compartido ya la muerte de Jesucristo,"
+        },
+        {
+          "text_es": "comparta también con él"
+        },
+        {
+          "text_es": "la gloria de la resurrección."
+        },
+        {
+          "text_es": "Acuérdate también de nuestros hermanos",
+          "sp_es": "C2"
+        },
+        {
+          "text_es": "que se durmieron en la esperanza de la resurrección,"
+        },
+        {
+          "text_es": "y de todos los que han muerto en tu misericordia;"
+        },
+        {
+          "text_es": "admítelos a contemplar la luz de tu rostro."
+        },
+        {
+          "text_es": "Ten misericordia de todos nosotros,"
+        },
+        {
+          "text_es": "y así, con María, la Virgen Madre de Dios,"
+        },
+        {
+          "text_es": "su esposo san José,"
+        },
+        {
+          "text_es": "los apóstoles y cuantos vivieron en tu amistad"
+        },
+        {
+          "text_es": "a través de los tiempos,"
+        },
+        {
+          "text_es": "merezcamos, por tu Hijo Jesucristo,"
+        },
+        {
+          "text_es": "compartir la vida eterna y cantar tus alabanzas."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        }
+      ],
+      "3": [
+        {
+          "rubric_es": "El sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Santo eres en verdad, Padre,",
+          "sp_es": "CP"
+        },
+        {
+          "text_es": "y con razón te alaban todas tus criaturas,"
+        },
+        {
+          "text_es": "ya que por Jesucristo, tu Hijo, Señor nuestro,"
+        },
+        {
+          "text_es": "con la fuerza del Espíritu Santo,"
+        },
+        {
+          "text_es": "das vida y santificas todo,"
+        },
+        {
+          "text_es": "y congregas a tu pueblo sin cesar,"
+        },
+        {
+          "text_es": "para que ofrezca en tu honor un sacrificio sin mancha"
+        },
+        {
+          "text_es": "desde donde sale el sol hasta el ocaso."
+        },
+        {
+          "rubric_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice:"
+        },
+        {
+          "text_es": "Por eso, Padre, te suplicamos",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "que santifiques por el mismo Espíritu"
+        },
+        {
+          "text_es": "estos dones que hemos separado para ti,"
+        },
+        {
+          "rubric_es": "Junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo:"
+        },
+        {
+          "text_es": "de manera que se conviertan"
+        },
+        {
+          "text_es": "en el Cuerpo y ✠"
+        },
+        {
+          "text_es": "la Sangre de Jesucristo,"
+        },
+        {
+          "text_es": "Hijo tuyo y Señor nuestro,"
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "text_es": "que nos mandó celebrar estos misterios."
+        },
+        {
+          "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse claramente y con precisión, como lo requiere la naturaleza de las mismas palabras."
+        },
+        {
+          "text_es": "Porque él mismo,"
+        },
+        {
+          "text_es": "la noche en que iba a ser entregado,"
+        },
+        {
+          "rubric_es": "En la Misa vespertina del Jueves Santo:"
+        },
+        {
+          "text_es": "habiendo amado a los suyos que estaban en el mundo,"
+        },
+        {
+          "text_es": "los amó hasta el extremo"
+        },
+        {
+          "text_es": "y, mientras cenaba con sus discípulos,"
+        },
+        {
+          "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó pan,"
+        },
+        {
+          "text_es": "y dando gracias te bendijo,"
+        },
+        {
+          "text_es": "lo partió y lo dio a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y COMAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ESTO ES MI CUERPO,"
+        },
+        {
+          "text_es": "QUE SERÁ ENTREGADO POR USTEDES."
+        },
+        {
+          "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Después prosigue:"
+        },
+        {
+          "text_es": "Del mismo modo, acabada la cena,"
+        },
+        {
+          "rubric_es": "Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó el cáliz,"
+        },
+        {
+          "text_es": "dando gracias te bendijo,"
+        },
+        {
+          "text_es": "y lo pasó a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y BEBAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE,"
+        },
+        {
+          "text_es": "SANGRE DE LA ALIANZA NUEVA Y ETERNA,"
+        },
+        {
+          "text_es": "QUE SERÁ DERRAMADA"
+        },
+        {
+          "text_es": "POR USTEDES Y POR MUCHOS"
+        },
+        {
+          "text_es": "PARA EL PERDÓN DE LOS PECADOS."
+        },
+        {
+          "text_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
+        },
+        {
+          "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Luego dice una de las siguientes fórmulas:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Sacramento de nuestra fe."
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Anunciamos tu muerte,"
+        },
+        {
+          "text_es": "proclamamos tu resurrección."
+        },
+        {
+          "text_es": "¡Ven, Señor Jesús!"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo nos redimió.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Cada vez que comemos de este pan"
+        },
+        {
+          "text_es": "y bebemos de este cáliz,"
+        },
+        {
+          "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas."
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo se entregó por nosotros.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Salvador del mundo, sálvanos,"
+        },
+        {
+          "text_es": "que nos has liberado por tu cruz y resurrección."
+        },
+        {
+          "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Así, Padre,",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "al celebrar ahora el memorial"
+        },
+        {
+          "text_es": "de la pasión salvadora de tu Hijo,"
+        },
+        {
+          "text_es": "de su admirable resurrección y ascensión al cielo,"
+        },
+        {
+          "text_es": "mientras esperamos su venida gloriosa,"
+        },
+        {
+          "text_es": "te ofrecemos, en esta acción de gracias,"
+        },
+        {
+          "text_es": "el sacrificio vivo y santo."
+        },
+        {
+          "text_es": "Dirige tu mirada sobre la ofrenda de tu Iglesia,"
+        },
+        {
+          "text_es": "y reconoce en ella la Víctima"
+        },
+        {
+          "text_es": "por cuya inmolación quisiste devolvernos tu amistad,"
+        },
+        {
+          "text_es": "para que, fortalecidos con el Cuerpo y la Sangre de tu Hijo"
+        },
+        {
+          "text_es": "y llenos de su Espíritu Santo,"
+        },
+        {
+          "text_es": "formemos en Cristo un solo cuerpo y un solo espíritu."
+        },
+        {
+          "text_es": "Que él nos transforme en ofrenda permanente,",
+          "sp_es": "C1"
+        },
+        {
+          "text_es": "para que gocemos de tu heredad junto con tus elegidos:"
+        },
+        {
+          "text_es": "con María, la Virgen Madre de Dios,"
+        },
+        {
+          "text_es": "su esposo san José,"
+        },
+        {
+          "text_es": "los apóstoles y los mártires,"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "san"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ":"
+        },
+        {
+          "rubric_es": "Santo del día o patrono)"
+        },
+        {
+          "text_es": "y todos los santos,"
+        },
+        {
+          "text_es": "por cuya intercesión"
+        },
+        {
+          "text_es": "confiamos obtener siempre tu ayuda."
+        },
+        {
+          "text_es": "Te pedimos, Padre, que esta Víctima de reconciliación",
+          "sp_es": "C2"
+        },
+        {
+          "text_es": "traiga la paz y la salvación al mundo entero."
+        },
+        {
+          "text_es": "Confirma en la fe y en la caridad"
+        },
+        {
+          "text_es": "a tu Iglesia, peregrina en la tierra:"
+        },
+        {
+          "text_es": "a tu servidor, el Papa"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "a nuestro Obispo"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "rubric_es": "(Aquí se puede hacer mención del Obispo Coadjutor o Auxiliar, de acuerdo con la Ordenación general del Misal Romano, n. 149)."
+        },
+        {
+          "rubric_es": "El Obispo, cuando celebra en su diócesis, dice:"
+        },
+        {
+          "text_es": "a mí, indigno servidor tuyo,"
+        },
+        {
+          "rubric_es": "Cuando celebra un Obispo que no es el Ordinario, dice:"
+        },
+        {
+          "text_es": "a mi hermano"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", Obispo de esta Iglesia de"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", a mí, indigno siervo tuyo,"
+        },
+        {
+          "text_es": "al orden episcopal, a los presbíteros y diáconos, y a todo el pueblo redimido por ti."
+        },
+        {
+          "rubric_es": "INTERCESIONES PARTICULARES"
+        },
+        {
+          "rubric_es": "En las Misas de Pascua, de su octava y en la del Bautismo de adultos:"
+        },
+        {
+          "text_es": "Confirma en la fidelidad cristiana a tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que hoy, por medio del Bautismo"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "y del don del Espíritu"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "has llamado a formar parte de tu pueblo"
+        },
+        {
+          "text_es": "y concédeles andar siempre en una vida nueva."
+        },
+        {
+          "rubric_es": "En la Misa del Bautismo de niños:"
+        },
+        {
+          "text_es": "Ayuda a nuestros hermanos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que hoy has hecho renacer del agua y del Espíritu Santo"
+        },
+        {
+          "text_es": "librándolos del pecado;"
+        },
+        {
+          "text_es": "tú que los has incorporado,"
+        },
+        {
+          "text_es": "como miembros vivos, al Cuerpo de Cristo,"
+        },
+        {
+          "text_es": "inscribe también sus nombres en el libro de la vida."
+        },
+        {
+          "rubric_es": "En la Misa de Confirmación:"
+        },
+        {
+          "text_es": "Ayuda a tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que hoy has confirmado"
+        },
+        {
+          "text_es": "marcándolos con el sello del Espíritu Santo;"
+        },
+        {
+          "text_es": "custodia en ellos el don de tu amor."
+        },
+        {
+          "rubric_es": "En la Misa de Primera Comunión:"
+        },
+        {
+          "text_es": "Ayuda a tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que por vez primera invitas en este día"
+        },
+        {
+          "text_es": "a participar del pan de vida y del cáliz de salvación,"
+        },
+        {
+          "text_es": "en la mesa de tu familia;"
+        },
+        {
+          "text_es": "concédeles crecer siempre en tu amistad"
+        },
+        {
+          "text_es": "y en la comunión con tu Iglesia."
+        },
+        {
+          "rubric_es": "En la Misa del Matrimonio:"
+        },
+        {
+          "text_es": "Ayuda a tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que en Cristo hoy han fundado una nueva familia,"
+        },
+        {
+          "text_es": "iglesia doméstica y sacramento de tu amor,"
+        },
+        {
+          "text_es": "y concédeles que la gracia de este día"
+        },
+        {
+          "text_es": "se prolongue a lo largo de toda su vida."
+        },
+        {
+          "text_es": "Atiende los deseos y súplicas de esta familia"
+        },
+        {
+          "text_es": "que has congregado en tu presencia."
+        },
+        {
+          "rubric_es": "En los domingos, cuando no hay otro recuerdo mas propio,"
+        },
+        {
+          "rubric_es": "puede decirse:"
+        },
+        {
+          "text_es": "en el domingo, día en que Cristo ha vencido a la muerte"
+        },
+        {
+          "text_es": "y nos ha hecho partícipes de su vida inmortal."
+        },
+        {
+          "rubric_es": "En la Natividad del Señor y durante su octava:"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "en la noche santa"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "en el día santo"
+        },
+        {
+          "text_es": "en que la Virgen María dio a luz al Salvador del mundo."
+        },
+        {
+          "rubric_es": "En la Epifanía del Señor:"
+        },
+        {
+          "text_es": "en el día santo en que tu único Hijo,"
+        },
+        {
+          "text_es": "eterno como tú en la gloria,"
+        },
+        {
+          "text_es": "se manifestó en la verdad de nuestra carne, hecho hombre."
+        },
+        {
+          "rubric_es": "Desde la Misa de la Vigilia Pascual"
+        },
+        {
+          "rubric_es": "hasta el segundo domingo de Pascua:"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "en la noche gloriosa"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "en el día glorioso"
+        },
+        {
+          "text_es": "de la resurrección de nuestro Señor Jesucristo según la carne."
+        },
+        {
+          "rubric_es": "En la Ascensión del Señor:"
+        },
+        {
+          "text_es": "en el día glorioso de la Ascensión,"
+        },
+        {
+          "text_es": "en el que Cristo ha sido constituido Señor del cielo y de la tierra."
+        },
+        {
+          "rubric_es": "En el domingo de Pentecostés:"
+        },
+        {
+          "text_es": "en el día en que la efusión de tu Espíritu"
+        },
+        {
+          "text_es": "ha hecho de ella sacramento de unidad para todos los pueblos."
+        },
+        {
+          "text_es": "Reúne en torno a ti, Padre misericordioso,"
+        },
+        {
+          "text_es": "a todos tus hijos dispersos por el mundo. ✠"
+        },
+        {
+          "text_es": "A nuestros hermanos difuntos"
+        },
+        {
+          "text_es": "y a cuantos murieron en tu amistad"
+        },
+        {
+          "text_es": "recíbelos en tu reino,"
+        },
+        {
+          "text_es": "donde esperamos gozar todos juntos"
+        },
+        {
+          "text_es": "de la plenitud eterna de tu gloria,"
+        },
+        {
+          "rubric_es": "Junta las manos"
+        },
+        {
+          "text_es": "por Cristo, Señor nuestro,"
+        },
+        {
+          "text_es": "por quien concedes al mundo todos los bienes."
+        },
+        {
+          "rubric_es": "Cuando esta Plegaria eucarística se utiliza en las misas de difuntos, puede decirse:"
+        },
+        {
+          "text_es": "✠"
+        },
+        {
+          "text_es": "Recuerda a tu hijo"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "hija"
+        },
+        {
+          "rubric_es": ") N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "a quien llamaste"
+        },
+        {
+          "rubric_es": "("
+        },
+        {
+          "text_es": "hoy"
+        },
+        {
+          "rubric_es": ")"
+        },
+        {
+          "text_es": "de este mundo a tu presencia:"
+        },
+        {
+          "text_es": "concédele que, así como ha compartido ya la muerte de Jesucristo,"
+        },
+        {
+          "text_es": "comparta también con él la gloria de la resurrección,"
+        },
+        {
+          "text_es": "cuando Cristo haga resurgir de la tierra a los muertos,"
+        },
+        {
+          "text_es": "y transforme nuestro cuerpo frágil"
+        },
+        {
+          "text_es": "en cuerpo glorioso como el suyo."
+        },
+        {
+          "text_es": "Y a todos nuestros hermanos difuntos"
+        },
+        {
+          "text_es": "y a cuantos murieron en tu amistad"
+        },
+        {
+          "text_es": "recíbelos en tu reino,"
+        },
+        {
+          "text_es": "donde esperamos gozar todos juntos"
+        },
+        {
+          "text_es": "de la plenitud eterna de tu gloria;"
+        },
+        {
+          "text_es": "allí enjugarás las lágrimas de nuestros ojos,"
+        },
+        {
+          "text_es": "porque, al contemplarte corno tú eres, Dios nuestro,"
+        },
+        {
+          "text_es": "seremos para siempre semejantes a ti"
+        },
+        {
+          "text_es": "y cantaremos eternamente tus alabanzas,"
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "text_es": "por Cristo, Señor nuestro,"
+        },
+        {
+          "text_es": "por quien concedes al mundo todos los bienes."
+        }
+      ],
+      "4": [
+        {
+          "text_es": "En verdad es justo darte gracias,",
+          "sp_es": "CP"
+        },
+        {
+          "text_es": "y deber nuestro glorificarte, Padre santo,"
+        },
+        {
+          "text_es": "porque tú eres el único Dios vivo y verdadero"
+        },
+        {
+          "text_es": "que existes desde siempre y vives para siempre;"
+        },
+        {
+          "text_es": "luz sobre toda luz."
+        },
+        {
+          "text_es": "Porque tú solo eres bueno y la fuente de la vida,"
+        },
+        {
+          "text_es": "hiciste todas las cosas para colmarlas de tus bendiciones"
+        },
+        {
+          "text_es": "y alegrar su multitud con la claridad de tu gloria."
+        },
+        {
+          "text_es": "Por eso, innumerables ángeles en tu presencia,"
+        },
+        {
+          "text_es": "contemplando la gloria de tu rostro,"
+        },
+        {
+          "text_es": "te sirven siempre y te glorifican sin cesar."
+        },
+        {
+          "text_es": "Y con ellos también nosotros, llenos de alegría,"
+        },
+        {
+          "text_es": "y por nuestra voz las demás criaturas,"
+        },
+        {
+          "text_es": "aclamamos tu nombre cantando:"
+        },
+        {
+          "text_es": "Santo, Santo, Santo es el Señor, Dios del Universo."
+        },
+        {
+          "text_es": "Llenos están el cielo y la tierra de tu gloria."
+        },
+        {
+          "text_es": "Hosanna en el cielo."
+        },
+        {
+          "text_es": "Bendito el que viene en nombre del Señor."
+        },
+        {
+          "text_es": "Hosanna en el cielo."
+        },
+        {
+          "rubric_es": "El sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Te alabamos, Padre santo,",
+          "sp_es": "CP"
+        },
+        {
+          "text_es": "porque eres grande"
+        },
+        {
+          "text_es": "y porque hiciste todas las cosas con sabiduría y amor."
+        },
+        {
+          "text_es": "A imagen tuya creaste al hombre"
+        },
+        {
+          "text_es": "y le encomendaste el universo entero,"
+        },
+        {
+          "text_es": "para que, sirviéndote sólo a ti, su Creador,"
+        },
+        {
+          "text_es": "dominara todo lo creado."
+        },
+        {
+          "text_es": "Y cuando por desobediencia perdió tu amistad,"
+        },
+        {
+          "text_es": "no lo abandonaste al poder de la muerte,"
+        },
+        {
+          "text_es": "sino que, compadecido, tendiste la mano a todos,"
+        },
+        {
+          "text_es": "para que te encuentre el que te busca."
+        },
+        {
+          "text_es": "Reiteraste, además, tu alianza a los hombres;"
+        },
+        {
+          "text_es": "por los profetas los fuiste llevando con la esperanza de salvación."
+        },
+        {
+          "text_es": "Y tanto amaste al mundo, Padre santo,"
+        },
+        {
+          "text_es": "que, al cumplirse la plenitud de los tiempos,"
+        },
+        {
+          "text_es": "nos enviaste como salvador a tu único Hijo."
+        },
+        {
+          "text_es": "Él se encarnó por obra del Espíritu Santo,"
+        },
+        {
+          "text_es": "nació de María, la Virgen,"
+        },
+        {
+          "text_es": "y así compartió en todo nuestra condición humana"
+        },
+        {
+          "text_es": "menos en el pecado;"
+        },
+        {
+          "text_es": "anunció la salvación a los pobres,"
+        },
+        {
+          "text_es": "la liberación a los oprimidos"
+        },
+        {
+          "text_es": "y a los afligidos el consuelo."
+        },
+        {
+          "text_es": "Para cumplir tus designios,"
+        },
+        {
+          "text_es": "él mismo se entregó a la muerte,"
+        },
+        {
+          "text_es": "y, resucitando, destruyó la muerte y nos dio nueva vida."
+        },
+        {
+          "text_es": "Y a fin de que no vivamos ya para nosotros mismos,"
+        },
+        {
+          "text_es": "sino para él, que por nosotros murió y resucitó,"
+        },
+        {
+          "text_es": "envió, Padre, al Espíritu Santo"
+        },
+        {
+          "text_es": "como primicia para los creyentes,"
+        },
+        {
+          "text_es": "a fin de santificar todas las cosas,"
+        },
+        {
+          "text_es": "llevando a plenitud su obra en el mundo."
+        },
+        {
+          "rubric_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice:"
+        },
+        {
+          "text_es": "Por eso, Padre, te rogamos",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "que este mismo Espíritu"
+        },
+        {
+          "text_es": "santifique estas ofrendas,"
+        },
+        {
+          "rubric_es": "Junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo:"
+        },
+        {
+          "text_es": "para que se conviertan en el Cuerpo y ✠"
+        },
+        {
+          "text_es": "la Sangre"
+        },
+        {
+          "text_es": "de Jesucristo, nuestro Señor,"
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "text_es": "y así celebremos el gran misterio"
+        },
+        {
+          "text_es": "que nos dejó como alianza eterna."
+        },
+        {
+          "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse claramente y con precisión, como lo requiere la naturaleza de las mismas palabras."
+        },
+        {
+          "text_es": "Porque él mismo, llegada la hora"
+        },
+        {
+          "text_es": "en que había de ser glorificado por ti, Padre santo,"
+        },
+        {
+          "text_es": "habiendo amado a los suyos que estaban en el mundo,"
+        },
+        {
+          "text_es": "los amó hasta el extremo."
+        },
+        {
+          "text_es": "Y, mientras cenaba con sus discípulos,"
+        },
+        {
+          "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó pan, te bendijo, lo partió"
+        },
+        {
+          "text_es": "y se lo dio, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y COMAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ESTO ES MI CUERPO,"
+        },
+        {
+          "text_es": "QUE SERÁ ENTREGADO POR USTEDES."
+        },
+        {
+          "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Después prosigue:"
+        },
+        {
+          "text_es": "Del mismo modo,"
+        },
+        {
+          "rubric_es": "Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, prosigue:"
+        },
+        {
+          "text_es": "tomó el cáliz lleno del fruto de la vid,"
+        },
+        {
+          "text_es": "te dio gracias y lo pasó a sus discípulos, diciendo:"
+        },
+        {
+          "rubric_es": "Se inclina un poco."
+        },
+        {
+          "text_es": "TOMEN Y BEBAN TODOS DE ÉL,"
+        },
+        {
+          "text_es": "PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE,"
+        },
+        {
+          "text_es": "SANGRE DE LA ALIANZA NUEVA Y ETERNA,"
+        },
+        {
+          "text_es": "QUE SERÁ DERRAMADA"
+        },
+        {
+          "text_es": "POR USTEDES Y POR MUCHOS"
+        },
+        {
+          "text_es": "PARA EL PERDÓN DE LOS PECADOS."
+        },
+        {
+          "text_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
+        },
+        {
+          "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora, haciendo genuflexión."
+        },
+        {
+          "rubric_es": "Luego dice una de las siguientes fórmulas:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Sacramento de nuestra fe."
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Anunciamos tu muerte,"
+        },
+        {
+          "text_es": "proclamamos tu resurrección."
+        },
+        {
+          "text_es": "¡Ven, Señor Jesús!"
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo nos redimió.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Cada vez que comemos de este pan"
+        },
+        {
+          "text_es": "y bebemos de este cáliz,"
+        },
+        {
+          "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas."
+        },
+        {
+          "rubric_es": "O bien:"
+        },
+        {
+          "text_es": "Éste es el Misterio de la fe, Cristo se entregó por nosotros.",
+          "sp_es": "CP"
+        },
+        {
+          "rubric_es": "Y el pueblo prosigue, aclamando:"
+        },
+        {
+          "text_es": "Salvador del Mundo, sálvanos,"
+        },
+        {
+          "text_es": "que nos has liberado por tu cruz y resurrección."
+        },
+        {
+          "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
+        },
+        {
+          "text_es": "Por eso, Padre,",
+          "sp_es": "CC"
+        },
+        {
+          "text_es": "al celebrar ahora el memorial de nuestra redención,"
+        },
+        {
+          "text_es": "recordamos la muerte de Cristo"
+        },
+        {
+          "text_es": "y su descenso al lugar de los muertos,"
+        },
+        {
+          "text_es": "proclamamos su resurrección y ascensión a tu derecha;"
+        },
+        {
+          "text_es": "y, mientras esperamos su venida gloriosa,"
+        },
+        {
+          "text_es": "te ofrecemos su Cuerpo y su Sangre,"
+        },
+        {
+          "text_es": "sacrificio agradable a ti"
+        },
+        {
+          "text_es": "y salvación para todo el mundo."
+        },
+        {
+          "text_es": "Dirige tu mirada sobre esta Víctima"
+        },
+        {
+          "text_es": "que tú mismo has preparado a tu Iglesia,"
+        },
+        {
+          "text_es": "y concede a cuantos compartimos"
+        },
+        {
+          "text_es": "este pan y este cáliz,"
+        },
+        {
+          "text_es": "que, congregados en un solo cuerpo por el Espíritu Santo,"
+        },
+        {
+          "text_es": "seamos en Cristo"
+        },
+        {
+          "text_es": "víctima viva para alabanza de tu gloria."
+        },
+        {
+          "rubric_es": "Cl"
+        },
+        {
+          "text_es": "Y ahora, Señor, acuérdate"
+        },
+        {
+          "text_es": "de todos aquellos por quienes te ofrecemos este sacrificio:"
+        },
+        {
+          "text_es": "de tu servidor el Papa"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "de nuestro Obispo"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "rubric_es": "(Aquí se puede hacer mención del Obispo Coadjutor o Auxiliar, de acuerdo con la Ordenación general del Misal Romano, n. 149)."
+        },
+        {
+          "rubric_es": "El Obispo, cuando celebra en su diócesis, dice:"
+        },
+        {
+          "text_es": "de mí, indigno siervo tuyo,"
+        },
+        {
+          "rubric_es": "Cuando celebra un Obispo que no es el ordinario diocesano, dice:"
+        },
+        {
+          "text_es": "de mi hermano"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ", Obispo de esta Iglesia de"
+        },
+        {
+          "rubric_es": "N."
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "de mí, indigno siervo tuyo,"
+        },
+        {
+          "text_es": "del orden episcopal y de los presbíteros y diáconos,"
+        },
+        {
+          "text_es": "de los oferentes y de los aquí reunidos,"
+        },
+        {
+          "rubric_es": "INTERCESIONES PARTICULARES"
+        },
+        {
+          "rubric_es": "En las Misa de Pascua, de su Octava y en el Bautismo:"
+        },
+        {
+          "text_es": "de nuestros hermanos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que hoy has hecho renacer del agua y del Espíritu Santo,"
+        },
+        {
+          "rubric_es": "En la Misa de la Confirmación:"
+        },
+        {
+          "text_es": "de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que hoy has confirmado"
+        },
+        {
+          "text_es": "marcándolos con el sello del Espíritu Santo,"
+        },
+        {
+          "rubric_es": "En la Misa de la Primera Comunión:"
+        },
+        {
+          "text_es": "de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": "que por vez primera invitas en este día"
+        },
+        {
+          "text_es": "a participar del pan de vida y del cáliz de salvación,"
+        },
+        {
+          "text_es": "en la mesa de tu familia,"
+        },
+        {
+          "rubric_es": "En la Misa del Matrimonio:"
+        },
+        {
+          "text_es": "de tus hijos"
+        },
+        {
+          "rubric_es": "(N."
+        },
+        {
+          "text_es": "y"
+        },
+        {
+          "rubric_es": "N.)"
+        },
+        {
+          "text_es": ","
+        },
+        {
+          "text_es": "que en Cristo hoy han fundado una nueva familia,"
+        },
+        {
+          "text_es": "de todo tu pueblo santo"
+        },
+        {
+          "text_es": "y de aquellos que te buscan con sincero corazón."
+        },
+        {
+          "text_es": "Acuérdate también",
+          "sp_es": "C2"
+        },
+        {
+          "text_es": "de los que murieron en la paz de Cristo"
+        },
+        {
+          "text_es": "y de todos los difuntos,"
+        },
+        {
+          "text_es": "cuya fe sólo tú conociste."
+        },
+        {
+          "text_es": "Padre de bondad,"
+        },
+        {
+          "text_es": "que todos tus hijos nos reunamos en tu reino,"
+        },
+        {
+          "text_es": "con María, la Virgen Madre de Dios,"
+        },
+        {
+          "text_es": "con su esposo san José,"
+        },
+        {
+          "text_es": "con los apóstoles y los santos;"
+        },
+        {
+          "text_es": "y allí, junto con toda la creación"
+        },
+        {
+          "text_es": "libre ya del pecado y de la muerte,"
+        },
+        {
+          "text_es": "te glorifiquemos por Cristo, Señor nuestro."
+        },
+        {
+          "rubric_es": "Junta las manos."
+        },
+        {
+          "text_es": "por quien concedes al mundo todos los bienes."
+        }
+      ]
+    },
+    "formEndings": {
+      "1": [
+        {
+          "rubric_es": "Toma la patena con el pan consagrado y el cáliz, y elevándolos, dice:"
+        },
+        {
+          "text_es": "Por Cristo, con él y en él,",
+          "sp_es": "CP o CC"
+        },
+        {
+          "text_es": "a ti, Dios Padre omnipotente,"
+        },
+        {
+          "text_es": "en la unidad del Espíritu Santo,"
+        },
+        {
+          "text_es": "todo honor y toda gloria"
+        },
+        {
+          "text_es": "por los siglos de los siglos."
+        },
+        {
+          "rubric_es": "El pueblo aclama:"
+        },
+        {
+          "text_es": "Amén."
+        }
+      ],
+      "2": [
+        {
+          "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, elevándolos, dice:"
+        },
+        {
+          "text_es": "Por Cristo, con él y en él,",
+          "sp_es": "CP o CC"
+        },
+        {
+          "text_es": "a ti, Dios Padre omnipotente,"
+        },
+        {
+          "text_es": "en la unidad del Espíritu Santo,"
+        },
+        {
+          "text_es": "todo honor y toda gloria"
+        },
+        {
+          "text_es": "por los siglos de los siglos."
+        },
+        {
+          "rubric_es": "El pueblo aclama:"
+        },
+        {
+          "text_es": "Amén."
+        }
+      ],
+      "3": [
+        {
+          "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, sosteniéndolos elevados, dice."
+        },
+        {
+          "text_es": "Por Cristo, con él y en él,",
+          "sp_es": "CP o CC"
+        },
+        {
+          "text_es": "a ti, Dios Padre omnipotente,"
+        },
+        {
+          "text_es": "en la unidad del Espíritu Santo,"
+        },
+        {
+          "text_es": "todo honor y toda gloria"
+        },
+        {
+          "text_es": "por los siglos de los siglos."
+        },
+        {
+          "rubric_es": "El pueblo aclama:"
+        },
+        {
+          "text_es": "Amén."
+        }
+      ],
+      "4": [
+        {
+          "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, elevándolos, dice:"
+        },
+        {
+          "text_es": "Por Cristo, con él y en él,",
+          "sp_es": "CP o CC"
+        },
+        {
+          "text_es": "a ti, Dios Padre omnipotente,"
+        },
+        {
+          "text_es": "en la unidad del Espíritu Santo,"
+        },
+        {
+          "text_es": "todo honor y toda gloria"
+        },
+        {
+          "text_es": "por los siglos de los siglos."
+        },
+        {
+          "rubric_es": "El pueblo aclama:"
+        },
+        {
+          "text_es": "Amén."
+        }
+      ]
+    },
+    "amen": [],
+    "common_dialogue": [
+      {
+        "rubric_es": "Entonces, el sacerdote empieza la Plegaria eucarística."
+      },
+      {
+        "rubric_es": "Extendiendo las manos, dice:"
+      },
+      {
+        "text_es": "El Señor esté con ustedes."
+      },
+      {
+        "rubric_es": "El pueblo responde:"
+      },
+      {
+        "text_es": "Y con tu espíritu."
+      },
+      {
+        "rubric_es": "El sacerdote, elevando las manos, prosigue:"
+      },
+      {
+        "text_es": "Levantemos el corazón."
+      },
+      {
+        "rubric_es": "El pueblo:"
+      },
+      {
+        "text_es": "Los tenemos levantado hacia el Señor."
+      },
+      {
+        "rubric_es": "El sacerdote con la manos extendidas, dice:"
+      },
+      {
+        "text_es": "Demos gracias al Señor, nuestro Dios."
+      },
+      {
+        "rubric_es": "El pueblo:"
+      },
+      {
+        "text_es": "Es justo y necesario."
+      },
+      {
+        "rubric_es": "El sacerdote prosigue el prefacio, con las manos extendidas."
+      },
+      {
+        "rubric_es": "Al final del prefacio junta las manos y, en unión con el pueblo, concluye el mismo prefacio, cantando o diciendo con voz clara:"
+      }
+    ],
+    "sanctus": [
+      {
+        "text_es": "Santo, Santo, Santo es el Señor, Dios del Universo."
+      },
+      {
+        "text_es": "Llenos están el cielo y la tierra de tu gloria."
+      },
+      {
+        "text_es": "Hosanna en el cielo."
+      },
+      {
+        "text_es": "Bendito el que viene en nombre del Señor."
+      },
+      {
+        "text_es": "Hosanna en el cielo."
+      }
+    ],
+    "formFrames": {
+      "1": {
+        "sections": [
+          "dialogue",
+          "preface",
+          "sanctus",
+          "form",
+          "ending"
+        ]
+      },
+      "2": {
+        "sections": [
+          "dialogue",
+          "preface",
+          "sanctus",
+          "form",
+          "ending"
+        ]
+      },
+      "3": {
+        "sections": [
+          "dialogue",
+          "preface",
+          "sanctus",
+          "form",
+          "ending"
+        ]
+      },
+      "4": {
+        "sections": [
+          "dialogue",
+          "form",
+          "ending"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3.4 lords_prayer",
+    "type": "part",
+    "header": {
+      "es": "Padrenuestro"
+    },
+    "lines": [
+      {
+        "rubric_es": "Una vez depositados el cáliz y la patena sobre el altar, el sacerdote, con las manos juntas, dice:"
+      },
+      {
+        "text_es": "Fieles a la recomendación del Salvador"
+      },
+      {
+        "text_es": "y siguiendo su divina enseñanza, nos atrevemos a decir:"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Llenos de alegría por ser hijos de Dios,"
+      },
+      {
+        "text_es": "digamos confiadamente la oración que Cristo nos enseñó:"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "El amor de Dios a sido derramado en nuestros corazones"
+      },
+      {
+        "text_es": "con el Espíritu Santo que se nos ha dado;"
+      },
+      {
+        "text_es": "movidos por ese Espíritu digamos con fe y esperanza:"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Antes de participar en el banquete de la Eucaristía,"
+      },
+      {
+        "text_es": "signo de reconciliación y vínculo de unión fraterna,"
+      },
+      {
+        "text_es": "oremos juntos como el Señor nos ha enseñado:"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Recemos con humildad y confianza diciendo:"
+      },
+      {
+        "rubric_es": "Extiende las manos y, junto con el pueblo, continúa:"
+      },
+      {
+        "text_es": "Padre nuestro, que estás en el Cielo,"
+      },
+      {
+        "text_es": "santificado sea tu Nombre,"
+      },
+      {
+        "text_es": "venga a nosotros tu Reino,"
+      },
+      {
+        "text_es": "hágase tu voluntad en la tierra como en el cielo."
+      },
+      {
+        "text_es": "Danos hoy nuestro pan de cada día;"
+      },
+      {
+        "text_es": "perdona nuestras ofensas,"
+      },
+      {
+        "text_es": "como también nosotros perdonamos"
+      },
+      {
+        "text_es": "a los que nos ofenden;"
+      },
+      {
+        "text_es": "no nos dejes caer en la tentación,"
+      },
+      {
+        "text_es": "y líbranos del mal."
+      },
+      {
+        "rubric_es": "Solo el sacerdote, con las manos extendidas, prosigue diciendo:"
+      },
+      {
+        "text_es": "Líbranos de todos los males, Señor,"
+      },
+      {
+        "text_es": "y concédenos la paz en nuestros días,"
+      },
+      {
+        "text_es": "para que, ayudados por tu misericordia,"
+      },
+      {
+        "text_es": "vivamos siempre libres de pecado"
+      },
+      {
+        "text_es": "y protegidos de toda perturbación,"
+      },
+      {
+        "text_es": "mientras esperamos la gloriosa venida"
+      },
+      {
+        "text_es": "de nuestro Salvador Jesucristo."
+      },
+      {
+        "rubric_es": "Junta las manos."
+      },
+      {
+        "rubric_es": "El pueblo concluye la oración aclamando:"
+      },
+      {
+        "text_es": "Tuyo es el Reino,"
+      },
+      {
+        "text_es": "tuyo el poder y la gloria"
+      },
+      {
+        "text_es": "por siempre, Señor."
+      }
+    ]
+  },
+  {
+    "id": "3.5 peace",
+    "type": "part",
+    "header": {
+      "es": "Rito de la paz"
+    },
+    "lines": [
+      {
+        "rubric_es": "Después el sacerdote, con las manos extendidas, dice en voz alta:"
+      },
+      {
+        "text_es": "Señor Jesucristo, que dijiste a tus apóstoles:"
+      },
+      {
+        "text_es": "«La paz les dejo, mi paz les doy»,"
+      },
+      {
+        "text_es": "no tengas en cuenta nuestros pecados"
+      },
+      {
+        "text_es": "sino la fe de tu Iglesia,"
+      },
+      {
+        "text_es": "y, conforme a tu palabra,"
+      },
+      {
+        "text_es": "concédele la paz y la unidad."
+      },
+      {
+        "rubric_es": "Junta las manos."
+      },
+      {
+        "text_es": "Tú que vives y reinas por los siglos de los siglos."
+      },
+      {
+        "rubric_es": "El pueblo responde:"
+      },
+      {
+        "text_es": "Amén."
+      },
+      {
+        "rubric_es": "El sacerdote, vuelto hacia al pueblo, extendiendo y juntando las manos, añade:"
+      },
+      {
+        "text_es": "La paz del Señor esté siempre con ustedes."
+      },
+      {
+        "rubric_es": "El pueblo responde:"
+      },
+      {
+        "text_es": "Y con tu espíritu."
+      },
+      {
+        "rubric_es": "Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:"
+      },
+      {
+        "text_es": "Démonos fraternalmente la paz"
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Como hijos de Dios, intercambiemos ahora"
+      },
+      {
+        "text_es": "un signo de comunión fraterna."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "En Cristo, que nos ha hecho hermanos con su cruz,"
+      },
+      {
+        "text_es": "démonos la paz como signo de reconciliación."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "En el Espíritu de Cristo resucitado,"
+      },
+      {
+        "text_es": "démonos fraternalmente la paz."
+      },
+      {
+        "rubric_es": "Y todos, según las costumbres del lugar, se intercambian un signo de paz, de comunión y de caridad. El sacerdote da la paz al diácono o al ministro."
+      }
+    ]
+  },
+  {
+    "id": "3.6 lamb",
+    "type": "part",
+    "header": {
+      "es": "Cordero de Dios"
+    },
+    "lines": [
+      {
+        "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena y pone una partícula dentro del cáliz, diciendo en secreto:"
+      },
+      {
+        "text_es": "El Cuerpo y la Sangre de nuestro Señor Jesucristo,"
+      },
+      {
+        "text_es": "unidos en este cáliz,"
+      },
+      {
+        "text_es": "sean para nosotros"
+      },
+      {
+        "text_es": "alimento de vida eterna."
+      },
+      {
+        "rubric_es": "Mientras tanto se canta o se dice:"
+      },
+      {
+        "text_es": "Cordero de Dios, que quitas el pecado del mundo, ten piedad de nosotros."
+      },
+      {
+        "text_es": "Cordero de Dios, que quitas el pecado del mundo, ten piedad de nosotros."
+      },
+      {
+        "text_es": "Cordero de Dios, que quitas el pecado del mundo, danos la paz."
+      },
+      {
+        "rubric_es": "Esta aclamación puede repetirse varias veces, si la fracción del pan se prolonga. La última vez se dice:"
+      },
+      {
+        "text_es": "danos la paz"
+      },
+      {
+        "rubric_es": "."
+      }
+    ]
+  },
+  {
+    "id": "3.7 communion_rite",
+    "type": "part",
+    "header": {
+      "es": "Comunión"
+    },
+    "lines": [
+      {
+        "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto:"
+      },
+      {
+        "text_es": "Señor Jesucristo, Hijo del Dios vivo,"
+      },
+      {
+        "text_es": "que por voluntad del Padre,"
+      },
+      {
+        "text_es": "cooperando el Espíritu Santo,"
+      },
+      {
+        "text_es": "diste con tu muerte la Vida al mundo,"
+      },
+      {
+        "text_es": "líbrame, por la recepción de tu Cuerpo y de tu Sangre,"
+      },
+      {
+        "text_es": "de todas mis culpas y de todo mal."
+      },
+      {
+        "text_es": "Concédeme cumplir siempre tus mandamientos"
+      },
+      {
+        "text_es": "y jamás permita que me separe de ti."
+      },
+      {
+        "rubric_es": "O bien:"
+      },
+      {
+        "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre"
+      },
+      {
+        "text_es": "no sea para mí un motivo de juicio y condenación,"
+      },
+      {
+        "text_es": "sino que, por tu piedad"
+      },
+      {
+        "text_es": "me sirva para defensa de alma y cuerpo,"
+      },
+      {
+        "text_es": "y como remedio de salvación."
+      },
+      {
+        "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevada sobre la patena o sobre el cáliz, de cara al pueblo, dice con voz clara:"
+      },
+      {
+        "text_es": "Este es el Cordero de Dios,"
+      },
+      {
+        "text_es": "que quita el pecado del mundo."
+      },
+      {
+        "text_es": "Dichosos los invitados a la cena del Señor."
+      },
+      {
+        "rubric_es": "Y, juntamente con el pueblo, añade:"
+      },
+      {
+        "text_es": "Señor, no soy digno"
+      },
+      {
+        "text_es": "de que entres en mi casa,"
+      },
+      {
+        "text_es": "pero una palabra tuya"
+      },
+      {
+        "text_es": "bastará para sanarme."
+      },
+      {
+        "rubric_es": "El sacerdote, vuelto hacia el altar, dice en secreto:"
+      },
+      {
+        "text_es": "El Cuerpo de Cristo me proteja para la Vida eterna."
+      },
+      {
+        "rubric_es": "Y comulga reverentemente el Cuerpo de Cristo."
+      },
+      {
+        "rubric_es": "Después toma cáliz, y dice en secreto:"
+      },
+      {
+        "text_es": "La Sangre de Cristo me guarde para la Vida eterna."
+      },
+      {
+        "rubric_es": "Y bebe reverentemente la Sangre de Cristo."
+      },
+      {
+        "rubric_es": "Después toma la patena o la píxide y se acerca a los que van a comulgar. Muestra el pan consagrado a cada uno, sosteniéndolo un poco elevado y le dice:"
+      },
+      {
+        "text_es": "El Cuerpo de Cristo."
+      },
+      {
+        "rubric_es": "El que va a comulgar responde:"
+      },
+      {
+        "text_es": "Amén."
+      },
+      {
+        "rubric_es": "Y comulga."
+      },
+      {
+        "rubric_es": "El diácono, si distribuye la sagrada Comunión, lo realiza de la misma manera observan los mismos ritos."
+      },
+      {
+        "rubric_es": "Si se comulga bajo las dos especies se observa el rito descrito en su lugar."
+      },
+      {
+        "rubric_es": "Cuando el sacerdote ha comulgado el Cuerpo de Cristo, comienza el canto de comunión."
+      },
+      {
+        "rubric_es": "Finalizada la Comunión, el sacerdote o el diácono, o el acólito, purifica la patena sobre el cáliz y también el cáliz."
+      },
+      {
+        "rubric_es": "Mientras hace la purificación, el sacerdote dice en secreto:"
+      },
+      {
+        "text_es": "Haz, Señor, que recibamos con un corazón limpio"
+      },
+      {
+        "text_es": "el alimento que acabamos de tomar,"
+      },
+      {
+        "text_es": "y que el don que nos haces en esta vida"
+      },
+      {
+        "text_es": "nos sirva para la vida eterna."
+      },
+      {
+        "rubric_es": "Después el sacerdote puede volver a la sede. Si se considera oportuno, se puede dejar un breve espacio de silencio sagrado o entonar un salmo o algún cántico de alabanza."
+      }
+    ]
+  },
+  {
+    "id": "3.8 communion",
+    "type": "part",
+    "header": {
+      "es": "Antífona de comunión"
+    },
+    "lines": [
+      {
+        "text_es": "(Antífona de comunión del día)"
+      }
+    ]
+  },
+  {
+    "id": "3.9 prayer_after",
+    "type": "part",
+    "header": {
+      "es": "Oración después de la comunión"
+    },
+    "lines": [
+      {
+        "text_es": "Oremos.",
+        "sp_es": "V."
+      },
+      {
+        "text_es": "(Oración después de la comunión del día)"
+      },
+      {
+        "text_es": "Amén.",
+        "sp_es": "R."
+      }
+    ]
+  },
+  {
+    "id": "4. THE CONCLUDING RITES",
+    "type": "section",
+    "es": "Rito de conclusión"
+  },
+  {
+    "id": "4.1 announcement",
+    "type": "part",
+    "header": {
+      "es": "Avisos"
+    },
+    "lines": [
+      {
+        "rubric_es": "Siguen, si es necesario, breves avisos para el pueblo."
+      }
+    ]
+  },
+  {
+    "id": "4.2 blessing",
+    "type": "selectable",
+    "header": {
+      "es": "Bendición"
+    },
+    "variants": {
+      "1": {
+        "label": {
+          "es": "Bendición simple"
+        },
+        "lines": [
+          {
+            "rubric_es": "Después tiene lugar la despedida. El sacerdote, vuelto hacia el pueblo, extendiendo las manos, dice:"
+          },
+          {
+            "text_es": "El Señor esté con ustedes."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu."
+          },
+          {
+            "rubric_es": "El sacerdote bendice al pueblo, diciendo:"
+          },
+          {
+            "text_es": "La bendición de Dios todopoderoso,"
+          },
+          {
+            "text_es": "Padre, Hijo, ✠"
+          },
+          {
+            "text_es": "y el Espíritu Santo,"
+          },
+          {
+            "text_es": "descienda sobre ustedes."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Amén."
+          },
+          {
+            "rubric_es": "En algunos días u ocasiones, a ésta fórmula de bendición precede, según las rúbricas, otra fórmula de bendición más solemne o una oración sobre el pueblo."
+          }
+        ]
+      },
+      "2": {
+        "label": {
+          "es": "Bendición pontifical"
+        },
+        "lines": [
+          {
+            "rubric_es": "En la Misa pontifical el celebrante recibe la mitra y, extendiendo las manos, dice:"
+          },
+          {
+            "text_es": "El Señor esté con ustedes."
+          },
+          {
+            "rubric_es": "Todos responden:"
+          },
+          {
+            "text_es": "Y con tu espíritu."
+          },
+          {
+            "rubric_es": "El celebrante dice:"
+          },
+          {
+            "text_es": "Bendito sea el nombre del Señor."
+          },
+          {
+            "rubric_es": "Todos responden:"
+          },
+          {
+            "text_es": "Desde ahora y para siempre."
+          },
+          {
+            "rubric_es": "El celebrante dice:"
+          },
+          {
+            "text_es": "Nuestro auxilio es el nombre del Señor."
+          },
+          {
+            "rubric_es": "Todos responden:"
+          },
+          {
+            "text_es": "Que hizo el cielo y la tierra."
+          },
+          {
+            "rubric_es": "Entonces el celebrante, habiendo recibido el báculo, si lo usa, dice:"
+          },
+          {
+            "text_es": "La bendición de Dios todopoderoso,"
+          },
+          {
+            "rubric_es": "Y, haciendo tres veces la señal de la cruz sobre el pueblo, añade:"
+          },
+          {
+            "text_es": "Padre, ✠"
+          },
+          {
+            "text_es": "Hijo, ✠"
+          },
+          {
+            "text_es": "y Espíritu ✠"
+          },
+          {
+            "text_es": "Santo,"
+          },
+          {
+            "text_es": "descienda sobre ustedes."
+          },
+          {
+            "rubric_es": "Todos responden:"
+          },
+          {
+            "text_es": "Amén."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "4.3 dismissal",
+    "type": "selectable",
+    "header": {
+      "es": "Despedida"
+    },
+    "variants": {
+      "1": {
+        "label": {
+          "es": "Pueden ir en paz."
+        },
+        "lines": [
+          {
+            "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
+          },
+          {
+            "text_es": "Pueden ir en paz."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Demos gracias a Dios."
+          }
+        ]
+      },
+      "2": {
+        "label": {
+          "es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz."
+        },
+        "lines": [
+          {
+            "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "La alegría del Señor sea nuestra fuerza."
+          },
+          {
+            "text_es": "Pueden ir en paz."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Demos gracias a Dios."
+          }
+        ]
+      },
+      "3": {
+        "label": {
+          "es": "Glorifiquen al Señor con su vida. Pueden ir en paz."
+        },
+        "lines": [
+          {
+            "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "Glorifiquen al Señor con su vida."
+          },
+          {
+            "text_es": "Pueden ir en paz."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Demos gracias a Dios."
+          }
+        ]
+      },
+      "4": {
+        "label": {
+          "es": "En el nombre del Señor, pueden ir en paz."
+        },
+        "lines": [
+          {
+            "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
+          },
+          {
+            "rubric_es": "O bien:"
+          },
+          {
+            "text_es": "En el nombre del Señor, pueden ir en paz."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Demos gracias a Dios."
+          }
+        ]
+      },
+      "5": {
+        "label": {
+          "es": "Anuncien a todos la alegría del Señor resucitado. Pueden ir en paz."
+        },
+        "lines": [
+          {
+            "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
+          },
+          {
+            "rubric_es": "O bien, especialmente en los domingos de pascua:"
+          },
+          {
+            "text_es": "Anuncien a todos la alegría del Señor resucitado."
+          },
+          {
+            "text_es": "Pueden ir en paz."
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Demos gracias a Dios."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "4.4 final_song",
+    "type": "part",
+    "header": {
+      "es": "Conclusión"
+    },
+    "lines": [
+      {
+        "rubric_es": "Después el sacerdote venera el altar con un beso, como al comienzo. Seguidamente, hecha inclinación profunda con los ministros, se retira."
+      },
+      {
+        "rubric_es": "Si inmediatamente sigue alguna acción litúrgica, se omite el rito de despedida."
+      }
+    ]
+  }
+]);
+  const national = {
+  "AR": {
+    "jurisdictionName": "Argentina",
+    "ordinaryLanguage": "ES",
+    "ordinaryDataset": "AR",
+    "ordinaryEdition": "Misal Romano · tercera edición típica, castellano del Cono Sur",
+    "ordinarySource": {
+      "title": "Misal Romano del Cono Sur",
+      "url": "https://curas.com.ar/Misal3/Misas3.htm"
+    },
+    "source": {
+      "title": "Calendario litúrgico de Argentina",
+      "calendarUrl": "https://curas.com.ar/Calendario/Calendario_lit%C3%BArgico_2026_para_la_Argentina.pdf"
+    },
+    "dailyReadings": {
+      "provider": "Leccionario del Cono Sur",
+      "translation": "El Libro del Pueblo de Dios",
+      "calendar": "Argentina",
+      "urlStrategy": "cono-sur"
+    },
+    "calendar": {
+      "01-24": {
+        "title": "San Francisco de Sales",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24",
+        "names": {
+          "ES": "San Francisco de Sales"
+        }
+      },
+      "02-03": {
+        "title": "SAN BLAS",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03",
+        "names": {
+          "ES": "SAN BLAS"
+        }
+      },
+      "02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        }
+      },
+      "04-27": {
+        "title": "Santo Toribio de Mogrovejo",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril27",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo"
+        }
+      },
+      "05-03": {
+        "title": "SAN FELIPE Y SANTIAGO",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03",
+        "names": {
+          "ES": "SAN FELIPE Y SANTIAGO"
+        }
+      },
+      "05-15": {
+        "title": "San Isidro",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo15",
+        "names": {
+          "ES": "San Isidro"
+        }
+      },
+      "05-24": {
+        "title": "Santa María",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo24",
+        "names": {
+          "ES": "Santa María"
+        }
+      },
+      "07-13": {
+        "title": "San Enrique",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio13",
+        "names": {
+          "ES": "San Enrique"
+        }
+      },
+      "07-14": {
+        "title": "San Camilo de Lelis",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio14",
+        "names": {
+          "ES": "San Camilo de Lelis"
+        }
+      },
+      "07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio16",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        }
+      },
+      "07-24": {
+        "title": "San Francisco Solano",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio24",
+        "names": {
+          "ES": "San Francisco Solano"
+        }
+      },
+      "08-26": {
+        "title": "Beato Ceferino Namuncurá",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#26",
+        "names": {
+          "ES": "Beato Ceferino Namuncurá"
+        }
+      },
+      "09-24": {
+        "title": "Nuestra Señora de la Merced",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#24",
+        "names": {
+          "ES": "Nuestra Señora de la Merced"
+        }
+      },
+      "10-12": {
+        "title": "Nuestra Señora del Pilar",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#12",
+        "names": {
+          "ES": "Nuestra Señora del Pilar"
+        }
+      },
+      "10-24": {
+        "title": "San Antonio María Claret",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24",
+        "names": {
+          "ES": "San Antonio María Claret"
+        }
+      },
+      "11-03": {
+        "title": "San Martín de Porres",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03",
+        "names": {
+          "ES": "San Martín de Porres"
+        }
+      },
+      "11-15": {
+        "title": "San Alberto Magno",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#15",
+        "names": {
+          "ES": "San Alberto Magno"
+        }
+      },
+      "11-17": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      },
+      "11-19": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#19",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      },
+      "05-08": {
+        "title": "Nuestra Señora de Luján",
+        "rank": "solemnity",
+        "color": "white",
+        "observanceId": "particular-05-08-lujan",
+        "sourceUrl": "https://curas.com.ar/Calendario/Calendario_lit%C3%BArgico_2026_para_la_Argentina.pdf",
+        "names": {
+          "ES": "Nuestra Señora de Luján"
+        }
+      }
+    },
+    "dynamicCalendarByDate": {
+      "2026-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0101"
+      },
+      "2026-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0102"
+      },
+      "2026-01-06": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0106"
+      },
+      "2026-01-11": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0111"
+      },
+      "2026-01-17": {
+        "title": "San Antonio, abad",
+        "names": {
+          "ES": "San Antonio, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0117"
+      },
+      "2026-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0121"
+      },
+      "2026-01-24": {
+        "title": "San Francisco de Sales, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Francisco de Sales, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0124"
+      },
+      "2026-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0126"
+      },
+      "2026-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0128"
+      },
+      "2026-01-31": {
+        "title": "San Juan Bosco, presbítero",
+        "names": {
+          "ES": "San Juan Bosco, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0131"
+      },
+      "2026-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0202"
+      },
+      "2026-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0205"
+      },
+      "2026-02-06": {
+        "title": "Santos Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0206"
+      },
+      "2026-02-10": {
+        "title": "Santa Escolástica, virgen",
+        "names": {
+          "ES": "Santa Escolástica, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0210"
+      },
+      "2026-02-14": {
+        "title": "Santos Cirilo, monje, y Metodio, obispo",
+        "names": {
+          "ES": "Santos Cirilo, monje, y Metodio, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0214"
+      },
+      "2026-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0319"
+      },
+      "2026-03-25": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0325"
+      },
+      "2026-04-06": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0406"
+      },
+      "2026-04-07": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0407"
+      },
+      "2026-04-08": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0408"
+      },
+      "2026-04-09": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0409"
+      },
+      "2026-04-10": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0410"
+      },
+      "2026-04-11": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0411"
+      },
+      "2026-04-18": {
+        "title": "Nuestra Señora del Valle",
+        "names": {
+          "ES": "Nuestra Señora del Valle"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0418"
+      },
+      "2026-04-25": {
+        "title": "San Marcos, evangelista",
+        "names": {
+          "ES": "San Marcos, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0425"
+      },
+      "2026-04-27": {
+        "title": "Santo Toribio de Mogrovejo, obispo",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo, obispo"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0427"
+      },
+      "2026-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0429"
+      },
+      "2026-05-02": {
+        "title": "San Atanasio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Atanasio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0502"
+      },
+      "2026-05-08": {
+        "title": "Nuestra Señora de Luján",
+        "names": {
+          "ES": "Nuestra Señora de Luján"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0508",
+        "observanceId": "particular-05-08-lujan"
+      },
+      "2026-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0514"
+      },
+      "2026-05-17": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0517"
+      },
+      "2026-05-24": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0524"
+      },
+      "2026-05-25": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0525"
+      },
+      "2026-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0526"
+      },
+      "2026-05-31": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0531"
+      },
+      "2026-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0601"
+      },
+      "2026-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0603"
+      },
+      "2026-06-05": {
+        "title": "San Bonifacio, obispo y mártir",
+        "names": {
+          "ES": "San Bonifacio, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0605"
+      },
+      "2026-06-07": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0607"
+      },
+      "2026-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0611"
+      },
+      "2026-06-12": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0612"
+      },
+      "2026-06-13": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0613"
+      },
+      "2026-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0624"
+      },
+      "2026-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0629"
+      },
+      "2026-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0703"
+      },
+      "2026-07-09": {
+        "title": "Nuestra Señora de Itatí",
+        "names": {
+          "ES": "Nuestra Señora de Itatí"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0709"
+      },
+      "2026-07-11": {
+        "title": "San Benito, abad",
+        "names": {
+          "ES": "San Benito, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0711"
+      },
+      "2026-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0715"
+      },
+      "2026-07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0716"
+      },
+      "2026-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0722"
+      },
+      "2026-07-24": {
+        "title": "San Francisco Solano, presbítero",
+        "names": {
+          "ES": "San Francisco Solano, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0724"
+      },
+      "2026-07-25": {
+        "title": "Santiago, apóstol",
+        "names": {
+          "ES": "Santiago, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0725"
+      },
+      "2026-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0729"
+      },
+      "2026-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0731"
+      },
+      "2026-08-01": {
+        "title": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0801"
+      },
+      "2026-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0804"
+      },
+      "2026-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0806"
+      },
+      "2026-08-08": {
+        "title": "Santo Domingo, presbítero",
+        "names": {
+          "ES": "Santo Domingo, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0808"
+      },
+      "2026-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0810"
+      },
+      "2026-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0811"
+      },
+      "2026-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0814"
+      },
+      "2026-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0815"
+      },
+      "2026-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0820"
+      },
+      "2026-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0821"
+      },
+      "2026-08-22": {
+        "title": "La Santísima Virgen María, Reina",
+        "names": {
+          "ES": "La Santísima Virgen María, Reina"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0822"
+      },
+      "2026-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0824"
+      },
+      "2026-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0827"
+      },
+      "2026-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0828"
+      },
+      "2026-08-29": {
+        "title": "El Martirio de San Juan Bautista",
+        "names": {
+          "ES": "El Martirio de San Juan Bautista"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0829"
+      },
+      "2026-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0903"
+      },
+      "2026-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0908"
+      },
+      "2026-09-14": {
+        "title": "La Exaltación de la Santa Cruz",
+        "names": {
+          "ES": "La Exaltación de la Santa Cruz"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0914"
+      },
+      "2026-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0915"
+      },
+      "2026-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0916"
+      },
+      "2026-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0921"
+      },
+      "2026-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0923"
+      },
+      "2026-09-24": {
+        "title": "Nuestra Señora de la Merced",
+        "names": {
+          "ES": "Nuestra Señora de la Merced"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0924"
+      },
+      "2026-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0929"
+      },
+      "2026-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#0930"
+      },
+      "2026-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1001"
+      },
+      "2026-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1002"
+      },
+      "2026-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1007"
+      },
+      "2026-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1015"
+      },
+      "2026-10-17": {
+        "title": "San Ignacio de Antioquía, obispo y mártir",
+        "names": {
+          "ES": "San Ignacio de Antioquía, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1017"
+      },
+      "2026-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1028"
+      },
+      "2026-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1101"
+      },
+      "2026-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1104"
+      },
+      "2026-11-07": {
+        "title": "María, Madre y Medianera de la gracia",
+        "names": {
+          "ES": "María, Madre y Medianera de la gracia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1107"
+      },
+      "2026-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1109"
+      },
+      "2026-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1110"
+      },
+      "2026-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1111"
+      },
+      "2026-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1112"
+      },
+      "2026-11-17": {
+        "title": "Santos Roque González, Alfonso Rodríguez y Juan del Castillo, presbíteros y mártires",
+        "names": {
+          "ES": "Santos Roque González, Alfonso Rodríguez y Juan del Castillo, presbíteros y mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1117"
+      },
+      "2026-11-19": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1119"
+      },
+      "2026-11-21": {
+        "title": "La Presentación de la Santísima Virgen María",
+        "names": {
+          "ES": "La Presentación de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1121"
+      },
+      "2026-11-22": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1122"
+      },
+      "2026-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1124"
+      },
+      "2026-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1130"
+      },
+      "2026-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1203"
+      },
+      "2026-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1207"
+      },
+      "2026-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1208"
+      },
+      "2026-12-12": {
+        "title": "Nuestra Señora de Guadalupe",
+        "names": {
+          "ES": "Nuestra Señora de Guadalupe"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1212"
+      },
+      "2026-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1214"
+      },
+      "2026-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1225"
+      },
+      "2026-12-26": {
+        "title": "San Esteban, protomártir",
+        "names": {
+          "ES": "San Esteban, protomártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1226"
+      },
+      "2026-12-27": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1227"
+      },
+      "2026-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/AR-es#1228"
+      },
+      "2027-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0101"
+      },
+      "2027-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0102"
+      },
+      "2027-01-06": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0106"
+      },
+      "2027-01-10": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0110"
+      },
+      "2027-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0121"
+      },
+      "2027-01-25": {
+        "title": "La Conversión de San Pablo, apóstol",
+        "names": {
+          "ES": "La Conversión de San Pablo, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0125"
+      },
+      "2027-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0126"
+      },
+      "2027-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0128"
+      },
+      "2027-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0202"
+      },
+      "2027-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0205"
+      },
+      "2027-02-06": {
+        "title": "Santos Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0206"
+      },
+      "2027-02-22": {
+        "title": "La Cátedra de San Pedro, apóstol",
+        "names": {
+          "ES": "La Cátedra de San Pedro, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0222"
+      },
+      "2027-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0319"
+      },
+      "2027-03-29": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0329"
+      },
+      "2027-03-30": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0330"
+      },
+      "2027-03-31": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0331"
+      },
+      "2027-04-01": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0401"
+      },
+      "2027-04-02": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0402"
+      },
+      "2027-04-03": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0403"
+      },
+      "2027-04-05": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0405"
+      },
+      "2027-04-07": {
+        "title": "San Juan Bautista de La Salle, presbítero",
+        "names": {
+          "ES": "San Juan Bautista de La Salle, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0407"
+      },
+      "2027-04-10": {
+        "title": "Nuestra Señora del Valle",
+        "names": {
+          "ES": "Nuestra Señora del Valle"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0410"
+      },
+      "2027-04-27": {
+        "title": "Santo Toribio de Mogrovejo, obispo",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo, obispo"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0427"
+      },
+      "2027-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0429"
+      },
+      "2027-05-03": {
+        "title": "Santos Felipe y Santiago, apóstoles",
+        "names": {
+          "ES": "Santos Felipe y Santiago, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0503"
+      },
+      "2027-05-08": {
+        "title": "Nuestra Señora de Luján",
+        "names": {
+          "ES": "Nuestra Señora de Luján"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0508",
+        "observanceId": "particular-05-08-lujan"
+      },
+      "2027-05-09": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0509"
+      },
+      "2027-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0514"
+      },
+      "2027-05-16": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0516"
+      },
+      "2027-05-17": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0517"
+      },
+      "2027-05-23": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0523"
+      },
+      "2027-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0526"
+      },
+      "2027-05-30": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0530"
+      },
+      "2027-05-31": {
+        "title": "La Visitación de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Visitación de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0531"
+      },
+      "2027-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0601"
+      },
+      "2027-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0603"
+      },
+      "2027-06-04": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0604"
+      },
+      "2027-06-05": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0605"
+      },
+      "2027-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0611"
+      },
+      "2027-06-21": {
+        "title": "San Luis Gonzaga, religioso",
+        "names": {
+          "ES": "San Luis Gonzaga, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0621"
+      },
+      "2027-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0624"
+      },
+      "2027-06-28": {
+        "title": "San Ireneo, obispo, mártir y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ireneo, obispo, mártir y doctor de la Iglesia"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0628"
+      },
+      "2027-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0629"
+      },
+      "2027-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0703"
+      },
+      "2027-07-09": {
+        "title": "Nuestra Señora de Itatí",
+        "names": {
+          "ES": "Nuestra Señora de Itatí"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0709"
+      },
+      "2027-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0715"
+      },
+      "2027-07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0716"
+      },
+      "2027-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0722"
+      },
+      "2027-07-24": {
+        "title": "San Francisco Solano, presbítero",
+        "names": {
+          "ES": "San Francisco Solano, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0724"
+      },
+      "2027-07-26": {
+        "title": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María",
+        "names": {
+          "ES": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0726"
+      },
+      "2027-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0729"
+      },
+      "2027-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0731"
+      },
+      "2027-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0804"
+      },
+      "2027-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0806"
+      },
+      "2027-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0810"
+      },
+      "2027-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0811"
+      },
+      "2027-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0814"
+      },
+      "2027-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0815"
+      },
+      "2027-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0820"
+      },
+      "2027-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0821"
+      },
+      "2027-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0824"
+      },
+      "2027-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0827"
+      },
+      "2027-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0828"
+      },
+      "2027-08-30": {
+        "title": "Santa Rosa de Lima, virgen",
+        "names": {
+          "ES": "Santa Rosa de Lima, virgen"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0830"
+      },
+      "2027-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0903"
+      },
+      "2027-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0908"
+      },
+      "2027-09-13": {
+        "title": "San Juan Crisóstomo, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan Crisóstomo, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0913"
+      },
+      "2027-09-14": {
+        "title": "La Exaltación de la Santa Cruz",
+        "names": {
+          "ES": "La Exaltación de la Santa Cruz"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0914"
+      },
+      "2027-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0915"
+      },
+      "2027-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0916"
+      },
+      "2027-09-20": {
+        "title": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0920"
+      },
+      "2027-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0921"
+      },
+      "2027-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0923"
+      },
+      "2027-09-24": {
+        "title": "Nuestra Señora de la Merced",
+        "names": {
+          "ES": "Nuestra Señora de la Merced"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0924"
+      },
+      "2027-09-27": {
+        "title": "San Vicente de Paúl, presbítero",
+        "names": {
+          "ES": "San Vicente de Paúl, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0927"
+      },
+      "2027-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0929"
+      },
+      "2027-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#0930"
+      },
+      "2027-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1001"
+      },
+      "2027-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1002"
+      },
+      "2027-10-04": {
+        "title": "San Francisco de Asís, religioso",
+        "names": {
+          "ES": "San Francisco de Asís, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1004"
+      },
+      "2027-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1007"
+      },
+      "2027-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1015"
+      },
+      "2027-10-18": {
+        "title": "San Lucas, evangelista",
+        "names": {
+          "ES": "San Lucas, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1018"
+      },
+      "2027-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1028"
+      },
+      "2027-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1101"
+      },
+      "2027-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1104"
+      },
+      "2027-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1109"
+      },
+      "2027-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1110"
+      },
+      "2027-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1111"
+      },
+      "2027-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1112"
+      },
+      "2027-11-17": {
+        "title": "Santos Roque González, Alfonso Rodríguez y Juan del Castillo, presbíteros y mártires",
+        "names": {
+          "ES": "Santos Roque González, Alfonso Rodríguez y Juan del Castillo, presbíteros y mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1117"
+      },
+      "2027-11-19": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1119"
+      },
+      "2027-11-21": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1121"
+      },
+      "2027-11-22": {
+        "title": "Santa Cecilia, virgen y mártir",
+        "names": {
+          "ES": "Santa Cecilia, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1122"
+      },
+      "2027-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1124"
+      },
+      "2027-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1130"
+      },
+      "2027-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1203"
+      },
+      "2027-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1207"
+      },
+      "2027-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1208"
+      },
+      "2027-12-13": {
+        "title": "Santa Lucía, virgen y mártir",
+        "names": {
+          "ES": "Santa Lucía, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1213"
+      },
+      "2027-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1214"
+      },
+      "2027-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1225"
+      },
+      "2027-12-26": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1226"
+      },
+      "2027-12-27": {
+        "title": "San Juan, apóstol y evangelista",
+        "names": {
+          "ES": "San Juan, apóstol y evangelista"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1227"
+      },
+      "2027-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/AR-es#1228"
+      }
+    },
+    "conoSurLectionary": {
+      "temporal": {
+        "advent-1": "https://www.curas.com.ar/Leccionarios/Ferial/1%20Adviento/Primera%20Semana.htm",
+        "advent-2": "https://www.curas.com.ar/Leccionarios/Ferial/1%20Adviento/Segunda%20Semana.htm",
+        "advent-3": "https://www.curas.com.ar/Leccionarios/Ferial/1%20Adviento/Tercera%20Semana.htm",
+        "advent-dates": "https://www.curas.com.ar/Leccionarios/Ferial/1%20Adviento/Ferias%20de%20Adviento.htm",
+        "christmas-dates": "https://www.curas.com.ar/Leccionarios/Ferial/2%20Navidad/Ferias%20del%20Tiempo%20de%20Navidad.htm",
+        "lent-0-3": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Ceniza/Miercoles%20de%20ceniza.htm",
+        "lent-0-4": "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Ljvsceniza.htm",
+        "lent-0-5": "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Lvsceniza.htm",
+        "lent-0-6": "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Lsabceniza.htm",
+        "lent-1": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Primera%20Semana.htm",
+        "lent-2": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Segunda%20Semana.htm",
+        "lent-3": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Tercera%20Semana.htm",
+        "lent-4": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Cuarta%20Semana.htm",
+        "lent-5": "https://www.curas.com.ar/Leccionarios/Ferial/3%20Cuaresma/Quinta%20Semana.htm",
+        "easter-2": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L2sempascua.htm",
+        "easter-3": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L3sempascua.htm",
+        "easter-4": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L4sempascua.htm",
+        "easter-5": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L5sempascua.htm",
+        "easter-6": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L6sempascua.htm",
+        "easter-7": "https://www.curas.com.ar/Leccionarios/Ferial/4%20Pascua/L7sempascua.htm",
+        "ordinary-1": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L01semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L01semtop.htm"
+        ],
+        "ordinary-2": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L02semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L02semtop.htm"
+        ],
+        "ordinary-3": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L03semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L03semtop.htm"
+        ],
+        "ordinary-4": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L04semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L04semtop.htm"
+        ],
+        "ordinary-5": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L05semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L05semtop.htm"
+        ],
+        "ordinary-6": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L06semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L06semtop.htm"
+        ],
+        "ordinary-7": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L07semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L07semtop.htm"
+        ],
+        "ordinary-8": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L08semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L08semtop.htm"
+        ],
+        "ordinary-9": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L09semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L09semtop.htm"
+        ],
+        "ordinary-10": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L10semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L10semtop.htm"
+        ],
+        "ordinary-11": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L11semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L11semtop.htm"
+        ],
+        "ordinary-12": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L12semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L12semtop.htm"
+        ],
+        "ordinary-13": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L13semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L13semtop.htm"
+        ],
+        "ordinary-14": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L14semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L14semtop.htm"
+        ],
+        "ordinary-15": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L15semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L15semtop.htm"
+        ],
+        "ordinary-16": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L16semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L16semtop.htm"
+        ],
+        "ordinary-17": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L17semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L17semtop.htm"
+        ],
+        "ordinary-18": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L18semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L18semtop.htm"
+        ],
+        "ordinary-19": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L19semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L19semtop.htm"
+        ],
+        "ordinary-20": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L20semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L20semtop.htm"
+        ],
+        "ordinary-21": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L21semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L21semtop.htm"
+        ],
+        "ordinary-22": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L22semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L22semtop.htm"
+        ],
+        "ordinary-23": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L23semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L23semtop.htm"
+        ],
+        "ordinary-24": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L24semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L24semtop.htm"
+        ],
+        "ordinary-25": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L25semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L25semtop.htm"
+        ],
+        "ordinary-26": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L26semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L26semtop.htm"
+        ],
+        "ordinary-27": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L27semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L27semtop.htm"
+        ],
+        "ordinary-28": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L28semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L28semtop.htm"
+        ],
+        "ordinary-29": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L29semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L29semtop.htm"
+        ],
+        "ordinary-30": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L30semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L30semtop.htm"
+        ],
+        "ordinary-31": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L31semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L31semtop.htm"
+        ],
+        "ordinary-32": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L32semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L32semtop.htm"
+        ],
+        "ordinary-33": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L33semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L33semtop.htm"
+        ],
+        "ordinary-34": [
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L34semtoi.htm",
+          "https://www.curas.com.ar/Leccionarios/Ferial/Semanas/L34semtop.htm"
+        ],
+        "sunday-advent-1": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo1a.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo1b.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo1c.htm"
+        ],
+        "sunday-advent-2": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo2a.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo2b.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo2c.htm"
+        ],
+        "sunday-advent-3": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo3a.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo3b.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo3c.htm"
+        ],
+        "sunday-advent-4": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo4a.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo4b.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladvdgo4c.htm"
+        ],
+        "christmas_vigil": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Adviento/Ladv2512Iv.htm"
+        ],
+        "christmas_night": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/L2512n.htm"
+        ],
+        "christmas_dawn": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/L2512a.htm"
+        ],
+        "christmas_day": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/L2512d.htm"
+        ],
+        "holy_family": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LsgdafliaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LsgdafliaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LsgdafliaC.htm"
+        ],
+        "mary_mother_of_god": [
+          "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Ltheotokos.htm"
+        ],
+        "christmas_sunday_2": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/L2dgonav.htm"
+        ],
+        "epiphany": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/Lepifania.htm"
+        ],
+        "baptism": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LbmodlseniorA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LbmodlseniorB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/LbmodlseniorC.htm"
+        ],
+        "sunday-lent-1": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L1dgocuaresmaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L1dgocuaresmaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L1dgocuaresmaC.htm"
+        ],
+        "sunday-lent-2": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L2dgocuaresmaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L2dgocuaresmaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L2dgocuaresmaC.htm"
+        ],
+        "sunday-lent-3": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L3dgocuaresmaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L3dgocuaresmaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L3dgocuaresmaC.htm"
+        ],
+        "sunday-lent-4": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L4dgocuaresmaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L4dgocuaresmaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L4dgocuaresmaC.htm"
+        ],
+        "sunday-lent-5": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L5dgocuaresmaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L5dgocuaresmaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/L5dgocuaresmaC.htm"
+        ],
+        "palm_sunday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/LramosA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/LramosB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/LramosC.htm"
+        ],
+        "holy_monday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Llnsto.htm"
+        ],
+        "holy_tuesday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Lmtsto.htm"
+        ],
+        "holy_wednesday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Lmcsanto.htm"
+        ],
+        "holy_thursday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Ljvsanto.htm"
+        ],
+        "good_friday": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Cuaresma/Lvsanto.htm"
+        ],
+        "easter_vigil": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LvigiliapascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LvigiliapascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LvigiliapascuaC.htm"
+        ],
+        "easter_day": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/Ldiadepascua.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/Ldiadepascua.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/Ldiadepascua.htm"
+        ],
+        "sunday-easter-2": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L2dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L2dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L2dgopascuaC.htm"
+        ],
+        "sunday-easter-3": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L3dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L3dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L3dgopascuaC.htm"
+        ],
+        "sunday-easter-4": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L4dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L4dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L4dgopascuaC.htm"
+        ],
+        "sunday-easter-5": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L5dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L5dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L5dgopascuaC.htm"
+        ],
+        "sunday-easter-6": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L6dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L6dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L6dgopascuaC.htm"
+        ],
+        "ascension": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LascencionA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LascencionB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/LascencionC.htm"
+        ],
+        "sunday-easter-7": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L7dgopascuaA.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L7dgopascuaB.htm",
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/L7dgopascuaC.htm"
+        ],
+        "pentecost_vigil": [
+          "https://www.curas.com.ar/Leccionarios/Tiempos/Pascua/Lvispentecostes.htm"
+        ],
+        "pentecost": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/LpentecostesA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LpentecostesB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LpentecostesC.htm"
+        ],
+        "trinity": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/LsmatrinidadA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LsmatrinidadB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LsmatrinidadC.htm"
+        ],
+        "corpus_christi": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/LcorpusA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LcorpusB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/LcorpusC.htm"
+        ],
+        "sacred_heart": [
+          "https://www.curas.com.ar/Leccionarios/Santoral/06junio/LsgdocorazonA.htm",
+          "https://www.curas.com.ar/Leccionarios/Santoral/06junio/LsgdocorazonB.htm",
+          "https://www.curas.com.ar/Leccionarios/Santoral/06junio/LsgdocorazonC.htm"
+        ],
+        "sunday-ordinary-02": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L02dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L02dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L02dgotoC.htm"
+        ],
+        "sunday-ordinary-03": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L03dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L03dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L03dgotoC.htm"
+        ],
+        "sunday-ordinary-04": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L04dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L04dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L04dgotoC.htm"
+        ],
+        "sunday-ordinary-05": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L05dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L05dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L05dgotoC.htm"
+        ],
+        "sunday-ordinary-06": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L06dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L06dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L06dgotoC.htm"
+        ],
+        "sunday-ordinary-07": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L07dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L07dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L07dgotoC.htm"
+        ],
+        "sunday-ordinary-08": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L08dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L08dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L08dgotoC.htm"
+        ],
+        "sunday-ordinary-09": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L09dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L09dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L09dgotoC.htm"
+        ],
+        "sunday-ordinary-10": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L10dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L10dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L10dgotoC.htm"
+        ],
+        "sunday-ordinary-11": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L11dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L11dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L11dgotoC.htm"
+        ],
+        "sunday-ordinary-12": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L12dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L12dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L12dgotoC.htm"
+        ],
+        "sunday-ordinary-13": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L13dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L13dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L13dgotoC.htm"
+        ],
+        "sunday-ordinary-14": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L14dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L14dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L14dgotoC.htm"
+        ],
+        "sunday-ordinary-15": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L15dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L15dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L15dgotoC.htm"
+        ],
+        "sunday-ordinary-16": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L16dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L16dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L16dgotoC.htm"
+        ],
+        "sunday-ordinary-17": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L17dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L17dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L17dgotoC.htm"
+        ],
+        "sunday-ordinary-18": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L18dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L18dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L18dgotoC.htm"
+        ],
+        "sunday-ordinary-19": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L19dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L19dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L19dgotoC.htm"
+        ],
+        "sunday-ordinary-20": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L20dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L20dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L20dgotoC.htm"
+        ],
+        "sunday-ordinary-21": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L21dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L21dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L21dgotoC.htm"
+        ],
+        "sunday-ordinary-22": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L22dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L22dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L22dgotoC.htm"
+        ],
+        "sunday-ordinary-23": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L23dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L23dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L23dgotoC.htm"
+        ],
+        "sunday-ordinary-24": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L24dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L24dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L24dgotoC.htm"
+        ],
+        "sunday-ordinary-25": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L25dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L25dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L25dgotoC.htm"
+        ],
+        "sunday-ordinary-26": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L26dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L26dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L26dgotoC.htm"
+        ],
+        "sunday-ordinary-27": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L27dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L27dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L27dgotoC.htm"
+        ],
+        "sunday-ordinary-28": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L28dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L28dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L28dgotoC.htm"
+        ],
+        "sunday-ordinary-29": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L29dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L29dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L29dgotoC.htm"
+        ],
+        "sunday-ordinary-30": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L30dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L30dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L30dgotoC.htm"
+        ],
+        "sunday-ordinary-31": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L31dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L31dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L31dgotoC.htm"
+        ],
+        "sunday-ordinary-32": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L32dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L32dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L32dgotoC.htm"
+        ],
+        "sunday-ordinary-33": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L33dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L33dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L33dgotoC.htm"
+        ],
+        "sunday-ordinary-34": [
+          "https://www.curas.com.ar/Leccionarios/Dominical/L34dgotoA.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L34dgotoB.htm",
+          "https://www.curas.com.ar/Leccionarios/Dominical/L34dgotoC.htm"
+        ]
+      },
+      "calendar": {
+        "01-01": [
+          {
+            "title": "1° de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Ltheotokos.htm"
+          }
+        ],
+        "05-01": [
+          {
+            "title": "1º de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsjoseobrero.htm"
+          }
+        ],
+        "06-01": [
+          {
+            "title": "1° de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsjustino.htm"
+          }
+        ],
+        "08-01": [
+          {
+            "title": "1° de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsalfonso.htm"
+          }
+        ],
+        "10-01": [
+          {
+            "title": "1° de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsteresita.htm"
+          }
+        ],
+        "11-01": [
+          {
+            "title": "1° de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lmtuttisanti.htm"
+          }
+        ],
+        "01-02": [
+          {
+            "title": "2 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsb&gmg.htm"
+          }
+        ],
+        "02-02": [
+          {
+            "title": "2 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lptaciondelsr.htm"
+          }
+        ],
+        "04-02": [
+          {
+            "title": "2 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsfranciscodepaula.htm"
+          }
+        ],
+        "05-02": [
+          {
+            "title": "San Antanasio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsatanasio.htm"
+          }
+        ],
+        "06-02": [
+          {
+            "title": "2 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsmyp.htm"
+          }
+        ],
+        "08-02": [
+          {
+            "title": "2 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/L0208.htm"
+          }
+        ],
+        "10-02": [
+          {
+            "title": "2 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsacustodios.htm"
+          }
+        ],
+        "11-02": [
+          {
+            "title": "2 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lmtuttimorti.htm"
+          }
+        ],
+        "01-03": [
+          {
+            "title": "3 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsnjesus.htm"
+          }
+        ],
+        "02-03": [
+          {
+            "title": "3 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/L0302.htm"
+          }
+        ],
+        "05-03": [
+          {
+            "title": "Santos Felipe y Santiago",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsfysgo.htm"
+          }
+        ],
+        "06-03": [
+          {
+            "title": "3 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsclwanga.htm"
+          }
+        ],
+        "07-03": [
+          {
+            "title": "3 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lstomasap.htm"
+          }
+        ],
+        "09-03": [
+          {
+            "title": "3 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsgregoriomg.htm"
+          }
+        ],
+        "11-03": [
+          {
+            "title": "3 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsmdeporres.htm"
+          }
+        ],
+        "12-03": [
+          {
+            "title": "3 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsfcojavier.htm"
+          }
+        ],
+        "03-04": [
+          {
+            "title": "4 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lscasimiro.htm"
+          }
+        ],
+        "04-04": [
+          {
+            "title": "4 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsisidoro.htm"
+          }
+        ],
+        "08-04": [
+          {
+            "title": "4 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsjmvianney.htm"
+          }
+        ],
+        "10-04": [
+          {
+            "title": "4 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsfcodeasis.htm"
+          }
+        ],
+        "11-04": [
+          {
+            "title": "4 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lscborromeo.htm"
+          }
+        ],
+        "12-04": [
+          {
+            "title": "4 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsjdamasceno.htm"
+          }
+        ],
+        "02-05": [
+          {
+            "title": "5 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lsagueda.htm"
+          }
+        ],
+        "04-05": [
+          {
+            "title": "5 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsvicenteferrer.htm"
+          }
+        ],
+        "06-05": [
+          {
+            "title": "5 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsbonifacio.htm"
+          }
+        ],
+        "07-05": [
+          {
+            "title": "5 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsantoniozaccaria.htm"
+          }
+        ],
+        "08-05": [
+          {
+            "title": "5 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/LdedbasSM.htm"
+          }
+        ],
+        "01-06": [
+          {
+            "title": "TIEMPO DE NAVIDAD",
+            "url": "https://www.curas.com.ar/Leccionarios/Tiempos/Navidad/Lepifania.htm"
+          }
+        ],
+        "02-06": [
+          {
+            "title": "6 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lspablomiki.htm"
+          }
+        ],
+        "06-06": [
+          {
+            "title": "6 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsnorberto.htm"
+          }
+        ],
+        "07-06": [
+          {
+            "title": "6 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsgoretti.htm"
+          }
+        ],
+        "08-06": [
+          {
+            "title": "6 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/LtransfigABC.htm"
+          }
+        ],
+        "10-06": [
+          {
+            "title": "6 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsbruno.htm"
+          }
+        ],
+        "12-06": [
+          {
+            "title": "6 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsnicolas.htm"
+          }
+        ],
+        "01-07": [
+          {
+            "title": "7 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsraimundo.htm"
+          }
+        ],
+        "03-07": [
+          {
+            "title": "7 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/L0703.htm"
+          }
+        ],
+        "04-07": [
+          {
+            "title": "7 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsbautistadelasalle.htm"
+          }
+        ],
+        "08-07": [
+          {
+            "title": "7 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/L0708.htm"
+          }
+        ],
+        "10-07": [
+          {
+            "title": "7 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lnsdelrosario.htm"
+          }
+        ],
+        "11-07": [
+          {
+            "title": "7 de Noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lmmedianera.htm"
+          }
+        ],
+        "12-07": [
+          {
+            "title": "7 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsambrosio.htm"
+          }
+        ],
+        "02-08": [
+          {
+            "title": "8 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/L0822.htm"
+          }
+        ],
+        "03-08": [
+          {
+            "title": "8 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lsjdedios.htm"
+          }
+        ],
+        "05-08": [
+          {
+            "title": "BIENAVENTURADA VIRGEN MARÍA DE LUJÁN",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lnsdelujan.htm"
+          }
+        ],
+        "08-08": [
+          {
+            "title": "8 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsdomingo.htm"
+          }
+        ],
+        "09-08": [
+          {
+            "title": "8 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/LnatividadSVM.htm"
+          }
+        ],
+        "11-08": [
+          {
+            "title": "8 de Noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lvdelos33.htm"
+          }
+        ],
+        "12-08": [
+          {
+            "title": "INMACULADA CONCEPCIÓN",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Linmaculada.htm"
+          }
+        ],
+        "03-09": [
+          {
+            "title": "9 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lsfcaromana.htm"
+          }
+        ],
+        "06-09": [
+          {
+            "title": "9 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsefren.htm"
+          }
+        ],
+        "07-09": [
+          {
+            "title": "9 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lnsitati.htm"
+          }
+        ],
+        "08-09": [
+          {
+            "title": "9 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/L0908.htm"
+          }
+        ],
+        "09-09": [
+          {
+            "title": "9 de Septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lspedroclaver.htm"
+          }
+        ],
+        "10-09": [
+          {
+            "title": "9 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/L0910.htm"
+          }
+        ],
+        "11-09": [
+          {
+            "title": "9 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Ldedbasjdletran.htm"
+          }
+        ],
+        "02-10": [
+          {
+            "title": "10 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lsescolastica.htm"
+          }
+        ],
+        "07-10": [
+          {
+            "title": "10 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/LsagustinZR&Co.htm"
+          }
+        ],
+        "08-10": [
+          {
+            "title": "10 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lslorenzo.htm"
+          }
+        ],
+        "11-10": [
+          {
+            "title": "10 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsleon.htm"
+          }
+        ],
+        "02-11": [
+          {
+            "title": "11 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lnsdelourdes.htm"
+          }
+        ],
+        "04-11": [
+          {
+            "title": "11 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsestanilao.htm"
+          }
+        ],
+        "06-11": [
+          {
+            "title": "11 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsbernabe.htm"
+          }
+        ],
+        "07-11": [
+          {
+            "title": "11 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsbenito.htm"
+          }
+        ],
+        "08-11": [
+          {
+            "title": "11 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsclara.htm"
+          }
+        ],
+        "11-11": [
+          {
+            "title": "11 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsmdetours.htm"
+          }
+        ],
+        "12-11": [
+          {
+            "title": "11 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsdamaso.htm"
+          }
+        ],
+        "05-12": [
+          {
+            "title": "12 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lmss1205.htm"
+          }
+        ],
+        "08-12": [
+          {
+            "title": "12 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsjuanachantal.htm"
+          }
+        ],
+        "09-12": [
+          {
+            "title": "12 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsndemaria.htm"
+          }
+        ],
+        "10-12": [
+          {
+            "title": "12 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lnsdelpilar.htm"
+          }
+        ],
+        "11-12": [
+          {
+            "title": "12 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsjosafat.htm"
+          }
+        ],
+        "12-12": [
+          {
+            "title": "12 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lnsguadalupe.htm"
+          }
+        ],
+        "01-13": [
+          {
+            "title": "13 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lshilario.htm"
+          }
+        ],
+        "04-13": [
+          {
+            "title": "13 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsmartin1.htm"
+          }
+        ],
+        "05-13": [
+          {
+            "title": "13 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lnsdefatima.htm"
+          }
+        ],
+        "06-13": [
+          {
+            "title": "13 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsantonio.htm"
+          }
+        ],
+        "07-13": [
+          {
+            "title": "13 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsenrique.htm"
+          }
+        ],
+        "08-13": [
+          {
+            "title": "13 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsponciano&H.htm"
+          }
+        ],
+        "09-13": [
+          {
+            "title": "13 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsjcrisostomo.htm"
+          }
+        ],
+        "12-13": [
+          {
+            "title": "13 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lslucia.htm"
+          }
+        ],
+        "02-14": [
+          {
+            "title": "14 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lsciriloymetodio.htm"
+          }
+        ],
+        "05-14": [
+          {
+            "title": "14 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsmatias.htm"
+          }
+        ],
+        "07-14": [
+          {
+            "title": "14 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lscamilo.htm"
+          }
+        ],
+        "08-14": [
+          {
+            "title": "14 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsmxmkolbe.htm"
+          }
+        ],
+        "09-14": [
+          {
+            "title": "14 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lexaltacscruz.htm"
+          }
+        ],
+        "10-14": [
+          {
+            "title": "14 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lscalixto.htm"
+          }
+        ],
+        "12-14": [
+          {
+            "title": "14 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsjndelacruz.htm"
+          }
+        ],
+        "05-15": [
+          {
+            "title": "15 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsisidro.htm"
+          }
+        ],
+        "07-15": [
+          {
+            "title": "15 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsbuenaventura.htm"
+          }
+        ],
+        "08-15": [
+          {
+            "title": "15 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lasuncion.htm"
+          }
+        ],
+        "09-15": [
+          {
+            "title": "15 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lnsdlosdolores.htm"
+          }
+        ],
+        "10-15": [
+          {
+            "title": "15 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsteresa.htm"
+          }
+        ],
+        "11-15": [
+          {
+            "title": "15 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsalbertomg.htm"
+          }
+        ],
+        "03-16": [
+          {
+            "title": "16 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lscurabrochero.htm"
+          }
+        ],
+        "05-16": [
+          {
+            "title": "16 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsluisorione.htm"
+          }
+        ],
+        "07-16": [
+          {
+            "title": "16 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lnsdelcarmen.htm"
+          }
+        ],
+        "08-16": [
+          {
+            "title": "16 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/L1608.htm"
+          }
+        ],
+        "09-16": [
+          {
+            "title": "16 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lscor&cip.htm"
+          }
+        ],
+        "10-16": [
+          {
+            "title": "16 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/L1610.htm"
+          }
+        ],
+        "11-16": [
+          {
+            "title": "16 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/L1611.htm"
+          }
+        ],
+        "01-17": [
+          {
+            "title": "17 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsantonio.htm"
+          }
+        ],
+        "02-17": [
+          {
+            "title": "17 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Ls7fundadores.htm"
+          }
+        ],
+        "03-17": [
+          {
+            "title": "17 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lspatricio.htm"
+          }
+        ],
+        "09-17": [
+          {
+            "title": "17 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsrbelarmino.htm"
+          }
+        ],
+        "10-17": [
+          {
+            "title": "17 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/LsignacioA.htm"
+          }
+        ],
+        "11-17": [
+          {
+            "title": "17 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsroquegzlz.htm"
+          }
+        ],
+        "03-18": [
+          {
+            "title": "18 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/LsciriloJ.htm"
+          }
+        ],
+        "05-18": [
+          {
+            "title": "18 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsjuan1.htm"
+          }
+        ],
+        "10-18": [
+          {
+            "title": "18 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lslucas.htm"
+          }
+        ],
+        "11-18": [
+          {
+            "title": "18 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Ldedbasspysp.htm"
+          }
+        ],
+        "03-19": [
+          {
+            "title": "19 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lsjose.htm"
+          }
+        ],
+        "06-19": [
+          {
+            "title": "19 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsromualdo.htm"
+          }
+        ],
+        "08-19": [
+          {
+            "title": "19 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsjuaneudes.htm"
+          }
+        ],
+        "09-19": [
+          {
+            "title": "19 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsjenaro.htm"
+          }
+        ],
+        "10-19": [
+          {
+            "title": "19 de Octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/L1910.htm"
+          }
+        ],
+        "11-19": [
+          {
+            "title": "19 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsisabel.htm"
+          }
+        ],
+        "01-20": [
+          {
+            "title": "20 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/L2001.htm"
+          }
+        ],
+        "05-20": [
+          {
+            "title": "20 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsbernardino.htm"
+          }
+        ],
+        "07-20": [
+          {
+            "title": "20 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsapolinar.htm"
+          }
+        ],
+        "08-20": [
+          {
+            "title": "20 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsbernardo.htm"
+          }
+        ],
+        "09-20": [
+          {
+            "title": "20 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsakimtaegon&Co.htm"
+          }
+        ],
+        "01-21": [
+          {
+            "title": "21 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsines.htm"
+          }
+        ],
+        "02-21": [
+          {
+            "title": "21 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lspdamian.htm"
+          }
+        ],
+        "04-21": [
+          {
+            "title": "21 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsanselmo.htm"
+          }
+        ],
+        "05-21": [
+          {
+            "title": "21 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lscrsitobalmagallanes.htm"
+          }
+        ],
+        "06-21": [
+          {
+            "title": "21 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lslgonzaga.htm"
+          }
+        ],
+        "07-21": [
+          {
+            "title": "21 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/LslorenzodeB.htm"
+          }
+        ],
+        "08-21": [
+          {
+            "title": "21 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/LspioX.htm"
+          }
+        ],
+        "09-21": [
+          {
+            "title": "21 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsmateo.htm"
+          }
+        ],
+        "11-21": [
+          {
+            "title": "21 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lmptacionsvm.htm"
+          }
+        ],
+        "12-21": [
+          {
+            "title": "21 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lspedrocanisio.htm"
+          }
+        ],
+        "01-22": [
+          {
+            "title": "22 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/L2201.htm"
+          }
+        ],
+        "02-22": [
+          {
+            "title": "22 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lcatedrasp.htm"
+          }
+        ],
+        "05-22": [
+          {
+            "title": "22 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsritadecasia.htm"
+          }
+        ],
+        "06-22": [
+          {
+            "title": "22 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/L2206.htm"
+          }
+        ],
+        "07-22": [
+          {
+            "title": "22 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsmagdalena.htm"
+          }
+        ],
+        "08-22": [
+          {
+            "title": "22 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lmreina.htm"
+          }
+        ],
+        "11-22": [
+          {
+            "title": "22 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lscecilia.htm"
+          }
+        ],
+        "02-23": [
+          {
+            "title": "23 de febrero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/02febrero/Lspolicarpo.htm"
+          }
+        ],
+        "04-23": [
+          {
+            "title": "23 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/L2304.htm"
+          }
+        ],
+        "07-23": [
+          {
+            "title": "23 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/L2307.htm"
+          }
+        ],
+        "10-23": [
+          {
+            "title": "23 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsjncapistrano.htm"
+          }
+        ],
+        "11-23": [
+          {
+            "title": "23 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/L2311.htm"
+          }
+        ],
+        "12-23": [
+          {
+            "title": "23 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsjuankety.htm"
+          }
+        ],
+        "01-24": [
+          {
+            "title": "24 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/L2401.htm"
+          }
+        ],
+        "04-24": [
+          {
+            "title": "24 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsfidel.htm"
+          }
+        ],
+        "05-24": [
+          {
+            "title": "24 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lmariaauxilio.htm"
+          }
+        ],
+        "06-24": [
+          {
+            "title": "EL NACIMIENTO DE JUAN BAUTISTA",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/L2406.htm"
+          }
+        ],
+        "08-24": [
+          {
+            "title": "24 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsbartolome.htm"
+          }
+        ],
+        "09-24": [
+          {
+            "title": "24 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lnsdelamerced.htm"
+          }
+        ],
+        "10-24": [
+          {
+            "title": "24 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lsamclaret.htm"
+          }
+        ],
+        "11-24": [
+          {
+            "title": "24 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsandresdung-lac.htm"
+          }
+        ],
+        "01-25": [
+          {
+            "title": "25 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lconversp.htm"
+          }
+        ],
+        "03-25": [
+          {
+            "title": "25 de marzo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/03marzo/Lanunciacion.htm"
+          }
+        ],
+        "04-25": [
+          {
+            "title": "25 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lsmarcos.htm"
+          }
+        ],
+        "05-25": [
+          {
+            "title": "25 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lmss2505.htm"
+          }
+        ],
+        "07-25": [
+          {
+            "title": "25 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsgoap.htm"
+          }
+        ],
+        "08-25": [
+          {
+            "title": "25 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/L2508.htm"
+          }
+        ],
+        "11-25": [
+          {
+            "title": "25 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lscatalinalej.htm"
+          }
+        ],
+        "01-26": [
+          {
+            "title": "26 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lstyt.htm"
+          }
+        ],
+        "05-26": [
+          {
+            "title": "26 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lsfelipeneri.htm"
+          }
+        ],
+        "06-26": [
+          {
+            "title": "26 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsjosemaria.htm"
+          }
+        ],
+        "07-26": [
+          {
+            "title": "26 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsj&a.htm"
+          }
+        ],
+        "09-26": [
+          {
+            "title": "26 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lscosmeydamian.htm"
+          }
+        ],
+        "12-26": [
+          {
+            "title": "26 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsesteban.htm"
+          }
+        ],
+        "01-27": [
+          {
+            "title": "27 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsangela.htm"
+          }
+        ],
+        "04-27": [
+          {
+            "title": "27 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lstoribio.htm"
+          }
+        ],
+        "05-27": [
+          {
+            "title": "27 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/LsagustinC.htm"
+          }
+        ],
+        "06-27": [
+          {
+            "title": "27 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsciriloalej.htm"
+          }
+        ],
+        "08-27": [
+          {
+            "title": "27 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsmonica.htm"
+          }
+        ],
+        "09-27": [
+          {
+            "title": "27 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsvdepaul.htm"
+          }
+        ],
+        "12-27": [
+          {
+            "title": "27 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsjuan.htm"
+          }
+        ],
+        "01-28": [
+          {
+            "title": "28 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lstomasaq.htm"
+          }
+        ],
+        "04-28": [
+          {
+            "title": "28 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/L2804.htm"
+          }
+        ],
+        "06-28": [
+          {
+            "title": "28 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/Lsireneo.htm"
+          }
+        ],
+        "08-28": [
+          {
+            "title": "28 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsagustin.htm"
+          }
+        ],
+        "09-28": [
+          {
+            "title": "28 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/L2809.htm"
+          }
+        ],
+        "10-28": [
+          {
+            "title": "28 de octubre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/10octubre/Lssimonyjudas.htm"
+          }
+        ],
+        "12-28": [
+          {
+            "title": "28 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lsinocentes.htm"
+          }
+        ],
+        "04-29": [
+          {
+            "title": "29 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/Lscatalina.htm"
+          }
+        ],
+        "06-29": [
+          {
+            "title": "29 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/L2906.htm"
+          }
+        ],
+        "07-29": [
+          {
+            "title": "29 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/Lsmarta.htm"
+          }
+        ],
+        "08-29": [
+          {
+            "title": "29 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lmsjbta.htm"
+          }
+        ],
+        "09-29": [
+          {
+            "title": "29 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/LsangelesMGR.htm"
+          }
+        ],
+        "12-29": [
+          {
+            "title": "29 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lstomasbecket.htm"
+          }
+        ],
+        "04-30": [
+          {
+            "title": "30 de abril",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/04abril/LspioV.htm"
+          }
+        ],
+        "06-30": [
+          {
+            "title": "30 de junio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/06junio/L1osmartires.htm"
+          }
+        ],
+        "07-30": [
+          {
+            "title": "30 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/LspedroCr.htm"
+          }
+        ],
+        "08-30": [
+          {
+            "title": "30 de agosto",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/08agosto/Lsrosa.htm"
+          }
+        ],
+        "09-30": [
+          {
+            "title": "30 de septiembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/09septiembre/Lsjeronimo.htm"
+          }
+        ],
+        "11-30": [
+          {
+            "title": "30 de noviembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/11noviembre/Lsandres.htm"
+          }
+        ],
+        "01-31": [
+          {
+            "title": "31 de enero",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/01enero/Lsjnbosco.htm"
+          }
+        ],
+        "05-31": [
+          {
+            "title": "31 de mayo",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/05mayo/Lvisitacion.htm"
+          }
+        ],
+        "07-31": [
+          {
+            "title": "31 de julio",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/07julio/LsignacioL.htm"
+          }
+        ],
+        "12-31": [
+          {
+            "title": "31 de diciembre",
+            "url": "https://www.curas.com.ar/Leccionarios/Santoral/12diciembre/Lssilvestrepapa.htm"
+          }
+        ]
+      }
+    },
+    "missalPrayerData": {
+      "temporal": {
+        "ordinary-1-0": {
+          "title": "I SEMANA «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "He visto sentarse sobre el trono celestial a un hombre,\na quien los ángeles adoran, mientras cantan a una voz:\nEste es aquél cuyo poder permanece para siempre.",
+            "collect": "Dios nuestro,\natiende con amor los deseos y plegarias de tu pueblo,\npara conocer lo que debemos hacer\ny poner en práctica lo que nos enseñas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Que te sea agradable, Señor, la ofrenda de tu pueblo;\nque ella nos alcance la santidad\ny nos obtenga lo que confiadamente pedimos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 35, 10\nSeñor, en ti está la fuente de la vida,\ny por tu luz vemos la luz.",
+            "prayer_after": "Dios todopoderoso,\nconcédenos, a quienes fuimos alimentados con tus sacramentos,\nservirte con una vida santa.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-2-0": {
+          "title": "II DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 65, 4\nToda la tierra se postra ante ti, Señor,\ny canta en tu honor, en honor de tu nombre.",
+            "collect": "Dios todopoderoso y eterno,\nque gobiernas el cielo y la tierra,\nescucha las súplicas de tu pueblo\ny concédenos tu paz en nuestro tiempo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Concédenos, Señor, participar dignamente de estos misterios,\npues cada vez que celebramos el memorial del sacrificio de tu Hijo\nse realiza la obra de nuestra redención.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 22, 5\nTú preparas ante mí una mesa,\ny mi copa rebosa.",
+            "prayer_after": "Infunde en nosotros, Padre, tu espíritu de amor,\npara que, saciados con el único Pan de vida,\npermanezcamos unánimes en la misma fe.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-3-0": {
+          "title": "III DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 95, 1.6\nCanten al Señor un canto nuevo, cante al Señor toda la tierra.\nEn su presencia hay esplendor y majestad,\nen su santuario, poder y hermosura.",
+            "collect": "Dios todopoderoso y eterno,\nordena nuestra vida según tu voluntad\npara que, en el nombre de tu Hijo amado,\npodamos dar con abundancia frutos de buenas obras.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe con bondad nuestros dones, Señor;\ny al santificarlos,\nse conviertan en causa de salvación para nosotros.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 33, 6\nMiren hacia el Señor, y quedarán resplandecientes,\ny sus rostros no se avergonzarán.",
+            "prayer_after": "Dios todopoderoso,\nconcédenos, a los que somos vivificados por tu gracia,\nalegrarnos siempre con el don recibido.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-4-0": {
+          "title": "IV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 105, 47\nSálvanos, Señor y Dios nuestro, congréganos de entre las naciones,\npara que podamos dar gracias a tu santo nombre\ny gloriarnos en tu alabanza.",
+            "collect": "Señor y Dios nuestro,\nconcédenos honrarte con todo el corazón\ny amar a todos con amor verdadero.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre, presentamos ante tu altar los dones de nuestra entrega;\nte rogamos que los aceptes con bondad\ny los conviertas en el sacramento de nuestra redención.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 30, 17-18\nQue brille tu rostro sobre tu servidor,\nsálvame por tu misericordia.\nSeñor, que no me avergüence de haberte invocado.",
+            "prayer_after": "Alimentados con el don de nuestra redención,\nte pedimos, Padre, que con este auxilio de salvación eterna\nse acreciente siempre en nosotros la fe verdadera.\nPor Jesucristo, nuestro Señor"
+          }
+        },
+        "ordinary-5-0": {
+          "title": "V DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 94, 6-7\nVengan, inclinémonos para adorar a Dios,\ndoblemos la rodilla ante el Señor que nos creó; porque él es nuestro Dios.",
+            "collect": "Dios nuestro, cuida a tu familia con incansable bondad,\ny, ya que sólo en ti ha puesto su esperanza,\ndefiéndela siempre con tu protección.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor y Dios nuestro,\nque has creado los frutos de la tierra\npara sostener nuestra fragilidad,\nhaz que estos dones se conviertan en sacramento de vida eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 106, 8-9\nDen gracias al Señor por su misericordia\ny por sus maravillas en favor de los hombres,\nporque Él sació a los que sufrían sed\ny colmó de bienes a los hambrientos.",
+            "prayer_after": "Señor, que nos hiciste compartir el mismo pan y el mismo cáliz,\nconcédenos vivir de tal manera que, unidos en Cristo,\ndemos fruto con alegría para la salvación del mundo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-6-0": {
+          "title": "VI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 30, 3-4\nSeñor, sé para mí una roca protectora,\nun baluarte donde me encuentre a salvo,\nporque tú eres mi roca y mi baluarte;\npor tu nombre, guíame y condúceme.",
+            "collect": "Dios nuestro,\nque te complaces en habitar en los corazones rectos y sencillos,\nconcédenos la gracia de vivir de tal manera\nque encuentres en nosotros una morada digna de tu agrado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Que esta ofrenda nos purifique y renueve, Señor,\ny sea causa de recompensa eterna\npara quienes cumplen tu voluntad.\nPor Jesucristo, nuestro Señor",
+            "communion": "Cf. Sal 77, 29-30\nEllos comieron y se saciaron, el Señor les dio lo que habían pedido;\nno fueron defraudados.",
+            "prayer_after": "Saciados con el pan del cielo, te pedimos, Padre,\nla gracia de desear siempre este alimento\nque nos da la vida verdadera.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-7-0": {
+          "title": "VII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 12, 6\nSeñor, yo confío en tu misericordia:\nque mi corazón se alegre porque me salvaste.\nCantaré al Señor, porque me ha favorecido.",
+            "collect": "Concédenos, Dios todopoderoso,\nque, meditando sin cesar las realidades espirituales,\nllevemos a la práctica en palabras y obras\ncuanto es de tu agrado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Al celebrar estos misterios con la debida reverencia,\nte suplicamos, Señor, que los dones ofrecidos para tu gloria\nnos obtengan la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 9, 2-3\nProclamaré todas tus maravillas;\nquiero alegrarme y regocijarme en ti\ny cantar himnos a tu nombre, Altísimo.",
+            "prayer_after": "Dios todopoderoso,\nconcédenos alcanzar la salvación eterna,\ncuyo anticipo hemos recibido en este sacramento.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-8-0": {
+          "title": "VIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 17, 19-20\nEl Señor fue mi apoyo: me sacó a un lugar espacioso,\nme libró, porque me ama.",
+            "collect": "Concédenos Señor que los acontecimientos de este mundo\nse orienten para nuestro bien, según tus designios de paz,\ny que tu Iglesia se alegre de servirte con entrega y serenidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que nos das lo que debemos ofrecerte\ny consideras esta ofrenda\ncomo un gesto de nuestra devoción hacia ti;\nte pedimos confiadamente poder alcanzar los premios eternos.\nya que nos concedes la fuente del mérito,\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 12, 6\nCantaré al Señor, porque me ha favorecido;\nalabaré el nombre del Señor Altísimo.",
+            "prayer_after": "Saciados con el alimento de la salvación,\nte pedimos, Padre de misericordia,\nque por este sacramento que recibimos en la tierra\nnos hagas participar de la vida eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-9-0": {
+          "title": "IX DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 24, 16.18\nMírame, Señor, y ten piedad de mí, porque estoy solo y afligido;\nmira mi pena y mis fatigas, y perdona todos mis pecados.",
+            "collect": "Dios nuestro, cuya providencia es infalible en sus designios;\nte suplicamos que apartes de nosotros lo que nos hace daño\ny nos concedas todo lo que pueda ayudarnos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, confiados en tu misericordia\ntraemos estas ofrendas a tu altar;\npara que, con tu gracia,\nquedemos purificados por estos misterios que celebramos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 16, 6.8\nYo te invoco, Dios mío, porque tú me respondes:\ninclina tu oído hacia mí y escucha mis palabras.",
+            "prayer_after": "Guía, Señor, por medio de tu Espíritu,\na quienes alimentas con el Cuerpo y la Sangre de tu Hijo,\npara que, dando testimonio de ti,\nno sólo de palabras y con la lengua\nsino con las obras y de verdad,\nmerezcamos entrar en el reino de los cielos.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-10-0": {
+          "title": "X DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 26, 1-2\nEl Señor es mi luz y mi salvación; ¿a quién temeré?\nEl Señor es el baluarte de mi vida; ¿ante quién temblaré?\nCuando avanzan contra mí los enemigos, son ellos los que tropiezan y caen.",
+            "collect": "Dios y Señor, de quien proceden todos los bienes,\nescucha nuestras súplicas;\nconcédenos que, inspirados por ti, pensemos lo que es recto,\ny, guiados por ti, lo llevemos a la práctica.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Mira, Señor, con bondad nuestro servicio litúrgico\npara que nuestra ofrenda te sea agradable\ny nos haga crecer en la caridad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 17,3\nTú, Señor, eres mi roca, mi fortaleza, mi libertador;\ntú eres mi Dios.",
+            "prayer_after": "Te pedimos, Padre,\nque la acción medicinal de este sacramento\nnos libre de nuestras maldades\ny nos guíe por el camino recto.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-11-0": {
+          "title": "XI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 26, 7. 9\nEscucha, Señor, la voz de mi clamor:\nno me rechaces ni me abandones, Dios, mi salvador, porque tú eres mi refugio.",
+            "collect": "Dios nuestro, fuerza de los que esperan en ti,\nescucha con bondad nuestros súplicas,\nya que sin tu ayuda nada puede la fragilidad humana,\ny concédenos la gracia de cumplir tus mandamientos\npara agradarte con nuestras acciones y deseos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, que nos alimentas con estos dones,\ny nos renuevas con tu sacramento,\nconcédenos que nunca nos falte el sustento\npara el alma y para el cuerpo.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 26, 4\nUna sola cosa he pedido al Señor, y esto es lo que quiero:\nvivir en la casa del Señor todos los días de mi vida.",
+            "prayer_after": "Te pedimos, Padre,\nque así como la comunión que hemos recibido\nes signo de la unión de los creyentes en ti,\ntambién se realice la unidad en tu Iglesia.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "ordinary-12-0": {
+          "title": "XII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 27, 8-9\nEl Señor es la fuerza de su pueblo,\nel baluarte de salvación para su Ungido.\nSeñor, salva a tu pueblo y bendice a tu heredad;\napaciéntalo, y sé su guía para siempre.",
+            "collect": "Concédenos, Señor y Dios nuestro,\nvivir siempre en el amor y respeto a tu santo nombre,\nya que en tu providencia nunca abandonas\na quienes estableces en el sólido fundamento de tu amor.\nPor nuestro Señor Jesucristo tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, este sacrificio de reconciliación y alabanza,\ny concédenos que, purificados por su poder,\nsea de tu agrado el afecto de nuestro corazón.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 144, 15\nLos ojos de todos esperan en ti, Señor, y tú les das la comida a su tiempo.",
+            "prayer_after": "Renovados con el sagrado Cuerpo y Sangre de tu Hijo,\nimploramos, Señor, tu clemencia;\nhaz que en la plenitud de la redención\nalcancemos lo que celebramos en cada eucaristía.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-13-0": {
+          "title": "XIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 46, 2\nTodos los pueblos aplaudan\ny aclamen al Señor con gritos de alegría.",
+            "collect": "Dios nuestro, que por la gracia de la adopción\nquisiste hacernos hijos de la luz;\nconcédenos que no seamos envueltos en las tinieblas del error,\nsino que permanezcamos siempre en el esplendor de la verdad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios de bondad, que das eficacia a tus misterios,\nconcede que nuestro culto\nresulte digno de estos sagrados dones.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 102, 1\nBendice al Señor, alma mía,\nque todo mi ser bendiga su santo nombre.",
+            "prayer_after": "Que la víctima divina que hemos ofrecido y recibido\nnos llene de vida, Señor,\npara que unidos a ti por el amor,\ndemos frutos que permanezcan eternamente.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-14-0": {
+          "title": "XIV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 47, 10-11\nEn tu santo templo, Señor, evocamos tu misericordia;\nla gloria de tu nombre llega hasta los confines de la tierra.\nTu derecha está llena de justicia.",
+            "collect": "Dios nuestro, que por la humillación de tu Hijo\nlevantaste a la humanidad caída;\nconcédenos una santa alegría,\npara que, liberados de la servidumbre del pecado,\nalcancemos la felicidad que no tiene fin.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.",
+            "prayer_offerings": "Padre del cielo,\nque este sacrificio consagrado a tu nombre nos purifique\ny nos encamine, cada día más, hacia la vida eterna.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 33, 9\nGusten y vean qué bueno es el Señor.\nFeliz el hombre que espera en Él.",
+            "prayer_after": "Alimentados con tan grandes dones,\nte pedimos, Padre,\nrecibir sus frutos de salvación\ny no dejar nunca de alabarte.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-15-0": {
+          "title": "XV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 16, 15\nPor tu justicia, yo contemplaré tu rostro,\ny al despertar me saciaré de tu presencia.",
+            "collect": "Señor Dios, que iluminas a los extraviados con la luz de tu verdad,\npara que puedan volver al buen camino;\ndanos, a quienes hacemos profesión de cristianos,\nla gracia de rechazar todo lo que se opone a este nombre\ny comprometernos con todas sus exigencias.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor y Dios nuestro,\nmira con bondad los dones de tu Iglesia en oración\ny concede que, al recibirlos,\nse acreciente la santidad de los creyentes.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 83, 4-5\nHasta el gorrión encontró una casa,\ny la golondrina tiene un nido donde poner sus pichones:\njunto a tus altares, Señor del universo, mi Rey y mi Dios.\nFelices los que habitan en tu casa y te alaban sin cesar.",
+            "prayer_after": "Alimentados con esta eucaristía,\nte pedimos, Padre,\nque por la celebración frecuente de este misterio\ncrezca en nosotros el fruto de la salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-16-0": {
+          "title": "XVI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 53, 6. 8\nDios es mi ayuda, el Señor es mi verdadero sostén.\nTe ofreceré un sacrificio voluntario,\ndaré gracias a tu nombre porque es bueno.",
+            "collect": "Señor nuestro, mira con bondad a tus servidores\ny multiplica en nosotros los dones de tu gracia,\npara que, fervorosos en la fe, la esperanza y la caridad,\nperseveremos con asidua vigilancia\nen el cumplimiento de tus mandamientos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre Santo, por el sacrificio único de tu Hijo\nllevaste a la perfección las ofrendas de la antigua Ley;\nte pedimos que recibas la oblación de tus fieles\ny la santifiques como lo hiciste con la ofrenda de Abel,\npara que los dones presentados en honor de tu nombre\nsirvan para la salvación de todos.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 110, 4-5\nEl Señor hizo portentos memorables, es bondadoso y compasivo;\ndio alimento a sus fieles.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-17-0": {
+          "title": "XVII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 67, 6-7. 36\nDios habita en su santa morada.\nÉl congrega en su casa a los dispersos.\nÉl dará poder y fortaleza a su pueblo.",
+            "collect": "Dios nuestro, protector de los que esperan en ti,\nfuera de quien nada tiene valor ni santidad;\nacrecienta sobre nosotros tu misericordia,\npara que, bajo tu guía providente,\nusemos los bienes pasajeros de tal modo\nque ya desde ahora podamos adherirnos a los eternos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta Padre, estos dones recibidos de tu generosidad,\ny, por la acción poderosa de tu gracia,\nhaz que estos sagrados misterios\nsantifiquen nuestra vida presente\ny nos conduzcan a los gozos eternos.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 102, 2\nBendice al. Señor, alma mía, y nunca olvides sus beneficios.",
+            "prayer_after": "Te pedimos, Padre,\nque alimentados con este sacramento divino,\nmemorial perpetuo de la Pasión de tu Hijo,\neste don de su amor inefable\nnos conduzca a la salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-18-0": {
+          "title": "XVIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 69, 2.6\nLíbrame, Dios mío. Señor, ven pronto a socorrerme.\nTú eres mi ayuda y mi libertador, no tardes, Señor.",
+            "collect": "Derrama, Padre, tu misericordia\nsobre tu pueblo suplicante,\ny ya que nos gloriamos de tenerte por Creador y Señor,\nrenueva en nosotros tu gracia y consérvala en tu bondad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual,\nconviértenos en ofrenda eterna.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sab 16, 20\nNos diste, Señor, el pan del cielo, que tiene un sabor incomparable;\nsatisface todos los gustos.",
+            "prayer_after": "Acompaña y protege siempre, Señor,\na quienes has renovado con este don celestial,\ny ya que nos reconfortas constantemente\nconcédenos participar de la redención eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-19-0": {
+          "title": "XIX DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 73, 20. 19. 22. 23\nAcuérdate, Señor, de tu alianza, y no olvides para siempre a tus pobres.\nLevántate, Dios, defiende tu causa\ny no desoigas el clamor de los que te invocan.",
+            "collect": "Dios todopoderoso y eterno,\na quien, movidos por el Espíritu Santo,\nnos animamos a llamar Padre,\nconfirma en nuestros corazones la condición de hijos tuyos,\npara que podamos entrar en la herencia prometida.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre de bondad, acepta los dones\nque misericordiosamente has dado a tu Iglesia\ny que, con tu poder, conviertes en sacramento de salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 147, 12. 14\nJerusalén, glorifica al Señor tu Dios, que te sacia con lo mejor del trigo.",
+            "prayer_after": "Padre, que la comunión de tus sacramentos\nnos alcance la salvación\ny nos confirme en la luz de tu verdad.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "ordinary-20-0": {
+          "title": "XX DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 83, 10-11\nSeñor, protector nuestro, mira el rostro de tu Ungido,\nporque vale más un día en tus atrios que mil en otra parte.",
+            "collect": "Dios nuestro,\nque has preparado bienes invisibles para los que te aman,\ninfunde en nuestros corazones la ternura de tu amor\npara que, amándote en todas y sobre todas las cosas,\nalcancemos tus promesas que superan todo deseo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta, Señor, nuestra ofrenda,\nen la cual se realiza un admirable intercambio,\npara que, al ofrecerte lo que nos diste,\npodamos recibirte a ti mismo.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 129, 7\nEn el Señor se encuentra la misericordia\ny la redención en abundancia.",
+            "prayer_after": "Señor y Padre nuestro,\nunidos a Cristo por este sacramento,\nimploramos humildemente tu misericordia,\npara que, hechos semejantes a Él en la tierra,\nmerezcamos gozar de su compañía en el cielo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "ordinary-21-0": {
+          "title": "XXI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 85, 1-3\nInclina tu oído, Señor, respóndeme; salva a tu servidor que en ti confía.\nTen piedad de mí, Señor, que te invoco todo el día.",
+            "collect": "Señor Dios, que unes a tus fieles en una sola voluntad;\nconcédenos amar lo que mandas\ny esperar lo que prometes,\npara que, en la inestabilidad del mundo presente,\nnuestros corazones estén firmes\ndonde se encuentra la alegría verdadera.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, que en el sacrificio único de Cristo,\nte has adquirido un pueblo de hijos,\nsé bondadoso con nosotros\ny concede a tu Iglesia los dones de la unidad y la paz.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 103, 13-15\nSeñor, la tierra se sacia con el fruto de tus obras:\nel pan que sale de la tierra y el vino que alegra el corazón del hombre.",
+            "prayer_after": "Padre nuestro,\nrealiza plenamente en nosotros la obra de tu misericordia,\ny concédenos tu gracia para que podamos agradarte en todo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-22-0": {
+          "title": "XXII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 85, 3. 5\nTen piedad de mí, Señor, porque te invoco todo el día.\nTú, Señor, eres bueno e indulgente,\nrico en misericordia con aquellos que te invocan.",
+            "collect": "Dios todopoderoso, de quien procede todo bien perfecto,\ninfunde en nuestros corazones el amor de tu nombre,\npara que, haciendo mas religiosa nuestra vida,\nacrecientes en nosotros lo que es bueno\ny lo conserves constantemente.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro, que esta ofrenda sagrada\nnos alcance siempre tu bendición salvadora,\ny se cumpla en nosotros\nlo que celebramos en esta liturgia.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 30, 20\nQué grande es tu bondad, Señor.\nTú la reservas para tus fieles.",
+            "prayer_after": "Saciados con el pan de la mesa celestial,\nte suplicamos, Padre, que este alimento de nuestra caridad\nnos fortalezca y nos impulse a servirte en los hermanos.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-23-0": {
+          "title": "XXIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 118, 137. 124\nTú eres justo, Señor, y tus juicios son rectos;\ntrátame conforme a tu bondad.",
+            "collect": "Señor Dios, que nos has redimido para hacernos hijos tuyos,\nmíranos siempre con amor de Padre,\npara que cuantos hemos creído en Cristo\nalcancemos la verdadera libertad y la herencia eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, fuente del amor sincero y de la paz,\nconcédenos glorificar tu nombre\ncon estas ofrendas que te presentamos;\ny por la participación en la eucaristía\nayúdanos a vivir unidos en un solo corazón.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 41, 2-3\nComo la cierva sedienta busca las corrientes de agua,\nasí mi alma suspira por ti, mi Dios.\nMi alma tiene sed de Dios, del Dios viviente.",
+            "prayer_after": "Señor nuestro, que alimentas y vivificas a tus fieles\ncon tu palabra y con los sacramentos del cielo,\nconcédenos aprovechar de tal manera estos dones de tu Hijo amado\nque merezcamos participar siempre de su vida divina.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "ordinary-24-0": {
+          "title": "XXIV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Cfr Ecli 36, 18\nSeñor, concede la paz a los que esperan en ti,\npara que se compruebe la veracidad de tus profetas.\nEscucha la oración de tu servidor y la de tu pueblo Israel.",
+            "collect": "Míranos, Dios nuestro, creador y Señor del universo,\ny concédenos servirte de todo corazón,\npara experimentar los efectos de tu amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Escucha nuestras súplicas, Señor,\ny recibe con bondad la ofrenda de tu pueblo,\npara que los dones presentados en honor de tu nombre\nsirvan para la salvación de todos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 35, 8\n¡Qué inapreciable es tu misericordia, Señor!\nLos hombres se refugian a la sombra de tus alas.",
+            "prayer_after": "Te rogamos, Dios nuestro,\nque el don celestial que hemos recibido\nimpregne nuestra alma y nuestro cuerpo,\npara que nuestras obras\nno respondan a impulsos puramente humanos\nsino a la acción de este sacramento.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-25-0": {
+          "title": "XXV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Yo soy el Salvador de mi pueblo, dice el Señor.\nLo escucharé cuando me invoque en su angustia\ny seré su Señor para siempre.",
+            "collect": "Dios nuestro, que estableciste el fundamento de la ley divina\nen el amor a ti y al prójimo,\nconcédenos que, cumpliendo lo que mandas,\nmerezcamos alcanzar la vida eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta con bondad, Señor, las ofrendas de tu pueblo,\ny, por medio de este sacramento celestial,\nhaz que se haga vida en nosotros cuanto proclamamos por la fe.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 118, 4-5\nTú promulgaste tus mandamientos,\npara que se cumplieran íntegramente.\nOjalá mis pasos se mantengan firmes en la observancia de tus preceptos.",
+            "prayer_after": "Te pedimos, Padre, que acompañes siempre con tu auxilio\na los que alimentas con tus sacramentos,\npara que en estos misterios\nrecibamos los frutos de la redención y la conversión de nuestra vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-26-0": {
+          "title": "XXVI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Dan 3, 31. 29. 30. 43. 42\nTodo lo que hiciste con nosotros, Señor, es verdaderamente justo,\nporque pecamos contra ti y no obedecimos tu ley;\npero glorifica tu nombre, tratándonos según tu gran misericordia.",
+            "collect": "Dios nuestro, que manifiestas tu poder\nsobre todo en la misericordia y el perdón,\nderrama sin cesar tu gracia sobre nosotros,\npara que, deseando tus promesas,\nnos hagas participar de los bienes celestiales.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios misericordioso,\nconcédenos que nuestra ofrenda te sea aceptable,\ny que, mediante ella, se nos abra la fuente de toda bendición.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 118, 49-50\nAcuérdate, Señor, de la palabra que diste a tu servidor,\nella me infunde esperanza y consuelo en mi dolor.",
+            "prayer_after": "Por esta eucaristía que hemos celebrado,\nrenueva, Señor, nuestro cuerpo y nuestro espíritu,\npara que participemos de la herencia gloriosa de tu Hijo,\ncuya muerte anunciamos y compartimos.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "ordinary-27-0": {
+          "title": "XXVII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Est 13, 9. 10-11\nSeñor, todo está bajo tu poder y nada puede resistir a tu voluntad.\nTú hiciste el cielo y la tierra, y todo lo que está bajo el firmamento;\ntú eres el Señor del universo.",
+            "collect": "Dios todopoderoso y eterno,\nque con amor generoso\nsobrepasas los méritos y los deseos de los que te suplican,\nderrama sobre nosotros tu misericordia\nperdonando lo que inquieta nuestra conciencia\ny concediéndonos aún aquello que no nos atrevemos a pedir.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, la oblación instituida por ti\ny, por estos sagrados misterios que celebramos,\ndanos la gracia de tu redención.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Lam 3, 25\nEl Señor es bondadoso con los que esperan en él,\ncon aquellos que lo buscan.",
+            "prayer_after": "Dios todopoderoso,\nsácianos con el sacramento del Cuerpo y de la Sangre de tu Hijo,\npara que nos transformemos en aquello que hemos recibido.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-28-0": {
+          "title": "XXVIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 129, 3-4\nSi tienes en cuenta las culpas, Señor, ¿quién podrá subsistir?\nDios de Israel, en ti se encuentra el perdón.",
+            "collect": "Dios todopoderoso,\nque tu gracia siempre nos preceda y acompañe,\ny nos ayude en la práctica constante de las buenas obras.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad de Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, las oraciones de tus fieles\njunto con estas ofrendas;\nhaz que este sacrificio, celebrado con amor,\nnos lleve a la gloria del cielo.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 33, 11\nLos ricos se empobrecen y sufren hambre,\npero los que buscan al Señor no carecen de nada.",
+            "prayer_after": "Padre, humildemente te pedimos\nque así como nos alimentas con el Cuerpo y la Sangre de tu Hijo,\nnos hagas partícipes de la naturaleza divina.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "ordinary-29-0": {
+          "title": "XXIX DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 16, 6. 8\nYo te invoco, Dios mío, porque tú me respondes;\ninclina tu oído hacia mí y escucha mis palabras.\nProtégeme como a la pupila de tus ojos,\nescóndeme a la sombra de tus alas.",
+            "collect": "Dios todopoderoso y eterno,\nconcédenos permanecer fieles a tu santa voluntad\ny servirte con un corazón sincero.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.",
+            "prayer_offerings": "Te ofrecemos, Señor, estos dones,\ncon un corazón libre y generoso,\npara que tu gracia nos purifique\npor estos misterios que ahora celebramos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 32, 18-19\nLos ojos del Señor están fijos sobre sus fieles,\nsobre los que esperan en su misericordia,\npara librar sus vidas de la muerte y sustentarlos en el tiempo de indigencia.",
+            "prayer_after": "Concédenos, Padre, que la participación en la eucaristía\nnos ayude para aprovechar los bienes temporales\ny alcanzar los bienes eternos.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-30-0": {
+          "title": "XXX DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 104, 3-4\nQue la alegría llene el corazón de los que buscan al Señor.\nBusquen al Señor y serán fuertes, busquen siempre su rostro.",
+            "collect": "Dios todopoderoso y eterno,\naumenta nuestra fe, esperanza y caridad,\ny para conseguir lo que nos prometes,\nayúdanos a amar lo que nos mandas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Mira, Padre, la ofrendas que te presentamos,\ny que la celebración de estos misterios\nsean para tu gloria y alabanza.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 19, 6\nAclamemos tu victoria\ny alcemos los estandartes en nombre de nuestro Dios.",
+            "prayer_after": "Señor y Dios nuestro,\nte pedimos que lleves a su plenitud en nosotros\nlo que significan estos sacramentos,\npara que poseamos plenamente\nlo que ahora celebramos en esta liturgia.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-31-0": {
+          "title": "XXXI DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 37, 22-23\nSeñor, no me abandones, Dios mío, no te quedes lejos de mí;\napresúrate a venir en mi ayuda, mi Señor, mi Salvador.",
+            "collect": "Dios omnipotente y lleno de misericordia,\nque concedes a tus fieles\ncelebrar dignamente esta liturgia de alabanza;\nte pedimos que nos ayudes a caminar sin tropiezos\nhacia los bienes prometidos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Señor, que este sacrificio\nsea para ti una ofrenda pura,\ny para nosotros, fuente generosa de tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 15, 11\nSeñor, me darás a conocer el camino de la vida,\nsaciándome de gozo en tu presencia.",
+            "prayer_after": "Te pedimos, Padre,\nque crezca en nosotros la acción de tu poder,\npara que, restaurados con estos sacramentos celestiales,\ntu gracia nos prepare a recibir lo que ellos nos prometen.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-32-0": {
+          "title": "XXXII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 87, 3\nQue mi plegaria llegue a tu presencia, Señor;\ninclina tu oído a mi clamor.",
+            "collect": "Dios todopoderoso y rico en misericordia,\naleja de nosotros todos los males,\npara que, sin impedimentos en el alma y en el cuerpo,\ncumplamos tu voluntad con libertad de espíritu.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Mira con bondad este sacrificio, Señor,\ny concédenos alcanzar los frutos de la pasión de tu Hijo,\nque ahora celebramos sacramentalmente.\nÉl que vive y reina por los siglos de los siglos.",
+            "communion": "Sal 22, 1-2\nEl Señor es mi Pastor, nada me puede faltar.\nÉl me hace descansar en verdes praderas,\ny me conduce a las aguas tranquilas.",
+            "prayer_after": "Te damos gracias, Padre, por la eucaristía que nos ha alimentado;\nimploramos tu misericordia para que, por el Espíritu Santo,\nquienes recibimos la fuerza de lo alto perseveremos fielmente.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "ordinary-33-0": {
+          "title": "XXXIII DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Jer 29, 11. 12. 14\nDice el Señor: Yo tengo designios de paz, y no de aflicción.\nInvóquenme y los escucharé\ny pondré fin a su cautiverio.",
+            "collect": "Señor y Dios nuestro,\nconcédenos vivir siempre con alegría bajo tu mirada,\nya que la felicidad plena y duradera\nconsiste en servirte a ti, fuente y origen de todo bien.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Concédenos, Señor, que esta ofrenda\nsea agradable a tus ojos,\nnos otorgue la gracia de servirte con amor,\ny nos obtenga los gozos eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 12, 28\nMi dicha es estar cerca de Dios,\ny poner mi refugio en el Señor.",
+            "prayer_after": "Después de haber recibido los dones pascuales\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en todos nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "ordinary-34-0": {
+          "title": "XXXIV DOMINGO «DURANTE EL AÑO»",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mdda3.htm"
+          },
+          "data": {
+            "entrance": "Sal 84, 9\nEl Señor promete la paz para su pueblo y sus amigos,\ny para los que se convierten de corazón.",
+            "collect": "Despierta, Padre, la voluntad de tus fieles\npara que, buscando con fervor los frutos de la gracia divina,\nrecibamos con mayor abundancia la ayuda de tu bondad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlos dones sagrados que mandaste ofrecer a tu nombre,\ny ayúdanos a obedecer siempre tus mandamientos\npara que ellos nos hagan dignos de tu amor.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 116, 1-2\nAlaben al Señor, todas las naciones,\nporque es inquebrantable su amor por nosotros.",
+            "prayer_after": "Te pedimos, Dios todopoderoso,\nque nunca se alejen de ti\nquienes gozan con la participación en tus divinos misterios.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-1-0": {
+          "title": "I DOMINGO DE ADVIENTO",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Sal 24, 1-3\nA ti, Señor, elevo mi alma; Dios mío, yo pongo en ti mi confianza.\nQue no tenga que avergonzarme ni se rían de mí mis enemigos.\nNinguno de los que esperan en ti tendrá que avergonzarse.",
+            "collect": "Dios todopoderoso y eterno,\nte rogamos que la práctica de las buenas obras\nnos permita salir al encuentro de tu Hijo\nque viene hacia nosotros,\npara que merezcamos estar en el Reino de los cielos junto a Él.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 84, 13\nEl mismo Señor nos dará sus bienes\ny nuestra tierra producirá sus frutos.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, Nuestro Señor."
+          }
+        },
+        "advent-1-1": {
+          "title": "Lunes I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Jer 31, 10; Is 35, 4\nEscuchen, naciones, la Palabra del Señor,\nanúncienla en las costas más lejanas.\nNo teman: ahí está su Salvador.",
+            "collect": "Señor y Dios nuestro,\nconcédenos esperar con amor solícito\nla llegada de tu Hijo Jesucristo,\npara que, cuando él venga y nos llame,\nnos encuentre velando en oración\ny cantando con alegría sus alabanzas.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, Nuestro Señor.",
+            "communion": "Cf. Sal 105, 4-5; Is 38, 3\nVen, Señor, visítanos con tu paz,\ny nos alegraremos en tu presencia con integridad de corazón.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-1-2": {
+          "title": "Martes I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Zac 14, 5.7\nVendrá el Señor, mi Dios, y todos los santos con él,\ny brillará en aquel día una gran luz.",
+            "collect": "Dios de misericordia,\nescucha favorablemente nuestras súplicas,\nsocórrenos en medio de las pruebas de la vida,\ny que la venida de tu Hijo nos reconforte\npara que no volvamos a caer en la esclavitud del pecado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas,\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. 2 Tim 4,8\nEl justo juez dará la corona de justicia\na todos los que hayan aguardado con amor su venida.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-1-3": {
+          "title": "Miércoles I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Hab 2, 3; 1 Cor 4, 5\nVendrá el Señor y no tardará.\nSacará a la luz lo que está oculto en las tinieblas\ny manifestará las intenciones secretas de los corazones.",
+            "collect": "Señor y Dios nuestro,\nque tu poder divino prepare nuestro corazón\npara que cuando llegue tu Hijo, Jesucristo,\nnos encuentre dignos de sentarnos a su mesa\ny él mismo nos sirva el alimento celestial.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Is 40, 10; 35, 5\nYa el Señor llega con poder,\ne iluminará los ojos de sus servidores.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo.\nQue vive y reina por los siglos de lo siglos."
+          }
+        },
+        "advent-1-4": {
+          "title": "Jueves I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 118, 151-152\nTú estás cerca, Señor, y todos tus caminos son verdaderos.\nYo sé, desde hace mucho tiempo,\nque tú afirmaste para siempre tus mandatos.",
+            "collect": "Señor Dios nuestro, muestra tu poder\ny ven a socorrernos con tu fuerza,\npara que tu misericordia nos conceda\nlo que nuestros pecados nos impiden alcanzar.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Tit 2, 12-13\nVivamos en la vida presente con sobriedad, justicia y piedad,\nmientras aguardamos la feliz esperanza\ny la manifestación de la gloria de nuestro gran Dios.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-1-5": {
+          "title": "Viernes I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "El Señor vendrá con gloria para a visitar a su pueblo y traerle la paz,\ny le dará como herencia la vida eterna.",
+            "collect": "Señor Jesús, muéstranos tu poder y ven;\npara que con tu protección nos libres y nos salves\nde los peligros que nos amenazan\na causa de nuestros pecados.\nTú que vives y reinas con el Padre en la unidad del Espíritu Santo,\ny eres Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas,\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Flp 3, 20-21\nEsperamos ardientemente que venga como salvador el Señor Jesucristo.\nÉl transformará nuestro pobre cuerpo mortal,\nhaciéndolo semejante a su cuerpo glorioso.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-1-6": {
+          "title": "Sábado I de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 79, 4.2\nVen, Señor, que brille tu rostro sobre nosotros y seremos salvados,\ntú que tienes el trono sobre los querubines.",
+            "collect": "Dios nuestro,\nque para liberar al género humano de la esclavitud del pecado\nenviaste a tu Hijo unigénito al mundo,\nconcédenos a cuantos esperamos confiadamente tu gracia salvadora\nalcanzar el premio de la verdadera libertad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Apoc 22, 12\nDice el Señor: Pronto regresaré trayendo mi recompensa,\npara dar a cada uno según sus obras.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "advent-2-0": {
+          "title": "II DOMINGO DE ADVIENTO",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 30, 19.30\nPueblo de Sión, el Señor vendrá para salvar a las naciones.\nÉl hará oír su voz majestuosa, y llenará de alegría sus corazones.",
+            "collect": "Dios todopoderoso y rico en misericordia,\nque nuestras ocupaciones cotidianas\nno nos impidan acudir presurosos al encuentro de tu Hijo,\npara que, guiados por tu sabiduría divina,\npodamos gozar siempre de su compañía.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas;\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Bar 5, 5; 4, 36\nLevántate, Jerusalén,\nsube a lo alto, y contempla la alegría que te viene de Dios.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-2-1": {
+          "title": "Lunes II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Jer 31, 10; Is 35, 4\nEscuchen, naciones, la palabra del Señor,\nanúncienla en las costas más lejanas.\nNo teman: ahí está su Salvador.",
+            "collect": "Señor y Padre santo,\nque nuestra oración suba a tu presencia,\npara que podamos celebrar con un corazón puro\nel misterio admirable de la encarnación de tu Hijo único.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 105, 4-5; Is 38, 3\nVen, Señor, visítanos con tu paz,\ny nos alegraremos en tu presencia con integridad de corazón.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-2-2": {
+          "title": "Martes II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Zac 14, 5.7\nVendrá el Señor, mi Dios, y todos los santos con él,\ny brillará en aquel día una gran luz.",
+            "collect": "Dios y Padre nuestro, que has hecho llegar tu salvación\na todos los confines de la tierra;\nconcédenos esperar con alegría\nel glorioso nacimiento de tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas,\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. 2 Tim 4,8\nEl justo juez dará la corona de justicia\na todos los que hayan aguardado con amor su venida.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-2-3": {
+          "title": "Miércoles II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Hab 2, 3; 1 Cor 4,5\nVendrá el Señor y no tardará.\nSacará a la luz lo que está oculto en las tinieblas\ny manifestará las intenciones secretas de los corazones.",
+            "collect": "Dios todopoderoso,\nque nos exhortas a preparar el camino de Cristo, el Señor,\nno permitas que quienes esperamos\nla presencia consoladora del médico celestial\ndesfallezcamos a causa de nuestra debilidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Is 40, 10; 35, 5\nYa el Señor llega con poder,\ne iluminará los ojos de sus servidores.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo,\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "advent-2-4": {
+          "title": "Jueves II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 118, 151-152\nTú estás cerca, Señor, y todos tus caminos son verdaderos.\nYo sé, desde hace mucho tiempo,\nque tú afirmaste para siempre tus mandatos.",
+            "collect": "Despierta, Señor, nuestro corazón\ny anímanos a preparar los caminos de tu Hijo unigénito,\npara que, por la gracia de su venida,\npodamos servirte con una vida santa.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Tit 2, 12-13\nVivamos en la vida presente con sobriedad, justicia y piedad,\nmientras aguardamos la feliz esperanza\ny la manifestación de la gloria de nuestro gran Dios.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-2-5": {
+          "title": "Viernes II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "El Señor vendrá con gloria para a visitar a su pueblo y traerle la paz,\ny le dará como herencia la vida eterna.",
+            "collect": "Concede a tu pueblo, Dios todopoderoso,\nla gracia de esperar fervorosamente\nla venida de tu Hijo unigénito\npara que podamos salir a su encuentro\ncon las lámparas encendidas,\ncomo él nos enseñó.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te graden nuestras humildes oraciones y ofrendas,\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Flp 3, 20-21\nEsperamos ardientemente que venga como salvador el Señor Jesucristo.\nÉl transformará nuestro pobre cuerpo mortal,\nhaciéndolo semejante a su cuerpo glorioso.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-2-6": {
+          "title": "Sábado II de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 79, 4.2\nVen, Señor, que brille tu rostro sobre nosotros y seremos salvados,\ntú que tienes el trono sobre los querubines.",
+            "collect": "Dios todopoderoso, brille en nuestros corazones\nel esplendor de tu gloria,\npara que la venida de tu Hijo único,\ndisipe las tinieblas del pecado\ny nos ayude a vivir como hijos de la luz.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Apoc 22, 12\nDice el Señor: pronto regresaré trayendo mi recompensa,\npara dar a cada uno según sus obras.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "advent-3-0": {
+          "title": "III DOMINGO DE ADVIENTO",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Flp 4, 4.5\nAlégrense siempre en el Señor.\nVuelvo a insistir, alégrense, pues el Señor está cerca.",
+            "collect": "Dios y Padre nuestro,\nque acompañas bondadosamente a tu pueblo\nen la fiel espera de nacimiento de tu Hijo,\nconcédenos festejar con alegría su venida\ny alcanzar el gozo que nos da su salvación.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Is 35, 4\nDigan a los que están desalentados:\nsean fuertes, no teman, nuestro Dios viene y nos salvará.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "advent-3-1": {
+          "title": "Lunes III de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Jer 31, 10; Is 35, 4\nEscuchen, naciones, la palabra del Señor,\nanúncienla en las costas más lejanas.\nNo teman: ahí está su Salvador.",
+            "collect": "Dios y Padre nuestro,\ninclina tu oído a las súplicas de tu pueblo\ne ilumina las tinieblas de nuestros corazones\ncon la gracia de la visita de tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\nque esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 105, 4-5; Is 38, 3\nVen, Señor, visítanos con tu paz,\ny nos alegraremos en tu presencia con integridad de corazón.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-3-2": {
+          "title": "Martes III de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Zac 14, 5.7\nVendrá el Señor, mi Dios, y todos los santos con él,\ny brillará en aquel día una gran luz.",
+            "collect": "Señor y Dios nuestro, que por medio de tu Hijo\nhas hecho de nosotros una nueva criatura,\nmira con amor la obra de tu misericordia\ny purifícanos de nuestra antigua vida del pecado\npor la venida de Cristo, tu Hijo unigénito.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas,\ny, ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. 2 Tim 4,8\nEl justo juez dará la corona de justicia\na todos los que hayan aguardado con amor su venida.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-3-3": {
+          "title": "Miércoles III de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Hab 2, 3; 1 Cor 4,5\nVendrá el Señor y no tardará.\nSacará a la luz lo que está oculto en las tinieblas\ny manifestará las intenciones secretas de los corazones.",
+            "collect": "Concédenos, Dios todopoderoso,\nque la cercana celebración del nacimiento de tu Hijo\nnos fortalezca en medio de las fatigas de cada día\ny nos alcance la recompensa eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Ayúdanos, Padre, a ofrecerte este sacrificio\ncomo expresión de nuestra propia entrega,\npara que así cumplamos debidamente\nlo que tú mismo nos mandaste celebrar\ny obtengamos la plenitud de la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Is 40, 10; 35, 5\nYa el Señor llega con poder,\ne iluminará los ojos de sus servidores.",
+            "prayer_after": "Señor y Dios nuestro, imploramos tu clemencia\npara que la fuerza de este alimento divino,\nliberándonos de todo pecado,\nnos prepare para la celebración del nacimiento de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "advent-3-4": {
+          "title": "Jueves III de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 118, 151-152\nTú estás cerca, Señor, y todos tus caminos son verdaderos.\nYo sé desde hace mucho tiempo,\nque tú afirmaste para siempre tus mandatos.",
+            "collect": "Señor Dios,\nnuestras culpas nos entristecen\ny hacen indignos de tu amor;\nte pedimos que la venida salvadora de tu Hijo único\nnos colme de inmensa alegría.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, acepta los dones que recibimos de ti\ny ahora te presentamos;\ny que esta ofrenda realizada en el tiempo presente,\nsea para nosotros anticipo de la salvación eterna.\nPor Jesucristo, Nuestro Señor.",
+            "communion": "Tit 2, 12-13\nVivamos en la vida presente con sobriedad, justicia y piedad,\nmientras aguardamos la feliz esperanza\ny la manifestación de la gloria de nuestro gran Dios.",
+            "prayer_after": "Te pedimos, Padre,\nque fructifique en nosotros la celebración de los santos misterios\ncon los que tú nos enseñas a amar y adherirnos a los bienes eternos,\nmientras peregrinamos\nen medio de las realidades transitorias de esta vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-3-5": {
+          "title": "Viernes III de Adviento",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "El Señor vendrá con gloria para a visitar a su pueblo y traerle la paz,\ny le dará como herencia la vida eterna.",
+            "collect": "Dios todopoderoso,\nque tu gracia nos preceda y acompañe siempre,\npara que, mientras aguardamos con ferviente deseo\nla venida de tu Hijo unigénito,\nobtengamos la ayuda necesaria\npara nuestra vida presente y futura.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Dios nuestro,\nque te agraden nuestras humildes oraciones y ofrendas,\ny ya que carecemos de méritos propios,\nsocórrenos con tu misericordia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Flp 3, 20-21\nEsperamos ardientemente que venga como salvador el Señor Jesucristo.\nÉl transformará nuestro pobre cuerpo mortal,\nhaciéndolo semejante a su cuerpo glorioso.",
+            "prayer_after": "Saciados con el alimento espiritual,\nte rogamos, Padre,\nque por la participación en este santo misterio,\nnos enseñes a valorar sabiamente las realidades terrenas\ncon el corazón puesto en las celestiales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "advent-4-0": {
+          "title": "IV DOMINGO DE ADVIENTO",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 45, 8\nEnvíen los cielos el rocío de lo alto, y las nubes derramen la justicia.\nÁbrase la tierra y brote el Salvador.",
+            "collect": "Señor, Derrama tu gracia en nuestros corazones,\ny ya que hemos conocido por el anuncio del Ángel\nla encarnación de tu Hijo Jesucristo,\ncondúcenos por su Pasión y su Cruz,\na la gloria de la resurrección.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Padre, que el mismo Espíritu\nque fecundó con su poder el seno de María, la Virgen Madre,\nsantifique estos dones que hemos depositado sobre tu altar.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Is 7, 14\nLa virgen concebirá y dará a luz un hijo,\ny lo llamará con el nombre de Emmanuel.",
+            "prayer_after": "Después de recibir el anticipo de nuestra redención eterna,\nte rogamos, Dios todopoderoso,\nque cuanto más se acerca el alegre día de la salvación,\ntanto más se acreciente nuestro fervor\npara celebrar dignamente el misterio del nacimiento de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "date-12-17": {
+          "title": "17 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 49, 13\nAlégrense los cielos y regocíjese la tierra.\nPorque viene el Señor y se compadecerá de sus pobres.",
+            "collect": "Señor Dios, creador y redentor del hombre,\ntú quisiste que tu Palabra se encarnara\nen el seno de una Madre siempre virgen,\nconcédenos participar de la vida divina de tu Hijo único,\nasí como él asumió nuestra misma naturaleza humana.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, Dios nuestro,\nsantifica las ofrendas de tu Iglesia\ny danos en estos sagrados misterios\nel pan del cielo que repara nuestras fuerzas.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Ag 2, 7\nYa viene el deseado de todas las naciones\ny llenará de gloria la casa del Señor.",
+            "prayer_after": "Alimentados con el don celestial\nte pedimos, Dios todopoderoso,\nque, encendidos por el fuego de tu Espíritu,\nbrillemos como lámparas resplandecientes\nen presencia de tu Hijo Jesucristo, que ya viene a nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "date-12-18": {
+          "title": "18 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Vendrá Cristo, nuestro Rey,\na quien Juan anunció como el Cordero de Dios.",
+            "collect": "Te pedimos, Dios todopoderoso,\nque el nacimiento de tu Hijo\nnos libre de la antigua esclavitud del pecado\ny nos ayude a vivir como hombres nuevos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te suplicamos, Padre,\nque nuestra ofrenda sacramental nos haga agradables a ti,\npara que podamos participar de la eternidad de tu Hijo\nquien con su muerte venció nuestra muerte.\nÉl que vive y reina por los siglos de los siglos.",
+            "communion": "Cf. Mt 1, 23\nLe pondrán el nombre de Emmanuel,\nque significa Dios con nosotros.",
+            "prayer_after": "Ayúdanos, Señor,\na recibir en la Iglesia el don de tu misericordia\ny a prepararnos debidamente\npara celebrar la llegada de nuestro Salvador.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "date-12-19": {
+          "title": "19 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Heb 10, 37\nEl que ha de venir, vendrá sin tardar\ny ya no habrá temor en nuestra tierra,\nporque él es nuestro Salvador.",
+            "collect": "Dios y Padre nuestro,\nque, a través de la maternidad de la Virgen María,\nquisiste revelar al mundo el esplendor de tu gloria,\nconcédenos poder celebrar con fe íntegra y generosa entrega\nel admirable misterio de la Encarnación de tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro,\nmira con bondad las ofrendas que te presentamos ante tu altar\ny consagra con tu poder los dones de nuestra pobreza.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc 1, 78-79\nNos visitará el Sol naciente\npara guiar nuestros pasos por el camino de la paz.",
+            "prayer_after": "Dios todopoderoso, al darte gracias por los dones recibidos,\nte pedimos que despiertes en nosotros\nel deseo de la salvación prometida,\npara poder celebrar el nacimiento del Salvador\ncon un corazón renovado.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-20": {
+          "title": "20 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 11, 1; 40, 5; Lc 3, 6\nBrotará un retoño del tronco de Jesé\ny la tierra entera se llenará de la gloria del Señor.\nTodos los hombres verán la salvación de Dios.",
+            "collect": "Dios todopoderoso y eterno,\ntú has querido que por el anuncio del Ángel\nla Virgen Inmaculada recibiera en su seno a tu Palabra hecha carne,\ny llena del Espíritu Santo\nse convirtiera en templo de la divinidad;\nconcédenos que, siguiendo su ejemplo,\nsepamos cumplir humildemente tu voluntad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta, Señor, el admirable sacrificio de tu Hijo,\ny, al participar de estos santos misterios,\npermítenos recibir los bienes que la fe nos alienta a esperar.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc.1, 31\nDijo el Ángel a María: Concebirás y darás a luz un hijo,\ny le pondrás por nombre Jesús.",
+            "prayer_after": "Señor y Dios nuestro,\nprotege a los que has alimentado con el pan de la Eucaristía,\ny al deleitarnos con estos sagrados misterios,\nhaz que gocemos de la paz verdadera.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-21": {
+          "title": "21 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 7, 14; 8, 10\nYa viene el Señor poderoso, y será llamado Emmanuel,\nporque Dios está con nosotros.",
+            "collect": "Escucha con bondad, Padre, la plegaria de tu pueblo,\ny ya que nos alegramos por la encarnación de tu Hijo único,\nconcédenos alcanzar el premio de la vida eterna\ncuando él vuelva en la majestad de su gloria.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre de bondad, acepta los dones\nque misericordiosamente has dado a tu Iglesia\ny, con tu poder, conviertes en sacramento de salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Lc 1, 45\nFeliz de ti por haber creído\nque se cumplirá lo que te fue anunciado de parte del Señor.",
+            "prayer_after": "Señor y Dios nuestro,\nque la participación en estos divinos misterios\nproteja continuamente a tu pueblo,\npara que, entregado plenamente a tu servicio,\ngoce con abundancia la salvación del alma y del cuerpo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-22": {
+          "title": "22 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 23, 7\nPuertas, levanten sus dinteles.\nÁbranse, puertas eternas, para que entre el rey de la gloria.",
+            "collect": "Señor y Dios nuestro,\ncompadecido del hombre caído\nhas dispuesto redimirnos por la venida de tu Hijo unigénito,\nconcede a quienes confesamos humildemente su encarnación\nque lleguemos a gozar un día\nde la compañía de nuestro Redentor.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, confiados en tu misericordia\ntraemos estas ofrendas a tu altar,\npara que, purificados por tu gracia,\nquedemos limpios por los mismos misterios que celebramos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Lc 1, 46.49\nMi alma canta la grandeza del Señor,\nporque el Todopoderoso ha hecho en mí grandes cosas.",
+            "prayer_after": "Padre santo, te pedimos que nos fortalezca esta comunión,\npara que con nuestras buenas obras\nnos acompañen al encuentro del Salvador\ny merezcamos el premio de la felicidad eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-23": {
+          "title": "23 de diciembre",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 9, 5; Sal 71, 17\nNos nacerá un niño y será llamado Dios Fuerte.\nEn él serán bendecidos todos los pueblos de la tierra.",
+            "collect": "Dios todopoderoso y eterno,\nal acercarnos a fiestas las de la Navidad,\nte pedimos que tu Hijo Jesucristo,\nque se ha hecho carne en las entrañas de la Virgen María\ny ha querido habitar entre nosotros,\nnos haga partícipes de la abundancia de su misericordia.\nÉl que vive y reina contigo en la unidad de Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre, te pedimos que este sacrificio de la perfecta alabanza\nrestablezca nuestra amistad contigo,\ny así podamos celebrar con un corazón purificado\nel nacimiento de nuestro Redentor.\nQue vive y reina por los siglos de los siglos.",
+            "communion": "Apoc 3, 20\nYo estoy junto a la puerta y llamo:\nsi alguien oye mi voz y me abre, entraré en su casa y cenaremos juntos.",
+            "prayer_after": "Padre misericordioso, concede tu paz\na quienes has alimentado con el pan del cielo,\npara que, cuando llegue tu Hijo muy amado,\npodamos salir a su encuentro con las lámparas encendidas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-24": {
+          "title": "24 de diciembre Misa de la mañana",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Madviento3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Gal 4, 4\nYa se cumplió el tiempo establecido,\nen el que Dios envió a su Hijo a la tierra.",
+            "collect": "Señor Jesús,\napresúrate y no tardes\npara que tu venida consuele y anime\na quienes confiamos en tu bondad.\nTú, que vives y reinas con el Padre en la unidad del Espíritu Santo\ny eres Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta con bondad, Padre, los dones que te ofrecemos;\nhaz que, al recibirlos, nos libren de nuestros pecados\ny podamos esperar con alma limpia la gloriosa venida de tu Hijo.\nQue vive y reina por los siglos de los siglos.",
+            "communion": "Lc 1, 68\nBendito sea el Señor, Dios de Israel,\nporque ha visitado y redimido a su pueblo.",
+            "prayer_after": "Renovados por esta eucaristía, te pedimos, Padre,\nque así como preparamos\nla fiesta del admirable nacimiento de tu Hijo,\ntambién podamos recibir con alegría\nla abundancia de sus dones eternos.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "lent-1-0": {
+          "title": "I DOMINGO DE CUARESMA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 90, 15-16\nMe invocará, y yo le responderé.\nEstaré con él en el peligro, lo defenderé y lo glorificaré;\nle haré gozar de una larga vida.",
+            "collect": "Dios todopoderoso, concédenos que\npor la práctica anual de la Cuaresma,\nprogresemos en el conocimiento del misterio de Cristo\ny vivamos en conformidad con él.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos que nos dispongas, Señor,\npara ofrecer convenientemente estos dones\ncon los que iniciamos el camino cuaresmal.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 4, 4\nNo sólo de pan vive el hombre,\nsino de toda Palabra que sale de la boca de Dios.",
+            "prayer_after": "Te pedimos, Padre,\nque reconfortados con el pan del cielo\nque alimenta nuestra fe, acrecienta nuestra esperanza\ny fortalece nuestra caridad,\naprendamos a tener hambre de este pan vivo y verdadero\ny a vivir de toda palabra que sale de tu boca.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-1": {
+          "title": "Lunes I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 122, 2-3\nComo los ojos de los servidores están fijos en las manos de su señor,\nasí miran nuestros ojos al Señor, nuestro Dios,\nhasta que se apiade de nosotros.\nTen piedad, Señor, ten piedad de nosotros.",
+            "collect": "Conviértenos a ti, Dios salvador nuestro,\ny, para que sean provechosas las prácticas cuaresmales,\ninstrúyenos con tus enseñanzas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta, Señor, las ofrendas que te presentamos;\nque por obra de tu gracia, ellas santifiquen nuestra vida\ny nos obtengan el perdón de nuestras culpas.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Mt 25, 40.34\nLes aseguro que cada vez que lo hicieron\ncon el más pequeño de mis hermanos,\nlo hicieron conmigo, dice el Señor.\nVengan, benditos de mi Padre,\ny reciban en herencia el reino\nque les fue preparado desde el comienzo del mundo.",
+            "prayer_after": "Padre Santo, por la Eucaristía que hemos recibido,\nconcédenos experimentar la ayuda para el alma y el cuerpo;\ny así, restaurado todo nuestro ser,\nalcancemos la plenitud de tu salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-2": {
+          "title": "Martes I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 89, 1-2\nSeñor, tú has sido nuestro refugio a lo largo de las generaciones;\ndesde siempre y para siempre, tú eres Dios.",
+            "collect": "Señor, mira a tu familia\nque se mortifica con la penitencia corporal\ny concédenos que, en tu presencia,\nnuestra alma resplandezca con el deseo de poseerte.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios y creador nuestro, acepta estos dones\nque hemos recibido de tu generosidad,\ny concede que los auxilios temporales que nos das\nnos sirvan para la vida eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Sal 4, 2\nRespóndeme cuando te invoco, Dios, mi defensor,\ntú que en la angustia me diste un desahogo:\nten piedad de mí y escucha mi oración.",
+            "prayer_after": "Padre, te pedimos que por estos misterios\naprendamos a amar los bienes del cielo\nmientras moderamos los deseos terrenales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-3": {
+          "title": "Miércoles I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 24, 6.2.22\nAcuérdate, Señor, de tu compasión y de tu amor, que son eternos:\nque nuestros enemigos no triunfen sobre nosotros.\nDios de Israel, líbranos de todas nuestras angustias.",
+            "collect": "Mira con bondad la entrega de tu pueblo, Señor,\npara que, con la abstinencia corporal,\nse renueve el alma de tus fieles con el fruto de las buenas obras.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te ofrecemos, Señor, estos dones que nos has dado\npara consagrarlos a ti;\nconcédenos que los sacramentos que celebramos\nsean para nosotros, remedio de eternidad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 5, 12\nSe alegrarán los que se refugian en ti, Señor,\ny cantarán jubilosos porque tú estarás con ellos.",
+            "prayer_after": "Dios nuestro, que no cesas de nutrirnos con tus sacramentos,\nconcédenos que este alimento recibido\nnos alcance la vida eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-4": {
+          "title": "Jueves I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 5, 2-3\nSeñor, escucha mis palabras, atiende a mis gemidos;\noye mi clamor, mi Rey y mi Dios.",
+            "collect": "Concédenos, Padre,\npensar siempre con rectitud y obrar con diligencia,\ny ya que no podemos existir sin ti,\ndanos la gracia de vivir según tu voluntad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Atiende los deseos de tu pueblo, Señor;\ny al escuchar nuestras plegarias y aceptar nuestras ofrendas,\nvuelve hacia ti nuestros corazones.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 7, 8\nTodo el que pide, recibe; el que busca, encuentra; y al que llama, se le abrirá.",
+            "prayer_after": "Señor y Dios nuestro, nos has dado estos santos misterios\ncomo fuerza y vigor para nuestra salvación;\nque ellos nos sirvan de ayuda ahora y siempre.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-5": {
+          "title": "Viernes I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 24, 17-18\nSeñor, alivia las angustias de mi corazón.\nMira mi aflicción y mis fatigas, y perdona todos mis pecados.",
+            "collect": "Señor, concede a tus fieles\ndisponerse convenientemente a la celebración de la Pascua,\npara que el esfuerzo de la mortificación corporal\nles lleve a una verdadera renovación en el espíritu.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe estas ofrendas, Señor,\nque, por tu bondad, nos reconcilia contigo,\ny concédenos la salvación con la fuerza de tu amor.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Ez 33, 11\nDice el Señor: No quiero la muerte del pecador,\nsino que se convierta y viva.",
+            "prayer_after": "Alimentados con tu Eucaristía, renuévanos Padre,\ny purificados de la corrupción del pecado,\nhaz que participemos del misterio de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-1-6": {
+          "title": "Sábado I de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 18, 8\nLa ley del Señor es perfecta, reconforta el alma;\nel testimonio del Señor es verdadero, da sabiduría al simple.",
+            "collect": "Padre eterno, vuelve a ti nuestros corazones,\npara que, buscando siempre el único bien necesario\ny practicando la caridad fraterna,\nvivamos consagrados a tu servicio.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Padre, que estos sagrados misterios\nnos renueven espiritualmente\ny nos hagan dignos de recibirlos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Mt 5, 48\nDice el Señor: Sean perfectos como es perfecto el Padre que está en el cielo.",
+            "prayer_after": "Otorga, Señor, tu ayuda continua\na quienes alimentas con la Eucaristía;\ny, a cuantos has iluminado con tu Palabra,\nacompáñalos siempre con el consuelo de tu gracia.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-0": {
+          "title": "II DOMINGO DE CUARESMA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 26, 8.9\nMi corazón sabe que dijiste: Busquen mi rostro.\nYo busco tu rostro, Señor, no lo apartes de mí.",
+            "collect": "Padre santo, que nos mandaste escuchar a tu Hijo amado,\nalimenta nuestro espíritu con tu Palabra,\npara que, después de haber purificado nuestra mirada interior,\npodamos contemplar gozosos la gloria de su rostro.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Padre,\nque este sacrificio borre nuestros pecados\ny santifique el cuerpo y el alma de tus fieles\npara poder celebrar dignamente las fiestas pascuales.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 17, 5\nEste es mi Hijo muy querido,\nen quien tengo puesta mi predilección: escúchenlo.",
+            "prayer_after": "Después de haber recibido estos gloriosos misterios, Padre,\nte damos gracias, porque, aun viviendo en la tierra,\nya nos haces partícipes de los bienes del cielo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-1": {
+          "title": "Lunes II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 25, 11-12\nLíbrame, Señor, y concédeme tu gracia.\nMis pies están firmes sobre el camino llano\ny, en la asamblea, bendeciré al Señor.",
+            "collect": "Dios nuestro, que, para remedio del alma,\nnos mandaste mortificar el cuerpo,\nconcédenos la gracia de abstenernos de todo pecado\ny de cumplir los mandamientos de tu amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Escucha con bondad nuestros ruegos, Señor,\ny libra de las seducciones del mundo\na quienes concedes celebrar estos santos misterios.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc 6, 36\nDice el Señor: Sean misericordiosos,\ncomo el Padre de ustedes es misericordioso.",
+            "prayer_after": "Padre, que esta comunión nos purifique del pecado\ny nos haga partícipes de la alegría del cielo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-2": {
+          "title": "Martes II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 12, 4-5\nIlumina mis ojos, para que no caiga en el sueño de la muerte,\npara que mi enemigo no pueda decir: Lo he vencido.",
+            "collect": "Señor, guarda con amor constante a tu Iglesia,\ny ya que la naturaleza humana es frágil sin ti,\npresérvanos siempre del mal\ny llévanos por las sendas de la salvación.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Por estos misterios,\nobra, Señor, en nosotros tu salvación,\nque nos purifique de los vicios terrenos\ny nos conduzca a los bienes del cielo.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 9, 2-3\nProclamaré todas tus maravillas;\nquiero alegrarme y regocijarme en ti,\ny cantar himnos a tu nombre, Altísimo.",
+            "prayer_after": "Te rogamos, Padre, que este sagrado alimento\nnos ayude a vivir más santamente\ny nos obtenga tu auxilio constante.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-3": {
+          "title": "Miércoles II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 37, 22-23\nSeñor, no me abandones, Dios mío, no te quedes lejos de mí.\nApresúrate a venir en mi ayuda, mi Señor, mi Salvador.",
+            "collect": "Conserva siempre a tu familia\nen la práctica de las buenas obras, Señor,\ny confórtala de tal modo en sus necesidades temporales\nque pueda llegar felizmente a los bienes del cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Mira con bondad, Señor, los dones que te presentamos\ny, por este sagrado intercambio,\nlíbranos de las ataduras de nuestros pecados.\nPor Jesucristo nuestro Señor.",
+            "communion": "Mt 20, 28\nEl Hijo del hombre no vino para ser servido\nsino para servir y dar su vida en rescate por una multitud.",
+            "prayer_after": "Señor, Dios nuestro,\nte pedimos que este sacramento, anticipo de la inmortalidad,\nnos ayude para la salvación eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-4": {
+          "title": "Jueves II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 138, 23-24\nSondéame, Dios mío, y penetra mi interior;\nobserva si estoy en un camino falso y llévame por el camino eterno.",
+            "collect": "Dios nuestro, que amas la inocencia\ny la devuelves a quienes la perdieron,\natrae hacia ti los corazones de tus servidores\npara que, inflamados por el fuego de tu Espíritu,\npermanezcamos firmes en la fe y diligentes en el buen obrar.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Señor, que con este sacrificio\nsantifica nuestras prácticas cuaresmales,\npara que las penitencias exteriores\nnos lleven a la conversión del corazón.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 118, 1\nFelices los que van por un camino intachable,\nlos que siguen la ley del Señor.",
+            "prayer_after": "Dios y Padre, te pedimos que los frutos de esta eucaristía\npermanezcan en nosotros\ny nos acompañen siempre en nuestras obras.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-2-5": {
+          "title": "Viernes II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 30, 2.5\nYo me refugio en ti, Señor, que nunca me vea defraudado.\nSácame de la red que me han tendido porque tú eres mi refugio.",
+            "collect": "Dios todopoderoso, concédenos que,\npurificados por la penitencia cuaresmal,\nlleguemos a las próximas fiestas pascuales\ncon el corazón libre de pecado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que tu misericordia nos disponga\na celebrar dignamente estos misterios\ny nos conduzca a una vida santa.\nPor Jesucristo nuestro Señor.",
+            "communion": "1 Jn 4, 10\nDios nos amó y envió a su Hijo\ncomo víctima propiciatoria por nuestros pecados.",
+            "prayer_after": "Padre, después de recibir el anticipo de la salvación eterna,\nhaz que nos encaminemos a ella\nde tal manera que un día logremos alcanzarla.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-2-6": {
+          "title": "Sábado II de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 144, 8-9\nEl Señor es bondadoso y compasivo,\nlento para enojarse y de gran misericordia;\nel Señor es bueno con todos y tiene compasión de todas sus criaturas.",
+            "collect": "Dios nuestro, que por medio de admirables sacramentos\nnos concedes participar\nya en este mundo de los bienes celestiales;\nguíanos por el camino de la vida\ny condúcenos a la luz donde tú habitas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Por medio de este sacramento, Señor,\ndanos los frutos de la redención\npara que nos aparte siempre de los excesos\ny nos conduzca a la salvación eterna\nPor Jesucristo nuestro Señor.",
+            "communion": "Lc 15, 32\nEs justo que haya fiesta y alegría,\nporque tu hermano estaba muerto y ha vuelto a la vida,\nestaba perdido y ha sido encontrado.",
+            "prayer_after": "Después de recibir este sacramento,\nte pedimos, Padre, que tu gracia llegue\nhasta lo más íntimo de nuestro corazón\ny nos haga partícipes de su fuerza divina.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-3-0": {
+          "title": "III DOMINGO DE CUARESMA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 24, 15-16\nMis ojos están siempre fijos en el Señor,\nporque él sacará mis pies de la trampa.\nMírame y ten piedad de mí, Señor, porque estoy solo y afligido.",
+            "collect": "Padre de misericordia y origen de todo bien,\nque en el ayuno, la oración y la limosna\nnos muestras el remedio del pecado,\nmira con agrado el reconocimiento de nuestra pequeñez,\npara que seamos aliviados por tu misericordia\nquienes nos humillamos interiormente.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, por este sacrificio concédenos\nque, así como te pedimos perdón por nuestros pecados,\nsepamos también perdonar las faltas de nuestros hermanos.\nPor Jesucristo, nuestro Señor.",
+            "prayer_after": "Padre, alimentados en la tierra, con el pan del cielo,\nanticipo de la eterna salvación,\nte suplicamos que lleves a su plenitud\nel misterio que se realiza en nosotros\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-1": {
+          "title": "Lunes III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 83, 3\nMi alma se consume de deseos por los atrios del Señor;\nmi corazón y mi carne claman ansiosos por el Dios viviente.",
+            "collect": "Tu misericordia, Señor,\npurifique y proteja siempre a tu Iglesia,\ny ya que sin ti no puede subsistir,\nguíala siempre con tu protección.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te ofrecemos, Señor, estos dones\ncomo expresión de nuestra entrega;\nconviértelos para nosotros\nen sacramento de salvación.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 116, 1.2\nAlaben al Señor todas las naciones\nporque es inquebrantable su amor por nosotros.",
+            "prayer_after": "Te rogamos, Padre,\nque la comunión de tu sacramento\nnos purifique de nuestras faltas\ny nos conceda la unidad.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-2": {
+          "title": "Martes III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 16, 6.8\nYo te invoco, Dios mío, porque tú me respondes:\nInclina tu oído hacia mí y escucha mis palabras.\nProtégeme como a la pupila de tus ojos;\nescóndeme a la sombra de tus alas.",
+            "collect": "Te pedimos, Señor, que tu gracia nunca nos abandone,\npara vivir entregados a tu servicio\ny experimentar siempre tu protección.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Concédenos, Padre, que este sacrificio salvador\nnos purifique de nuestros pecados\ny atraiga sobre nosotros tu poderosa ayuda.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 14, 1-2\nSeñor, ¿quién se hospedará en tu carpa?,\n¿quién habitará en tu santa montaña?\nEl que procede rectamente y practica la justicia.",
+            "prayer_after": "Te pedimos, Padre,\nque la sagrada participación en este sacramento\nrenueve nuestra vida,\nnos purifique de nuestros pecados y nos otorgue tu protección.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-3": {
+          "title": "Miércoles III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 118, 133\nAfirma mis pasos conforme a tu Palabra, para que no me domine la maldad.",
+            "collect": "Te pedimos, Padre,\nque aleccionados por la observancia cuaresmal\ny alimentados con el pan de tu Palabra,\npor la penitencia nos entreguemos a ti de todo corazón\ny perseveremos unidos en la oración.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Con la ofrenda de estos dones\nrecibe, Señor, las súplicas de tu pueblo\ny defiende de todo peligro a quienes celebramos tus misterios.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Sal 15, 11\nSeñor, me darás a conocer el camino de la vida,\nsaciándome de gozo en tu presencia.",
+            "prayer_after": "Dios nuestro,\nsantifica a quienes alimentaste con este pan del cielo\ny haz que, libres de todo pecado,\npodamos alcanzar las promesas eternas.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-4": {
+          "title": "Jueves III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Yo soy el salvador de mi pueblo, dice el Señor.\nLo escucharé cuando me invoque en su angustia\ny seré su Señor para siempre.",
+            "collect": "Dios todopoderoso, te pedimos humildemente que,\na medida que se acerca la fiesta de nuestra salvación,\nse acreciente nuestra entrega\npara celebrar con fruto el misterio pascual.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios y Padre nuestro, para que nuestra ofrenda sea de tu agrado,\npurifica a tu pueblo de toda maldad\ny no permitas que nos entreguemos a falsos placeres\nquienes poseemos la promesa de la verdadera felicidad.\nPor Jesucristo nuestro Señor.",
+            "communion": "Sal 118, 4-5\nTú promulgaste tus mandamientos para que se cumplieran íntegramente.\nOjalá, yo me mantenga firme en la observancia de tus preceptos.",
+            "prayer_after": "Alimentados con la Eucaristía, te pedimos, Señor,\nque nos animes con tu ayuda\npara que experimentemos la salvación,\ntanto en la celebración de tus misterios como en la vida cotidiana.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-5": {
+          "title": "Viernes III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 85, 8.10\nNo hay otro dios igual a ti, Señor;\nporque tú eres grande, Dios mío, y eres el único que hace maravillas.",
+            "collect": "Infunde tu gracia en nuestros corazones, Dios nuestro,\npara que nos apartemos de todo mal\ny, con tu ayuda, nos mantengamos fieles a tus enseñanzas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, mira con bondad los dones que te presentamos\npara que sean gratos a tus ojos y nos alcancen la salvación.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. Mc 12, 33\nAmar a Dios con todo el corazón y al prójimo como a sí mismo\nvale más que todos los sacrificios.",
+            "prayer_after": "Infunde, Padre, tu gracia salvadora\nen el alma y en el cuerpo de tus hijos\npara que obtengamos un día la plena posesión\nde lo que ahora recibimos en la Eucaristía.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-3-6": {
+          "title": "Sábado III de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 102, 2-3\nBendice al Señor, alma mía, y nunca olvides sus beneficios.\nÉl perdona todas tus culpas.",
+            "collect": "Señor y Dios nuestro,\nnos alegramos por la celebración anual de la Cuaresma,\ny te pedimos que, participando del misterio pascual,\npodamos gozar plenamente de sus frutos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, purificados por tu gracia,\nnos acercamos a tus santos misterios;\npermítenos que, al celebrar esta Eucaristía que nos has dado,\npodamos rendirte una alabanza perfecta.\nPor Jesucristo nuestro Señor.",
+            "communion": "Lc 18, 13\nEl publicano, manteniéndose a distancia, se golpeaba el pecho, diciendo:\nDios mío, ten piedad de mí, que soy un pecador.",
+            "prayer_after": "Concédenos, Dios misericordioso,\nvenerar con sincero respeto\nla santa Eucaristía que continuamente nos alimenta\ny recibirla siempre con profundo espíritu de fe.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-4-0": {
+          "title": "IV DOMINGO DE CUARESMA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 66, 10-11\nAlégrate, Jerusalén, y que se congreguen cuantos la aman.\nCompartan su alegría los que estaban tristes,\nvengan a saciarse con su felicidad.",
+            "collect": "Dios nuestro,\nque reconcilias maravillosamente al género humano\npor tu Palabra hecha carne;\nte pedimos que el pueblo cristiano\nse disponga a celebrar las próximas fiestas pascuales\ncon una fe viva y una entrega generosa.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te presentamos con alegría, Señor,\nestos dones para la salvación eterna;\nayúdanos a celebrarlos con fidelidad\ny a ofrecerlos dignamente por la redención del mundo.\nPor Jesucristo, nuestro Señor.",
+            "prayer_after": "Padre, que iluminas a todo hombre que viene a este mundo,\npor eso te pedimos que alumbres nuestros corazones\ncon el esplendor de tu gracia,\npara que nuestros pensamientos sean dignos de ti\ny aprendamos a amarte de todo corazón.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-4-1": {
+          "title": "Lunes IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 30, 7-8\nYo confío en el Señor.\nTu amor será mi gozo y mi alegría porque tú miraste mi aflicción.",
+            "collect": "Señor Dios nuestro,\nque renuevas al mundo por medio de tus sacramentos,\nconcede a tu Iglesia la ayuda de los auxilios de tu gracia\ny no la prives de lo que necesita cada día.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor, concédenos obtener\nel fruto de las ofrendas que te presentamos,\npara que muera en nosotros el antiguo poder del pecado,\ny nos renovemos con tu vida divina.\nPor Jesucristo nuestro Señor.",
+            "communion": "Ez 36, 27\nDice el Señor: Infundiré mi espíritu en ustedes\ny haré que sigan mis preceptos, y que observen y practiquen mis leyes.",
+            "prayer_after": "Padre, te pedimos que tus santos misterios,\nal alimentarnos renueven nuestra vida cristiana\ny al santificarnos nos conduzcan a la eternidad.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-4-2": {
+          "title": "Martes IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 55, 1\nDice el Señor: Vengan a beber, ustedes, los que tienen sed;\ny los que no tengan dinero vengan y beban con alegría.",
+            "collect": "Te pedimos, Padre,\nque las venerables prácticas de este tiempo cuaresmal\ndispongan el corazón de tus fieles\npara celebrar dignamente el misterio pascual\ny anunciar a todos los hombres\nel mensaje de tu salvación.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te ofrecemos, Señor, los dones que tú mismo nos diste;\nque sean para nosotros\nprueba de tu providencia en esta vida mortal\ny alimento eficaz para la inmortalidad.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. Sal 22, 1-2\nEl Señor es mi pastor, nada me puede faltar.\nÉl me hace descansar en verdes praderas\ny me conduce a las aguas tranquilas.",
+            "prayer_after": "Padre de bondad, purifica nuestros corazones\ny renuévanos con tus sacramentos,\npara que también nuestro cuerpo\nencuentre en ellos fuerza para la vida presente\ny el germen de su vida inmortal.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-4-3": {
+          "title": "Miércoles IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 68, 14\nMi oración sube hasta ti, Señor, en el momento favorable;\nrespóndeme, Dios mío, por tu gran amor, sálvame, por tu fidelidad.",
+            "collect": "Padre, que concedes a los justos el premio de sus méritos\ny el perdón a los pecadores que se arrepienten;\nten piedad de quienes te suplicamos\npara que la confesión de nuestras culpas\nnos obtenga tu perdón.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Señor,\nque la fuerza de este sacrificio\nnos purifique de los pecados de la vida pasada,\nrenueve nuestras vidas y nos alcance la salvación.\nPor Jesucristo nuestro Señor.",
+            "communion": "Jn 3, 17\nDios no envió a su Hijo para juzgar al mundo,\nsino para que el mundo se salve por él.",
+            "prayer_after": "Después de haber recibido los dones celestiales,\nte pedimos, Padre, que no sea causa de condenación\nlo que en tu providencia diste a tus fieles para la salvación.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-4-4": {
+          "title": "Jueves IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 104, 3-4\nQue la alegría llene el corazón de los que buscan al Señor.\nBusquen al Señor y serán fuertes, busquen siempre su rostro.",
+            "collect": "Imploramos tu misericordia, Señor,\ny te pedimos que, purifiques por la penitencia\ny por la práctica de las buenas obras,\nnos mantengamos fieles a tus mandamientos,\npara llegar bien dispuestos a las fiestas de Pascua.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios todopoderoso,\nconcédenos que la ofrenda de este sacrificio\nfortalezca nuestra debilidad\ny nos defienda de todos los males.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. Jer 31, 33\nDice el Señor: Infundiré el amor de mi ley y la escribiré en sus corazones;\nYo seré su Dios, y ustedes serán mi pueblo.",
+            "prayer_after": "Que esta comunión, Padre,\nnos purifique de todas nuestras culpas,\ny así nos alegremos con tu ayuda\nquienes estamos agobiados por el peso de nuestra conciencia.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-4-5": {
+          "title": "Viernes IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 53, 3-4\nDios mío, sálvame por tu nombre, defiéndeme con tu poder.\nDios mío, escucha mi súplica, presta atención a las palabras de mi boca.",
+            "collect": "Señor Dios nuestro, que has preparado remedios abundantes\npara nuestra fragilidad,\nconcédenos experimentar tu salvación con alegría\ny manifestarla con una vida santa.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios todopoderoso,\nte pedimos que, purificados por tu inmenso poder,\neste sacrificio que celebramos\nnos haga llegar hasta ti interiormente limpios.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Ef 1, 7\nEn Cristo hemos sido redimidos por su Sangre\ny hemos recibido el perdón de los pecados, según la riqueza de su gracia.",
+            "prayer_after": "Concédenos, Padre,\nque así como pasamos de lo antiguo a lo nuevo,\nrenunciando al pecado,\nrecibamos en nuestro corazón la vida de tu gracia.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-4-6": {
+          "title": "Sábado IV de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 17, 5-7\nLas olas de la muerte me envolvieron y me cercaron los lazos del abismo;\nen mi angustia invoqué al Señor, y él escuchó mi voz desde su templo.",
+            "collect": "Te rogamos, Señor,\nque tu amor misericordioso dirija nuestros corazones\nporque, sin tu ayuda, no podemos agradarte.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe con agrado estas ofrendas, Señor,\ny atrae misericordiosamente aun a los que se han alejado de ti.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. 1 Ped 1, 18-19\nFuimos rescatados con la sangre preciosa de Cristo,\nel Cordero sin mancha y sin defecto.",
+            "prayer_after": "Que tus santos misterios nos purifiquen, Padre,\ny por su acción eficaz nos hagan agradables a ti.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "lent-5-0": {
+          "title": "V DOMINGO DE CUARESMA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 42, 1-2\nHazme justicia, Señor, y defiende mi causa contra la gente sin piedad:\nlíbrame del hombre falso y perverso, Señor,\nporque tú eres mi Dios, mi fortaleza.",
+            "collect": "Señor y Dios nuestro,\nte rogamos que tu gracia nos conceda\nparticipar generosamente de aquel amor\nque llevó a tu Hijo a entregarse a la muerte\npor la salvación del mundo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Escúchanos, Dios todopoderoso,\ny por este sacrificio purifica a estos hijos tuyos\nque has iniciado en la fe cristiana.\nPor Jesucristo nuestro Señor.",
+            "prayer_after": "Dios todopoderoso,\nconcédenos que podamos contarnos siempre\nentre los miembros de Cristo,\ncuyo Cuerpo y Sangre hemos recibido.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "lent-5-1": {
+          "title": "Lunes V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 55, 2-3\nTen piedad de mí, Señor, porque mis enemigos\nme asedian y combaten contra mí.",
+            "collect": "Señor Dios nuestro, cuya gracia inefable\nnos enriqueces con toda clase de bendiciones;\nconcédenos pasar de la antigua servidumbre\ndel pecado a una vida nueva\ny así prepararnos para la gloria del Reino celestial.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Señor,\nque quienes nos disponemos a celebrar los santos misterios\nte ofrezcamos la feliz pureza del alma\ncomo fruto de la penitencia corporal.\nPor Jesucristo, nuestro Señor.",
+            "prayer_after": "Fortalecidos por la celebración de tus sacramentos\nte pedimos, Padre, que seamos purificados de nuestros vicios\ny lleguemos a ti por el diligente seguimiento de Cristo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "lent-5-2": {
+          "title": "Martes V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 26, 14\nEspera en el Señor y sé fuerte; ten valor y espera en el Señor.",
+            "collect": "Concédenos, Padre,\nperseverar en el cumplimiento de tu voluntad\npara que, en este tiempo en que vivimos,\nel pueblo consagrado a tu servicio\ncrezca en número y en santidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te ofrecemos, Señor, este sacrificio de reconciliación,\npara que mediante tu misericordia perdones nuestras faltas\ny guíes nuestros corazones vacilantes.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. Jn 12, 32\nDice el Señor: Cuando yo sea elevado sobre la tierra, atraeré a todos hacia mí.",
+            "prayer_after": "Concédenos, Dios todopoderoso,\nque, anhelando tus divinos misterios,\nmerezcamos alcanzar los dones del cielo.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-5-3": {
+          "title": "Miércoles V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 17, 49\nTú, Señor, me liberas de mis enemigos,\nme haces triunfar de mis agresores y me libras del hombre violento.",
+            "collect": "Dios misericordioso, ilumina el corazón de tus fieles\npurificado por la penitencia cuaresmal,\ny ya que has puesto en nosotros el deseo de servirte,\nescucha paternalmente nuestras súplicas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta, Padre, los dones\nque nos concedes presentar en honor de tu nombre\npara que sean remedio de nuestra debilidad.\nPor Jesucristo nuestro Señor.",
+            "communion": "Col 1, 13-14\nDios nos hizo entrar en el reino de su Hijo muy querido,\nen quien tenemos la redención y el perdón de los pecados.",
+            "prayer_after": "Señor todopoderoso,\nque los misterios recibidos sean medicina espiritual,\npurifiquen los vicios de nuestro corazón\ny nos aseguren tu protección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-5-4": {
+          "title": "Jueves V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Heb 9, 15\nCristo es el mediador de la nueva alianza\na fin de que, por su muerte, los que son llamados\nreciban la herencia eterna que ha sido prometida.",
+            "collect": "Escucha, Señor, nuestras súplicas,\ny protege con bondad a quienes esperamos en tu misericordia,\npara que, limpios de pecado,\nperseveremos en una vida santa\ny lleguemos a heredar tus promesas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Mira complacido, Señor, los dones que te presentamos;\nque sirvan para nuestra conversión\ny alcancen la salvación al mundo entero.\nPor Jesucristo nuestro Señor.",
+            "communion": "Cf. Rom 8, 32\nDios no perdonó a su propio Hijo, sino que lo entregó por todos nosotros;\npor eso nos concederá con él toda clase de favores.",
+            "prayer_after": "Saciados con el don de la salvación,\nimploramos, Padre, tu misericordia,\npara que alimentados en la tierra con este sacramento\nnos hagas participar de la vida eterna.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-5-5": {
+          "title": "Viernes V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 30, 10.16.18\nTen piedad de mí, Señor, porque estoy angustiado;\nlíbrame del poder de mis enemigos y de aquellos que me persiguen.\nSeñor, que no me avergüence de haberte invocado.",
+            "collect": "Perdona las culpas de tu pueblo, Señor,\npara que tu amor nos libre del pecado\nque hemos contraído por nuestra debilidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios de misericordia,\nconcédenos acercarnos dignamente a tu altar,\ny, por nuestra constante participación en este sacrificio,\nalcanzar la salvación.\nPor Jesucristo, nuestro Señor.",
+            "communion": "1 Ped 2, 24\nJesús llevó sobre la cruz nuestros pecados, cargándolos en su cuerpo,\na fin de que, muertos al pecado vivamos para la justicia.\nGracias a sus llagas, fuimos curados.",
+            "prayer_after": "Padre santo, que este don recibido nos proteja siempre\ny aleje de nosotros todo mal.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "lent-5-6": {
+          "title": "Sábado V de Cuaresma",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mcuaresma3.htm"
+          },
+          "data": {
+            "entrance": "Sal 21, 20.7\nSeñor, no te quedes lejos; tú que eres mi fuerza, ven pronto a socorrerme.\nYo soy un gusano, no un hombre;\nla gente me escarnece y el pueblo me desprecia.",
+            "collect": "Dios nuestro, que hiciste de todos los renacidos en Cristo\nun linaje escogido y un sacerdocio real,\nconcédenos desear lo que mandas y ponerlo en práctica,\npara que tu pueblo, llamado a la vida eterna,\nsea uno en la fe y en el amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta, Señor, el ofrecimiento de nuestro ayuno;\nque al purificarnos nos haga dignos de tu gracia,\ny nos conduzca a los bienes prometidos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 11, 52\nCristo se entregó a la muerte, para congregar en la unidad\na los hijos de Dios que están dispersos.",
+            "prayer_after": "Padre, humildemente te pedimos\nque, así como nos alimentas con el Cuerpo y la Sangre de tu Hijo\nnos hagas partícipes de la naturaleza divina.\nPor Jesucristo nuestro Señor."
+          }
+        },
+        "easter-2-0": {
+          "title": "II DOMINGO DE PASCUA o de la Divina Misericordia",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "1 Ped 2, 2\nComo niños recién nacidos, deseen la leche pura de la palabra,\nque los hará crecer para la salvación. Aleluia.",
+            "collect": "Dios de eterna misericordia,\nque en la celebración anual de las fiestas pascuales\nreavivas la fe del Pueblo santo;\nacrecienta en nosotros los dones de tu gracia,\npara comprender, verdaderamente, la inestimable grandeza\ndel bautismo que nos purificó,\ndel espíritu que nos regeneró\ny de la sangre que nos redimió.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, las ofrendas\nque te presentamos,",
+            "communion": "Cf. Jn 20, 27\nAcerca tu mano, y reconoce el lugar de los clavos:\nen adelante no seas incrédulo, sino fiel. Aleluia.",
+            "prayer_after": "Dios todopoderoso, concédenos\nque los frutos del sacramento pascual que hemos recibido,\npermanezcan siempre en nuestros corazones.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-2-1": {
+          "title": "Lunes II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Rom 6, 9\nCristo, después de resucitar, no muere más,\nporque la muerte ya no tiene poder sobre él. Aleluia.",
+            "collect": "Renovados por la gracia de la Pascua,\nte pedimos, Dios todopoderoso,\nque quienes hemos perdido la semejanza divina\ncon que fueron creados nuestros primeros padres,\nseamos devueltos a la imagen de nuestro Creador.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría,\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 20, 19\nJesús, poniéndose en medio de sus discípulos, les dijo:\nLa paz esté con ustedes. Aleluia.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo\ny, ya que lo has renovado con los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-2-2": {
+          "title": "Martes II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 19, 7.6\nAlegrémonos, regocijémonos y demos gloria a Dios,\nporque el Señor, nuestro Dios, el Todopoderoso, ha establecido su reino.\nAleluia.",
+            "collect": "Te pedimos, Dios todopoderoso,\nque nos concedas anunciar la victoria de Cristo resucitado,\npara que alcancemos en plenitud los bienes eternos\ncuyo anticipo hemos recibido.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales,\nconcédenos ser constantes en la acción de gracias,\npara que la continua eficacia de tu obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc 24, 46.26\nEl Mesías debía sufrir y resucitar para entrar en su gloria. Aleluia.",
+            "prayer_after": "Señor y Dios nuestro, escucha nuestras oraciones,\npara que la participación\nen los sacramentos de nuestra redención\nnos ayude en la vida presente\ny nos alcance las alegrías eternas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-2-3": {
+          "title": "Miércoles II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Señor nuestro, al celebrar el misterio pascual,\nque cada año renueva la dignidad original del hombre\ncon la esperanza de la resurrección;\nte pedimos humildemente\nque obtengamos con amor lo que celebramos con fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu vida divina;\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 15, 16.19\nDice el Señor:\nYo los elegí del mundo y los destiné para que vayan y den fruto,\ny ese fruto sea duradero. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado y comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-2-4": {
+          "title": "Jueves II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 67, 8-9.20\nSeñor, cuando saliste al frente de tu pueblo,\nabriéndole camino y conviviendo con él,\ntembló la tierra y el cielo dejó caer su lluvia. Aleluia.",
+            "collect": "Dios nuestro,\nque para la salvación del mundo\nrealizaste el sacrificio pascual,\natiende solícito la súplica de tu pueblo\npara que la oración de Cristo, nuestro mediador,\npor su humanidad que comparte con nosotros, nos reconcilie,\ny por su divinidad que lo hace igual a ti, nos absuelva.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 28, 20\nYo estaré siempre con ustedes hasta el fin del mundo. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo,\nconcédenos que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-2-5": {
+          "title": "Viernes II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 5, 9-10\nNos has redimido, Señor, por medio de tu sangre,\nde todas las familias, lenguas, pueblos y naciones,\ny has hecho de nosotros un reino sacerdotal para nuestro Dios. Aleluia.",
+            "collect": "Dios y Padre nuestro, luz verdadera y esperanza del alma,\nconcede que nuestros corazones eleven a ti una oración digna\ny te alaben siempre al proclamar tu nombre.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, recibe con misericordia la ofrenda de tu familia,\npara que bajo tu protección\nno pierda los dones recibidos y alcance los bienes eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Rom 4, 25\nEl Señor Jesús fue entregado por nuestros pecados\ny resucitado para nuestra justificación. Aleluia.",
+            "prayer_after": "Señor, protege siempre con amor de Padre\nal pueblo que has salvado por la pasión de tu Hijo,\ny se alegra con su resurrección.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-2-6": {
+          "title": "Sábado II de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Padre misericordioso,\naparta de nosotros las consecuencias del pecado\nque tú mismo has borrado en el misterio pascual\npor la resurrección de Cristo, tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 24\nPadre, quiero que los que tú me diste estén conmigo donde yo esté,\npara que contemplen la gloria que me has dado. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales;\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-3-0": {
+          "title": "III DOMINGO DE PASCUA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 65, 1-2\nAclame al Señor toda la tierra.\nCanten la gloria de su nombre. Aleluia.",
+            "collect": "Dios nuestro,\nque tu pueblo se alegre siempre por la nueva vida recibida,\npara que, con el gozo de los hijos,\naguarde con firme esperanza el día de la resurrección final.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo,\ny, ya que lo has renovado con los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-3-1": {
+          "title": "Lunes III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Resucitó el buen pastor, que dio la vida por sus ovejas\ny se entregó a la muerte por su rebaño. Aleluia.",
+            "collect": "Concédenos, Dios todopoderoso\nque abandonando lo que viene del pecado,\nvivamos en comunión con Jesucristo,\ncon quien nos has identificado\npor los sacramentos pascuales.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 14, 27\nDice el Señor: Les dejo la paz, les doy mi paz,\npero no como la da el mundo. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo,\nconcédenos que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-3-2": {
+          "title": "Martes III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 19, 5; 12, 10\nAlaben a nuestro Dios, todos los que lo temen, pequeños y grandes;\nporque llegó la salvación, el poder y el reino. Aleluia.",
+            "collect": "Dios de misericordia,\nque abres las puertas del Reino de los cielos\na los renacidos por el agua y el Espíritu Santo,\naumenta en tus hijos el don de la gracia,\npara que, purificados de todos sus pecados,\npuedan gozar de los bienes prometidos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría,\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Rom 6, 8\nSi hemos muerto con Cristo,\ncreemos que también viviremos con él. Aleluia.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo,\ny, ya que lo has renovado\ncon los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-3-3": {
+          "title": "Miércoles III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 70, 8.23\nMi boca está llena de tu alabanza y anuncia tu gloria todo el día;\nte cantarán mis labios con alegría. Aleluia.",
+            "collect": "Protege a tu familia, Señor,\ny a cuantos recibieron la gracia de la fe,\nconcédeles tener parte en la resurrección de tu Hijo unigénito\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales\nconcédenos, ser constantes en la acción de gracias\npara que la continua eficacia de la obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cristo ha resucitado.\nÉl ha hecho brillar sobre nosotros su luz,\ndespués de habernos rescatado con su sangre. Aleluia.",
+            "prayer_after": "Señor y Dios nuestro, escucha nuestras oraciones,\npara que la participación\nen los sacramentos de nuestra redención,\nnos ayude en la vida presente\ny nos alcance las alegrías eternas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-3-4": {
+          "title": "Jueves III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Ex 15, 1-2\nCantaré al Señor que se ha cubierto de gloria.\nEl Señor es mi fuerza y mi protección, él me salvó. Aleluia.",
+            "collect": "Dios todopoderoso y eterno,\nconcédenos en este tiempo pascual\nrecibir con mayor abundancia la gracia que hemos conocido,\npara que, liberados de las tinieblas del error,\nnos adhiramos con mayor firmeza a tu verdad\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu vida divina,\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "2 Cor 5, 15\nCristo murió por todos,\na fin de que los que viven no vivan más para sí mismos,\nsino para aquel que murió y resucitó por ellos. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-3-5": {
+          "title": "Viernes III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 5, 12\nEl Cordero que ha sido inmolado\nes digno de recibir el poder y la riqueza, la sabiduría,\nla fuerza y el honor, la gloria y la alabanza. Aleluia.",
+            "collect": "Dios todopoderoso, concede a quienes hemos conocido\nla gracia de la resurrección del Señor;\nque, por el amor del Espíritu Santo,\npodamos resurgir a una vida nueva.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar la oblación de este sacrificio espiritual,\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "El Crucificado resucitó de entre los muertos, y nos redimió. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en todos nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-3-6": {
+          "title": "Sábado III de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Col 2, 12\nCon Cristo fueron sepultados en el bautismo,\ny con él resucitaron, por la fe en el poder de Dios,\nque lo resucitó de entre los muertos. Aleluia.",
+            "collect": "Dios nuestro, que en la fuente bautismal\nrenovaste a los que creen en ti;\nprotege a los renacidos en Cristo\npara que, liberados del error,\nconserven fielmente la gracia de tu bendición.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, recibe con misericordia la ofrenda de tu familia,\npara que, bajo tu protección,\nno pierda los dones recibidos y alcance los bienes eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 20-21\nDice el Señor: Padre, ruego por ellos, para que sean uno;\npara que el mundo crea que tú me enviaste. Aleluia.",
+            "prayer_after": "Señor, protege siempre con amor de Padre\nal pueblo que has salvado por la pasión de tu Hijo\ny se alegra con su resurrección.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-4-0": {
+          "title": "IV DOMINGO DE PASCUA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 32, 5-6\nToda la tierra está llena del amor del Señor, y su Palabra hizo el cielo. Aleluia.",
+            "collect": "Dios todopoderoso y eterno,\ncondúcenos hacia los gozos celestiales,\npara que tu rebaño, a pesar de su debilidad,\nllegue a la gloria que le alcanzó la fortaleza Jesucristo, su pastor.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales\nconcédenos ser constantes en la acción de gracias,\npara que la continua eficacia de la obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Resucitó el buen Pastor, que dio la vida por sus ovejas\ny se entregó a la muerte por su rebaño. Aleluia.",
+            "prayer_after": "Te pedimos, Pastor bueno, que cuides con solicitud a tu rebaño,\ny conduzcas hacia las praderas eternas\na las ovejas que redimiste con la preciosa sangre de tu Hijo.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-4-1": {
+          "title": "Lunes IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Rom 6, 9\nCristo, después de resucitar, no muere más,\nporque la muerte ya no tiene poder sobre él. Aleluia.",
+            "collect": "Dios nuestro, luz admirable de los santos,\nque nos concediste celebrar el misterio pascual en la tierra,\nte pedimos que nos hagas gozar de la plenitud de tu gracia en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría,\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 20, 19\nJesús, poniéndose en medio de sus discípulos les dijo:\nLa paz esté con ustedes. Aleluia.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo,\ny ya que lo has renovado con los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-4-2": {
+          "title": "Martes IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 19, 7.6\nAlegrémonos, regocijémonos y demos gloria a Dios,\nporque el Señor, nuestro Dios, el Todopoderoso, ha establecido su reino.\nAleluia.",
+            "collect": "Dios todopoderoso,\nconcédenos que al celebrar el misterio\nde la resurrección del Señor\nmerezcamos recibir la alegría de nuestra redención.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales,\nconcédenos ser constantes en la acción de gracias,\npara que la continua eficacia de la obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc 24, 46.26\nEl Mesías debía sufrir y resucitar para entrar en su gloria. Aleluia.",
+            "prayer_after": "Señor y Dios nuestro, escucha nuestras oraciones,\npara que la participación\nen los sacramentos de nuestra redención,\nnos ayude en la vida presente\ny nos alcance las alegrías eternas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-4-3": {
+          "title": "Miércoles IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Padre, vida de los fieles,\ngloria de los humildes y felicidad de los santos:\nescucha con bondad nuestras súplicas\ny sacia siempre con tu abundancia\na quienes tienen sed de los dones prometidos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu vida divina;\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 15, 16.19\nDice el Señor:\nYo los elegí del mundo y los destiné para que vayan y den fruto,\ny ese fruto sea duradero. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-4-4": {
+          "title": "Jueves IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 67, 8-9.20\nSeñor, cuando saliste al frente de tu pueblo,\nabriéndole camino y conviviendo con él,\ntembló la tierra y el cielo dejó caer su lluvia. Aleluia.",
+            "collect": "Dios nuestro, que restauras la naturaleza humana\nelevándola por encima de su condición original,\nmira el inefable designio de tu amor\ny conserva los dones de tu gracia\nen aquellos que renovaste por medio del bautismo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 28, 20\nYo estaré siempre con ustedes hasta el fin del mundo. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo;\nconcédenos que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-4-5": {
+          "title": "Viernes IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 5, 9-10\nNos has redimido, Señor, por medio de tu sangre,\nde todas las familias, lenguas, pueblos y naciones,\ny has hecho de nosotros un reino sacerdotal para nuestro Dios. Aleluia.",
+            "collect": "Señor Dios, fuente de nuestra libertad y salvación,\nescucha nuestra súplica\ny, a quienes redimiste con la sangre de tu Hijo,\ndanos la gracia de vivir para ti\ny encontrar en ti la felicidad eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, recibe con misericordia la ofrenda de tu familia,\npara que bajo tu protección,\nno pierda los dones recibidos y alcance los bienes eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Rom 4, 25\nEl Señor Jesús fue entregado por nuestros pecados\ny resucitado para nuestra justificación. Aleluia.",
+            "prayer_after": "Señor, protege siempre con amor de Padre\nal pueblo que has salvado por la pasión de tu Hijo\ny se alegra con su resurrección.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-4-6": {
+          "title": "Sábado IV de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Dios nuestro, que en la solemnidad pascual\nrenuevas al mundo con tu gracia,\nacompaña a tu Iglesia en la tierra,\npara que la fiel observancia del Evangelio\nnos sirva para la vida eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual,\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 24\nPadre, quiero que los que tú me diste estén conmigo donde yo esté,\npara que contemplen la gloria que me has dado. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en todos nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-5-0": {
+          "title": "V DOMINGO DE PASCUA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 97, 1-2\nCanten al Señor un canto nuevo, porque él hizo maravillas;\nreveló su victoria a los ojos de las naciones. Aleluia.",
+            "collect": "Dios omnipotente y eterno,\nrealiza plenamente en nosotros el misterio pascual,\npara que, renacidos por el santo bautismo,\ncon tu ayuda demos fruto abundante\ny alcancemos la alegría de la vida eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu vida divina;\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 15, 5\nDice el señor: Yo soy la vid, ustedes los sarmientos,\nel que permanece en mí y yo en él, da mucho fruto. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-5-1": {
+          "title": "Lunes V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Resucitó el buen pastor, que dio la vida por sus ovejas\ny se entregó a la muerte por su rebaño. Aleluia.",
+            "collect": "Te suplicamos, Señor,\nque protejas siempre a tu familia,\ny por la resurrección de tu Hijo único\ndefiéndela de todo mal y cólmala con los dones celestiales.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 14, 27\nDice el Señor: Les dejo la paz, les doy mi paz,\npero no como la da el mundo. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo,\nconcede que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-5-2": {
+          "title": "Martes V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 19, 5; 12, 10\nAlaben a nuestro Dios, todos los que lo temen, pequeños y grandes;\nporque llegó la salvación, el poder y el reino. Aleluia.",
+            "collect": "Dios nuestro, que en la resurrección de Cristo\nnos renuevas para la vida eterna,\nconcede a tu pueblo perseverar en la fe y en la esperanza,\ny nunca dudar del cumplimiento de tus promesas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría,\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Rom 6, 8\nSi hemos muerto con Cristo,\ncreemos que también viviremos con Él. Aleluia.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo,\ny ya que lo has renovado con los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-5-3": {
+          "title": "Miércoles V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 70, 8.23\nMi boca está llena de tu alabanza y anuncia tu gloria todo el día;\nte cantarán mis labios con alegría. Aleluia.",
+            "collect": "Dios nuestro, que amas la inocencia\ny la devuelves a quienes la perdieron,\natrae hacia ti nuestros corazones\npara que, liberados de las tinieblas de la incredulidad,\nnunca nos apartemos de la luz de tu verdad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales,\nconcédenos ser constantes en la acción de gracias,\npara que la continua eficacia de la obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cristo ha resucitado. Él ha hecho brillar su luz sobre nosotros,\nluego de habernos redimido con su sangre. Aleluia",
+            "prayer_after": "Señor y Dios nuestro, escucha nuestras oraciones,\npara que la participación\nen los sacramentos de nuestra redención\nnos ayude en la vida presente\ny nos alcance las alegrías eternas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-5-4": {
+          "title": "Jueves V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Ex 15, 1-2\nCantaré al Señor que se ha cubierto de gloria.\nEl Señor es mi fuerza y mi protección, él me salvó. Aleluia.",
+            "collect": "Dios nuestro,\nque por tu gracia conviertes en justos a los pecadores\ny das la felicidad a los afligidos;\nayúdanos con tu poder y con tus dones\na perseverar con fortaleza en la fe que nos ha justificado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu vida divina;\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "2 Cor 5, 15\nCristo murió por todos,\na fin de que los que viven, no vivan más para sí mismos,\nsino para aquel que murió y resucitó por ellos. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-5-5": {
+          "title": "Viernes V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 5, 12\nEl Cordero que ha sido inmolado es digno de recibir el poder y la riqueza,\nla sabiduría, la fuerza y el honor, la gloria y la alabanza. Aleluia.",
+            "collect": "Concédenos, Señor,\nla gracia de vivir conforme al misterio pascual,\ny, al celebrarlo con alegría,\nsu continua eficacia nos proteja y nos salve.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "El Crucificado resucitó de entre los muertos, y nos redimió. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó hacer en su memoria\naumente la caridad en nosotros.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-5-6": {
+          "title": "Sábado V de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Col 2, 12\nCon Cristo fueron sepultados en el bautismo,\ny con él resucitaron por la fe en el poder de Dios,\nque lo resucitó de entre los muertos. Aleluia.",
+            "collect": "Dios todopoderoso,\nque nos das la vida eterna por medio del bautismo,\nte pedimos que, llamados a la inmortalidad por tu perdón,\nnos otorgues la plenitud de tu gloria.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, recibe con misericordia, la ofrenda de tu familia,\npara que, bajo tu protección,\nno pierda los dones recibidos y alcance los bienes eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 20-21\nDice el Señor: Padre, ruego por ellos, para que sean uno;\npara que el mundo crea que tú me enviaste. Aleluia.",
+            "prayer_after": "Señor, protege siempre con amor de Padre\nal pueblo que has salvado por la pasión de tu Hijo\ny se alegra con su resurrección.\nQue vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-6-0": {
+          "title": "VI DOMINGO DE PASCUA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 48, 20\nCon gritos de alegría anuncien y proclámenlo hasta los confines de la tierra:\nEl Señor ha liberado a su pueblo. Aleluia.",
+            "collect": "Dios todopoderoso,\nconcédenos continuar celebrando con intenso fervor\nestos días de alegría en honor de Cristo resucitado,\nde manera que prolonguemos en nuestra vida\nel misterio de fe que recordamos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 14, 15-16\nDice el Señor: Si me aman, cumplirán mis mandamientos.\nY yo rogaré al Padre y él les dará otro Paráclito,\npara que esté siempre con ustedes. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo,\nconcede que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-6-1": {
+          "title": "Lunes VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Rm 6, 9\nCristo, después de resucitar, no muere más,\nporque la muerte ya no tiene poder sobre él. Aleluia.",
+            "collect": "Dios misericordioso, concédenos\nexperimentar en todo tiempo\nlos frutos del misterio pascual que hoy celebramos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor,\nlas ofrendas de tu Iglesia desbordante de alegría,\ny después de haberle concedido el motivo de un gozo tan grande,\nconcédele participar de la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 20, 19\nJesús, poniéndose en medio de sus discípulos les dijo:\nLa paz esté con ustedes. Aleluia.",
+            "prayer_after": "Padre, mira con bondad a tu pueblo,\ny, ya que lo has renovado con los sacramentos de la vida eterna,\nconcédele alcanzar la gloria de la resurrección.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-6-2": {
+          "title": "Martes VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 19, 7.6\nAlegrémonos, regocijémonos y demos gloria a Dios,\nporque el Señor, nuestro Dios, el Todopoderoso, ha establecido su reino.\nAleluia.",
+            "collect": "Dios omnipotente y misericordioso, concédenos,\nparticipar realmente de la resurrección de Cristo tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, por estos misterios pascuales\nconcédenos, ser constantes en la acción de gracias,\npara que la continua eficacia de tu obra redentora\nsea fuente de inagotable alegría.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Lc 24, 46.26\nEl Mesías debía sufrir y resucitar de entre los muertos,\npara entrar en su gloria. Aleluia.",
+            "prayer_after": "Señor y Dios nuestro,\nescucha nuestras oraciones,\npara que la participación en los sacramentos de nuestra redención,\nnos ayude en la vida presente\ny nos alcance las alegrías eternas.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-6-3": {
+          "title": "Miércoles VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Te pedimos, Padre,\nque así como celebramos en la fe\nla fiesta de la resurrección de tu Hijo,\npodamos también alegrarnos con todos los santos\ncuando él vuelva en su gloria.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, que por este santo sacrificio\nnos concedes participar de tu Vida divina;\nte pedimos que así como hemos conocido tu verdad,\nvivamos de acuerdo con ella.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 15, 16.19\nDice el señor:\nYo los elegí del mundo y los destiné para que vayan y den fruto,\ny ese fruto sea duradero. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-6-4": {
+          "title": "Jueves VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 67, 8-9.20\nSeñor, cuando saliste al frente de tu pueblo,\nabriéndole camino y conviviendo con él,\ntembló la tierra y el cielo dejó caer su lluvia. Aleluia.",
+            "collect": "Dios nuestro,\nque hiciste a tu pueblo partícipe de tu redención,\nconcédenos la gracia de alegrarnos profundamente\npor la resurrección del Señor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Lleguen hasta ti, Señor,\nnuestras oraciones junto con estas ofrendas,\npara que, purificados por tu gracia,\nrecibamos el sacramento de tu inmensa bondad.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Mt 28, 20\nYo estaré siempre con ustedes hasta el fin del mundo. Aleluia.",
+            "prayer_after": "Dios todopoderoso,\nque nos haces renacer a la vida eterna\npor la resurrección de Cristo,\nconcédenos que los sacramentos pascuales\nden fruto abundante en nosotros,\ne infunde en nuestros corazones\nla fuerza de este alimento de salvación.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-6-5": {
+          "title": "Viernes VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 5, 9-10\nNos has redimido, Señor, por medio de tu sangre,\nde todas las familias, lenguas, pueblos y naciones,\ny has hecho de nosotros un reino sacerdotal para nuestro Dios. Aleluia.",
+            "collect": "Señor Dios, escucha nuestras súplicas,\npara que la predicación del Evangelio\nextienda por todo el mundo la salvación prometida por tu Hijo,\ny todos los hombres alcancen la plenitud de la adopción filial,\nque él anunció dando testimonio de la verdad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Señor Dios, recibe con misericordia la ofrenda de tu familia,\npara que bajo tu protección,\nno pierda los dones recibidos y alcance los bienes eternos.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Rm 4, 25\nEl Señor Jesús fue entregado por nuestros pecados\ny resucitado para nuestra justificación. Aleluia.",
+            "prayer_after": "Señor, protege siempre con amor de Padre\nal pueblo que has salvado por la pasión de tu Hijo\ny se alegra con su resurrección.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-6-6": {
+          "title": "Sábado VI de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "collect": "Señor Dios nuestro,\nrenueva nuestros corazones con obras buenas,\ny, al tender siempre hacia lo más perfecto,\nconcédenos vivir plenamente el misterio pascual.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 24\nPadre, quiero que los que tú me diste estén conmigo donde yo esté,\npara que contemplen la gloria que me has dado. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales;\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en todos nosotros.\nQue vive y reina por los siglos de los siglos.\nLA ASCENSIÓN DEL SEÑOR",
+            "entrance": "Cf. Sal 67, 33-35\nCanten al Señor, reinos de la tierra, entonen un himno al Señor,\nal que cabalga por el cielo, por el cielo antiquísimo.\nSu majestad y su poder brillan sobre las nubes. Aleluia."
+          }
+        },
+        "easter-7-0": {
+          "title": "VII DOMINGO DE PASCUA",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sal 26, 7-9\nEscucha, Señor, la voz de mi clamor.\nSeñor, mi corazón te habla, mis ojos te buscan.\nYo busco tu rostro, Señor, no te ocultes de mí. Aleluia.",
+            "collect": "Señor Dios, escucha nuestros ruegos,\npara que así como creemos que el Salvador de los hombres\ngoza contigo de tu misma gloria,\ntambién experimentemos su presencia entre nosotros\nhasta el fin de los tiempos, como él mismo prometió.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, las oraciones de tus fieles\njunto con estas ofrendas,\nhaz que esta eucaristía, celebrada con amor,\nnos lleve a la gloria del cielo.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 17, 22\nTe ruego, Padre, que sean uno, como nosotros somos uno. Aleluia.",
+            "prayer_after": "Escúchanos, Dios y Salvador nuestro,\ny, por estos sagrados misterios,\nconcédenos la gracia de creer\nque el todo cuerpo de la Iglesia llegará un día,\nallí donde le ha precedido su Cabeza, Cristo Jesús.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-7-1": {
+          "title": "Lunes VII de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Hech 1, 8\nRecibirán la fuerza del Espíritu Santo que descenderá sobre ustedes,\ny serán mis testigos hasta los confines de la tierra. Aleluia.",
+            "collect": "Señor Dios, derrama sobre nosotros,\nla fuerza del Espíritu Santo,\npara que cumplamos fielmente tu voluntad\ny con nuestras obras demos testimonio de ti.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Señor,\nque este santo sacrificio nos purifique\ne infunda en nosotros la fuerza de tu gracia.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 14, 18; 16, 22\nDice el Señor: No los dejaré huérfanos,\nvolveré a ustedes, y se alegrará su corazón. Aleluia.",
+            "prayer_after": "Padre, ayuda con bondad a tu pueblo,\nque has alimentado con los sacramentos celestiales;\nconcédele apartarse del pecado\ny comenzar una vida nueva.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-7-2": {
+          "title": "Martes VII de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Ap 1, 17-18\nYo soy el primero y el último, el viviente.\nEstuve muerto pero ahora vivo para siempre. Aleluia.",
+            "collect": "Dios omnipotente y misericordioso,\nte pedimos que, al venir el Espíritu Santo,\nse digne habitar en nosotros\ny nos convierta en templos de su gloria.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, las oraciones de tus fieles\njunto con estas ofrendas,\nhaz que esta eucaristía celebrada con amor,\nnos lleve a la gloria del cielo.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 14, 26\nDice el Señor: El Espíritu Santo, que el Padre enviará en mi nombre,\nles enseñará todo y les recordará lo que les he dicho. Aleluia.",
+            "prayer_after": "Después de haber recibido los dones pascuales;\nte pedimos humildemente, Señor,\nque la Eucaristía que tu Hijo nos mandó celebrar en su memoria\naumente la caridad en todos nosotros.\nÉl que vive y reina por los siglos de los siglos."
+          }
+        },
+        "easter-7-3": {
+          "title": "Miércoles VII de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Sal 46, 2\nTodos los pueblos aplaudan\ny aclamen al Señor con gritos de alegría.",
+            "collect": "Dios misericordioso, concede a tu Iglesia,\ncongregada por el Espíritu Santo,\nservirte siempre de todo corazón\ny permanecer unida en un mismo amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, la oblación instituida por ti,\ny, por estos sagrados misterios que celebramos,\ndanos la gracia de tu redención.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 15, 26-27\nDice el Señor: Cuando venga el Paráclito que yo les enviaré desde el Padre,\nel Espíritu de la verdad que proviene del Padre,\nél dará testimonio de mí.\nY ustedes también darán testimonio de mí. Aleluia.",
+            "prayer_after": "Señor Dios, que la participación en estos divinos misterios\naumente siempre tu gracia en nosotros,\ny, al purificarnos con su eficacia,\nnos ayude a recibir cada vez mejor un don tan admirable.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-7-4": {
+          "title": "Jueves VII de Pascua",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Heb 4, 16\nVayamos confiadamente al trono de la gracia,\na fin de obtener misericordia\ny alcanzar la gracia de un auxilio oportuno. Aleluia.",
+            "collect": "Padre, que tu Espíritu,\nderrame con abundancia sus dones en nosotros,\nnos dé un corazón que sea de tu agrado\ny nos disponga a cumplir tu voluntad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Santifica los dones que te presentamos, Señor,\ny, al aceptar este sacrificio espiritual\nconviértenos en ofrenda eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 16, 7\nDice el Señor: Les digo la verdad, les conviene que yo me vaya,\nporque si no me voy, el Paráclito no vendrá a ustedes. Aleluia.",
+            "prayer_after": "Dios nuestro, que los santos misterios recibidos\nnos instruyan con sus enseñanzas\ny nos renueven para alcanzar los frutos espirituales.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "easter-7-6": {
+          "title": "Sábado VII de Pascua Misa matutina",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mpascua3.htm"
+          },
+          "data": {
+            "entrance": "Hech 1, 14\nLos discípulos, íntimamente unidos, se dedicaban a la oración,\nen compañía de algunas mujeres,\nde María, la Madre de Jesús y de sus hermanos. Aleluia.",
+            "collect": "Dios todopoderoso,\nconcédenos conservar en nuestra vida y costumbres\nel espíritu de las fiestas pascuales que estamos concluyendo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Te pedimos, Padre,\nque la venida del Espíritu Santo,\npor quien recibimos el perdón de los pecados,\nprepare nuestros corazones para celebrar los divinos misterios.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 16, 14\nDice el Señor: El Espíritu Santo me glorificará,\nporque recibirá de lo mío y se lo anunciará a ustedes. Aleluia.",
+            "prayer_after": "Dios misericordioso,\nque llevaste a tu pueblo de la antigua a la nueva alianza,\nayúdanos a pasar de nuestra vida de pecado a una vida nueva.\nPor Jesucristo, nuestro Señor.\nDOMINGO DE PENTECOSTÉS"
+          }
+        },
+        "date-12-25": {
+          "title": "25 de diciembre NATIVIDAD DEL SEÑOR Solemnidad Misa vespertina de la Vigilia",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Ex 16, 6-7\nHoy sabrán que el Señor viene a salvarnos,\ny mañana verán aparecer su gloria.",
+            "collect": "Dios nuestro,\nque cada año nos alegras con la esperanza de la salvación,\nconcédenos que,\nrecibiendo con gozo a tu Hijo unigénito como Redentor,\npodamos contemplarlo confiadamente\ncuando venga como juez.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Concédenos, Señor Dios nuestro,\nanticipar con un culto fervoroso esta solemnidad,\nya que en ella manifiestas el comienzo de nuestra redención.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Is 40, 5\nSe manifestará la gloria del Señor,\ny todos verán la salvación de nuestro Dios.",
+            "prayer_after": "Señor, fortalécenos con la celebración anticipada\ndel nacimiento de tu Hijo único,\nque se ha hecho comida y bebida\nen este sacramento de salvación.\nÉl que vive y reina por los siglos de los siglos.\nMisa de la Noche"
+          }
+        },
+        "date-12-29": {
+          "title": "29 de diciembre Día V dentro de la Octava de Navidad",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "collect": "Dios invisible y todopoderoso,\nque disipaste las tinieblas del mundo\npor la venida de la luz verdadera,\nmíranos con bondad, para que nuestras alabanzas\nproclamen dignamente el sublime nacimiento de tu Hijo unigénito.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Recibe, Señor, nuestros dones\nen los que se realiza un admirable intercambio\npara que, al ofrecerte lo que nos diste,\nmerezcamos recibirte a ti mismo.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Lc 1, 78\nGracias a la misericordiosa ternura de nuestro Dios,\nnos visitó el Sol que nace de lo alto.",
+            "prayer_after": "Concédenos, Dios todopoderoso,\nque la eficacia de los santos misterios\nfortalezca constantemente nuestra vida.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-30": {
+          "title": "30 de diciembre Día VI dentro de la Octava de Navidad",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sab 18, 14-15\nCuando un silencio profundo envolvía toda la tierra\ny la noche se encontraba a mitad de su camino,\ntu Palabra omnipotente, Señor, desde su morada real descendió del cielo.",
+            "collect": "Concédenos, Dios todopoderoso,\nque el nuevo nacimiento de tu Hijo unigénito en nuestra carne\nnos libre de la opresión con que nos domina\nla antigua esclavitud del pecado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Acepta con bondad, Señor, las ofrendas de tu pueblo\ny, por medio de este sacramento celestial,\nhaz que se haga vida en nosotros cuanto proclamamos por la fe.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Jn 1,16\nDe su plenitud, todos nosotros hemos participado,\ny hemos recibido gracia sobre gracia.",
+            "prayer_after": "Señor Dios, que sales a nuestro encuentro\nen la participación de la Eucaristía,\nobra en nuestros corazones su poderosa eficacia,\npara que, al recibirlo,\nnos hagamos cada día más dignos del don que nos haces.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-12-31": {
+          "title": "31 de diciembre Día VII dentro de la Octava de Navidad",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Is 9, 5\nUn niño nos ha nacido, un hijo se nos dado;\nla soberanía reposa sobre sus hombros,\ny su nombre será Consejero admirable.",
+            "collect": "Dios todopoderoso y eterno, que en el nacimiento de tu Hijo\nnos diste el principio y la plenitud de nuestra comunión contigo,\nconcédenos la gracia de ser miembros vivos de Cristo,\nen quien se realiza la plena salvación de los hombres.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Dios nuestro, fuente del amor sincero y de la paz,\nconcédenos glorificar tu nombre\ncon estas ofrendas que te presentamos;\ny por la participación en la eucaristía\nayúdanos a vivir unidos en un solo corazón.\nPor Jesucristo, nuestro Señor.",
+            "communion": "1 Jn 4, 9\nDios envió a su Hijo único al mundo\npara que tuviéramos Vida por medio de él.",
+            "prayer_after": "Padre providente, que tu pueblo, tantas veces ayudado por ti,\npueda recibir hoy y siempre los dones de tu amor,\npara que, fortalecido por los bienes transitorios,\nbusque con mayor confianza los bienes eternos.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "christmas-2-0": {
+          "title": "II DOMINGO DESPUÉS DE NAVIDAD",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Sab 18, 14-15\nCuando un silencio profundo envolvía toda la tierra,\ny la noche se encontraba a mitad de su camino,\ntu Palabra omnipotente, Señor, desde su morada real descendió del cielo.",
+            "collect": "Dios todopoderoso y eterno,\nque iluminas a quienes creen en ti,\nllena la tierra de tu gloria\ny manifiéstate a todos los pueblos por la claridad de tu luz.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre, santifica estas ofrendas\npor el nacimiento de tu Hijo único,\nque nos muestra el camino de la verdad\ny nos promete la vida del reino celestial.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Jn 1, 12\nA quienes lo recibieron, les concedió llegar a ser hijos de Dios.",
+            "prayer_after": "Señor y Dios nuestro, te pedimos humildemente\nque la fuerza de esta eucaristía\nnos purifique de nuestros pecados\ny dé cumplimiento a nuestros más nobles deseos.\nPor Jesucristo, nuestro Señor."
+          }
+        },
+        "date-01-06": {
+          "title": "6 de enero LA EPIFANÍA DEL SEÑOR Solemnidad Misa de la Vigilia",
+          "kind": "temporal",
+          "source": {
+            "url": "https://curas.com.ar/Misal3/Misas3/Mnavidad3.htm"
+          },
+          "data": {
+            "entrance": "Cf. Bar 5, 5\nLevántate, Jerusalén, sube a lo alto y dirige tu mirada hacia el Oriente:\nmira a tus hijos reunidos desde la salida del sol hasta el ocaso.",
+            "collect": "Señor y Dios nuestro,\nque el esplendor de tu gloria ilumine nuestros corazones\npara que podamos caminar entre las tinieblas de este mundo\ny llegar a la patria donde todo es eterna claridad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+            "prayer_offerings": "Padre, recibe nuestros dones\nen la manifestación de tu Hijo unigénito a los pueblos paganos,\nde manera que podamos ofrecerte nuestra alabanza\ny alcanzar la salvación eterna.\nPor Jesucristo, nuestro Señor.",
+            "communion": "Cf. Ap 21, 23\nLa gloria de Dios iluminó la ciudad santa de Jerusalén,\ny los pueblos caminaban a su luz.",
+            "prayer_after": "Renovados por estos sagrados alimentos,\nimploramos, Padre, tu misericordia,\npara que siempre brille en nuestra vida\nla estrella de la justicia,\ny nuestro tesoro sea profesar la fe en ti.\nPor Jesucristo, nuestro Señor.\nMisa del día"
+          }
+        }
+      },
+      "calendar": {
+        "01-02": [
+          {
+            "title": "Santos Basilio Magno y Gregorio Nacianceno",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm"
+            },
+            "data": {
+              "entrance": "Cf. Eclo 44, 15.14\nLos pueblos proclamen la sabiduría de los santos,\ny la Iglesia cante sus alabanzas;\nsus nombres vivirán por los siglos de los siglos.",
+              "collect": "Dios nuestro,\nque has querido iluminar a tu Iglesia con la vida y la enseñanza\nde los santos obispos Basilio Magno y Gregorio Nacianceno,\nconcédenos la gracia de conocer humildemente tu verdad\ny de vivirla fielmente en la caridad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, este sacrificio de tu pueblo,\npara que los dones ofrecidos a ti\nen honor de los santos Basilio y Gregorio,\nsean para nuestra salvación eterna.\nPor Jesucristo, Nuestro Señor.",
+              "communion": "Cf. 1 Cor 1, 23-24\nNosotros predicamos a Cristo crucificado,\nfuerza y sabiduría de Dios.",
+              "prayer_after": "Te pedimos, Dios todopoderoso,\nque la participación en la mesa celestial\nrobustezca y aumente las fuerzas espirituales\nde quienes celebramos la fiesta de los santos Basilio y Gregorio;\nhaz que guardemos con integridad el don de la fe\ny recorramos el camino que nos señalaron.\nPor Jesucristo Nuestro Señor."
+            }
+          }
+        ],
+        "01-07": [
+          {
+            "title": "San Raimundo de Peñafort",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/07"
+            },
+            "data": {
+              "collect": "Dios nuestro, que diste al presbítero san Raimundo\nuna gran misericordia para con los pecadores y los cautivos,\nconcédenos por su intercesión\nque, libres de la esclavitud del pecado,\nrealicemos con libertad de espíritu lo que te agrada.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "01-13": [
+          {
+            "title": "San Hilario",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/13"
+            },
+            "data": {
+              "collect": "Dios todopoderoso, te pedimos la gracia\nde comprender debidamente y proclamar con firmeza\nla divinidad de tu Hijo,\ncomo lo hizo el obispo san Hilario.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "01-17": [
+          {
+            "title": "San Antonio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/17"
+            },
+            "data": {
+              "entrance": "Cf. Sal 91, 13-14\nEl justo florecerá como la palmera, crecerá como los cedros del Líbano;\ntrasplantado en la casa del Señor, florecerá en los atrios de nuestro Dios.",
+              "collect": "Dios y Señor nuestro,\nque otorgaste al abad san Antonio\nla gracia de servirte en el desierto con una vida admirable;\nconcédenos por su intercesión\nque renunciando a nosotros mismos,\nte amemos siempre y sobre todas las cosas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta, Padre, las ofrendas de nuestro servicio\nque presentamos en tu altar\nen la conmemoración del abad San Antonio,\ny concédenos que, libres de las ataduras de este mundo,\nseas tú nuestra única riqueza.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 19, 21\nDice el Señor: Si quieres ser perfecto, ve,\nvende todo lo que tienes, dalo a los pobres y sígueme.",
+              "prayer_after": "Alimentados con el sacramento de la salvación,\nconcédenos, Dios nuestro,\nsuperar las insidias del enemigo,\ncomo le otorgaste al abad san Antonio\nla gloriosa victoria sobre el poder de las tinieblas.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "01-20": [
+          {
+            "title": "San Fabián",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/20"
+            },
+            "data": {
+              "collect": "Dios nuestro, gloria de tus sacerdotes,\nte pedimos, por la intercesión del mártir San Fabián,\nalcanzar la comunión de la fe y la santidad en el servicio.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Sebastián\nmártir"
+            }
+          }
+        ],
+        "01-21": [
+          {
+            "title": "Santa Inés",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/21"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque eliges la debilidad del mundo\npara confundir a los fuertes,\nconcede a quienes celebramos la fiesta de tu mártir santa Inés,\nimitar su constancia en la fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "01-22": [
+          {
+            "title": "San Vicente",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/22"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\ninfunde bondadosamente tu Espíritu en nosotros,\npara que nuestros corazones sean fortalecidos\npor aquel amor invencible\ncon que el mártir san Vicente superó todos los tormentos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nBeata Laura Vicuña\nvirgen"
+            }
+          }
+        ],
+        "01-24": [
+          {
+            "title": "San Francisco de Sales",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro, que para la salvación de los hombres\nquisiste que el obispo san Francisco de Sales\nse hiciera todo para todos,\nconcédenos que, a ejemplo suyo,\nmanifestemos siempre la mansedumbre de tu amor\nen el servicio a los hermanos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Por esta víctima de salvación que te ofrecemos,\nenciende, Señor, en nuestro corazón\naquel fuego del Espíritu Santo\ncon el cual inflamaste admirablemente\nel corazón paciente y humilde de San Francisco de Sales.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Por estos sacramentos recibidos\nconcédenos, Dios todopoderoso,\nque imitando en la tierra la caridad\ny la mansedumbre de San Francisco de Sales,\nalcancemos también nosotros la gloria del cielo.\nPor Jesucristo, nuestro Señor.\nMaría, Reina de la paz",
+              "entrance": "Cf. Is 9, 5\nUn niño nos ha nacido, un hijo se nos ha dado,\ny será llamado Príncipe de la paz.",
+              "communion": "La Virgen engendró al Dios y hombre;\nDios nos devolvió la paz reconciliando el cielo y la tierra."
+            }
+          }
+        ],
+        "01-26": [
+          {
+            "title": "Santos Timoteo y Tito",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/26"
+            },
+            "data": {
+              "communion": "Sal 95, 3-4\nAnuncien la gloria del Señor entre las naciones\ny sus maravillas entre los pueblos,\nporque el Señor es grande y digno de alabanza.",
+              "collect": "Dios nuestro, que enriqueciste con virtudes apostólicas\na los santos Timoteo y Tito,\nconcédenos, por su intercesión,\nque viviendo con justicia y piedad en este mundo,\nmerezcamos llegar a la patria celestial.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta, Señor, los dones de tu pueblo\nofrecidos en la fiesta de los santos Timoteo y Tito,\ny concédenos que te agrademos siempre\ncon un corazón sincero.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Te pedimos, Señor y Dios nuestro,\nque los sacramentos recibidos\nfortalezcan en nosotros la fe\nque transmitió la predicación de los apóstoles,\ny custodió la solicitud pastoral de los santos Timoteo y Tito.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "01-27": [
+          {
+            "title": "Santa Ángela de Mérici",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/27"
+            },
+            "data": {
+              "collect": "Señor Dios nuestro, te pedimos que santa Ángela de Mérici, virgen,\nno deje de encomendarnos a tu misericordia,\npara que, siguiendo sus ejemplos de caridad y prudencia,\npodamos conservar tus enseñanzas\ny proclamarlas con nuestra vida.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "01-28": [
+          {
+            "title": "Santo Tomás de Aquino",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/28"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste de santo Tomás de Aquino\nun modelo de santidad y de doctrina,\nconcédenos la gracia de comprender sus enseñanzas\ne imitar sus ejemplos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "01-31": [
+          {
+            "title": "San Juan Bosco",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/31"
+            },
+            "data": {
+              "collect": "Dios nuestro, que elegiste a San Juan Bosco, presbítero,\npara que fuera padre y maestro de la juventud,\nconcédenos que,\nanimados por esa misma caridad que ardía en su corazón,\nbusquemos el bien de las almas\ny vivamos entregados a tu servicio.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-03": [
+          {
+            "title": "SAN BLAS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03"
+            },
+            "data": {
+              "collect": "Escucha, Señor, las súplicas que te presentamos\npor la intercesión de san Blas, mártir,\ny concédenos gozar de la paz en esta vida\ny recibir la recompensa eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Óscar\nobispo"
+            }
+          }
+        ],
+        "02-05": [
+          {
+            "title": "Santa Águeda",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/05"
+            },
+            "data": {
+              "collect": "Imploramos, Señor, tu misericordia,\npor medio de santa Águeda, virgen y mártir,\nque supo agradarte siempre\npor los méritos de su virginidad\ny su fortaleza en el martirio.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-06": [
+          {
+            "title": "San Pablo Miki y compañeros",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/06"
+            },
+            "data": {
+              "collect": "Dios todopoderoso, fortaleza de los santos,\nque llamaste a la gloria, por el suplicio de la cruz\na san Pablo Miki y a sus compañeros mártires,\nconcédenos, por su intercesión,\nconfesar con firmeza, hasta la muerte,\nla fe que profesamos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-08": [
+          {
+            "title": "San Jerónimo Emiliani",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/08"
+            },
+            "data": {
+              "collect": "Padre de misericordia,\nque elegiste a san Jerónimo Emiliani\npara que fuera protector y padre de los huérfanos,\nconcédenos, por su intercesión,\nla gracia de conservar fielmente el espíritu de adopción\npor el cual nos llamamos y somos hijos tuyos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSanta Josefina Bakhita\nvirgen"
+            }
+          }
+        ],
+        "02-10": [
+          {
+            "title": "Santa Escolástica",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/10"
+            },
+            "data": {
+              "collect": "Te pedimos, Padre,\nen esta celebración de santa Escolástica, virgen,\nque, siguiendo su ejemplo,\nte sirvamos con un amor puro\ny experimentemos las delicias de tu amistad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque contigo vive y reina en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-11": [
+          {
+            "title": "Nuestra Señora de Lourdes",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11"
+            },
+            "data": {
+              "collect": "Padre misericordioso,\nayúdanos en nuestra debilidad,\npara que, al celebrar a la Madre inmaculada de tu Hijo,\nsu intercesión nos libre de todo pecado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-14": [
+          {
+            "title": "Santos Cirilo, monje,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/14"
+            },
+            "data": {
+              "entrance": "Estos son los santos que llegaron a ser amigos de Dios,\ny recibieron la gloria por el anuncio de la verdad divina.",
+              "collect": "Señor y Dios nuestro,\nque iluminaste a los pueblos eslavos\npor los santos hermanos Cirilo y Metodio,\nconcédenos recibir tu palabra en nuestros corazones,\ny conformar un pueblo unido\nen la verdadera y recta confesión de la fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, al conmemorar a los santos Cirilo y Metodio,\ndirige tu mirada sobre las ofrendas que te presentamos,\ny haz que se conviertan en el signo\nde la humanidad nueva reconciliada contigo en el amor.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mc 16, 20\nSalieron los discípulos fueron a predicar el Evangelio,\ny el Señor los asistía y confirmaba su palabra con milagros.",
+              "prayer_after": "Dios y Padre de todos los pueblos,\nque nos haces participar del mismo pan y el mismo Espíritu\na quienes llamas al banquete eterno;\nconcédenos, en la fiesta de los santos Cirilo y Metodio\nque la multitud de tus hijos,\nperseverando unidos en la misma fe,\nedifique el reino de la justicia y la paz.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "02-21": [
+          {
+            "title": "San Pedro Damián",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/21"
+            },
+            "data": {
+              "collect": "Dios todopoderoso, concédenos seguir con fidelidad\nlas enseñanzas y ejemplos del obispo san Pedro Damián,\nde modo que, anteponiendo a Cristo en todo\ny sirviendo siempre a tu Iglesia,\nalcancemos el gozo de la luz eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-23": [
+          {
+            "title": "San Policarpo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/23"
+            },
+            "data": {
+              "collect": "Dios y Señor de todo lo creado,\nque asociaste al obispo san Policarpo al número de los mártires,\nconcédenos, por su intercesión,\nque participando con él en la pasión de Cristo\nresucitemos por el Espíritu Santo para la vida eterna.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "02-25": [
+          {
+            "title": "Beata María Ludovica de Angelis",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/25"
+            },
+            "data": {
+              "collect": "Padre Santo\ntu hija la beata María Ludovica\nha gastado su vida continuando el ministerio de misericordia de Cristo,\nque pasó haciendo el bien;\nconcédenos, al invocar su intercesión,\nque podamos servirte en cada uno de nuestros hermanos necesitados.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo\nen la unidad del Espíritu Santo, y es Dios,\npor los siglos de los siglos."
+            }
+          }
+        ],
+        "03-07": [
+          {
+            "title": "Santas Perpetua y Felicidad",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#07"
+            },
+            "data": {
+              "entrance": "Gozan con Cristo en el cielo los santos\nque siguieron sus pasos.\nDerramaron la sangre por su amor,\ny por eso se alegran con Cristo para siempre.",
+              "collect": "Señor y Dios nuestro,\nlas santas mártires Perpetua y Felicidad,\nmovidas por tu amor,\nvencieron los tormentos y la muerte\ny superaron la furia del perseguidor,\nconcédenos, por su intercesión,\ncrecer siempre en ese mismo amor divino.\nPor nuestro Señor Jesucristo, tu Hijo\nque contigo y el Espíritu Santo vive y reina en unidad,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Padre, te ofrecemos con alegría este sacrificio, Señor\ny en la conmemoración del triunfo\nde santa Perpetua y santa Felicidad,\nproclamamos tus grandezas\nal experimentamos los beneficios de su gloriosa intercesión.\nPor Jesucristo, nuestro Señor.",
+              "communion": "2 Cor 4, 11\nEstamos siempre enfrentando la muerte por causa de Jesús,\npara que también la vida de Jesús se manifieste en nuestra carne mortal.",
+              "prayer_after": "Padre, en la conmemoración\nde santa Perpetua y santa Felicidad\nhemos participado con gozo de la eucaristía;\nte suplicamos que nos permitas comprender debidamente\nlo que celebramos mediante nuestro humilde ministerio.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "03-08": [
+          {
+            "title": "San Juan de Dios",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#08"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque infundiste en san Juan de Dios el espíritu de misericordia,\nconcédenos que, ejerciendo la caridad con los hermanos,\nmerezcamos llegar al Reino eterno con tus elegidos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "03-09": [
+          {
+            "title": "Santa Francisca Romana",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#09"
+            },
+            "data": {
+              "collect": "Señor Dios nuestro, que nos ofreces en santa Francisca Romana\nun singular ejemplo de vida matrimonial y monástica,\nenséñanos a servirte con perseverancia,\npara que en todas las circunstancias de nuestra vida\npodamos contemplarte y seguirte fielmente.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "03-16": [
+          {
+            "title": "San José Gabriel del Rosario Brochero",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#16"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro, de quien procede todo don perfecto.\nTú esclareciste a ssan José Gabriel del Rosario presbítero,\npor su celo misionero, su predicación evangélica y su vida pobre y entregada,\nconcede que siguiendo su ejemplo y con su intercesión,\npastores y pueblo a ellos confiado,\nsean siempre tus fieles discípulos misioneros del evangelio.\nPor nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo\nen la unidad del Espíritu Santo, y es Dios,\npor los siglos de los siglos."
+            }
+          }
+        ],
+        "03-17": [
+          {
+            "title": "San Patricio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#17"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro,\nque enviaste al obispo san Patricio\npara evangelizar a los pueblos de Irlanda,\nconcédenos, por sus méritos e intercesión,\nque cuantos nos gloriamos con el nombre de cristianos\nanunciemos siempre tus maravillas a los hombres.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "03-18": [
+          {
+            "title": "San Cirilo de Jerusalén",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#18"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque por medio del obispo san Cirilo de Jerusalén\ndiste a tu Iglesia un conocimiento más profundo\nde los misterios de salvación,\npermítenos conocer de tal manera a tu Hijo\nque podamos participar abundantemente de su vida divina.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "03-19": [
+          {
+            "title": "SAN JOSÉ, ESPOSO DE SANTA MARÍA VIRGEN",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm#19"
+            },
+            "data": {
+              "collect": "Dios todopoderoso, que pusiste bajo la fiel custodia de san José\nlos comienzos de la salvación humana,\nte pedimos que, por su intercesión,\nla Iglesia pueda llevarla a su plenitud.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te suplicamos, Señor, que así como san José\nsirvió con sincera entrega a tu Hijo unigénito,\nnacido de la Virgen María,\ntambién nosotros podamos celebrarte en esta liturgia\ncon un corazón puro.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 25, 21\nServidor bueno y fiel, entra a participar del gozo de tu Señor.",
+              "prayer_after": "Padre, protege siempre a tu familia,\nque has alimentado con el sacramento del altar\nen la gozosa celebración de san José,\ny custodia en tus fieles los dones\nque con tanta bondad le concedes.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "04-02": [
+          {
+            "title": "San Francisco de Paula",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril"
+            },
+            "data": {
+              "collect": "Dios nuestro, recompensa de los humildes\nque has elevado a san Francisco de Paula\na la gloria de tus santos,\nconcédenos, por sus méritos y ejemplos,\nalcanzar los premios prometidos a los humildes de corazón.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-04": [
+          {
+            "title": "San Isidoro",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril04"
+            },
+            "data": {
+              "collect": "Señor Dios, escucha nuestras súplicas,\nen esta conmemoración de san Isidoro,\ny haz que tu Iglesia, iluminada por sus enseñanzas,\nencuentre ayuda en su intercesión.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-05": [
+          {
+            "title": "San Vicente Ferrer",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril05"
+            },
+            "data": {
+              "collect": "Señor Dios, que hiciste de san Vicente Ferrer, presbítero,\nun insigne predicador del Evangelio,\nconcédenos que veamos reinar en el cielo\na quien él anunció en la tierra como juez que había de venir.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-07": [
+          {
+            "title": "San Juan Bautista de la Salle",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril07"
+            },
+            "data": {
+              "collect": "Dios nuestro, que elegiste a san Juan Bautista de la Salle\npara orientar cristianamente la educación de la juventud,\nsuscita en tu Iglesia maestros que se entreguen con generosidad\na la formación humana y cristiana de los jóvenes.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-11": [
+          {
+            "title": "San Estanislao",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril11"
+            },
+            "data": {
+              "collect": "Dios nuestro, por defender tu honor, el obispo san Estanislao,\ncayó bajo la espada de sus perseguidores\nte pedimos, por su intercesión,\nla gracia de perseverar hasta la muerte, firmes en la fe.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-13": [
+          {
+            "title": "San Martín I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril13"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\ntú que concediste al Papa y mártir san Martín\nno temer las amenazas ni dejarse vencer por los tormentos,\nayúdanos a superar con fortaleza las adversidades de esta vida.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-19": [
+          {
+            "title": "Nuestra Señora, la Virgen del Verdún",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril19"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\nque derramaste el Espíritu Santo\nsobre los Apóstoles reunidos en oración con María,\nconcédenos, por intercesión de la Virgen del Verdún,\nmantenernos siempre firmes en el seguimiento de tu Hijo,\ny proclamar la gloria de tu Nombre\ncon el testimonio de nuestra palabra y de nuestra vida.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-21": [
+          {
+            "title": "San Anselmo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril21"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque concediste al obispo san Anselmo\nbuscar y enseñar los misterios de tu sabiduría,\nven en ayuda de nuestra inteligencia con la luz de la fe,\npara que el corazón goce\ncon las verdades que nos has revelado.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-23": [
+          {
+            "title": "San Jorge",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril23"
+            },
+            "data": {
+              "collect": "Padre, proclamamos tu poder\ny humildemente te pedimos\nque, así como san Jorge imitó a tu Hijo en su pasión,\nnos ayude generosamente en nuestra debilidad.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Adalberto\nobispo y mártir"
+            }
+          }
+        ],
+        "04-24": [
+          {
+            "title": "San Fidel de Sigmaringen",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril24"
+            },
+            "data": {
+              "collect": "Dios y Padre, nuestro,\nque otorgaste a San Fidel el premio del martirio\npor su ardiente dedicación a la propagación de la fe,\nconcédenos que, fundados en la caridad y unidos a él,\nmerezcamos conocer la fuerza de la resurrección de Cristo\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "04-25": [
+          {
+            "title": "SAN MARCOS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril25"
+            },
+            "data": {
+              "entrance": "Mc 16, 15\nVayan por todo el mundo,\nanuncien el Evangelio a toda la creación. Aleluia.",
+              "collect": "Dios nuestro, que enalteciste al evangelista san Marcos\ncon la misión de anunciar la buena noticia de la salvación,\nconcédenos recibir de tal modo sus enseñanzas\nque sigamos fielmente las huellas de Cristo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Al celebrar la fiesta de san Marcos,\nte ofrecemos, Señor, este sacrificio de alabanza,\ny te suplicamos humildemente\nque tu Iglesia persevere siempre en la predicación del Evangelio.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 28, 20\nYo estaré siempre con ustedes hasta el fin del mundo, dice el Señor.\nAleluia.",
+              "prayer_after": "Dios todopoderoso,\nconcédenos que el sacramento recibido nos santifique\ny nos fortalezca en la fe del Evangelio,\nque predicó san Marcos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "04-27": [
+          {
+            "title": "Santo Toribio de Mogrovejo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril27"
+            },
+            "data": {
+              "entrance": "Cf. Ez 34, 11.23-24\nCuidaré de mis ovejas, dice el Señor,\ny suscitaré un pastor que las apaciente:\nYo, el Señor, seré su Dios. Aleluia.",
+              "collect": "Dios nuestro, que has hecho crecer a tu Iglesia en América\ncon la dedicación pastoral y el celo por la verdad\ndel obispo santo Toribio,\nconcede al pueblo a ti consagrado\ncrecer constantemente en la fe y en la santidad.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, mira con bondad las ofrendas\nque traemos a tu altar en la fiesta de santo Toribio,\nde manera que, alcanzándonos el perdón,\nglorifiquen tu nombre.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 15, 16\nDice el Señor: No son ustedes los que me eligieron a mí,\nsino yo el que los elegí a ustedes,\ny los destiné para que vayan y den fruto\ny ese fruto sea duradero. Aleluia.",
+              "prayer_after": "Renovados por tus sagrados misterios,\nte suplicamos humildemente, Señor,\nque, a ejemplo de santo Toribio,\nnos esforcemos por proclamar lo que él creyó\ny practicar lo que enseñó.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "04-28": [
+          {
+            "title": "San Pedro Chanel",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril28"
+            },
+            "data": {
+              "collect": "Dios nuestro, que para extender a tu Iglesia\ncoronaste a san Pedro Chanel con la gloria del martirio,\nconcédenos que, en esta alegría pascual,\nla celebración de los misterios\nde la muerte y resurrección de Cristo\nnos haga testigos fieles de la vida nueva.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Luis María Grignion de Montfort\npresbítero"
+            }
+          }
+        ],
+        "04-29": [
+          {
+            "title": "Santa Catalina de Siena",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril29"
+            },
+            "data": {
+              "entrance": "Ésta virgen sabia y prudente salió al encuentro de Cristo\ncon la lámpara encendida. Aleluia.",
+              "collect": "Señor Dios nuestro, que otorgaste a santa Catalina de Siena\nun amor intenso para contemplar la pasión de tu Hijo\ny para servir a la Iglesia,\nconcédenos, por su intercesión,\nque tu pueblo, unido al misterio de Cristo,\nse alegre siempre en la manifestación de su gloria.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Padre, este sacrificio de salvación\nque te ofrecemos en la conmemoración de santa Catalina,\npara que, instruidos por sus enseñanzas,\npodamos darte gracias con mayor fervor\na Ti, único Dios verdadero.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. 1 Jn 1,7\nSi caminamos en la luz, como Dios está en la luz,\nestamos en comunión unos con otros,\ny la sangre de su Hijo Jesucristo nos purifica de todo pecado. Aleluia.",
+              "prayer_after": "Padre, concede la vida eterna\na quienes saciaste en esta mesa celestial,\nen la que santa Catalina encontró también\nel alimento temporal.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "04-30": [
+          {
+            "title": "San Pío V",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril30"
+            },
+            "data": {
+              "collect": "Dios nuestro, que en tu providencia confiaste al Papa san Pío V\nla defensa de la fe y la solicitud por el culto divino,\nte pedimos, por su intercesión,\nque podamos participar siempre en tus santos misterios\ncon una fe viva y una caridad operante.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "entrance": "Jdt 15, 9\nTú eres la gloria de Jerusalén, tú el gran orgullo de Israel,\ntú el insigne honor de nuestra raza. Aleluia.",
+              "prayer_offerings": "Concédenos bondadosamente, Señor,\npor la intercesión de la Santísima Virgen María,\nque este sacrificio nos dé la prosperidad y la paz\nen esta vida y en la vida eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Sal 147, 20\nA ningún otro pueblo trató así el Señor,\nni le dio a conocer sus mandamientos. Aleluia.",
+              "prayer_after": "Alimentados con el sacramento de la salvación,\nte pedimos, Padre,\nque cuantos celebramos la fiesta de la Virgen María, Madre de Dios,\nmerezcamos recibir los frutos de la redención eterna.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-01": [
+          {
+            "title": "San José",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo"
+            },
+            "data": {
+              "entrance": "Sal 127, 1-2\nFeliz el que teme al Señor y sigue sus caminos.\nComerás del fruto de tu trabajo, serás feliz y todo te irá bien. Aleluia.",
+              "collect": "Dios nuestro, creador de todas las cosas,\nque llamas al género humano a colaborar en tu obra creadora,\nconcédenos, por la protección y el ejemplo de san José,\nrealizar plenamente las tareas que nos confías\ny alcanzar la recompensa prometida.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, fuente de misericordia,\nmira las ofrendas que te presentamos\nen la conmemoración de san José,\ny concédenos, por tu bondad,\nque sirvan de protección para los que te invocan.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Col 3, 17\nTodo lo que puedan decir o hacer,\nháganlo siempre en nombre del Señor Jesús,\ndando gracias a Dios Padre. Aleluia.",
+              "prayer_after": "Saciados con el pan del cielo,\nte suplicamos, Padre,\nque, a ejemplo de san José,\npodamos gozar siempre de tu paz,\ndando testimonio del amor\nque infundes en nuestros corazones\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-02": [
+          {
+            "title": "San Atanasio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo02"
+            },
+            "data": {
+              "entrance": "Cf. Eclo 15,5\nEl Señor lo colmó del espíritu de sabiduría y de inteligencia,\ny lo revistió de su gloria,\npara que anunciara su palabra en medio de la Iglesia. Aleluia.",
+              "collect": "Dios todopoderoso y eterno,\nque hiciste del obispo san Atanasio\nun defensor preclaro de la divinidad de tu Hijo,\nte pedimos que, con su doctrina y protección,\ncrezcamos siempre en tu conocimiento y en tu amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Mira, Señor, los dones que te presentamos\nen la conmemoración de san Atanasio,\npara que, cuantos conservan la integridad de la fe,\nalcancen la salvación por el testimonio de la verdad.\nPor Jesucristo, nuestro Señor.",
+              "communion": "1 Cor 3, 11\nEl fundamento ya está puesto y nadie puede poner otro,\nporque el fundamento es Jesucristo. Aleluia.",
+              "prayer_after": "Dios todopoderoso,\nconcede que la divinidad de tu Hijo Único,\nque confesamos firmemente con San Atanasio,\nnos reanime y proteja siempre por la fuerza de este sacramento.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-03": [
+          {
+            "title": "SAN FELIPE Y SANTIAGO",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03"
+            },
+            "data": {
+              "entrance": "Estos son los santos varones\na quienes el Señor eligió por su caridad sincera;\nÉl les dio la gloria eterna. Aleluia.",
+              "collect": "Dios nuestro, que cada año nos alegras\nen la fiesta de los santos apóstoles Felipe y Santiago;\nconcédenos, por su intercesión,\nparticipar en la pasión y resurrección de tu Hijo unigénito\npara que merezcamos contemplarte eternamente.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, los dones que te presentamos\nen la fiesta de los apóstoles Felipe y Santiago,\ny concédenos vivir una religión pura y sincera.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 14, 8-9\nSeñor, muéstranos al Padre y eso nos basta.\nFelipe, el que me ha visto, ha visto al Padre. Aleluia.",
+              "prayer_after": "Purifica, Padre, nuestros corazones por el sacramento recibido,\npara que, contemplándote en tu Hijo,\ncon los apóstoles Felipe y Santiago\nmerezcamos alcanzar la vida eterna.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-08": [
+          {
+            "title": "NUESTRA SEÑORA DE LUJÁN",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo08"
+            },
+            "data": {
+              "entrance": "Alegrémonos todos en el Señor,\nal celebrar esta fiesta en honor de la Santísima Virgen María.\nLos ángeles se regocijan por esta solemnidad y alaban al Hijo de Dios.",
+              "collect": "Señor y Dios nuestro,\nmira a tu pueblo que peregrina en Argentina,\ny por la intercesión de la santísima Virgen María,\nen su advocación de Nuestra Señora de Luján,\nconcédele tu ayuda en la vida presente\ny la salvación eterna en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Concédenos bondadosamente, Señor,\npor la intercesión de la Santísima Virgen María,\nque este sacrificio nos dé la prosperidad y la paz\nen esta vida y en la eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Sal 147, 20\nA ningún otro pueblo trató así el Señor,\nni le dio a conocer sus mandamientos.",
+              "prayer_after": "Alimentados, Padre,\ncon este sacramento de nuestra salvación,\nte pedimos que experimentemos siempre\nla protección de la santísima María Virgen María,\nen cuyo honor te hemos ofrecido este sacrificio.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-10": [
+          {
+            "title": "San Juan de Ávila",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo10"
+            },
+            "data": {
+              "collect": "Oh, Dios,\nque hiciste de san Juan de Ávila\nun maestro ejemplar para tu pueblo\npor la santidad de su vida y por su celo apostólico;\nhaz que también en nuestros días\ncrezca la Iglesia en santidad\npor el celo ejemplar de tus ministros.\nPor nuestro Señor Jesucristo.",
+              "prayer_offerings": "Por este sacrificio de salvación\nque te ofrecemos con reverenda profunda,\nenciende, Señor, nuestros corazones\nen el fuego del Espíritu Santo\ncon que encendiste el alma,\nllena de caridad pastoral,\nde san Juan de Ávila.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Santificados con la dulzura del manjar de vida,\nte suplicamos, Señor,\nque nos unamos más a tu Hijo\nformando parte más perfectamente\nde su Cuerpo místico.\nÉl, que vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-12": [
+          {
+            "title": "Santos Nereo y Aquiles",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo12"
+            },
+            "data": {
+              "collect": "Dios todopoderoso\na cuantos celebramos el valiente testimonio\nde los mártires Nereo y Aquiles,\nconcédenos la ayuda de su intercesión.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Pancracio\nMártir"
+            }
+          }
+        ],
+        "05-13": [
+          {
+            "title": "Nuestra Señora de Fátima",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo13"
+            },
+            "data": {
+              "collect": "Señor Dios,\nque nos diste a la Madre de tu Hijo como Madre nuestra,\nconcédenos que, perseverando en la penitencia y la oración\npor la salvación del mundo,\ncolaboremos siempre y eficazmente\nen la extensión del Reino de Cristo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-14": [
+          {
+            "title": "SAN MATÍAS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo14"
+            },
+            "data": {
+              "entrance": "Jn 15, 16\nDice el Señor: No son ustedes los que me eligieron a mí,\nsino yo el que los elegí a ustedes,\ny los destiné para que vayan y den fruto y ese fruto sea duradero.",
+              "collect": "Dios nuestro, que incorporaste a san Matías al colegio apostólico,\nconcédenos por su intercesión\nque, alegrándonos de la elección de tu amor,\npodamos ser contados entre tus santos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Padre, los dones\nque tu Iglesia te ofrece con devoción en la fiesta de san Matías,\ny, por ellos, fortalécenos con el poder de tu gracia.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn. 15, 12\nÉste es mi mandamiento, ámense unos a otros,\ncomo yo los he amado, dice el Señor.",
+              "prayer_after": "Dios y Padre nuestro,\nque das con abundancia dones celestiales a tu familia,\npor la intercesión de san Matías,\ndígnate recibirnos en la luz gloriosa de los santos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-15": [
+          {
+            "title": "San Isidro",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo15"
+            },
+            "data": {
+              "collect": "Señor, Dios nuestro, que en la humildad y sencillez de san Isidro\nnos dejaste un ejemplo de vida escondida en ti, con Cristo;\nconcédenos que el trabajo de cada día humanice nuestro mundo\ny sea al mismo tiempo, plegaria de alabanza a tu nombre.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta y santifica, Señor,\nestos dones de pan y de vino,\nfrutos de la tierra que cultivó san Isidro\nregándola con el sudor de su frente.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Te pedimos, Padre, que el alimento santo que hemos recibido\nsea en nosotros siembra prometedora\nde cosecha abundante de caridad,\npara que, a imitación de san Isidro,\nsepamos compartir el pan de cada día con nuestros hermanos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-16": [
+          {
+            "title": "San Luis Orione",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo16"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque has concedido al sacerdote san Luis Orione\namar a Cristo tu Hijo en la persona de los pobres\ny formarlo en el corazón de los jóvenes,\nconcédenos que podamos realizar como él las obras de misericordia,\npara hacer experimentar a los hermanos\nla ternura de tu providencia y la maternidad de la Iglesia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-18": [
+          {
+            "title": "San Juan I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo18"
+            },
+            "data": {
+              "collect": "Dios nuestro, que eres la recompensa de tus fieles,\nescuchas nuestras oraciones\nen el día del martirio del Papa san Juan I\ny concede, a quienes honramos sus méritos,\nimitar su constancia en la fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-20": [
+          {
+            "title": "San Bernardino de Siena",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo20"
+            },
+            "data": {
+              "collect": "Dios nuestro, que concediste al presbítero san Bernardino\nun amor ardiente al santo nombre de Jesús,\npor su intercesión y sus méritos\nenciende en nosotros tu espíritu de caridad.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-21": [
+          {
+            "title": "San Cristóbal Magallanes y compañeros, mártires",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo21"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque concediste a san Cristóbal, presbítero, y a sus compañeros,\nser fieles a Cristo Rey hasta el martirio,\notórganos, por su intercesión,\nobedecer siempre los mandatos de tu amor,\nperseverando en la confesión de la fe verdadera.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-22": [
+          {
+            "title": "Santa Rita de Casia",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo22"
+            },
+            "data": {
+              "collect": "Concédenos, Dios nuestro, la sabiduría de la Cruz\ny la fortaleza que otorgaste a Santa Rita\npara que, unidos a Cristo,\nseamos pacientes en las tribulaciones\ny merezcamos participar más íntimamente en el Misterio Pascual.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-24": [
+          {
+            "title": "Santa María",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo24"
+            },
+            "data": {
+              "entrance": "Te saludamos, santa Madre de Dios, porque diste al mundo al Rey\nque gobierna para siempre el cielo y la tierra. Aleluia.",
+              "collect": "Dios nuestro, que pusiste a la Madre de tu Hijo amado\ncomo madre y auxiliadora del pueblo cristiano,\nconcede a tu Iglesia vivir bajo su protección\ny alegrarse con una paz duradera.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te ofrecemos, Señor, el sacrificio de alabanza\nal celebrar con alegría la conmemoración de la Madre de tu Hijo,\ny te pedimos, con su auxilio materno,\nexperimentar tu ayuda en todas las necesidades.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Dt 10, 21\nEl Señor es tu gloria, él es tu Dios;\nél hizo grandes hazañas a favor tuyo. Aleluia.",
+              "prayer_after": "Padre, después de recibir el sacramento celestial\ny confiando en el auxilio de la santísima Virgen María,\nte pedimos que, libres de pecado,\nnos revistamos de Jesucristo, autor de la nueva humanidad.\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-25": [
+          {
+            "title": "San Beda, el Venerable",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo25"
+            },
+            "data": {
+              "collect": "Dios nuestro, que iluminas a tu Iglesia\ncon la sabiduría del presbítero san Beda,\nconcédenos ser guiados por sus enseñanzas\ny sostenidos por sus méritos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Gregorio VII\nPapa"
+            }
+          }
+        ],
+        "05-26": [
+          {
+            "title": "San Felipe Neri",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo26"
+            },
+            "data": {
+              "entrance": "Rom 5, 5; cf. 8, 11\nEl amor de Dios ha sido derramado en nuestros corazones\npor el Espíritu Santo, que nos ha sido dado.",
+              "collect": "Dios nuestro, que elevas a tus servidores fieles\na la gloria de los santos,\nconcédenos que el Espíritu Santo\nnos encienda con aquel fuego\nque penetró admirablemente el corazón de san Felipe Neri.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, te ofrecemos este sacrificio de alabanza,\nconcédenos que, siguiendo el ejemplo de san Felipe,\nestemos siempre dispuestos, con alegría,\na glorificar tu Nombre y a servir a los hermanos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn. 15, 9\nAsí como el Padre me amó,\ntambién yo los he amado a ustedes, dice el Señor;\npermanezcan en mi amor.",
+              "prayer_after": "Saciados con el pan del cielo,\nte suplicamos, Padre,\nque imitando el ejemplo de san Felipe,\nanhelemos siempre el alimento que nos da la vida verdadera.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "05-27": [
+          {
+            "title": "San Agustín de Cantorbery",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo27"
+            },
+            "data": {
+              "collect": "Dios nuestro,\npor la predicación del obispo san Agustín de Cantorbery\nllevaste al conocimiento del Evangelio a los pueblos de Inglaterra,\nhaz que los frutos de sus esfuerzos\nse mantengan en tu Iglesia con perenne fecundidad.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios por los siglos de los siglos."
+            }
+          }
+        ],
+        "05-29": [
+          {
+            "title": "San Pablo VI",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo29"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque confiaste la conducción de tu Iglesia\nal bienaventurado papa Pablo,\napóstol valiente del Evangelio de tu Hijo:\nconcédenos que, iluminados por sus enseñanzas,\ncolaboremos en el crecimiento de la civilización del amor en el mundo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-01": [
+          {
+            "title": "San Justino",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio"
+            },
+            "data": {
+              "entrance": "Cf. Sal 118, 85.46\nLos malvados dijeron cosas vanas de mí, ignorando tu ley;\npero yo daba testimonio de ti delante de los reyes,\ny no me avergonzaba.",
+              "collect": "Dios todopoderoso,\nque enseñaste almártir san Justino\nla ciencia incomparable de Jesucristo,\npor la locura de la cruz,\nconcédenos por su intercesión\nque, rechazando los engaños del error,\nobtengamos la firmeza de la fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Concédenos, Señor,\ncelebrar dignamente estos misterios\nque con tanta valentía defendió san Justino.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. 1 Cor 2, 2\nNo quise saber nada, fuera de Jesucristo,\ny Jesucristo crucificado.",
+              "prayer_after": "Te pedimos, Padre,\npor este alimento celestial recibido,\nque, siguiendo las enseñanzas de san Justino,\nvivamos en continua acción de gracias.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "06-02": [
+          {
+            "title": "Santos Marcelino y Pedro",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio02"
+            },
+            "data": {
+              "collect": "Dios, que nos asistes y proteges por el glorioso combate\nde los santos mártires Marcelino y Pedro,\nconcédenos beneficiarnos de sus ejemplos\ny experimentar el apoyo de su intercesión.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-03": [
+          {
+            "title": "San Carlos Lwanga y compañeros",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio03"
+            },
+            "data": {
+              "entrance": "Cf. Sab 3, 6-7.9\nEl Señor probó a sus elegidos como oro en el crisol\ny los aceptó como un holocausto.\nPor eso brillarán cuando Dios los visite,\nporque la gracia y la misericordia son para sus elegidos.",
+              "collect": "Dios nuestro, que hiciste de la sangre de tus mártires\nsemilla de nuevos cristianos,\nconcédenos bondadosamente que el campo de tu Iglesia,\nregado por la sangre de san Carlos Lwanga y sus compañeros,\nte brinde siempre una generosa cosecha.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Al presentar nuestros dones, Señor\nte pedimos que, así como diste a tus mártires\nla gracia de morir antes que pecar,\nnos concedas también a nosotros,\nservirte en tu altar con total entrega.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 115, 15\nEs valiosa a los ojos del Señor la muerte de sus santos.",
+              "prayer_after": "Te pedimos, Padre, que estos divinos sacramentos,\nrecibidos en la conmemoración de tus santos mártires,\ncomo a ellos les dieron el valor para superar los tormentos,\na nosotros nos concedan, en medio de las adversidades,\nla perseverancia en la fe y en la caridad\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "06-05": [
+          {
+            "title": "San Bonifacio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio05"
+            },
+            "data": {
+              "collect": "Te rogamos, Padre,\nque el mártir san Bonifacio interceda por nosotros,\npara que conservemos con firmeza\ny manifestemos con nuestras obras\nla fe que enseñó con su palabra y selló con su sangre.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-06": [
+          {
+            "title": "San Norberto",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio06"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste del obispo san Norberto\nun servidor admirable de tu Iglesia\npor la oración y el celo pastoral,\nconcede, por su intercesión,\nque el rebaño de los fieles encuentre siempre\npastores según tu corazón\ny alimento para la vida eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-09": [
+          {
+            "title": "San Efrén",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio09"
+            },
+            "data": {
+              "collect": "Padre, infunde en nuestros corazones el Espíritu Santo,\nel cual inspiró al diácono san Efrén\na cantar con alegría tus misterios,\ny lo impulsó a entregarse totalmente a tu servicio.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo y es Dios\npor los siglos de los siglos."
+            }
+          }
+        ],
+        "06-11": [
+          {
+            "title": "San Bernabé",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio11"
+            },
+            "data": {
+              "entrance": "Cf. Hech 11, 24\nFeliz este santo que mereció ser contado entre los apóstoles;\nera un hombre bondadoso,\nlleno del Espíritu Santo y de mucha fe.",
+              "collect": "Señor Dios, que para convertir a los paganos\nelegiste a san Bernabé,\nhombre lleno de fe y del Espíritu Santo;\nconcede que el Evangelio de Cristo,\npredicado por él con tanta firmeza,\nsea anunciado fielmente con palabras y obras.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Santifica con tu bendición, Señor,\nlos dones que te presentamos,\ny enciende en nosotros la llama de tu amor\nque impulsó a san Bernabé a llevar a los paganos la luz del Evangelio.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 15, 15\nYa no los llamo servidores,\nporque el servidor ignora lo que hace su señor.\nYo los llamo amigos, porque les he dado a conocer\ntodo lo que oí de mi Padre.",
+              "prayer_after": "Después de recibir el anticipo de la vida eterna,\nte suplicamos, Padre,\nque lleguemos a poseer en plenitud\nlo que celebramos sacramentalmente\nen la fiesta del apóstol san Bernabé.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "06-13": [
+          {
+            "title": "San Antonio de Padua",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio13"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque en san Antonio de Padua\nnos diste un insigne predicador del Evangelio\ny un intercesor en las necesidades;\nconcédenos, con su ayuda, que viviendo cristianamente\nexperimentemos tu protección en toda adversidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-19": [
+          {
+            "title": "San Romualdo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio19"
+            },
+            "data": {
+              "collect": "Dios nuestro, que renovaste la vida eremítica en tu Iglesia\npor la obra del abad san Romualdo,\nconcede que, renunciando a nosotros mismos\ny siguiendo a Cristo,\npodamos llegar felizmente al reino de los cielos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-21": [
+          {
+            "title": "San Luis Gonzaga",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio21"
+            },
+            "data": {
+              "entrance": "Cf. Sal 23, 4.3\nEl que tiene las manos limpias y puro el corazón\npodrá subir a la montaña del Señor y permanecerá en su recinto sagrado.",
+              "collect": "Señor Dios nuestro, autor de todo bien,\nque has querido unir en san Luis Gonzaga\nuna admirable inocencia de vida\ny un austero espíritu de penitencia,\nconcédenos, por su intercesión,\nque si no hemos sabido imitarlo en su vida inocente,\nlo sigamos en el camino de la penitencia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te pedimos, Señor,\nque, revestidos del traje nupcial\na ejemplo de san Luis Gonzaga,\nnos concedas participar de esta mesa eucarística,\npara ser colmados con las riquezas de tu gracia.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 77, 24-25\nLes dio como alimento el pan celestial;\ntodos comieron un pan de ángeles.",
+              "prayer_after": "Concédenos, Padre,\nque alimentados con el pan de los ángeles,\npodamos servirte con una vida pura\ny, a ejemplo de san Luis,\nperseverar en continua acción de gracias.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "06-22": [
+          {
+            "title": "San Paulino de Nola",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio22"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste resplandecer al obispo san Paulino\npor su amor a la pobreza y su celo pastoral,\nconcede a quienes celebramos hoy sus méritos\nimitar siempre su testimonio de caridad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSantos Juan Fisher y Tomás Moro\nmártires"
+            }
+          }
+        ],
+        "06-26": [
+          {
+            "title": "San Josemaría Escrivá de Balaguer",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio26"
+            },
+            "data": {
+              "entrance": "Jer 3, 15\nLes daré pastores conforme a mi corazón,\nque los apacentarán con ciencia y prudencia.",
+              "collect": "Oh Dios, que has suscitado en la Iglesia a san Josemaría, sacerdote,\npara proclamar la vocación universal a la santidad y al apostolado,\nconcédenos, por su intercesión y su ejemplo,\nque en el ejercicio del trabajo ordinario nos configuremos a tu Hijo Jesucristo\ny sirvamos con ardiente amor a la obra de la Redención.\nPor nuestro Señor Jesucristo.",
+              "prayer_offerings": "Recibe, Padre santo, estos dones\nque te ofrecemos en la conmemoración de san Josemaría,\npara que, por el sacrificio de Cristo\nofrecido en el ara de la Cruz,\nque se hace presente en el sacramento,\nquieras santificar todas nuestras obras.\nPor Jesucristo nuestro Señor.",
+              "communion": "Mt 20, 28\nEl Hijo del hombre no vino para ser servido,\nsino para servir y dar su vida en rescate por una multitud.",
+              "prayer_after": "Señor Dios nuestro,\nlos sacramentos que hemos recibido en la celebración de san Josemaría,\nfortalezcan en nosotros el espíritu de hijos adoptivos para que,\nfielmente unidos a tu voluntad,\nrecorramos con alegría el camino de la santidad.\nPor Jesucristo nuestro Señor."
+            }
+          }
+        ],
+        "06-27": [
+          {
+            "title": "San Cirilo de Alejandría",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio27"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste del obispo san Cirilo de Alejandría\nun invencible defensor\nde la maternidad divina de la Virgen María,\nconcede que quienes la reconocemos como verdadera Madre de Dios,\nser salvados por la encarnación de tu Hijo Jesucristo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "06-28": [
+          {
+            "title": "San Ireneo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio28"
+            },
+            "data": {
+              "entrance": "Mal 2, 6\nLa doctrina de verdad estaba en su boca y no se encontró maldad en sus labios;\ncaminaba conmigo en paz y rectitud, y apartó a muchos de la iniquidad.",
+              "collect": "Dios nuestro, que diste al obispo san Ireneo\nla gracia de mantener con firmeza\nla doctrina de verdad y la paz de la Iglesia,\nconcédenos, por su intercesión,\nque, renovados en la fe y en la caridad,\ntrabajemos siempre por la unidad y la concordia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios por los siglos de los siglos.",
+              "prayer_offerings": "El sacrificio que te ofrecemos con alegría\nen la fiesta de san Ireneo te glorifique, Señor,\ny nos obtenga amar siempre la verdad\npara conservar íntegra la fe de la Iglesia\ny afianzar su unidad.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn 15, 4-5\nPermanezcan en mí, como yo en ustedes, dice el Señor;\nEl que permanece en mí, y yo en Él, da mucho fruto.",
+              "prayer_after": "Padre misericordioso, por estos sagrados misterios,\nconcédenos crecer en la fe para que,\nasí como el obispo san Ireneo la confesó hasta su muerte gloriosa,\na nosotros nos justifique la fiel perseverancia en la verdad.\nPor Jesucristo, nuestro Señor"
+            }
+          }
+        ],
+        "06-29": [
+          {
+            "title": "SAN PEDRO Y SAN PABLO",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.06.htm#Junio29"
+            },
+            "data": {
+              "entrance": "San Pedro apóstol y San Pablo, maestro de los gentiles,\nnos enseñaron tu ley, Señor.",
+              "collect": "Concédenos, Señor Dios nuestro,\nque nos ayude la intercesión\nde los apóstoles san Pedro y san Pablo,\npor quienes diste a tu Iglesia las primicias de la obra salvadora\ny, por ellos, otórganos el auxilio para alcanzar la salvación eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Presentamos en tu altar estas ofrendas, Señor,\nen la solemnidad de los apóstoles san Pedro y san Pablo,\ny ya que no podemos confiar en nuestros propios méritos\nconcédenos la alegría de ser salvados sólo por tu misericordia.\nPor Jesucristo, Nuestro Señor.",
+              "communion": "Cf. Jn 21, 15.17\nSimón, hijo de Juan, ¿me amas más que éstos?\nSeñor, tú lo sabes todo, tú sabes que te quiero.",
+              "prayer_after": "Te pedimos, Padre,\nque por estos sacramentos celestiales fortalezcas a tus fieles,\na quienes iluminaste con las enseñanzas de los Apóstoles.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "07-03": [
+          {
+            "title": "SANTO TOMÁS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm"
+            },
+            "data": {
+              "entrance": "Cf. Sal 117, 28.21\nTú eres mi Dios, y te doy gracias: Tú eres mi Dios, y te glorifico;\nte doy gracias porque me escuchaste y fuiste mi salvación.",
+              "collect": "Concédenos, Dios todopoderoso,\nalegrarnos en la fiesta del apóstol santo Tomás,\npara que siempre nos ayude con su protección\ny tengamos vida creyendo en aquél\na quien reconoció como el Señor resucitado, Jesucristo tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, el testimonio de nuestro servicio,\ny el humilde pedido que conserves tus dones en nosotros,\nal ofrecerte este sacrificio de alabanza\nen el martirio del apóstol santo Tomás.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 20, 27\nAcerca tu mano, y reconoce el lugar de los clavos:\nen adelante no seas incrédulo, sino fiel.",
+              "prayer_after": "Dios nuestro, en este sacramento hemos recibido verdaderamente\nel Cuerpo de tu Hijo unigénito;\nconcédenos que lo reconozcamos por la fe\ncomo Dios y Señor nuestro,\ny también lo confesemos con las obras y con la vida,\na ejemplo del apóstol Tomás.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "07-04": [
+          {
+            "title": "Santa Isabel de Portugal",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio04"
+            },
+            "data": {
+              "collect": "Dios nuestro, que creas la paz y amas la caridad,\ntú concediste a santa Isabel de Portugal\nla gracia admirable de reconciliar a los enemigos;\nte pedimos, por su intercesión,\ntrabajar siempre por la paz\npara ser llamados hijos de Dios.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-05": [
+          {
+            "title": "San Antonio María Zaccaría",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio05"
+            },
+            "data": {
+              "collect": "Concédenos, Padre,\ncrecer en el conocimiento admirable de Jesucristo,\nsegún la enseñanza del apóstol Pablo,\nque inspiró a san Antonio María\npara proclamar en tu Iglesia la palabra de salvación.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-06": [
+          {
+            "title": "Santa María Goretti",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio06"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque eres la fuente de la inocencia y amas la castidad,\ntú concediste a tu servidora santa María Goretti\nla gracia del martirio en plena adolescencia:\nconcédenos, por su intercesión,\nque así como ella recibió la corona\nen el combate por su virginidad,\nseamos constantes para cumplir tus mandamientos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-10": [
+          {
+            "title": "Santos Agustín Zhao Rong",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio10"
+            },
+            "data": {
+              "collect": "Señor Dios,\nque en tu admirable providencia fortaleciste a tu Iglesia\ncon el testimonio de los santos mártires Agustín y sus compañeros,\nte pedimos que tu pueblo,\nfiel a la misión que le encomendaste,\npueda vivir en libertad\ny dar testimonio de la verdad ante el mundo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque contigo vive y reina en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-11": [
+          {
+            "title": "San Benito",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio11"
+            },
+            "data": {
+              "entrance": "Hubo un varón de vida venerable, bendecido por la gracia y por su nombre,\nque dejando su casa y los bienes paternos, buscando vivir sólo para Dios,\npidió el hábito de la vida monástica.",
+              "collect": "Señor y Dios nuestro, que hiciste del abad san Benito\nun esclarecido maestro en la escuela del servicio divino,\nconcédenos que, sin anteponer nada a tu amor,\navancemos con un corazón generoso\npor el camino de tus mandamientos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Mira con bondad estos dones, Señor,\nque te presentamos en la fiesta del abad san Benito,\ny concédenos que, como él, buscándote solo a ti,\npodamos alcanzar la paz y la unidad en tu servicio.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Hemos recibido el anticipo de la vida eterna,\ny te suplicamos humildemente, Padre,\nque obedeciendo las enseñanzas de san Benito,\nseamos fieles a nuestro deber de alabarte\ny amemos a los hermanos con sincera caridad.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "07-12": [
+          {
+            "title": "San Camilo de Lelis,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio12"
+            },
+            "data": {
+              "collect": "Dios nuestro, que infundiste en san Camilo, presbítero,\nel carisma de un amor admirable hacia los enfermos;\npor sus méritos e intercesión\ninfunde en nosotros tu espíritu de amor\npara que, sirviéndote en nuestros hermanos,\npodamos presentarnos confiadamente ante ti\nen la hora de nuestra muerte.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-13": [
+          {
+            "title": "San Enrique",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio13"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque con la abundancia de tu gracia ayudaste a san Enrique\ny lo elevaste del reino terreno\na la contemplación de las realidades eternas;\nte pedimos, por su intercesión,\nque en medio de la inestabilidad del mundo presente\ncaminemos hacia ti con un corazón puro.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.\nSANTA TERESA DE JESÚS DE LOS ANDES\nvirgen",
+              "entrance": "Esta es una Virgen sabia y prudente, que salió a recibir a Cristo con la lámpara encendida.",
+              "prayer_offerings": "Te pedimos, Señor, que te dignes santificar estas ofrendas\ny, por la intercesión de Santa Teresa (de Jesús de los Andes)\nque se ofreció a ti como sacrificio espiritual,\nconcede a tu pueblo los dones de la perfecta reconciliación y de la paz.\nPor Jesucristo nuestro Señor.",
+              "communion": "Jn 15, 9\nComo el Padre me ha amado, así los he amado yo, dice el Señor.\nPermanezcan en mi amor.",
+              "prayer_after": "Habiendo recibido los sagrados misterios\ndel precioso Cuerpo y Sangre de tu Hijo,\nte pedimos humildemente, Señor,\nque, siguiendo el ejemplo de santa Teresa (de Jesús de los Andes)\nte alabemos siempre\ny te sirvamos con alegría y generosidad en nuestros hermanos.\nPor Jesucristo nuestro Señor."
+            }
+          }
+        ],
+        "07-14": [
+          {
+            "title": "San Camilo de Lelis",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio14"
+            },
+            "data": {
+              "collect": "Dios nuestro, que infundiste en san Camilo, presbítero,\nel carisma de un amor admirable hacia los enfermos;\npor sus méritos e intercesión\ninfunde en nosotros tu espíritu de amor\npara que, sirviéndote en nuestros hermanos,\npodamos presentarnos confiadamente ante ti\nen la hora de nuestra muerte.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Enrique\nEn Chile: Memoria libre\nSan Francisco Solano,\npresbítero"
+            }
+          }
+        ],
+        "07-15": [
+          {
+            "title": "San Buenaventura",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio15"
+            },
+            "data": {
+              "collect": "Concédenos, Dios todopoderoso,\nque al celebrar la conmemoración del obispo san Buenaventura\naprovechemos sus admirables enseñanzas\ne imitemos el ardor de su caridad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-16": [
+          {
+            "title": "Nuestra Señora del Carmen",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio16"
+            },
+            "data": {
+              "entrance": "Te saludamos, santa Madre de Dios, porque diste al mundo\nal Rey que gobierna para siempre el cielo y la tierra.",
+              "collect": "Te suplicamos, Padre,\nque nos ayude la gloriosa intercesión de la Virgen María,\ny con su protección podamos llegar a Cristo,\nmonte de la salvación.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Escucha, Señor, la oración de tu pueblo\ny acepta nuestras ofrendas, para que,\npor intercesión de la santísima Virgen María, Madre de tu Hijo,\nsea atendido todo deseo y escuchada toda petición.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Lc 11, 27\nFeliz la Virgen María, que llevó en su seno al Hijo del Padre eterno.",
+              "prayer_after": "Después de recibir los sacramentos celestiales\nte suplicamos, Dios nuestro,\nque cuantos nos alegramos en la celebración de la Virgen María,\na ejemplo suyo colaboremos dignamente\nen el misterio de nuestra redención.\nPor Jesucristo, nuestro Señor.\nNUESTRA SEÑORA DEL CARMEN\nMadre y Reina de Chile"
+            }
+          }
+        ],
+        "07-20": [
+          {
+            "title": "San Apolinar",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio20"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro,\ndirige a tus fieles por el camino de la salvación,\nque el obispo San Apolinar testimonió con su doctrina y su martirio;\ny ayúdanos, por su intercesión,\na perseverar en la práctica de tus mandamientos,\npara que merezcamos alcanzar el premio eterno.\nPor nuestro Señor Jesucristo, tu Hijo,\nque contigo vive y reina en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-21": [
+          {
+            "title": "San Lorenzo de Brindis,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio21"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque para gloria de tu nombre y salvación de las almas\notorgaste al presbítero san Lorenzo de Brindis,\nel espíritu de sabiduría y de fortaleza;\nconcédenos, en ese mismo espíritu, conocer lo que debemos hacer\ny, por su intercesión, llevarlo a la práctica.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-22": [
+          {
+            "title": "Santa María Magdalena",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio22"
+            },
+            "data": {
+              "entrance": "Jn 20, 17\nDijo el Señor a María Magdalena: Ve a decir a mis hermanos:\nsubo a mi Padre, Padre de ustedes; a mi Dios, Dios de ustedes.",
+              "collect": "Dios nuestro,\ntu Hijo encomendó a María Magdalena\nla misión de anunciar la alegría pascual;\nconcédenos, por su ejemplo e intercesión,\npredicar a Cristo resucitado y verlo reinar en tu gloria.\nQue vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Padre, los dones que te presentamos\nen la conmemoración de santa María Magdalena,\ncomo tu Hijo unigénito\nrecibió bondadosamente el homenaje de su caridad.\nÉl que vive y reina por los siglos de los siglos.",
+              "communion": "2 Cor 5, 14-15\nEl amor de Cristo nos apremia,\na fin de que los que viven, no vivan más para sí mismos,\nsino para aquél que murió y resucitó por ellos.",
+              "prayer_after": "Te pedimos, Dios nuestro,\nque la recepción de tus misterios\ninfunda en nosotros aquel amor perseverante\ncon el cual santa María Magdalena\nse mantuvo constantemente unida a Cristo, su Maestro.\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-23": [
+          {
+            "title": "Santa Brígida",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio23"
+            },
+            "data": {
+              "collect": "Dios nuestro, que condujiste a santa Brígida\npor diferentes caminos en su vida terrena,\ny le enseñaste admirablemente la sabiduría de la Cruz\npor la contemplación de la Pasión de tu Hijo,\nconcédenos que, siguiendo tu voz,\nte busquemos siempre en todas las cosas.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Charbel Makhlüf\npresbítero"
+            }
+          }
+        ],
+        "07-24": [
+          {
+            "title": "San Francisco Solano",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio24"
+            },
+            "data": {
+              "entrance": "Sal. 17, 50; 21, 23\nTe alabaré entre las naciones, Señor,\ny anunciaré tu Nombre a mis hermanos.",
+              "collect": "Señor Dios, que por medio del presbítero san Francisco Solano\nllevaste a muchos pueblos de América al seno de tu Iglesia\npor sus méritos e intercesión míranos con bondad\ny atrae hacia ti a los pueblos que todavía no te reconocen.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios todopoderoso,\nacepta nuestra ofrenda en la fiesta de san Francisco Solano,\ny concédenos expresar en la vida\nel misterio de la pasión de tu Hijo que ahora celebramos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Ez 34, 15\nApacentaré a mis ovejas\ny las llevaré a descansar, dice el Señor.",
+              "prayer_after": "Señor y Padre nuestro, por el misterio que celebramos\nconfirma a tus servidores en aquella fe verdadera\nque san Francisco Solano difundió incansablemente\nhasta el fin de su vida,\ny concédenos profesarla siempre de palabra y de obra.\nPor Jesucristo, nuestro Señor.\nSan Charbel Makhlüf\npresbítero"
+            }
+          }
+        ],
+        "07-26": [
+          {
+            "title": "Santos Joaquín y Ana",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio26"
+            },
+            "data": {
+              "entrance": "Cf. Eclo 44, 1.25\nAlabemos a san Joaquín y santa Ana, porque en su descendencia,\nel Señor Dios les concedió la bendición para todos los pueblos.",
+              "collect": "Señor, Dios de nuestros padres,\ntú concediste a san Joaquín y santa Ana\nla gracia que de ellos naciera María,\nla madre de tu Hijo encarnado;\notórganos, por sus ruegos,\nalcanzar la salvación prometida a tu pueblo.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, los dones que te presentamos\ny concédenos participar de la bendición\nprometida a Abraham y a su descendencia.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Sal 23, 5\nRecibieron la bendición del Señor,\ny la misericordia de Dios, su salvador.",
+              "prayer_after": "Dios y Padre, tú has querido\nque tu Hijo unigénito se hiciera hombre en la tierra\npara que, por este admirable misterio, los hombres renacieran de ti;\nte pedimos que seamos santificados con el espíritu de adopción\nquienes fuimos alimentados con el pan de los hijos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "07-29": [
+          {
+            "title": "Santos Marta, María y Lázaro",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio29"
+            },
+            "data": {
+              "entrance": "Cf. Lc 10, 38\nCuando entró Jesús en un poblado,\nuna mujer, llamada Marta, lo recibió en su casa.",
+              "collect": "Concédenos, Dios todopoderoso,\nque el ejemplo de tus santos\nnos estimule a llevar una vida más perfecta,\ny así, quienes celebramos la memoria de los santos Marta,\nMaría y Lázaro,\nsepamos imitar siempre sus acciones.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios por los siglos de los siglos.",
+              "prayer_offerings": "Al proclamar, Señor, tu obra admirable en tus santos,\nsuplicamos humildemente a tu majestad\nque, así como te fueron gratos sus amorosos obsequios,\nasí también te sea aceptable el desempeño de nuestro servicio.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn 11, 27\nMarta dijo a Jesús: Sí, Señor. Creo firmemente\nque tú eres el Mesías, el Hijo de Dios,\nel que tenía que venir al mundo.",
+              "prayer_after": "Señor, que la santa comunión\ndel Cuerpo y la Sangre de tu Unigénito\nnos aleje de todas las cosas pasajeras,\npara que, a ejemplo de los santos Marta, María y Lázaro,\npodamos crecer en la tierra en un auténtico amor a ti\ny gozar en el cielo, contemplándote eternamente.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "07-30": [
+          {
+            "title": "San Pedro Crisólogo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio30"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste del obispo san Pedro Crisólogo\nun insigne predicador de tu Verbo encarnado;\nconcédenos , por su intercesión,\nla gracia de meditar siempre en nuestros corazones\nlos misterios de tu salvación\ny manifestarlos fielmente en nuestras obras.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "07-31": [
+          {
+            "title": "San Ignacio de Loyola",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio31"
+            },
+            "data": {
+              "entrance": "Flp. 2, 10-11\nAl nombre de Jesús toda rodilla se doble,\nen el cielo, en la tierra y en los abismos;\ny toda lengua proclame que Jesucristo es el Señor,\npara gloria de Dios Padre.",
+              "collect": "Dios nuestro, para difundir la mayor la gloria de tu nombre\nsuscitaste en tu Iglesia a san Ignacio,\nconcédenos que, después de las luchas de esta vida,\ncon su protección y siguiendo su ejemplo,\nmerezcamos compartir su triunfo en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta, Señor Dios nuestro, los dones que te presentamos\nal conmemorar a san Ignacio;\nconcédenos que estos misterios,\nque dejaste como fuente de toda santidad,\nnos santifiquen también en la verdad.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Lc 12, 49\nHe venido a traer fuego sobre la tierra,\ny cómo desearía que ya estuviera ardiendo.",
+              "prayer_after": "Te pedimos, Padre, que el sacrificio de alabanza\nque hemos ofrecido para darte gracias,\nen la conmemoración de san Ignacio,\nnos conduzca a la alabanza eterna de tu gloria.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-01": [
+          {
+            "title": "San Alfonso María de Ligorio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm"
+            },
+            "data": {
+              "collect": "Dios nuestro, que suscitas continuamente en tu Iglesia\nnuevos ejemplos de santidad,\nconcédenos imitar de tal modo el celo por las almas\nque animó al obispo san Alfonso María,\nque podamos alcanzar con él la recompensa del cielo.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, enciende nuestros corazones\nel fuego de tu Espíritu,\nque concediste a san Alfonso María\npara celebrar estos misterios\ny presentarse ante ti como ofrenda santa.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Señor Dios, que constituiste a san Alfonso María\ncomo predicador y fiel ministro de tan santo misterio,\nconcédenos que tus fieles\nparticipemos frecuentemente de este sacramento,\ny, al recibirlo, te alabemos eternamente.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-02": [
+          {
+            "title": "San Eusebio de Vercelli",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#02"
+            },
+            "data": {
+              "collect": "Dios nuestro, te pedimos\nla gracia de imitar la firmeza del obispo san Eusebio\npara defender la divinidad de tu Hijo,\ny haz que, perseverando en la fe que él enseñó,\nmerezcamos participar de la vida de tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.\nSan Pedro Julián Eymard\npresbítero"
+            }
+          }
+        ],
+        "08-04": [
+          {
+            "title": "San Juan María Vianney",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#04"
+            },
+            "data": {
+              "collect": "Dios de poder y misericordia,\nque hiciste admirable al presbítero san Juan María\npor su entrega pastoral,\nconcédenos, a ejemplo suyo y con su intercesión,\nque procuremos, con la caridad, llevar hacia Cristo a los hermanos\ny alcanzar junto con ellos la gloria eterna.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-05": [
+          {
+            "title": "Dedicación de la Basílica de Santa María",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#05"
+            },
+            "data": {
+              "collect": "Señor Dios nuestro, perdona los pecados de tus hijos,\ny, ya que no podemos agradarte con nuestras obras,\nconcede que seamos salvados\npor la intercesión de la Madre de tu Hijo.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-07": [
+          {
+            "title": "San Sixto II y compañeros, mártires",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#07"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\nque diste a San Sixto y sus compañeros mártires\nla gracia de entregar su vida\npor amor a tu Palabra y por el testimonio de Jesús,\nte pedimos que, con la fuerza del Espíritu Santo,\nnos enseñes a permanecer fieles en la fe\ny fuertes en la confesión de tu nombre.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Cayetano\npresbítero"
+            }
+          }
+        ],
+        "08-08": [
+          {
+            "title": "Santo Domingo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#08"
+            },
+            "data": {
+              "entrance": "Cf. Ecli 15,5\nEl Señor lo colmó del espíritu de sabiduría y de inteligencia,\ny lo revistió de su gloria,\npara que anunciara su palabra en medio de la Iglesia.",
+              "collect": "Señor Dios nuestro,\nque Santo Domingo ayude a tu Iglesia\ncon sus méritos y enseñanzas,\ny que este insigne predicador de la verdad\ninterceda bondadosamente por nosotros.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Atiende con bondad, Señor,\nlas súplicas que te dirigimos con la intercesión de santo Domingo,\ny por el poder de este sacrificio\nconfirma con la protección de tu gracia a quienes defienden la fe.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Padre, en la fiesta de santo Domingo,\notorga a tu Iglesia la fuerza del sacramento celestial\ncon el que hemos sido alimentados,\ny te pedimos que reciba la ayuda\nde quien la enriqueció con el ministerio de su predicación.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-09": [
+          {
+            "title": "Santa Teresa Benedicta de la Cruz",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#09"
+            },
+            "data": {
+              "collect": "Dios de nuestros padres,\nque llevaste a la mártir santa Teresa Benedicta,\nal conocimiento de tu Hijo crucificado\ny a imitarlo fielmente hasta la muerte,\npor su intercesión, te pedimos\nque todos los hombres reconozcan en Cristo al Salvador,\ny por él lleguen a gozar de tu visión en la eternidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nBeata María Francisca Rubatto,\nvirgen"
+            }
+          }
+        ],
+        "08-10": [
+          {
+            "title": "SAN LORENZO",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#10"
+            },
+            "data": {
+              "entrance": "San Lorenzo se entregó por entero al servicio de la Iglesia:\npor eso mereció sufrir el martirio y unirse con alegría a Cristo en el cielo.",
+              "collect": "Dios nuestro: encendido por el fuego de tu amor,\nsan Lorenzo brilló por la fidelidad en el servicio\ny en la gloria del martirio;\nconcédenos amar lo que él amó\ny practicar lo que enseñó.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta con bondad, Señor, los dones que te presentamos con gozo\nen la fiesta de san Lorenzo,\ny por ellos concédenos tu salvación.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn. 12, 26\nEl que quiera servirme que me siga,\ny donde yo esté, estará también mi servidor, dice el Señor.",
+              "prayer_after": "Alimentados con estos dones sagrados en la fiesta de san Lorenzo,\nte pedimos, Padre,\nque por la ofrenda de nuestro servicio\npodamos experimentar el aumento de tu gracia.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-11": [
+          {
+            "title": "Santa Clara",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#11"
+            },
+            "data": {
+              "collect": "Dios nuestro, que en tu misericordia\ninspiraste a santa Clara el amor a la pobreza;\notórganos, por su intercesión,\nque siguiendo a Cristo con pobreza de espíritu\npodamos llegar a contemplarte en el Reino celestial.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-12": [
+          {
+            "title": "Santa Juana Francisca de Chantal",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#12"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque condujiste a santa Juana Francisca\npor diferentes caminos en su vida terrena\ny la enriqueciste con preclaros méritos,\nconcédenos, por su intercesión,\nque fieles a nuestra vocación\nseamos siempre testigos de la luz.\nPor nuestro Señor Jesucristo, tu Hijo,\nque contigo vive y reina en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-13": [
+          {
+            "title": "Santos Ponciano, papa,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#13"
+            },
+            "data": {
+              "collect": "Te pedimos, Dios nuestro\nque la admirable paciencia de los justos\nacreciente en nosotros el deseo de amarte\ny fortalezca siempre la sagrada fe en nuestros corazones.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-14": [
+          {
+            "title": "San Maximiliano María Kolbe",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#14"
+            },
+            "data": {
+              "entrance": "Cf. Mt 25, 34.36.40\nVengan, benditos de mi Padre, dice el Señor.\nEstuve enfermo y me visitaron.\nLes aseguro que cada vez que lo hicieron\ncon el más pequeño de mis hermanos,\nlo hicieron conmigo.",
+              "collect": "Señor Dios, que encendiste\na san Maximiliano María, presbítero y mártir,\nen amor a la Virgen Inmaculada\ny lo colmaste de celo por la salvación de las almas\ny de caridad hacia el prójimo,\nconcédenos, por su intercesión\nque, solícitos en el servicio a los hermanos por la gloria divina,\nnos hagamos semejantes a tu Hijo, que dio su vida por nosotros.\nQue vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios nuestro, te presentamos estos dones,\npidiéndote humildemente\nque, a ejemplo de san Maximiliano María,\naprendamos a ofrecerte nuestra vida.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 15, 13\nDice el Señor: No hay amor más grande\nque dar la vida por los amigos.",
+              "prayer_after": "Alimentados con el Cuerpo y la Sangre de tu Hijo,\nte pedimos, Padre, que arda en nosotros aquella caridad\nque san Maximiliano María recibió en la eucaristía.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-16": [
+          {
+            "title": "San Esteban de Hungría",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#16"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\nque hiciste de san Esteban un propagador de tu Iglesia\ndurante su reinado en la tierra,\nconcede a tu pueblo la gracia\nde tenerlo como defensor en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.\nSan Roque"
+            }
+          }
+        ],
+        "08-18": [
+          {
+            "title": "San Alberto Hurtado Cruchaga,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#18"
+            },
+            "data": {
+              "entrance": "Mt 25, 34.36.40\nVengan benditos de mi Padre -dice el Señor-\nporque estuve enfermo y me visitaron.\nEn verdad les digo que cuanto hicieron con el más pequeño de mis hermanos,\nconmigo lo hicieron.",
+              "collect": "Dios y Padre nuestro, que en san Alberto, presbítero,\nnos diste un signo admirable de tu amor,\npor su intercesión, concédenos perseverar unidos en el Evangelio,\nacompañando con el amor de Cristo a nuestros hermanos,\nespecialmente los abandonados y los pobres,\ny promover así el reino de justicia, de amor y de paz.\nPor nuestro Señor Jesucristo tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, los dones de tu pueblo\ny concédenos que, al recordar las maravillas\nque el amor de tu Hijo realizó con nosotros,\nnos reafirmemos, a ejemplo de san Alberto\nen el amor a ti y al prójimo.\nPor Jesucristo nuestro Señor.",
+              "communion": "Jn 15, 13\nNadie tiene amor más grande que el que da la vida por sus amigos.",
+              "prayer_after": "Alimentados con estos sagrados misterios,\nte pedimos, Señor,\nnos ayudes a seguir los ejemplos de san Alberto\nque te rindió culto con devoción constante,\ny se entregó a tu pueblo en un continuo servicio de amor.\nPor Jesucristo nuestro Señor."
+            }
+          }
+        ],
+        "08-19": [
+          {
+            "title": "San Juan Eudes",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#19"
+            },
+            "data": {
+              "collect": "Dios nuestro, que elegiste admirablemente al presbítero san Juan Eudes,\npara anunciar las insondables riquezas de Cristo;\nconcédenos que, siguiendo sus ejemplos y enseñanzas,\nte conozcamos cada vez más\ny vivamos con fidelidad según la luz del Evangelio.\nPor nuestro Señor Jesucristo, tu Hijo\nque contigo y el Espíritu Santo vive y reina en unidad\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-20": [
+          {
+            "title": "San Bernardo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#20"
+            },
+            "data": {
+              "entrance": "El Señor colmó a san Bernardo con el espíritu de entendimiento\npara servir al pueblo de Dios con abundante doctrina.",
+              "collect": "Dios nuestro, que encendiste al abad san Bernardo,\ncon el celo por tu casa\ne hiciste de él una lámpara que brillaba y ardía en tu Iglesia,\nconcédenos por su intercesión\nque, animados por ese mismo espíritu,\ncaminemos siempre como hijos de la luz.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te ofrecemos, Señor,\neste sacramento de la unidad y de la paz\nen memoria del abad san Bernardo,\nque brilló por su palabra y sus obras\ny promovió con firmeza la concordia y la disciplina en tu Iglesia.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn. 15, 9\nAsí como el Padre me amó,\ntambién yo los he amado a ustedes, dice el Señor;\npermanezcan en mi amor.",
+              "prayer_after": "Te pedimos, Dios nuestro,\nque el alimento recibido en la conmemoración de san Bernardo\nproduzca su fruto en nosotros,\npara que, fortalecidos por sus ejemplos\ny siguiendo sus enseñanzas,\narda en nosotros el amor por tu Verbo encarnado.\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-21": [
+          {
+            "title": "San Pío X",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#21"
+            },
+            "data": {
+              "collect": "Dios nuestro, que para defender la fe católica\ne instaurar todas las cosas en Cristo,\ncolmaste de sabiduría divina y de fortaleza apostólica\nal Papa san Pío X;\nconcédenos que, siguiendo sus enseñanzas y ejemplos,\nalcancemos la recompensa eterna.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe con bondad, Señor, nuestras ofrendas\ny concédenos que, dóciles a las enseñanzas del Papa san Pío X,\ncelebremos con dignidad estos santos misterios\ny los recibamos con espíritu de fe.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Señor y Dios nuestro,\nal celebrar la fiesta de san Pío X\nte rogamos que, por la eficacia de esta eucaristía,\nseamos constantes en la fe y vivamos unidos en tu amor.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-24": [
+          {
+            "title": "SAN BARTOLOMÉ",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#24"
+            },
+            "data": {
+              "entrance": "Cf. Sal 95, 2-3\nProclamen, día tras día, la salvación de Dios;\nanuncien su gloria entre los pueblos.",
+              "collect": "Padre, fortalece en nosotros la fe\npor la cual el apóstol san Bartolomé\nse unió profundamente a tu Hijo,\ny concédenos, por sus ruegos,\nque tu Iglesia sea sacramento de salvación para todos los pueblos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, al celebrar la fiesta de san Bartolomé,\nen cuyo honor te ofrecemos este sacrificio de alabanza,\nte pedimos que gracias a su intercesión\nrecibamos tu ayuda generosa.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Lc 22, 29-30\nDice el Señor: Yo les confiero la realeza\ncomo mi Padre me la confirió a mí; en mi reino,\nustedes comerán y beberán en mi mesa.",
+              "prayer_after": "Hemos recibido, Padre, el anticipo de la salvación eterna,\nen la celebración de la fiesta del apóstol san Bartolomé;\nte pedimos que esta comunión\nsea nuestro auxilio en la vida presente y garantía de la vida futura.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "08-25": [
+          {
+            "title": "San Luis",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#25"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste pasar a san Luis\nde las solicitudes del gobierno temporal\na la gloria del Reino de los cielos,\nconcédenos, por su intercesión,\nque en todas las ocupaciones temporales,\nbusquemos siempre tu reino eterno.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan José de Calasanz,\npresbítero"
+            }
+          }
+        ],
+        "08-26": [
+          {
+            "title": "Beato Ceferino Namuncurá",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#26"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque en el Beato Ceferino Namuncurá,\nhijo de la tierra patagónica,\nofreces a los jóvenes un alegre ejemplo de santidad,\nconcédenos por su intercesión\nser ardientes misioneros de tu Reino para nuestro pueblo,\nrealizando, con amor y fortaleza, las tareas de cada día.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-27": [
+          {
+            "title": "Santa Mónica",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#27"
+            },
+            "data": {
+              "collect": "Dios nuestro, consuelo de los afligidos,\nque aceptaste con misericordia las lágrimas de santa Mónica\npor la conversión de su hijo Agustín;\nte pedimos, por la intercesión de ambos,\nque sintamos dolor por nuestros pecados\ny podamos alcanzar la gracia de tu perdón.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-28": [
+          {
+            "title": "San Agustín",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#28"
+            },
+            "data": {
+              "entrance": "Cf. Ecli 15,5\nEl Señor lo colmó del espíritu de sabiduría y de inteligencia,\ny lo revistió de su gloria,\npara que anunciara su palabra en medio de la Iglesia.",
+              "collect": "Dios nuestro, renueva en tu Iglesia\nel espíritu que infundiste en el obispo san Agustín,\npara que, llenos de ese mismo espíritu,\ntengamos sed solamente de ti,\nfuente de la verdadera sabiduría,\ny te busquemos como autor del amor verdadero.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Al celebrar el memorial de nuestra salvación,\nimploramos humildemente tu clemencia, Señor,\npara que este sacramento del amor\nsea, para nosotros, signo de unidad y vínculo de caridad.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 23, 10.8\nDice el Señor: Sólo tienen un maestro, que es el Mesías;\ny todos ustedes son hermanos.",
+              "prayer_after": "Te rogamos, Padre,\nque nos santifique la participación en la mesa de Cristo,\npara que, siendo miembros de su Cuerpo,\nnos transformemos en Aquél que hemos recibido.\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "08-30": [
+          {
+            "title": "Santa Rosa de Lima",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#30"
+            },
+            "data": {
+              "entrance": "Alegrémonos todos en el Señor, al celebrar esta festividad en honor de santa Rosa.\nLos ángeles se regocijan por esta festividad y alaban al Hijo de Dios.",
+              "collect": "Dios nuestro, que encendiste en tu amor a santa Rosa\ny la llamaste a vivir sólo para ti en la austeridad y la penitencia,\nconcédenos, por su intercesión,\nque siguiendo en la tierra el camino de la vida\npodamos gozar en el cielo de la abundancia de tu gracia.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "En la fiesta de santa Rosa,\nte ofrecemos, Señor, el sacrificio de tu Hijo único,\nen el cual anunciamos su muerte hasta que vuelva.\nQue vive y reina por los siglos de los siglos.",
+              "communion": "Eclo 39, 14\nFlorezcan como el lirio, derramen el aroma y entonen un canto,\nbendigan al Señor por todas sus obras.",
+              "prayer_after": "Señor y Dios nuestro, fortalecidos con esta eucaristía\nte pedimos que, a ejemplo de santa Rosa,\nasumiendo en nuestro cuerpo los sufrimientos de Cristo,\nnos esforcemos por vivir unidos solamente a ti.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-03": [
+          {
+            "title": "San Gregorio Magno",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm"
+            },
+            "data": {
+              "entrance": "El bienaventurado Gregorio, elevado a la cátedra de Pedro,\nbuscaba siempre el rostro del Señor,\ny permanecía en la contemplación de su amor.",
+              "collect": "Señor Dios nuestro, que cuidas a tu pueblo con misericordia\ny lo gobiernas con amor,\npor la intercesión del Papa san Gregorio\nconcede el espíritu de sabiduría\na quienes encomendaste la conducción de tu rebaño,\ny haz que la santidad de los fieles\nsea el gozo eterno de sus pastores.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "En la fiesta de san Gregorio,\nte pedimos, Señor,\nque sea de provecho para nosotros este sacrificio,\npor el cual quisiste borrar los pecados del mundo\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Te pedimos, Padre,\nque a tus hijos que alimentas con Cristo, Pan de vida,\ntambién los instruyas por Cristo, verdadero Maestro,\npara que, en la fiesta de san Gregorio,\nreciban tu verdad y la realicen en el amor.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-09": [
+          {
+            "title": "San Pedro Claver",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#09"
+            },
+            "data": {
+              "collect": "Dios nuestro, que llamaste a san Pedro Claver al servicio de los esclavos\ny, para asistirlos, lo fortaleciste con admirablemente caridad y paciencia,\nconcédenos por su intercesión que, buscando agradar a Jesucristo,\namemos a nuestros hermanos con obras y de verdad.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "09-13": [
+          {
+            "title": "San Juan Crisóstomo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#13"
+            },
+            "data": {
+              "entrance": "Cf. Dan 12, 3\nLos sabios brillarán como el resplandor del firmamento,\ny los que enseñaron a muchos la justicia,\nlucirán como las estrellas, por toda la eternidad.",
+              "collect": "Dios nuestro, fortaleza de los que en ti esperan,\nque hiciste brillar al obispo san Juan Crisóstomo\npor su admirable elocuencia y su firmeza en las tribulaciones,\nconcédenos que, instruidos por su enseñanza,\nseamos confortados\npor el ejemplo de su inquebrantable paciencia.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios todopoderoso, recibe con agrado este sacrificio\nque te ofrecemos en la fiesta de san Juan Crisóstomo;\nque sus enseñanzas nos impulsen a alabarte con todo nuestro ser.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. 1 Cor 1, 23-24\nNosotros predicamos a Cristo crucificado,\nfuerza y sabiduría de Dios.",
+              "prayer_after": "Concédenos, Dios misericordioso, que el sacramento recibido\nen la conmemoración de san Juan Crisóstomo,\nnos confirme en tu amor\ny nos convierta en fieles testigos de tu verdad.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-15": [
+          {
+            "title": "Nuestra Señora de los Dolores",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#15"
+            },
+            "data": {
+              "entrance": "Cf. Lc 2, 34-35\nSimeón dijo a María:\nEste niño será causa de caída y de elevación para muchos en Israel,\nserá signo de contradicción;\ny a ti misma una espada te atravesará el corazón.",
+              "collect": "Dios nuestro, que quisiste que junto a tu Hijo elevado en la cruz\nestuviera su Madre compartiendo sus padecimientos,\nconcede a tu Iglesia que,\nunida a María en la pasión de Cristo,\nmerezca participar también de su resurrección.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios misericordioso,\nacepta las oraciones y ofrendas\nque te presentamos para alabanza de tu nombre,\nen la veneración de la santísima Virgen María,\nque tú nos entregaste como madre\ncuando estaba junto a la cruz de Jesús.\nQue vive y reina por los siglos de los siglos.",
+              "communion": "Cf. 1 Ped 4, 13\nAlégrense de compartir los sufrimientos de Cristo,\npara que también ustedes se llenen de gozo y alegría\ncuando se manifieste su gloria.",
+              "prayer_after": "Alimentados con el sacramento de la redención eterna,\nte suplicamos, Padre,\nque al recordar los dolores de la Virgen María,\ncompletemos en nosotros, para el bien la Iglesia,\nlo que falta a los padecimientos de Cristo.\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "09-16": [
+          {
+            "title": "Santos Cornelio, papa, y",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#16"
+            },
+            "data": {
+              "collect": "Dios nuestro, que diste a tu pueblo\ncomo pastores solícitos y mártires invictos\na los santos Cornelio y Cipriano,\npor su intercesión, fortalece nuestra fe y constancia\ny concédenos trabajar generosamente\npor la unidad de la Iglesia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Padre, acepta la ofrenda\nque tu pueblo te presenta en honor de tus mártires,\ny así como la eucaristía fortaleció en la persecución\na los santos Cornelio y Cipriano,\ntambién a nosotros nos alcance\nla constancia en medio de las adversidades.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Por estos misterios recibidos\nte suplicamos, Padre,\nque nos confirmes con tu espíritu de fortaleza\npara que, a ejemplo de los santos Cornelio y Cipriano,\ndemos fiel testimonio de la verdad evangélica.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-17": [
+          {
+            "title": "San Roberto Belarmino",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#17"
+            },
+            "data": {
+              "collect": "Dios nuestro, que para defender la fe de tu Iglesia\notorgaste a san Roberto Belarmino\nsabiduría y entereza admirables,\nconcédenos, por su intercesión,\nque tu pueblo se alegre de profesar íntegramente esta fe.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "09-19": [
+          {
+            "title": "San Jenaro",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#19"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque nos permites venerar la memoria de tu mártir san Jenaro;\nconcédenos gozar de su compañía en la felicidad eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nBeatas Dolores y Consuelo Aguiar-Mella y Díaz\ny compañeras,\nmártires"
+            }
+          }
+        ],
+        "09-20": [
+          {
+            "title": "Santos Andrés Kim Taegon, y compañeros,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#20"
+            },
+            "data": {
+              "entrance": "La sangre de los mártires fue derramada por Cristo en la tierra;\npor eso alcanzaron la recompensa eterna.",
+              "collect": "Dios nuestro,\nque has querido multiplicar el número de tus hijos\nen el mundo entero,\ny haz hecho de la sangre de los santos mártires\nAndrés y compañeros\nfecunda semilla de vida cristiana,\nconcédenos la fuerza de su ayuda\ny el estímulo de su ejemplo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios todopoderoso, mira con bondad las ofrendas de tu pueblo\ny concédenos, por la intercesión de los santos mártires,\nllegar a ser un sacrificio agradable a ti\npara la salvación del mundo.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 10, 32\nAl que me reconozca abiertamente ante los hombres,\nyo lo reconoceré ante mi Padre que está en el cielo, dice el Señor.",
+              "prayer_after": "Alimentados con el pan de los fuertes,\nte suplicamos, Padre,\nen la celebración de los santos mártires,\nque unidos firmemente a Cristo\ntrabajemos en la Iglesia por la salvación del mundo entero.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-21": [
+          {
+            "title": "SAN MATEO",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#21"
+            },
+            "data": {
+              "entrance": "Mt 28, 19-20\nDice el Señor: vayan y hagan que todos los pueblos sean mis discípulos,\nbautizándolos y enseñándoles a cumplir todo lo que yo les he mandado.",
+              "collect": "Dios nuestro, con infinita misericordia elegiste a san Mateo,\nconvirtiéndolo de publicano en apóstol;\nsostenidos por su intercesión y su ejemplo\nconcédenos que, siguiéndote con fidelidad,\nvivamos siempre unidos a ti.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "En la fiesta de san Mateo te presentamos, Señor,\nnuestras oraciones y ofrendas,\ny te suplicamos que mires con amor a tu Iglesia,\ncuya fe alimentaste con la predicación de los apóstoles.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 9, 13\nDice el Señor:\nNo he venido a llamar a los justos, sino a los pecadores.",
+              "prayer_after": "Padre nuestro, participamos de la alegría de la salvación,\ncomo el apóstol san Mateo,\nque recibió en su casa con gozo al mismo Salvador;\nconcédenos alimentarnos siempre de aquél\nque no ha venido a llamar a los justos sino a los pecadores,\nQue vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "09-23": [
+          {
+            "title": "San Pío de Pietralcina",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#23"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque concediste al presbítero San Pío de Pietralcina\nla gracia singular de participar en la cruz de tu Hijo\ny, por su ministerio, renovaste las maravillas de tu misericordia;\nconcédenos, por su intercesión\nque lleguemos felizmente a la gloria de la resurrección,\nal ser asociados a los sufrimientos de Cristo,.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "09-24": [
+          {
+            "title": "Nuestra Señora de la Merced",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#24"
+            },
+            "data": {
+              "collect": "Padre misericordioso,\nque otorgaste la redención a los hombres por medio de tu Hijo,\nconcede, a cuantos invocamos a su Madre\ncon el título de la Merced,\nmantenernos en la verdadera libertad de hijos,\nque Jesucristo nos mereció con su sacrificio,\ny ofrecerla incansablemente a todos los hombres.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, las ofrendas de tu pueblo,\nque celebra la obra de la inmensa caridad de tu Hijo,\ny confírmanos en el amor a ti y al prójimo\ncon el ejemplo de la gloriosa Virgen María.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Te pedimos, Padre,\npor intercesión de la Virgen María de la Merced\nque, habiendo recibido el sacramento de la redención y de la vida,\nnos concedas cooperar más intensamente\nal misterio de la salvación de los hombres\ny alcanzar la gloria de tu Reino.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-26": [
+          {
+            "title": "Santos Cosme y Damián",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#26"
+            },
+            "data": {
+              "collect": "Te alabamos, Padre,\nen la conmemoración de tus santos Cosme y Damián,\nporque a ellos les diste la gloria eterna,\ny a nosotros nos proteges con admirable providencia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Al celebrar la muerte preciosa de los santos,\nte ofrecemos, Señor, el sacrificio\nque da al martirio todo su valor y fundamento.\nPor Jesucristo, Nuestro Señor.",
+              "prayer_after": "Padre y Señor nuestro, conserva en nosotros tu gracia,\ny, por los dones recibidos\nen la fiesta de los santos mártires Cosme y Damián,\nconcédenos la salvación y la paz.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-27": [
+          {
+            "title": "San Vicente de Paúl",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#27"
+            },
+            "data": {
+              "entrance": "Cf. Lc 4, 18\nEl Espíritu del Señor está sobre mí,\nporque me ha consagrado por la unción.\nÉl me envió a llevar la buena noticia a los pobres\ny a sanar a los que se arrepienten de corazón.",
+              "collect": "Dios nuestro, que para el servicio de los pobres\ny la formación del clero\ninfundiste las virtudes apostólicas\nen el presbítero san Vicente de Paúl,\nconcédenos que, animados por su mismo espíritu,\namemos lo que él amó y pongamos por obra lo que enseñó.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios nuestro, que diste a san Vicente\nla gracia de realizar en su vida\nlo que celebraba en estos santos misterios,\nconcédenos, por este sacrificio,\nser transformados en una ofrenda agradable a tus ojos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 106, 8-9\nDen gracias al Señor por su misericordia\ny por sus maravillas en favor de los hombres,\nporque Él sació a los que sufrían sed\ny colmó de bienes a los hambrientos.",
+              "prayer_after": "Renovados con este sacramento celestial,\nte suplicamos, Dios nuestro,\nque para imitar a tu Hijo en la evangelización a los pobres,\nsiguiendo el ejemplo de San Vicente,\nrecibamos la ayuda de su intercesión.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-28": [
+          {
+            "title": "San Wenceslao",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#28"
+            },
+            "data": {
+              "collect": "Dios nuestro, que concediste al mártir san Wenceslao\npreferir el Reino de los Cielos al reino de este mundo,\ndanos la gracia, por su intercesión,\nde renunciar a nosotros mismos y unirnos a ti de todo corazón.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Lorenzo Ruiz y compañeros\nmártires\nMártires en las Islas Filipinas"
+            }
+          }
+        ],
+        "09-29": [
+          {
+            "title": "SANTOS ARCÁNGELES MIGUEL, GABRIEL Y RAFAEL",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#29"
+            },
+            "data": {
+              "entrance": "Sal 102, 20\nBendigan al Señor, todos sus ángeles,\nlos fuertes guerreros que cumplen sus órdenes\napenas oyen la voz de su palabra.",
+              "collect": "Señor Dios nuestro, que ordenas admirablemente\nlos oficios de los ángeles y de los hombres,\nte pedimos que nos protejan siempre en la tierra\naquellos que te asisten continuamente en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te ofrecemos, Señor, este sacrificio de alabanza,\nllevado a tu presencia por manos de los ángeles,\ny te pedimos que lo recibas con bondad\ny sirva para nuestra salvación.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 137, 1\nTe doy gracias, Señor, de todo corazón,\nte cantaré en presencia de los ángeles.",
+              "prayer_after": "Renovados con el pan celestial,\nte rogamos, Padre, que fortalecidos por su eficacia,\navancemos seguros por el camino de la salvación,\nbajo la fiel custodia de tus ángeles.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "09-30": [
+          {
+            "title": "San Jerónimo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#30"
+            },
+            "data": {
+              "collect": "Dios nuestro, que otorgaste a san Jerónimo, presbítero,\namar con dedicación ardiente la Sagrada Escritura,\nte pedimos que tu pueblo se alimente\ncon mayor abundancia de tu palabra\ny encuentre en ella la fuente de la vida.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Concédenos, Señor,\nque meditando tu palabra, a ejemplo de san Jerónimo,\nte ofrezcamos con mayor fervor\nel sacrificio de la salvación.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jer 15, 16\nSeñor Dios, cuando se presentaban tus palabras, yo las devoraba;\nellas eran mi gozo y la alegría de mi corazón.",
+              "prayer_after": "Padre, la eucaristía que recibimos\nen la celebración gozosa de san Jerónimo,\nmueva el corazón de tus fieles\npara que, atentos a la enseñanza de la Sagrada Escritura,\nconozcamos lo que debemos seguir\ny, siguiéndolo, lleguemos a la vida eterna.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-01": [
+          {
+            "title": "Santa Teresa del Niño Jesús",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm"
+            },
+            "data": {
+              "entrance": "Cf. Deut 32, 10-12\nEl Señor la rodeó y la cuidó, la protegió como la pupila de sus ojos.\nComo el águila extendió sus alas, la tomó consigo\ny la llevó sobre sus plumas; el Señor solo la condujo.",
+              "collect": "Señor Dios, que has preparado tu reino\npara los humildes y pequeños,\nayúdanos a seguir confiadamente\nel camino de santa Teresa del Niño Jesús,\npara que, con su intercesión,\npodamos contemplar tu gloria eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, te proclamamos admirable\nen la conmemoración de santa Teresa del Niño Jesús,\ny te pedimos humildemente\nque, así como sus méritos fueron de tu agrado,\naceptes esta liturgia que celebramos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt. 18, 3\nSi no se convierten y no se hacen como niños,\nno entrarán en el reino de los cielos, dice el Señor.",
+              "prayer_after": "El sacramento que recibimos, Padre,\nencienda en nosotros aquel fuego de amor\ncon el que santa Teresa del Niño Jesús se entregó a ti,\nimplorando para todos tu misericordia.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-02": [
+          {
+            "title": "Santos Ángeles Custodios",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#2"
+            },
+            "data": {
+              "entrance": "Dan 3, 58\nÁngeles del Señor, bendigan al Señor,\nalábenlo y glorifíquenlo eternamente.",
+              "collect": "Dios nuestro, en tu admirable providencia\nenvías a tus santos ángeles para custodiarnos;\nconcédenos contar siempre con su protección\ny gozar eternamente de su compañía.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor Dios,\nlos dones que te presentamos en honor de tus santos ángeles;\ny por su constante protección líbranos de los peligros presentes\ny llévanos a la alegría eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 137, 1\nTe cantaré en presencia de los ángeles, Dios mío.",
+              "prayer_after": "Padre celestial,\nguía por el camino de la salvación y de la paz,\nbajo la custodia de tus ángeles,\na quienes alimentas con estos sacramentos de vida eterna\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-04": [
+          {
+            "title": "San Francisco de Asís",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#4"
+            },
+            "data": {
+              "entrance": "Francisco, hombre de Dios, dejó su casa,\nrenunció a sus bienes y se hizo pobre;\npor ello el Señor lo tomó consigo.",
+              "collect": "Dios nuestro, que otorgaste a san Francisco\nla gracia de identificarse con Cristo\npor la humildad y la pobreza;\nconcédenos, que imitando sus ejemplos\npodamos seguir a tu Hijo\ny unirnos a ti con la alegría del amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Presentamos nuestras ofrendas, Señor,\ny te pedimos que nos prepares\npara celebrar dignamente el misterio de la cruz,\nal que san Francisco se unió con tanto fervor.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 5, 3\nFelices los que tienen alma de pobres,\nporque a ellos les pertenece el Reino de los Cielos.",
+              "prayer_after": "Concédenos, Padre,\npor los sacramentos recibidos,\nque, imitando la caridad y el ardor apostólico de san Francisco,\nexperimentemos los efectos de tu amor\ny nos prodiguemos por la salvación de nuestros hermanos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-05": [
+          {
+            "title": "Santa Faustina Kowalska",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#5"
+            },
+            "data": {
+              "entrance": "Cantaré eternamente las misericordias del Señor;\ncon mi boca anunciaré tufidelidad por los siglos",
+              "collect": "Dios omnipotente y eterno,\nque has escogido a santa Faustina Kowalska\npara proclamar al mundo\nlas inmensas riquezas de tu infinita misericordia;\nconcédenos, por su intercesión,\nconfiar como ella plenamente en tu bondad,\ny cumplir con corazón generoso\nlas obras de caridad cristiana.\nPor nuestro Señor Jesucristo",
+              "prayer_offerings": "Oh Dios, Padre nuestro,\nacoge los dones que te presentamos con alegría,\ny concédenos que, unidos en Cristo,\npodamos ofrecerte el sacrificio de expiación\npor nuestros pecados y los del mundo entero\nPor Jesucristo nuestro Señor",
+              "communion": "Cantad al Señor porque es bueno, porque es eterna su misericordia",
+              "prayer_after": "Oh Dios, rico en misericordia,\nel Santísimo Sacramento que hemos recibido\nrenueve nuestro cuerpo y nuestro espíritu,\npara que con el ejemplo de santa Faustina,\npodamos llevar al mundo entero\nla esperanza de tu misericordia.\nPor Jesucristo nuestro Señor"
+            }
+          }
+        ],
+        "10-06": [
+          {
+            "title": "San Bruno",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#6"
+            },
+            "data": {
+              "collect": "Dios nuestro, que llamaste a san Bruno\npara servirte en la soledad,\nconcédenos, por su intercesión,\nque en medio de la inestabilidad de este mundo\nnuestra vida esté siempre orientada hacia ti.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-07": [
+          {
+            "title": "Nuestra Señora del Rosario",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#7"
+            },
+            "data": {
+              "entrance": "Cf. Lc 1, 28.42\nAlégrate, María, llena de gracia, el Señor está contigo.\nBendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre.",
+              "collect": "Señor, derrama tu gracia en nuestros corazones,\ny ya que hemos conocido por el anuncio del Ángel\nla encarnación de tu Hijo Jesucristo,\ncondúcenos por su Pasión y su Cruz,\ncon la intercesión de la Virgen María,\na la gloria de la resurrección.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te rogamos, Señor,\nque prepares nuestros corazones para ofrecer este sacrificio\ny así poder celebrar de tal modo los misterios de tu Hijo unigénito,\nque seamos dignos de alcanzar sus promesas.\nÉl que vive y reina por los siglos de los siglos.",
+              "communion": "Lc 1, 31\nConcebirás y darás a luz un hijo, y le pondrás por nombre Jesús.",
+              "prayer_after": "Te pedimos, Señor Dios nuestro,\nque habiendo proclamado en este sacramento\nla muerte y resurrección de tu Hijo,\nasociados a los dolores de su pasión\npodamos también gozar de su consuelo y participar de su gloria.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-09": [
+          {
+            "title": "San Dionisio y compañeros, mártires",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#9"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\nque enviaste al obispo san Dionisio y sus compañeros\na predicar tu gloria a los paganos\ny les diste la virtud de la constancia en su martirio,\nconcédenos, a ejemplo suyo,\nno apegarnos a los bienes transitorios\nni temer en las adversidades.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Juan Leonardi\npresbítero"
+            }
+          }
+        ],
+        "10-11": [
+          {
+            "title": "San Juan XXIII,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#11"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque en el papa san Juan XXIII,\nhiciste brillar ante el mundo\nel ejemplo del buen pastor,\nte rogamos que por su intercesión,\nnos concedas poder difundir con alegría\nla plenitud de la caridad cristiana.\nPor nuestro Señor Jesucristo tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-12": [
+          {
+            "title": "Nuestra Señora del Pilar",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#12"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque en la gloriosa Madre de tu Hijo\nhas concedido un amparo celestial\na quienes la honran con la advocación del Pilar,\nconcédenos, por su intercesión, fortaleza en la fe,\nseguridad en la esperanza y constancia en el amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-14": [
+          {
+            "title": "San Calixto I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#14"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque llamaste al Papa San Calixto a servir a la Iglesia\ny promover la piedad por los fieles difuntos,\nfortalécenos por el testimonio de su fe\npara que, libres del pecado,\nalcancemos la herencia eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-15": [
+          {
+            "title": "Santa Teresa de Jesús",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#15"
+            },
+            "data": {
+              "entrance": "Sal 41, 2-3\nComo la cierva sedienta busca las corrientes de agua,\nasí mi alma suspira por ti, mi Dios.\nMi alma tiene sed de Dios, del Dios viviente.",
+              "collect": "Dios nuestro, que por la acción de tu Espíritu\nelegiste a santa Teresa de Jesús\npara mostrar a la Iglesia el camino de la perfección,\nconcédenos alimentarnos siempre con su doctrina espiritual\ny arder en deseos de verdadera santidad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, estas ofrendas,\ntú que aceptaste con tanto agrado\nel homenaje lleno de fervor que te ofreció santa Teresa.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Sal 88, 2\nCantaré eternamente el amor del Señor,\nproclamaré tu fidelidad por todas las generaciones.",
+              "prayer_after": "Señor Dios nuestro,\nque has alimentado a tu familia con el pan del cielo,\nconcédenos que, a ejemplo de santa Teresa,\npodamos alegrarnos cantando eternamente tus misericordias.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-16": [
+          {
+            "title": "Santa Eduviges",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#16"
+            },
+            "data": {
+              "collect": "Dios todopoderoso, concédenos alcanzar la protección divina\npor la piadosa intercesión de santa Eduviges,\ncuya admirable vida es un ejemplo de humildad para todos.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSanta Margarita María Alacoque\nvirgen"
+            }
+          }
+        ],
+        "10-17": [
+          {
+            "title": "San Ignacio de Antioquía",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#17"
+            },
+            "data": {
+              "entrance": "Cf. Gal 2, 19-20\nEstoy crucificado con Cristo, y ya no vivo yo, sino que Cristo vive en mí.\nVivo en la fe en el Hijo de Dios, que me amó y se entregó por mí.",
+              "collect": "Dios todopoderoso y eterno,\nque honras a tu Iglesia con el testimonio de los santos mártires,\nhaz que el martirio de san Ignacio de Antioquia,\nque hoy celebramos,\nasí como fue para él causa de eterna gloria,\nsea para nosotros motivo de constante protección.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta con agrado, Señor, la ofrenda de nuestro servicio\ntú, que recibiste a san Ignacio, trigo de Cristo,\ncomo pan purificado por los sufrimientos del martirio\nPor Jesucristo, nuestro Señor.",
+              "communion": "Soy trigo de Cristo, y deseo ser triturado por los dientes de las fieras\npara convertirme en pan purificado.",
+              "prayer_after": "Te pedimos, Padre, que el pan celestial que hemos recibido\nen la fiesta de san Ignacio de Antioquia,\nnos dé fuerzas para que, de palabra y de obra,\nnos manifestemos siempre como auténticos cristianos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-18": [
+          {
+            "title": "SAN LUCAS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#18"
+            },
+            "data": {
+              "entrance": "Cf. Is 52, 7\n¡Qué hermosos son sobre las montañas\nlos pies del que anuncia buenas noticias,\nproclama la paz, trae la felicidad, pregona la salvación!",
+              "collect": "Dios nuestro, que elegiste a san Lucas\npara revelar con su predicación y sus escritos\nel misterio de tu amor a los pobres,\nconcede, a nosotros que nos gloriamos del nombre de cristianos,\ntener un solo corazón y una sola alma,\ny a a todos los pueblos del mundo, llegar a descubrir tu salvación.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Por estos dones celestiales concédenos, Padre,\nservirte con libertad de espíritu,\npara que la ofrenda que te presentamos en la fiesta de san Lucas\nnos sirva de medicina espiritual\ny nos alcance la gloria eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Lc 10, 1.9\nEl Señor envió a los discípulos para que anunciaran en las ciudades:\nEl reino de Dios está cerca de ustedes.",
+              "prayer_after": "Dios todopoderoso,\nconcédenos que el sacramento que hemos recibido nos santifique\ny nos fortalezca en la fe del Evangelio,\nque predicó san Lucas.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-19": [
+          {
+            "title": "Santos Juan de Brébeuf e Isaac Jogues y compañeros, mártires",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#19"
+            },
+            "data": {
+              "collect": "Dios nuestro, que has querido manifestar\nla esperanza del reino eterno\ncon la obra apostólica y el martirio\nde los santos Juan e Isaac y sus compañeros;\nconcédenos, por su intercesión,\nque se fortalezca constantemente la fe de los cristianos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Pablo de la Cruz\npresbítero",
+              "entrance": "Cf. 1 Cor 2, 2\nNo quise saber nada, fuera de Jesucristo,\ny Jesucristo crucificado.",
+              "prayer_offerings": "Dios todopoderoso, acepta nuestra ofrenda\nen la conmemoración de san Pablo de la Cruz,\ny concédenos expresar en la vida\nel misterio de la pasión de tu Hijo, que ahora celebramos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. 1 Cor 1, 23-24\nNosotros predicamos a Cristo crucificado,\nfuerza y sabiduría de Dios.",
+              "prayer_after": "Dios nuestro, que en San Pablo\nmanifestaste admirablemente el misterio de la cruz,\nconcédenos, por tu bondad,\nque fortalecidos por este sacrificio,\npermanezcamos fielmente unidos a Cristo\ny trabajemos en la Iglesia\npor la salvación de todos los hombres.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "10-22": [
+          {
+            "title": "San Juan Pablo II",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm"
+            },
+            "data": {
+              "collect": "Señor Dios, rico en misericordia,\nque has querido que el papa san Juan Pablo II guiara toda tu Iglesia,\nte pedimos que, instruídos por sus enseñanzas,\nnos concedas abrir confiadamente nuestros corazones\na la gracia salvadora de Cristo, único redentor del hombre.\nÉl, que vive y reina contigo en la unidad del Esíritu Santo,\npor los siglos de los siglos."
+            }
+          }
+        ],
+        "10-23": [
+          {
+            "title": "San Juan de Capistrano,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#23"
+            },
+            "data": {
+              "collect": "Dios nuestro, que elegiste a san Juan de Capistrano\npara confortar a tus fieles en la adversidad,\nte pedimos que nos mantengas bajo tu protección\ny conserves siempre en paz a tu Iglesia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-24": [
+          {
+            "title": "San Antonio María Claret",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24"
+            },
+            "data": {
+              "collect": "Dios nuestro, que fortaleciste al obispo san Antonio María\ncon admirable caridad y paciencia,\npara evangelizar a los pueblos,\nconcédenos, por su intercesión,\nla gracia de buscar lo que te agrada\npara trabajar incansablemente en ganar para Cristo a los hermanos.\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "10-28": [
+          {
+            "title": "SAN SIMÓN Y SAN JUDAS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#28"
+            },
+            "data": {
+              "entrance": "Estos son los santos varones\na quienes el Señor eligió por su caridad sincera;\nél les dio la gloria eterna.",
+              "collect": "Dios nuestro, que por la predicación de los apóstoles\nnos llevaste al conocimiento de tu nombre;\nte rogamos que, por intercesión de los santos Simón y Judas,\ntu Iglesia se vea enriquecida con nuevos pueblos que crean en ti.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te pedimos, Señor, que recibas nuestras súplicas\nal venerar la gloria eterna de tus apóstoles Simón y Judas,\ny nos dispongas para celebrar dignamente estos santos misterios.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn 14, 23\nDice el Señor: El que me ama será fiel a mi palabra;\nmi Padre lo amará, iremos a él y habitaremos en él.",
+              "prayer_after": "Dios nuestro, después de recibir estos sacramentos,\ne impulsados por el Espíritu Santo, te rogamos humildemente\nque el misterio celebrado\nen el martirio de los apóstoles Simón y Judas,\nnos haga perseverar siempre en tu amor.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-01": [
+          {
+            "title": "TODOS LOS SANTOS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
+            },
+            "data": {
+              "entrance": "Alegrémonos todos en el Señor,\nal celebrar esta solemnidad en honor de todos los santos.\nLos ángeles se regocijan por esta solemnidad y alaban al hijo de Dios.",
+              "collect": "Dios todopoderoso y eterno,\nque nos concedes celebrar en una sola fiesta\nlos méritos de todos tus Santos;\nte rogamos que, por las súplicas de tantos intercesores,\nderrames sobre nosotros la ansiada plenitud de tu misericordia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe con agrado, Señor, las ofrendas\nque te presentamos en honor de todos tus santos,\ny concédenos experimentar\nla fraterna solicitud por nuestra salvación\nde aquellos que han alcanzado ya la felicidad eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 5, 8-10\nFelices los que tienen el corazón puro, porque verán a Dios.\nFelices los que trabajan por la paz, porque serán llamados hijos de Dios.\nFelices los que son perseguidos por practicar la justicia,\nporque a ellos les pertenece el Reino de los cielos.",
+              "prayer_after": "Te adoramos, Dios admirable, fuente única de santidad,\ne imploramos tu misericordia\npara que, santificados por tu amor,\npasemos de esta mesa de los peregrinos\nal banquete eterno de tu Reino.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-02": [
+          {
+            "title": "CONMEMORACIÓN DE TODOS LOS FIELES DIFUNTOS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#02"
+            },
+            "data": {
+              "entrance": "Cf. 1 Tes 4, 14; 1 Cor 15, 22\nAsí como Jesús murió y resucitó,\nde la misma manera, Dios llevará con Jesús a los que murieron con él.\nY así como todos mueren en Adán, todos revivirán en Cristo.",
+              "collect": "Dios nuestro, escucha con bondad nuestros ruegos,\npara que, al crecer nuestra fe\nen tu Hijo resucitado de entre los muertos,\nse afiance también nuestra esperanza\nen la resurrección de tus hijos difuntos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta con bondad estos dones, Señor,\npara que tus hijos difuntos\nsean recibidos en la gloria con tu Hijo,\na quien nos unimos por este sacramento de su amor.\nQue vive y reina por los siglos de los siglos.",
+              "communion": "Cf. Jn 11, 25-26\nDice el Señor: Yo soy la resurrección y la vida;\nel que cree en mí, aunque muera vivirá.\nY todo el que vive y cree en mí, no morirá jamás.",
+              "prayer_after": "Te pedimos, Padre, que recibas en la morada de la luz y de la paz\na tus hijos difuntos,\npor quienes hemos celebrado el misterio pascual.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-03": [
+          {
+            "title": "San Martín de Porres",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03"
+            },
+            "data": {
+              "collect": "Dios nuestro, que guiaste a san Martín de Porres\nhasta la gloria del cielo por el camino de la humildad,\nconcédenos imitar sus ejemplos,\npara ser llevados con él a la patria celestial.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-04": [
+          {
+            "title": "San Carlos Borromeo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#04"
+            },
+            "data": {
+              "collect": "Señor Dios nuestro, conserva en tu pueblo\nel espíritu que infundiste en el obispo san Carlos,\npara que tu Iglesia se renueve sin cesar\ne, identificándose con Cristo,\npueda mostrar a los hombres el rostro de tu Hijo,\nQue vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Mira con bondad, Señor, los dones que te presentamos\nen la conmemoración de san Carlos\ny, así como lo hiciste admirable\npor su servicio pastoral y sus virtudes,\nconcédenos, por este sacrificio, abundar en buenas obras.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Padre, que los sacramentos recibidos\nnos concedan aquella fortaleza de ánimo\nque hizo al obispo san Carlos\nfiel en el desempeño de su ministerio\ny fervoroso en la práctica de la caridad.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-07": [
+          {
+            "title": "Santa María",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#07"
+            },
+            "data": {
+              "collect": "Dios nuestro, que en un misterioso designio de tu providencia\nnos has dado al autor de la gracia\npor medio de la Virgen María,\ny la asociaste a la obra de la redención humana;\nconcédenos alcanzar por ella la abundancia de la gracia\ny llegar al puerto de la salvación eterna.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta, Señor, la ofrenda de expiación y alabanza\nque te ofrecemos\nen esta conmemoración de la gloriosa Virgen María,\ny por la acción del Espíritu Santo,\nconviértela en el sacramento de nuestra redención\nque Cristo Mediador instituyó para reconciliarnos contigo\ny ser para nosotros fuente viva de gracia y salvación.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Te pedimos humildemente, Padre,\nque renovados por la eucaristía en la fuente de la gracia,\ncon la intercesión de María santísima,\nvivamos cada día más unidos a Cristo, nuestro mediador,\ny cooperemos con mayor fidelidad a la obra de la redención.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-08": [
+          {
+            "title": "NUESTRA SEÑORA, LA VIRGEN DE LOS TREINTA Y TRES",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
+            },
+            "data": {
+              "entrance": "Sal 131, 14-15\nÉste es mi pueblo para siempre, en él viviré porque lo quiero.\nBendeciré sus campos y sus frutos y saciaré de pan a sus pobres.",
+              "collect": "Padre de amor y justicia,\nque en los comienzos de nuestra historia,\nquisiste que los Treinta y Tres Orientales\ninvocarán la intercesión de María para liberar a la patria;\nconcédenos, por Ella, alcanzar la plena libertad de los hijos de Dios.\nPor nuestro Señor Jesucristo, tu Hijo\nque contigo vive y reina, en la unidad del Espíritu Santo,\ny es Dios por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Padre, estas ofrendas que te presentamos\njunto con las alegrías y tristezas\nde todos los que viven en nuestra Patria,\nen la fiesta de María, Virgen de los Treinta y Tres;\nconviértelas, para nosotros,\nen sacramentos de vida, de amor y de unidad.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn 1,14\nLa Palabra se hizo carne y habitó entre nosotros\nllena de gracia y de verdad.",
+              "prayer_after": "Alimentados con el Pan de la vida eterna,\nte pedimos, Padre,\nque imitando a María, Madre de la Patria,\nseamos para todos nuestros hermanos,\npromotores de justicia, de paz y de caridad.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-09": [
+          {
+            "title": "DEDICACIÓN DE LA BASÍLICA DE SAN JUAN DE LETRÁN",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#09"
+            },
+            "data": {
+              "entrance": "Cf. Ap 21, 2\nVi la ciudad santa, la nueva Jerusalén,\nque descendía del cielo y venía de Dios,\nembellecida como una novia preparada para recibir a su esposo.",
+              "collect": "Dios nuestro, que construyes un templo eterno para ti\ncon las piedras vivas que son tus elegidos,\nmultiplica en tu Iglesia la gracia que le has dado,\npara que tu pueblo fiel continúe edificando la Jerusalén celestial.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, la ofrenda que te presentamos;\nconcédenos el fruto de tus sacramentos\ny el cumplimiento de nuestros deseos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. 1 Pe 2, 5\nComo piedras vivas,\nustedes son un edificio espiritual y un sacerdocio santo.",
+              "prayer_after": "Dios nuestro, que manifiestas en tu Iglesia\nun signo visible de la Jerusalén celestial;\nte pedimos que, por la participación de este sacramento,\nseamos transformados en templos de tu gracia\ny lleguemos a la morada de tu gloria.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-10": [
+          {
+            "title": "San León",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#10"
+            },
+            "data": {
+              "entrance": "Cf. Eclo 45, 30\nEl Señor hizo con él una alianza de paz\ny lo constituyó jefe,\nconfiriéndole para siempre la dignidad sacerdotal.",
+              "collect": "Dios nuestro, que no permites\nque las fuerzas del mal prevalezcan sobre la Iglesia,\nedificada sobre la sólida piedra de los apóstoles;\npor la intercesión del Papa san León,\nconcede a tu pueblo permanecer fiel a tu verdad\ny gozar siempre de la paz.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Por estas ofrendas que te presentamos,\nte rogamos, Señor, que ilumines a tu Iglesia,\npara que en todo el mundo se acreciente tu rebaño\ny sus pastores, conducidos por ti, sean de tu agrado.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 16, 16.18\nPedro dijo a Jesús: Tú eres el Mesías, el Hijo de Dios vivo.\nJesús le respondió: Tú eres Pedro,\ny sobre esta piedra edificaré mi Iglesia.",
+              "prayer_after": "Te pedimos, Padre, que gobiernes con bondad a tu Iglesia\nalimentada en esta mesa santa,\npara que, dirigida por tu mano poderosa,\ncrezca en libertad y persevere firme en la integridad de la fe.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-11": [
+          {
+            "title": "San Martín de Tours",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#11"
+            },
+            "data": {
+              "entrance": "Cf. 1 Sam 2, 35\nMe suscitaré un sacerdote fiel,\nque obrará conforme a mi corazón, dice el Señor.",
+              "collect": "Dios nuestro, que fuiste glorificado\npor la vida y por la muerte del obispo san Martín de Tours,\nrenueva en nuestros corazones las maravillas de tu gracia,\npara que ni la vida ni la muerte puedan separarnos de tu amor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Santifica, Señor y Dios nuestro,\nlos dones que te presentamos con alegría\nen honor de san Martín de Tours,\ny haz que, gracias a este sacrificio,\nni la adversidad ni la prosperidad\npuedan apartarnos del camino recto.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 25, 40\nDice el Señor: Les aseguro que cada vez que lo hicieron\ncon el más pequeño de mis hermanos, lo hicieron conmigo.",
+              "prayer_after": "Renovados con el sacramento de la unidad,\nayúdanos, Padre, a hacer siempre tu voluntad,\npara que, así como el obispo san Martín te obedeció de todo corazón,\ntambién nosotros vivamos el gozo de ser verdaderamente tuyos.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-12": [
+          {
+            "title": "San Josafat",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#12"
+            },
+            "data": {
+              "entrance": "Por la alianza del Señor y la ley de nuestros Padres,\nlos Santos de Dios perseveraron en el amor fraterno;\nmantuvieron un mismo espíritu y una misma fe.",
+              "collect": "Señor nuestro, reaviva en tu Iglesia el Espíritu\nque impulsó a san Josafat a dar la vida por sus fieles;\npara que, por su intercesión, fortalecidos por el mismo Espíritu\nno temamos dar la vida por nuestros hermanos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios clementísimo,\nderrama tu bendición sobre estos dones,\ny confírmanos en la fe\nque san Josafat atestiguó con su sangre.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 10, 39\nDice el Señor: El que pierda su vida por mí, la encontrará.",
+              "prayer_after": "Padre, la participación en esta mesa celestial\nnos obtenga el Espíritu de fortaleza y de paz,\npara que, siguiendo el ejemplo de san Josafat,\nentreguemos generosamente nuestra vida\npor el honor y la unidad de la Iglesia.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-15": [
+          {
+            "title": "San Alberto Magno",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#15"
+            },
+            "data": {
+              "collect": "Dios nuestro, que hiciste grande al obispo san Alberto\npor conciliar el saber humano con la fe divina;\nconcédenos que, siguiendo sus enseñanzas,\npor el progreso de las ciencias\nlleguemos a conocerte y amarte más profundamente.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-16": [
+          {
+            "title": "Santa Margarita de Escocia",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#16"
+            },
+            "data": {
+              "collect": "Dios nuestro, que infundiste en santa Margarita\nuna admirable caridad hacia los pobres;\nconcédenos, por su intercesión y a ejemplo suyo,\nque siempre manifestemos ante los hombres la imagen de tu bondad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSanta Gertrudis\nvirgen"
+            }
+          }
+        ],
+        "11-17": [
+          {
+            "title": "Santa Isabel de Hungría,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17"
+            },
+            "data": {
+              "entrance": "Cf. Sal 33, 18\nLos justos clamaron, y el Señor los escuchó\ny los libró de todas sus angustias.",
+              "collect": "Dios nuestro, te pedimos que tu palabra,\nsembrada por san Roque González y sus compañeros mártires,\nproduzca el ciento por uno\nen frutos de santidad y justicia.\nPor nuestro Señor Jesucristo, tu Hijo\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Señor, al recordar el martirio de tus santos Roque y compañeros,\nhaz que por este sacrificio\nanunciemos dignamente la muerte de tu Hijo unigénito,\nque no sólo exhortó de palabra a sus testigos\nsino que los precedió con el ejemplo.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Rom 8, 38-39\nNi la muerte ni la vida,\nni criatura alguna podrá separarnos jamás del amor de Cristo.",
+              "prayer_after": "Saciados con el pan del cielo,\nte suplicamos, Padre,\nque, a ejemplo de los santos Roque y compañeros,\nimprimas en nuestros corazones\nlos signos del amor y de la pasión de tu Hijo\ny nos permitas gozar siempre de tu paz.\nEl que vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-18": [
+          {
+            "title": "Dedicación de las basílicas de San Pedro y San Pablo",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#18"
+            },
+            "data": {
+              "entrance": "Cf. Sal 44, 17-18\nLos constituirás príncipes sobre toda la tierra.\nYo haré célebre tu nombre por todas las generaciones;\npor eso, los pueblos te alabarán eternamente.",
+              "collect": "Defiende a tu Iglesia, Señor Dios,\ncon la protección de los santos apóstoles Pedro y Pablo,\nde quienes recibió el primer anuncio del Evangelio,\ny concédele crecer en tu gracia\nhasta el fin de los tiempos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te ofrecemos, Señor, el servicio de nuestro ministerio,\ny te rogamos humildemente que se mantenga pura en nosotros\nla verdad transmitida por los apóstoles Pedro y Pablo.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 6, 68-69\nSeñor, tú tienes palabras de vida eterna.\nNosotros hemos creído y sabemos que eres el Santo de Dios.",
+              "prayer_after": "Te pedimos, Padre, que tu pueblo,\nalimentado con el pan celestial,\nse alegre en la conmemoración de los apóstoles Pedro y Pablo,\na quienes encomendaste gobernar y proteger tus fieles.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-19": [
+          {
+            "title": "Santa Isabel de Hungría,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#19"
+            },
+            "data": {
+              "collect": "Dios nuestro, que diste a santa Isabel\nel don de reconocer y venerar a Cristo en los pobres;\nconcédenos, por su intercesión,\nservir a los necesitados y afligidos con incansable caridad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSANTOS ROQUE GONZÁLEZ, ALFONSO RODRÍGUEZ\nY JUAN DEL CASTILLO,\npresbíteros y mártires",
+              "entrance": "En la tierra los santos mártires han derramado su sangre por Cristo;\npor eso han alcanzado el premio eterno.",
+              "prayer_offerings": "Señor, al recordar el martirio\nde tus santos Roque González de Santa Cruz y sus compañeros,\nhaz que por este sacrificio\nanunciemos dignamente la muerte de tu Hijo unigénito,\nque no sólo exhortó de palabra a sus testigos,\nsino que los precedió con el ejemplo.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Lc 22, 28-30\nDice el Señor: ustedes son los que han permanecido siempre conmigo\nen medio de mis pruebas.\nPor eso yo les confiero el Reino, y ustedes comerán y beberán en mi mesa.",
+              "prayer_after": "Saciados con el pan del cielo,\nte suplicamos, Padre,\nque, ha ejemplo de los santos Roque González de Santa Cruz y sus\ncompañeros,\nimprimas en nuestros corazones\nlos signos del amor y de la pasión de tu Hijo,\ny nos permitas gozar siempre de tu paz.\nÉl que vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-22": [
+          {
+            "title": "Santa Cecilia",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#22"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque todos los años nos alegras\ncon la celebración de santa Cecilia;\nconcédenos imitar sus ejemplos\ny anunciar las maravillas de Cristo, tu Hijo,\nreflejadas en la vida de tus santos.\nÉl que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-23": [
+          {
+            "title": "San Clemente I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#23"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno, que eres admirable en tus santos,\nconcédenos celebrar con alegría\nla fiesta de san Clemente, sacerdote y mártir de tu Hijo,\nquien dio testimonio con su muerte, de los misterios que celebraba\ny confirmó, con su ejemplo lo que predicaba con su palabra.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.\nSan Columbano\nabad"
+            }
+          }
+        ],
+        "11-24": [
+          {
+            "title": "San Andrés Dung-Lac y compañeros, mártires",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#24"
+            },
+            "data": {
+              "entrance": "Cf. Gal 6, 14; 1 Cor 1, 18\nSólo nos gloriaremos en la cruz de nuestro Señor Jesucristo.\nEl mensaje de la cruz es fuerza de Dios para nosotros,\nque hemos sido salvados.",
+              "collect": "Señor Dios, fuente y origen de toda paternidad,\nque otorgaste a los santos mártires Andrés y sus compañeros\npermanecer fieles a la cruz de tu Hijo hasta derramar su sangre,\nconcédenos, por su intercesión,\nque propagando tu amor entre los hermanos\npodamos llamarnos y ser en verdad hijos tuyos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Padre santo, los dones que te presentamos\nen la memoria de los santos mártires;\nconcédenos serte fieles en las adversidades de la vida\ny convertirnos en una ofrenda agradable a ti.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Mt 5, 10\nFelices los son perseguidos por practicar la justicia,\nporque a ellos les pertenece el Reino de los cielos.",
+              "prayer_after": "Alimentados con el pan de la vida\nen esta conmemoración de los santos mártires,\nte pedimos humildemente, Padre,\nque permanezcamos unidos en tu amor\ny alcancemos la recompensa eterna\nprometida a los que perseveran hasta el fin.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "11-25": [
+          {
+            "title": "Santa Catalina de Alejandría",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#25"
+            },
+            "data": {
+              "collect": "Dios todopoderoso y eterno,\nque diste a tu pueblo\nel testimonio del martirio de Santa Catalina, virgen,\npor su intercesión, fortalece nuestra fe y constancia\ny concédenos trabajar generosamente por la unidad de la Iglesia.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "11-30": [
+          {
+            "title": "SAN ANDRÉS",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#30"
+            },
+            "data": {
+              "entrance": "Cf. Mt 4,18-19\nJesús, a orillas del mar de Galilea,\nvio a dos hermanos, Pedro y Andrés, y los llamó:\nSíganme y yo los haré pescadores de hombres.",
+              "collect": "Dios de gloria y majestad,\nte rogamos humildemente que el apóstol san Andrés,\na quien elegiste para ser predicador y pastor de tu Iglesia,\nsea ante ti nuestro perpetuo intercesor.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios todopoderoso,\nte pedimos que aceptes estos dones\npresentados en la fiesta de san Andrés,\ny sean para nosotros fuente de vida eterna.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Jn 1, 41-42\nAndrés dijo a Simón, su hermano:\nHemos encontrado al Mesías, que traducido significa Cristo.\nY lo llevó a donde estaba Jesús.",
+              "prayer_after": "Esta sagrada comunión nos fortalezca, Señor,\npara que, compartiendo la cruz de Cristo,\na ejemplo de san Andrés,\npodamos vivir con él en la gloria.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-03": [
+          {
+            "title": "San Francisco Javier,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro,\nque adquiriste para ti numerosos pueblos\npor la predicación de san Francisco Javier,\nconcédenos su mismo ardor para difundir la fe,\ny que la santa Iglesia se alegre de ver crecer,\nen todas partes, el número de sus hijos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Recibe, Señor, los dones que te presentamos\nen la festividad de san Francisco Javier,\ny, así como él partió a continentes lejanos\nimpulsado por el deseo de salvar a los hombres,\nconcédenos que también nosotros,\ndando testimonio del Evangelio,\ncaminemos hacia ti junto con nuestros hermanos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 10, 27\nLo que yo les digo en la oscuridad, repítanlo en pleno día, dice el Señor;\ny lo que escuchen al oído, proclámenlo desde lo alto de las casas.",
+              "prayer_after": "El sacramento recibido, Padre,\nencienda en nosotros la caridad\nque movió a san Francisco Javier\npor la salvación de todos los hombres,\npara que, viviendo más dignamente nuestra vocación,\nalcancemos con él la recompensa prometida a los servidores fieles.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-04": [
+          {
+            "title": "San Juan Damasceno",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#04"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro,\nque la intercesión del presbítero san Juan Damasceno\nnos ayude para que la verdadera fe,\nque él enseñó tan admirablemente,\nsea siempre nuestra luz y nuestra fuerza.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-06": [
+          {
+            "title": "San Nicolás",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#06"
+            },
+            "data": {
+              "collect": "Imploramos tu misericordia, Señor y Dios nuestro,\ny por la intercesión del obispo san Nicolás\nlíbranos de todos los peligros,\npara que podamos recorrer sin obstáculos\nel camino de la salvación.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-07": [
+          {
+            "title": "San Ambrosio",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#07"
+            },
+            "data": {
+              "entrance": "Cf. Ecli 15,5\nEl Señor lo colmó del espíritu de sabiduría y de inteligencia,\ny lo revistió de su gloria,\npara que anunciara su palabra en medio de la Iglesia.",
+              "collect": "Dios nuestro, que hiciste del obispo san Ambrosio\nun maestro de la fe católica y un testigo admirable de fortaleza apostólica;\nsuscita en tu Iglesia hombres según tu corazón,\nque la guíen con firmeza y sabiduría.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Al celebrar estos misterios divinos, te pedimos, Señor,\nque el Espíritu Santo infunda en nosotros aquella luz de la fe\nque iluminó a san Ambrosio\ny lo impulsó a la propagación de tu gloria.\nPor Jesucristo, nuestro Señor.",
+              "prayer_after": "Fortalecidos con esta eucaristía, Padre,\nconcédenos seguir de tal modo las enseñanzas de san Ambrosio\nque, corriendo resueltamente por tus caminos,\nalcancemos la alegría del banquete celestial.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-09": [
+          {
+            "title": "San Juan Diego Cuauhtlatoatzin",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#09"
+            },
+            "data": {
+              "collect": "Dios nuestro,\nque manifestaste el amor\nde la santísima Virgen María hacia tu pueblo\npor medio de San Juan Diego,\nconcédenos por su intercesión\nque, dóciles al mensaje de nuestra Madre de Guadalupe,\nnos esforcemos en cumplir siempre tu voluntad.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-11": [
+          {
+            "title": "San Dámaso I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#11"
+            },
+            "data": {
+              "collect": "Te pedimos, Señor Dios, la gracia\nde celebrar siempre los méritos de tus mártires,\na ejemplo del Papa san Dámaso\nque tanto los amó y veneró.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-12": [
+          {
+            "title": "NUESTRA SEÑORA DE GUADALUPE",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#12"
+            },
+            "data": {
+              "entrance": "Ap 12,1\nUna gran señal apareció en el cielo:\nuna mujer, vestida de sol, con la luna bajo sus pies\ny una corona de doce estrellas sobre su cabeza.",
+              "collect": "Dios y Padre de misericordia,\nque has puesto a tu pueblo bajo la especial protección\nde la santísima Madre de tu Hijo,\nconcede, a cuantos invocan a la Virgen de Guadalupe,\nprocurar con fe diligente el progreso de los pueblos\npor el camino de la justicia y de la paz.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Acepta, Señor, los dones que te presentamos\nen la fiesta de nuestra Señora de Guadalupe,\ny te pedimos que este sacrificio nos dé la fuerza\npara cumplir tus mandamientos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Sal 147, 20\nA ningún otro pueblo trató así el Señor,\nni le dio a conocer sus mandamientos.",
+              "prayer_after": "Padre, que el Cuerpo y la Sangre de tu Hijo\nrecibidos en este sacramento\nnos ayuden a reconocernos y amarnos como verdaderos hermanos,\npor la intercesión de nuestra santísima Madre de Guadalupe.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-13": [
+          {
+            "title": "Santa Lucía",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#13"
+            },
+            "data": {
+              "collect": "Te pedimos, Señor y Dios nuestro,\nque por la gloriosa intercesión de santa Lucía, virgen y mártir,\nquienes celebramos su fiesta en la tierra\npodamos contemplar su gloria en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-14": [
+          {
+            "title": "San Juan de la Cruz",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#14"
+            },
+            "data": {
+              "entrance": "Gal 6, 14\nSólo me gloriaré en la cruz de nuestro señor Jesucristo,\npor quien el mundo está crucificado para mí,\ncomo yo lo estoy para el mundo.",
+              "collect": "Dios nuestro, tú hiciste de san Juan de la Cruz, presbítero,\nun modelo perfecto de negación de sí mismo\ny de amor a la cruz;\nconcédenos que, imitándolo siempre,\nlleguemos a contemplar tu gloria en el cielo.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Dios todopoderoso, acepta nuestra ofrenda\nen la conmemoración de san Juan de la Cruz,\ny concédenos expresar en la vida\nel misterio de la pasión de tu Hijo, que ahora celebramos.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Mt 16, 24\nDice el Señor: El que quiera seguirme,\nque renuncie a sí mismo, tome su cruz y me siga.",
+              "prayer_after": "Dios nuestro, que en San Juan de la Cruz\nmanifestaste admirablemente el misterio de la cruz,\nconcédenos, por tu bondad,\nque fortalecidos por este sacrificio\npermanezcamos fielmente unidos a Cristo\ny trabajemos en la Iglesia\npor la salvación de todos los hombres.\nPor el mismo Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-21": [
+          {
+            "title": "San Pedro Canisio,",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#21"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro, que para defender la fe católica\ncolmaste de fortaleza y sabiduría a san Pedro Canisio;\npor su intercesión,\nconcede a quienes buscan la verdad, la alegría de encontrarte,\ny a tu pueblo fiel, la perseverancia en la confesión de tu nombre.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-23": [
+          {
+            "title": "San Juan de Kety",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#23"
+            },
+            "data": {
+              "collect": "Dios todopoderoso,\nconcédenos que, a ejemplo del presbítero san Juan de Kety,\nprogresemos en la sabiduría de los santos\ny, siendo misericordiosos con todos,\nalcancemos tu perdón.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-26": [
+          {
+            "title": "SAN ESTEBAN",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#26"
+            },
+            "data": {
+              "entrance": "Las puertas del cielo se abrieron a san Esteban, el primero de los mártires,\npor eso triunfa coronado en el cielo.",
+              "collect": "Concédenos, Señor y Dios nuestro, imitar a san Esteban\ny aprender a amar también a los enemigos,\nya que celebramos el martirio de aquél\nque supo interceder por sus propios verdugos.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Te pedimos, Señor,\nque aceptes los dones que te presentamos\nen la conmemoración del triunfo glorioso\nde tu mártir san Esteban.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Cf. Hech 7, 58-59\nApedrearon a Esteban que oraba diciendo:\nSeñor Jesús, recibe mi espíritu.",
+              "prayer_after": "Te damos gracias, Señor,\npor tu inmensa misericordia para con nosotros,\nporque nos ofreces la salvación mediante el nacimiento de tu Hijo\ny nos alegras con la celebración del mártir san Esteban.\nPor Jesucristo, nuestro Señor."
+            }
+          }
+        ],
+        "12-27": [
+          {
+            "title": "SAN JUAN",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#27"
+            },
+            "data": {
+              "entrance": "Juan es aquél que durante la cena\nreclinó su cabeza sobre el pecho del Señor.\nBienaventurado el apóstol\na quien le fueron revelados los secretos celestiales,\ny que difundió por todo el mundo las palabras de vida.",
+              "collect": "Señor y Dios nuestro,\nque nos has revelado el misterio del Verbo hecho carne\npor medio del apóstol san Juan,\nconcédenos la gracia de comprender con claridad\nlo que él nos enseñó tan admirablemente.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos.",
+              "prayer_offerings": "Santifica, Señor, los dones que te presentamos,\ny concédenos ahondar en el misterio de tu Verbo eterno,\nque en la última cena revelaste a tu apóstol san Juan.\nPor Jesucristo, nuestro Señor.",
+              "communion": "Jn 1,14.16\nLa Palabra se hizo carne y habitó entre nosotros.\nDe su plenitud, todos nosotros hemos participado.",
+              "prayer_after": "Te pedimos, Dios todopoderoso,\nque el Verbo hecho carne anunciado por el apóstol san Juan\nhabite siempre en nosotros\npor esta eucaristía que hemos celebrado.\nÉl que vive y reina por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-29": [
+          {
+            "title": "Santo Tomás Becket",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#29"
+            },
+            "data": {
+              "collect": "Dios nuestro, que infundiste en el mártir santo Tomás Becket\nla grandeza de alma para dar su vida por la justicia,\nconcédenos, por su intercesión,\nla gracia de entregar nuestra vida por Cristo en este mundo\npara poder encontrarla en el cielo.\nÉl, que vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ],
+        "12-31": [
+          {
+            "title": "San Silvestre I",
+            "kind": "proper",
+            "source": {
+              "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.12.htm#31"
+            },
+            "data": {
+              "collect": "Señor y Dios nuestro, socorre a tu pueblo\nque confía en la intercesión del Papa san Silvestre,\npara que, protegido por tu providencia en la vida presente,\nalcance con alegría la vida eterna.\nPor nuestro Señor Jesucristo, tu Hijo,\nque vive y reina contigo en la unidad del Espíritu Santo,\ny es Dios, por los siglos de los siglos."
+            }
+          }
+        ]
+      },
+      "catalog": []
+    }
+  },
+  "BO": {
+    "jurisdictionName": "Bolivia",
+    "ordinaryLanguage": "ES",
+    "ordinaryDataset": "AR",
+    "ordinaryEdition": "Misal Romano · tercera edición típica, castellano del Cono Sur",
+    "ordinarySource": {
+      "title": "Misal Romano del Cono Sur",
+      "url": "https://curas.com.ar/Misal3/Misas3.htm"
+    },
+    "source": {
+      "title": "Calendario litúrgico de Bolivia",
+      "calendarUrl": "https://evangelizacion.ceb.bo/calendario-liturgico-2/"
+    },
+    "dailyReadings": {
+      "provider": "Leccionario del Cono Sur",
+      "translation": "El Libro del Pueblo de Dios",
+      "calendar": "Bolivia",
+      "urlStrategy": "cono-sur"
+    },
+    "calendar": {
+      "01-24": {
+        "title": "San Francisco de Sales",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24",
+        "names": {
+          "ES": "San Francisco de Sales"
+        }
+      },
+      "02-01": {
+        "title": "Nuestra Señora de Copacabana",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm",
+        "names": {
+          "ES": "Nuestra Señora de Copacabana"
+        }
+      },
+      "02-03": {
+        "title": "SAN BLAS",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03",
+        "names": {
+          "ES": "SAN BLAS"
+        }
+      },
+      "02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        }
+      },
+      "03-23": {
+        "title": "Santo Toribio de Mogrovejo,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo,"
+        }
+      },
+      "05-03": {
+        "title": "SAN FELIPE Y SANTIAGO",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03",
+        "names": {
+          "ES": "SAN FELIPE Y SANTIAGO"
+        }
+      },
+      "07-12": {
+        "title": "San Camilo de Lelis,",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio12",
+        "names": {
+          "ES": "San Camilo de Lelis,"
+        }
+      },
+      "07-13": {
+        "title": "San Enrique",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio13",
+        "names": {
+          "ES": "San Enrique"
+        }
+      },
+      "07-16": {
+        "title": "Nuestra Señora del Carmen, Patrona de Bolivia",
+        "rank": "solemnity",
+        "color": "white",
+        "observanceId": "particular-07-16-virgendelcarmen",
+        "sourceUrl": "https://evangelizacion.ceb.bo/calendario-liturgico-2/",
+        "names": {
+          "ES": "Nuestra Señora del Carmen, Patrona de Bolivia"
+        }
+      },
+      "09-18": {
+        "title": "San Juan Macías,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm",
+        "names": {
+          "ES": "San Juan Macías,"
+        }
+      },
+      "10-21": {
+        "title": "San Miguel Febres Cordero,",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm",
+        "names": {
+          "ES": "San Miguel Febres Cordero,"
+        }
+      },
+      "10-24": {
+        "title": "San Antonio María Claret",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24",
+        "names": {
+          "ES": "San Antonio María Claret"
+        }
+      },
+      "11-03": {
+        "title": "San Martín de Porres",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03",
+        "names": {
+          "ES": "San Martín de Porres"
+        }
+      },
+      "11-15": {
+        "title": "San Alberto Magno",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#15",
+        "names": {
+          "ES": "San Alberto Magno"
+        }
+      },
+      "11-17": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      }
+    },
+    "dynamicCalendarByDate": {
+      "2026-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0101"
+      },
+      "2026-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0102"
+      },
+      "2026-01-06": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0106"
+      },
+      "2026-01-11": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0111"
+      },
+      "2026-01-17": {
+        "title": "San Antonio, abad",
+        "names": {
+          "ES": "San Antonio, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0117"
+      },
+      "2026-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0121"
+      },
+      "2026-01-24": {
+        "title": "San Francisco de Sales, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Francisco de Sales, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0124"
+      },
+      "2026-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0126"
+      },
+      "2026-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0128"
+      },
+      "2026-01-31": {
+        "title": "San Juan Bosco, presbítero",
+        "names": {
+          "ES": "San Juan Bosco, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0131"
+      },
+      "2026-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0202"
+      },
+      "2026-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0205"
+      },
+      "2026-02-06": {
+        "title": "Santos Felipe de Jesús, Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Felipe de Jesús, Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0206"
+      },
+      "2026-02-10": {
+        "title": "Santa Escolástica, virgen",
+        "names": {
+          "ES": "Santa Escolástica, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0210"
+      },
+      "2026-02-14": {
+        "title": "Santos Cirilo, monje, y Metodio, obispo",
+        "names": {
+          "ES": "Santos Cirilo, monje, y Metodio, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0214"
+      },
+      "2026-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0319"
+      },
+      "2026-03-25": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0325"
+      },
+      "2026-04-06": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0406"
+      },
+      "2026-04-07": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0407"
+      },
+      "2026-04-08": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0408"
+      },
+      "2026-04-09": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0409"
+      },
+      "2026-04-10": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0410"
+      },
+      "2026-04-11": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0411"
+      },
+      "2026-04-25": {
+        "title": "San Marcos, evangelista",
+        "names": {
+          "ES": "San Marcos, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0425"
+      },
+      "2026-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0429"
+      },
+      "2026-05-02": {
+        "title": "San Atanasio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Atanasio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0502"
+      },
+      "2026-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0514"
+      },
+      "2026-05-17": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0517"
+      },
+      "2026-05-24": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0524"
+      },
+      "2026-05-25": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0525"
+      },
+      "2026-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0526"
+      },
+      "2026-05-28": {
+        "title": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0528"
+      },
+      "2026-05-31": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0531"
+      },
+      "2026-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0601"
+      },
+      "2026-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0603"
+      },
+      "2026-06-04": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0604"
+      },
+      "2026-06-05": {
+        "title": "San Bonifacio, obispo y mártir",
+        "names": {
+          "ES": "San Bonifacio, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0605"
+      },
+      "2026-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0611"
+      },
+      "2026-06-12": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0612"
+      },
+      "2026-06-13": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0613"
+      },
+      "2026-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0624"
+      },
+      "2026-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0629"
+      },
+      "2026-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0703"
+      },
+      "2026-07-06": {
+        "title": "Santa Nazaria Ignacia March Mesa, religiosa",
+        "names": {
+          "ES": "Santa Nazaria Ignacia March Mesa, religiosa"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0706"
+      },
+      "2026-07-11": {
+        "title": "San Benito, abad",
+        "names": {
+          "ES": "San Benito, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0711"
+      },
+      "2026-07-14": {
+        "title": "San Francisco Solano, presbítero",
+        "names": {
+          "ES": "San Francisco Solano, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0714"
+      },
+      "2026-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0715"
+      },
+      "2026-07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0716",
+        "observanceId": "particular-07-16-virgendelcarmen"
+      },
+      "2026-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0722"
+      },
+      "2026-07-25": {
+        "title": "Santiago, apóstol",
+        "names": {
+          "ES": "Santiago, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0725"
+      },
+      "2026-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0729"
+      },
+      "2026-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0731"
+      },
+      "2026-08-01": {
+        "title": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0801"
+      },
+      "2026-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0804"
+      },
+      "2026-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0806"
+      },
+      "2026-08-08": {
+        "title": "Santo Domingo, presbítero",
+        "names": {
+          "ES": "Santo Domingo, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0808"
+      },
+      "2026-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0810"
+      },
+      "2026-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0811"
+      },
+      "2026-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0814"
+      },
+      "2026-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0815"
+      },
+      "2026-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0820"
+      },
+      "2026-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0821"
+      },
+      "2026-08-22": {
+        "title": "La Santísima Virgen María, Reina",
+        "names": {
+          "ES": "La Santísima Virgen María, Reina"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0822"
+      },
+      "2026-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0824"
+      },
+      "2026-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0827"
+      },
+      "2026-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0828"
+      },
+      "2026-08-29": {
+        "title": "El Martirio de San Juan Bautista",
+        "names": {
+          "ES": "El Martirio de San Juan Bautista"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0829"
+      },
+      "2026-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0903"
+      },
+      "2026-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0908"
+      },
+      "2026-09-09": {
+        "title": "San Pedro Claver, presbítero",
+        "names": {
+          "ES": "San Pedro Claver, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0909"
+      },
+      "2026-09-14": {
+        "title": "La Exaltación de la Santa Cruz",
+        "names": {
+          "ES": "La Exaltación de la Santa Cruz"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0914"
+      },
+      "2026-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0915"
+      },
+      "2026-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0916"
+      },
+      "2026-09-18": {
+        "title": "San Juan Macías, religioso",
+        "names": {
+          "ES": "San Juan Macías, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0918"
+      },
+      "2026-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0921"
+      },
+      "2026-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0923"
+      },
+      "2026-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0929"
+      },
+      "2026-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#0930"
+      },
+      "2026-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1001"
+      },
+      "2026-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1002"
+      },
+      "2026-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1007"
+      },
+      "2026-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1015"
+      },
+      "2026-10-17": {
+        "title": "San Ignacio de Antioquía, obispo y mártir",
+        "names": {
+          "ES": "San Ignacio de Antioquía, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1017"
+      },
+      "2026-10-24": {
+        "title": "San Antonio María Claret, obispo",
+        "names": {
+          "ES": "San Antonio María Claret, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1024"
+      },
+      "2026-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1028"
+      },
+      "2026-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1101"
+      },
+      "2026-11-03": {
+        "title": "San Martín de Porres, religioso",
+        "names": {
+          "ES": "San Martín de Porres, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1103"
+      },
+      "2026-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1104"
+      },
+      "2026-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1109"
+      },
+      "2026-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1110"
+      },
+      "2026-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1111"
+      },
+      "2026-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1112"
+      },
+      "2026-11-17": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1117"
+      },
+      "2026-11-19": {
+        "title": "Santos Roque González, Juan del Castillo y Alfonso Rodríguez, presbíteros y mártires",
+        "names": {
+          "ES": "Santos Roque González, Juan del Castillo y Alfonso Rodríguez, presbíteros y mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1119"
+      },
+      "2026-11-21": {
+        "title": "La Presentación de la Santísima Virgen María",
+        "names": {
+          "ES": "La Presentación de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1121"
+      },
+      "2026-11-22": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1122"
+      },
+      "2026-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1124"
+      },
+      "2026-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1130"
+      },
+      "2026-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1203"
+      },
+      "2026-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1207"
+      },
+      "2026-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1208"
+      },
+      "2026-12-12": {
+        "title": "Nuestra Señora de Guadalupe",
+        "names": {
+          "ES": "Nuestra Señora de Guadalupe"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1212"
+      },
+      "2026-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1214"
+      },
+      "2026-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1225"
+      },
+      "2026-12-26": {
+        "title": "San Esteban, protomártir",
+        "names": {
+          "ES": "San Esteban, protomártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1226"
+      },
+      "2026-12-27": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1227"
+      },
+      "2026-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/BO-es#1228"
+      },
+      "2027-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0101"
+      },
+      "2027-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0102"
+      },
+      "2027-01-06": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0106"
+      },
+      "2027-01-10": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0110"
+      },
+      "2027-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0121"
+      },
+      "2027-01-25": {
+        "title": "La Conversión de San Pablo, apóstol",
+        "names": {
+          "ES": "La Conversión de San Pablo, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0125"
+      },
+      "2027-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0126"
+      },
+      "2027-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0128"
+      },
+      "2027-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0202"
+      },
+      "2027-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0205"
+      },
+      "2027-02-06": {
+        "title": "Santos Felipe de Jesús, Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Felipe de Jesús, Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0206"
+      },
+      "2027-02-22": {
+        "title": "La Cátedra de San Pedro, apóstol",
+        "names": {
+          "ES": "La Cátedra de San Pedro, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0222"
+      },
+      "2027-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0319"
+      },
+      "2027-03-29": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0329"
+      },
+      "2027-03-30": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0330"
+      },
+      "2027-03-31": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0331"
+      },
+      "2027-04-01": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0401"
+      },
+      "2027-04-02": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0402"
+      },
+      "2027-04-03": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0403"
+      },
+      "2027-04-05": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0405"
+      },
+      "2027-04-07": {
+        "title": "San Juan Bautista de La Salle, presbítero",
+        "names": {
+          "ES": "San Juan Bautista de La Salle, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0407"
+      },
+      "2027-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0429"
+      },
+      "2027-05-03": {
+        "title": "Santos Felipe y Santiago, apóstoles",
+        "names": {
+          "ES": "Santos Felipe y Santiago, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0503"
+      },
+      "2027-05-09": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0509"
+      },
+      "2027-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0514"
+      },
+      "2027-05-16": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0516"
+      },
+      "2027-05-17": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0517"
+      },
+      "2027-05-20": {
+        "title": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0520"
+      },
+      "2027-05-23": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0523"
+      },
+      "2027-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0526"
+      },
+      "2027-05-27": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0527"
+      },
+      "2027-05-31": {
+        "title": "La Visitación de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Visitación de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0531"
+      },
+      "2027-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0601"
+      },
+      "2027-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0603"
+      },
+      "2027-06-04": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0604"
+      },
+      "2027-06-05": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0605"
+      },
+      "2027-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0611"
+      },
+      "2027-06-21": {
+        "title": "San Luis Gonzaga, religioso",
+        "names": {
+          "ES": "San Luis Gonzaga, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0621"
+      },
+      "2027-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0624"
+      },
+      "2027-06-28": {
+        "title": "San Ireneo, obispo, mártir y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ireneo, obispo, mártir y doctor de la Iglesia"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0628"
+      },
+      "2027-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0629"
+      },
+      "2027-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0703"
+      },
+      "2027-07-06": {
+        "title": "Santa Nazaria Ignacia March Mesa, religiosa",
+        "names": {
+          "ES": "Santa Nazaria Ignacia March Mesa, religiosa"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0706"
+      },
+      "2027-07-14": {
+        "title": "San Francisco Solano, presbítero",
+        "names": {
+          "ES": "San Francisco Solano, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0714"
+      },
+      "2027-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0715"
+      },
+      "2027-07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0716",
+        "observanceId": "particular-07-16-virgendelcarmen"
+      },
+      "2027-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0722"
+      },
+      "2027-07-26": {
+        "title": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María",
+        "names": {
+          "ES": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0726"
+      },
+      "2027-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0729"
+      },
+      "2027-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0731"
+      },
+      "2027-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0804"
+      },
+      "2027-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0806"
+      },
+      "2027-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0810"
+      },
+      "2027-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0811"
+      },
+      "2027-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0814"
+      },
+      "2027-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0815"
+      },
+      "2027-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0820"
+      },
+      "2027-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0821"
+      },
+      "2027-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0824"
+      },
+      "2027-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0827"
+      },
+      "2027-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0828"
+      },
+      "2027-08-30": {
+        "title": "Santa Rosa de Lima, virgen",
+        "names": {
+          "ES": "Santa Rosa de Lima, virgen"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0830"
+      },
+      "2027-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0903"
+      },
+      "2027-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0908"
+      },
+      "2027-09-09": {
+        "title": "San Pedro Claver, presbítero",
+        "names": {
+          "ES": "San Pedro Claver, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0909"
+      },
+      "2027-09-13": {
+        "title": "San Juan Crisóstomo, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan Crisóstomo, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0913"
+      },
+      "2027-09-14": {
+        "title": "La Exaltación de la Santa Cruz",
+        "names": {
+          "ES": "La Exaltación de la Santa Cruz"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0914"
+      },
+      "2027-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0915"
+      },
+      "2027-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0916"
+      },
+      "2027-09-18": {
+        "title": "San Juan Macías, religioso",
+        "names": {
+          "ES": "San Juan Macías, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0918"
+      },
+      "2027-09-20": {
+        "title": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0920"
+      },
+      "2027-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0921"
+      },
+      "2027-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0923"
+      },
+      "2027-09-27": {
+        "title": "San Vicente de Paúl, presbítero",
+        "names": {
+          "ES": "San Vicente de Paúl, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0927"
+      },
+      "2027-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0929"
+      },
+      "2027-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#0930"
+      },
+      "2027-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1001"
+      },
+      "2027-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1002"
+      },
+      "2027-10-04": {
+        "title": "San Francisco de Asís, religioso",
+        "names": {
+          "ES": "San Francisco de Asís, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1004"
+      },
+      "2027-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1007"
+      },
+      "2027-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1015"
+      },
+      "2027-10-18": {
+        "title": "San Lucas, evangelista",
+        "names": {
+          "ES": "San Lucas, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1018"
+      },
+      "2027-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1028"
+      },
+      "2027-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1101"
+      },
+      "2027-11-03": {
+        "title": "San Martín de Porres, religioso",
+        "names": {
+          "ES": "San Martín de Porres, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1103"
+      },
+      "2027-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1104"
+      },
+      "2027-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1109"
+      },
+      "2027-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1110"
+      },
+      "2027-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1111"
+      },
+      "2027-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1112"
+      },
+      "2027-11-17": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1117"
+      },
+      "2027-11-19": {
+        "title": "Santos Roque González, Juan del Castillo y Alfonso Rodríguez, presbíteros y mártires",
+        "names": {
+          "ES": "Santos Roque González, Juan del Castillo y Alfonso Rodríguez, presbíteros y mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1119"
+      },
+      "2027-11-21": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1121"
+      },
+      "2027-11-22": {
+        "title": "Santa Cecilia, virgen y mártir",
+        "names": {
+          "ES": "Santa Cecilia, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1122"
+      },
+      "2027-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1124"
+      },
+      "2027-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1130"
+      },
+      "2027-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1203"
+      },
+      "2027-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1207"
+      },
+      "2027-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1208"
+      },
+      "2027-12-13": {
+        "title": "Santa Lucía, virgen y mártir",
+        "names": {
+          "ES": "Santa Lucía, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1213"
+      },
+      "2027-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1214"
+      },
+      "2027-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1225"
+      },
+      "2027-12-26": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1226"
+      },
+      "2027-12-27": {
+        "title": "San Juan, apóstol y evangelista",
+        "names": {
+          "ES": "San Juan, apóstol y evangelista"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1227"
+      },
+      "2027-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/BO-es#1228"
+      }
+    }
+  },
+  "CL": {
+    "jurisdictionName": "Chile",
+    "ordinaryLanguage": "ES",
+    "ordinaryDataset": "AR",
+    "ordinaryEdition": "Misal Romano · tercera edición típica, castellano del Cono Sur",
+    "ordinarySource": {
+      "title": "Misal Romano del Cono Sur",
+      "url": "https://curas.com.ar/Misal3/Misas3.htm"
+    },
+    "source": {
+      "title": "Calendario litúrgico de Chile",
+      "calendarUrl": "https://www.iglesia.cl/tiempos_liturgicos.php"
+    },
+    "dailyReadings": {
+      "provider": "Arzobispado de Santiago",
+      "translation": "El Libro del Pueblo de Dios",
+      "calendar": "Chile",
+      "urlStrategy": "cono-sur"
+    },
+    "calendar": {
+      "01-24": {
+        "title": "San Francisco de Sales",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24",
+        "names": {
+          "ES": "San Francisco de Sales"
+        }
+      },
+      "02-03": {
+        "title": "SAN BLAS",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03",
+        "names": {
+          "ES": "SAN BLAS"
+        }
+      },
+      "02-07": {
+        "title": "Beato Pio IX",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/07",
+        "names": {
+          "ES": "Beato Pio IX"
+        }
+      },
+      "02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        }
+      },
+      "03-23": {
+        "title": "Santo Toribio de Mogrovejo,",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo,"
+        }
+      },
+      "05-03": {
+        "title": "SAN FELIPE Y SANTIAGO",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03",
+        "names": {
+          "ES": "SAN FELIPE Y SANTIAGO"
+        }
+      },
+      "07-14": {
+        "title": "San Camilo de Lelis",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio14",
+        "names": {
+          "ES": "San Camilo de Lelis"
+        }
+      },
+      "08-18": {
+        "title": "San Alberto Hurtado Cruchaga,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.08.htm#18",
+        "names": {
+          "ES": "San Alberto Hurtado Cruchaga,"
+        }
+      },
+      "09-24": {
+        "title": "Nuestra Señora de la Merced",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#24",
+        "names": {
+          "ES": "Nuestra Señora de la Merced"
+        }
+      },
+      "10-24": {
+        "title": "San Antonio María Claret",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24",
+        "names": {
+          "ES": "San Antonio María Claret"
+        }
+      },
+      "11-03": {
+        "title": "San Martín de Porres",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03",
+        "names": {
+          "ES": "San Martín de Porres"
+        }
+      },
+      "11-15": {
+        "title": "San Alberto Magno",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#15",
+        "names": {
+          "ES": "San Alberto Magno"
+        }
+      },
+      "11-17": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      },
+      "07-16": {
+        "title": "Nuestra Señora del Carmen, Madre y Reina de Chile",
+        "rank": "solemnity",
+        "color": "white",
+        "observanceId": "particular-07-16-virgendelcarmen",
+        "sourceUrl": "https://www.iglesia.cl/tiempos_liturgicos.php",
+        "names": {
+          "ES": "Nuestra Señora del Carmen, Madre y Reina de Chile"
+        }
+      }
+    },
+    "dynamicCalendarByDate": {
+      "2026-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0101"
+      },
+      "2026-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0102"
+      },
+      "2026-01-04": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0104"
+      },
+      "2026-01-11": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0111"
+      },
+      "2026-01-17": {
+        "title": "San Antonio, abad",
+        "names": {
+          "ES": "San Antonio, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0117"
+      },
+      "2026-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0121"
+      },
+      "2026-01-24": {
+        "title": "San Francisco de Sales, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Francisco de Sales, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0124"
+      },
+      "2026-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0126"
+      },
+      "2026-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0128"
+      },
+      "2026-01-31": {
+        "title": "San Juan Bosco, presbítero",
+        "names": {
+          "ES": "San Juan Bosco, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0131"
+      },
+      "2026-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0202"
+      },
+      "2026-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0205"
+      },
+      "2026-02-06": {
+        "title": "Santos Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0206"
+      },
+      "2026-02-10": {
+        "title": "Santa Escolástica, virgen",
+        "names": {
+          "ES": "Santa Escolástica, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0210"
+      },
+      "2026-02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0211"
+      },
+      "2026-02-14": {
+        "title": "Santos Cirilo, monje, y Metodio, obispo",
+        "names": {
+          "ES": "Santos Cirilo, monje, y Metodio, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0214"
+      },
+      "2026-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0319"
+      },
+      "2026-03-25": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0325"
+      },
+      "2026-04-06": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0406"
+      },
+      "2026-04-07": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0407"
+      },
+      "2026-04-08": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0408"
+      },
+      "2026-04-09": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0409"
+      },
+      "2026-04-10": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0410"
+      },
+      "2026-04-11": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0411"
+      },
+      "2026-04-25": {
+        "title": "San Marcos, evangelista",
+        "names": {
+          "ES": "San Marcos, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0425"
+      },
+      "2026-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0429"
+      },
+      "2026-05-02": {
+        "title": "San Atanasio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Atanasio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0502"
+      },
+      "2026-05-04": {
+        "title": "Santos Felipe y Santiago, apóstoles",
+        "names": {
+          "ES": "Santos Felipe y Santiago, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0504"
+      },
+      "2026-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0514"
+      },
+      "2026-05-17": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0517"
+      },
+      "2026-05-24": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0524"
+      },
+      "2026-05-25": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0525"
+      },
+      "2026-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0526"
+      },
+      "2026-05-28": {
+        "title": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0528"
+      },
+      "2026-05-31": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0531"
+      },
+      "2026-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0601"
+      },
+      "2026-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0603"
+      },
+      "2026-06-05": {
+        "title": "San Bonifacio, obispo y mártir",
+        "names": {
+          "ES": "San Bonifacio, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0605"
+      },
+      "2026-06-07": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0607"
+      },
+      "2026-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0611"
+      },
+      "2026-06-12": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0612"
+      },
+      "2026-06-13": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0613"
+      },
+      "2026-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0624"
+      },
+      "2026-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0629"
+      },
+      "2026-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0703"
+      },
+      "2026-07-11": {
+        "title": "San Benito, abad",
+        "names": {
+          "ES": "San Benito, abad"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0711"
+      },
+      "2026-07-13": {
+        "title": "Santa Teresa de Jesús de Los Andes, virgen",
+        "names": {
+          "ES": "Santa Teresa de Jesús de Los Andes, virgen"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0713"
+      },
+      "2026-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0715"
+      },
+      "2026-07-16": {
+        "title": "Nuestra Señora del Carmen, Madre y Reina de Chile",
+        "names": {
+          "ES": "Nuestra Señora del Carmen, Madre y Reina de Chile"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0716",
+        "observanceId": "particular-07-16-virgendelcarmen"
+      },
+      "2026-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0722"
+      },
+      "2026-07-25": {
+        "title": "Santiago, apóstol",
+        "names": {
+          "ES": "Santiago, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0725"
+      },
+      "2026-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0729"
+      },
+      "2026-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0731"
+      },
+      "2026-08-01": {
+        "title": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0801"
+      },
+      "2026-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0804"
+      },
+      "2026-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0806"
+      },
+      "2026-08-08": {
+        "title": "Santo Domingo, presbítero",
+        "names": {
+          "ES": "Santo Domingo, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0808"
+      },
+      "2026-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0810"
+      },
+      "2026-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0811"
+      },
+      "2026-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0814"
+      },
+      "2026-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0815"
+      },
+      "2026-08-18": {
+        "title": "San Alberto Hurtado Cruchaga, presbítero",
+        "names": {
+          "ES": "San Alberto Hurtado Cruchaga, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0818"
+      },
+      "2026-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0820"
+      },
+      "2026-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0821"
+      },
+      "2026-08-22": {
+        "title": "La Santísima Virgen María, Reina",
+        "names": {
+          "ES": "La Santísima Virgen María, Reina"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0822"
+      },
+      "2026-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0824"
+      },
+      "2026-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0827"
+      },
+      "2026-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0828"
+      },
+      "2026-08-29": {
+        "title": "El Martirio de San Juan Bautista",
+        "names": {
+          "ES": "El Martirio de San Juan Bautista"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0829"
+      },
+      "2026-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0903"
+      },
+      "2026-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0908"
+      },
+      "2026-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0915"
+      },
+      "2026-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0916"
+      },
+      "2026-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0921"
+      },
+      "2026-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0923"
+      },
+      "2026-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0929"
+      },
+      "2026-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#0930"
+      },
+      "2026-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1001"
+      },
+      "2026-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1002"
+      },
+      "2026-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1007"
+      },
+      "2026-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1015"
+      },
+      "2026-10-17": {
+        "title": "San Ignacio de Antioquía, obispo y mártir",
+        "names": {
+          "ES": "San Ignacio de Antioquía, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1017"
+      },
+      "2026-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1028"
+      },
+      "2026-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1101"
+      },
+      "2026-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1104"
+      },
+      "2026-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1109"
+      },
+      "2026-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1110"
+      },
+      "2026-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1111"
+      },
+      "2026-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1112"
+      },
+      "2026-11-17": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1117"
+      },
+      "2026-11-21": {
+        "title": "La Presentación de la Santísima Virgen María",
+        "names": {
+          "ES": "La Presentación de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1121"
+      },
+      "2026-11-22": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1122"
+      },
+      "2026-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1124"
+      },
+      "2026-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1130"
+      },
+      "2026-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1203"
+      },
+      "2026-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1207"
+      },
+      "2026-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1208"
+      },
+      "2026-12-12": {
+        "title": "Nuestra Señora de Guadalupe",
+        "names": {
+          "ES": "Nuestra Señora de Guadalupe"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1212"
+      },
+      "2026-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1214"
+      },
+      "2026-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1225"
+      },
+      "2026-12-26": {
+        "title": "San Esteban, protomártir",
+        "names": {
+          "ES": "San Esteban, protomártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1226"
+      },
+      "2026-12-27": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1227"
+      },
+      "2026-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2026/CL-es#1228"
+      },
+      "2027-01-01": {
+        "title": "Santa María, Madre de Dios",
+        "names": {
+          "ES": "Santa María, Madre de Dios"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0101"
+      },
+      "2027-01-02": {
+        "title": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia",
+        "names": {
+          "ES": "Santos Basilio Magno y Gregorio de Nacianzo, obispos y doctores de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0102"
+      },
+      "2027-01-03": {
+        "title": "La Epifanía del Señor",
+        "names": {
+          "ES": "La Epifanía del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0103"
+      },
+      "2027-01-10": {
+        "title": "El Bautismo del Señor",
+        "names": {
+          "ES": "El Bautismo del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0110"
+      },
+      "2027-01-21": {
+        "title": "Santa Inés, virgen y mártir",
+        "names": {
+          "ES": "Santa Inés, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0121"
+      },
+      "2027-01-25": {
+        "title": "La Conversión de San Pablo, apóstol",
+        "names": {
+          "ES": "La Conversión de San Pablo, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0125"
+      },
+      "2027-01-26": {
+        "title": "Santos Timoteo y Tito, obispos",
+        "names": {
+          "ES": "Santos Timoteo y Tito, obispos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0126"
+      },
+      "2027-01-28": {
+        "title": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0128"
+      },
+      "2027-02-02": {
+        "title": "La Presentación del Señor",
+        "names": {
+          "ES": "La Presentación del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0202"
+      },
+      "2027-02-05": {
+        "title": "Santa Águeda, virgen y mártir",
+        "names": {
+          "ES": "Santa Águeda, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0205"
+      },
+      "2027-02-06": {
+        "title": "Santos Pablo Miki y compañeros, mártires",
+        "names": {
+          "ES": "Santos Pablo Miki y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0206"
+      },
+      "2027-02-22": {
+        "title": "La Cátedra de San Pedro, apóstol",
+        "names": {
+          "ES": "La Cátedra de San Pedro, apóstol"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0222"
+      },
+      "2027-03-19": {
+        "title": "San José, esposo de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "San José, esposo de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0319"
+      },
+      "2027-03-29": {
+        "title": "Lunes de la Octava de Pascua",
+        "names": {
+          "ES": "Lunes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0329"
+      },
+      "2027-03-30": {
+        "title": "Martes de la Octava de Pascua",
+        "names": {
+          "ES": "Martes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0330"
+      },
+      "2027-03-31": {
+        "title": "Miércoles de la Octava de Pascua",
+        "names": {
+          "ES": "Miércoles de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0331"
+      },
+      "2027-04-01": {
+        "title": "Jueves de la Octava de Pascua",
+        "names": {
+          "ES": "Jueves de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0401"
+      },
+      "2027-04-02": {
+        "title": "Viernes de la Octava de Pascua",
+        "names": {
+          "ES": "Viernes de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0402"
+      },
+      "2027-04-03": {
+        "title": "Sábado de la Octava de Pascua",
+        "names": {
+          "ES": "Sábado de la Octava de Pascua"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0403"
+      },
+      "2027-04-05": {
+        "title": "La Anunciación del Señor",
+        "names": {
+          "ES": "La Anunciación del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0405"
+      },
+      "2027-04-07": {
+        "title": "San Juan Bautista de La Salle, presbítero",
+        "names": {
+          "ES": "San Juan Bautista de La Salle, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0407"
+      },
+      "2027-04-29": {
+        "title": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Catalina de Siena, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0429"
+      },
+      "2027-05-03": {
+        "title": "La Exaltación de la Santa Cruz",
+        "names": {
+          "ES": "La Exaltación de la Santa Cruz"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0503"
+      },
+      "2027-05-04": {
+        "title": "Santos Felipe y Santiago, apóstoles",
+        "names": {
+          "ES": "Santos Felipe y Santiago, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0504"
+      },
+      "2027-05-09": {
+        "title": "La Ascensión del Señor",
+        "names": {
+          "ES": "La Ascensión del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0509"
+      },
+      "2027-05-14": {
+        "title": "San Matías, apóstol",
+        "names": {
+          "ES": "San Matías, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0514"
+      },
+      "2027-05-16": {
+        "title": "Domingo de Pentecostés",
+        "names": {
+          "ES": "Domingo de Pentecostés"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0516"
+      },
+      "2027-05-17": {
+        "title": "Bienaventurada Virgen María, Madre de la Iglesia",
+        "names": {
+          "ES": "Bienaventurada Virgen María, Madre de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0517"
+      },
+      "2027-05-20": {
+        "title": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0520"
+      },
+      "2027-05-23": {
+        "title": "La Santísima Trinidad",
+        "names": {
+          "ES": "La Santísima Trinidad"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0523"
+      },
+      "2027-05-24": {
+        "title": "María, Auxilio de los cristianos",
+        "names": {
+          "ES": "María, Auxilio de los cristianos"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0524"
+      },
+      "2027-05-26": {
+        "title": "San Felipe Neri, presbítero",
+        "names": {
+          "ES": "San Felipe Neri, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0526"
+      },
+      "2027-05-30": {
+        "title": "El Cuerpo y la Sangre Santísimos de Cristo",
+        "names": {
+          "ES": "El Cuerpo y la Sangre Santísimos de Cristo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0530"
+      },
+      "2027-05-31": {
+        "title": "La Visitación de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Visitación de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0531"
+      },
+      "2027-06-01": {
+        "title": "San Justino, mártir",
+        "names": {
+          "ES": "San Justino, mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0601"
+      },
+      "2027-06-03": {
+        "title": "Santos Carlos Luanga y compañeros, mártires",
+        "names": {
+          "ES": "Santos Carlos Luanga y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0603"
+      },
+      "2027-06-04": {
+        "title": "El Sagrado Corazón de Jesús",
+        "names": {
+          "ES": "El Sagrado Corazón de Jesús"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0604"
+      },
+      "2027-06-05": {
+        "title": "El Inmaculado Corazón de María",
+        "names": {
+          "ES": "El Inmaculado Corazón de María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0605"
+      },
+      "2027-06-11": {
+        "title": "San Bernabé, apóstol",
+        "names": {
+          "ES": "San Bernabé, apóstol"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0611"
+      },
+      "2027-06-21": {
+        "title": "San Luis Gonzaga, religioso",
+        "names": {
+          "ES": "San Luis Gonzaga, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0621"
+      },
+      "2027-06-24": {
+        "title": "El Nacimiento de San Juan Bautista",
+        "names": {
+          "ES": "El Nacimiento de San Juan Bautista"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0624"
+      },
+      "2027-06-28": {
+        "title": "San Ireneo, obispo, mártir y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ireneo, obispo, mártir y doctor de la Iglesia"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0628"
+      },
+      "2027-06-29": {
+        "title": "Santos Pedro y Pablo, apóstoles",
+        "names": {
+          "ES": "Santos Pedro y Pablo, apóstoles"
+        },
+        "color": "red",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0629"
+      },
+      "2027-07-03": {
+        "title": "Santo Tomás, apóstol",
+        "names": {
+          "ES": "Santo Tomás, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0703"
+      },
+      "2027-07-13": {
+        "title": "Santa Teresa de Jesús de Los Andes, virgen",
+        "names": {
+          "ES": "Santa Teresa de Jesús de Los Andes, virgen"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0713"
+      },
+      "2027-07-15": {
+        "title": "San Buenaventura, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Buenaventura, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0715"
+      },
+      "2027-07-16": {
+        "title": "Nuestra Señora del Carmen, Madre y Reina de Chile",
+        "names": {
+          "ES": "Nuestra Señora del Carmen, Madre y Reina de Chile"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0716",
+        "observanceId": "particular-07-16-virgendelcarmen"
+      },
+      "2027-07-22": {
+        "title": "Santa María Magdalena",
+        "names": {
+          "ES": "Santa María Magdalena"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0722"
+      },
+      "2027-07-26": {
+        "title": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María",
+        "names": {
+          "ES": "Santos Joaquín y Ana, padres de la bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0726"
+      },
+      "2027-07-29": {
+        "title": "Santos Marta, María y Lázaro",
+        "names": {
+          "ES": "Santos Marta, María y Lázaro"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0729"
+      },
+      "2027-07-31": {
+        "title": "San Ignacio de Loyola, presbítero",
+        "names": {
+          "ES": "San Ignacio de Loyola, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0731"
+      },
+      "2027-08-04": {
+        "title": "San Juan María Vianney, presbítero",
+        "names": {
+          "ES": "San Juan María Vianney, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0804"
+      },
+      "2027-08-06": {
+        "title": "La Transfiguración del Señor",
+        "names": {
+          "ES": "La Transfiguración del Señor"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0806"
+      },
+      "2027-08-10": {
+        "title": "San Lorenzo, diácono y mártir",
+        "names": {
+          "ES": "San Lorenzo, diácono y mártir"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0810"
+      },
+      "2027-08-11": {
+        "title": "Santa Clara, virgen",
+        "names": {
+          "ES": "Santa Clara, virgen"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0811"
+      },
+      "2027-08-14": {
+        "title": "San Maximiliano María Kolbe, presbítero y mártir",
+        "names": {
+          "ES": "San Maximiliano María Kolbe, presbítero y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0814"
+      },
+      "2027-08-15": {
+        "title": "La Asunción de la Santísima Virgen María",
+        "names": {
+          "ES": "La Asunción de la Santísima Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0815"
+      },
+      "2027-08-18": {
+        "title": "San Alberto Hurtado Cruchaga, presbítero",
+        "names": {
+          "ES": "San Alberto Hurtado Cruchaga, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0818"
+      },
+      "2027-08-20": {
+        "title": "San Bernardo, abad y doctor de la Iglesia",
+        "names": {
+          "ES": "San Bernardo, abad y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0820"
+      },
+      "2027-08-21": {
+        "title": "San Pío X, papa",
+        "names": {
+          "ES": "San Pío X, papa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0821"
+      },
+      "2027-08-24": {
+        "title": "San Bartolomé, apóstol",
+        "names": {
+          "ES": "San Bartolomé, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0824"
+      },
+      "2027-08-27": {
+        "title": "Santa Mónica",
+        "names": {
+          "ES": "Santa Mónica"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0827"
+      },
+      "2027-08-28": {
+        "title": "San Agustín, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Agustín, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0828"
+      },
+      "2027-08-30": {
+        "title": "Santa Rosa de Lima, virgen",
+        "names": {
+          "ES": "Santa Rosa de Lima, virgen"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0830"
+      },
+      "2027-09-03": {
+        "title": "San Gregorio Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San Gregorio Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0903"
+      },
+      "2027-09-08": {
+        "title": "La Natividad de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Natividad de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0908"
+      },
+      "2027-09-13": {
+        "title": "San Juan Crisóstomo, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan Crisóstomo, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0913"
+      },
+      "2027-09-15": {
+        "title": "Nuestra Señora de los Dolores",
+        "names": {
+          "ES": "Nuestra Señora de los Dolores"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0915"
+      },
+      "2027-09-16": {
+        "title": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+        "names": {
+          "ES": "Santos Cornelio, papa, y Cipriano, obispo, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0916"
+      },
+      "2027-09-20": {
+        "title": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0920"
+      },
+      "2027-09-21": {
+        "title": "San Mateo, apóstol y evangelista",
+        "names": {
+          "ES": "San Mateo, apóstol y evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0921"
+      },
+      "2027-09-23": {
+        "title": "San Pío de Pietrelcina, presbítero",
+        "names": {
+          "ES": "San Pío de Pietrelcina, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0923"
+      },
+      "2027-09-27": {
+        "title": "San Vicente de Paúl, presbítero",
+        "names": {
+          "ES": "San Vicente de Paúl, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0927"
+      },
+      "2027-09-29": {
+        "title": "Santos Miguel, Gabriel y Rafael, arcángeles",
+        "names": {
+          "ES": "Santos Miguel, Gabriel y Rafael, arcángeles"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0929"
+      },
+      "2027-09-30": {
+        "title": "San Jerónimo, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Jerónimo, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#0930"
+      },
+      "2027-10-01": {
+        "title": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1001"
+      },
+      "2027-10-02": {
+        "title": "Los Santos Ángeles Custodios",
+        "names": {
+          "ES": "Los Santos Ángeles Custodios"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1002"
+      },
+      "2027-10-04": {
+        "title": "San Francisco de Asís, religioso",
+        "names": {
+          "ES": "San Francisco de Asís, religioso"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1004"
+      },
+      "2027-10-07": {
+        "title": "Nuestra Señora del Rosario",
+        "names": {
+          "ES": "Nuestra Señora del Rosario"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1007"
+      },
+      "2027-10-15": {
+        "title": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+        "names": {
+          "ES": "Santa Teresa de Jesús, virgen y doctora de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1015"
+      },
+      "2027-10-18": {
+        "title": "San Lucas, evangelista",
+        "names": {
+          "ES": "San Lucas, evangelista"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1018"
+      },
+      "2027-10-28": {
+        "title": "Santos Simón y Judas, apóstoles",
+        "names": {
+          "ES": "Santos Simón y Judas, apóstoles"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1028"
+      },
+      "2027-11-01": {
+        "title": "Todos los Santos",
+        "names": {
+          "ES": "Todos los Santos"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1101"
+      },
+      "2027-11-04": {
+        "title": "San Carlos Borromeo, obispo",
+        "names": {
+          "ES": "San Carlos Borromeo, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1104"
+      },
+      "2027-11-09": {
+        "title": "La Dedicación de la Basílica de Letrán",
+        "names": {
+          "ES": "La Dedicación de la Basílica de Letrán"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1109"
+      },
+      "2027-11-10": {
+        "title": "San León el Magno, papa y doctor de la Iglesia",
+        "names": {
+          "ES": "San León el Magno, papa y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1110"
+      },
+      "2027-11-11": {
+        "title": "San Martín de Tours, obispo",
+        "names": {
+          "ES": "San Martín de Tours, obispo"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1111"
+      },
+      "2027-11-12": {
+        "title": "San Josafat, obispo y mártir",
+        "names": {
+          "ES": "San Josafat, obispo y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1112"
+      },
+      "2027-11-17": {
+        "title": "Santa Isabel de Hungría, religiosa",
+        "names": {
+          "ES": "Santa Isabel de Hungría, religiosa"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1117"
+      },
+      "2027-11-21": {
+        "title": "Nuestro Señor Jesucristo, Rey del Universo",
+        "names": {
+          "ES": "Nuestro Señor Jesucristo, Rey del Universo"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1121"
+      },
+      "2027-11-22": {
+        "title": "Santa Cecilia, virgen y mártir",
+        "names": {
+          "ES": "Santa Cecilia, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1122"
+      },
+      "2027-11-24": {
+        "title": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+        "names": {
+          "ES": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1124"
+      },
+      "2027-11-30": {
+        "title": "San Andrés, apóstol",
+        "names": {
+          "ES": "San Andrés, apóstol"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1130"
+      },
+      "2027-12-03": {
+        "title": "San Francisco Javier, presbítero",
+        "names": {
+          "ES": "San Francisco Javier, presbítero"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1203"
+      },
+      "2027-12-07": {
+        "title": "San Ambrosio, obispo y doctor de la Iglesia",
+        "names": {
+          "ES": "San Ambrosio, obispo y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1207"
+      },
+      "2027-12-08": {
+        "title": "La Inmaculada Concepción de la Bienaventurada Virgen María",
+        "names": {
+          "ES": "La Inmaculada Concepción de la Bienaventurada Virgen María"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1208"
+      },
+      "2027-12-13": {
+        "title": "Santa Lucía, virgen y mártir",
+        "names": {
+          "ES": "Santa Lucía, virgen y mártir"
+        },
+        "color": "red",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1213"
+      },
+      "2027-12-14": {
+        "title": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+        "names": {
+          "ES": "San Juan de la Cruz, presbítero y doctor de la Iglesia"
+        },
+        "color": "white",
+        "rank": "memorial",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1214"
+      },
+      "2027-12-25": {
+        "title": "La Natividad del Señor",
+        "names": {
+          "ES": "La Natividad del Señor"
+        },
+        "color": "white",
+        "rank": "solemnity",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1225"
+      },
+      "2027-12-26": {
+        "title": "La Sagrada Familia de Jesús, María y José",
+        "names": {
+          "ES": "La Sagrada Familia de Jesús, María y José"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1226"
+      },
+      "2027-12-27": {
+        "title": "San Juan, apóstol y evangelista",
+        "names": {
+          "ES": "San Juan, apóstol y evangelista"
+        },
+        "color": "white",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1227"
+      },
+      "2027-12-28": {
+        "title": "Los Santos Inocentes, mártires",
+        "names": {
+          "ES": "Los Santos Inocentes, mártires"
+        },
+        "color": "red",
+        "rank": "feast",
+        "sourceUrl": "https://gcatholic.org/calendar/2027/CL-es#1228"
+      }
+    }
+  },
+  "PY": {
+    "jurisdictionName": "Paraguay",
+    "ordinaryLanguage": "ES",
+    "ordinaryDataset": "AR",
+    "ordinaryEdition": "Misal Romano · tercera edición típica, castellano del Cono Sur",
+    "ordinarySource": {
+      "title": "Misal Romano del Cono Sur",
+      "url": "https://curas.com.ar/Misal3/Misas3.htm"
+    },
+    "source": {
+      "title": "Calendario litúrgico de Paraguay",
+      "calendarUrl": "https://episcopal.org.py/?p=437"
+    },
+    "dailyReadings": {
+      "provider": "Leccionario del Cono Sur",
+      "translation": "El Libro del Pueblo de Dios",
+      "calendar": "Paraguay",
+      "urlStrategy": "cono-sur"
+    },
+    "calendar": {
+      "01-24": {
+        "title": "San Francisco de Sales",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24",
+        "names": {
+          "ES": "San Francisco de Sales"
+        }
+      },
+      "02-03": {
+        "title": "SAN BLAS",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03",
+        "names": {
+          "ES": "SAN BLAS"
+        }
+      },
+      "02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        }
+      },
+      "03-23": {
+        "title": "Santo Toribio de Mogrovejo,",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.03.htm",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo,"
+        }
+      },
+      "05-03": {
+        "title": "SAN FELIPE Y SANTIAGO",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03",
+        "names": {
+          "ES": "SAN FELIPE Y SANTIAGO"
+        }
+      },
+      "07-13": {
+        "title": "San Enrique",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio13",
+        "names": {
+          "ES": "San Enrique"
+        }
+      },
+      "07-14": {
+        "title": "San Camilo de Lelis",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio14",
+        "names": {
+          "ES": "San Camilo de Lelis"
+        }
+      },
+      "07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio16",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        }
+      },
+      "10-24": {
+        "title": "San Antonio María Claret",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24",
+        "names": {
+          "ES": "San Antonio María Claret"
+        }
+      },
+      "11-03": {
+        "title": "San Martín de Porres",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03",
+        "names": {
+          "ES": "San Martín de Porres"
+        }
+      },
+      "11-17": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      },
+      "12-08": {
+        "title": "Inmaculada Concepción de la Virgen María · Virgen de Caacupé",
+        "rank": "solemnity",
+        "color": "white",
+        "observanceId": "particular-12-08-caacupe",
+        "sourceUrl": "https://episcopal.org.py/?p=437",
+        "names": {
+          "ES": "Inmaculada Concepción de la Virgen María · Virgen de Caacupé"
+        }
+      }
+    },
+    "dynamicCalendarByDate": {}
+  },
+  "UY": {
+    "jurisdictionName": "Uruguay",
+    "ordinaryLanguage": "ES",
+    "ordinaryDataset": "AR",
+    "ordinaryEdition": "Misal Romano · tercera edición típica, castellano del Cono Sur",
+    "ordinarySource": {
+      "title": "Misal Romano del Cono Sur",
+      "url": "https://curas.com.ar/Misal3/Misas3.htm"
+    },
+    "source": {
+      "title": "Calendario litúrgico de Uruguay",
+      "calendarUrl": "https://iglesiacatolica.org.uy/wp-content/uploads/2012/07/Decreto-sobre-Liturgia.pdf"
+    },
+    "dailyReadings": {
+      "provider": "Leccionario del Cono Sur",
+      "translation": "El Libro del Pueblo de Dios",
+      "calendar": "Uruguay",
+      "urlStrategy": "cono-sur"
+    },
+    "calendar": {
+      "01-24": {
+        "title": "San Francisco de Sales",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.01.htm#01/24",
+        "names": {
+          "ES": "San Francisco de Sales"
+        }
+      },
+      "02-03": {
+        "title": "SAN BLAS",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/03",
+        "names": {
+          "ES": "SAN BLAS"
+        }
+      },
+      "02-11": {
+        "title": "Nuestra Señora de Lourdes",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.02.htm#02/11",
+        "names": {
+          "ES": "Nuestra Señora de Lourdes"
+        }
+      },
+      "04-19": {
+        "title": "Nuestra Señora, la Virgen del Verdún",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril19",
+        "names": {
+          "ES": "Nuestra Señora, la Virgen del Verdún"
+        }
+      },
+      "04-27": {
+        "title": "Santo Toribio de Mogrovejo",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.04.htm#Abril27",
+        "names": {
+          "ES": "Santo Toribio de Mogrovejo"
+        }
+      },
+      "05-03": {
+        "title": "SAN FELIPE Y SANTIAGO",
+        "rank": "feast",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo03",
+        "names": {
+          "ES": "SAN FELIPE Y SANTIAGO"
+        }
+      },
+      "05-08": {
+        "title": "Nuestra Señora de Luján",
+        "rank": "optional",
+        "color": "white",
+        "observanceId": "particular-05-08-lujan",
+        "sourceUrl": "https://iglesiacatolica.org.uy/wp-content/uploads/2012/07/Decreto-sobre-Liturgia.pdf",
+        "names": {
+          "ES": "Nuestra Señora de Luján"
+        }
+      },
+      "05-15": {
+        "title": "San Isidro",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo15",
+        "names": {
+          "ES": "San Isidro"
+        }
+      },
+      "05-24": {
+        "title": "Santa María",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.05.htm#Mayo24",
+        "names": {
+          "ES": "Santa María"
+        }
+      },
+      "07-13": {
+        "title": "San Enrique",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio13",
+        "names": {
+          "ES": "San Enrique"
+        }
+      },
+      "07-14": {
+        "title": "San Camilo de Lelis",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio14",
+        "names": {
+          "ES": "San Camilo de Lelis"
+        }
+      },
+      "07-16": {
+        "title": "Nuestra Señora del Carmen",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.07.htm#Julio16",
+        "names": {
+          "ES": "Nuestra Señora del Carmen"
+        }
+      },
+      "09-24": {
+        "title": "Nuestra Señora de la Merced",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.09.htm#24",
+        "names": {
+          "ES": "Nuestra Señora de la Merced"
+        }
+      },
+      "10-24": {
+        "title": "San Antonio María Claret",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.10.htm#24",
+        "names": {
+          "ES": "San Antonio María Claret"
+        }
+      },
+      "11-03": {
+        "title": "San Martín de Porres",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#03",
+        "names": {
+          "ES": "San Martín de Porres"
+        }
+      },
+      "11-08": {
+        "title": "Nuestra Señora de los Treinta y Tres, Patrona del Uruguay",
+        "rank": "solemnity",
+        "color": "white",
+        "observanceId": "particular-11-08-treintaytres",
+        "sourceUrl": "https://iglesiacatolica.org.uy/wp-content/uploads/2012/07/Decreto-sobre-Liturgia.pdf",
+        "names": {
+          "ES": "Nuestra Señora de los Treinta y Tres, Patrona del Uruguay"
+        }
+      },
+      "11-15": {
+        "title": "San Alberto Magno",
+        "rank": "optional",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#15",
+        "names": {
+          "ES": "San Alberto Magno"
+        }
+      },
+      "11-17": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#17",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      },
+      "11-19": {
+        "title": "Santa Isabel de Hungría,",
+        "rank": "memorial",
+        "sourceUrl": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm#19",
+        "names": {
+          "ES": "Santa Isabel de Hungría,"
+        }
+      }
+    },
+    "dynamicCalendarByDate": {}
+  }
+};
+  global.countryMassData.AR = Object.freeze({
+    jurisdiction: 'AR', ordinary, ...national.AR
+  });
+  for (const code of ['BO', 'CL', 'PY', 'UY']) {
+    global.countryMassData[code] = Object.freeze({jurisdiction: code, ...national[code]});
+  }
+})(globalThis);

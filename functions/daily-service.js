@@ -2,6 +2,7 @@
 const crypto=require('node:crypto');
 const {createStore}=require('./daily-store');
 const {resolveKtcg}=require('./daily-ktcg');
+const {countries:conoSurCountries,archivedConoSurFetch}=require('./daily-cono-sur');
 const {COUNTRIES,COLLECTION,JOBS,RUNS,countryCode,isoDate,sourceId,recordId,datesFrom,koreaToday,providers,PARSER_REVISION}=require('./daily-schema');
 function requestIdentity(value){
   const country=countryCode(value.country),date=isoDate(value.date);
@@ -15,7 +16,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch,runtimeFa
   const store=createStore(db),metadataCache=new Map();
   async function metadata(country){
     const existing=metadataCache.get(country);if(existing&&Date.now()-existing.savedAt<600000)return existing.value;
-    const codes=[...new Set([country,'KR',country==='GB-WLS'?'GB-ENG':country])];
+    const codes=[...new Set([country,'KR',country==='GB-WLS'?'GB-ENG':country,...(conoSurCountries.has(country)?['AR']:[])])];
     const snapshots=await Promise.all(codes.map(code=>db.collection('country_mass_metadata').where('jurisdiction','==',code).get()));
     const value=Object.fromEntries(snapshots.flatMap(snapshot=>snapshot.docs.map(doc=>{const data=doc.data();return [data.jurisdiction,data];})));
     metadataCache.set(country,{value,savedAt:Date.now()});return value;
@@ -96,7 +97,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch,runtimeFa
     try{
       const createRuntime=runtimeFactory||require('./daily-runtime').createRuntime;
       const sourceDocuments=request.country==='TW'?await require('./daily-taiwan').collectTaiwanDocuments({date:request.date,db,fetchImpl}):undefined;
-      runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
+      runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl:conoSurCountries.has(request.country)?archivedConoSurFetch(db,fetchImpl):fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
       if(request.country==='PT'&&request.date.endsWith('-11-02'))runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
       await store.registerVariants(request,runtime.variantChoices());
       const variants=runtime.variants(),registered=new Set(variants);

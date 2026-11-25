@@ -85,7 +85,13 @@ async function main(){
   return {...source,code,changes:edits.length};
  });
  const after=mass.runCountryMassSources(next).registry;
- for(const [country,module] of Object.entries(before))assert.deepEqual(JSON.parse(JSON.stringify(after[country].ordinary)),JSON.parse(JSON.stringify(module.ordinary.map(entry=>canonicalMassEntry(entry)))),country+' migration changed content');
+ for(const [country,module] of Object.entries(before)){
+  if(!Array.isArray(module.ordinary)){
+   assert.equal(after[country].ordinary,module.ordinary,country+' gained ordinary text during migration');
+   continue;
+  }
+  assert.deepEqual(JSON.parse(JSON.stringify(after[country].ordinary)),JSON.parse(JSON.stringify(module.ordinary.map(entry=>canonicalMassEntry(entry)))),country+' migration changed content');
+ }
  if(!check)for(const source of next)if(source.changes)fs.writeFileSync(source.path,source.code);
  console.log(JSON.stringify({countries:Object.keys(after).length,sourceFilesChanged:next.filter(source=>source.changes).length,canonicalInstructions:true}));
  if(process.argv.includes('--firebase'))await firebaseMigration(check);

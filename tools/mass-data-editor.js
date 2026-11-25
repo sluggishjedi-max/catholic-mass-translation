@@ -52,7 +52,7 @@ function discoverCountryMassModules() {
     .flatMap(entry => fs.readdirSync(path.join(countriesRoot, entry.name), { withFileTypes: true })
       .filter(file => file.isFile() && file.name.endsWith('_mass.js'))
       .map(file => path.join(countriesRoot, entry.name, file.name)));
-  const preferredOrder = ['KR','VN','US','JP','VA','IE','GB-ENG','GB-SCT','PH','TW','AU','NZ','IT','PT','ES','MX','DE','BR'];
+  const preferredOrder = ['KR','VN','US','JP','VA','IE','GB-ENG','GB-SCT','PH','TW','AU','NZ','IT','PT','ES','MX','AR','DE','BR'];
   const modules = modulePaths.map(modulePath => {
     const source = fs.readFileSync(modulePath, 'utf8');
     const jurisdictionMatch = source.match(/\bjurisdiction\s*:\s*["']([^"']+)["']/u);

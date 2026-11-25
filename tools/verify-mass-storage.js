@@ -10,7 +10,7 @@ function inspect(value){
   if(Array.isArray(item))item.forEach(inspect);else inspect(item);
  }
 }
-for(const module of Object.values(loaded.runtime.registry))module.ordinary.forEach(entry=>{
+for(const module of Object.values(loaded.runtime.registry))module.ordinary?.forEach(entry=>{
  inspect(entry);assert.deepEqual(canonicalMassEntry(hydrateMassEntry(entry)),canonicalMassEntry(entry),'Instruction placement did not round-trip');
 });
 for(const country of loaded.countries){
