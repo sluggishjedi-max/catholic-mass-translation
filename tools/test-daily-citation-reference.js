@@ -14,4 +14,17 @@ for(const [name,book,reference] of [['마태오','마태','28,16-20'],['마르�
   assert.equal(gospel.lines.find(line=>line.role==='body')?.text,'그때에 예수님께서 제자들에게 이르셨다.');
  }
 }
+assert.equal(r.run("passageCitationsEquivalent('gospel_accl','묵시 2,10 참조','Apoc 2, 10c','KR','ES')"),true);
+assert.deepEqual(JSON.parse(JSON.stringify(r.run("strictFormatSection('ES','gospel_accl',{lines:['Apoc 2,10c','Aleluia. Sé fiel hasta la muerte y te daré la corona de la vida. Aleluia.']}).lines.map(line=>line.sp)"))),['R.','V.','R.']);
+for(const caption of ['', 'El Maestro instruye a sus discípulos']){
+ r.window.__conoFixture='<html><body><p>Evangelio</p>'+ (caption?'<p>'+caption+'</p>':'')
+  +'<p>✠ Evangelio de nuestro Señor Jesucristo según san Lucas 21, 12-19</p><p>Jesús habló a sus discípulos.</p><p>Palabra del Señor.</p>';
+ const plan="ordoConoSurDaily.parse({document:parseHtml(__conoFixture),plan:{url:'fixture',title:'Día',requireTwo:false},date:new Date(2026,10,25),formatSection:strictFormatSection,summarized:strictEnsureReadingSummarySlots})";
+ r.window.__conoFixture=r.window.__conoFixture.replace('<body>','<body><p>Lectura del libro del Apocalipsis 15, 1-4</p><p>Juan fue testigo.</p><p>Palabra de Dios.</p><p>Salmo 97, 1</p><p>Un canto al Señor.</p>');
+ const gospel=r.run(plan+".data.gospel");
+ assert.equal(gospel.cit_es,'Lucas 21, 12-19');
+ assert.equal(gospel.lines.find(row=>row.role==='intro')?.text,'Evangelio de nuestro Señor Jesucristo según san Lucas');
+ assert.equal(gospel.lines.find(row=>row.role==='summary')?.text,caption||undefined);
+ assert.equal(gospel.lines.find(row=>row.role==='body')?.text,'Jesús habló a sus discípulos.');
+}
 console.log(JSON.stringify({cases,referenceKeptInCitation:true,optionsIndependent:true,ordinaryBodyWordsPreserved:true}));}finally{r.close();}

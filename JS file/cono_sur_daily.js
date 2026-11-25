@@ -105,8 +105,9 @@
         const chapters = [];
         let active;
         let sawPsalm=false;
-        const start = (key, header) => {
-            active={key,header,lines:[]};
+        let gospelSummary=null;
+        const start = (key, header, summary='') => {
+            active={key,header,summary,lines:[]};
             chapters.push(active);
         };
         for (const line of lines) {
@@ -118,8 +119,11 @@
                 continue;
             }
             if (/^(?:[+✠]\s*)?evangelio (?:de nuestro senor|del senor|segun san)|^lectura del santo evangelio/u.test(key)) {
-                start('gospel',line); continue;
+                start('gospel',line,gospelSummary?.join(' ')||'');
+                gospelSummary=null;
+                continue;
             }
+            if (key==='evangelio') { active=undefined; gospelSummary=[]; continue; }
             if (/^lectura d(?:el|e) |^(?:comienzo|principio) d(?:el |e la )(?:libro|carta|profecia)\b/u.test(key)) {
                 start(sawPsalm?'reading2':'reading1',line); continue;
             }
@@ -128,10 +132,15 @@
                 start('psalm',line.replace(/^Salmo(?: responsorial)?\s*/iu,'')); continue;
             }
             if (/^(?:aclamacion (?:al|antes del) evangelio|versiculo antes del evangelio)(?:\s+|$)|^alelu[iy]a(?:\s+(?:cf\.\s*)?[a-z\d][^!]*\d.*)?$/u.test(key)) {
+                gospelSummary=null;
                 if (active?.key!=='gospel_accl') start('gospel_accl',line.replace(/^(?:Aclamación (?:al|antes del) Evangelio|Versículo antes del Evangelio|Alelu[iy]a)\s*/iu,''));
                 continue;
             }
-            if (/^(?:evangelio|o bien[:.]?)$/u.test(key)) { active=undefined; continue; }
+            if (gospelSummary && !/^[+✠†]$/u.test(key) && !/^o bien[:.]?$/u.test(key)) {
+                gospelSummary.push(line);
+                continue;
+            }
+            if (/^o bien[:.]?$/u.test(key)) { active=undefined; continue; }
             if (/^palabra (?:de dios|del senor)\.?$/u.test(key)) {
                 if(active) active.lines.push(line);
                 active=undefined;
@@ -164,12 +173,16 @@
     function parse({document, iso, date, plan, formatSection, summarized, fallbackColor}) {
         const chapters=readingSections(scoped(document,plan.scope,date,iso));
         const data={};
-        for(const {key,header,lines} of chapters) {
+        for(const {key,header,summary,lines} of chapters) {
             if(!lines.length) continue;
             const reading=['reading1','reading2','gospel'].includes(key);
             const displayHeader = !['collect','prayer_offerings','prayer_after'].includes(key);
             const citation = reading ? referenceFromProclamation(header) : key==='psalm' && /^\d/u.test(header) ? 'Sal '+header : '';
-            const input=[...(header && displayHeader ? [header] : []),...lines];
+            const proclamation = key==='gospel' ? header.replace(/^\s*[+†✠]\s*/u,'')
+                .replace(/\s+\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]+$/u,'') : header;
+            const input=[...(summary ? ['<'+summary+'>'] : []),
+                ...(proclamation && displayHeader ? [proclamation] : []),
+                ...(key==='gospel' && citation ? [citation] : []),...lines];
             const section=formatSection('ES',key,{text:input.join('\n'),lines:input});
             if(!section?.text) continue;
             if(citation) section.cit_es=citation;
@@ -182,9 +195,14 @@
         const required=['reading1','psalm','gospel',...(plan.requireTwo?['reading2']:[])];
         const missing=required.filter(key=>!data[key]?.text);
         if(missing.length) throw Error('Cono Sur lectionary is missing '+missing.join(', '));
-        return summarized({title:plan.title,sourceRank:plan.rank,color:fallbackColor,data,
+        const result=summarized({title:plan.title,sourceRank:plan.rank,color:fallbackColor,data,
             sourceUrl:plan.url,sourceName:plan.scope==='dated'?'Eucaristía Diaria · Arzobispado de Santiago':'Leccionario del Cono Sur · Curas.com.ar',
             sourceMode:'cono-sur-lectionary'},'ES');
+        const gospel=result.data.gospel;
+        for(const section of [gospel,...(gospel.options||[])]) {
+            section.lines=section.lines.filter(line=>line.role!=='summary'||line.text);
+        }
+        return result;
     }
 
     global.ordoConoSurDaily = Object.freeze({readingPlan,parse});

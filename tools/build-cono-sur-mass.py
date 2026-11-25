@@ -110,6 +110,69 @@ def shape(lines, speaker=''):
     return {'text_es':lines, **({'sp_es':speaker} if speaker else {})}
 
 
+def paired_line(text, speaker, key):
+    return {**shape(text, speaker), '__massEditorPairKeys': {'text_es': f'{key}:text'}}
+
+
+def numbered_spoken_rows(source, indices, speaker):
+    result = []
+    last_speaker = ''
+    for row in source:
+        if 'rubric_es' in row:
+            result.append({**row, '__massEditorPairKeys': {'rubric_es': f'es:{len(result)}:rubric'}})
+            continue
+        pair = indices.pop(0)
+        role = speaker.get(pair, '')
+        result.append(paired_line(txt(row), role if role != last_speaker else '', pair))
+        last_speaker = role
+    return result
+
+
+def greetings(initial, main, end):
+    sign = locate(initial, r'^En el nombre del Padre')
+    opening = initial[:sign] + [paired_line(txt(initial[sign]), 'C.', 0)]
+    opening += initial[sign+1:-1] + [paired_line(txt(initial[-1]), 'R.', 1)]
+    response = locate(main, r'^Y con tu espíritu')
+    bishop = locate(main, r'^El obispo, en vez')
+    second = locate(main, r'^O bien:$')
+    third = locate(main, r'^O bien:$', second + 1)
+    ending = [main[response-1], paired_line(txt(main[response]), 'R.', 3)] + end
+
+    def option(key, label, spoken, instructions):
+        common = [{**row, '__massEditorPairKeys': {'rubric_es': f'es:greeting:{i}:rubric'}}
+                  if 'rubric_es' in row else row for i,row in enumerate(opening + instructions)]
+        greeting = paired_line('<br>'.join(txt(row) for row in spoken), 'C.', 2)
+        return key, label, common + [greeting] + ending
+
+    options = [
+        option('A','Fórmula 1',main[1:second],main[:1]),
+        option('B','Fórmula 2',main[second+1:third],main[:1]),
+        option('C','Fórmula 3',main[third+1:bishop],main[:1]),
+        option('D','Saludo del obispo',main[bishop+1:response-1],[main[bishop]])
+    ]
+    season = ''
+    number = 0
+    start = None
+    variants = main[response+2:]
+    for index,row in enumerate(variants + [{'rubric_es':'FIN'}]):
+        if 'rubric_es' not in row:
+            continue
+        if start is not None:
+            text = variants[start:index]
+            if text:
+                number += 1
+                caption = (re.search(r'\((.+?)\)', condition) or (None, ''))[1]
+                label = caption or f'{season} {number}'
+                options.append(option(f'cono_greeting_{len(options)-3}',label,text,[variants[start-1]]))
+        marker = txt(row)
+        if marker.startswith('TIEMPO'):
+            season = marker.title()
+            number = 0
+        condition = marker
+        start = index + 1
+    return options
+
+
 def part(identifier, title, lines, **fields):
     return {'id':identifier, 'type':'part','header':{'es':title},'lines':body(lines),**fields}
 
@@ -226,21 +289,58 @@ def build_ordinary(directory, songs):
     first = prefix(first,r'^O bien \(segunda forma')
     pen2 = prefix(pen[second:third],r'^O bien:\s*\(tercera forma')
     pen3 = pen[third:]
-    dismiss = cut(144,145)
+    dismiss = body(cut(144,145))
     final = suffix(dismiss,r'^El pueblo responde')
     dismiss = dismiss[:len(dismiss)-len(final)]
     first_dismiss = locate(dismiss,r'^Pueden ir en paz')
     separators = [i for i,x in enumerate(dismiss) if txt(x).startswith('O bien')]
     bounds = [first_dismiss,*separators,len(dismiss)]
-    first_collect = cut(9,10)
-    collect = prefix(first_collect,r'^Amén') + [shape('(Oración colecta del día)'),shape('Amén.','R.')]
-    dismissal = [(str(i+1),' '.join(txt(r) for r in dismiss[start:end] if 'text_es' in r),dismiss[:first_dismiss]+dismiss[start:end]+final)
-                 for i,(start,end) in enumerate(zip(bounds,bounds[1:]))]
+    dismissal = []
+    for key, start, end in zip(('D','cono_joy','C','cono_name','cono_easter'),bounds,bounds[1:]):
+        option = dismiss[start:end]
+        transition = option[0] if 'rubric_es' in option[0] else None
+        spoken = [txt(row) for row in option if 'text_es' in row]
+        instructions = dismiss[:first_dismiss] + ([transition] if transition else [])
+        dismissal.append((key,' '.join(spoken),[
+            *instructions, paired_line('<br>'.join(spoken), 'C. (D.)', 0),
+            *final[:-1], paired_line(txt(final[-1]), 'R.', 1)
+        ]))
+
+    first_collect = body(cut(9,10))
+    opener = locate(first_collect,r'^Oremos$')
+    amen = locate(first_collect,r'^Amén')
+    collect = [
+        *first_collect[:opener], paired_line(txt(first_collect[opener]), 'C.', 0),
+        *first_collect[opener+1:amen],
+        paired_line('(Oración colecta del día)', '', 1),
+        paired_line('(Conclusión de la oración)', '', 2),
+        paired_line(txt(first_collect[amen]), 'R.', 3)
+    ]
+    greeting_versions = greetings(body(cut(1,2)),body(cut(2,3)),body(prefix(cut(3,4),r'^Acto penitencial$')))
+    gospel_dialog = body(cut(15,16))
+    gospel_response = body(cut(16,17))
+    gospel = [
+        paired_line(txt(gospel_dialog[locate(gospel_dialog,r'^El Señor esté')]), 'C. (D.)', 0),
+        paired_line(txt(gospel_dialog[locate(gospel_dialog,r'^Y con tu espíritu')]), 'R.', 1),
+        paired_line('Evangelio de nuestro Señor Jesucristo según san (…)', 'C. (D.)', 2),
+        paired_line(txt(gospel_dialog[locate(gospel_dialog,r'^Gloria a ti')]), 'R.', 3),
+        paired_line('(Evangelio del día)', '', 4),
+        paired_line(txt(gospel_response[locate(gospel_response,r'^Palabra del Señor')]), 'C. (D.)', 5),
+        paired_line(txt(gospel_response[locate(gospel_response,r'^Gloria a ti')]), 'R.', 6)
+    ]
+    simple = body(cut(141,143))
+    bishop = body(cut(143,144))
+    simple_keys = [0,1,3,'es:blessing:trinity','es:blessing:spirit',4,5]
+    bishop_keys = [0,1,2,3,4,5,7,'es:bishop:father','es:bishop:son','es:bishop:spirit','es:bishop:saint',8,9]
+    blessing = [
+        ('A','Bendición simple',numbered_spoken_rows(simple,simple_keys,{0:'C.',1:'R.',3:'C.',5:'R.'})),
+        ('B','Bendición pontifical',numbered_spoken_rows(bishop,bishop_keys,{0:'C.',1:'R.',2:'C.',3:'R.',4:'C.',5:'R.',7:'C.',9:'R.'}))
+    ]
     creed1 = prefix(cut(18,19),r'^19\.$') if any(txt(x)=='19.' for x in cut(18,19)) else cut(18,19)
     intro = [
         section('1. THE INTRODUCTORY RITES','Ritos iniciales'),
         part('1.1 entrance','Antífona de entrada',[shape('(Antífona de entrada del día)')]),
-        part('1.2 greeting','Saludo',prefix(cut(1,4),r'^Acto penitencial$')),
+        selectable('1.2 greeting','Saludo',greeting_versions),
         selectable('1.3 penitential','Acto penitencial',[('A','Confesión general',first),('B','Señor, ten misericordia',pen2),('C','Invocaciones',pen3)]),
         part('1.4 kyrie','Señor, ten piedad',cut(7,8)),
         part('1.5 gloria','Gloria',cut(8,9),**{'if':'sunday'}),
@@ -251,7 +351,7 @@ def build_ordinary(directory, songs):
         part('2.3 reading2','Segunda lectura',[shape('(Segunda lectura del día)')],**{'if':'sunday'}),
         part('2.4 Sequence','Secuencia',[shape('(Secuencia del día)')],**{'if':'easter_or_pentecost'}),
         part('2.5 gospel_accl','Aclamación antes del Evangelio',[shape('(Aclamación antes del Evangelio)')]),
-        part('2.6 gospel','Evangelio',[shape('(Evangelio del día)')]),
+        part('2.6 gospel','Evangelio',gospel),
         part('2.7 homily','Homilía',cut(17,18)),
         selectable('2.8 creed','Profesión de fe',[('1','Credo niceno-constantinopolitano',creed1),('2','Símbolo de los Apóstoles',cut(19,20))],**{'if':'sunday'}),
         part('2.9 universal','Oración universal',prefix(cut(20,21),r'^Liturgia Eucarística'),**{'if':'sunday'}),
@@ -270,7 +370,7 @@ def build_ordinary(directory, songs):
         part('3.9 prayer_after','Oración después de la comunión',[shape('Oremos.','V.'),shape('(Oración después de la comunión del día)'),shape('Amén.','R.')]),
         section('4. THE CONCLUDING RITES','Rito de conclusión'),
         part('4.1 announcement','Avisos',cut(140,141)),
-        selectable('4.2 blessing','Bendición',[('1','Bendición simple',cut(141,143)),('2','Bendición pontifical',cut(143,144))]),
+        selectable('4.2 blessing','Bendición',blessing),
         selectable('4.3 dismissal','Despedida',dismissal),
         part('4.4 final_song','Conclusión',prefix(all_rows[indices[145]:],r'^BENDICIONES SOLEMNES'))
     ]

@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.4-20261125-3';
+    const APP_VERSION = 'V31.4-20261125-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -11890,7 +11890,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ZH: [/^恭讀/u],
             IT: [/^(?:Dal|Dalla|Dalle|Dagli|Dai|Da)\b/iu],
             PT: [/^Leitura d[ao]\b/iu, /^Evangelho de Nosso Senhor\b/iu],
-            ES: [/^(?:Del|De la|De los|De las)\b/iu],
+            ES: [/^(?:Del|De la|De los|De las)\b/iu, /^(?:Lectura del santo Evangelio|Evangelio (?:de nuestro Señor|del Señor|según))\b/iu],
             DE: [/^Lesung(?:\s+aus)?\b/iu, /^Aus dem heiligen Evangelium\b/iu]
         };
         if (lang === 'JP') {
@@ -12249,14 +12249,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             verseBuffer = [];
             if (verse) out.push(strictParsedLine('V.', verse));
         };
-        (blocks || []).forEach(rawLine => {
+        (blocks || []).flatMap(line => String(line)
+            .replace(/(^|(?<=[.!?])\s+)(¡?Alelu[iy]a[.!]?)(?=\s|$)/giu, '$1\nR. $2\n')
+            .split('\n')).forEach(rawLine => {
             if (strictLooksLikeCitation(rawLine, 'ES')) return;
             const cleaned = strictCleanLine(rawLine);
             if (!cleaned) return;
             const marked = cleaned.match(/^R\.\s*(.*)$/iu);
             if (marked) {
                 flushVerse();
-                if (marked[1]) response = response || strictCleanLine(marked[1]);
+                if (marked[1]) response = strictCleanLine(marked[1]);
                 if (response) out.push(strictParsedLine('R.', response));
                 return;
             }
@@ -12685,7 +12687,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 : (lang === 'PT'
                     ? /^(?:Leitura d[ao]|Evangelho de Nosso Senhor)\b/iu.test(first)
                     : (lang === 'ES'
-                        ? /^(?:Del|De la|De los|De las)\b/iu.test(first)
+                        ? /^(?:Del|De la|De los|De las|Lectura del santo Evangelio|Evangelio (?:de nuestro Señor|del Señor|según))\b/iu.test(first)
                         : /^(?:Lesung|Aus dem heiligen Evangelium)\b/iu.test(first)));
             if (first && first.length <= 420 && !introLike && !strictLooksLikeCitation(first, lang)) {
                 summaryResult = { summary: first, blocks: blocks.filter((_, index) => index !== summaryIndex) };
@@ -15592,17 +15594,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         const canonical = matches[0].line;
         const fixed = factory();
-        SUPPORTED_LANGS.map(lang => lang.toLowerCase()).forEach(lower => {
-            canonical[`sp_${lower}`] = fixed[`sp_${lower}`] || '';
-            canonical[`text_${lower}`] = fixed[`text_${lower}`] || '';
-            canonical[`text_${lower}_ai`] = '';
-            canonical[`role_${lower}`] = '';
-            canonical[`rubric_${lower}`] = '';
-        });
-        matches.slice(1).reverse().forEach(entry => {
-            if (prayerFrameLineContainsOnly(entry.line, textPredicate)) {
-                targetLines.splice(entry.index, 1);
-            }
+        for (const lower of SUPPORTED_LANGS.map(lang => lang.toLowerCase())) {
+            const localized = matches.find(({line}) => textPredicate(line[`text_${lower}`]))?.line;
+            canonical[`sp_${lower}`] = localized?.[`sp_${lower}`] || fixed[`sp_${lower}`] || '';
+            canonical[`text_${lower}`] = localized?.[`text_${lower}`] || fixed[`text_${lower}`] || '';
+        }
+        matches.slice(1).reverse().forEach(({line,index}) => {
+            if (prayerFrameLineContainsOnly(line, textPredicate)) targetLines.splice(index, 1);
+            else SUPPORTED_LANGS.map(lang => lang.toLowerCase()).forEach(lower => {
+                if (textPredicate(line[`text_${lower}`])) clearParsedLineLanguage(line, lower);
+            });
         });
     }
 
@@ -15791,10 +15792,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
         const existingTargets = ensureExistingRoleTargetLines(targetLines, baseId, roles);
         if (existingTargets) return existingTargets;
+        let insertAt = parsedInsertIndex(targetLines, baseId);
         const editable = targetLines
             .map((line, index) => ({ line, index }))
-            .filter(item => !isProtectedParsedTargetLine(item.line, baseId));
-        let insertAt = parsedInsertIndex(targetLines, baseId);
+            .filter(item => (!isPrayerPart(baseId) || item.index < insertAt)
+                && !isProtectedParsedTargetLine(item.line, baseId));
         while (editable.length < roles.length) {
             const inserted = emptyMassLine();
             targetLines.splice(insertAt, 0, inserted);
@@ -17266,7 +17268,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['blessed_hear_keep_word', /행복.*하느님.*말씀.*지키|하느님.*말씀.*듣고.*지키|phuc.*lang nghe.*tuan giu.*loi thien chua|blessed.*hear.*word.*keep|feliz.*ouve.*observa.*palavra/i],
             ['david_kingdom_coming', /주님.*이름.*오시는.*다윗.*나라|chuc tung.*nhan danh.*d[aá].*vit.*trieu dai|blessed.*(?:name|kingdom).*david|上主之名.*達味之國|主の名.*ダビドの国|bendito.*nome do senhor.*reino/i],
             ['watch_ready_son_man', /깨어.*준비.*사람의.*아들|canh thuc.*san sang.*con nguoi|watch.*ready.*son of man|警醒.*準備.*人子|目覚めて.*人の子.*思いがけ|vigiai.*dia.*nao esperais/i],
-            ['faithful_death_crown', /죽(?:음|을 때).*충실.*생명.*화관|trung thanh.*chet.*trieu thien|faithful.*death.*crown|死に至るまで忠実.*命の冠|fiel ate a morte.*coroa da vida/i],
+            ['faithful_death_crown', /죽(?:음|을 때).*충실.*생명.*화관|trung thanh.*chet.*trieu thien|faithful.*death.*crown|fiel hasta la muerte.*corona de la vida|死に至るまで忠実.*命の冠|fiel ate a morte.*coroa da vida/i],
             ['raise_heads_redemption_near', /허리.*펴고.*머리.*(?:구원|속량)|dung thang.*ngang dau.*cuu chuoc|stand.*raise.*heads.*redemption|抬起頭.*救(?:援|贖)|身を起こし.*頭を上げ.*解放|頭を上げ.*救い.*近|erguei.*cabeca.*libertacao/i],
             ['watch_pray_stand_son_man', /깨어.*기도.*사람의.*아들|사람의.*아들.*깨어.*기도|tinh thuc.*cau nguyen.*con nguoi|watch.*pray.*stand.*son of man|時を選ばず.*祈り.*人の子|目覚めて.*祈.*人の子.*立|vigiai.*orai.*filho do homem/i],
             ['show_mercy_grant_salvation', /자애.*보여.*구원|to.*tinh thuong.*on cuu do|show.*mercy.*salvation|慈しみ.*救い|mostrai.*bondade.*salvacao/i],
@@ -19026,7 +19028,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 copyright += `© Irish Episcopal Commission for Liturgy, 2009.<br>`;
             }
             if(state.currentLoc === 'LA' || state.targetLang === 'LA') copyright += `© Libreria Editrice Vaticana<br>`;
-            if(state.currentLoc === 'JP' || state.targetLang === 'JP') copyright += `© apud Administrationem Patrimonii Sedis Apostolicae in Civitate Vaticana, 2008.<br>`;
+            if (state.currentLoc === 'JP' || state.targetLang === 'JP') {
+                copyright += '※ 일본어 입당송, 본기도, 예물기도, 영성체송, 영성체후기도는 원문출처 사정상 제공되지 않습니다.<br>';
+                copyright += '© apud Administrationem Patrimonii Sedis Apostolicae in Civitate Vaticana, 2008.<br>';
+            }
             if(state.transMode === 'ai') copyright += `ⓒ Google AI Translation, 2026.`;
         }
         appVersionFooterHtml();
@@ -20068,23 +20073,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function localizedLocationOptionLabel(locationCode, uiLang = state.uiLang) {
         const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
         const representativeCode = representativeLocationSelectionCode(locationCode);
-        const beta = ['KR', 'VN', 'US'].includes(representativeCode) ? '' : ' (Beta)';
+        const stage = ['US','KR','VN'].includes(representativeCode) ? 'release'
+            : ['JP','VA','TW'].includes(representativeCode) ? 'beta' : 'pre-version';
         const location = locationMeta[representativeCode];
         if (!location) return locationCode;
         const combinedNames = localizedCombinedJurisdictionNames[ui] || localizedCombinedJurisdictionNames.KR;
         if (representativeCode === 'VA') {
-            return `${combinedNames.VA || 'Universal Roman Rite'} | Lingua Latina${beta}`;
+            return `${combinedNames.VA || 'Universal Roman Rite'} | Lingua Latina (${stage})`;
         }
         if (representativeCode === 'INTL') {
             const country = (localizedCountryNames[ui] && localizedCountryNames[ui].INTL) || 'Other region';
-            return `${country} | English${beta}`;
+            return `${country} | English (${stage})`;
         }
         const entry = locationSelectionEntries.find(candidate => candidate.code === representativeCode);
         if (!entry) return locationCode;
         const country = combinedNames[representativeCode]
             || (localizedCountryNames[ui] && localizedCountryNames[ui][representativeCode])
             || representativeCode;
-        return `${country}(${entry.conference}) | ${entry.nativeLanguage}${beta}`;
+        return `${country}(${entry.conference}) | ${entry.nativeLanguage} (${stage})`;
     }
 
     function appendLocationSelectionOption(parent, entry, ui) {
@@ -20973,6 +20979,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (line?.__ordinarySource && !line.__dailyCollected && !['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','communion','prayer_after'].includes(baseId)) return true;
         if (line?.__sourceOnlyOriginal) return true;
         if (line?.__readingAlignmentBlank?.[lower]) return true;
+        if (baseId === 'gospel' && lineHasAnyRole(line, 'summary') && !line[`role_${lower}`]) return true;
         if (strictReadingKeys.has(baseId) && (isDailyEndingLine(line) || isGospelDialogueLine(line) || lineHasAnyRole(line, 'intro'))) return true;
         if (shouldSuppressAIFallbackLine(line, baseId)) return true;
         if (strictPrayerKeys.has(baseId)
@@ -21733,7 +21740,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const item = prefaceSelectItems.get(lang);
         if (!item) return;
         const refresh = () => {
-            refreshPrefaceCaptionRows();
             if (!select.isConnected) return;
             for (const option of select.options) {
                 const full = getEucharistSongLabel(item, option.value, lang);
@@ -21817,7 +21823,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function ensureDismissalDefaultOption(item, baseId) {
         if (baseId !== 'dismissal' || !item || !item.variants) return;
         const preferred = defaultDismissalOptionKeyForLocation();
-        const fallback = item.variants[preferred] ? preferred : Object.keys(item.variants)[0];
+        const active = currentLeftRightLowerKeys();
+        const keys = Object.keys(item.variants);
+        const paired = keys.filter(key => [active.left,active.right].every(lower =>
+            item.variants[key].lines?.some(line => cleanNodeText(line[`text_${lower}`])
+                && !strictIsProclamationEnding(line[`text_${lower}`]))));
+        const fallback = paired.includes(preferred) ? preferred : paired[0] || (item.variants[preferred] ? preferred : keys[0]);
         if (!fallback) return;
         const current = state.options.dismissal;
         if (!current || current === state.autoDismissalOptionKey || !item.variants[current]) {
@@ -21971,8 +21982,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     };
 
     function prefaceNativeTitle(entry, lang) {
-        return [entry?.title, entry?.label, entry?.prefaceTitle].map(value =>
-            cleanNodeText(value?.[lang.toLowerCase()] || value?.[lang])).find(Boolean) || '';
+        const localized = value => cleanNodeText(value?.[lang.toLowerCase()] || value?.[lang]);
+        const title = [entry?.title, entry?.label, entry?.prefaceTitle].map(localized).find(Boolean) || '';
+        const subtitle = localized(entry?.subtitle);
+        return title && subtitle ? title+' — '+subtitle : title;
     }
 
     function prefaceBodyRows(entry, lang) {
@@ -22089,17 +22102,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
 
-    function refreshPrefaceCaptionRows() {
-        document.querySelectorAll('[data-preface-caption-key]').forEach(caption => {
-            const lang = caption.dataset.prefaceCaptionLang;
-            const key = caption.dataset.prefaceCaptionKey;
-            const item = prefaceSelectItems.get(lang);
-            if (!item || !getEucharistSongMap(item)[key]) return;
-            caption.textContent = getEucharistSongLabel(item, key, lang);
-            void translatePrefaceCaptions(item, [key], lang, render, true);
-        });
-    }
-
     async function retryPrefaceTranslation(translate) {
         try {
             return await translate(30000);
@@ -22123,25 +22125,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const added = {};
         for (const lang of new Set([left, right])) {
             const {parts, missingBody} = prefaceCaption(item, key, lang);
-            const needsCaption = parts.some(part => part.id);
             if (parts.some(part => part.id && !part.text)) {
                 void translatePrefaceCaptions(item, [key], lang, render, true);
             }
             prefaceSelectItems.set(lang, item);
             const lower = lang.toLowerCase();
-            const caption = '<strong class="preface-translation-title" data-preface-caption-lang="' + escapeAttr(lang)
-                + '" data-preface-caption-key="' + escapeAttr(key) + '">'
-                + escapeHtml(getEucharistSongLabel(item, key, lang)) + '</strong>';
-            if (!missingBody) {
-                if (needsCaption) added[lower] = caption;
-                continue;
-            }
+            if (!missingBody) continue;
             const sourceRows = prefaceSourceLanguages(lang).map(code => prefaceBodyRows(entry, code)).find(rows => rows.length);
             if (!sourceRows) continue;
             const source = sourceRows.map(text => plainTextFromHtml(text.replace(/<br\s*\/?>/giu, '\n'))).join('\n\n');
             if (!source.trim()) continue;
             queuePrefaceTranslation(source, lang);
-            added[lower] = caption + '<br>' + makeAIButton(source, '', lang);
+            added[lower] = makeAIButton(source, '', lang);
         }
         return Object.keys(added).length ? [{__prefaceTranslations:added, rows:lines}] : lines;
     }

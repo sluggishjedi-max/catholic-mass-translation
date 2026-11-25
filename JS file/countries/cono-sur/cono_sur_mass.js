@@ -22,408 +22,2000 @@
   },
   {
     "id": "1.2 greeting",
-    "type": "part",
+    "type": "selectable",
     "header": {
       "es": "Saludo"
     },
-    "lines": [
-      {
-        "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada."
-      },
-      {
-        "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede."
-      },
-      {
-        "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:"
-      },
-      {
-        "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo."
-      },
-      {
-        "rubric_es": "El pueblo responde:"
-      },
-      {
-        "text_es": "Amén."
-      },
-      {
-        "rubric_es": "Después el sacerdote, extendiendo las manos, saluda al pueblo, diciendo:"
-      },
-      {
-        "text_es": "La gracia de nuestro Señor Jesucristo,"
-      },
-      {
-        "text_es": "el amor de Dios Padre"
-      },
-      {
-        "text_es": "y la comunión del Espíritu Santo"
-      },
-      {
-        "text_es": "estén con todos ustedes"
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "La gracia y la paz de parte de Dios, nuestro Padre,"
-      },
-      {
-        "text_es": "y Jesucristo el Señor,"
-      },
-      {
-        "text_es": "estén con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "El Señor esté con ustedes."
-      },
-      {
-        "rubric_es": "El obispo, en vez de las anteriores fórmulas, en este primer saludo dice:"
-      },
-      {
-        "text_es": "La paz esté con ustedes."
-      },
-      {
-        "rubric_es": "El pueblo responde:"
-      },
-      {
-        "text_es": "Y con tu espíritu."
-      },
-      {
-        "rubric_es": "También pueden usarse otras fórmulas de saludos propias de cada tiempo."
-      },
-      {
-        "rubric_es": "TIEMPO DE ADVIENTO"
-      },
-      {
-        "text_es": "El Señor, que viene a salvarnos,"
-      },
-      {
-        "text_es": "esté con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Que la salvación que está cerca de nosotros porque llega Cristo,"
-      },
-      {
-        "text_es": "los haga crecer en la esperanza que no defrauda"
-      },
-      {
-        "text_es": "y esté ahora y siempre con ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "El Señor todopoderoso,"
-      },
-      {
-        "text_es": "el que era, el que es y el que vendrá,"
-      },
-      {
-        "text_es": "acreciente en vosotros el deseo de su Venida"
-      },
-      {
-        "text_es": "y esté siempre con ustedes."
-      },
-      {
-        "rubric_es": "TIEMPO DE NAVIDAD"
-      },
-      {
-        "text_es": "La paz y el amor de Dios, nuestro Padre,"
-      },
-      {
-        "text_es": "que se han manifestado en Cristo, nacido para nuestra salvación,"
-      },
-      {
-        "text_es": "estén con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Que la gracia del Señor Jesús,"
-      },
-      {
-        "text_es": "el Verbo hecho carne en María siempre virgen,"
-      },
-      {
-        "text_es": "permanezca siempre con ustedes."
-      },
-      {
-        "rubric_es": "O bien (Sagrada Familia):"
-      },
-      {
-        "text_es": "Bendigamos a Dios"
-      },
-      {
-        "text_es": "que nos reúne en la Familia de Jesús,"
-      },
-      {
-        "text_es": "y que su amor de Padre"
-      },
-      {
-        "text_es": "esté constantemente con ustedes."
-      },
-      {
-        "rubric_es": "O bien (Octava de Navidad):"
-      },
-      {
-        "text_es": "Que la gracia y la paz de Cristo, el Señor,"
-      },
-      {
-        "text_es": "Hijo de Dios e hijo de María,"
-      },
-      {
-        "text_es": "estén con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien (Epifanía):"
-      },
-      {
-        "text_es": "Que el Dios invisible,"
-      },
-      {
-        "text_es": "hecho visible en Jesucristo, su Hijo hecho hombre,"
-      },
-      {
-        "text_es": "se les manifieste plenamente,"
-      },
-      {
-        "text_es": "y que el resplandor de su luz"
-      },
-      {
-        "text_es": "permanezca ahora y siempre con ustedes."
-      },
-      {
-        "rubric_es": "TIEMPO DE CUARESMA"
-      },
-      {
-        "text_es": "La gracia y el amor de Jesucristo,"
-      },
-      {
-        "text_es": "que nos llama a la conversión,"
-      },
-      {
-        "text_es": "esté con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Que el Espíritu de Dios"
-      },
-      {
-        "text_es": "nos ayude a responder dócilmente a su llamado penitencial,"
-      },
-      {
-        "text_es": "y que su gracia salvadora"
-      },
-      {
-        "text_es": "permanezca con cada uno de ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Que el Señor Jesús los encamine hacia el amor de Dios Padre"
-      },
-      {
-        "text_es": "y les dé la perseverancia"
-      },
-      {
-        "text_es": "para renovar su compromiso bautismal,"
-      },
-      {
-        "text_es": "y que su amor misericordioso"
-      },
-      {
-        "text_es": "descienda y esté con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "De parte de Dios Padre y de Jesucristo,"
-      },
-      {
-        "text_es": "que nos amó y nos purificó de nuestros pecados con su sangre,"
-      },
-      {
-        "text_es": "gracia y paz a todos ustedes."
-      },
-      {
-        "rubric_es": "O bien (Domingo de Ramos):"
-      },
-      {
-        "text_es": "Sean bienvenidos a esta celebración,"
-      },
-      {
-        "text_es": "y que Cristo muerto y resucitado"
-      },
-      {
-        "text_es": "por nuestra salvación y la del mundo entero"
-      },
-      {
-        "text_es": "permanezca ahora y siempre con ustedes."
-      },
-      {
-        "rubric_es": "TIEMPO PASCUAL"
-      },
-      {
-        "text_es": "El Dios de la Vida,"
-      },
-      {
-        "text_es": "que ha resucitado a Jesucristo"
-      },
-      {
-        "text_es": "rompiendo las ataduras de la muerte,"
-      },
-      {
-        "text_es": "esté con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Bendito sea Dios,"
-      },
-      {
-        "text_es": "que en su gran misericordia"
-      },
-      {
-        "text_es": "nos hizo renacer por la Resurrección de Jesucristo;"
-      },
-      {
-        "text_es": "que su gracia salvadora esté siempre con ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Hemos resucitado con Jesús:"
-      },
-      {
-        "text_es": "que la esperanza de ser glorificados con él"
-      },
-      {
-        "text_es": "acreciente nuestra alegría"
-      },
-      {
-        "text_es": "y permanezca constantemente con ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Que el gozo y la paz"
-      },
-      {
-        "text_es": "de nuestro Buen Pastor resucitado"
-      },
-      {
-        "text_es": "nos acompañe en esta celebración,"
-      },
-      {
-        "text_es": "y estén con cada uno de ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Jesús resucitado vive entre nosotros."
-      },
-      {
-        "text_es": "Que su presencia salvadora"
-      },
-      {
-        "text_es": "nos anime en este tiempo pascual"
-      },
-      {
-        "text_es": "y permanezca con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien (Ascención del Señor):"
-      },
-      {
-        "text_es": "Que Jesús resucitado y glorificado a la derecha del Padre"
-      },
-      {
-        "text_es": "interceda por nosotros"
-      },
-      {
-        "text_es": "y permanezca con cada uno de ustedes."
-      },
-      {
-        "rubric_es": "O bien (Domingo de Pentecostés):"
-      },
-      {
-        "text_es": "Que el Espíritu de Jesús resucitado"
-      },
-      {
-        "text_es": "descienda abundantemente"
-      },
-      {
-        "text_es": "sobre nosotros y sobre todo el mundo,"
-      },
-      {
-        "text_es": "y que sus dones nos renueven y estén siempre con ustedes."
-      },
-      {
-        "rubric_es": "TIEMPO «DURANTE EL AÑO»"
-      },
-      {
-        "text_es": "El Señor, que dirige nuestros corazones"
-      },
-      {
-        "text_es": "para que amemos a Dios,"
-      },
-      {
-        "text_es": "esté con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "La paz, la caridad y la fe, de parte de Dios Padre,"
-      },
-      {
-        "text_es": "y de Jesucristo, el Señor, estén con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "El Dios de la esperanza,"
-      },
-      {
-        "text_es": "que por la acción del Espíritu Santo"
-      },
-      {
-        "text_es": "nos llena con su alegría y con su paz,"
-      },
-      {
-        "text_es": "permanezca siempre con todos ustedes."
-      },
-      {
-        "rubric_es": "O bien:"
-      },
-      {
-        "text_es": "Queridos hermanos:"
-      },
-      {
-        "text_es": "«Que Dios los llene de alegría y de paz en la fe»"
-      },
-      {
-        "text_es": "y que su Espíritu Santo esté constantemente con ustedes."
-      },
-      {
-        "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+    "variants": {
+      "A": {
+        "label": {
+          "es": "Fórmula 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "Después el sacerdote, extendiendo las manos, saluda al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La gracia de nuestro Señor Jesucristo,<br>el amor de Dios Padre<br>y la comunión del Espíritu Santo<br>estén con todos ustedes",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "B": {
+        "label": {
+          "es": "Fórmula 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "Después el sacerdote, extendiendo las manos, saluda al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La gracia y la paz de parte de Dios, nuestro Padre,<br>y Jesucristo el Señor,<br>estén con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "C": {
+        "label": {
+          "es": "Fórmula 3"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "Después el sacerdote, extendiendo las manos, saluda al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Señor esté con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "D": {
+        "label": {
+          "es": "Saludo del obispo"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "El obispo, en vez de las anteriores fórmulas, en este primer saludo dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La paz esté con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_1": {
+        "label": {
+          "es": "Tiempo De Adviento 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "TIEMPO DE ADVIENTO",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Señor, que viene a salvarnos,<br>esté con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_2": {
+        "label": {
+          "es": "Tiempo De Adviento 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que la salvación que está cerca de nosotros porque llega Cristo,<br>los haga crecer en la esperanza que no defrauda<br>y esté ahora y siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_3": {
+        "label": {
+          "es": "Tiempo De Adviento 3"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Señor todopoderoso,<br>el que era, el que es y el que vendrá,<br>acreciente en vosotros el deseo de su Venida<br>y esté siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_4": {
+        "label": {
+          "es": "Tiempo De Navidad 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "TIEMPO DE NAVIDAD",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La paz y el amor de Dios, nuestro Padre,<br>que se han manifestado en Cristo, nacido para nuestra salvación,<br>estén con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_5": {
+        "label": {
+          "es": "Tiempo De Navidad 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que la gracia del Señor Jesús,<br>el Verbo hecho carne en María siempre virgen,<br>permanezca siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_6": {
+        "label": {
+          "es": "Sagrada Familia"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Sagrada Familia):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Bendigamos a Dios<br>que nos reúne en la Familia de Jesús,<br>y que su amor de Padre<br>esté constantemente con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_7": {
+        "label": {
+          "es": "Octava de Navidad"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Octava de Navidad):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que la gracia y la paz de Cristo, el Señor,<br>Hijo de Dios e hijo de María,<br>estén con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_8": {
+        "label": {
+          "es": "Epifanía"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Epifanía):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que el Dios invisible,<br>hecho visible en Jesucristo, su Hijo hecho hombre,<br>se les manifieste plenamente,<br>y que el resplandor de su luz<br>permanezca ahora y siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_9": {
+        "label": {
+          "es": "Tiempo De Cuaresma 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "TIEMPO DE CUARESMA",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La gracia y el amor de Jesucristo,<br>que nos llama a la conversión,<br>esté con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_10": {
+        "label": {
+          "es": "Tiempo De Cuaresma 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que el Espíritu de Dios<br>nos ayude a responder dócilmente a su llamado penitencial,<br>y que su gracia salvadora<br>permanezca con cada uno de ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_11": {
+        "label": {
+          "es": "Tiempo De Cuaresma 3"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que el Señor Jesús los encamine hacia el amor de Dios Padre<br>y les dé la perseverancia<br>para renovar su compromiso bautismal,<br>y que su amor misericordioso<br>descienda y esté con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_12": {
+        "label": {
+          "es": "Tiempo De Cuaresma 4"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "De parte de Dios Padre y de Jesucristo,<br>que nos amó y nos purificó de nuestros pecados con su sangre,<br>gracia y paz a todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_13": {
+        "label": {
+          "es": "Domingo de Ramos"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Domingo de Ramos):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Sean bienvenidos a esta celebración,<br>y que Cristo muerto y resucitado<br>por nuestra salvación y la del mundo entero<br>permanezca ahora y siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_14": {
+        "label": {
+          "es": "Tiempo Pascual 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "TIEMPO PASCUAL",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Dios de la Vida,<br>que ha resucitado a Jesucristo<br>rompiendo las ataduras de la muerte,<br>esté con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_15": {
+        "label": {
+          "es": "Tiempo Pascual 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Bendito sea Dios,<br>que en su gran misericordia<br>nos hizo renacer por la Resurrección de Jesucristo;<br>que su gracia salvadora esté siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_16": {
+        "label": {
+          "es": "Tiempo Pascual 3"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Hemos resucitado con Jesús:<br>que la esperanza de ser glorificados con él<br>acreciente nuestra alegría<br>y permanezca constantemente con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_17": {
+        "label": {
+          "es": "Tiempo Pascual 4"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que el gozo y la paz<br>de nuestro Buen Pastor resucitado<br>nos acompañe en esta celebración,<br>y estén con cada uno de ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_18": {
+        "label": {
+          "es": "Tiempo Pascual 5"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Jesús resucitado vive entre nosotros.<br>Que su presencia salvadora<br>nos anime en este tiempo pascual<br>y permanezca con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_19": {
+        "label": {
+          "es": "Ascención del Señor"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Ascención del Señor):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que Jesús resucitado y glorificado a la derecha del Padre<br>interceda por nosotros<br>y permanezca con cada uno de ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_20": {
+        "label": {
+          "es": "Domingo de Pentecostés"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien (Domingo de Pentecostés):",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Que el Espíritu de Jesús resucitado<br>descienda abundantemente<br>sobre nosotros y sobre todo el mundo,<br>y que sus dones nos renueven y estén siempre con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_21": {
+        "label": {
+          "es": "Tiempo «Durante El Año» 1"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "TIEMPO «DURANTE EL AÑO»",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Señor, que dirige nuestros corazones<br>para que amemos a Dios,<br>esté con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_22": {
+        "label": {
+          "es": "Tiempo «Durante El Año» 2"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "La paz, la caridad y la fe, de parte de Dios Padre,<br>y de Jesucristo, el Señor, estén con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_23": {
+        "label": {
+          "es": "Tiempo «Durante El Año» 3"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "El Dios de la esperanza,<br>que por la acción del Espíritu Santo<br>nos llena con su alegría y con su paz,<br>permanezca siempre con todos ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
+      },
+      "cono_greeting_24": {
+        "label": {
+          "es": "Tiempo «Durante El Año» 4"
+        },
+        "lines": [
+          {
+            "rubric_es": "Reunido el pueblo, el sacerdote se dirige al altar, con los ministros, mientras se entona el canto de entrada.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Cuando llega al altar, habiendo hecho con los ministros una inclinación profunda, venera el altar con un beso y, si es oportuno, inciensa la cruz y el altar. Después se dirige con los ministros a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:1:rubric"
+            }
+          },
+          {
+            "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan con la señal de la cruz, mientras el sacerdote, vuelto hacia el pueblo, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:2:rubric"
+            }
+          },
+          {
+            "text_es": "En el nombre del Padre, y del Hijo y del Espíritu Santo.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:4:rubric"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:greeting:6:rubric"
+            }
+          },
+          {
+            "text_es": "Queridos hermanos:<br>«Que Dios los llene de alegría y de paz en la fe»<br>y que su Espíritu Santo esté constantemente con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo responde:"
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote o el diácono, u otro ministro, puede hacer una monición muy breve para introducir a los fieles en la Misa del día."
+          }
+        ]
       }
-    ]
+    }
   },
   {
     "id": "1.3 penitential",
@@ -1541,7 +3133,11 @@
         "rubric_es": "Acabado el himno, el sacerdote, con las manos juntas, dice:"
       },
       {
-        "text_es": "Oremos"
+        "text_es": "Oremos",
+        "sp_es": "C.",
+        "__massEditorPairKeys": {
+          "text_es": "0:text"
+        }
       },
       {
         "rubric_es": "Y todos, junto con el sacerdote, oran en silencio durante un breve espacio de tiempo."
@@ -1550,11 +3146,23 @@
         "rubric_es": "Entonces, el sacerdote, con las manos extendidas, dice la oración colecta, al final de la cual, el pueblo aclama:"
       },
       {
-        "text_es": "(Oración colecta del día)"
+        "text_es": "(Oración colecta del día)",
+        "__massEditorPairKeys": {
+          "text_es": "1:text"
+        }
+      },
+      {
+        "text_es": "(Conclusión de la oración)",
+        "__massEditorPairKeys": {
+          "text_es": "2:text"
+        }
       },
       {
         "text_es": "Amén.",
-        "sp_es": "R."
+        "sp_es": "R.",
+        "__massEditorPairKeys": {
+          "text_es": "3:text"
+        }
       }
     ]
   },
@@ -1633,7 +3241,52 @@
     },
     "lines": [
       {
-        "text_es": "(Evangelio del día)"
+        "text_es": "El Señor esté con ustedes.",
+        "sp_es": "C. (D.)",
+        "__massEditorPairKeys": {
+          "text_es": "0:text"
+        }
+      },
+      {
+        "text_es": "Y con tu espíritu.",
+        "sp_es": "R.",
+        "__massEditorPairKeys": {
+          "text_es": "1:text"
+        }
+      },
+      {
+        "text_es": "Evangelio de nuestro Señor Jesucristo según san (…)",
+        "sp_es": "C. (D.)",
+        "__massEditorPairKeys": {
+          "text_es": "2:text"
+        }
+      },
+      {
+        "text_es": "Gloria a ti, Señor.",
+        "sp_es": "R.",
+        "__massEditorPairKeys": {
+          "text_es": "3:text"
+        }
+      },
+      {
+        "text_es": "(Evangelio del día)",
+        "__massEditorPairKeys": {
+          "text_es": "4:text"
+        }
+      },
+      {
+        "text_es": "Palabra del Señor.",
+        "sp_es": "C. (D.)",
+        "__massEditorPairKeys": {
+          "text_es": "5:text"
+        }
+      },
+      {
+        "text_es": "Gloria a ti, Señor Jesús.",
+        "sp_es": "R.",
+        "__massEditorPairKeys": {
+          "text_es": "6:text"
+        }
       }
     ]
   },
@@ -10558,119 +12211,233 @@
       "es": "Bendición"
     },
     "variants": {
-      "1": {
+      "A": {
         "label": {
           "es": "Bendición simple"
         },
         "lines": [
           {
-            "rubric_es": "Después tiene lugar la despedida. El sacerdote, vuelto hacia el pueblo, extendiendo las manos, dice:"
+            "rubric_es": "Después tiene lugar la despedida. El sacerdote, vuelto hacia el pueblo, extendiendo las manos, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:0:rubric"
+            }
           },
           {
-            "text_es": "El Señor esté con ustedes."
+            "text_es": "El Señor esté con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
-            "rubric_es": "El pueblo responde:"
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:2:rubric"
+            }
           },
           {
-            "text_es": "Y con tu espíritu."
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           },
           {
-            "rubric_es": "El sacerdote bendice al pueblo, diciendo:"
+            "rubric_es": "El sacerdote bendice al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:4:rubric"
+            }
           },
           {
-            "text_es": "La bendición de Dios todopoderoso,"
+            "text_es": "La bendición de Dios todopoderoso,",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
           },
           {
-            "text_es": "Padre, Hijo, ✠"
+            "text_es": "Padre, Hijo, ✠",
+            "__massEditorPairKeys": {
+              "text_es": "es:blessing:trinity:text"
+            }
           },
           {
-            "text_es": "y el Espíritu Santo,"
+            "text_es": "y el Espíritu Santo,",
+            "__massEditorPairKeys": {
+              "text_es": "es:blessing:spirit:text"
+            }
           },
           {
-            "text_es": "descienda sobre ustedes."
+            "text_es": "descienda sobre ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            }
           },
           {
-            "rubric_es": "El pueblo responde:"
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:9:rubric"
+            }
           },
           {
-            "text_es": "Amén."
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            }
           },
           {
-            "rubric_es": "En algunos días u ocasiones, a ésta fórmula de bendición precede, según las rúbricas, otra fórmula de bendición más solemne o una oración sobre el pueblo."
+            "rubric_es": "En algunos días u ocasiones, a ésta fórmula de bendición precede, según las rúbricas, otra fórmula de bendición más solemne o una oración sobre el pueblo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:11:rubric"
+            }
           }
         ]
       },
-      "2": {
+      "B": {
         "label": {
           "es": "Bendición pontifical"
         },
         "lines": [
           {
-            "rubric_es": "En la Misa pontifical el celebrante recibe la mitra y, extendiendo las manos, dice:"
+            "rubric_es": "En la Misa pontifical el celebrante recibe la mitra y, extendiendo las manos, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:0:rubric"
+            }
           },
           {
-            "text_es": "El Señor esté con ustedes."
+            "text_es": "El Señor esté con ustedes.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
-            "rubric_es": "Todos responden:"
+            "rubric_es": "Todos responden:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:2:rubric"
+            }
           },
           {
-            "text_es": "Y con tu espíritu."
+            "text_es": "Y con tu espíritu.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           },
           {
-            "rubric_es": "El celebrante dice:"
+            "rubric_es": "El celebrante dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:4:rubric"
+            }
           },
           {
-            "text_es": "Bendito sea el nombre del Señor."
+            "text_es": "Bendito sea el nombre del Señor.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
           },
           {
-            "rubric_es": "Todos responden:"
+            "rubric_es": "Todos responden:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:6:rubric"
+            }
           },
           {
-            "text_es": "Desde ahora y para siempre."
+            "text_es": "Desde ahora y para siempre.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
           },
           {
-            "rubric_es": "El celebrante dice:"
+            "rubric_es": "El celebrante dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:8:rubric"
+            }
           },
           {
-            "text_es": "Nuestro auxilio es el nombre del Señor."
+            "text_es": "Nuestro auxilio es el nombre del Señor.",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            }
           },
           {
-            "rubric_es": "Todos responden:"
+            "rubric_es": "Todos responden:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:10:rubric"
+            }
           },
           {
-            "text_es": "Que hizo el cielo y la tierra."
+            "text_es": "Que hizo el cielo y la tierra.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            }
           },
           {
-            "rubric_es": "Entonces el celebrante, habiendo recibido el báculo, si lo usa, dice:"
+            "rubric_es": "Entonces el celebrante, habiendo recibido el báculo, si lo usa, dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:12:rubric"
+            }
           },
           {
-            "text_es": "La bendición de Dios todopoderoso,"
+            "text_es": "La bendición de Dios todopoderoso,",
+            "sp_es": "C.",
+            "__massEditorPairKeys": {
+              "text_es": "7:text"
+            }
           },
           {
-            "rubric_es": "Y, haciendo tres veces la señal de la cruz sobre el pueblo, añade:"
+            "rubric_es": "Y, haciendo tres veces la señal de la cruz sobre el pueblo, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:14:rubric"
+            }
           },
           {
-            "text_es": "Padre, ✠"
+            "text_es": "Padre, ✠",
+            "__massEditorPairKeys": {
+              "text_es": "es:bishop:father:text"
+            }
           },
           {
-            "text_es": "Hijo, ✠"
+            "text_es": "Hijo, ✠",
+            "__massEditorPairKeys": {
+              "text_es": "es:bishop:son:text"
+            }
           },
           {
-            "text_es": "y Espíritu ✠"
+            "text_es": "y Espíritu ✠",
+            "__massEditorPairKeys": {
+              "text_es": "es:bishop:spirit:text"
+            }
           },
           {
-            "text_es": "Santo,"
+            "text_es": "Santo,",
+            "__massEditorPairKeys": {
+              "text_es": "es:bishop:saint:text"
+            }
           },
           {
-            "text_es": "descienda sobre ustedes."
+            "text_es": "descienda sobre ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
           },
           {
-            "rubric_es": "Todos responden:"
+            "rubric_es": "Todos responden:",
+            "__massEditorPairKeys": {
+              "rubric_es": "es:20:rubric"
+            }
           },
           {
-            "text_es": "Amén."
+            "text_es": "Amén.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            }
           }
         ]
       }
@@ -10683,7 +12450,7 @@
       "es": "Despedida"
     },
     "variants": {
-      "1": {
+      "D": {
         "label": {
           "es": "Pueden ir en paz."
         },
@@ -10692,17 +12459,25 @@
             "rubric_es": "Luego el diácono, o el mismo sacerdote, con las manos juntas, vuelto hacia el pueblo, dice:"
           },
           {
-            "text_es": "Pueden ir en paz."
+            "text_es": "Pueden ir en paz.",
+            "sp_es": "C. (D.)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
             "rubric_es": "El pueblo responde:"
           },
           {
-            "text_es": "Demos gracias a Dios."
+            "text_es": "Demos gracias a Dios.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           }
         ]
       },
-      "2": {
+      "cono_joy": {
         "label": {
           "es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz."
         },
@@ -10714,20 +12489,25 @@
             "rubric_es": "O bien:"
           },
           {
-            "text_es": "La alegría del Señor sea nuestra fuerza."
-          },
-          {
-            "text_es": "Pueden ir en paz."
+            "text_es": "La alegría del Señor sea nuestra fuerza.<br>Pueden ir en paz.",
+            "sp_es": "C. (D.)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
             "rubric_es": "El pueblo responde:"
           },
           {
-            "text_es": "Demos gracias a Dios."
+            "text_es": "Demos gracias a Dios.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           }
         ]
       },
-      "3": {
+      "C": {
         "label": {
           "es": "Glorifiquen al Señor con su vida. Pueden ir en paz."
         },
@@ -10739,20 +12519,25 @@
             "rubric_es": "O bien:"
           },
           {
-            "text_es": "Glorifiquen al Señor con su vida."
-          },
-          {
-            "text_es": "Pueden ir en paz."
+            "text_es": "Glorifiquen al Señor con su vida.<br>Pueden ir en paz.",
+            "sp_es": "C. (D.)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
             "rubric_es": "El pueblo responde:"
           },
           {
-            "text_es": "Demos gracias a Dios."
+            "text_es": "Demos gracias a Dios.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           }
         ]
       },
-      "4": {
+      "cono_name": {
         "label": {
           "es": "En el nombre del Señor, pueden ir en paz."
         },
@@ -10764,17 +12549,25 @@
             "rubric_es": "O bien:"
           },
           {
-            "text_es": "En el nombre del Señor, pueden ir en paz."
+            "text_es": "En el nombre del Señor, pueden ir en paz.",
+            "sp_es": "C. (D.)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
             "rubric_es": "El pueblo responde:"
           },
           {
-            "text_es": "Demos gracias a Dios."
+            "text_es": "Demos gracias a Dios.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           }
         ]
       },
-      "5": {
+      "cono_easter": {
         "label": {
           "es": "Anuncien a todos la alegría del Señor resucitado. Pueden ir en paz."
         },
@@ -10786,16 +12579,21 @@
             "rubric_es": "O bien, especialmente en los domingos de pascua:"
           },
           {
-            "text_es": "Anuncien a todos la alegría del Señor resucitado."
-          },
-          {
-            "text_es": "Pueden ir en paz."
+            "text_es": "Anuncien a todos la alegría del Señor resucitado.<br>Pueden ir en paz.",
+            "sp_es": "C. (D.)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
           },
           {
             "rubric_es": "El pueblo responde:"
           },
           {
-            "text_es": "Demos gracias a Dios."
+            "text_es": "Demos gracias a Dios.",
+            "sp_es": "R.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
           }
         ]
       }
