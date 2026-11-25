@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.4-20261125-1';
+    const APP_VERSION = 'V31.4-20261125-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -11882,7 +11882,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictExtractIntro(blocks, lang, baseId) {
         const introPatterns = {
-            KR: [/말씀입니다\.?$/u, /복음입니다\.?$/u, /시작입니다\.?$/u],
+            KR: [/말씀입니다\.?$/u, /복음(?:의\s*(?:시작|끝))?입니다\.?$/u, /시작입니다\.?$/u],
             EN: [/^A reading from/i, /^A Reading from/i],
             JP: [/^.{1,60}による福音[。.]?$/u, /^.{1,60}(?:の手紙|の朗読)[。.]?$/u],
             VN: [/^Trích/iu, /^Tin Mừng Chúa/iu, /Chúa Giêsu Kitô theo/iu],
@@ -12616,7 +12616,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const sourceBlocks = strictSplitBlocks(section.lines).flatMap(line => {
             // CBCK sometimes prints the chapter/verses on the proclamation's
             // line. Split before detecting the intro, preserving the whole body.
-            const inline = lang === 'KR' && line.match(/^(.*?(?:말씀입니다|복음입니다)\.?)\s*(\d+\s*[,.:]\s*\d[\d\s,.;:ㄱ-ㅎ\-–—―]*)(?:\s*<또는\s*[^>]+>)?$/u);
+            const inline = lang === 'KR' && line.match(/^(.*?(?:말씀입니다|복음(?:의\s*(?:시작|끝))?입니다)\.?)\s*(\d+\s*[,.:]\s*\d[\d\s,.;:ㄱ-ㅎ\-–—―]*)(?:\s*<또는\s*[^>]+>)?$/u);
             if (inline) return [inline[1], inline[2]];
             // CEM prints the reference after the proclamation on the same
             // line. Resolve its real book name before separating the field.
@@ -15918,7 +15918,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             zh: /(?:上主|天主).{0,4}(?:聖言|話)[。！]?$/u
         };
         const gospelIntroPatterns = {
-            kr: /전한\s+거룩한\s+복음입니다|복음입니다/,
+            kr: /복음(?:의\s*(?:시작|끝))?입니다/u,
             vn: /^Tin Mừng Chúa Giêsu Kitô/i,
             en: /(holy )?Gospel according to/i,
             jp: /福音/,
@@ -16382,7 +16382,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!line || line.role !== 'body') return line;
             const text = String(line.text || '')
                 .replace(/^\s*<[^>\n]+>\s*(?:\r?\n|$)/u, '')
-                .replace(/^\s*[✠▥]\s*[^\n]*전한\s+거룩한\s+복음입니다\.?\s*(?:\r?\n|$)/u, '')
+                .replace(/^\s*[✠▥]\s*[^\n]*전한\s+거룩한\s+복음(?:의\s*(?:시작|끝))?입니다\.?\s*(?:\r?\n|$)/u, '')
                 .trim();
             return Object.assign({}, line, { text });
         }).filter(line => cleanNodeText(line && line.text) || cleanNodeText(line && line.sp) || cleanNodeText(line && line.rubric));

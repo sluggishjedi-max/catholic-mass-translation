@@ -340,7 +340,7 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
         mergeSourceData(reversedTitleData,koreanJerome,'KR');
         mergeSourceData(reversedTitleData,{title:kpvMassCandidateTitle(jeromeTemporal,jeromeDate),calendarForm:'temporal',data:vietnamData},'VN');
         check(!getLiturgyDisplayName('KR').includes('예로니모'),'Header depends on which country source finishes first');
-        check(state.liturgyInfo.sourceCelebrations.KR.title.includes('예로니모'),'Original source title was lost from provenance');
+        check(state.liturgyInfo.nativeSourceCelebrations.KR.nativeTitle.includes('예로니모'),'Original source title was lost from provenance');
         state.liturgyInfo=primaryTitleState;
 
         for(const other of ['en','jp']) {
@@ -449,9 +449,14 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(englishProperParsed.data.reading1.cit_en === 'Wisdom 3:1-9', `English proper first reading: ${englishProperParsed.data.reading1.cit_en}`);
       check(englishProperParsed.data.reading2.cit_en === 'Romans 8:31b-39', `English proper second reading: ${englishProperParsed.data.reading2.cit_en}`);
       check(englishProperParsed.data.gospel.cit_en === 'Luke 9:23-26', `English proper Gospel: ${englishProperParsed.data.gospel.cit_en}`);
+      const nationalMartyrs = {title:state.liturgyInfo.names.KR,data:Object.fromEntries(Object.entries({
+        reading1:'지혜 3,1-9',reading2:'로마 8,31ㄴ-39',psalm:'시편 126',gospel_accl:'1베드 4,14',gospel:'루카 9,23-26'
+      }).map(([key,cit_kr])=>[key,{text:'한국 고유 독서',cit_kr}]))};
       const englishProperMerged = {};
       mergeSourceData(englishProperMerged, englishProperParsed, 'EN');
-      check(!!englishProperMerged.reading2 && !englishProperMerged.collect, 'English proper readings did not replace mismatched Sunday formulary');
+      check(!englishProperMerged.reading2, 'English translation rendered before the Korean source');
+      mergeSourceData(englishProperMerged, nationalMartyrs, 'KR');
+      check(!!englishProperMerged.reading2?.en && !englishProperMerged.collect?.en, 'English proper readings did not replace mismatched Sunday formulary');
       state.targetLang = 'ES'; state.targetLocationCode = 'MX';
       const spanishProperParsed = await applyOfficialKoreanLocalProperReadings(
         ordinarySundayParsed(), 'ES', koreanMartyrsDate, 'MX', async () => spanishKoreanMartyrsProper
@@ -461,7 +466,9 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(spanishProperParsed.data.gospel.cit_es === 'Lucas 9, 23-26', `Spanish proper Gospel: ${spanishProperParsed.data.gospel.cit_es}`);
       const spanishProperMerged = {};
       mergeSourceData(spanishProperMerged, spanishProperParsed, 'ES');
-      check(!!spanishProperMerged.reading2 && !spanishProperMerged.collect, 'Spanish proper readings did not replace mismatched Sunday formulary');
+      check(!spanishProperMerged.reading2, 'Spanish translation rendered before the Korean source');
+      mergeSourceData(spanishProperMerged, nationalMartyrs, 'KR');
+      check(!!spanishProperMerged.reading2?.es && !spanishProperMerged.collect?.es, 'Spanish proper readings did not replace mismatched Sunday formulary');
       check(!citationsAreDifferent('지혜 3,1-9', englishProperParsed.data.reading1.cit_en, 'KR', 'EN'), 'English proper first reading did not align with Korean');
       check(!citationsAreDifferent('로마 8,31ㄴ-39', englishProperParsed.data.reading2.cit_en, 'KR', 'EN'), 'English proper second reading did not align with Korean');
       check(!citationsAreDifferent('로마 8,31ㄴ-39', spanishProperParsed.data.reading2.cit_es, 'KR', 'ES'), 'Spanish proper second reading did not align with Korean');
