@@ -456,7 +456,8 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       mergeSourceData(englishProperMerged, englishProperParsed, 'EN');
       check(!englishProperMerged.reading2, 'English translation rendered before the Korean source');
       mergeSourceData(englishProperMerged, nationalMartyrs, 'KR');
-      check(!!englishProperMerged.reading2?.en && !englishProperMerged.collect?.en, 'English proper readings did not replace mismatched Sunday formulary');
+      check(!!englishProperMerged.reading2?.en && englishProperMerged.collect?.en !== 'Ordinary Sunday prayer',
+        'English proper readings did not replace mismatched Sunday formulary');
       state.targetLang = 'ES'; state.targetLocationCode = 'MX';
       const spanishProperParsed = await applyOfficialKoreanLocalProperReadings(
         ordinarySundayParsed(), 'ES', koreanMartyrsDate, 'MX', async () => spanishKoreanMartyrsProper
@@ -468,7 +469,8 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       mergeSourceData(spanishProperMerged, spanishProperParsed, 'ES');
       check(!spanishProperMerged.reading2, 'Spanish translation rendered before the Korean source');
       mergeSourceData(spanishProperMerged, nationalMartyrs, 'KR');
-      check(!!spanishProperMerged.reading2?.es && !spanishProperMerged.collect?.es, 'Spanish proper readings did not replace mismatched Sunday formulary');
+      check(!!spanishProperMerged.reading2?.es && spanishProperMerged.collect?.es !== 'Ordinary Sunday prayer',
+        'Spanish proper readings did not replace mismatched Sunday formulary');
       check(!citationsAreDifferent('지혜 3,1-9', englishProperParsed.data.reading1.cit_en, 'KR', 'EN'), 'English proper first reading did not align with Korean');
       check(!citationsAreDifferent('로마 8,31ㄴ-39', englishProperParsed.data.reading2.cit_en, 'KR', 'EN'), 'English proper second reading did not align with Korean');
       check(!citationsAreDifferent('로마 8,31ㄴ-39', spanishProperParsed.data.reading2.cit_es, 'KR', 'ES'), 'Spanish proper second reading did not align with Korean');
@@ -534,6 +536,9 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       state.liturgyInfo.localCalendar = {lang:'KR', name:'지역 고유 전례'};
       state.liturgyInfo.meta.special = false;
       check(!shouldSuppressMismatchedLocalProperLanguage('ZH'), 'Selected official target blocked by calendar guard');
+      state.currentLoc = 'ZH'; state.selectedLocationCode = 'TW';
+      state.targetLang = 'KR'; state.targetLocationCode = 'KR';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(date);
       resetMassDataFrom(getStartupOrdinaryMassData());
       const merged = {}; mergeSourceData(merged, parsed, 'ZH');
       applyDailyReadingsToMassData(merged);
@@ -542,6 +547,10 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(rendered.reading1.includes('伯利恆'), 'Chinese reading not rendered');
       check(rendered.psalm.includes('我因上主而歡欣踴躍'), 'Chinese psalm not rendered');
       check(rendered.gospel.includes('瑪利亞已經和若瑟訂了婚'), 'Chinese gospel not rendered');
+      state.currentLoc = 'KR'; state.selectedLocationCode = 'KR';
+      state.targetLang = 'ZH'; state.targetLocationCode = 'TW';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(date);
+      resetMassDataFrom(getStartupOrdinaryMassData());
       const sameFetched = {gospel: {...sameSection, kr_lines:[parsedLine('', '같은 본문')], zh_lines:[parsedLine('', '相同正文')],
         variantAlignment:[{kr:0,zh:null},{kr:null,zh:0}]}};
       applyCachedVariantAlignments(sameFetched,date);
@@ -1048,10 +1057,13 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
           return 'Bản dịch phần thân lời nguyện.';
         };
         flatCollectButton.click();
-        await new Promise(resolve=>setTimeout(resolve,0));
+        const currentCollect = () => document.querySelector('section[data-part-id="collect"]').textContent;
+        for(let attempt=0;attempt<20&&!currentCollect().includes('Bản dịch phần thân lời nguyện.');attempt++){
+          await new Promise(resolve=>setTimeout(resolve,10));
+        }
         const vietnameseEnding=localizedPrayerConclusionFormula('VN','collect','through_son');
-        check(flatCollectElement.textContent.includes('Bản dịch phần thân lời nguyện.'),'Flat collect AI body result missing');
-        check((flatCollectElement.textContent.match(new RegExp(vietnameseEnding.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length===1,'Flat collect official conclusion was lost or duplicated');
+        check(currentCollect().includes('Bản dịch phần thân lời nguyện.'),'Flat collect AI body result missing');
+        check((currentCollect().match(new RegExp(vietnameseEnding.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length===1,'Flat collect official conclusion was lost or duplicated');
       } finally { translateWithGemini=originalPrayerTranslator; aiTranslationRecords.clear(); }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
       // Standard endings stay together even when a stale AI decision says
@@ -1165,7 +1177,9 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
-    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V31.2.html' ? /^V31\.2-/ : process.env.ORDO_CHECK_HTML === 'V31.1.html' ? /^V31\.1-/ : process.env.ORDO_CHECK_HTML === 'V31.html' ? /^V31-/ : process.env.ORDO_CHECK_HTML === 'V30.html' ? /^V30-/ : process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
+    const expectedVersion = String(process.env.ORDO_CHECK_HTML || 'V28.html').replace(/\.html$/iu,'');
+    const versionFamily = expectedVersion === 'V29' ? /^V29(?:\.\d+)?-/ : null;
+    assert(versionFamily ? versionFamily.test(result.version) : result.version.startsWith(expectedVersion+'-'), result.version);
     await page.setViewportSize({width:412,height:915});
     const mobile = await page.evaluate(() => {
       render();

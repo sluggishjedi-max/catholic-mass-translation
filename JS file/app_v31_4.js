@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.4-20261125-2';
+    const APP_VERSION = 'V31.4-20261125-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -14093,7 +14093,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const universal = getGeneratedCalendarOverride(date);
             const info = mergeCalendarOverrideEntries(native,universal) || generated;
             const title = info.names?.ES || generated.names?.ES || '';
-            return {meta:getSeasonMeta(date),title,rank:info.meta?.rank || generated.meta?.rank || '',
+            const rank = info.meta?.rank || generated.meta?.rank || (generated.isSolemnity ? 'solemnity' : '');
+            return {meta:getSeasonMeta(date),title,rank,
                 color:liturgyColorMap[info.colors?.ES] || generated.color,celebrationDate:info.meta?.transferredFrom || ''};
         } finally {
             state.selectedLocationCode = previous;
