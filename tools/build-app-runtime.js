@@ -6,7 +6,7 @@ const { minify } = require('terser');
 const root = path.resolve(__dirname, '..');
 const release = require('./app-release');
 const source = release.source;
-const dependencies = ['JS file/preface_matching.js', 'JS file/ordinary_display.js', 'JS file/liturgical_seasonal_names.js'];
+const dependencies = ['JS file/preface_matching.js', 'JS file/ordinary_display.js', 'JS file/liturgical_seasonal_names.js', 'JS file/church_directory_exclusions.js'];
 const target = release.runtime;
 (async () => {
   const inputs = Object.fromEntries([...dependencies, source].map(file => [file, fs.readFileSync(path.join(root, file), 'utf8')]));

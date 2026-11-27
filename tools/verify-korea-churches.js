@@ -61,6 +61,7 @@ const root = path.resolve(__dirname, '..');
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
     await page.goto(`http://127.0.0.1:${server.address().port}/index.html`);
     await page.waitForFunction(() => typeof churchInfoWindowHtml === 'function');
+    await page.evaluate(() => ordoDataLoader.ensure('churches', ['KR']));
     const result = await page.evaluate(() => {
       state.selectedLocationCode = 'KR'; state.currentLoc = 'KR'; state.uiLang = 'KR';
       rebuildCountryChurchDirectory();

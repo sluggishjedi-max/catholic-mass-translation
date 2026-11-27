@@ -71,12 +71,17 @@ const countries = { IE: 'ireland', 'GB-SCT': 'scotland', US: 'united_states', PH
   const laSource = context.countryChurchData.US.sources.find(s => s.authority === 'Archdiocese of Los Angeles');
   assert.equal(new Set(laRecords.map(r => r.officialDioceseUrl)).size, laSource.listed);
 
-  const publishedHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-  const versionHtml = fs.readFileSync(path.join(root, 'V29.html'), 'utf8');
-  for (const dir of Object.values(countries)) {
-    const match = publishedHtml.match(new RegExp(dir + '/' + dir + '_churches\\.js\\?v=([^"\\s]+)'));
-    assert(match && match[1].includes('supported-directory'), 'Church data cache version was not updated');
-    assert(versionHtml.includes(match[0]));
+  const release = require('./app-release');
+  const manifest = {};
+  const manifestFile = 'JS file/lazy_data_manifest.js';
+  vm.runInNewContext(fs.readFileSync(path.join(root, manifestFile), 'utf8'), manifest);
+  for (const html of ['index.html', release.html]) {
+    assert(fs.readFileSync(path.join(root, html), 'utf8').includes('lazy_data_manifest.js?v='));
+  }
+  for (const [country, dir] of Object.entries(countries)) {
+    const asset = manifest.ordoLazyDataManifest.churches[country];
+    assert(asset.startsWith('countries/' + dir + '/' + dir + '_churches.js?v='));
+    assert(fs.existsSync(path.join(root, 'JS file', asset.split('?')[0])));
   }
   const server = http.createServer((req, res) => {
     const file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
@@ -98,6 +103,7 @@ const countries = { IE: 'ireland', 'GB-SCT': 'scotland', US: 'united_states', PH
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
     await page.goto(`http://127.0.0.1:${server.address().port}/index.html`);
     await page.waitForFunction(() => typeof churchInfoWindowHtml === 'function');
+    await page.evaluate(codes => ordoDataLoader.ensure('churches', codes), Object.keys(countries));
     const result = await page.evaluate(() => {
       rebuildCountryChurchDirectory();
       const samples = [

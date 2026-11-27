@@ -134,7 +134,7 @@
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
     let speakerLabelFitFrame = 0;
-    const APP_VERSION = 'V31.4-20261127-2';
+    const APP_VERSION = 'V31.4-20261127-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -2176,15 +2176,20 @@
         'VA': { lang: 'LA', label: '바티칸 / Latin', timeZone: 'Europe/Rome' },
         'INTL': { lang: 'EN', label: '기타 지역 / English (자동 대체)', timeZone: '', fallback: true, dataJurisdiction: 'INTL' }
     };
+    function normalizeChurchSearchText(value) {
+        return cleanNodeText(value).normalize('NFKD').replace(/[\u0300-\u036f]/gu, '')
+            .normalize('NFC').toLowerCase().replace(/đ/gu, 'd').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+    }
+
     function normalizeChurchLookupKey(value) {
-        return normalizeSearchText(cleanNodeText(value))
+        return normalizeChurchSearchText(value)
             .replace(/(?:천주교|가톨릭|성당|본당|교회)/gu, ' ')
             .replace(/\b(?:roman catholic|catholic|church|parish|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック|教会|chiesa|parrocchia|cattolica|catedral|igreja|paroquia|catolica|iglesia|parroquia|kirche|pfarrei|katholisch|katholische|dom)\b/gu, ' ')
             .replace(/[^\p{L}\p{N}]+/gu, '');
     }
 
     function normalizeChurchNameTokens(value) {
-        return normalizeSearchText(value)
+        return normalizeChurchSearchText(value)
             .replace(/(?:천주교|가톨릭|성당|본당|교회)/gu, ' ')
             .replace(/\b(?:catholic|roman|church|parish|the|of|nhà|thờ|giao|giáo|xứ|họ|đạo|điểm|công|カトリック|教会|chiesa|parrocchia|cattolica|catedral|igreja|paroquia|catolica|iglesia|parroquia|kirche|pfarrei|katholisch|katholische|dom)\b/gu, ' ')
             .split(/\s+/)
@@ -2206,7 +2211,7 @@
         const records = order.flatMap(key => {
             const module = registry[key];
             return module && Array.isArray(module.entries) ? module.entries : [];
-        });
+        }).filter(record => !globalThis.ordoChurchDirectoryExclusions?.matches(record));
         const index = {};
         const exactNameMap = new Map();
         const tokenMap = new Map();
@@ -3795,8 +3800,9 @@
         return churchMapsApiKeyPromise;
     }
 
-    function googleMapsEmbedUrl(query) {
-        return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=14&output=embed`;
+    function googleMapsEmbedUrl(point, zoom, pin) {
+        const coordinates = encodeURIComponent(`${point.lat},${point.lng}`);
+        return `https://maps.google.com/maps?${pin ? 'q=' : 'll='}${coordinates}&z=${zoom}&output=embed`;
     }
 
     function churchCountryFromLocation(value = state.selectedLocationCode || state.currentLoc) {
@@ -3831,16 +3837,21 @@
         return `현재 지도 영역에서 성당 ${count}곳을 찾았습니다.`;
     }
 
-    function showChurchFallback(query = '') {
+    function showChurchFallback(query = '', center = null) {
         const frame = document.getElementById('church-map-frame');
         const mapNode = document.getElementById('church-map');
-        const fallbackQuery = query || churchMapDefaultForLang().query;
+        const fallback = churchMapDefaultForLang();
+        const key = normalizeChurchLookupKey(query);
+        const candidates = key ? globalThis.churchLocalSearchIndex?.exactNameMap.get(key) || [] : [];
+        const country = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc);
+        const record = candidates.find(place => place.country === country);
+        const point = churchPointCoordinates(record);
         if (mapNode) mapNode.hidden = true;
         if (frame) {
             frame.hidden = false;
-            frame.src = googleMapsEmbedUrl(fallbackQuery);
+            frame.src = googleMapsEmbedUrl(point || center || fallback.center, point || center ? 14 : fallback.zoom, !!point);
         }
-        setChurchStatus(auxText().churchReady);
+        setChurchStatus(record?.name || (query ? churchFoundText(0) : auxText().churchReady));
         setChurchCaption('');
     }
 
@@ -4364,7 +4375,7 @@
 
     function addChurchMarker(place, focus = false) {
         if (!churchMap || !(window.google && google.maps && typeof google.maps.Marker === 'function')
-            || !place || !place.geometry || !place.geometry.location) return null;
+            || !place?.geometry?.location || isClearlyNonCatholicChurchPlace(place)) return null;
         const name = cleanNodeText(place.name || '');
         const marker = new google.maps.Marker({
             map: churchMap,
@@ -4376,11 +4387,19 @@
         marker.addListener('click', async () => {
             const requestId = ++churchInfoRequestId;
             churchInfoWindowOpen = true;
-            churchInfoWindow.setContent(churchInfoWindowHtml(place, { loading: true }));
-            churchInfoWindow.open(churchMap, marker);
-            const details = await enrichUsChurchPlaceDetails(await fetchChurchPlaceDetails(place));
+            const found = await fetchChurchPlaceDetails(place);
             if (requestId !== churchInfoRequestId) return;
-            churchInfoWindow.setContent(churchInfoWindowHtml(details));
+            if (isClearlyNonCatholicChurchPlace(found)) {
+                marker.setMap(null);
+                churchMarkers = churchMarkers.filter(item => item !== marker);
+                churchInfoWindow.close();
+                churchInfoWindowOpen = false;
+                return;
+            }
+            churchInfoWindow.setContent(churchInfoWindowHtml(found, { loading: true }));
+            churchInfoWindow.open(churchMap, marker);
+            const details = await enrichUsChurchPlaceDetails(found);
+            if (requestId === churchInfoRequestId) churchInfoWindow.setContent(churchInfoWindowHtml(details));
         });
         churchMarkers.push(marker);
         if (focus) {
@@ -4436,8 +4455,8 @@
     function renderChurchPlaces(results = []) {
         if (churchInfoWindowOpen) return;
         const combined = new Map();
-        results.slice(0, CHURCH_MAX_RESULTS).forEach(place => {
-            if (place && place.place_id) combined.set(place.place_id, place);
+        results.filter(place => place?.place_id && !isClearlyNonCatholicChurchPlace(place)).slice(0, CHURCH_MAX_RESULTS).forEach(place => {
+            combined.set(place.place_id, place);
         });
         const bounds = churchMap && typeof churchMap.getBounds === 'function' ? churchMap.getBounds() : null;
         localPinnedChurchPlacesForBounds(bounds).forEach(place => combined.set(place.place_id, place));
@@ -4553,13 +4572,15 @@
 
     function isLikelyCatholicChurchPlace(place) {
         const text = `${place && (place.displayName || place.name) || ''} ${place && (place.formattedAddress || place.formatted_address || place.vicinity) || ''}`;
-        if (/tin\s*lành|protestant|baptist|methodist|evangelical/i.test(text)) return false;
+        if (isClearlyNonCatholicChurchPlace(place)) return false;
         return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|giáo\s*phận|cathedral|catedral|カトリック|cattolic|parrocchia|igreja\s*cat[oó]lica|par[oó]quia|katholisch|pfarrei|kirche/i.test(text);
     }
 
     function isClearlyNonCatholicChurchPlace(place) {
-        const text = `${place && (place.displayName || place.name) || ''} ${place && (place.formattedAddress || place.formatted_address || place.vicinity) || ''}`;
-        return /tin\s*lành|protestant|baptist|methodist|evangelical/i.test(text);
+        if (globalThis.ordoChurchDirectoryExclusions?.matches(place)) return true;
+        const name = cleanNodeText(place?.displayName || place?.name).replace(/\b(?:saint\s+|st\.?\s+)?john(?:\s+the)?\s+baptist\b/giu, '');
+        const address = place?.formattedAddress || place?.formatted_address || place?.vicinity || '';
+        return /tin\s*lành|protestant|baptist|methodist|evangelical/i.test(name + ' ' + address);
     }
 
     async function modernChurchPlaceClass() {
@@ -4621,7 +4642,7 @@
         } catch (error) {
             console.warn('Places API (New) 성당 검색에 실패하여 기존 검색으로 재시도합니다.', error);
             if (isChurchPlacesAuthorizationError(error)) {
-                showChurchFallback(churchMapDefaultForLang().query);
+                showChurchFallback();
                 return;
             }
         }
@@ -4686,7 +4707,7 @@
     }
 
     function focusChurchPlace(place) {
-        if (!place || !place.geometry || !place.geometry.location) return false;
+        if (!place?.geometry?.location || isClearlyNonCatholicChurchPlace(place)) return false;
         if (churchInfoWindow) churchInfoWindow.close();
         churchInfoWindowOpen = false;
         churchInfoRequestId += 1;
@@ -4707,8 +4728,7 @@
         };
         if (churchMap && typeof churchMap.getCenter === 'function') request.locationBias = churchMap.getCenter();
         const result = await Place.searchByText(request);
-        const matched = result && result.places && result.places[0];
-        return focusChurchPlace(normalizeModernChurchPlace(matched));
+        return (result?.places || []).some(place => focusChurchPlace(normalizeModernChurchPlace(place)));
     }
 
     function searchChurchWithPlaces(query) {
@@ -4717,14 +4737,11 @@
             query,
             fields: ['name', 'geometry', 'formatted_address', 'place_id']
         }, (results, status) => {
-            if (status === google.maps.places.PlacesServiceStatus.OK && results && results[0]) {
-                focusChurchPlace(results[0]);
-            } else {
-                churchPlacesService.textSearch({ query: `${query} Catholic church` }, (textResults, textStatus) => {
-                    if (textStatus === google.maps.places.PlacesServiceStatus.OK && textResults && textResults[0]) focusChurchPlace(textResults[0]);
-                    else showChurchFallback(query);
-                });
-            }
+            if (status === google.maps.places.PlacesServiceStatus.OK && results?.some(place => focusChurchPlace(place))) return;
+            churchPlacesService.textSearch({ query: query + ' Catholic church' }, (textResults, textStatus) => {
+                if (textStatus !== google.maps.places.PlacesServiceStatus.OK ||
+                    !textResults?.some(place => focusChurchPlace(place))) showChurchFallback(query);
+            });
         });
         return true;
     }
@@ -4749,7 +4766,9 @@
                     zoom: gpsCenter ? 14 : fallback.zoom,
                     mapTypeControl: false,
                     streetViewControl: false,
-                    fullscreenControl: true
+                    fullscreenControl: true,
+                    clickableIcons: false,
+                    styles: [{ featureType: "poi.place_of_worship", stylers: [{ visibility: "off" }] }]
                 });
                 churchPlacesService = new google.maps.places.PlacesService(churchMap);
                 churchInfoWindow = new google.maps.InfoWindow();
@@ -4816,6 +4835,10 @@
         const input = document.getElementById('church-search');
         const query = cleanNodeText(input && input.value);
         if (!query) return;
+        if (globalThis.ordoChurchDirectoryExclusions?.matches({ name: query })) {
+            setChurchStatus(churchFoundText(0));
+            return;
+        }
         if (churchMapInitialized) {
             try {
                 if (await searchChurchWithModernPlaces(query)) return;
@@ -5628,7 +5651,7 @@
         const gpsCenter = await getGpsPositionForChurchMap({ forceFresh: true });
         const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
         if (key) await initializeChurchMap({ gpsCenter });
-        else showChurchFallback(gpsCenter ? `${gpsCenter.lat},${gpsCenter.lng} Catholic church` : '');
+        else showChurchFallback('', gpsCenter);
     }
 
     const pageRefreshHandlers = {
