@@ -13098,6 +13098,50 @@
         },
         "ordinarySourceLayoutVersion": 1
       }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "amen"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "amen"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "amen"
+            ]
+          }
+        }
+      }
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END

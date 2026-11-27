@@ -133,6 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
+    let speakerLabelFitFrame = 0;
     const APP_VERSION = 'V31.4-20261127-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
@@ -356,16 +357,7 @@
 
     function normalizedOrdinaryForMerge(module, locationCode) {
         if (!module || !Array.isArray(module.ordinary)) return [];
-        const ordinary = ordoOrdinaryDisplay.prepare(cloneData(module.ordinary), eucharisticPrayerLanguageLower(module, locationCode));
-        const prayer = eucharisticPrayerEntry(ordinary);
-        if (Array.isArray(prayer?.amen)) {
-            // Resolve each edition's stored ending before another edition adds its own override.
-            const endings = prayer.formEndings ||= {};
-            for (const [form, frame] of Object.entries(prayer.formFrames || {})) {
-                if (frame.sections?.includes('ending')) endings[form] ??= prayer.amen;
-            }
-        }
-        return ordinary;
+        return ordoOrdinaryDisplay.prepare(cloneData(module.ordinary), eucharisticPrayerLanguageLower(module, locationCode));
     }
 
     const conoSurCountries = new Set(['AR','BO','CL','PY','UY']);
@@ -5457,7 +5449,10 @@
         const hymnPanel = document.getElementById('hymn-panel');
         const churchPanel = document.getElementById('church-panel');
         document.body.classList.toggle('non-mass-tab', !isMass);
-        if (missal) missal.hidden = !isMass;
+        if (missal) {
+            missal.hidden = !isMass;
+            if (isMass) scheduleSpeakerLabelFit();
+        }
         if (legend) legend.hidden = !isMass;
         if (prayerPanel) {
             const show = tab === 'prayers';
@@ -7318,7 +7313,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const VIETNAMESE_KTCG_DIOCESAN_INDEX_URL = 'https://gpbanmethuot.net/loi-chua-moi-ngay/';
     const VIETNAMESE_KTCG_DIOCESAN_RSS_URL = 'https://gpbanmethuot.net/rss/loi-chua-moi-ngay/';
     let vietnameseKtcgDiocesanFeedPromise = null;
-    const vietnameseKtcgPrayerEnrichmentPromises = new Map();
 
     function normalizeVietnameseDiocesanMatchText(value) {
         let text = String(value || '');
@@ -7550,28 +7544,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         if (!hasVietnameseKtcgDiocesanPrayers(parsed)) await applyVietnameseKtcgDiocesanPrayers(parsed, date);
         return parsed;
-    }
-
-    function queueVietnameseKtcgPrayerEnrichment(parsed, date) {
-        if (!parsed || !parsed.data || hasVietnameseKtcgDiocesanPrayers(parsed)) return Promise.resolve(parsed);
-        const key = `${formatDateIso(date)}:${vietnameseKpvSelectionContext(date)}`;
-        if (vietnameseKtcgPrayerEnrichmentPromises.has(key)) {
-            return vietnameseKtcgPrayerEnrichmentPromises.get(key);
-        }
-        const promise = applyKpvMissalPrayers(parsed, date)
-            .then(enriched => {
-                if (hasVietnameseKtcgDiocesanPrayers(enriched)) {
-                    writeCachedDailySource('VN', date, enriched, { locationCode: dailySourceLocationCode('VN') });
-                }
-                return enriched;
-            })
-            .catch(error => {
-                console.warn('Vietnamese diocesan prayer background enrichment failed.', error);
-                return parsed;
-            })
-            .finally(() => vietnameseKtcgPrayerEnrichmentPromises.delete(key));
-        vietnameseKtcgPrayerEnrichmentPromises.set(key, promise);
-        return promise;
     }
 
     function ktcgkpvCitationFromEntry(entry) {
@@ -9528,7 +9500,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function mergeNativeDailySourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
-        parsed = sanitizeDailyAcclamationReferences(parsed,lang);
+        if (!parsed.serverRecord) parsed = sanitizeDailyAcclamationReferences(parsed,lang);
         const sourceDate = getActiveLiturgicalSourceDate();
         const sourceMeta = getSeasonMeta(sourceDate);
         if (sourceMeta.season === 'advent' && sourceDate.getMonth() === 11
@@ -9573,7 +9545,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (isPrimarySource && lang === 'ZH') {
             state.liturgyInfo.taiwanPrefaceKeys = taiwanDailyPrefaceKeys(sourceDate, parsed);
         }
-        if (!parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
+        if (!parsed.serverRecord && !parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
         const officialLocalProperSections = new Set(
             parsed.officialLocalProper && Array.isArray(parsed.officialLocalProper.sectionKeys)
                 ? parsed.officialLocalProper.sectionKeys
@@ -9626,6 +9598,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (!parsed.serverRecord) return;
             }
             if (!target[key]) target[key] = {};
+            if (parsed.serverRecord) target[key].__publishedDailySource = true;
             if (parsed.properSources?.[key]) { target[key].__properSources ||= {}; target[key].__properSources[lower] = cloneData(parsed.properSources[key]); }
             if (key === 'preface' && parsed.serverRecord) { target[key].__serverPrefaceLanguages ||= {}; target[key].__serverPrefaceLanguages[lower] = true; }
             if (parsed.serverRecord?.kind === 'edited') { target[key].__serverEditedLanguages ||= {}; target[key].__serverEditedLanguages[lower] = true; }
@@ -15155,7 +15128,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function readCachedDailySource(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         const entry = readStorageJSON(dailySourceStorageKey(lang, date, locationCode));
-        if (!entry || !entry.parsed) return null;
+        if (!entry?.parsed?.serverRecord) return null;
         if (!options.allowStale && !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
         if (!hasCompleteCoreDailyReadings(entry.parsed, date, lang, locationCode)) return null;
         if (lang === 'ZH' && !hasCompleteTraditionalChineseDailyMass(entry.parsed, locationCode)) return null;
@@ -15219,8 +15192,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     source:lang==='VN'?vietnameseSource:'official',profile:lang==='VN'?currentVietnameseKpvProfile():'',
                     variant:selector.allSoulsChoice||selector.specialVigil||'day'
                 },{force:!!options.forceRemote}) || Promise.resolve(null);
-                dailySourceCache[key] = Promise.resolve(fromServer).then(parsed=>parsed || dailySourceFetchers[lang](date, { locationCode }))
-                    .then(parsed => {
+                dailySourceCache[key] = Promise.resolve(fromServer).then(parsed => {
+                        if (!parsed?.serverRecord) throw new Error(`No published daily Mass for ${lang} on ${formatDateIso(date)}`);
                         if (!hasCompleteCoreDailyReadings(parsed, date, lang, locationCode)) {
                             throw new Error(`${lang} source is incomplete: ${missingCoreDailyReadingSections(parsed, date, lang, locationCode).join(', ')}`);
                         }
@@ -15256,7 +15229,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     });
             }
         }
-        return globalThis.ordoDailyContent.normalizeParsed(sanitizeDailyAcclamationReferences(await dailySourceCache[key],lang));
+        return globalThis.ordoDailyContent.normalizeParsed(await dailySourceCache[key]);
     }
 
     function createDailyReadingData() {
@@ -18875,11 +18848,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     contentLine[`text_${lower}_ai`] = '';
                 }
             });
-            if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(lines, baseId);
+            if (isPrayerPart(baseId) && !newData.__publishedDailySource) ensureLocalizedPrayerConclusions(lines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(lines, baseId);
             const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
             ensureLocalizedReadingFrames(lines, baseId);
-            ensureLocalizedReadingIntros(lines, baseId, cit);
+            if (!newData.__publishedDailySource) ensureLocalizedReadingIntros(lines, baseId, cit);
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
             const baseLabel = alignmentGroup
@@ -18943,6 +18916,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (baseId === 'reading2') item.__dailyHasSecondReading = sourceSectionHasContent({text:fetchedData[baseId]?.[normalizeSelectableLang(state.currentLoc, 'KR').toLowerCase()]});
             if (!fetchedData[baseId]) return;
             const newData = fetchedData[baseId];
+            item.__publishedDailySource = !!newData.__publishedDailySource;
             normalizeDailySelectableTemplate(item);
 
             item.cit = item.cit || {};
@@ -18988,10 +18962,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 }
             });
 
-            if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(targetLines, baseId);
+            if (isPrayerPart(baseId) && !newData.__publishedDailySource) ensureLocalizedPrayerConclusions(targetLines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(targetLines, baseId);
             ensureLocalizedReadingFrames(targetLines, baseId);
-            ensureLocalizedReadingIntros(targetLines, baseId, newData);
+            if (!newData.__publishedDailySource) ensureLocalizedReadingIntros(targetLines, baseId, newData);
             normalizeDailySectionLines(targetLines, baseId);
             removeDailyProclamationEndingLines(targetLines, baseId);
             if (item.type === 'selectable' && item.variants && item.variants.A) item.lines = item.variants.A.lines;
@@ -19085,13 +19059,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     // AI 번역 버튼
     function finalizeDailyReadingsData(fetchedData) {
         const activeDate = getActiveLiturgicalSourceDate();
-        if (!state.liturgyInfo.primaryCalendar) {
-            applyKoreanMissalForeignProperOverlay(fetchedData, activeDate);
-            applyKoreanMissalOrdinaryConflictOverlay(fetchedData, activeDate);
+        if (window.ordoServerCollector) {
+            if (!state.liturgyInfo.primaryCalendar) {
+                applyKoreanMissalForeignProperOverlay(fetchedData, activeDate);
+                applyKoreanMissalOrdinaryConflictOverlay(fetchedData, activeDate);
+            }
+            applyLocalMissalPrayerOverlay(fetchedData, activeDate);
         }
-        applyLocalMissalPrayerOverlay(fetchedData, activeDate);
-        // The Korean Missal overlays are added after remote sources merge, so
-        // their source-pairing rule must be evaluated at this point as well.
         applyCachedVariantAlignments(fetchedData, activeDate);
         const sourceLang = normalizeSelectableLang(state.currentLoc, 'KR');
         state.liturgyInfo.color = primarySourceLiturgyColor()
@@ -19248,16 +19222,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             finalizeDailyReadingsData(fetchedData);
         }
         render();
-
-        const vietnameseResult = results.find(result => result && result.lang === 'VN' && result.parsed);
-        if (vietnameseResult
-            && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
-            && vietnameseResult.parsed.serverRecord?.kind !== 'edited'
-            && !hasVietnameseKtcgDiocesanPrayers(vietnameseResult.parsed)) {
-            // Yield the first complete render before starting the optional,
-            // slower diocesan-prayer lookup.
-            setTimeout(() => queueVietnameseKtcgPrayerEnrichment(vietnameseResult.parsed, today), 250);
-        }
 
         if (appliedCount) void validateLoadedDailyLiturgy(fetchedData, today, options.shouldApply);
         return appliedCount > 0 || results.some(result => result.parsed);
@@ -21373,11 +21337,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function speakerHTML(sp, langKey, skipSpeaker) {
         if (skipSpeaker) return '';
-        const text = sp || '&nbsp;';
+        const text = sp ? `<span class="speaker-label">${sp}</span>` : '&nbsp;';
         const placeholder = sp ? '' : ' speaker-placeholder';
         const hidden = sp ? '' : ' aria-hidden="true"';
         return `<div class="speaker speaker-${langKey}${placeholder}"${hidden}>${text}</div>`;
     }
+
+    function scheduleSpeakerLabelFit() {
+        if (speakerLabelFitFrame) return;
+        speakerLabelFitFrame = requestAnimationFrame(() => {
+            speakerLabelFitFrame = 0;
+            const adjustments = [];
+            for (const label of document.querySelectorAll('#missal-root .speaker-label')) {
+                const available = label.parentElement.clientWidth;
+                if (!available) continue;
+                // The computed width is the unscaled, single-line label width.
+                const natural = Number.parseFloat(getComputedStyle(label).width);
+                const transform = natural > available ? `scaleX(${available / natural})` : '';
+                if (label.style.transform !== transform) adjustments.push([label, transform]);
+            }
+            for (const [label, transform] of adjustments) label.style.transform = transform;
+        });
+    }
+
+    window.addEventListener('resize', scheduleSpeakerLabelFit, {passive: true});
+    document.fonts?.addEventListener('loadingdone', scheduleSpeakerLabelFit);
 
     function hyphenateLongWords(html) {
         if (!html || isAIButton(html)) return html || '';
@@ -22834,7 +22818,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (sourceChoiceData) Object.assign(data, sourceChoiceData);
             // Source-only prayer choices still share the authorized conclusion
             // formula. Supply it after clearing the opposite display language.
-            if (strictPrayerKeys.has(baseId)) ensureLocalizedPrayerConclusions(data.lines, baseId);
+            if (strictPrayerKeys.has(baseId) && !data.__publishedDailySource) ensureLocalizedPrayerConclusions(data.lines, baseId);
             if (baseId === 'gospel_accl') fillGospelAcclamationAlleluiaLines(data.lines);
 
             const partContainer = document.createElement('section');

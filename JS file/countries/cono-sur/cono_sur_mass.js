@@ -25391,6 +25391,153 @@
     "dynamicCalendarByDate": {}
   }
 };
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "amen"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "amen"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "amen"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "amen"
+        ],
+        "rows": [
+          {
+            "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, elevándolos, dice:"
+          },
+          {
+            "text_es": "Por Cristo, con él y en él,",
+            "sp_es": "CP o CC"
+          },
+          {
+            "text_es": "a ti, Dios Padre omnipotente,"
+          },
+          {
+            "text_es": "en la unidad del Espíritu Santo,"
+          },
+          {
+            "text_es": "todo honor y toda gloria"
+          },
+          {
+            "text_es": "por los siglos de los siglos."
+          },
+          {
+            "rubric_es": "El pueblo aclama:"
+          },
+          {
+            "text_es": "Amén."
+          }
+        ]
+      }
+    }
+  ];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error("AR" + ' Mass editor entry is missing: ' + override.create.entryId);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error("AR" + ' Mass editor block is invalid: ' + override.create.entryId);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error("AR" + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error("AR" + ' Mass editor rename field is stale: ' + fromField);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
+      if (override.path?.length === 1 && override.value && typeof override.value === 'object' && !Array.isArray(override.value)) {
+        const entry = target[override.path[0]];
+        if (!entry || entry.id !== override.value.id) throw new Error('Mass editor entry snapshot is stale');
+        Object.keys(entry).forEach(key => { delete entry[key]; });
+        Object.assign(entry, JSON.parse(JSON.stringify(override.value)));
+        return;
+      }
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error("AR" + ' Mass editor override path is stale: ' + JSON.stringify(editPath));
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
+  applyOrdinaryEditorOverrides(ordinary);
   global.countryMassData.AR = Object.freeze({
     jurisdiction: 'AR', ordinary, ...national.AR
   });

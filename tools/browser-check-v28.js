@@ -272,7 +272,7 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
           ensureVietnameseCalendarContext=async()=>null;
           for(const source of ['hanoi','ktcg']) {
             state.vnReadingSource=source;
-            const vnFromFetcher=await fetchParsedDailyMass('VN',jeromeDate,{forceRemote:true});
+            const vnFromFetcher=await dailySourceFetchers.VN(jeromeDate,{locationCode:'VN'});
             const combined={};
             mergeSourceData(combined,koreanJerome,'KR');mergeSourceData(combined,vnFromFetcher,'VN');
             resetMassDataFrom(getStartupOrdinaryMassData());finalizeDailyReadingsData(combined);
@@ -299,7 +299,7 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
           state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
           const beforeHanoi=properPassageRequests;
           const krForHanoi=await appendKoreanProperReadingOptions(koreanWeekday(),jeromeNote,jeromeDate);
-          const vnHanoi=await fetchParsedDailyMass('VN',jeromeDate);
+          const vnHanoi=await dailySourceFetchers.VN(jeromeDate,{locationCode:'VN'});
           const combined={};mergeSourceData(combined,krForHanoi,'KR');mergeSourceData(combined,vnHanoi,'VN');
           resetMassDataFrom(getStartupOrdinaryMassData());finalizeDailyReadingsData(combined);render();
           check(properPassageRequests===beforeHanoi,'Hanoi primary fetched Korean memorial passages');
@@ -521,7 +521,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       const differentAlignment = buildStrictReadingCitationAlignment('gospel', sameOptions, {...sameSection, cit_zh:'聖瑪竇福音 1,18-25'});
       check(differentAlignment.length === 2, 'Different ranges need separate options');
       state.liturgicalDateContext = {date, localDate:date};
-      const parsed = await fetchParsedDailyMass('ZH', date, {locationCode:'TW', forceRemote:true});
+      const parsed = await dailySourceFetchers.ZH(date, {locationCode:'TW'});
       check(hasCompleteTraditionalChineseDailyMass(parsed, 'TW'), 'Sept 8 Chinese complete');
       check(parsed.data.reading1.optionCits.length === 2, 'Chinese reading alternatives must remain distinct');
       check(parsed.data.gospel.cit_zh === '聖瑪竇福音 1,18-23', 'Chinese chapter/citation normalization');
@@ -629,14 +629,34 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check(!prefaceCaption(titleOnly,'common_5','ZH').parts[1].id, 'Taiwan native title requested a borrowed subtitle');
         for (const form of ['2','3','4']) {
           optChange('eucharist', form);
-          const endingRows = [...document.querySelectorAll('[data-part-id="eucharist"] [data-eucharist-section="ending"]')];
-          for (const [lower, rows] of [['kr',koreanEucharist.amen],['zh',taiwanSourceEucharist.formEndings[form]]]) {
+          const endingRows = [...document.querySelectorAll('[data-part-id="eucharist"] [data-eucharist-section="amen"]')];
+          for (const [lower, rows] of [['kr',koreanEucharist.amen],['zh',taiwanSourceEucharist.amen]]) {
             const displayed = endingRows.flatMap(row => Array.from(row.querySelectorAll('.line-' + lower + ' .text-content'), node => node.innerHTML));
             checkOrdinarySourceRows(rows, displayed.map(text => ({['text_' + lower]:text})), lower, 'Prayer ' + form + ' ending');
           }
         }
         optChange('eucharist', '2');
         optChange('eucharist_song', 'ordinary_1');
+        const checkDate = new Date(2031, 2, 11);
+        const storageKey = dailySourceStorageKey('KR', checkDate, 'KR');
+        const oldServer = window.ordoDailyServer, oldFetcher = dailySourceFetchers.KR;
+        const savedReading = 'Firebase 편집 원문';
+        let browserSourceRequests = 0;
+        try {
+          dailySourceFetchers.KR = async () => { browserSourceRequests++; throw new Error('Browser source fetch'); };
+          window.ordoDailyServer = {read:async () => null};
+          writeStorageJSON(storageKey, {cachedAt:Date.now(),parsed:{title:'Legacy client cache',data:{reading1:{text:'Unofficial client copy'}}}});
+          let missing = false;
+          try { await fetchParsedDailyMass('KR', checkDate, {locationCode:'KR'}); } catch (error) { missing = error.message.includes('No published daily Mass'); }
+          check(missing && browserSourceRequests === 0, 'A missing Firebase record fell back to browser parsing');
+          window.ordoDailyServer = {read:async () => ({title:'Edited record',serverRecord:{kind:'edited',version:3},data:{reading1:{text:savedReading},psalm:{text:'Saved psalm'},gospel_accl:{text:'Saved acclamation'},gospel:{text:'Saved Gospel'}}})};
+          const published = await fetchParsedDailyMass('KR', checkDate, {locationCode:'KR',forceRemote:true});
+          check(published.data.reading1.text === savedReading, 'Firebase editor reading did not reach the app');
+        } finally {
+          dailySourceFetchers.KR = oldFetcher;
+          window.ordoDailyServer = oldServer;
+          localStorage.removeItem(storageKey);
+        }
       }
       // All six proper-text sections use one deterministic alignment engine.
       const unifiedSectionIds = ['entrance','collect','gospel_accl','prayer_offerings','communion','prayer_after'];
@@ -859,7 +879,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         applyVietnameseKtcgDiocesanPrayers=async parsed=>{ prayerSupplementCalls+=1; return parsed; };
         const firstLoad=await fetchStrictDailyMass('VN',date);
         check(firstLoad===ktcgCore&&prayerSupplementCalls===0,'KTCG first load still awaited diocesan prayers');
-        writeCachedDailySource('VN',date,ktcgCore,{locationCode:'VN'});
+        writeCachedDailySource('VN',date,{...ktcgCore,serverRecord:{kind:'collected',version:1}},{locationCode:'VN'});
         const cachedKtcgCore=readCachedDailySource('VN',date,{locationCode:'VN'});
         check(cachedKtcgCore?.data?.gospel?.text==='gospel','KTCG core response was not cacheable');
         localStorage.removeItem(dailySourceStorageKey('VN',date,'VN'));
@@ -1216,6 +1236,30 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
     });
     assert.equal((mobile.gospel.match(/주님 영광 받으소서/g) || []).length, 1);
     assert(mobile.width <= mobile.viewport + 2, 'Mobile horizontal overflow');
+    if (result.version.startsWith('V31.4-')) {
+      for (const width of [1280, 320]) {
+        await page.setViewportSize({width, height:900});
+        const speakers = await page.evaluate(async () => {
+          const fixture = document.createElement('div');
+          fixture.innerHTML = [['讀經員','zh'], ['主祭','zh'], ['Assembly','en'], ['朗読者','jp']]
+            .map(([speaker, lang]) => linePairHTML(speaker, 'Text', lang)).join('');
+          document.getElementById('missal-root').appendChild(fixture);
+          scheduleSpeakerLabelFit();
+          await new Promise(requestAnimationFrame);
+          const measured = [...fixture.querySelectorAll('.speaker-label')].map(label => {
+            const cell = label.parentElement.getBoundingClientRect();
+            const text = label.getBoundingClientRect();
+            return {text:label.textContent, nowrap:getComputedStyle(label).whiteSpace === 'nowrap',
+              scaled:!!label.style.transform, fits:text.left >= cell.left - 0.1 && text.right <= cell.right + 0.1};
+          });
+          fixture.remove();
+          return measured;
+        });
+        assert.deepEqual(speakers.map(row => row.text), ['讀經員','主祭','Assembly','朗読者']);
+        assert(speakers.every(row => row.nowrap && row.fits), JSON.stringify({width,speakers}));
+        assert.deepEqual(speakers.map(row => row.scaled), [true,false,true,true], JSON.stringify({width,speakers}));
+      }
+    }
     console.log('Desktop and mobile rendering passed.');
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
 })().catch(error => { console.error(error); process.exitCode = 1; });
