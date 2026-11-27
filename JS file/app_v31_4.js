@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.4-20261125-4';
+    const APP_VERSION = 'V31.4-20261125-5';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -2458,6 +2458,12 @@
                 note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = '※ '+message;
                 container.appendChild(note);
             };
+            if (activeLangs.has('JP') && lang === (activeLangs.has('KR') ? 'KR' : 'JP')) {
+                append(lang === 'KR'
+                    ? '일본어 입당송, 본기도, 예물기도, 영성체송, 영성체후기도는 원문출처 사정상 제공되지 않습니다.'
+                    : '日本語の入祭唱、集会祈願、奉納祈願、拝領唱、拝領祈願は、原文資料の都合により掲載していません。',
+                'japanese-daily-propers');
+            }
             sourceNotices.forEach(([sourceLang,detail]) => append(`${sourceLang}: ${fixedFormularyNoticeText[lang] || fixedFormularyNoticeText.EN} (${detail.source?.authority || detail.source?.translation || 'Missal'})`, 'fixed-formulary:'+sourceLang, 'daily-source-provenance'));
             if(vaticanSelected)append(vaticanMidnightNoticeText[lang] || vaticanMidnightNoticeText.EN,'vatican-midnight','vatican-source-notice');
         });
@@ -11880,6 +11886,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/\s{2,}/g, ' '));
     }
 
+    const spanishReadingProclamation = /^(?:[+†✠]\s*)?(?:Del\b|De (?:la|los|las)\b|Lectura d(?:el|e)\b|(?:Comienzo|Principio) d(?:el |e la )(?:libro|carta|profecía)\b|Evangelio (?:de nuestro Señor|del Señor|según)\b)/iu;
+
     function strictExtractIntro(blocks, lang, baseId) {
         const introPatterns = {
             KR: [/말씀입니다\.?$/u, /복음(?:의\s*(?:시작|끝))?입니다\.?$/u, /시작입니다\.?$/u],
@@ -11890,7 +11898,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ZH: [/^恭讀/u],
             IT: [/^(?:Dal|Dalla|Dalle|Dagli|Dai|Da)\b/iu],
             PT: [/^Leitura d[ao]\b/iu, /^Evangelho de Nosso Senhor\b/iu],
-            ES: [/^(?:Del|De la|De los|De las)\b/iu, /^(?:Lectura del santo Evangelio|Evangelio (?:de nuestro Señor|del Señor|según))\b/iu],
+            ES: [spanishReadingProclamation],
             DE: [/^Lesung(?:\s+aus)?\b/iu, /^Aus dem heiligen Evangelium\b/iu]
         };
         if (lang === 'JP') {
@@ -11929,7 +11937,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         else if (lang === 'ZH') match = cleaned.match(/^(答|領|主祭|信友|讀經員|全體)\s*[:.：]?\s*(.*)$/u);
         else if (lang === 'IT') match = cleaned.match(/^(R\.|V\.|L\.|C\.|Tutti)\s*[:.：]?\s*(.*)$/iu);
         else if (lang === 'PT') match = cleaned.match(/^(R\.|V\.|L\.|C\.|Refrão|Todos)\s*[:.：]?\s*(.*)$/iu);
-        else if (lang === 'ES') match = cleaned.match(/^(R\.?|V\.?|L\.?|C\.?|Todos)\s*[:.：]?\s*(.*)$/iu);
+        else if (lang === 'ES') match = cleaned.match(/^([RVLC]\.|(?:[RVLC]|Todos)(?=\s|[:：.]|$))\s*[:.：]?\s*(.*)$/iu);
         else if (lang === 'DE') match = cleaned.match(/^(Kv\b|R\.|V\.|L\.|P\.|A\.)\s*[:.：]?\s*(.*)$/iu);
         return match ? { sp: strictCleanLine(match[1]), text: strictCleanLine(match[2]) } : { sp: '', text: cleaned };
     }
@@ -12687,7 +12695,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 : (lang === 'PT'
                     ? /^(?:Leitura d[ao]|Evangelho de Nosso Senhor)\b/iu.test(first)
                     : (lang === 'ES'
-                        ? /^(?:Del|De la|De los|De las|Lectura del santo Evangelio|Evangelio (?:de nuestro Señor|del Señor|según))\b/iu.test(first)
+                        ? spanishReadingProclamation.test(first)
                         : /^(?:Lesung|Aus dem heiligen Evangelium)\b/iu.test(first)));
             if (first && first.length <= 420 && !introLike && !strictLooksLikeCitation(first, lang)) {
                 summaryResult = { summary: first, blocks: blocks.filter((_, index) => index !== summaryIndex) };
@@ -19029,7 +19037,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if(state.currentLoc === 'LA' || state.targetLang === 'LA') copyright += `© Libreria Editrice Vaticana<br>`;
             if (state.currentLoc === 'JP' || state.targetLang === 'JP') {
-                copyright += '※ 일본어 입당송, 본기도, 예물기도, 영성체송, 영성체후기도는 원문출처 사정상 제공되지 않습니다.<br>';
                 copyright += '© apud Administrationem Patrimonii Sedis Apostolicae in Civitate Vaticana, 2008.<br>';
             }
             if(state.transMode === 'ai') copyright += `ⓒ Google AI Translation, 2026.`;
@@ -20975,11 +20982,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return !cleanNodeText(content);
     }
 
-    function shouldSuppressAIFallbackForLine(line, baseId, lower) {
+    function shouldSuppressAIFallbackForLine(line, baseId, lower, suppressPsalmGapFallback = false) {
+        if (suppressPsalmGapFallback) return true;
         if (line?.__ordinarySource && !line.__dailyCollected && !['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','communion','prayer_after'].includes(baseId)) return true;
         if (line?.__sourceOnlyOriginal) return true;
         if (line?.__readingAlignmentBlank?.[lower]) return true;
-        if (baseId === 'gospel' && lineHasAnyRole(line, 'summary') && !line[`role_${lower}`]) return true;
+        if (strictReadingKeys.has(baseId) && lineHasAnyRole(line, 'summary') && !line[`role_${lower}`]) return true;
         if (strictReadingKeys.has(baseId) && (isDailyEndingLine(line) || isGospelDialogueLine(line) || lineHasAnyRole(line, 'intro'))) return true;
         if (shouldSuppressAIFallbackLine(line, baseId)) return true;
         if (strictPrayerKeys.has(baseId)
@@ -22413,6 +22421,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return normalizedPsalmVerseRefs(line && line[`verse_refs_${lower}`]);
     }
 
+    function hasDistinctPsalmSourceOption(variants, selected, sourceLower, otherLower) {
+        if (!sourceLower || !variants) return false;
+        const citation = citationForDisplayData(selected, sourceLower);
+        return Object.values(variants).some(option =>
+            Number.isInteger(option.__dailySourceIndexes?.[otherLower])
+            && passageCitationsConflict('psalm', citation, citationForDisplayData(option, otherLower), sourceLower, otherLower)
+        );
+    }
+
     // Sources do not always divide the same cited verse range into the same
     // number of paragraphs. Keep every source paragraph, but render adjacent
     // one-sided versicles in a single bilingual stanza group (for example,
@@ -22825,6 +22842,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             // Missing official text in an actual source-only option may have an
             // explicitly labelled AI translation in either language column.
             const sourceOnly = data.__dailySourceIndexes && dailyVariantSourceLower(data, baseId);
+            const suppressPsalmGapFallback = baseId === 'psalm' && (leftL === 'JP' || rightL === 'JP')
+                && !hasDistinctPsalmSourceOption(item.variants, data, sourceOnly,
+                    (sourceOnly === leftL.toLowerCase() ? rightL : leftL).toLowerCase());
             const sourceLines = sourceOnly && ['reading1', 'reading2', 'psalm', 'gospel'].includes(baseId)
                 ? (data.lines || []).map(line => Object.assign({}, line, {__sourceChoiceOriginal:true}))
                 : data.lines;
@@ -22882,8 +22902,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (!storedOrdinary && isLiturgicalPlaceholderText(rightTxt)) rightTxt = '';
                 const leftAi = line['text_' + leftKey + '_ai'] || '';
                 const rightAi = line['text_' + rightKey + '_ai'] || '';
-                const suppressLeftAiFallback = shouldSuppressAIFallbackForLine(line, baseId, leftKey);
-                const suppressRightAiFallback = shouldSuppressAIFallbackForLine(line, baseId, rightKey);
+                const suppressLeftAiFallback = shouldSuppressAIFallbackForLine(line, baseId, leftKey, suppressPsalmGapFallback);
+                const suppressRightAiFallback = shouldSuppressAIFallbackForLine(line, baseId, rightKey, suppressPsalmGapFallback);
 
                 if (!suppressLeftAiFallback && (!leftTxt || leftTxt.trim() === '') && rightTxt) {
                     const sourceText = aiFallbackSourceText(rightTxt, rightKey, baseId);
@@ -22919,8 +22939,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId) && (!line.__ordinarySource || !rightSp));
                     if (block.innerHTML.trim()) partContainer.appendChild(block);
                 } else {
-                    const leftHtml = genLineHTML(line, leftL, baseId);
-                    const rightHtml = genLineHTML(line, rightL, baseId);
+                    const leftHtml = genLineHTML(line, leftL, baseId, suppressPsalmGapFallback);
+                    const rightHtml = genLineHTML(line, rightL, baseId, suppressPsalmGapFallback);
                     if (!leftHtml && !rightHtml) return;
                     const lineRow = document.createElement('div');
                     lineRow.className = 'pc-line-row';
@@ -23062,7 +23082,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     // PC 모드에서 한 언어 칸에 들어갈 한 줄 HTML을 만듭니다.
-    function genLineHTML(line, lang, baseId) {
+    function genLineHTML(line, lang, baseId, suppressPsalmGapFallback = false) {
         const lowerLang = lang.toLowerCase();
         const sp = line['sp_' + lowerLang] || '';
         let txt = line['text_' + lowerLang] || '';
@@ -23076,7 +23096,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let html = line.__ordinarySource && line['cit_' + lowerLang] ? '<span class="citation">' + escapeHtml(line['cit_' + lowerLang]) + '</span>' : '';
         if (rubric) html += `<span class="rubric${line['rubricInset_' + lowerLang] ? ' rubric-inset line-' + lowerLang : ''}" data-rubric-language="${lowerLang}">${rubric}</span>`;
 
-        const suppressAiFallback = shouldSuppressAIFallbackForLine(line, baseId, lowerLang);
+        const suppressAiFallback = shouldSuppressAIFallbackForLine(line, baseId, lowerLang, suppressPsalmGapFallback);
         if ((!txt || txt.trim() === '') && otherTxt && !suppressAiFallback) {
             const aiTxt = line['text_' + lowerLang + '_ai'];
             const sourceText = aiFallbackSourceText(otherTxt, otherLang.toLowerCase(), baseId);

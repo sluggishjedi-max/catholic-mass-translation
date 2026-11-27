@@ -66,9 +66,28 @@
     function textLines(document) {
         const output = [];
         let line = '';
-        const flush=()=>{const text=normalize(line);if(text)output.push(text);line='';};
+        let caption = true;
+        const flush = () => {
+            const text = normalize(line);
+            if (text) output.push({text,caption});
+            line = '';
+            caption = true;
+        };
         function walk(node) {
-            if (node.nodeType===3) { line+=node.textContent; return; }
+            if (node.nodeType===3) {
+                line += node.textContent;
+                if (normalize(node.textContent)) {
+                    const emphasis = node.parentElement?.closest('i,em');
+                    const paragraph = emphasis?.closest('p');
+                    // The lectionary prints reading captions in italic type, either
+                    // right-aligned or in a red span on the Chilean dated pages.
+                    const color = emphasis?.closest('font[color],span[style]');
+                    caption &&= !!paragraph && (paragraph.getAttribute('align')?.toLowerCase()==='right'
+                        || /(?:red|#(?:ff0000|f00)\b|rgb\(\s*(?:238|255),\s*0,\s*0\s*\))/iu.test(
+                            String(color?.getAttribute('color')||'')+' '+String(color?.getAttribute('style')||'')));
+                }
+                return;
+            }
             if (node.nodeType!==1 || /^(SCRIPT|STYLE|NOSCRIPT)$/u.test(node.tagName)) return;
             const boundary=/^(P|DIV|H[1-6]|BR|HR|LI|TD|TR|BLOCKQUOTE)$/u.test(node.tagName);
             if(boundary) flush();
@@ -85,15 +104,15 @@
             const title=fold(document.querySelector('.titulos')?.textContent);
             const suffix=' de '+months[date.getMonth()]+' de '+date.getFullYear();
             if(!title.includes(date.getDate()+suffix)) throw Error('Chile daily source is not dated '+iso);
-            const first=lines.findIndex(value=>/^antifona de entrada\b/u.test(fold(value)));
+            const first=lines.findIndex(({text})=>/^antifona de entrada\b/u.test(fold(text)));
             return first>=0 ? lines.slice(first) : lines;
         }
         if(!['date','weekday'].includes(scope)) return lines;
         const heading = scope==='date'
             ? /^(?:dia\s+)?(\d{1,2})[°º.]?\s+(?:de |del )?(?:diciembre|enero)\b/u
             : /^(lunes|martes|miercoles|jueves|viernes|sabado)(?:\s+(?:de|despues|dentro)\b.*)?$/u;
-        const markers=lines.flatMap((line,index)=> {
-            const match=fold(line).match(heading);
+        const markers=lines.flatMap(({text},index)=> {
+            const match=fold(text).match(heading);
             return match?[{index,value:match[1]}]:[];
         });
         const match=markers.findIndex(m=>scope==='date'?Number(m.value)===date.getDate():m.value===weekdays[date.getDay()]);
@@ -110,11 +129,13 @@
             active={key,header,summary,lines:[]};
             chapters.push(active);
         };
-        for (const line of lines) {
+        for (let index=0; index<lines.length; index+=1) {
+            const line=lines[index].text;
             const key=fold(line);
             const prayer=prayerHeadings.find(([title])=>key===title||key.startsWith(title+' '));
             if(prayer) { start(prayer[1],line.slice(prayer[0].length).trim()); continue; }
-            if (/^(?:prefacio|oracion universal|oracion de los fieles|bendicion solemne|liturgia eucaristica|para celebrar)\b/u.test(key)) {
+            if (/^(?:prefacio|oracion universal|oracion de los fieles|bendicion solemne|liturgia eucaristica|liturgia de la palabra|para celebrar)\b/u.test(key)
+                || (active?.key==='entrance' && /^(?:gloria|credo)$/u.test(key))) {
                 active=undefined;
                 continue;
             }
@@ -125,7 +146,15 @@
             }
             if (key==='evangelio') { active=undefined; gospelSummary=[]; continue; }
             if (/^lectura d(?:el|e) |^(?:comienzo|principio) d(?:el |e la )(?:libro|carta|profecia)\b/u.test(key)) {
-                start(sawPsalm?'reading2':'reading1',line); continue;
+                const captions=[];
+                for (let before=index-1; before>=0 && lines[before].caption; before-=1) {
+                    captions.unshift(lines[before].text);
+                }
+                if (captions.length && active && active.lines.slice(-captions.length).join(' ')===captions.join(' ')) {
+                    active.lines.length -= captions.length;
+                }
+                start(sawPsalm?'reading2':'reading1',line,captions.join(' '));
+                continue;
             }
             if (/^salmo(?: responsorial)?(?:\s+(?:[a-z.]+\s*)?\d.*)?$/u.test(key)) {
                 sawPsalm=true;
@@ -151,10 +180,11 @@
         return chapters;
     }
 
-    function referenceFromProclamation(header) {
-        const parts=header.match(/^(.*?)\s+(\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]+)$|^(.*?)\s+([5-9]|\d{2,})$/u);
+    const citationOnProclamation = /^(.*?)\s+(\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]*)$|^(.*?)\s+([5-9]|\d{2,})$/u;
+
+    function referenceFromProclamation(parts) {
         if(!parts) return '';
-        const title=parts[1]||parts[3], verses=parts[2]||parts[4];
+        const title=(parts[1]||parts[3]).replace(/[,:]$/u,''), verses=parts[2]||parts[4];
         const ordinal=fold(title).match(/\b(primera|segunda|tercera) carta\b/u);
         const prefix=ordinal?({primera:'1 ',segunda:'2 ',tercera:'3 '})[ordinal[1]]:'';
         const names={corinto:'Corintios',efeso:'Efesios',tesalonica:'Tesalonicenses',colosas:'Colosenses',
@@ -177,12 +207,17 @@
             if(!lines.length) continue;
             const reading=['reading1','reading2','gospel'].includes(key);
             const displayHeader = !['collect','prayer_offerings','prayer_after'].includes(key);
-            const citation = reading ? referenceFromProclamation(header) : key==='psalm' && /^\d/u.test(header) ? 'Sal '+header : '';
-            const proclamation = key==='gospel' ? header.replace(/^\s*[+†✠]\s*/u,'')
-                .replace(/\s+\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]+$/u,'') : header;
+            const onHeading = reading ? header.match(citationOnProclamation) : null;
+            const detached = reading && !onHeading && /^\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]*$/u.test(lines[0])
+                ? (header+' '+lines[0]).match(citationOnProclamation) : null;
+            const citation = reading ? referenceFromProclamation(onHeading || detached)
+                : key==='psalm' && /^\d/u.test(header) ? 'Sal '+header : '';
+            const proclamation = reading
+                ? (onHeading?.[1] || onHeading?.[3] || header).replace(/^\s*[+†✠]\s*/u,'') : header;
             const input=[...(summary ? ['<'+summary+'>'] : []),
                 ...(proclamation && displayHeader ? [proclamation] : []),
-                ...(key==='gospel' && citation ? [citation] : []),...lines];
+                ...(reading && citation ? [citation] : []),
+                ...(detached && citation ? lines.slice(1) : lines)];
             const section=formatSection('ES',key,{text:input.join('\n'),lines:input});
             if(!section?.text) continue;
             if(citation) section.cit_es=citation;
@@ -198,9 +233,12 @@
         const result=summarized({title:plan.title,sourceRank:plan.rank,color:fallbackColor,data,
             sourceUrl:plan.url,sourceName:plan.scope==='dated'?'Eucaristía Diaria · Arzobispado de Santiago':'Leccionario del Cono Sur · Curas.com.ar',
             sourceMode:'cono-sur-lectionary'},'ES');
-        const gospel=result.data.gospel;
-        for(const section of [gospel,...(gospel.options||[])]) {
-            section.lines=section.lines.filter(line=>line.role!=='summary'||line.text);
+        for (const key of ['reading1','reading2','gospel']) {
+            const reading = result.data[key];
+            if (!reading) continue;
+            for (const section of [reading,...(reading.options||[])]) {
+                section.lines=section.lines.filter(line=>line.role!=='summary'||line.text);
+            }
         }
         return result;
     }

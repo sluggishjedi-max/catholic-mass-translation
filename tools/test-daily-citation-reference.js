@@ -27,4 +27,25 @@ for(const caption of ['', 'El Maestro instruye a sus discípulos']){
  assert.equal(gospel.lines.find(row=>row.role==='summary')?.text,caption||undefined);
  assert.equal(gospel.lines.find(row=>row.role==='body')?.text,'Jesús habló a sus discípulos.');
 }
+const conoReadingFixture = '<p>Antífona de entrada</p><p>Alaben al Señor todas las naciones.</p>'
+  + '<p>Gloria</p><p>Liturgia de la Palabra</p><p>(Ver Ordinario de la Misa)</p>'
+  + '<p align="right"><font color="red"><i>El pueblo escucha.<br>La palabra de Dios.</i></font></p>'
+  + '<p><b>Lectura del libro de Isaías</b> <font color="red">40, 1-5</font><br>Consuelen a mi pueblo.<br>Palabra de Dios.</p>'
+  + '<p>SALMO Sal 84, 9</p><p>El Señor habla de paz.</p>'
+  + '<p>Lectura de la segunda carta del apóstol san Pedro<br>3, 8-14<br>Esperamos cielos nuevos.<br>Palabra de Dios.</p>'
+  + '<p>Evangelio</p><p>Evangelio de nuestro Señor Jesucristo según san Marcos 1, 1-8<br>Juan pregonaba el bautismo.<br>Palabra del Señor.</p>';
+r.window.__conoReadingFixture=conoReadingFixture;
+const conoReadings=r.run("ordoConoSurDaily.parse({document:parseHtml(__conoReadingFixture),plan:{url:'fixture',title:'Día',requireTwo:true},date:new Date(2026,10,25),formatSection:strictFormatSection,summarized:strictEnsureReadingSummarySlots}).data");
+assert.equal(conoReadings.entrance.text,'Alaben al Señor todas las naciones.');
+for(const [key,summary,intro,body,citation] of [
+ ['reading1','El pueblo escucha. La palabra de Dios','Lectura del libro de Isaías','Consuelen a mi pueblo.','Isaías 40, 1-5'],
+ ['reading2',undefined,'Lectura de la segunda carta del apóstol san Pedro','Esperamos cielos nuevos.','2 Pedro 3, 8-14']
+]){
+ const reading=conoReadings[key];
+ assert.equal(reading.lines.find(row=>row.role==='summary')?.text,summary);
+ assert.equal(reading.lines.filter(row=>row.role==='intro').length,1);
+ assert.equal(reading.lines.find(row=>row.role==='intro').text,intro);
+ assert.equal(reading.lines.find(row=>row.role==='body').text,body);
+ assert.equal(reading.cit_es,citation);
+}
 console.log(JSON.stringify({cases,referenceKeptInCitation:true,optionsIndependent:true,ordinaryBodyWordsPreserved:true}));}finally{r.close();}
