@@ -11839,7 +11839,8 @@
       },
       "vn_martyrs": {
         "title": {
-          "en": "Vietnamese Proper Preface: The Martyrs of Vietnam"
+          "en": "Vietnamese Proper Preface: The Martyrs of Vietnam",
+          "zh": "越南殉道聖人頌謝詞"
         },
         "content": [{
           "sp_en": "",
@@ -11854,7 +11855,8 @@
       },
       "us_thanksgiving": {
         "title": {
-          "en": "Preface for Thanksgiving Day"
+          "en": "Preface for Thanksgiving Day",
+          "zh": "美國感恩節頌謝詞"
         },
         "content": [{
           "sp_en": "P.",
@@ -11872,7 +11874,8 @@
       },
       "us_independence": {
         "title": {
-          "en": "Preface for Independence Day"
+          "en": "Preface for Independence Day",
+          "zh": "美國獨立紀念日頌謝詞"
         },
         "content": [{
           "sp_en": "P.",
@@ -11891,7 +11894,8 @@
       },
       "us_guadalupe": {
         "title": {
-          "en": "Preface of Our Lady of Guadalupe"
+          "en": "Preface of Our Lady of Guadalupe",
+          "zh": "瓜達盧佩聖母頌謝詞"
         },
         "content": [{
           "sp_en": "P.",
@@ -11909,7 +11913,8 @@
       },
       "jp_26_martyrs": {
         "title": {
-          "en": "Japanese Proper Preface: The Twenty-Six Martyrs of Japan"
+          "en": "Japanese Proper Preface: The Twenty-Six Martyrs of Japan",
+          "zh": "日本二十六位殉道聖人頌謝詞"
         },
         "content": [{
           "sp_en": "",
@@ -11924,7 +11929,8 @@
       },
       "jp_discovery_of_christians": {
         "title": {
-          "en": "Japanese Proper Preface: Our Lady and the Discovery of the Hidden Christians"
+          "en": "Japanese Proper Preface: Our Lady and the Discovery of the Hidden Christians",
+          "zh": "日本發現信徒紀念日頌謝詞"
         },
         "content": [{
           "sp_en": "",
@@ -20584,7 +20590,8 @@ God, for ever and ever.`
           },
           "vn_martyrs": {
             "title": {
-              "en": "Vietnamese Proper Preface: The Martyrs of Vietnam"
+              "en": "Vietnamese Proper Preface: The Martyrs of Vietnam",
+              "zh": "越南殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -20609,7 +20616,8 @@ God, for ever and ever.`
           },
           "us_thanksgiving": {
             "title": {
-              "en": "Preface for Thanksgiving Day"
+              "en": "Preface for Thanksgiving Day",
+              "zh": "美國感恩節頌謝詞"
             },
             "content": [
               {
@@ -20635,7 +20643,8 @@ God, for ever and ever.`
           },
           "us_independence": {
             "title": {
-              "en": "Preface for Independence Day"
+              "en": "Preface for Independence Day",
+              "zh": "美國獨立紀念日頌謝詞"
             },
             "content": [
               {
@@ -20661,7 +20670,8 @@ God, for ever and ever.`
           },
           "us_guadalupe": {
             "title": {
-              "en": "Preface of Our Lady of Guadalupe"
+              "en": "Preface of Our Lady of Guadalupe",
+              "zh": "瓜達盧佩聖母頌謝詞"
             },
             "content": [
               {
@@ -20687,7 +20697,8 @@ God, for ever and ever.`
           },
           "jp_26_martyrs": {
             "title": {
-              "en": "Japanese Proper Preface: The Twenty-Six Martyrs of Japan"
+              "en": "Japanese Proper Preface: The Twenty-Six Martyrs of Japan",
+              "zh": "日本二十六位殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -20712,7 +20723,8 @@ God, for ever and ever.`
           },
           "jp_discovery_of_christians": {
             "title": {
-              "en": "Japanese Proper Preface: Our Lady and the Discovery of the Hidden Christians"
+              "en": "Japanese Proper Preface: Our Lady and the Discovery of the Hidden Christians",
+              "zh": "日本發現信徒紀念日頌謝詞"
             },
             "content": [
               {

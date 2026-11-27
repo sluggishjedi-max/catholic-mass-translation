@@ -1328,7 +1328,8 @@
     "songs": {
       "de_preface_dialogue": {
         "title": {
-          "de": "Einladung zum Hochgebet und Präfation"
+          "de": "Einladung zum Hochgebet und Präfation",
+          "zh": "感恩經對答與頌謝詞"
         },
         "content": [{
           "sp_de": "",
@@ -9148,7 +9149,8 @@
         "songs": {
           "de_preface_dialogue": {
             "title": {
-              "de": "Einladung zum Hochgebet und Präfation"
+              "de": "Einladung zum Hochgebet und Präfation",
+              "zh": "感恩經對答與頌謝詞"
             },
             "content": [
               {

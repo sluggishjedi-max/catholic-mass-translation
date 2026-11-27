@@ -2084,7 +2084,8 @@
       },
       "advent_1a": {
         "title": {
-          "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia"
+          "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia",
+          "zh": "將臨期頌謝詞（一甲）"
         },
         "content": [
           {
@@ -2284,7 +2285,8 @@
       },
       "advent_2a": {
         "title": {
-          "it": "Prefazio dell’Avvento II/A — Maria nuova Eva"
+          "it": "Prefazio dell’Avvento II/A — Maria nuova Eva",
+          "zh": "將臨期頌謝詞（二甲）"
         },
         "content": [
           {
@@ -3013,7 +3015,8 @@
       },
       "lent_5": {
         "title": {
-          "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale"
+          "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale",
+          "zh": "四旬期頌謝詞（五）"
         },
         "content": [
           {
@@ -3769,7 +3772,8 @@
       },
       "after_ascension": {
         "title": {
-          "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito"
+          "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito",
+          "zh": "基督升天節後頌謝詞"
         },
         "content": [
           {
@@ -4493,7 +4497,8 @@
       },
       "ordinary_9": {
         "title": {
-          "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa"
+          "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa",
+          "zh": "常年主日頌謝詞（九）"
         },
         "content": [
           {
@@ -4578,7 +4583,8 @@
       },
       "ordinary_10": {
         "title": {
-          "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore"
+          "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore",
+          "zh": "常年主日頌謝詞（十）"
         },
         "content": [
           {
@@ -4656,7 +4662,8 @@
       },
       "baptism": {
         "title": {
-          "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova"
+          "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova",
+          "zh": "洗禮頌謝詞"
         },
         "content": [
           {
@@ -4760,7 +4767,8 @@
       },
       "confirmation": {
         "title": {
-          "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito"
+          "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito",
+          "zh": "堅振頌謝詞"
         },
         "content": [
           {
@@ -5053,7 +5061,8 @@
       },
       "eucharist_3": {
         "title": {
-          "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna"
+          "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna",
+          "zh": "聖體頌謝詞（三）"
         },
         "content": [
           {
@@ -5119,7 +5128,8 @@
       },
       "holy_orders_ministries": {
         "title": {
-          "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa"
+          "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa",
+          "zh": "授秩頌謝詞"
         },
         "content": [
           {
@@ -5305,7 +5315,8 @@
       },
       "penance": {
         "title": {
-          "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito"
+          "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito",
+          "zh": "修和聖事頌謝詞"
         },
         "content": [
           {
@@ -5390,7 +5401,8 @@
       },
       "sick_paschal": {
         "title": {
-          "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo"
+          "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo",
+          "zh": "病人傅油頌謝詞"
         },
         "content": [
           {
@@ -5662,7 +5674,8 @@
       },
       "mary_3": {
         "title": {
-          "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa"
+          "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa",
+          "zh": "聖母頌謝詞（三）"
         },
         "content": [
           {
@@ -5768,7 +5781,8 @@
       },
       "mary_4": {
         "title": {
-          "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza"
+          "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza",
+          "zh": "聖母頌謝詞（四）"
         },
         "content": [
           {
@@ -5849,7 +5863,8 @@
       },
       "mary_5": {
         "title": {
-          "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova"
+          "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova",
+          "zh": "聖母頌謝詞（五）"
         },
         "content": [
           {
@@ -6549,7 +6564,8 @@
       },
       "martyrs_2": {
         "title": {
-          "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri"
+          "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri",
+          "zh": "殉道聖人頌謝詞（二）"
         },
         "content": [
           {
@@ -6709,7 +6725,8 @@
       },
       "pastors_2": {
         "title": {
-          "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore"
+          "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore",
+          "zh": "牧者頌謝詞（二）"
         },
         "content": [
           {
@@ -6790,7 +6807,8 @@
       },
       "pastors_3": {
         "title": {
-          "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti"
+          "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti",
+          "zh": "牧者頌謝詞（三）"
         },
         "content": [
           {
@@ -6851,7 +6869,8 @@
       },
       "doctors_1": {
         "title": {
-          "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza"
+          "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza",
+          "zh": "教會聖師頌謝詞（一）"
         },
         "content": [
           {
@@ -6944,7 +6963,8 @@
       },
       "doctors_2": {
         "title": {
-          "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio"
+          "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio",
+          "zh": "教會聖師頌謝詞（二）"
         },
         "content": [
           {
@@ -7595,7 +7615,8 @@
       },
       "common_7": {
         "title": {
-          "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi"
+          "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi",
+          "zh": "通用頌謝詞（七）"
         },
         "content": [
           {
@@ -7688,7 +7709,8 @@
       },
       "common_8": {
         "title": {
-          "it": "Prefazio comune VIII — Gesù buon samaritano"
+          "it": "Prefazio comune VIII — Gesù buon samaritano",
+          "zh": "通用頌謝詞（八）"
         },
         "content": [
           {
@@ -7792,7 +7814,8 @@
       },
       "common_9": {
         "title": {
-          "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente"
+          "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente",
+          "zh": "通用頌謝詞（九）"
         },
         "content": [
           {
@@ -23320,7 +23343,8 @@
           },
           "advent_1a": {
             "title": {
-              "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia"
+              "it": "Prefazio dell’Avvento I/A — Cristo, Signore e giudice della storia",
+              "zh": "將臨期頌謝詞（一甲）"
             },
             "content": [
               {
@@ -23604,7 +23628,8 @@
           },
           "advent_2a": {
             "title": {
-              "it": "Prefazio dell’Avvento II/A — Maria nuova Eva"
+              "it": "Prefazio dell’Avvento II/A — Maria nuova Eva",
+              "zh": "將臨期頌謝詞（二甲）"
             },
             "content": [
               {
@@ -24633,7 +24658,8 @@
           },
           "lent_5": {
             "title": {
-              "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale"
+              "it": "Prefazio di Quaresima V — La via dell’esodo nel deserto quaresimale",
+              "zh": "四旬期頌謝詞（五）"
             },
             "content": [
               {
@@ -25705,7 +25731,8 @@
           },
           "after_ascension": {
             "title": {
-              "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito"
+              "it": "Prefazio dopo l’Ascensione — Nell’attesa della venuta dello Spirito",
+              "zh": "基督升天節後頌謝詞"
             },
             "content": [
               {
@@ -26743,7 +26770,8 @@
           },
           "ordinary_9": {
             "title": {
-              "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa"
+              "it": "Prefazio delle domeniche del Tempo Ordinario IX — La missione dello Spirito nella Chiesa",
+              "zh": "常年主日頌謝詞（九）"
             },
             "content": [
               {
@@ -26864,7 +26892,8 @@
           },
           "ordinary_10": {
             "title": {
-              "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore"
+              "it": "Prefazio delle domeniche del Tempo Ordinario X — Il giorno del Signore",
+              "zh": "常年主日頌謝詞（十）"
             },
             "content": [
               {
@@ -26976,7 +27005,8 @@
           },
           "baptism": {
             "title": {
-              "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova"
+              "it": "Prefazio del Battesimo — Il Battesimo inizio della vita nuova",
+              "zh": "洗禮頌謝詞"
             },
             "content": [
               {
@@ -27124,7 +27154,8 @@
           },
           "confirmation": {
             "title": {
-              "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito"
+              "it": "Prefazio della Confermazione — Confermati con il sigillo dello Spirito",
+              "zh": "堅振頌謝詞"
             },
             "content": [
               {
@@ -27541,7 +27572,8 @@
           },
           "eucharist_3": {
             "title": {
-              "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna"
+              "it": "Prefazio della Santissima Eucaristia III — L’Eucaristia viatico verso la Pasqua eterna",
+              "zh": "聖體頌謝詞（三）"
             },
             "content": [
               {
@@ -27635,7 +27667,8 @@
           },
           "holy_orders_ministries": {
             "title": {
-              "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa"
+              "it": "Prefazio dell’Ordine — Cristo sorgente di ogni ministero nella Chiesa",
+              "zh": "授秩頌謝詞"
             },
             "content": [
               {
@@ -27901,7 +27934,8 @@
           },
           "penance": {
             "title": {
-              "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito"
+              "it": "Prefazio della Penitenza — Il sacramento della Riconciliazione nello Spirito",
+              "zh": "修和聖事頌謝詞"
             },
             "content": [
               {
@@ -28022,7 +28056,8 @@
           },
           "sick_paschal": {
             "title": {
-              "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo"
+              "it": "Prefazio dell’Unzione degli infermi — La sofferenza, partecipazione alla Pasqua di Cristo",
+              "zh": "病人傅油頌謝詞"
             },
             "content": [
               {
@@ -28412,7 +28447,8 @@
           },
           "mary_3": {
             "title": {
-              "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa"
+              "it": "Prefazio della beata Vergine Maria III — Maria modello e Madre della Chiesa",
+              "zh": "聖母頌謝詞（三）"
             },
             "content": [
               {
@@ -28566,7 +28602,8 @@
           },
           "mary_4": {
             "title": {
-              "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza"
+              "it": "Prefazio della beata Vergine Maria IV — Maria segno di consolazione e di speranza",
+              "zh": "聖母頌謝詞（四）"
             },
             "content": [
               {
@@ -28681,7 +28718,8 @@
           },
           "mary_5": {
             "title": {
-              "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova"
+              "it": "Prefazio della beata Vergine Maria V — Maria immagine dell’umanità nuova",
+              "zh": "聖母頌謝詞（五）"
             },
             "content": [
               {
@@ -29679,7 +29717,8 @@
           },
           "martyrs_2": {
             "title": {
-              "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri"
+              "it": "Prefazio dei santi martiri II — Le meraviglie di Dio nella vittoria dei martiri",
+              "zh": "殉道聖人頌謝詞（二）"
             },
             "content": [
               {
@@ -29903,7 +29942,8 @@
           },
           "pastors_2": {
             "title": {
-              "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore"
+              "it": "Prefazio dei santi pastori II — I pastori della Chiesa, immagine di Cristo, buon pastore",
+              "zh": "牧者頌謝詞（二）"
             },
             "content": [
               {
@@ -30018,7 +30058,8 @@
           },
           "pastors_3": {
             "title": {
-              "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti"
+              "it": "Prefazio dei santi pastori III — L’annuncio del Vangelo alle genti",
+              "zh": "牧者頌謝詞（三）"
             },
             "content": [
               {
@@ -30103,7 +30144,8 @@
           },
           "doctors_1": {
             "title": {
-              "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza"
+              "it": "Prefazio dei santi dottori della Chiesa I — I dottori della Chiesa riflesso della Sapienza",
+              "zh": "教會聖師頌謝詞（一）"
             },
             "content": [
               {
@@ -30236,7 +30278,8 @@
           },
           "doctors_2": {
             "title": {
-              "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio"
+              "it": "Prefazio dei santi dottori della Chiesa II — I dottori della Chiesa profeti della sublime bellezza di Dio",
+              "zh": "教會聖師頌謝詞（二）"
             },
             "content": [
               {
@@ -31159,7 +31202,8 @@
           },
           "common_7": {
             "title": {
-              "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi"
+              "it": "Prefazio comune VII — Cristo ospite e pellegrino in mezzo a noi",
+              "zh": "通用頌謝詞（七）"
             },
             "content": [
               {
@@ -31292,7 +31336,8 @@
           },
           "common_8": {
             "title": {
-              "it": "Prefazio comune VIII — Gesù buon samaritano"
+              "it": "Prefazio comune VIII — Gesù buon samaritano",
+              "zh": "通用頌謝詞（八）"
             },
             "content": [
               {
@@ -31440,7 +31485,8 @@
           },
           "common_9": {
             "title": {
-              "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente"
+              "it": "Prefazio comune IX — La gloria di Dio è l’uomo vivente",
+              "zh": "通用頌謝詞（九）"
             },
             "content": [
               {

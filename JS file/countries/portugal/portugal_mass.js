@@ -3491,7 +3491,8 @@
       },
       "advent_1a": {
         "title": {
-          "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história"
+          "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história",
+          "zh": "將臨期頌謝詞（一甲）"
         },
         "content": [
           {
@@ -3733,7 +3734,8 @@
       },
       "advent_2a": {
         "title": {
-          "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva"
+          "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva",
+          "zh": "將臨期頌謝詞（二甲）"
         },
         "content": [
           {
@@ -4621,7 +4623,8 @@
       },
       "lent_5": {
         "title": {
-          "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal"
+          "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal",
+          "zh": "四旬期頌謝詞（五）"
         },
         "content": [
           {
@@ -4742,7 +4745,8 @@
       },
       "lent_6": {
         "title": {
-          "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito"
+          "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito",
+          "zh": "四旬期頌謝詞（六）"
         },
         "content": [
           {
@@ -6486,7 +6490,8 @@
       },
       "ordinary_9": {
         "title": {
-          "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja"
+          "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja",
+          "zh": "常年主日頌謝詞（九）"
         },
         "content": [
           {
@@ -6580,7 +6585,8 @@
       },
       "ordinary_10": {
         "title": {
-          "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor"
+          "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor",
+          "zh": "常年主日頌謝詞（十）"
         },
         "content": [
           {
@@ -6945,7 +6951,8 @@
       },
       "eucharist_3": {
         "title": {
-          "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna"
+          "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna",
+          "zh": "聖體頌謝詞（三）"
         },
         "content": [
           {
@@ -7260,7 +7267,8 @@
       },
       "mary_3": {
         "title": {
-          "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança"
+          "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança",
+          "zh": "聖母頌謝詞（三）"
         },
         "content": [
           {
@@ -7366,7 +7374,8 @@
       },
       "mary_4": {
         "title": {
-          "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade"
+          "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade",
+          "zh": "聖母頌謝詞（四）"
         },
         "content": [
           {
@@ -8196,7 +8205,8 @@
       },
       "martyrs_2": {
         "title": {
-          "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires"
+          "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires",
+          "zh": "殉道聖人頌謝詞（二）"
         },
         "content": [
           {
@@ -9063,7 +9073,8 @@
       },
       "common_7": {
         "title": {
-          "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós"
+          "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós",
+          "zh": "通用頌謝詞（七）"
         },
         "content": [
           {
@@ -9184,7 +9195,8 @@
       },
       "common_8": {
         "title": {
-          "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano"
+          "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano",
+          "zh": "通用頌謝詞（八）"
         },
         "content": [
           {
@@ -9311,7 +9323,8 @@
       },
       "common_9": {
         "title": {
-          "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo"
+          "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo",
+          "zh": "通用頌謝詞（九）"
         },
         "content": [
           {
@@ -26403,7 +26416,8 @@
           },
           "advent_1a": {
             "title": {
-              "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história"
+              "pt": "PREFÁCIO I-A DO ADVENTO — Cristo, Senhor e juiz da história",
+              "zh": "將臨期頌謝詞（一甲）"
             },
             "content": [
               {
@@ -26645,7 +26659,8 @@
           },
           "advent_2a": {
             "title": {
-              "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva"
+              "pt": "PREFÁCIO II-A DO ADVENTO — Maria, nova Eva",
+              "zh": "將臨期頌謝詞（二甲）"
             },
             "content": [
               {
@@ -27533,7 +27548,8 @@
           },
           "lent_5": {
             "title": {
-              "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal"
+              "pt": "PREFÁCIO V DA QUARESMA — O caminho do êxodo no deserto quaresmal",
+              "zh": "四旬期頌謝詞（五）"
             },
             "content": [
               {
@@ -27654,7 +27670,8 @@
           },
           "lent_6": {
             "title": {
-              "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito"
+              "pt": "PREFÁCIO VI DA QUARESMA — O sacramento da reconciliação no Espírito",
+              "zh": "四旬期頌謝詞（六）"
             },
             "content": [
               {
@@ -29398,7 +29415,8 @@
           },
           "ordinary_9": {
             "title": {
-              "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja"
+              "pt": "PREFÁCIO IX DOMINICAL DO TEMPO COMUM — A ação do Espírito na Igreja",
+              "zh": "常年主日頌謝詞（九）"
             },
             "content": [
               {
@@ -29492,7 +29510,8 @@
           },
           "ordinary_10": {
             "title": {
-              "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor"
+              "pt": "PREFÁCIO X DOMINICAL DO TEMPO COMUM — O dia do Senhor",
+              "zh": "常年主日頌謝詞（十）"
             },
             "content": [
               {
@@ -29857,7 +29876,8 @@
           },
           "eucharist_3": {
             "title": {
-              "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna"
+              "pt": "PREFÁCIO III DA SANTÍSSIMA EUCARISTIA — A Eucaristia, viático para a Páscoa eterna",
+              "zh": "聖體頌謝詞（三）"
             },
             "content": [
               {
@@ -30172,7 +30192,8 @@
           },
           "mary_3": {
             "title": {
-              "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança"
+              "pt": "PREFÁCIO III DA VIRGEM SANTA MARIA — Maria, sinal de consolação e de esperança",
+              "zh": "聖母頌謝詞（三）"
             },
             "content": [
               {
@@ -30278,7 +30299,8 @@
           },
           "mary_4": {
             "title": {
-              "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade"
+              "pt": "PREFÁCIO IV DA VIRGEM SANTA MARIA — Maria, imagem da nova humanidade",
+              "zh": "聖母頌謝詞（四）"
             },
             "content": [
               {
@@ -31108,7 +31130,8 @@
           },
           "martyrs_2": {
             "title": {
-              "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires"
+              "pt": "PREFÁCIO II DOS SANTOS MÁRTIRES — As maravilhas de Deus na vitória dos mártires",
+              "zh": "殉道聖人頌謝詞（二）"
             },
             "content": [
               {
@@ -31975,7 +31998,8 @@
           },
           "common_7": {
             "title": {
-              "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós"
+              "pt": "PREFÁCIO COMUM VII — Cristo, hóspede e peregrino no meio de nós",
+              "zh": "通用頌謝詞（七）"
             },
             "content": [
               {
@@ -32096,7 +32120,8 @@
           },
           "common_8": {
             "title": {
-              "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano"
+              "pt": "PREFÁCIO COMUM VIII — Cristo, o bom samaritano",
+              "zh": "通用頌謝詞（八）"
             },
             "content": [
               {
@@ -32223,7 +32248,8 @@
           },
           "common_9": {
             "title": {
-              "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo"
+              "pt": "PREFÁCIO COMUM IX — A glória de Deus é o homem vivo",
+              "zh": "通用頌謝詞（九）"
             },
             "content": [
               {

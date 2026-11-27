@@ -6258,7 +6258,8 @@
           },
           "vn_martyrs": {
             "title": {
-              "la": "Praefatio propria Vietnamiae: De Martyribus Vietnamiae"
+              "la": "Praefatio propria Vietnamiae: De Martyribus Vietnamiae",
+              "zh": "越南殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -6283,7 +6284,8 @@
           },
           "us_thanksgiving": {
             "title": {
-              "la": "Praefatio propria Civitatum Foederatarum: Pro die gratiarum actionis"
+              "la": "Praefatio propria Civitatum Foederatarum: Pro die gratiarum actionis",
+              "zh": "美國感恩節頌謝詞"
             },
             "content": [
               {
@@ -6308,7 +6310,8 @@
           },
           "us_independence": {
             "title": {
-              "la": "Praefatio propria Civitatum Foederatarum: Pro die libertatis"
+              "la": "Praefatio propria Civitatum Foederatarum: Pro die libertatis",
+              "zh": "美國獨立紀念日頌謝詞"
             },
             "content": [
               {
@@ -6333,7 +6336,8 @@
           },
           "us_guadalupe": {
             "title": {
-              "la": "Praefatio propria Civitatum Foederatarum: De Beata Maria Virgine de Guadalupe"
+              "la": "Praefatio propria Civitatum Foederatarum: De Beata Maria Virgine de Guadalupe",
+              "zh": "瓜達盧佩聖母頌謝詞"
             },
             "content": [
               {
@@ -6358,7 +6362,8 @@
           },
           "jp_26_martyrs": {
             "title": {
-              "la": "Praefatio propria Iaponiae: De viginti sex Martyribus Iaponiae"
+              "la": "Praefatio propria Iaponiae: De viginti sex Martyribus Iaponiae",
+              "zh": "日本二十六位殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -6383,7 +6388,8 @@
           },
           "jp_discovery_of_christians": {
             "title": {
-              "la": "Praefatio propria Iaponiae: De Beata Maria Virgine et inventione Christianorum occultorum"
+              "la": "Praefatio propria Iaponiae: De Beata Maria Virgine et inventione Christianorum occultorum",
+              "zh": "日本發現信徒紀念日頌謝詞"
             },
             "content": [
               {
@@ -11572,7 +11578,8 @@
         },
         "vn_martyrs": {
           "title": {
-            "la": "Praefatio propria Vietnamiae: De Martyribus Vietnamiae"
+            "la": "Praefatio propria Vietnamiae: De Martyribus Vietnamiae",
+            "zh": "越南殉道聖人頌謝詞"
           },
           "content": [{
             "sp_la": "",
@@ -11587,7 +11594,8 @@
         },
         "us_thanksgiving": {
           "title": {
-            "la": "Praefatio propria Civitatum Foederatarum: Pro die gratiarum actionis"
+            "la": "Praefatio propria Civitatum Foederatarum: Pro die gratiarum actionis",
+            "zh": "美國感恩節頌謝詞"
           },
           "content": [{
             "sp_la": "",
@@ -11602,7 +11610,8 @@
         },
         "us_independence": {
           "title": {
-            "la": "Praefatio propria Civitatum Foederatarum: Pro die libertatis"
+            "la": "Praefatio propria Civitatum Foederatarum: Pro die libertatis",
+            "zh": "美國獨立紀念日頌謝詞"
           },
           "content": [{
             "sp_la": "",
@@ -11617,7 +11626,8 @@
         },
         "us_guadalupe": {
           "title": {
-            "la": "Praefatio propria Civitatum Foederatarum: De Beata Maria Virgine de Guadalupe"
+            "la": "Praefatio propria Civitatum Foederatarum: De Beata Maria Virgine de Guadalupe",
+            "zh": "瓜達盧佩聖母頌謝詞"
           },
           "content": [{
             "sp_la": "",
@@ -11632,7 +11642,8 @@
         },
         "jp_26_martyrs": {
           "title": {
-            "la": "Praefatio propria Iaponiae: De viginti sex Martyribus Iaponiae"
+            "la": "Praefatio propria Iaponiae: De viginti sex Martyribus Iaponiae",
+            "zh": "日本二十六位殉道聖人頌謝詞"
           },
           "content": [{
             "sp_la": "",
@@ -11647,7 +11658,8 @@
         },
         "jp_discovery_of_christians": {
           "title": {
-            "la": "Praefatio propria Iaponiae: De Beata Maria Virgine et inventione Christianorum occultorum"
+            "la": "Praefatio propria Iaponiae: De Beata Maria Virgine et inventione Christianorum occultorum",
+            "zh": "日本發現信徒紀念日頌謝詞"
           },
           "content": [{
             "sp_la": "",

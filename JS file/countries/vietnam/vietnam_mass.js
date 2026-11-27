@@ -6405,7 +6405,8 @@
           },
           "vn_martyrs": {
             "title": {
-              "vn": "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam"
+              "vn": "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam",
+              "zh": "越南殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -6437,7 +6438,8 @@
           },
           "vn_lunar_new_year": {
             "title": {
-              "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)"
+              "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)",
+              "zh": "越南新春頌謝詞"
             },
             "content": [
               {
@@ -6457,7 +6459,8 @@
           },
           "vn_lunar_ancestors": {
             "title": {
-              "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)"
+              "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)",
+              "zh": "越南敬念祖先頌謝詞"
             },
             "content": [
               {
@@ -6489,7 +6492,8 @@
           },
           "vn_lunar_work": {
             "title": {
-              "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)"
+              "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)",
+              "zh": "越南新春聖化工作頌謝詞"
             },
             "content": [
               {
@@ -6521,7 +6525,8 @@
           },
           "vn_mid_autumn": {
             "title": {
-              "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi"
+              "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi",
+              "zh": "越南中秋節頌謝詞"
             },
             "content": [
               {
@@ -6541,7 +6546,8 @@
           },
           "us_thanksgiving": {
             "title": {
-              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Lễ Tạ Ơn"
+              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Lễ Tạ Ơn",
+              "zh": "美國感恩節頌謝詞"
             },
             "content": [
               {
@@ -6566,7 +6572,8 @@
           },
           "us_independence": {
             "title": {
-              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Ngày Độc Lập"
+              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Ngày Độc Lập",
+              "zh": "美國獨立紀念日頌謝詞"
             },
             "content": [
               {
@@ -6591,7 +6598,8 @@
           },
           "us_guadalupe": {
             "title": {
-              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Đức Mẹ Guadalupe"
+              "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Đức Mẹ Guadalupe",
+              "zh": "瓜達盧佩聖母頌謝詞"
             },
             "content": [
               {
@@ -6616,7 +6624,8 @@
           },
           "jp_26_martyrs": {
             "title": {
-              "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Hai mươi sáu thánh tử đạo Nhật Bản"
+              "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Hai mươi sáu thánh tử đạo Nhật Bản",
+              "zh": "日本二十六位殉道聖人頌謝詞"
             },
             "content": [
               {
@@ -6641,7 +6650,8 @@
           },
           "jp_discovery_of_christians": {
             "title": {
-              "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Đức Mẹ và việc khám phá các Kitô hữu tại Nhật Bản"
+              "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Đức Mẹ và việc khám phá các Kitô hữu tại Nhật Bản",
+              "zh": "日本發現信徒紀念日頌謝詞"
             },
             "content": [
               {
@@ -12704,7 +12714,8 @@
         },
         "vn_martyrs": {
           "title": {
-            "vn": "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam"
+            "vn": "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam",
+            "zh": "越南殉道聖人頌謝詞"
           },
           "content": [
             {
@@ -12736,7 +12747,8 @@
         },
         "vn_lunar_new_year": {
           "title": {
-            "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)"
+            "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)",
+            "zh": "越南新春頌謝詞"
           },
           "content": [
             {
@@ -12756,7 +12768,8 @@
         },
         "vn_lunar_ancestors": {
           "title": {
-            "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)"
+            "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)",
+            "zh": "越南敬念祖先頌謝詞"
           },
           "content": [
             {
@@ -12788,7 +12801,8 @@
         },
         "vn_lunar_work": {
           "title": {
-            "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)"
+            "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)",
+            "zh": "越南新春聖化工作頌謝詞"
           },
           "content": [
             {
@@ -12820,7 +12834,8 @@
         },
         "vn_mid_autumn": {
           "title": {
-            "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi"
+            "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi",
+            "zh": "越南中秋節頌謝詞"
           },
           "content": [
             {
@@ -12840,7 +12855,8 @@
         },
         "us_thanksgiving": {
           "title": {
-            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Lễ Tạ Ơn"
+            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Lễ Tạ Ơn",
+            "zh": "美國感恩節頌謝詞"
           },
           "content": [{
             "sp_vn": "",
@@ -12855,7 +12871,8 @@
         },
         "us_independence": {
           "title": {
-            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Ngày Độc Lập"
+            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Ngày Độc Lập",
+            "zh": "美國獨立紀念日頌謝詞"
           },
           "content": [{
             "sp_vn": "",
@@ -12870,7 +12887,8 @@
         },
         "us_guadalupe": {
           "title": {
-            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Đức Mẹ Guadalupe"
+            "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Đức Mẹ Guadalupe",
+            "zh": "瓜達盧佩聖母頌謝詞"
           },
           "content": [{
             "sp_vn": "",
@@ -12885,7 +12903,8 @@
         },
         "jp_26_martyrs": {
           "title": {
-            "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Hai mươi sáu thánh tử đạo Nhật Bản"
+            "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Hai mươi sáu thánh tử đạo Nhật Bản",
+            "zh": "日本二十六位殉道聖人頌謝詞"
           },
           "content": [{
             "sp_vn": "",
@@ -12900,7 +12919,8 @@
         },
         "jp_discovery_of_christians": {
           "title": {
-            "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Đức Mẹ và việc khám phá các Kitô hữu tại Nhật Bản"
+            "vn": "Kinh Tiền Tụng Riêng Nhật Bản: Đức Mẹ và việc khám phá các Kitô hữu tại Nhật Bản",
+            "zh": "日本發現信徒紀念日頌謝詞"
           },
           "content": [{
             "sp_vn": "",

@@ -854,7 +854,8 @@
       },
       "advent_1a": {
         "title": {
-          "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA"
+          "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA",
+          "zh": "將臨期頌謝詞（一甲）"
         },
         "content": [
           {
@@ -884,7 +885,8 @@
       },
       "advent_2a": {
         "title": {
-          "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA"
+          "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA",
+          "zh": "將臨期頌謝詞（二甲）"
         },
         "content": [
           {
@@ -1118,7 +1120,8 @@
       },
       "lent_5": {
         "title": {
-          "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
+          "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL",
+          "zh": "四旬期頌謝詞（五）"
         },
         "content": [
           {
@@ -1345,7 +1348,8 @@
       },
       "after_ascension": {
         "title": {
-          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO"
+          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO",
+          "zh": "基督升天節後頌謝詞"
         },
         "content": [
           {
@@ -1551,7 +1555,8 @@
       },
       "ordinary_9": {
         "title": {
-          "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
+          "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA",
+          "zh": "常年主日頌謝詞（九）"
         },
         "content": [
           {
@@ -1573,7 +1578,8 @@
       },
       "ordinary_10": {
         "title": {
-          "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR"
+          "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR",
+          "zh": "常年主日頌謝詞（十）"
         },
         "content": [
           {
@@ -1599,7 +1605,8 @@
       },
       "baptism": {
         "title": {
-          "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA"
+          "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA",
+          "zh": "洗禮頌謝詞"
         },
         "content": [
           {
@@ -1629,7 +1636,8 @@
       },
       "confirmation": {
         "title": {
-          "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU"
+          "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU",
+          "zh": "堅振頌謝詞"
         },
         "content": [
           {
@@ -1715,7 +1723,8 @@
       },
       "eucharist_3": {
         "title": {
-          "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
+          "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA",
+          "zh": "聖體頌謝詞（三）"
         },
         "content": [
           {
@@ -1741,7 +1750,8 @@
       },
       "penance": {
         "title": {
-          "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
+          "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU",
+          "zh": "修和聖事頌謝詞"
         },
         "content": [
           {
@@ -1770,7 +1780,8 @@
       },
       "sick_paschal": {
         "title": {
-          "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO"
+          "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO",
+          "zh": "病人傅油頌謝詞"
         },
         "content": [
           {
@@ -1852,7 +1863,8 @@
       },
       "mary_3": {
         "title": {
-          "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA"
+          "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA",
+          "zh": "聖母頌謝詞（三）"
         },
         "content": [
           {
@@ -1886,7 +1898,8 @@
       },
       "mary_4": {
         "title": {
-          "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
+          "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA",
+          "zh": "聖母頌謝詞（四）"
         },
         "content": [
           {
@@ -1912,7 +1925,8 @@
       },
       "mary_5": {
         "title": {
-          "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
+          "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA",
+          "zh": "聖母頌謝詞（五）"
         },
         "content": [
           {
@@ -2065,7 +2079,8 @@
       },
       "martyrs_2": {
         "title": {
-          "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+          "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
+          "zh": "殉道聖人頌謝詞（二）"
         },
         "content": [
           {
@@ -2288,7 +2303,8 @@
       },
       "common_7": {
         "title": {
-          "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
+          "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS",
+          "zh": "通用頌謝詞（七）"
         },
         "content": [
           {
@@ -2318,7 +2334,8 @@
       },
       "common_8": {
         "title": {
-          "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO"
+          "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO",
+          "zh": "通用頌謝詞（八）"
         },
         "content": [
           {
@@ -2351,7 +2368,8 @@
       },
       "common_9": {
         "title": {
-          "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
+          "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE",
+          "zh": "通用頌謝詞（九）"
         },
         "content": [
           {
@@ -8578,7 +8596,8 @@
           },
           "advent_1a": {
             "title": {
-              "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA"
+              "es": "PREFACIO III DE ADVIENTO — CRISTO, SEÑOR Y JUEZ DE LA HISTORIA",
+              "zh": "將臨期頌謝詞（一甲）"
             },
             "content": [
               {
@@ -8618,7 +8637,8 @@
           },
           "advent_2a": {
             "title": {
-              "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA"
+              "es": "PREFACIO IV DE ADVIENTO — MARÍA, NUEVA EVA",
+              "zh": "將臨期頌謝詞（二甲）"
             },
             "content": [
               {
@@ -8918,7 +8938,8 @@
           },
           "lent_5": {
             "title": {
-              "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
+              "es": "PREFACIO V DE CUARESMA — EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL",
+              "zh": "四旬期頌謝詞（五）"
             },
             "content": [
               {
@@ -9207,7 +9228,8 @@
           },
           "after_ascension": {
             "title": {
-              "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO"
+              "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN — EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO",
+              "zh": "基督升天節後頌謝詞"
             },
             "content": [
               {
@@ -9471,7 +9493,8 @@
           },
           "ordinary_9": {
             "title": {
-              "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
+              "es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) — LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA",
+              "zh": "常年主日頌謝詞（九）"
             },
             "content": [
               {
@@ -9499,7 +9522,8 @@
           },
           "ordinary_10": {
             "title": {
-              "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR"
+              "es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO — EL DÍA DEL SEÑOR",
+              "zh": "常年主日頌謝詞（十）"
             },
             "content": [
               {
@@ -9533,7 +9557,8 @@
           },
           "baptism": {
             "title": {
-              "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA"
+              "es": "PREFACIO DEL BAUTISMO — EL BAUTISMO, INICIO DE LA VIDA NUEVA",
+              "zh": "洗禮頌謝詞"
             },
             "content": [
               {
@@ -9573,7 +9598,8 @@
           },
           "confirmation": {
             "title": {
-              "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU"
+              "es": "PREFACIO DE LA CONFIRMACIÓN — MARCADOS CON EL SELLO DEL ESPÍRITU",
+              "zh": "堅振頌謝詞"
             },
             "content": [
               {
@@ -9687,7 +9713,8 @@
           },
           "eucharist_3": {
             "title": {
-              "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
+              "es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA — LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA",
+              "zh": "聖體頌謝詞（三）"
             },
             "content": [
               {
@@ -9721,7 +9748,8 @@
           },
           "penance": {
             "title": {
-              "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
+              "es": "PREFACIO DE LA PENITENCIA — EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU",
+              "zh": "修和聖事頌謝詞"
             },
             "content": [
               {
@@ -9758,7 +9786,8 @@
           },
           "sick_paschal": {
             "title": {
-              "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO"
+              "es": "PREFACIO DE LA UNCIÓN DE ENFERMOS — EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO",
+              "zh": "病人傅油頌謝詞"
             },
             "content": [
               {
@@ -9866,7 +9895,8 @@
           },
           "mary_3": {
             "title": {
-              "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA"
+              "es": "PREFACIO III DE SANTA MARÍA VIRGEN — MARÍA, MODELO Y MADRE DE LA IGLESIA",
+              "zh": "聖母頌謝詞（三）"
             },
             "content": [
               {
@@ -9912,7 +9942,8 @@
           },
           "mary_4": {
             "title": {
-              "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
+              "es": "PREFACIO IV DE SANTA MARÍA VIRGEN — MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA",
+              "zh": "聖母頌謝詞（四）"
             },
             "content": [
               {
@@ -9946,7 +9977,8 @@
           },
           "mary_5": {
             "title": {
-              "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
+              "es": "PREFACIO V DE SANTA MARÍA VIRGEN — MARÍA, IMAGEN DE LA HUMANIDAD NUEVA",
+              "zh": "聖母頌謝詞（五）"
             },
             "content": [
               {
@@ -10141,7 +10173,8 @@
           },
           "martyrs_2": {
             "title": {
-              "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO"
+              "es": "PREFACIO II DE LOS SANTOS MÁRTIRES — SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
+              "zh": "殉道聖人頌謝詞（二）"
             },
             "content": [
               {
@@ -10426,7 +10459,8 @@
           },
           "common_7": {
             "title": {
-              "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
+              "es": "PREFACIO COMÚN VII — CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS",
+              "zh": "通用頌謝詞（七）"
             },
             "content": [
               {
@@ -10466,7 +10500,8 @@
           },
           "common_8": {
             "title": {
-              "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO"
+              "es": "PREFACIO COMÚN VIII — JESÚS, BUEN SAMARITANO",
+              "zh": "通用頌謝詞（八）"
             },
             "content": [
               {
@@ -10509,7 +10544,8 @@
           },
           "common_9": {
             "title": {
-              "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
+              "es": "PREFACIO COMÚN IX — LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE",
+              "zh": "通用頌謝詞（九）"
             },
             "content": [
               {

@@ -4083,7 +4083,8 @@
       },
       "common_7": {
         "title": {
-          "es": "PREFACIO COMÚN VII"
+          "es": "PREFACIO COMÚN VII",
+          "zh": "通用頌謝詞（七）"
         },
         "subtitle": {
           "es": "CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS"
@@ -4156,7 +4157,8 @@
       },
       "common_8": {
         "title": {
-          "es": "PREFACIO COMÚN VIII"
+          "es": "PREFACIO COMÚN VIII",
+          "zh": "通用頌謝詞（八）"
         },
         "subtitle": {
           "es": "JESÚS, BUEN SAMARITANO"
@@ -4229,7 +4231,8 @@
       },
       "common_9": {
         "title": {
-          "es": "PREFACIO COMÚN IX"
+          "es": "PREFACIO COMÚN IX",
+          "zh": "通用頌謝詞（九）"
         },
         "subtitle": {
           "es": "LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE"
@@ -4751,7 +4754,8 @@
       },
       "ordinary_9": {
         "title": {
-          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO IX"
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO IX",
+          "zh": "常年主日頌謝詞（九）"
         },
         "subtitle": {
           "es": "EL DIA DEL SEÑOR"
@@ -4803,7 +4807,8 @@
       },
       "ordinary_10": {
         "title": {
-          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO X"
+          "es": "PREFACIO DE LOS DOMINGOS DURANTE EL AÑO X",
+          "zh": "常年主日頌謝詞（十）"
         },
         "subtitle": {
           "es": "LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA"
@@ -4992,7 +4997,8 @@
       },
       "advent_3": {
         "title": {
-          "es": "PREFACIO DE ADVIENTO III"
+          "es": "PREFACIO DE ADVIENTO III",
+          "zh": "將臨期頌謝詞（三）"
         },
         "subtitle": {
           "es": "LA DOBLE ESPERA DE CRISTO"
@@ -5059,7 +5065,8 @@
       },
       "advent_4": {
         "title": {
-          "es": "PREFACIO DE ADVIENTO IV"
+          "es": "PREFACIO DE ADVIENTO IV",
+          "zh": "將臨期頌謝詞（四）"
         },
         "subtitle": {
           "es": "MARÍA, NUEVA EVA"
@@ -5129,7 +5136,8 @@
       },
       "advent_5": {
         "title": {
-          "es": "PREFACIO DE ADVIENTO V"
+          "es": "PREFACIO DE ADVIENTO V",
+          "zh": "將臨期頌謝詞（五）"
         },
         "subtitle": {
           "es": "LA PROMESA DEL SALVADOR"
@@ -5193,7 +5201,8 @@
       },
       "christmas_1": {
         "title": {
-          "es": "PREFACIO DE NAVIDAD I"
+          "es": "PREFACIO DE NAVIDAD I",
+          "zh": "聖誕節頌謝詞（一）"
         },
         "subtitle": {
           "es": "CRISTO, LA LUZ DEL MUNDO"
@@ -5242,7 +5251,8 @@
       },
       "christmas_2": {
         "title": {
-          "es": "PREFACIO DE NAVIDAD II"
+          "es": "PREFACIO DE NAVIDAD II",
+          "zh": "聖誕節頌謝詞（二）"
         },
         "subtitle": {
           "es": "LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN"
@@ -5303,7 +5313,8 @@
       },
       "christmas_3": {
         "title": {
-          "es": "PREFACIO DE NAVIDAD III"
+          "es": "PREFACIO DE NAVIDAD III",
+          "zh": "聖誕節頌謝詞（三）"
         },
         "subtitle": {
           "es": "EL INTERCAMBIO EN LA ENCARNACIÓN DEL VERBO"
@@ -5358,7 +5369,8 @@
       },
       "de_la_epifania_del_senor": {
         "title": {
-          "es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR"
+          "es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR",
+          "zh": "主顯節頌謝詞"
         },
         "subtitle": {
           "es": "CRISTO, LUZ DE LOS PUEBLOS"
@@ -5639,7 +5651,8 @@
       },
       "lent_5": {
         "title": {
-          "es": "PREFACIO DE CUARESMA V"
+          "es": "PREFACIO DE CUARESMA V",
+          "zh": "四旬期頌謝詞（五）"
         },
         "subtitle": {
           "es": "EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL"
@@ -6094,7 +6107,8 @@
       },
       "de_la_ascension_del_senor_i": {
         "title": {
-          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR I"
+          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR I",
+          "zh": "基督升天頌謝詞（一）"
         },
         "subtitle": {
           "es": "EL MISTERIO DE LA ASCENSIÓN"
@@ -6179,7 +6193,8 @@
       },
       "de_la_ascension_del_senor_ii": {
         "title": {
-          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR II"
+          "es": "PREFACIO DE LA ASCENSIÓN DEL SEÑOR II",
+          "zh": "基督升天頌謝詞（二）"
         },
         "subtitle": {
           "es": "EL MISTERIO DE LA ASCENSIÓN"
@@ -6234,7 +6249,8 @@
       },
       "para_despues_de_la_ascension": {
         "title": {
-          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN"
+          "es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN",
+          "zh": "基督升天節後頌謝詞"
         },
         "subtitle": {
           "es": "LA ESPERA DEL ESPÍRITU SANTO"
@@ -6295,7 +6311,8 @@
       },
       "del_bautismo": {
         "title": {
-          "es": "PREFACIO DEL BAUTISMO"
+          "es": "PREFACIO DEL BAUTISMO",
+          "zh": "洗禮頌謝詞"
         },
         "subtitle": {
           "es": "EL BAUTISMO, INICIO DE LA VIDA NUEVA"
@@ -6374,7 +6391,8 @@
       },
       "de_la_confirmacion_i": {
         "title": {
-          "es": "PREFACIO DE LA CONFIRMACIÓN I"
+          "es": "PREFACIO DE LA CONFIRMACIÓN I",
+          "zh": "堅振頌謝詞（一）"
         },
         "subtitle": {
           "es": "MARCADOS CON EL SELLO DEL ESPÍRITU"
@@ -6450,7 +6468,8 @@
       },
       "de_la_confirmacion_ii": {
         "title": {
-          "es": "PREFACIO DE LA CONFIRMACIÓN II"
+          "es": "PREFACIO DE LA CONFIRMACIÓN II",
+          "zh": "堅振頌謝詞（二）"
         },
         "subtitle": {
           "es": "LA CONFIRMACIÓN, NUEVO PENTECOSTÉS"
@@ -6520,7 +6539,8 @@
       },
       "de_la_santisima_eucaristia_i": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA I"
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA I",
+          "zh": "聖體頌謝詞（一）"
         },
         "subtitle": {
           "es": "El SACRIFICIO Y EL SACRAMENTO DE CRISTO"
@@ -6584,7 +6604,8 @@
       },
       "de_la_santisima_eucaristia_ii": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA II"
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA II",
+          "zh": "聖體頌謝詞（二）"
         },
         "subtitle": {
           "es": "LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA"
@@ -6657,7 +6678,8 @@
       },
       "de_la_santisima_eucaristia_iii": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA III"
+          "es": "PREFACIO DE LA SANTÍSIMA EUCARISTÍA III",
+          "zh": "聖體頌謝詞（三）"
         },
         "subtitle": {
           "es": "LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA"
@@ -6718,7 +6740,8 @@
       },
       "de_la_penitencia": {
         "title": {
-          "es": "PREFACIO DE LA PENITENCIA"
+          "es": "PREFACIO DE LA PENITENCIA",
+          "zh": "修和聖事頌謝詞"
         },
         "subtitle": {
           "es": "EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU"
@@ -6782,7 +6805,8 @@
       },
       "de_los_enfermos": {
         "title": {
-          "es": "PREFACIO DE LOS ENFERMOS"
+          "es": "PREFACIO DE LOS ENFERMOS",
+          "zh": "病人頌謝詞"
         },
         "subtitle": {
           "es": "61d."
@@ -6849,7 +6873,8 @@
       },
       "de_las_ordenaciones_i": {
         "title": {
-          "es": "PREFACIO DE LAS ORDENACIONES I"
+          "es": "PREFACIO DE LAS ORDENACIONES I",
+          "zh": "授秩頌謝詞（一）"
         },
         "subtitle": {
           "es": "EL SACERDOCIO DE CRISTO Y EL MINISTERIO DE LOS SACERDOTES"
@@ -6940,7 +6965,8 @@
       },
       "de_las_ordenaciones_ii": {
         "title": {
-          "es": "PREFACIO DE LAS ORDENACIONES II"
+          "es": "PREFACIO DE LAS ORDENACIONES II",
+          "zh": "授秩頌謝詞（二）"
         },
         "subtitle": {
           "es": "CRISTO, ORIGEN DE TODO MINISTERIO ECLESIAL"
@@ -7019,7 +7045,8 @@
       },
       "del_matrimonio_i": {
         "title": {
-          "es": "PREFACIO DEL MATRIMONIO I"
+          "es": "PREFACIO DEL MATRIMONIO I",
+          "zh": "婚姻頌謝詞（一）"
         },
         "subtitle": {
           "es": "LA DIGNIDAD DE LA ALIANZA NUPCIAL"
@@ -7080,7 +7107,8 @@
       },
       "del_matrimonio_ii": {
         "title": {
-          "es": "PREFACIO DEL MATRIMONIO II"
+          "es": "PREFACIO DEL MATRIMONIO II",
+          "zh": "婚姻頌謝詞（二）"
         },
         "subtitle": {
           "es": "EL GRAN SACRAMENTO DEL MATRIMONIO"
@@ -7141,7 +7169,8 @@
       },
       "del_matrimonio_iii": {
         "title": {
-          "es": "PREFACIO DEL MATRIMONIO III"
+          "es": "PREFACIO DEL MATRIMONIO III",
+          "zh": "婚姻頌謝詞（三）"
         },
         "subtitle": {
           "es": "EL MATRIMONIO, SIGNO DEL AMOR DIVINO"
@@ -7205,7 +7234,8 @@
       },
       "de_la_santisima_virgen_maria_i": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA I"
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA I",
+          "zh": "聖母頌謝詞（一）"
         },
         "subtitle": {
           "es": "LA MATERNIDAD DE SANTA MARÍA VIRGEN"
@@ -7281,7 +7311,8 @@
       },
       "de_la_santisima_virgen_maria_ii": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA II"
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA II",
+          "zh": "聖母頌謝詞（二）"
         },
         "subtitle": {
           "es": "LA IGLESIA ALABA A DIOS CON LAS PALABRAS DE MARÍA"
@@ -7342,7 +7373,8 @@
       },
       "de_la_santisima_virgen_maria_iii": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA III"
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA III",
+          "zh": "聖母頌謝詞（三）"
         },
         "subtitle": {
           "es": "MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA"
@@ -7418,7 +7450,8 @@
       },
       "de_la_santisima_virgen_maria_iv": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA IV"
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA IV",
+          "zh": "聖母頌謝詞（四）"
         },
         "subtitle": {
           "es": "MARÍA, IMAGEN DE LA HUMANIDAD NUEVA"
@@ -7491,7 +7524,8 @@
       },
       "de_la_santisima_virgen_maria_v": {
         "title": {
-          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA V"
+          "es": "PREFACIO DE LA SANTÍSIMA VIRGEN MARÍA V",
+          "zh": "聖母頌謝詞（五）"
         },
         "subtitle": {
           "es": "MARÍA, MODELO Y MADRE DE LA IGLESIA"
@@ -7674,7 +7708,8 @@
       },
       "de_los_santos_i": {
         "title": {
-          "es": "PREFACIO DE LOS SANTOS I"
+          "es": "PREFACIO DE LOS SANTOS I",
+          "zh": "聖人通用頌謝詞（一）"
         },
         "subtitle": {
           "es": "LA GLORIA DE LOS SANTOS"
@@ -7735,7 +7770,8 @@
       },
       "de_los_santos_ii": {
         "title": {
-          "es": "PREFACIO DE LOS SANTOS II"
+          "es": "PREFACIO DE LOS SANTOS II",
+          "zh": "聖人通用頌謝詞（二）"
         },
         "subtitle": {
           "es": "LA ACCIÓN DE LOS SANTOS"
@@ -7790,7 +7826,8 @@
       },
       "martyrs_1": {
         "title": {
-          "es": "PREFACIO DE LOS SANTOS MÁRTIRES I"
+          "es": "PREFACIO DE LOS SANTOS MÁRTIRES I",
+          "zh": "殉道聖人頌謝詞（一）"
         },
         "subtitle": {
           "es": "EL MARTIRIO COMO SIGNO Y EJEMPLO"
@@ -7851,7 +7888,8 @@
       },
       "martyrs_2": {
         "title": {
-          "es": "PREFACIO DE LOS SANTOS MÁRTIRES II"
+          "es": "PREFACIO DE LOS SANTOS MÁRTIRES II",
+          "zh": "殉道聖人頌謝詞（二）"
         },
         "subtitle": {
           "es": "LAS MARAVILLAS DE DIOS EN LA VICTORIA DE LOS MÁRTIRES"
@@ -7903,7 +7941,8 @@
       },
       "de_los_santos_pastores": {
         "title": {
-          "es": "PREFACIO DE LOS SANTOS PASTORES"
+          "es": "PREFACIO DE LOS SANTOS PASTORES",
+          "zh": "聖牧者頌謝詞"
         },
         "subtitle": {
           "es": "LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA"
@@ -7958,7 +7997,8 @@
       },
       "de_santas_virgenes_y_santos_religiosos": {
         "title": {
-          "es": "PREFACIO DE SANTAS VÍRGENES Y SANTOS RELIGIOSOS"
+          "es": "PREFACIO DE SANTAS VÍRGENES Y SANTOS RELIGIOSOS",
+          "zh": "貞女及會士頌謝詞"
         },
         "subtitle": {
           "es": "EL SIGNO DE LA VIDA CONSAGRADA A DIOS"
@@ -8276,7 +8316,8 @@
       },
       "particular_ar_lujan": {
         "title": {
-          "es": "Prefacio de Nuestra Señora de Luján"
+          "es": "Prefacio de Nuestra Señora de Luján",
+          "zh": "盧漢聖母頌謝詞"
         },
         "subtitle": {
           "es": "Santa María de Luján, Madre del pueblo argentino"
@@ -8334,7 +8375,8 @@
       },
       "particular_uy_treinta_y_tres_1": {
         "title": {
-          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres I"
+          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres I",
+          "zh": "烏拉圭三十三人聖母頌謝詞（一）"
         },
         "source": {
           "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
@@ -8386,7 +8428,8 @@
       },
       "particular_uy_treinta_y_tres_2": {
         "title": {
-          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres II"
+          "es": "Prefacio de Nuestra Señora, la Virgen de los Treinta y Tres II",
+          "zh": "烏拉圭三十三人聖母頌謝詞（二）"
         },
         "source": {
           "url": "https://curas.com.ar/Misal3/Misas3/Msantos3.11.htm"
