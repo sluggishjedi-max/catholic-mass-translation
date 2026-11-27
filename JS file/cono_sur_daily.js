@@ -13,7 +13,7 @@
         ['antifona de entrada','entrance'],['oracion colecta','collect'],['oracion sobre las ofrendas','prayer_offerings'],
         ['antifona de la comunion','communion'],['antifona de comunion','communion'],['oracion despues de la comunion','prayer_after']
     ];
-    const normalize = value => String(value || '').replace(/[\s\u00a0]+/gu,' ').trim().normalize('NFC');
+    const normalize = value => String(value || '').replace(/\u0096/gu, '–').replace(/\u0097/gu, '—').replace(/[\s\u00a0]+/gu,' ').trim().normalize('NFC');
     const fold = value => normalize(value).toLowerCase().normalize('NFD').replace(/\p{M}/gu,'');
     const dateKey = date => String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0');
 
@@ -180,24 +180,26 @@
         return chapters;
     }
 
-    const citationOnProclamation = /^(.*?)\s+(\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]*)$|^(.*?)\s+([5-9]|\d{2,})$/u;
+    const citationOnProclamation = /^(.+?)\s+(\d[\da-cªº.,;:–—\s-]*)$/iu;
+    const detachedCitation = /^\d[\da-cªº.,;:–—\s-]*$/iu;
 
-    function referenceFromProclamation(parts) {
-        if(!parts) return '';
-        const title=(parts[1]||parts[3]).replace(/[,:]$/u,''), verses=parts[2]||parts[4];
-        const ordinal=fold(title).match(/\b(primera|segunda|tercera) carta\b/u);
-        const prefix=ordinal?({primera:'1 ',segunda:'2 ',tercera:'3 '})[ordinal[1]]:'';
-        const names={corinto:'Corintios',efeso:'Efesios',tesalonica:'Tesalonicenses',colosas:'Colosenses',
+    function splitProclamation(header) {
+        const parts = header.match(citationOnProclamation);
+        if (!parts) return null;
+        const title = parts[1].replace(/[,:\s]+$/u, '');
+        const ordinal = fold(title).match(/\b(primera|segunda|tercera) carta\b/u);
+        const prefix = ordinal ? ({primera:'1 ',segunda:'2 ',tercera:'3 '})[ordinal[1]] : '';
+        const names = {corinto:'Corintios',efeso:'Efesios',tesalonica:'Tesalonicenses',colosas:'Colosenses',
             filipos:'Filipenses',roma:'Romanos',galacia:'Gálatas','hechos de los apostoles':'Hechos'};
-        for(const [term,book] of Object.entries(names)) {
-            if(fold(title).endsWith(term)) return prefix+book+' '+verses;
-        }
-        const words=title.split(/\s+/u);
-        for(let count=Math.min(5,words.length);count>0;count--){
-            const book=prefix+words.slice(-count).join(' ');
-            if(global.bibleCitation?.resolve(book,'ES')?.id) return book+' '+verses;
-        }
-        return '';
+        const term = Object.keys(names).find(key => fold(title).endsWith(key));
+        const words = title.split(/\s+/u);
+        const book = term ? prefix + names[term]
+            : words.slice(-5).map((_, index, tail) => prefix + tail.slice(index).join(' '))
+                .find(name => global.bibleCitation?.resolve(name,'ES')?.id);
+        if (!book) return null;
+        const verses = parts[2].trim().replace(/ª/gu,'a').replace(/º/gu,'')
+            .replace(/^(\d+)-(\d+-\d+)$/u, '$1, $2');
+        return { title, citation:book+' '+verses };
     }
 
     function parse({document, iso, date, plan, formatSection, summarized, fallbackColor}) {
@@ -207,13 +209,14 @@
             if(!lines.length) continue;
             const reading=['reading1','reading2','gospel'].includes(key);
             const displayHeader = !['collect','prayer_offerings','prayer_after'].includes(key);
-            const onHeading = reading ? header.match(citationOnProclamation) : null;
-            const detached = reading && !onHeading && /^\d+\s*[,.:]\s*\d[\d\w.,;:–—\s-]*$/u.test(lines[0])
-                ? (header+' '+lines[0]).match(citationOnProclamation) : null;
-            const citation = reading ? referenceFromProclamation(onHeading || detached)
+            const onHeading = reading ? splitProclamation(header) : null;
+            const detached = reading && !onHeading && detachedCitation.test(lines[0])
+                ? splitProclamation(header+' '+lines[0]) : null;
+            const reference = onHeading || detached;
+            const citation = reading ? (reference?.citation || '')
                 : key==='psalm' && /^\d/u.test(header) ? 'Sal '+header : '';
             const proclamation = reading
-                ? (onHeading?.[1] || onHeading?.[3] || header).replace(/^\s*[+†✠]\s*/u,'') : header;
+                ? (reference?.title || header).replace(/^\s*[+†✠]\s*/u,'') : header;
             const input=[...(summary ? ['<'+summary+'>'] : []),
                 ...(proclamation && displayHeader ? [proclamation] : []),
                 ...(reading && citation ? [citation] : []),

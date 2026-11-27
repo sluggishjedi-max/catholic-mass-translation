@@ -48,4 +48,19 @@ for(const [key,summary,intro,body,citation] of [
  assert.equal(reading.lines.find(row=>row.role==='body').text,body);
  assert.equal(reading.cit_es,citation);
 }
+for (const [heading, reference, citation] of [
+ ['Lectura del libro del Apocalipsis','20, 1-4.11 \u0097 21, 2','Apocalipsis 20, 1-4.11 — 21, 2'],
+ ['Lectura del libro del Apocalipsis','21, 1 – 5ª. 6b - 7','Apocalipsis 21, 1 – 5a. 6b - 7'],
+ ['Lectura de la segunda carta del apóstol san Juan','4-9','2 Juan 4-9'],
+ ['Lectura de la carta del apóstol san Pablo a Filemón','7-20','Filemón 7-20'],
+ ['Lectura de la primera carta del apóstol san Pablo a los cristianos de Corinto','1-3-9','1 Corintios 1, 3-9']
+]) {
+ r.window.__conoFixture='<p><b>'+heading+'</b> '+reference+'<br>Hermanos, escuchen esta palabra.<br>Palabra de Dios.</p>'
+  +'<p>Salmo 97, 1</p><p>Un canto al Señor.</p><p>Evangelio</p>'
+  +'<p>Evangelio de nuestro Señor Jesucristo según san Lucas 1, 1<br>Jesús habló a sus discípulos.<br>Palabra del Señor.</p>';
+ const part=r.run("ordoConoSurDaily.parse({document:parseHtml(__conoFixture),plan:{url:'fixture',title:'Día',requireTwo:false},date:new Date(2026,10,25),formatSection:strictFormatSection,summarized:strictEnsureReadingSummarySlots}).data.reading1");
+ assert.equal(part.lines.find(row=>row.role==='intro')?.text,heading);
+ assert.equal(part.cit_es,citation);
+ assert.equal(part.lines.find(row=>row.role==='body')?.text,'Hermanos, escuchen esta palabra.');
+}
 console.log(JSON.stringify({cases,referenceKeptInCitation:true,optionsIndependent:true,ordinaryBodyWordsPreserved:true}));}finally{r.close();}
