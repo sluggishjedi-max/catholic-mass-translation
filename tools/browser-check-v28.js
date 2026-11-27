@@ -610,6 +610,34 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(taiwanPrayerSelect && taiwanPrayerSelect.options.length === 4, 'Taiwan Eucharistic Prayer I-IV selector missing');
       check(taiwanPrefaceSelect && taiwanPrefaceSelect.options.length >= 80, 'Taiwan preface selector missing');
       check(taiwanEucharistSection.textContent.includes('파스카의 신비로'), 'Selected Taiwan preface was not rendered');
+      if (APP_VERSION.startsWith('V31.4-')) {
+        const koreanEucharist = eucharisticPrayerEntry(kr);
+        const nativeTitles = {KR:'공통 감사송 5',ZH:'通用頌謝詞（五）'};
+        const nativeLabels = {
+          KR:'공통 감사송 5 : 그리스도의 신비 선포',
+          ZH:'通用頌謝詞（五）（我們宣報基督的奧蹟）'
+        };
+        optChange('eucharist_song', 'common_5');
+        for (const lang of ['KR','ZH']) {
+          const select = document.querySelector('select[data-preface-lang="' + lang + '"]');
+          check(select?.value === 'common_5', lang + ' lost its shared preface selection');
+          check(select.previousElementSibling.textContent === nativeTitles[lang], lang + ' collapsed preface includes a subtitle');
+          check(select.selectedOptions[0].textContent === nativeLabels[lang], lang + ' open option lost native wording');
+        }
+        const titleOnly = {songs:{common_5:{title:{kr:nativeLabels.KR,zh:nativeTitles.ZH},content:[{text_kr:'한국어 원문',text_zh:'中文原文'}]}}};
+        check(getEucharistSongLabels(titleOnly,'common_5','ZH').full === nativeTitles.ZH, 'Taiwan option inherited a Korean subtitle');
+        check(!prefaceCaption(titleOnly,'common_5','ZH').parts[1].id, 'Taiwan native title requested a borrowed subtitle');
+        for (const form of ['2','3','4']) {
+          optChange('eucharist', form);
+          const endingRows = [...document.querySelectorAll('[data-part-id="eucharist"] [data-eucharist-section="ending"]')];
+          for (const [lower, rows] of [['kr',koreanEucharist.amen],['zh',taiwanSourceEucharist.formEndings[form]]]) {
+            const displayed = endingRows.flatMap(row => Array.from(row.querySelectorAll('.line-' + lower + ' .text-content'), node => node.innerHTML));
+            checkOrdinarySourceRows(rows, displayed.map(text => ({['text_' + lower]:text})), lower, 'Prayer ' + form + ' ending');
+          }
+        }
+        optChange('eucharist', '2');
+        optChange('eucharist_song', 'ordinary_1');
+      }
       // All six proper-text sections use one deterministic alignment engine.
       const unifiedSectionIds = ['entrance','collect','gospel_accl','prayer_offerings','communion','prayer_after'];
       for (const id of unifiedSectionIds) {

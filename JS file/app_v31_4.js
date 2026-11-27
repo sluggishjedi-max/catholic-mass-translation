@@ -356,7 +356,16 @@
 
     function normalizedOrdinaryForMerge(module, locationCode) {
         if (!module || !Array.isArray(module.ordinary)) return [];
-        return ordoOrdinaryDisplay.prepare(cloneData(module.ordinary), eucharisticPrayerLanguageLower(module, locationCode));
+        const ordinary = ordoOrdinaryDisplay.prepare(cloneData(module.ordinary), eucharisticPrayerLanguageLower(module, locationCode));
+        const prayer = eucharisticPrayerEntry(ordinary);
+        if (Array.isArray(prayer?.amen)) {
+            // Resolve each edition's stored ending before another edition adds its own override.
+            const endings = prayer.formEndings ||= {};
+            for (const [form, frame] of Object.entries(prayer.formFrames || {})) {
+                if (frame.sections?.includes('ending')) endings[form] ??= prayer.amen;
+            }
+        }
+        return ordinary;
     }
 
     const conoSurCountries = new Set(['AR','BO','CL','PY','UY']);
@@ -21745,30 +21754,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             || collator.compare(a.title, b.title) || a.key.localeCompare(b.key)).map(row=>row.key);
     }
 
-    function compactEucharistSongLabel(label) {
-        const text = cleanNodeText(label || '');
-        if (!text) return '';
-        return text.replace(/\s*(?:[:：]\s+|[-–—]\s+|「).*$/u, '').trim() || text;
-    }
-
-    function setEucharistPrefaceSelectExpanded(select, expanded) {
-        if (!select || !select.options) return;
-        select.dataset.prefaceExpanded = expanded ? 'true' : 'false';
+    function refreshEucharistPrefaceSelect(select) {
         const lang = select.dataset.prefaceLang;
         const item = prefaceSelectItems.get(lang);
         if (!item) return;
         const refresh = () => {
             if (!select.isConnected) return;
             for (const option of select.options) {
-                const full = getEucharistSongLabel(item, option.value, lang);
-                const compact = getEucharistSongLabel(item, option.value, lang, true);
+                const {full, compact} = getEucharistSongLabels(item, option.value, lang);
                 option.dataset.fullLabel = full;
                 option.dataset.compactLabel = compact;
-                option.textContent = select.dataset.prefaceExpanded === 'true' || !option.selected ? full : compact;
+                option.textContent = full;
             }
+            select.previousElementSibling.textContent = select.selectedOptions[0]?.dataset.compactLabel || '';
         };
-        refresh();
-        if (expanded) void translatePrefaceCaptions(item, Array.from(select.options, option => option.value), lang, refresh);
+        void translatePrefaceCaptions(item, Array.from(select.options, option => option.value), lang, refresh);
     }
 
     function getLocalizedObjectValue(value, langCode) {
@@ -21999,11 +21999,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         DE:['Präfation', 'Präfation für die Sonntage im Jahreskreis', 'Allgemeine Präfation', 'Kein deutscher Text']
     };
 
-    function prefaceNativeTitle(entry, lang) {
+    function prefaceNativeCaption(entry, lang) {
         const localized = value => cleanNodeText(value?.[lang.toLowerCase()] || value?.[lang]);
-        const title = [entry?.title, entry?.label, entry?.prefaceTitle].map(localized).find(Boolean) || '';
-        const subtitle = localized(entry?.subtitle);
-        return title && subtitle ? title+' — '+subtitle : title;
+        const heading = [entry?.title, entry?.label, entry?.prefaceTitle].map(localized).find(Boolean) || '';
+        const [title, embeddedSubtitle] = splitPrefaceCaption(heading);
+        const subtitle = localized(entry?.subtitle) || embeddedSubtitle;
+        const label = title && subtitle && subtitle !== embeddedSubtitle ? title + ' — ' + subtitle : heading;
+        return {title, subtitle, label};
     }
 
     function prefaceBodyRows(entry, lang) {
@@ -22019,39 +22021,46 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const prefaceSelectItems = new Map();
 
     function splitPrefaceCaption(value) {
-        const match = value.match(/^(.*?)\s*(?:[-–—]\s+|[:：]\s*|「)(.+?)(?:」)?$/u);
-        return match ? [match[1].trim(), match[2].trim()] : [value, ''];
+        const separated = value.match(/^(.+?)\s*(?::|：|\s[-–—]\s|「)\s*(.+?)(?:」)?$/u);
+        if (separated) return [separated[1].trim(), separated[2].trim()];
+        const parenthetical = value.match(/^(.+?)\s*[（(]([^()（）]+)[）)]$/u);
+        if (parenthetical) {
+            const qualifier = parenthetical[2].trim();
+            const numeral = /^(?:第\s*)?(?:\d+|[IVXLCDM]+|[〇零一二三四五六七八九十百]+|[甲乙丙])(?:\s*[年式])?$/iu;
+            if (!numeral.test(qualifier.normalize('NFKC'))) return [parenthetical[1].trim(), qualifier];
+        }
+        return [value, ''];
     }
 
     function prefaceCaption(item, key, lang) {
         const entry = getEucharistSongMap(item)[key];
-        const [nativeTitle, nativeSubtitle] = splitPrefaceCaption(prefaceNativeTitle(entry, lang));
-        const sources = prefaceSourceLanguages(lang).map(code => ({
-            code, parts: splitPrefaceCaption(prefaceNativeTitle(entry, code))
-        }));
+        const native = prefaceNativeCaption(entry, lang);
+        const sources = prefaceSourceLanguages(lang);
         const labels = prefaceLabels[lang] || prefaceLabels.EN;
         const [, family, number] = key.match(/^(ordinary|common)_(\d+)$/u) || [];
         const categoryTitle = number ? labels[family === 'ordinary' ? 1 : 2] + ' ' + number : '';
-        const parts = [nativeTitle || categoryTitle, nativeSubtitle].map((native, index) => {
-            if (native) return {text: native};
-            const source = sources.find(candidate => candidate.parts[index]);
-            if (!source) return {text: ''};
-            const original = source.parts[index];
-            const id = aiTranslationKey(original, lang);
-            return {text:prefaceCaptionTranslations.get(id) || '', original, id, sourceLang:source.code, field:index ? 'subtitle' : 'title'};
+        const parts = [native.title || categoryTitle, native.subtitle].map((text, index) => {
+            if (text || native.title) return {text};
+            const field = index ? 'subtitle' : 'title';
+            for (const sourceLang of sources) {
+                if (field === 'subtitle' && lang === 'ZH' && sourceLang === 'KR') continue;
+                const original = prefaceNativeCaption(entry, sourceLang)[field];
+                if (!original) continue;
+                const id = aiTranslationKey(original, lang);
+                return {text:prefaceCaptionTranslations.get(id) || '', original, id, sourceLang, field};
+            }
+            return {text:''};
         });
-        return {parts, labels, missingBody: !prefaceBodyRows(entry, lang).length &&
-            sources.some(({code}) => prefaceBodyRows(entry, code).length)};
+        return {parts, labels, nativeLabel:native.label, missingBody: !prefaceBodyRows(entry, lang).length &&
+            sources.some(code => prefaceBodyRows(entry, code).length)};
     }
 
-    function getEucharistSongLabel(item, key, lang, compact = false) {
-        const {parts, labels, missingBody} = prefaceCaption(item, key, lang);
-        const [title, subtitle] = parts;
-        const native = prefaceNativeTitle(getEucharistSongMap(item)[key], lang);
-        const detail = subtitle.text || subtitle.original;
-        const full = native && !subtitle.id ? native : (title.text || title.original || labels[0]) + (detail ? ' — ' + detail : '');
-        return (compact && !missingBody && !subtitle.id ? compactEucharistSongLabel(full) : full)
-            + (missingBody ? ' (' + labels[3] + ')' : '');
+    function getEucharistSongLabels(item, key, lang) {
+        const {parts: [title, subtitle], labels, nativeLabel, missingBody} = prefaceCaption(item, key, lang);
+        const heading = title.text || labels[0];
+        const detail = nativeLabel || [heading, subtitle.text].filter(Boolean).join(' — ');
+        const status = missingBody ? ' (' + labels[3] + ')' : '';
+        return {full:detail + status, compact:heading + status};
     }
 
     const pendingPrefaceCaptions = new Set();
@@ -23030,13 +23039,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const selectedSongKey = getSelectedEucharistSongKey(orig);
                 if (songKeys.length) {
                     prefaceSelectItems.set(langCode, orig);
-                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="Preface" data-preface-lang="${escapeAttr(langCode)}" onfocus="setEucharistPrefaceSelectExpanded(this, true)" onpointerdown="setEucharistPrefaceSelectExpanded(this, true)" onblur="setEucharistPrefaceSelectExpanded(this, false)" onchange="optChange('eucharist_song', this.value)">`;
+                    const selectedLabel = getEucharistSongLabels(orig, selectedSongKey, langCode).compact;
+                    secondarySelectHtml += `<div class="select-block preface-select"><span class="select-inline preface-select-caption" aria-hidden="true">${escapeHtml(selectedLabel)}</span><select class="select-inline" aria-label="Preface" data-preface-lang="${escapeAttr(langCode)}" onfocus="refreshEucharistPrefaceSelect(this)" onpointerdown="refreshEucharistPrefaceSelect(this)" onchange="optChange('eucharist_song', this.value)">`;
                     songKeys.forEach(songKey => {
                         const selected = selectedSongKey === songKey ? 'selected' : '';
-                        const fullLabel = getEucharistSongLabel(orig, songKey, langCode);
-                        const compactLabel = getEucharistSongLabel(orig, songKey, langCode, true);
-                        const visibleLabel = selected ? compactLabel : fullLabel;
-                        secondarySelectHtml += `<option value="${escapeAttr(songKey)}" data-full-label="${escapeAttr(fullLabel)}" data-compact-label="${escapeAttr(compactLabel)}" ${selected}>${escapeHtml(visibleLabel)}</option>`;
+                        const {full, compact} = getEucharistSongLabels(orig, songKey, langCode);
+                        secondarySelectHtml += `<option value="${escapeAttr(songKey)}" data-full-label="${escapeAttr(full)}" data-compact-label="${escapeAttr(compact)}" ${selected}>${escapeHtml(full)}</option>`;
                     });
                     secondarySelectHtml += '</select></div>';
                 }

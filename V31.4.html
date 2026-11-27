@@ -244,6 +244,11 @@
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
         .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: var(--inline-select-font-size); outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
         .select-block { display: block; margin: 0; text-align: right; }
+        .preface-select { position: relative; max-width: 100%; }
+        .preface-select-caption { display: flex; align-items: center; gap: 8px; line-height: 1.3; overflow-wrap: anywhere; }
+        .preface-select-caption::after { content: ""; flex: 0 0 5px; height: 5px; border: solid currentColor; border-width: 0 1px 1px 0; transform: rotate(45deg); margin-top: -3px; }
+        .preface-select > select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+        .preface-select:focus-within .preface-select-caption { outline: 2px solid var(--primary-color); outline-offset: 2px; }
 
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
         .aux-panel.active { display: block; }
@@ -967,7 +972,7 @@
 <script defer src="JS%20file/liturgical_observance_catalog.js?v=20261124-prefaces-1"></script>
 <script defer src="JS%20file/liturgical_observances.js?v=20261124-prefaces-1"></script>
 <script defer src="JS%20file/cono_sur_daily.js?v=20261127-2"></script>
-<script defer src="JS%20file/app_v31_4.min.js?v=20261127-notices-1"></script>
+<script defer src="JS%20file/app_v31_4.min.js?v=20261127-preface-1"></script>
 <script defer src="JS%20file/workspace_links.js?v=20261118-workspace"></script>
 </body>
 </html>
