@@ -186,17 +186,17 @@
     function splitProclamation(header) {
         const parts = header.match(citationOnProclamation);
         if (!parts) return null;
-        const title = parts[1].replace(/[,:\s]+$/u, '');
-        const ordinal = fold(title).match(/\b(primera|segunda|tercera) carta\b/u);
-        const prefix = ordinal ? ({primera:'1 ',segunda:'2 ',tercera:'3 '})[ordinal[1]] : '';
+        const title = parts[1].replace(/[,:\s]+$/u, '').replace(/\blsaías$/iu, 'Isaías');
+        const ordinal = fold(title).match(/\b(primer|primera|segundo|segunda|tercer|tercera) (?:libro|carta)\b/u);
+        const prefix = ordinal ? ({pri:'1 ',seg:'2 ',ter:'3 '})[ordinal[1].slice(0,3)] : '';
         const names = {corinto:'Corintios',efeso:'Efesios',tesalonica:'Tesalonicenses',colosas:'Colosenses',
-            filipos:'Filipenses',roma:'Romanos',galacia:'Gálatas','hechos de los apostoles':'Hechos'};
+            filipos:'Filipenses',roma:'Romanos',galacia:'Gálatas',eclesiastico:'Eclo','hechos de los apostoles':'Hechos'};
         const term = Object.keys(names).find(key => fold(title).endsWith(key));
         const words = title.split(/\s+/u);
         const book = term ? prefix + names[term]
             : words.slice(-5).map((_, index, tail) => prefix + tail.slice(index).join(' '))
                 .find(name => global.bibleCitation?.resolve(name,'ES')?.id);
-        if (!book) return null;
+        if (!book) return { title, citation:'' };
         const verses = parts[2].trim().replace(/ª/gu,'a').replace(/º/gu,'')
             .replace(/^(\d+)-(\d+-\d+)$/u, '$1, $2');
         return { title, citation:book+' '+verses };
