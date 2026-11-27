@@ -2424,6 +2424,19 @@
         DE:'Der vatikanische Originaltext ist nach Mitternacht römischer Zeit verfügbar.'
     };
 
+    const japaneseDailyPropersNoticeText = {
+        KR: '일본어 입당송, 본기도, 예물기도, 영성체송, 영성체후기도는 원문출처 사정상 제공되지 않습니다.',
+        VN: 'Do hạn chế về nguồn bản văn gốc, không có ca nhập lễ, lời nguyện nhập lễ, lời nguyện tiến lễ, ca hiệp lễ và lời nguyện hiệp lễ bằng tiếng Nhật.',
+        EN: 'The Japanese Entrance Antiphon, Collect, Prayer over the Offerings, Communion Antiphon, and Prayer after Communion are unavailable due to limitations in the source material.',
+        JP: '日本語の入祭唱、集会祈願、奉納祈願、拝領唱、拝領祈願は、原文資料の都合により掲載していません。',
+        LA: 'Antiphona ad introitum, collecta, oratio super oblata, antiphona ad communionem et oratio post communionem lingua Iaponica ob inopiam fontium non praebentur.',
+        ZH: '受原文來源限制，恕不提供日文的進堂詠、集禱經、獻禮經、領主詠及領聖體後經。',
+        IT: "Per limiti delle fonti originali, non sono disponibili in giapponese l’antifona d’ingresso, la colletta, l’orazione sulle offerte, l’antifona alla comunione e l’orazione dopo la comunione.",
+        PT: 'Devido a limitações das fontes originais, não estão disponíveis em japonês a antífona de entrada, a oração coleta, a oração sobre as oferendas, a antífona da comunhão e a oração depois da comunhão.',
+        ES: 'Por limitaciones de las fuentes originales, no se ofrecen en japonés la antífona de entrada, la oración colecta, la oración sobre las ofrendas, la antífona de la comunión ni la oración después de la comunión.',
+        DE: 'Die japanischen Texte für den Eröffnungsvers, das Tagesgebet, das Gabengebet, den Kommunionvers und das Schlussgebet sind aufgrund der Quellenlage nicht verfügbar.'
+    };
+
     function updateRoleLegend(leftLang, rightLang) {
         const activeLangs = new Set([leftLang, rightLang].filter(lang => langMeta[lang]));
         const legend = document.getElementById('role-legend');
@@ -2458,11 +2471,8 @@
                 note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = '※ '+message;
                 container.appendChild(note);
             };
-            if (activeLangs.has('JP') && lang === (activeLangs.has('KR') ? 'KR' : 'JP')) {
-                append(lang === 'KR'
-                    ? '일본어 입당송, 본기도, 예물기도, 영성체송, 영성체후기도는 원문출처 사정상 제공되지 않습니다.'
-                    : '日本語の入祭唱、集会祈願、奉納祈願、拝領唱、拝領祈願は、原文資料の都合により掲載していません。',
-                'japanese-daily-propers');
+            if (activeLangs.has('JP')) {
+                append(japaneseDailyPropersNoticeText[lang] || japaneseDailyPropersNoticeText.EN, 'japanese-daily-propers');
             }
             sourceNotices.forEach(([sourceLang,detail]) => append(`${sourceLang}: ${fixedFormularyNoticeText[lang] || fixedFormularyNoticeText.EN} (${detail.source?.authority || detail.source?.translation || 'Missal'})`, 'fixed-formulary:'+sourceLang, 'daily-source-provenance'));
             if(vaticanSelected)append(vaticanMidnightNoticeText[lang] || vaticanMidnightNoticeText.EN,'vatican-midnight','vatican-source-notice');
